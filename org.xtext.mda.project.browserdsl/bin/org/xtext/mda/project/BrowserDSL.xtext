@@ -1,0 +1,9 @@
+grammar org.xtext.mda.project.BrowserDSL with org.eclipse.xtext.common.Terminals
+
+generate browserDSL "http://www.xtext.org/mda/project/BrowserDSL"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
