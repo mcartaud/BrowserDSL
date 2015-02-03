@@ -440,34 +440,34 @@ ruleClear returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((	otherlv_0='clear(' 
+(	otherlv_0='clear(' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getClearAccess().getClearKeyword_0_0());
+    	newLeafNode(otherlv_0, grammarAccess.getClearAccess().getClearKeyword_0());
     }
-
+(
     { 
-        newCompositeNode(grammarAccess.getClearAccess().getFillableElementParserRuleCall_0_1()); 
+        newCompositeNode(grammarAccess.getClearAccess().getFillableElementParserRuleCall_1_0()); 
     }
     this_FillableElement_1=ruleFillableElement
     { 
         $current = $this_FillableElement_1.current; 
         afterParserOrEnumRuleCall();
     }
-)
-    |(
+
+    |
     { 
-        newCompositeNode(grammarAccess.getClearAccess().getCheckableElementParserRuleCall_1_0()); 
+        newCompositeNode(grammarAccess.getClearAccess().getCheckableElementParserRuleCall_1_1()); 
     }
     this_CheckableElement_2=ruleCheckableElement
     { 
         $current = $this_CheckableElement_2.current; 
         afterParserOrEnumRuleCall();
     }
-	otherlv_3=')' 
+)	otherlv_3=')' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getClearAccess().getRightParenthesisKeyword_1_1());
+    	newLeafNode(otherlv_3, grammarAccess.getClearAccess().getRightParenthesisKeyword_2());
     }
-))
+)
 ;
 
 
@@ -488,34 +488,34 @@ ruleVerify returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((	otherlv_0='verify(' 
+(	otherlv_0='verify(' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getVerifyAccess().getVerifyKeyword_0_0());
+    	newLeafNode(otherlv_0, grammarAccess.getVerifyAccess().getVerifyKeyword_0());
     }
-
+(
     { 
-        newCompositeNode(grammarAccess.getVerifyAccess().getFillableElementParserRuleCall_0_1()); 
+        newCompositeNode(grammarAccess.getVerifyAccess().getFillableElementParserRuleCall_1_0()); 
     }
     this_FillableElement_1=ruleFillableElement
     { 
         $current = $this_FillableElement_1.current; 
         afterParserOrEnumRuleCall();
     }
-)
-    |(
+
+    |
     { 
-        newCompositeNode(grammarAccess.getVerifyAccess().getCheckableElementParserRuleCall_1_0()); 
+        newCompositeNode(grammarAccess.getVerifyAccess().getCheckableElementParserRuleCall_1_1()); 
     }
     this_CheckableElement_2=ruleCheckableElement
     { 
         $current = $this_CheckableElement_2.current; 
         afterParserOrEnumRuleCall();
     }
-	otherlv_3=')' 
+)	otherlv_3=')' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getVerifyAccess().getRightParenthesisKeyword_1_1());
+    	newLeafNode(otherlv_3, grammarAccess.getVerifyAccess().getRightParenthesisKeyword_2());
     }
-))
+)
 ;
 
 

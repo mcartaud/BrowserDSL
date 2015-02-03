@@ -200,74 +200,66 @@ public class BrowserDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class ClearElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Clear");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cClearKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final RuleCall cFillableElementParserRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final RuleCall cCheckableElementParserRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cClearKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final RuleCall cFillableElementParserRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
+		private final RuleCall cCheckableElementParserRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Clear:
-		//	"clear(" FillableElement | CheckableElement ")";
+		//	"clear(" (FillableElement | CheckableElement) ")";
 		public ParserRule getRule() { return rule; }
 
-		//"clear(" FillableElement | CheckableElement ")"
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//"clear(" FillableElement
-		public Group getGroup_0() { return cGroup_0; }
+		//"clear(" (FillableElement | CheckableElement) ")"
+		public Group getGroup() { return cGroup; }
 
 		//"clear("
-		public Keyword getClearKeyword_0_0() { return cClearKeyword_0_0; }
+		public Keyword getClearKeyword_0() { return cClearKeyword_0; }
+
+		//FillableElement | CheckableElement
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//FillableElement
-		public RuleCall getFillableElementParserRuleCall_0_1() { return cFillableElementParserRuleCall_0_1; }
-
-		//CheckableElement ")"
-		public Group getGroup_1() { return cGroup_1; }
+		public RuleCall getFillableElementParserRuleCall_1_0() { return cFillableElementParserRuleCall_1_0; }
 
 		//CheckableElement
-		public RuleCall getCheckableElementParserRuleCall_1_0() { return cCheckableElementParserRuleCall_1_0; }
+		public RuleCall getCheckableElementParserRuleCall_1_1() { return cCheckableElementParserRuleCall_1_1; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_1_1() { return cRightParenthesisKeyword_1_1; }
+		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
 	}
 
 	public class VerifyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Verify");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cVerifyKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final RuleCall cFillableElementParserRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final RuleCall cCheckableElementParserRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cVerifyKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final RuleCall cFillableElementParserRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
+		private final RuleCall cCheckableElementParserRuleCall_1_1 = (RuleCall)cAlternatives_1.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Verify:
-		//	"verify(" FillableElement | CheckableElement ")";
+		//	"verify(" (FillableElement | CheckableElement) ")";
 		public ParserRule getRule() { return rule; }
 
-		//"verify(" FillableElement | CheckableElement ")"
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//"verify(" FillableElement
-		public Group getGroup_0() { return cGroup_0; }
+		//"verify(" (FillableElement | CheckableElement) ")"
+		public Group getGroup() { return cGroup; }
 
 		//"verify("
-		public Keyword getVerifyKeyword_0_0() { return cVerifyKeyword_0_0; }
+		public Keyword getVerifyKeyword_0() { return cVerifyKeyword_0; }
+
+		//FillableElement | CheckableElement
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//FillableElement
-		public RuleCall getFillableElementParserRuleCall_0_1() { return cFillableElementParserRuleCall_0_1; }
-
-		//CheckableElement ")"
-		public Group getGroup_1() { return cGroup_1; }
+		public RuleCall getFillableElementParserRuleCall_1_0() { return cFillableElementParserRuleCall_1_0; }
 
 		//CheckableElement
-		public RuleCall getCheckableElementParserRuleCall_1_0() { return cCheckableElementParserRuleCall_1_0; }
+		public RuleCall getCheckableElementParserRuleCall_1_1() { return cCheckableElementParserRuleCall_1_1; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_1_1() { return cRightParenthesisKeyword_1_1; }
+		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
 	}
 
 	public class ExistElements extends AbstractParserRuleElementFinder {
@@ -607,7 +599,7 @@ public class BrowserDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Clear:
-	//	"clear(" FillableElement | CheckableElement ")";
+	//	"clear(" (FillableElement | CheckableElement) ")";
 	public ClearElements getClearAccess() {
 		return pClear;
 	}
@@ -617,7 +609,7 @@ public class BrowserDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Verify:
-	//	"verify(" FillableElement | CheckableElement ")";
+	//	"verify(" (FillableElement | CheckableElement) ")";
 	public VerifyElements getVerifyAccess() {
 		return pVerify;
 	}

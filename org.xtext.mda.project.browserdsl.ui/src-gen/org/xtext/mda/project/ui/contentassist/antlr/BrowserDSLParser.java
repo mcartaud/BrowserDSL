@@ -40,14 +40,12 @@ public class BrowserDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActionAccess().getAlternatives(), "rule__Action__Alternatives");
 					put(grammarAccess.getElementAccess().getAlternatives(), "rule__Element__Alternatives");
 					put(grammarAccess.getClickableElementAccess().getAlternatives(), "rule__ClickableElement__Alternatives");
-					put(grammarAccess.getClearAccess().getAlternatives(), "rule__Clear__Alternatives");
-					put(grammarAccess.getVerifyAccess().getAlternatives(), "rule__Verify__Alternatives");
+					put(grammarAccess.getClearAccess().getAlternatives_1(), "rule__Clear__Alternatives_1");
+					put(grammarAccess.getVerifyAccess().getAlternatives_1(), "rule__Verify__Alternatives_1");
 					put(grammarAccess.getClickAccess().getGroup(), "rule__Click__Group__0");
 					put(grammarAccess.getFillAccess().getGroup(), "rule__Fill__Group__0");
-					put(grammarAccess.getClearAccess().getGroup_0(), "rule__Clear__Group_0__0");
-					put(grammarAccess.getClearAccess().getGroup_1(), "rule__Clear__Group_1__0");
-					put(grammarAccess.getVerifyAccess().getGroup_0(), "rule__Verify__Group_0__0");
-					put(grammarAccess.getVerifyAccess().getGroup_1(), "rule__Verify__Group_1__0");
+					put(grammarAccess.getClearAccess().getGroup(), "rule__Clear__Group__0");
+					put(grammarAccess.getVerifyAccess().getGroup(), "rule__Verify__Group__0");
 					put(grammarAccess.getExistAccess().getGroup(), "rule__Exist__Group__0");
 					put(grammarAccess.getCheckboxAccess().getGroup(), "rule__Checkbox__Group__0");
 					put(grammarAccess.getLinkAccess().getGroup(), "rule__Link__Group__0");

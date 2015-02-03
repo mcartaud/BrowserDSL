@@ -34,11 +34,11 @@ Fill:
 ;
 
 Clear:
-	'clear(' FillableElement | CheckableElement ')'
+	'clear(' (FillableElement | CheckableElement) ')'
 ;
 
 Verify:
-	'verify(' FillableElement | CheckableElement ')'
+	'verify(' (FillableElement | CheckableElement) ')'
 ;
 
 Exist:
