@@ -2,33 +2,97 @@ grammar org.xtext.mda.project.BrowserDSL with org.eclipse.xtext.common.Terminals
 
 generate browserDSL "http://www.xtext.org/mda/project/BrowserDSL"
 
-Model:
-//	variables+=Variable (';' variables+=Variable)* ';' 
-//	subroutines+=SubRoutine (';' subroutines+=SubRoutine)* ';'
-	main=Main ';'
+Program:
+	sub+=Subroutine*
+	main=Main	
 ;
 
-SubRoutine:
-	'sub ' name=STRING
-	'(' (STRING ', ')* STRING ') {'
-		action+=Action (',' action+=Action)*
-	'}'
+Subroutine:
+	'sub ' head=Head body+=Body '}'
 ;
-	
+
+Head:
+	name=FunctionName '(){'
+	| name=FunctionName '(var ' varId+=VariableName (', var ' varId+=VariableName)* '){'
+;
+
+FunctionReference:
+	functionName=[FunctionName]
+;
+
+VariableReference:
+	varID=[VariableName]
+;
+
+FunctionCall:
+	FunctionReference '()'
+	| FunctionReference '(' var+=Expression (',' var+=Expression)* ')'
+;
+
+FunctionName:
+	name=STRING
+;
+
 Main:
-	actions+=Action (',' action+=Action)*
-;	
-	
-Action:
-	(Click | Fill | Clear | Verify | Exist | GoTo | SubRoutineCall)
-;
-	
-SubRoutineCall :
-	id=[SubRoutine]
+	'main ' Body
 ;
 
-List:
-	'['element+=Element (', ' element+=Element)* ']'
+Body:
+	instructions+=Instruction ('; ' instructions+=Instruction)* ';'
+;
+
+Instruction:
+	dec=Declaration
+	| cond=Condition
+	| loop=Loop
+	| act=ActionInstruction
+	| ass=Assignation
+;
+
+Condition:
+	'if '('all' | 'any')? exp=Expression 
+	'then ' ins+=Instruction+ 'else ' ins2+=Instruction+ 'endif'
+;
+
+Loop:
+	'toto'
+	//While | Foreach
+;
+
+ActionInstruction:
+	action=Click | action=Fill | action=Clear | GoTo
+;
+
+VariableName:
+	name=STRING
+;
+
+Declaration:
+	'var ' name=VariableName ' = ' val=Expression
+;
+
+Assignation:
+	var=VariableReference ' = ' expr=Expression
+;
+
+Expression:
+	type=Type
+	| var=Variable
+	| act=ActionExpression
+	| (' == ' | ' > ' | ' < ') left=Expression right=Expression
+	| ' !' exp=Expression
+;
+
+Type:
+	'bool ' | 'string ' | 'int '
+;
+
+Variable:
+	var=VariableReference
+;
+
+ActionExpression:
+	Verify | Exist
 ;
 
 Element:
@@ -46,6 +110,57 @@ FillableElement:
 CheckableElement:
 	Checkbox
 ;
+
+Checkbox:
+	'checkbox ' (check=STRING | Variable)
+;
+
+Link:
+	'link ' (link=STRING | Variable)
+;
+
+Button:
+	'button ' (but=STRING | Variable)
+;
+
+Image:
+	'image ' (img=STRING | Variable)
+;
+
+TextField:
+	'textField ' (text=STRING | Variable)
+;
+
+//Model:
+//	variables+=Variable (';' variables+=Variable)* ';' 
+//	subroutines+=SubRoutine (';' subroutines+=SubRoutine)* ';'
+//	main=Main ';'
+//;
+//
+//SubRoutine:
+//	'sub ' name=STRING
+//	'(' (STRING ', ')* STRING ') {'
+//		action+=Action (',' action+=Action)*
+//	'}'
+//;
+//	
+//Main:
+//	actions+=Action (',' action+=Action)*
+//;	
+//	
+//Action:
+//	(Click | Fill | Clear | Verify | Exist | GoTo | SubRoutineCall)
+//;
+//	
+//SubRoutineCall :
+//	id=[SubRoutine]
+//;
+//
+//List:
+//	'['element+=Element (', ' element+=Element)* ']'
+//;
+//
+
 
 Click:
 	'click(' ClickableElement ')'
@@ -68,47 +183,28 @@ Exist:
 ;
 
 GoTo:
-	'url=' (URL | VariableUrl)
+	'url=' (URL)
 ;
-
-Variable:
-	VariableList | VariableString | VariableUrl
-;
-
-VariableString:
-	'var ' name=STRING
-	' = ' STRING ';'
-;
-
-VariableUrl:
-	'var ' name=STRING
-	' = ' URL ';'
-;
-
-VariableList:
-	'var ' name=STRING
-	' = ' value=List ';'
-;
-
-Checkbox:
-	'checkbox ' (STRING | Variable)
-;
-
-Link:
-	'link ' (STRING | Variable)
-;
-
-Button:
-	'button ' (STRING | Variable)
-;
-
-Image:
-	'image ' (STRING | Variable)
-;
-
-TextField:
-	'textField ' (STRING | Variable)
-;
+//
+//Variable:
+//	VariableList | VariableString | VariableUrl
+//;
+//
+//VariableString:
+//	'var ' name=STRING
+//	' = ' STRING ';'
+//;
+//
+//VariableUrl:
+//	'var ' name=STRING
+//	' = ' URL ';'
+//;
+//
+//VariableList:
+//	'var ' name=STRING
+//	' = ' value=List ';'
+//;
+//
 
 terminal URL:
     ('a'..'z')+ '://' // Protocol

@@ -64,31 +64,38 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
   {
     switch (eClass.getClassifierID())
     {
-      case BrowserDSLPackage.MODEL: return createModel();
-      case BrowserDSLPackage.SUB_ROUTINE: return createSubRoutine();
+      case BrowserDSLPackage.PROGRAM: return createProgram();
+      case BrowserDSLPackage.SUBROUTINE: return createSubroutine();
+      case BrowserDSLPackage.HEAD: return createHead();
+      case BrowserDSLPackage.FUNCTION_REFERENCE: return createFunctionReference();
+      case BrowserDSLPackage.VARIABLE_REFERENCE: return createVariableReference();
+      case BrowserDSLPackage.FUNCTION_CALL: return createFunctionCall();
+      case BrowserDSLPackage.FUNCTION_NAME: return createFunctionName();
       case BrowserDSLPackage.MAIN: return createMain();
-      case BrowserDSLPackage.ACTION: return createAction();
-      case BrowserDSLPackage.SUB_ROUTINE_CALL: return createSubRoutineCall();
-      case BrowserDSLPackage.LIST: return createList();
+      case BrowserDSLPackage.BODY: return createBody();
+      case BrowserDSLPackage.INSTRUCTION: return createInstruction();
+      case BrowserDSLPackage.CONDITION: return createCondition();
+      case BrowserDSLPackage.ACTION_INSTRUCTION: return createActionInstruction();
+      case BrowserDSLPackage.VARIABLE_NAME: return createVariableName();
+      case BrowserDSLPackage.DECLARATION: return createDeclaration();
+      case BrowserDSLPackage.ASSIGNATION: return createAssignation();
+      case BrowserDSLPackage.EXPRESSION: return createExpression();
+      case BrowserDSLPackage.VARIABLE: return createVariable();
+      case BrowserDSLPackage.ACTION_EXPRESSION: return createActionExpression();
       case BrowserDSLPackage.ELEMENT: return createElement();
       case BrowserDSLPackage.CLICKABLE_ELEMENT: return createClickableElement();
       case BrowserDSLPackage.FILLABLE_ELEMENT: return createFillableElement();
       case BrowserDSLPackage.CHECKABLE_ELEMENT: return createCheckableElement();
-      case BrowserDSLPackage.CLICK: return createClick();
-      case BrowserDSLPackage.FILL: return createFill();
-      case BrowserDSLPackage.CLEAR: return createClear();
-      case BrowserDSLPackage.VERIFY: return createVerify();
-      case BrowserDSLPackage.EXIST: return createExist();
-      case BrowserDSLPackage.GO_TO: return createGoTo();
-      case BrowserDSLPackage.VARIABLE: return createVariable();
-      case BrowserDSLPackage.VARIABLE_STRING: return createVariableString();
-      case BrowserDSLPackage.VARIABLE_URL: return createVariableUrl();
-      case BrowserDSLPackage.VARIABLE_LIST: return createVariableList();
       case BrowserDSLPackage.CHECKBOX: return createCheckbox();
       case BrowserDSLPackage.LINK: return createLink();
       case BrowserDSLPackage.BUTTON: return createButton();
       case BrowserDSLPackage.IMAGE: return createImage();
       case BrowserDSLPackage.TEXT_FIELD: return createTextField();
+      case BrowserDSLPackage.CLICK: return createClick();
+      case BrowserDSLPackage.FILL: return createFill();
+      case BrowserDSLPackage.CLEAR: return createClear();
+      case BrowserDSLPackage.VERIFY: return createVerify();
+      case BrowserDSLPackage.EXIST: return createExist();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -99,10 +106,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Model createModel()
+  public Program createProgram()
   {
-    ModelImpl model = new ModelImpl();
-    return model;
+    ProgramImpl program = new ProgramImpl();
+    return program;
   }
 
   /**
@@ -110,10 +117,65 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubRoutine createSubRoutine()
+  public Subroutine createSubroutine()
   {
-    SubRoutineImpl subRoutine = new SubRoutineImpl();
-    return subRoutine;
+    SubroutineImpl subroutine = new SubroutineImpl();
+    return subroutine;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Head createHead()
+  {
+    HeadImpl head = new HeadImpl();
+    return head;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FunctionReference createFunctionReference()
+  {
+    FunctionReferenceImpl functionReference = new FunctionReferenceImpl();
+    return functionReference;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VariableReference createVariableReference()
+  {
+    VariableReferenceImpl variableReference = new VariableReferenceImpl();
+    return variableReference;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FunctionCall createFunctionCall()
+  {
+    FunctionCallImpl functionCall = new FunctionCallImpl();
+    return functionCall;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FunctionName createFunctionName()
+  {
+    FunctionNameImpl functionName = new FunctionNameImpl();
+    return functionName;
   }
 
   /**
@@ -132,10 +194,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Action createAction()
+  public Body createBody()
   {
-    ActionImpl action = new ActionImpl();
-    return action;
+    BodyImpl body = new BodyImpl();
+    return body;
   }
 
   /**
@@ -143,10 +205,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubRoutineCall createSubRoutineCall()
+  public Instruction createInstruction()
   {
-    SubRoutineCallImpl subRoutineCall = new SubRoutineCallImpl();
-    return subRoutineCall;
+    InstructionImpl instruction = new InstructionImpl();
+    return instruction;
   }
 
   /**
@@ -154,10 +216,87 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public List createList()
+  public Condition createCondition()
   {
-    ListImpl list = new ListImpl();
-    return list;
+    ConditionImpl condition = new ConditionImpl();
+    return condition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ActionInstruction createActionInstruction()
+  {
+    ActionInstructionImpl actionInstruction = new ActionInstructionImpl();
+    return actionInstruction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VariableName createVariableName()
+  {
+    VariableNameImpl variableName = new VariableNameImpl();
+    return variableName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Declaration createDeclaration()
+  {
+    DeclarationImpl declaration = new DeclarationImpl();
+    return declaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Assignation createAssignation()
+  {
+    AssignationImpl assignation = new AssignationImpl();
+    return assignation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression createExpression()
+  {
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Variable createVariable()
+  {
+    VariableImpl variable = new VariableImpl();
+    return variable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ActionExpression createActionExpression()
+  {
+    ActionExpressionImpl actionExpression = new ActionExpressionImpl();
+    return actionExpression;
   }
 
   /**
@@ -202,116 +341,6 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
   {
     CheckableElementImpl checkableElement = new CheckableElementImpl();
     return checkableElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Click createClick()
-  {
-    ClickImpl click = new ClickImpl();
-    return click;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Fill createFill()
-  {
-    FillImpl fill = new FillImpl();
-    return fill;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Clear createClear()
-  {
-    ClearImpl clear = new ClearImpl();
-    return clear;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Verify createVerify()
-  {
-    VerifyImpl verify = new VerifyImpl();
-    return verify;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Exist createExist()
-  {
-    ExistImpl exist = new ExistImpl();
-    return exist;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public GoTo createGoTo()
-  {
-    GoToImpl goTo = new GoToImpl();
-    return goTo;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Variable createVariable()
-  {
-    VariableImpl variable = new VariableImpl();
-    return variable;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VariableString createVariableString()
-  {
-    VariableStringImpl variableString = new VariableStringImpl();
-    return variableString;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VariableUrl createVariableUrl()
-  {
-    VariableUrlImpl variableUrl = new VariableUrlImpl();
-    return variableUrl;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VariableList createVariableList()
-  {
-    VariableListImpl variableList = new VariableListImpl();
-    return variableList;
   }
 
   /**
@@ -367,6 +396,61 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
   {
     TextFieldImpl textField = new TextFieldImpl();
     return textField;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Click createClick()
+  {
+    ClickImpl click = new ClickImpl();
+    return click;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Fill createFill()
+  {
+    FillImpl fill = new FillImpl();
+    return fill;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Clear createClear()
+  {
+    ClearImpl clear = new ClearImpl();
+    return clear;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Verify createVerify()
+  {
+    VerifyImpl verify = new VerifyImpl();
+    return verify;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Exist createExist()
+  {
+    ExistImpl exist = new ExistImpl();
+    return exist;
   }
 
   /**

@@ -13,6 +13,6 @@ package org.xtext.mda.project.browserDSL;
  * @model
  * @generated
  */
-public interface Exist extends Action
+public interface Exist extends ActionExpression
 {
 } // Exist

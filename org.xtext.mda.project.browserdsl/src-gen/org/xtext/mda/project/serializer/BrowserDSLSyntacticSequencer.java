@@ -19,31 +19,44 @@ import org.xtext.mda.project.services.BrowserDSLGrammarAccess;
 public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected BrowserDSLGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Button_Checkbox_Clear_Click_Exist_Fill_GoTo_Image_Link_TextField_Verify___ExistKeyword_0___CheckboxKeyword_0_or_TextFieldKeyword_0_____or___UrlKeyword_0_or___FillKeyword_0_TextFieldKeyword_0___or_____ClearKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0_______or_____ClickKeyword_0_or_ExistKeyword_0_____ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0____;
-	protected AbstractElementAlias match_Button_Checkbox_Clear_Click_Exist_Fill_Image_Link_TextField_Verify___ExistKeyword_0___CheckboxKeyword_0_or_TextFieldKeyword_0_____or_____ClickKeyword_0_or_ExistKeyword_0_____ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_____or_____FillKeyword_0_TextFieldKeyword_0___or_____ClearKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0______;
+	protected AbstractElementAlias match_Button_Checkbox_Exist_Image_Link_TextField_Verify___ExistKeyword_0___ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_____or_____ExistKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0____;
 	protected AbstractElementAlias match_Button_Checkbox_Image_Link_TextField_ButtonKeyword_0_or_CheckboxKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_or_TextFieldKeyword_0;
 	protected AbstractElementAlias match_Button_Image_Link_ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0;
 	protected AbstractElementAlias match_Checkbox_TextField_CheckboxKeyword_0_or_TextFieldKeyword_0;
-	protected AbstractElementAlias match_SubRoutine___STRINGTerminalRuleCall_3_0_CommaSpaceKeyword_3_1__a;
+	protected AbstractElementAlias match_Condition___AllKeyword_1_0_or_AnyKeyword_1_1__q;
+	protected AbstractElementAlias match_Exist_Verify_ExistKeyword_0_or_VerifyKeyword_0;
+	protected AbstractElementAlias match_Expression_EqualsSignEqualsSignKeyword_3_0_0_or_GreaterThanSignKeyword_3_0_1_or_LessThanSignKeyword_3_0_2;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (BrowserDSLGrammarAccess) access;
-		match_Button_Checkbox_Clear_Click_Exist_Fill_GoTo_Image_Link_TextField_Verify___ExistKeyword_0___CheckboxKeyword_0_or_TextFieldKeyword_0_____or___UrlKeyword_0_or___FillKeyword_0_TextFieldKeyword_0___or_____ClearKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0_______or_____ClickKeyword_0_or_ExistKeyword_0_____ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0____ = new AlternativeAlias(false, false, new AlternativeAlias(false, false, new GroupAlias(false, false, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getClearAccess().getClearKeyword_0()), new TokenAlias(false, false, grammarAccess.getVerifyAccess().getVerifyKeyword_0())), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getCheckboxAccess().getCheckboxKeyword_0()), new TokenAlias(false, false, grammarAccess.getTextFieldAccess().getTextFieldKeyword_0()))), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getFillAccess().getFillKeyword_0()), new TokenAlias(false, false, grammarAccess.getTextFieldAccess().getTextFieldKeyword_0())), new TokenAlias(false, false, grammarAccess.getGoToAccess().getUrlKeyword_0())), new GroupAlias(false, false, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getClickAccess().getClickKeyword_0()), new TokenAlias(false, false, grammarAccess.getExistAccess().getExistKeyword_0())), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getButtonAccess().getButtonKeyword_0()), new TokenAlias(false, false, grammarAccess.getImageAccess().getImageKeyword_0()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getLinkKeyword_0()))), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getExistAccess().getExistKeyword_0()), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getCheckboxAccess().getCheckboxKeyword_0()), new TokenAlias(false, false, grammarAccess.getTextFieldAccess().getTextFieldKeyword_0()))));
-		match_Button_Checkbox_Clear_Click_Exist_Fill_Image_Link_TextField_Verify___ExistKeyword_0___CheckboxKeyword_0_or_TextFieldKeyword_0_____or_____ClickKeyword_0_or_ExistKeyword_0_____ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_____or_____FillKeyword_0_TextFieldKeyword_0___or_____ClearKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0______ = new AlternativeAlias(false, false, new AlternativeAlias(false, false, new GroupAlias(false, false, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getClearAccess().getClearKeyword_0()), new TokenAlias(false, false, grammarAccess.getVerifyAccess().getVerifyKeyword_0())), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getCheckboxAccess().getCheckboxKeyword_0()), new TokenAlias(false, false, grammarAccess.getTextFieldAccess().getTextFieldKeyword_0()))), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getFillAccess().getFillKeyword_0()), new TokenAlias(false, false, grammarAccess.getTextFieldAccess().getTextFieldKeyword_0()))), new GroupAlias(false, false, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getClickAccess().getClickKeyword_0()), new TokenAlias(false, false, grammarAccess.getExistAccess().getExistKeyword_0())), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getButtonAccess().getButtonKeyword_0()), new TokenAlias(false, false, grammarAccess.getImageAccess().getImageKeyword_0()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getLinkKeyword_0()))), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getExistAccess().getExistKeyword_0()), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getCheckboxAccess().getCheckboxKeyword_0()), new TokenAlias(false, false, grammarAccess.getTextFieldAccess().getTextFieldKeyword_0()))));
+		match_Button_Checkbox_Exist_Image_Link_TextField_Verify___ExistKeyword_0___ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_____or_____ExistKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0____ = new AlternativeAlias(false, false, new GroupAlias(false, false, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExistAccess().getExistKeyword_0()), new TokenAlias(false, false, grammarAccess.getVerifyAccess().getVerifyKeyword_0())), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getCheckboxAccess().getCheckboxKeyword_0()), new TokenAlias(false, false, grammarAccess.getTextFieldAccess().getTextFieldKeyword_0()))), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getExistAccess().getExistKeyword_0()), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getButtonAccess().getButtonKeyword_0()), new TokenAlias(false, false, grammarAccess.getImageAccess().getImageKeyword_0()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getLinkKeyword_0()))));
 		match_Button_Checkbox_Image_Link_TextField_ButtonKeyword_0_or_CheckboxKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_or_TextFieldKeyword_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getButtonAccess().getButtonKeyword_0()), new TokenAlias(false, false, grammarAccess.getCheckboxAccess().getCheckboxKeyword_0()), new TokenAlias(false, false, grammarAccess.getImageAccess().getImageKeyword_0()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getLinkKeyword_0()), new TokenAlias(false, false, grammarAccess.getTextFieldAccess().getTextFieldKeyword_0()));
 		match_Button_Image_Link_ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getButtonAccess().getButtonKeyword_0()), new TokenAlias(false, false, grammarAccess.getImageAccess().getImageKeyword_0()), new TokenAlias(false, false, grammarAccess.getLinkAccess().getLinkKeyword_0()));
 		match_Checkbox_TextField_CheckboxKeyword_0_or_TextFieldKeyword_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getCheckboxAccess().getCheckboxKeyword_0()), new TokenAlias(false, false, grammarAccess.getTextFieldAccess().getTextFieldKeyword_0()));
-		match_SubRoutine___STRINGTerminalRuleCall_3_0_CommaSpaceKeyword_3_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getSubRoutineAccess().getSTRINGTerminalRuleCall_3_0()), new TokenAlias(false, false, grammarAccess.getSubRoutineAccess().getCommaSpaceKeyword_3_1()));
+		match_Condition___AllKeyword_1_0_or_AnyKeyword_1_1__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getConditionAccess().getAllKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getAnyKeyword_1_1()));
+		match_Exist_Verify_ExistKeyword_0_or_VerifyKeyword_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExistAccess().getExistKeyword_0()), new TokenAlias(false, false, grammarAccess.getVerifyAccess().getVerifyKeyword_0()));
+		match_Expression_EqualsSignEqualsSignKeyword_3_0_0_or_GreaterThanSignKeyword_3_0_1_or_LessThanSignKeyword_3_0_2 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getEqualsSignEqualsSignKeyword_3_0_0()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getGreaterThanSignKeyword_3_0_1()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getLessThanSignKeyword_3_0_2()));
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if(ruleCall.getRule() == grammarAccess.getSTRINGRule())
+		if(ruleCall.getRule() == grammarAccess.getGoToRule())
+			return getGoToToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getSTRINGRule())
 			return getSTRINGToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getURLRule())
-			return getURLToken(semanticObject, ruleCall, node);
 		return "";
+	}
+	
+	/**
+	 * GoTo:
+	 * 	'url=' (URL)
+	 * ;
+	 */
+	protected String getGoToToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "url=://...";
 	}
 	
 	/**
@@ -58,178 +71,41 @@ public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 		return "\"\"";
 	}
 	
-	/**
-	 * terminal URL:
-	 *     ('a'..'z')+ '://'  
-	 *     (         (
-	 *             ('0'..'9')+ '.' ('0'..'9')+ '.' ('0'..'9')+ '.' ('0'..'9')+
-	 *         ) |
-	 *         (
-	 *             ('a'..'z'|'A'..'Z')
-	 *             (
-	 *                 'a'..'z'|'A'..'Z'|
-	 *                 '0'..'9'|
-	 *                 '$'|
-	 *                 '-'|
-	 *                 '_'|
-	 *                 (
-	 *                     '\\'
-	 *                     ('0'..'9'|'a'..'f'|'A'..'F')
-	 *                     ('0'..'9'|'a'..'f'|'A'..'F')
-	 *                 ) |
-	 *                 (
-	 *                     '%'
-	 *                     ('0'..'9')
-	 *                     ('0'..'9')
-	 *                 )
-	 *             )*
-	 *             (
-	 *                 '.'
-	 *                 ('a'..'z'|'A'..'Z')
-	 *                 (
-	 *                     'a'..'z'|'A'..'Z'|
-	 *                     '0'..'9'|
-	 *                     '$'|
-	 *                     '-'|
-	 *                     '_'|
-	 *                     (
-	 *                         '\\'
-	 *                         ('0'..'9'|'a'..'f'|'A'..'F')
-	 *                         ('0'..'9'|'a'..'f'|'A'..'F')
-	 *                     ) |
-	 *                     (
-	 *                         '%'
-	 *                         ('0'..'9')
-	 *                         ('0'..'9')
-	 *                     )
-	 *                 )*
-	 *             )*
-	 *         )
-	 *     )
-	 *     (':' ('0'..'9')+)?  
-	 *     ('/'
-	 *         (
-	 *             'a'..'z'|'A'..'Z'|
-	 *             '0'..'9'|
-	 *             '$'|
-	 *             '-'|
-	 *             '_'|
-	 *             '~'|
-	 *             '+'|
-	 *             '.'|
-	 *             (
-	 *                 '\\'
-	 *                 ('0'..'9'|'a'..'f'|'A'..'F')
-	 *                 ('0'..'9'|'a'..'f'|'A'..'F')
-	 *             ) |
-	 *             (
-	 *                 '%'
-	 *                 ('0'..'9')
-	 *                 ('0'..'9')
-	 *             )
-	 *         )*
-	 *     )*  
-	 *     ('?'
-	 *         (
-	 *             'a'..'z'|'A'..'Z'|
-	 *             '0'..'9'|
-	 *             '$'|
-	 *             '-'|
-	 *             '_'|
-	 *             '='|
-	 *             '&'|
-	 *             ';'|
-	 *             (
-	 *                 '\\'
-	 *                 ('0'..'9'|'a'..'f'|'A'..'F')
-	 *                 ('0'..'9'|'a'..'f'|'A'..'F')
-	 *             ) |
-	 *             (
-	 *                 '%'
-	 *                 ('0'..'9')
-	 *                 ('0'..'9')
-	 *             )
-	 *         )+
-	 *  
-	 *         ('+'
-	 *             (
-	 *                 'a'..'z'|'A'..'Z'|
-	 *                 '0'..'9'|
-	 *                 '$'|
-	 *                 '-'|
-	 *                 '_'|
-	 *                 '='|
-	 *                 '&'|
-	 *                 ';'|
-	 *                 (
-	 *                     '\\'
-	 *                     ('0'..'9'|'a'..'f'|'A'..'F')
-	 *                     ('0'..'9'|'a'..'f'|'A'..'F')
-	 *                 ) |
-	 *                 (
-	 *                     '%'
-	 *                     ('0'..'9')
-	 *                     ('0'..'9')
-	 *                 )
-	 *             )+
-	 *         )*
-	 *     )?;
-	 */
-	protected String getURLToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "://...";
-	}
-	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		if (transition.getAmbiguousSyntaxes().isEmpty()) return;
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_Button_Checkbox_Clear_Click_Exist_Fill_GoTo_Image_Link_TextField_Verify___ExistKeyword_0___CheckboxKeyword_0_or_TextFieldKeyword_0_____or___UrlKeyword_0_or___FillKeyword_0_TextFieldKeyword_0___or_____ClearKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0_______or_____ClickKeyword_0_or_ExistKeyword_0_____ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0____.equals(syntax))
-				emit_Button_Checkbox_Clear_Click_Exist_Fill_GoTo_Image_Link_TextField_Verify___ExistKeyword_0___CheckboxKeyword_0_or_TextFieldKeyword_0_____or___UrlKeyword_0_or___FillKeyword_0_TextFieldKeyword_0___or_____ClearKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0_______or_____ClickKeyword_0_or_ExistKeyword_0_____ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0____(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Button_Checkbox_Clear_Click_Exist_Fill_Image_Link_TextField_Verify___ExistKeyword_0___CheckboxKeyword_0_or_TextFieldKeyword_0_____or_____ClickKeyword_0_or_ExistKeyword_0_____ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_____or_____FillKeyword_0_TextFieldKeyword_0___or_____ClearKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0______.equals(syntax))
-				emit_Button_Checkbox_Clear_Click_Exist_Fill_Image_Link_TextField_Verify___ExistKeyword_0___CheckboxKeyword_0_or_TextFieldKeyword_0_____or_____ClickKeyword_0_or_ExistKeyword_0_____ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_____or_____FillKeyword_0_TextFieldKeyword_0___or_____ClearKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0______(semanticObject, getLastNavigableState(), syntaxNodes);
+			if(match_Button_Checkbox_Exist_Image_Link_TextField_Verify___ExistKeyword_0___ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_____or_____ExistKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0____.equals(syntax))
+				emit_Button_Checkbox_Exist_Image_Link_TextField_Verify___ExistKeyword_0___ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_____or_____ExistKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0____(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Button_Checkbox_Image_Link_TextField_ButtonKeyword_0_or_CheckboxKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_or_TextFieldKeyword_0.equals(syntax))
 				emit_Button_Checkbox_Image_Link_TextField_ButtonKeyword_0_or_CheckboxKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_or_TextFieldKeyword_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Button_Image_Link_ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0.equals(syntax))
 				emit_Button_Image_Link_ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Checkbox_TextField_CheckboxKeyword_0_or_TextFieldKeyword_0.equals(syntax))
 				emit_Checkbox_TextField_CheckboxKeyword_0_or_TextFieldKeyword_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_SubRoutine___STRINGTerminalRuleCall_3_0_CommaSpaceKeyword_3_1__a.equals(syntax))
-				emit_SubRoutine___STRINGTerminalRuleCall_3_0_CommaSpaceKeyword_3_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Condition___AllKeyword_1_0_or_AnyKeyword_1_1__q.equals(syntax))
+				emit_Condition___AllKeyword_1_0_or_AnyKeyword_1_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Exist_Verify_ExistKeyword_0_or_VerifyKeyword_0.equals(syntax))
+				emit_Exist_Verify_ExistKeyword_0_or_VerifyKeyword_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Expression_EqualsSignEqualsSignKeyword_3_0_0_or_GreaterThanSignKeyword_3_0_1_or_LessThanSignKeyword_3_0_2.equals(syntax))
+				emit_Expression_EqualsSignEqualsSignKeyword_3_0_0_or_GreaterThanSignKeyword_3_0_1_or_LessThanSignKeyword_3_0_2(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
 	/**
 	 * Syntax:
-	 *     (
-	     ('url=' | ('fill(' 'textField ') | (('clear(' | 'verify(') ('checkbox ' | 'textField '))) | 
-	     ('exist(' ('checkbox ' | 'textField ')) | 
-	     (('click(' | 'exist(') ('link ' | 'button ' | 'image '))
-	 )
+	 *     ('exist(' ('link' | 'button' | 'image')) | (('verify(' | 'exist(') ('textField' | 'checkbox'))
 	 */
-	protected void emit_Button_Checkbox_Clear_Click_Exist_Fill_GoTo_Image_Link_TextField_Verify___ExistKeyword_0___CheckboxKeyword_0_or_TextFieldKeyword_0_____or___UrlKeyword_0_or___FillKeyword_0_TextFieldKeyword_0___or_____ClearKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0_______or_____ClickKeyword_0_or_ExistKeyword_0_____ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0____(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Button_Checkbox_Exist_Image_Link_TextField_Verify___ExistKeyword_0___ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_____or_____ExistKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0____(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Syntax:
-	 *     (
-	     (('fill(' 'textField ') | (('clear(' | 'verify(') ('checkbox ' | 'textField '))) | 
-	     ('exist(' ('checkbox ' | 'textField ')) | 
-	     (('click(' | 'exist(') ('link ' | 'button ' | 'image '))
-	 )
-	 */
-	protected void emit_Button_Checkbox_Clear_Click_Exist_Fill_Image_Link_TextField_Verify___ExistKeyword_0___CheckboxKeyword_0_or_TextFieldKeyword_0_____or_____ClickKeyword_0_or_ExistKeyword_0_____ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_____or_____FillKeyword_0_TextFieldKeyword_0___or_____ClearKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0______(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     'link ' | 'button ' | 'image ' | 'textField ' | 'checkbox '
+	 *     'link' | 'button' | 'image' | 'textField' | 'checkbox'
 	 */
 	protected void emit_Button_Checkbox_Image_Link_TextField_ButtonKeyword_0_or_CheckboxKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_or_TextFieldKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -237,7 +113,7 @@ public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     'link ' | 'button ' | 'image '
+	 *     'link' | 'button' | 'image'
 	 */
 	protected void emit_Button_Image_Link_ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -245,7 +121,7 @@ public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     'textField ' | 'checkbox '
+	 *     'textField' | 'checkbox'
 	 */
 	protected void emit_Checkbox_TextField_CheckboxKeyword_0_or_TextFieldKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -253,9 +129,25 @@ public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     (STRING ', ')*
+	 *     ('all' | 'any')?
 	 */
-	protected void emit_SubRoutine___STRINGTerminalRuleCall_3_0_CommaSpaceKeyword_3_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Condition___AllKeyword_1_0_or_AnyKeyword_1_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     'verify(' | 'exist('
+	 */
+	protected void emit_Exist_Verify_ExistKeyword_0_or_VerifyKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     '==' | '>' | '<'
+	 */
+	protected void emit_Expression_EqualsSignEqualsSignKeyword_3_0_0_or_GreaterThanSignKeyword_3_0_1_or_LessThanSignKeyword_3_0_2(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

@@ -13,6 +13,6 @@ package org.xtext.mda.project.browserDSL;
  * @model
  * @generated
  */
-public interface Verify extends Action
+public interface Verify extends ActionExpression
 {
 } // Verify

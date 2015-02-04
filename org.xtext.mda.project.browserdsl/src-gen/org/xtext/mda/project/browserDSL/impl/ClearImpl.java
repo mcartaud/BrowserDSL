@@ -4,6 +4,8 @@ package org.xtext.mda.project.browserDSL.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
 import org.xtext.mda.project.browserDSL.Clear;
 
@@ -16,7 +18,7 @@ import org.xtext.mda.project.browserDSL.Clear;
  *
  * @generated
  */
-public class ClearImpl extends ActionImpl implements Clear
+public class ClearImpl extends MinimalEObjectImpl.Container implements Clear
 {
   /**
    * <!-- begin-user-doc -->

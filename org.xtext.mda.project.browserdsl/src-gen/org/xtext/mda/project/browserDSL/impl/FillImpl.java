@@ -4,6 +4,8 @@ package org.xtext.mda.project.browserDSL.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
 import org.xtext.mda.project.browserDSL.Fill;
 
@@ -16,7 +18,7 @@ import org.xtext.mda.project.browserDSL.Fill;
  *
  * @generated
  */
-public class FillImpl extends ActionImpl implements Fill
+public class FillImpl extends MinimalEObjectImpl.Container implements Fill
 {
   /**
    * <!-- begin-user-doc -->

@@ -2,6 +2,7 @@
  */
 package org.xtext.mda.project.browserDSL;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +14,6 @@ package org.xtext.mda.project.browserDSL;
  * @model
  * @generated
  */
-public interface Fill extends Action
+public interface Fill extends EObject
 {
 } // Fill

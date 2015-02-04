@@ -25,7 +25,7 @@ public class BrowserDSLParser extends org.eclipse.xtext.parser.antlr.AbstractAnt
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Model";
+		return "Program";
 	}
 	
 	public BrowserDSLGrammarAccess getGrammarAccess() {

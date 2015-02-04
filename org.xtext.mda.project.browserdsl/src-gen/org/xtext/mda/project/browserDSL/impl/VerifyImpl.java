@@ -16,7 +16,7 @@ import org.xtext.mda.project.browserDSL.Verify;
  *
  * @generated
  */
-public class VerifyImpl extends ActionImpl implements Verify
+public class VerifyImpl extends ActionExpressionImpl implements Verify
 {
   /**
    * <!-- begin-user-doc -->

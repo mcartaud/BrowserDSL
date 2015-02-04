@@ -16,7 +16,7 @@ import org.xtext.mda.project.browserDSL.Exist;
  *
  * @generated
  */
-public class ExistImpl extends ActionImpl implements Exist
+public class ExistImpl extends ActionExpressionImpl implements Exist
 {
   /**
    * <!-- begin-user-doc -->

@@ -13,15 +13,27 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEOb
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.xtext.mda.project.browserDSL.ActionInstruction;
+import org.xtext.mda.project.browserDSL.Assignation;
+import org.xtext.mda.project.browserDSL.Body;
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
-import org.xtext.mda.project.browserDSL.List;
-import org.xtext.mda.project.browserDSL.Main;
-import org.xtext.mda.project.browserDSL.Model;
-import org.xtext.mda.project.browserDSL.SubRoutine;
-import org.xtext.mda.project.browserDSL.SubRoutineCall;
-import org.xtext.mda.project.browserDSL.VariableList;
-import org.xtext.mda.project.browserDSL.VariableString;
-import org.xtext.mda.project.browserDSL.VariableUrl;
+import org.xtext.mda.project.browserDSL.Button;
+import org.xtext.mda.project.browserDSL.Checkbox;
+import org.xtext.mda.project.browserDSL.Condition;
+import org.xtext.mda.project.browserDSL.Declaration;
+import org.xtext.mda.project.browserDSL.Expression;
+import org.xtext.mda.project.browserDSL.FunctionName;
+import org.xtext.mda.project.browserDSL.FunctionReference;
+import org.xtext.mda.project.browserDSL.Head;
+import org.xtext.mda.project.browserDSL.Image;
+import org.xtext.mda.project.browserDSL.Instruction;
+import org.xtext.mda.project.browserDSL.Link;
+import org.xtext.mda.project.browserDSL.Program;
+import org.xtext.mda.project.browserDSL.Subroutine;
+import org.xtext.mda.project.browserDSL.TextField;
+import org.xtext.mda.project.browserDSL.Variable;
+import org.xtext.mda.project.browserDSL.VariableName;
+import org.xtext.mda.project.browserDSL.VariableReference;
 import org.xtext.mda.project.services.BrowserDSLGrammarAccess;
 
 @SuppressWarnings("all")
@@ -32,39 +44,140 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == BrowserDSLPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case BrowserDSLPackage.LIST:
-				if(context == grammarAccess.getListRule()) {
-					sequence_List(context, (List) semanticObject); 
+			case BrowserDSLPackage.ACTION_INSTRUCTION:
+				if(context == grammarAccess.getActionInstructionRule()) {
+					sequence_ActionInstruction(context, (ActionInstruction) semanticObject); 
 					return; 
 				}
 				else break;
-			case BrowserDSLPackage.MAIN:
-				if(context == grammarAccess.getMainRule()) {
-					sequence_Main(context, (Main) semanticObject); 
+			case BrowserDSLPackage.ASSIGNATION:
+				if(context == grammarAccess.getAssignationRule()) {
+					sequence_Assignation(context, (Assignation) semanticObject); 
 					return; 
 				}
 				else break;
-			case BrowserDSLPackage.MODEL:
-				if(context == grammarAccess.getModelRule()) {
-					sequence_Model(context, (Model) semanticObject); 
+			case BrowserDSLPackage.BODY:
+				if(context == grammarAccess.getBodyRule() ||
+				   context == grammarAccess.getMainRule()) {
+					sequence_Body(context, (Body) semanticObject); 
 					return; 
 				}
 				else break;
-			case BrowserDSLPackage.SUB_ROUTINE:
-				if(context == grammarAccess.getSubRoutineRule()) {
-					sequence_SubRoutine(context, (SubRoutine) semanticObject); 
+			case BrowserDSLPackage.BUTTON:
+				if(context == grammarAccess.getActionExpressionRule() ||
+				   context == grammarAccess.getButtonRule() ||
+				   context == grammarAccess.getClickRule() ||
+				   context == grammarAccess.getClickableElementRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getExistRule()) {
+					sequence_Button(context, (Button) semanticObject); 
 					return; 
 				}
 				else break;
-			case BrowserDSLPackage.SUB_ROUTINE_CALL:
-				if(context == grammarAccess.getActionRule() ||
-				   context == grammarAccess.getSubRoutineCallRule()) {
-					sequence_SubRoutineCall(context, (SubRoutineCall) semanticObject); 
+			case BrowserDSLPackage.CHECKBOX:
+				if(context == grammarAccess.getActionExpressionRule() ||
+				   context == grammarAccess.getCheckableElementRule() ||
+				   context == grammarAccess.getCheckboxRule() ||
+				   context == grammarAccess.getClearRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getExistRule() ||
+				   context == grammarAccess.getVerifyRule()) {
+					sequence_Checkbox(context, (Checkbox) semanticObject); 
 					return; 
 				}
 				else break;
-			case BrowserDSLPackage.VARIABLE_LIST:
-				if(context == grammarAccess.getActionRule() ||
+			case BrowserDSLPackage.CONDITION:
+				if(context == grammarAccess.getConditionRule()) {
+					sequence_Condition(context, (Condition) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.DECLARATION:
+				if(context == grammarAccess.getDeclarationRule()) {
+					sequence_Declaration(context, (Declaration) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.EXPRESSION:
+				if(context == grammarAccess.getExpressionRule()) {
+					sequence_Expression(context, (Expression) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.FUNCTION_NAME:
+				if(context == grammarAccess.getFunctionNameRule()) {
+					sequence_FunctionName(context, (FunctionName) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.FUNCTION_REFERENCE:
+				if(context == grammarAccess.getFunctionCallRule() ||
+				   context == grammarAccess.getFunctionReferenceRule()) {
+					sequence_FunctionReference(context, (FunctionReference) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.HEAD:
+				if(context == grammarAccess.getHeadRule()) {
+					sequence_Head(context, (Head) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.IMAGE:
+				if(context == grammarAccess.getActionExpressionRule() ||
+				   context == grammarAccess.getClickRule() ||
+				   context == grammarAccess.getClickableElementRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getExistRule() ||
+				   context == grammarAccess.getImageRule()) {
+					sequence_Image(context, (Image) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.INSTRUCTION:
+				if(context == grammarAccess.getInstructionRule()) {
+					sequence_Instruction(context, (Instruction) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.LINK:
+				if(context == grammarAccess.getActionExpressionRule() ||
+				   context == grammarAccess.getClickRule() ||
+				   context == grammarAccess.getClickableElementRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getExistRule() ||
+				   context == grammarAccess.getLinkRule()) {
+					sequence_Link(context, (Link) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.PROGRAM:
+				if(context == grammarAccess.getProgramRule()) {
+					sequence_Program(context, (Program) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.SUBROUTINE:
+				if(context == grammarAccess.getSubroutineRule()) {
+					sequence_Subroutine(context, (Subroutine) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.TEXT_FIELD:
+				if(context == grammarAccess.getActionExpressionRule() ||
+				   context == grammarAccess.getClearRule() ||
+				   context == grammarAccess.getElementRule() ||
+				   context == grammarAccess.getExistRule() ||
+				   context == grammarAccess.getFillRule() ||
+				   context == grammarAccess.getFillableElementRule() ||
+				   context == grammarAccess.getTextFieldRule() ||
+				   context == grammarAccess.getVerifyRule()) {
+					sequence_TextField(context, (TextField) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.VARIABLE:
+				if(context == grammarAccess.getActionExpressionRule() ||
 				   context == grammarAccess.getButtonRule() ||
 				   context == grammarAccess.getCheckableElementRule() ||
 				   context == grammarAccess.getCheckboxRule() ||
@@ -79,54 +192,20 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getLinkRule() ||
 				   context == grammarAccess.getTextFieldRule() ||
 				   context == grammarAccess.getVariableRule() ||
-				   context == grammarAccess.getVariableListRule() ||
 				   context == grammarAccess.getVerifyRule()) {
-					sequence_VariableList(context, (VariableList) semanticObject); 
+					sequence_Variable(context, (Variable) semanticObject); 
 					return; 
 				}
 				else break;
-			case BrowserDSLPackage.VARIABLE_STRING:
-				if(context == grammarAccess.getActionRule() ||
-				   context == grammarAccess.getButtonRule() ||
-				   context == grammarAccess.getCheckableElementRule() ||
-				   context == grammarAccess.getCheckboxRule() ||
-				   context == grammarAccess.getClearRule() ||
-				   context == grammarAccess.getClickRule() ||
-				   context == grammarAccess.getClickableElementRule() ||
-				   context == grammarAccess.getElementRule() ||
-				   context == grammarAccess.getExistRule() ||
-				   context == grammarAccess.getFillRule() ||
-				   context == grammarAccess.getFillableElementRule() ||
-				   context == grammarAccess.getImageRule() ||
-				   context == grammarAccess.getLinkRule() ||
-				   context == grammarAccess.getTextFieldRule() ||
-				   context == grammarAccess.getVariableRule() ||
-				   context == grammarAccess.getVariableStringRule() ||
-				   context == grammarAccess.getVerifyRule()) {
-					sequence_VariableString(context, (VariableString) semanticObject); 
+			case BrowserDSLPackage.VARIABLE_NAME:
+				if(context == grammarAccess.getVariableNameRule()) {
+					sequence_VariableName(context, (VariableName) semanticObject); 
 					return; 
 				}
 				else break;
-			case BrowserDSLPackage.VARIABLE_URL:
-				if(context == grammarAccess.getActionRule() ||
-				   context == grammarAccess.getButtonRule() ||
-				   context == grammarAccess.getCheckableElementRule() ||
-				   context == grammarAccess.getCheckboxRule() ||
-				   context == grammarAccess.getClearRule() ||
-				   context == grammarAccess.getClickRule() ||
-				   context == grammarAccess.getClickableElementRule() ||
-				   context == grammarAccess.getElementRule() ||
-				   context == grammarAccess.getExistRule() ||
-				   context == grammarAccess.getFillRule() ||
-				   context == grammarAccess.getFillableElementRule() ||
-				   context == grammarAccess.getGoToRule() ||
-				   context == grammarAccess.getImageRule() ||
-				   context == grammarAccess.getLinkRule() ||
-				   context == grammarAccess.getTextFieldRule() ||
-				   context == grammarAccess.getVariableRule() ||
-				   context == grammarAccess.getVariableUrlRule() ||
-				   context == grammarAccess.getVerifyRule()) {
-					sequence_VariableUrl(context, (VariableUrl) semanticObject); 
+			case BrowserDSLPackage.VARIABLE_REFERENCE:
+				if(context == grammarAccess.getVariableReferenceRule()) {
+					sequence_VariableReference(context, (VariableReference) semanticObject); 
 					return; 
 				}
 				else break;
@@ -136,78 +215,215 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (element+=Element element+=Element*)
+	 *     (action=Click | action=Fill | action=Clear)?
 	 */
-	protected void sequence_List(EObject context, List semanticObject) {
+	protected void sequence_ActionInstruction(EObject context, ActionInstruction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (actions+=Action action+=Action*)
+	 *     (var=VariableReference expr=Expression)
 	 */
-	protected void sequence_Main(EObject context, Main semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     main=Main
-	 */
-	protected void sequence_Model(EObject context, Model semanticObject) {
+	protected void sequence_Assignation(EObject context, Assignation semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.MODEL__MAIN) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.MODEL__MAIN));
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.ASSIGNATION__VAR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.ASSIGNATION__VAR));
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.ASSIGNATION__EXPR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.ASSIGNATION__EXPR));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getModelAccess().getMainMainParserRuleCall_0_0(), semanticObject.getMain());
+		feeder.accept(grammarAccess.getAssignationAccess().getVarVariableReferenceParserRuleCall_0_0(), semanticObject.getVar());
+		feeder.accept(grammarAccess.getAssignationAccess().getExprExpressionParserRuleCall_2_0(), semanticObject.getExpr());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     id=[SubRoutine|ID]
+	 *     (instructions+=Instruction instructions+=Instruction*)
 	 */
-	protected void sequence_SubRoutineCall(EObject context, SubRoutineCall semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.SUB_ROUTINE_CALL__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.SUB_ROUTINE_CALL__ID));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getSubRoutineCallAccess().getIdSubRoutineIDTerminalRuleCall_0_1(), semanticObject.getId());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=STRING action+=Action action+=Action*)
-	 */
-	protected void sequence_SubRoutine(EObject context, SubRoutine semanticObject) {
+	protected void sequence_Body(EObject context, Body semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=STRING value=List)
+	 *     but=STRING
 	 */
-	protected void sequence_VariableList(EObject context, VariableList semanticObject) {
+	protected void sequence_Button(EObject context, Button semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.VARIABLE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.VARIABLE__NAME));
-			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.VARIABLE_LIST__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.VARIABLE_LIST__VALUE));
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.BUTTON__BUT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.BUTTON__BUT));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getVariableListAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getVariableListAccess().getValueListParserRuleCall_3_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getButtonAccess().getButSTRINGTerminalRuleCall_1_0_0(), semanticObject.getBut());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     check=STRING
+	 */
+	protected void sequence_Checkbox(EObject context, Checkbox semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.CHECKBOX__CHECK) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.CHECKBOX__CHECK));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getCheckboxAccess().getCheckSTRINGTerminalRuleCall_1_0_0(), semanticObject.getCheck());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (exp=Expression ins+=Instruction+ ins2+=Instruction+)
+	 */
+	protected void sequence_Condition(EObject context, Condition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=VariableName val=Expression)
+	 */
+	protected void sequence_Declaration(EObject context, Declaration semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.DECLARATION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.DECLARATION__NAME));
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.DECLARATION__VAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.DECLARATION__VAL));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getDeclarationAccess().getNameVariableNameParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getDeclarationAccess().getValExpressionParserRuleCall_3_0(), semanticObject.getVal());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (type=Type | var=Variable | act=ActionExpression | (left=Expression right=Expression) | exp=Expression)
+	 */
+	protected void sequence_Expression(EObject context, Expression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=STRING
+	 */
+	protected void sequence_FunctionName(EObject context, FunctionName semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.FUNCTION_NAME__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.FUNCTION_NAME__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getFunctionNameAccess().getNameSTRINGTerminalRuleCall_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     functionName=[FunctionName|ID]
+	 */
+	protected void sequence_FunctionReference(EObject context, FunctionReference semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=FunctionName | (name=FunctionName varId+=VariableName varId+=VariableName*))
+	 */
+	protected void sequence_Head(EObject context, Head semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     img=STRING
+	 */
+	protected void sequence_Image(EObject context, Image semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.IMAGE__IMG) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.IMAGE__IMG));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getImageAccess().getImgSTRINGTerminalRuleCall_1_0_0(), semanticObject.getImg());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (dec=Declaration | cond=Condition | loop=Loop | act=ActionInstruction | ass=Assignation)
+	 */
+	protected void sequence_Instruction(EObject context, Instruction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     link=STRING
+	 */
+	protected void sequence_Link(EObject context, Link semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.LINK__LINK) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.LINK__LINK));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getLinkAccess().getLinkSTRINGTerminalRuleCall_1_0_0(), semanticObject.getLink());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (sub+=Subroutine* main=Main)
+	 */
+	protected void sequence_Program(EObject context, Program semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (head=Head body+=Body)
+	 */
+	protected void sequence_Subroutine(EObject context, Subroutine semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     text=STRING
+	 */
+	protected void sequence_TextField(EObject context, TextField semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.TEXT_FIELD__TEXT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.TEXT_FIELD__TEXT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getTextFieldAccess().getTextSTRINGTerminalRuleCall_1_0_0(), semanticObject.getText());
 		feeder.finish();
 	}
 	
@@ -216,30 +432,39 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 * Constraint:
 	 *     name=STRING
 	 */
-	protected void sequence_VariableString(EObject context, VariableString semanticObject) {
+	protected void sequence_VariableName(EObject context, VariableName semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.VARIABLE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.VARIABLE__NAME));
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.VARIABLE_NAME__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.VARIABLE_NAME__NAME));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getVariableStringAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getVariableNameAccess().getNameSTRINGTerminalRuleCall_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     name=STRING
+	 *     varID=[VariableName|ID]
 	 */
-	protected void sequence_VariableUrl(EObject context, VariableUrl semanticObject) {
+	protected void sequence_VariableReference(EObject context, VariableReference semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.VARIABLE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.VARIABLE__NAME));
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.VARIABLE_REFERENCE__VAR_ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.VARIABLE_REFERENCE__VAR_ID));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getVariableUrlAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getVariableReferenceAccess().getVarIDVariableNameIDTerminalRuleCall_0_1(), semanticObject.getVarID());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     var=VariableReference
+	 */
+	protected void sequence_Variable(EObject context, Variable semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 }

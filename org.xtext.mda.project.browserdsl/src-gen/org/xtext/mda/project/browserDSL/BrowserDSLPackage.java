@@ -57,14 +57,23 @@ public interface BrowserDSLPackage extends EPackage
   BrowserDSLPackage eINSTANCE = org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ModelImpl <em>Model</em>}' class.
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ProgramImpl <em>Program</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.ModelImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getModel()
+   * @see org.xtext.mda.project.browserDSL.impl.ProgramImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getProgram()
    * @generated
    */
-  int MODEL = 0;
+  int PROGRAM = 0;
+
+  /**
+   * The feature id for the '<em><b>Sub</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROGRAM__SUB = 0;
 
   /**
    * The feature id for the '<em><b>Main</b></em>' containment reference.
@@ -73,26 +82,184 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__MAIN = 0;
+  int PROGRAM__MAIN = 1;
 
   /**
-   * The number of structural features of the '<em>Model</em>' class.
+   * The number of structural features of the '<em>Program</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 1;
+  int PROGRAM_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.SubRoutineImpl <em>Sub Routine</em>}' class.
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.SubroutineImpl <em>Subroutine</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.SubRoutineImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getSubRoutine()
+   * @see org.xtext.mda.project.browserDSL.impl.SubroutineImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getSubroutine()
    * @generated
    */
-  int SUB_ROUTINE = 1;
+  int SUBROUTINE = 1;
+
+  /**
+   * The feature id for the '<em><b>Head</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUBROUTINE__HEAD = 0;
+
+  /**
+   * The feature id for the '<em><b>Body</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUBROUTINE__BODY = 1;
+
+  /**
+   * The number of structural features of the '<em>Subroutine</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SUBROUTINE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.HeadImpl <em>Head</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.HeadImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getHead()
+   * @generated
+   */
+  int HEAD = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HEAD__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Var Id</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HEAD__VAR_ID = 1;
+
+  /**
+   * The number of structural features of the '<em>Head</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HEAD_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.FunctionCallImpl <em>Function Call</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.FunctionCallImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getFunctionCall()
+   * @generated
+   */
+  int FUNCTION_CALL = 5;
+
+  /**
+   * The number of structural features of the '<em>Function Call</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_CALL_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.FunctionReferenceImpl <em>Function Reference</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.FunctionReferenceImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getFunctionReference()
+   * @generated
+   */
+  int FUNCTION_REFERENCE = 3;
+
+  /**
+   * The feature id for the '<em><b>Function Name</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_REFERENCE__FUNCTION_NAME = FUNCTION_CALL_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Var</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_REFERENCE__VAR = FUNCTION_CALL_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Function Reference</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_REFERENCE_FEATURE_COUNT = FUNCTION_CALL_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.VariableReferenceImpl <em>Variable Reference</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.VariableReferenceImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariableReference()
+   * @generated
+   */
+  int VARIABLE_REFERENCE = 4;
+
+  /**
+   * The feature id for the '<em><b>Var ID</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_REFERENCE__VAR_ID = 0;
+
+  /**
+   * The number of structural features of the '<em>Variable Reference</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_REFERENCE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.FunctionNameImpl <em>Function Name</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.FunctionNameImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getFunctionName()
+   * @generated
+   */
+  int FUNCTION_NAME = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -101,25 +268,16 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SUB_ROUTINE__NAME = 0;
+  int FUNCTION_NAME__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Action</b></em>' containment reference list.
+   * The number of structural features of the '<em>Function Name</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SUB_ROUTINE__ACTION = 1;
-
-  /**
-   * The number of structural features of the '<em>Sub Routine</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SUB_ROUTINE_FEATURE_COUNT = 2;
+  int FUNCTION_NAME_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.MainImpl <em>Main</em>}' class.
@@ -129,25 +287,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getMain()
    * @generated
    */
-  int MAIN = 2;
-
-  /**
-   * The feature id for the '<em><b>Actions</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MAIN__ACTIONS = 0;
-
-  /**
-   * The feature id for the '<em><b>Action</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MAIN__ACTION = 1;
+  int MAIN = 7;
 
   /**
    * The number of structural features of the '<em>Main</em>' class.
@@ -156,82 +296,367 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MAIN_FEATURE_COUNT = 2;
+  int MAIN_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ActionImpl <em>Action</em>}' class.
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.BodyImpl <em>Body</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.ActionImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getAction()
+   * @see org.xtext.mda.project.browserDSL.impl.BodyImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getBody()
    * @generated
    */
-  int ACTION = 3;
+  int BODY = 8;
 
   /**
-   * The number of structural features of the '<em>Action</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ACTION_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.SubRoutineCallImpl <em>Sub Routine Call</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.SubRoutineCallImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getSubRoutineCall()
-   * @generated
-   */
-  int SUB_ROUTINE_CALL = 4;
-
-  /**
-   * The feature id for the '<em><b>Id</b></em>' reference.
+   * The feature id for the '<em><b>Instructions</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SUB_ROUTINE_CALL__ID = ACTION_FEATURE_COUNT + 0;
+  int BODY__INSTRUCTIONS = MAIN_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Sub Routine Call</em>' class.
+   * The number of structural features of the '<em>Body</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SUB_ROUTINE_CALL_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
+  int BODY_FEATURE_COUNT = MAIN_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ListImpl <em>List</em>}' class.
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.InstructionImpl <em>Instruction</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.ListImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getList()
+   * @see org.xtext.mda.project.browserDSL.impl.InstructionImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getInstruction()
    * @generated
    */
-  int LIST = 5;
+  int INSTRUCTION = 9;
 
   /**
-   * The feature id for the '<em><b>Element</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIST__ELEMENT = 0;
-
-  /**
-   * The number of structural features of the '<em>List</em>' class.
+   * The feature id for the '<em><b>Dec</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LIST_FEATURE_COUNT = 1;
+  int INSTRUCTION__DEC = 0;
+
+  /**
+   * The feature id for the '<em><b>Cond</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTRUCTION__COND = 1;
+
+  /**
+   * The feature id for the '<em><b>Loop</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTRUCTION__LOOP = 2;
+
+  /**
+   * The feature id for the '<em><b>Act</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTRUCTION__ACT = 3;
+
+  /**
+   * The feature id for the '<em><b>Ass</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTRUCTION__ASS = 4;
+
+  /**
+   * The number of structural features of the '<em>Instruction</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTRUCTION_FEATURE_COUNT = 5;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ConditionImpl <em>Condition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.ConditionImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getCondition()
+   * @generated
+   */
+  int CONDITION = 10;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION__EXP = 0;
+
+  /**
+   * The feature id for the '<em><b>Ins</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION__INS = 1;
+
+  /**
+   * The feature id for the '<em><b>Ins2</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION__INS2 = 2;
+
+  /**
+   * The number of structural features of the '<em>Condition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ActionInstructionImpl <em>Action Instruction</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.ActionInstructionImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getActionInstruction()
+   * @generated
+   */
+  int ACTION_INSTRUCTION = 11;
+
+  /**
+   * The feature id for the '<em><b>Action</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_INSTRUCTION__ACTION = 0;
+
+  /**
+   * The number of structural features of the '<em>Action Instruction</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_INSTRUCTION_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.VariableNameImpl <em>Variable Name</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.VariableNameImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariableName()
+   * @generated
+   */
+  int VARIABLE_NAME = 12;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_NAME__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Variable Name</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_NAME_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.DeclarationImpl <em>Declaration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.DeclarationImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getDeclaration()
+   * @generated
+   */
+  int DECLARATION = 13;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION__VAL = 1;
+
+  /**
+   * The number of structural features of the '<em>Declaration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DECLARATION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.AssignationImpl <em>Assignation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.AssignationImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getAssignation()
+   * @generated
+   */
+  int ASSIGNATION = 14;
+
+  /**
+   * The feature id for the '<em><b>Var</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGNATION__VAR = 0;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGNATION__EXPR = 1;
+
+  /**
+   * The number of structural features of the '<em>Assignation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSIGNATION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ExpressionImpl <em>Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.ExpressionImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getExpression()
+   * @generated
+   */
+  int EXPRESSION = 15;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__TYPE = 0;
+
+  /**
+   * The feature id for the '<em><b>Var</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__VAR = 1;
+
+  /**
+   * The feature id for the '<em><b>Act</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__ACT = 2;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__LEFT = 3;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__RIGHT = 4;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__EXP = 5;
+
+  /**
+   * The number of structural features of the '<em>Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ActionExpressionImpl <em>Action Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.ActionExpressionImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getActionExpression()
+   * @generated
+   */
+  int ACTION_EXPRESSION = 17;
+
+  /**
+   * The number of structural features of the '<em>Action Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_EXPRESSION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ExistImpl <em>Exist</em>}' class.
@@ -241,7 +666,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getExist()
    * @generated
    */
-  int EXIST = 14;
+  int EXIST = 31;
 
   /**
    * The number of structural features of the '<em>Exist</em>' class.
@@ -250,7 +675,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXIST_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+  int EXIST_FEATURE_COUNT = ACTION_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ElementImpl <em>Element</em>}' class.
@@ -260,7 +685,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getElement()
    * @generated
    */
-  int ELEMENT = 6;
+  int ELEMENT = 18;
 
   /**
    * The number of structural features of the '<em>Element</em>' class.
@@ -272,6 +697,126 @@ public interface BrowserDSLPackage extends EPackage
   int ELEMENT_FEATURE_COUNT = EXIST_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.CheckableElementImpl <em>Checkable Element</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.CheckableElementImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getCheckableElement()
+   * @generated
+   */
+  int CHECKABLE_ELEMENT = 21;
+
+  /**
+   * The number of structural features of the '<em>Checkable Element</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHECKABLE_ELEMENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.CheckboxImpl <em>Checkbox</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.CheckboxImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getCheckbox()
+   * @generated
+   */
+  int CHECKBOX = 22;
+
+  /**
+   * The feature id for the '<em><b>Check</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHECKBOX__CHECK = CHECKABLE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Checkbox</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHECKBOX_FEATURE_COUNT = CHECKABLE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.VariableImpl <em>Variable</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.VariableImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariable()
+   * @generated
+   */
+  int VARIABLE = 16;
+
+  /**
+   * The feature id for the '<em><b>Check</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__CHECK = CHECKBOX__CHECK;
+
+  /**
+   * The feature id for the '<em><b>Link</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__LINK = CHECKBOX_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>But</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__BUT = CHECKBOX_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Img</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__IMG = CHECKBOX_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Text</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__TEXT = CHECKBOX_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Var</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__VAR = CHECKBOX_FEATURE_COUNT + 4;
+
+  /**
+   * The number of structural features of the '<em>Variable</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_FEATURE_COUNT = CHECKBOX_FEATURE_COUNT + 5;
+
+  /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ClickableElementImpl <em>Clickable Element</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -279,7 +824,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getClickableElement()
    * @generated
    */
-  int CLICKABLE_ELEMENT = 7;
+  int CLICKABLE_ELEMENT = 19;
 
   /**
    * The number of structural features of the '<em>Clickable Element</em>' class.
@@ -298,7 +843,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getFillableElement()
    * @generated
    */
-  int FILLABLE_ELEMENT = 8;
+  int FILLABLE_ELEMENT = 20;
 
   /**
    * The number of structural features of the '<em>Fillable Element</em>' class.
@@ -310,260 +855,6 @@ public interface BrowserDSLPackage extends EPackage
   int FILLABLE_ELEMENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.CheckableElementImpl <em>Checkable Element</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.CheckableElementImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getCheckableElement()
-   * @generated
-   */
-  int CHECKABLE_ELEMENT = 9;
-
-  /**
-   * The number of structural features of the '<em>Checkable Element</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHECKABLE_ELEMENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ClickImpl <em>Click</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.ClickImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getClick()
-   * @generated
-   */
-  int CLICK = 10;
-
-  /**
-   * The number of structural features of the '<em>Click</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CLICK_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.FillImpl <em>Fill</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.FillImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getFill()
-   * @generated
-   */
-  int FILL = 11;
-
-  /**
-   * The number of structural features of the '<em>Fill</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FILL_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ClearImpl <em>Clear</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.ClearImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getClear()
-   * @generated
-   */
-  int CLEAR = 12;
-
-  /**
-   * The number of structural features of the '<em>Clear</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CLEAR_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.VerifyImpl <em>Verify</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.VerifyImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVerify()
-   * @generated
-   */
-  int VERIFY = 13;
-
-  /**
-   * The number of structural features of the '<em>Verify</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VERIFY_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.GoToImpl <em>Go To</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.GoToImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getGoTo()
-   * @generated
-   */
-  int GO_TO = 15;
-
-  /**
-   * The number of structural features of the '<em>Go To</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GO_TO_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.CheckboxImpl <em>Checkbox</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.CheckboxImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getCheckbox()
-   * @generated
-   */
-  int CHECKBOX = 20;
-
-  /**
-   * The number of structural features of the '<em>Checkbox</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHECKBOX_FEATURE_COUNT = CHECKABLE_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.VariableImpl <em>Variable</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.VariableImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariable()
-   * @generated
-   */
-  int VARIABLE = 16;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE__NAME = CHECKBOX_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Variable</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_FEATURE_COUNT = CHECKBOX_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.VariableStringImpl <em>Variable String</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.VariableStringImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariableString()
-   * @generated
-   */
-  int VARIABLE_STRING = 17;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_STRING__NAME = VARIABLE__NAME;
-
-  /**
-   * The number of structural features of the '<em>Variable String</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_STRING_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.VariableUrlImpl <em>Variable Url</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.VariableUrlImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariableUrl()
-   * @generated
-   */
-  int VARIABLE_URL = 18;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_URL__NAME = GO_TO_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Variable Url</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_URL_FEATURE_COUNT = GO_TO_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.VariableListImpl <em>Variable List</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.VariableListImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariableList()
-   * @generated
-   */
-  int VARIABLE_LIST = 19;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_LIST__NAME = VARIABLE__NAME;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_LIST__VALUE = VARIABLE_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Variable List</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_LIST_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.LinkImpl <em>Link</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -571,7 +862,16 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getLink()
    * @generated
    */
-  int LINK = 21;
+  int LINK = 23;
+
+  /**
+   * The feature id for the '<em><b>Link</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINK__LINK = CLICKABLE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Link</em>' class.
@@ -580,7 +880,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LINK_FEATURE_COUNT = CLICKABLE_ELEMENT_FEATURE_COUNT + 0;
+  int LINK_FEATURE_COUNT = CLICKABLE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ButtonImpl <em>Button</em>}' class.
@@ -590,7 +890,16 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getButton()
    * @generated
    */
-  int BUTTON = 22;
+  int BUTTON = 24;
+
+  /**
+   * The feature id for the '<em><b>But</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BUTTON__BUT = CLICKABLE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Button</em>' class.
@@ -599,7 +908,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BUTTON_FEATURE_COUNT = CLICKABLE_ELEMENT_FEATURE_COUNT + 0;
+  int BUTTON_FEATURE_COUNT = CLICKABLE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ImageImpl <em>Image</em>}' class.
@@ -609,7 +918,16 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getImage()
    * @generated
    */
-  int IMAGE = 23;
+  int IMAGE = 25;
+
+  /**
+   * The feature id for the '<em><b>Img</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE__IMG = CLICKABLE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Image</em>' class.
@@ -618,7 +936,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IMAGE_FEATURE_COUNT = CLICKABLE_ELEMENT_FEATURE_COUNT + 0;
+  int IMAGE_FEATURE_COUNT = CLICKABLE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.TextFieldImpl <em>Text Field</em>}' class.
@@ -628,7 +946,16 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getTextField()
    * @generated
    */
-  int TEXT_FIELD = 24;
+  int TEXT_FIELD = 26;
+
+  /**
+   * The feature id for the '<em><b>Text</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEXT_FIELD__TEXT = FILLABLE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Text Field</em>' class.
@@ -637,61 +964,264 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_FIELD_FEATURE_COUNT = FILLABLE_ELEMENT_FEATURE_COUNT + 0;
-
+  int TEXT_FIELD_FEATURE_COUNT = FILLABLE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Model <em>Model</em>}'.
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ClickImpl <em>Click</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Model</em>'.
-   * @see org.xtext.mda.project.browserDSL.Model
+   * @see org.xtext.mda.project.browserDSL.impl.ClickImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getClick()
    * @generated
    */
-  EClass getModel();
+  int CLICK = 27;
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Model#getMain <em>Main</em>}'.
+   * The number of structural features of the '<em>Click</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLICK_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.FillImpl <em>Fill</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.FillImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getFill()
+   * @generated
+   */
+  int FILL = 28;
+
+  /**
+   * The number of structural features of the '<em>Fill</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FILL_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ClearImpl <em>Clear</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.ClearImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getClear()
+   * @generated
+   */
+  int CLEAR = 29;
+
+  /**
+   * The number of structural features of the '<em>Clear</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLEAR_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.VerifyImpl <em>Verify</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.VerifyImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVerify()
+   * @generated
+   */
+  int VERIFY = 30;
+
+  /**
+   * The number of structural features of the '<em>Verify</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VERIFY_FEATURE_COUNT = ACTION_EXPRESSION_FEATURE_COUNT + 0;
+
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Program <em>Program</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Program</em>'.
+   * @see org.xtext.mda.project.browserDSL.Program
+   * @generated
+   */
+  EClass getProgram();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.Program#getSub <em>Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Sub</em>'.
+   * @see org.xtext.mda.project.browserDSL.Program#getSub()
+   * @see #getProgram()
+   * @generated
+   */
+  EReference getProgram_Sub();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Program#getMain <em>Main</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Main</em>'.
-   * @see org.xtext.mda.project.browserDSL.Model#getMain()
-   * @see #getModel()
+   * @see org.xtext.mda.project.browserDSL.Program#getMain()
+   * @see #getProgram()
    * @generated
    */
-  EReference getModel_Main();
+  EReference getProgram_Main();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.SubRoutine <em>Sub Routine</em>}'.
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Subroutine <em>Subroutine</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Sub Routine</em>'.
-   * @see org.xtext.mda.project.browserDSL.SubRoutine
+   * @return the meta object for class '<em>Subroutine</em>'.
+   * @see org.xtext.mda.project.browserDSL.Subroutine
    * @generated
    */
-  EClass getSubRoutine();
+  EClass getSubroutine();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.SubRoutine#getName <em>Name</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Subroutine#getHead <em>Head</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Head</em>'.
+   * @see org.xtext.mda.project.browserDSL.Subroutine#getHead()
+   * @see #getSubroutine()
+   * @generated
+   */
+  EReference getSubroutine_Head();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.Subroutine#getBody <em>Body</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Body</em>'.
+   * @see org.xtext.mda.project.browserDSL.Subroutine#getBody()
+   * @see #getSubroutine()
+   * @generated
+   */
+  EReference getSubroutine_Body();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Head <em>Head</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Head</em>'.
+   * @see org.xtext.mda.project.browserDSL.Head
+   * @generated
+   */
+  EClass getHead();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Head#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see org.xtext.mda.project.browserDSL.Head#getName()
+   * @see #getHead()
+   * @generated
+   */
+  EReference getHead_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.Head#getVarId <em>Var Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Var Id</em>'.
+   * @see org.xtext.mda.project.browserDSL.Head#getVarId()
+   * @see #getHead()
+   * @generated
+   */
+  EReference getHead_VarId();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.FunctionReference <em>Function Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Function Reference</em>'.
+   * @see org.xtext.mda.project.browserDSL.FunctionReference
+   * @generated
+   */
+  EClass getFunctionReference();
+
+  /**
+   * Returns the meta object for the reference '{@link org.xtext.mda.project.browserDSL.FunctionReference#getFunctionName <em>Function Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Function Name</em>'.
+   * @see org.xtext.mda.project.browserDSL.FunctionReference#getFunctionName()
+   * @see #getFunctionReference()
+   * @generated
+   */
+  EReference getFunctionReference_FunctionName();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.FunctionReference#getVar <em>Var</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Var</em>'.
+   * @see org.xtext.mda.project.browserDSL.FunctionReference#getVar()
+   * @see #getFunctionReference()
+   * @generated
+   */
+  EReference getFunctionReference_Var();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.VariableReference <em>Variable Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Variable Reference</em>'.
+   * @see org.xtext.mda.project.browserDSL.VariableReference
+   * @generated
+   */
+  EClass getVariableReference();
+
+  /**
+   * Returns the meta object for the reference '{@link org.xtext.mda.project.browserDSL.VariableReference#getVarID <em>Var ID</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Var ID</em>'.
+   * @see org.xtext.mda.project.browserDSL.VariableReference#getVarID()
+   * @see #getVariableReference()
+   * @generated
+   */
+  EReference getVariableReference_VarID();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.FunctionCall <em>Function Call</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Function Call</em>'.
+   * @see org.xtext.mda.project.browserDSL.FunctionCall
+   * @generated
+   */
+  EClass getFunctionCall();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.FunctionName <em>Function Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Function Name</em>'.
+   * @see org.xtext.mda.project.browserDSL.FunctionName
+   * @generated
+   */
+  EClass getFunctionName();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.FunctionName#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.mda.project.browserDSL.SubRoutine#getName()
-   * @see #getSubRoutine()
+   * @see org.xtext.mda.project.browserDSL.FunctionName#getName()
+   * @see #getFunctionName()
    * @generated
    */
-  EAttribute getSubRoutine_Name();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.SubRoutine#getAction <em>Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Action</em>'.
-   * @see org.xtext.mda.project.browserDSL.SubRoutine#getAction()
-   * @see #getSubRoutine()
-   * @generated
-   */
-  EReference getSubRoutine_Action();
+  EAttribute getFunctionName_Name();
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Main <em>Main</em>}'.
@@ -704,78 +1234,346 @@ public interface BrowserDSLPackage extends EPackage
   EClass getMain();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.Main#getActions <em>Actions</em>}'.
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Body <em>Body</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Actions</em>'.
-   * @see org.xtext.mda.project.browserDSL.Main#getActions()
-   * @see #getMain()
+   * @return the meta object for class '<em>Body</em>'.
+   * @see org.xtext.mda.project.browserDSL.Body
    * @generated
    */
-  EReference getMain_Actions();
+  EClass getBody();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.Main#getAction <em>Action</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.Body#getInstructions <em>Instructions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Action</em>'.
-   * @see org.xtext.mda.project.browserDSL.Main#getAction()
-   * @see #getMain()
+   * @return the meta object for the containment reference list '<em>Instructions</em>'.
+   * @see org.xtext.mda.project.browserDSL.Body#getInstructions()
+   * @see #getBody()
    * @generated
    */
-  EReference getMain_Action();
+  EReference getBody_Instructions();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Action <em>Action</em>}'.
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Instruction <em>Instruction</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Action</em>'.
-   * @see org.xtext.mda.project.browserDSL.Action
+   * @return the meta object for class '<em>Instruction</em>'.
+   * @see org.xtext.mda.project.browserDSL.Instruction
    * @generated
    */
-  EClass getAction();
+  EClass getInstruction();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.SubRoutineCall <em>Sub Routine Call</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Instruction#getDec <em>Dec</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Sub Routine Call</em>'.
-   * @see org.xtext.mda.project.browserDSL.SubRoutineCall
+   * @return the meta object for the containment reference '<em>Dec</em>'.
+   * @see org.xtext.mda.project.browserDSL.Instruction#getDec()
+   * @see #getInstruction()
    * @generated
    */
-  EClass getSubRoutineCall();
+  EReference getInstruction_Dec();
 
   /**
-   * Returns the meta object for the reference '{@link org.xtext.mda.project.browserDSL.SubRoutineCall#getId <em>Id</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Instruction#getCond <em>Cond</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Id</em>'.
-   * @see org.xtext.mda.project.browserDSL.SubRoutineCall#getId()
-   * @see #getSubRoutineCall()
+   * @return the meta object for the containment reference '<em>Cond</em>'.
+   * @see org.xtext.mda.project.browserDSL.Instruction#getCond()
+   * @see #getInstruction()
    * @generated
    */
-  EReference getSubRoutineCall_Id();
+  EReference getInstruction_Cond();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.List <em>List</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Instruction#getLoop <em>Loop</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>List</em>'.
-   * @see org.xtext.mda.project.browserDSL.List
+   * @return the meta object for the attribute '<em>Loop</em>'.
+   * @see org.xtext.mda.project.browserDSL.Instruction#getLoop()
+   * @see #getInstruction()
    * @generated
    */
-  EClass getList();
+  EAttribute getInstruction_Loop();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.List#getElement <em>Element</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Instruction#getAct <em>Act</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Element</em>'.
-   * @see org.xtext.mda.project.browserDSL.List#getElement()
-   * @see #getList()
+   * @return the meta object for the containment reference '<em>Act</em>'.
+   * @see org.xtext.mda.project.browserDSL.Instruction#getAct()
+   * @see #getInstruction()
    * @generated
    */
-  EReference getList_Element();
+  EReference getInstruction_Act();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Instruction#getAss <em>Ass</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Ass</em>'.
+   * @see org.xtext.mda.project.browserDSL.Instruction#getAss()
+   * @see #getInstruction()
+   * @generated
+   */
+  EReference getInstruction_Ass();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Condition <em>Condition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Condition</em>'.
+   * @see org.xtext.mda.project.browserDSL.Condition
+   * @generated
+   */
+  EClass getCondition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Condition#getExp <em>Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp</em>'.
+   * @see org.xtext.mda.project.browserDSL.Condition#getExp()
+   * @see #getCondition()
+   * @generated
+   */
+  EReference getCondition_Exp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.Condition#getIns <em>Ins</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Ins</em>'.
+   * @see org.xtext.mda.project.browserDSL.Condition#getIns()
+   * @see #getCondition()
+   * @generated
+   */
+  EReference getCondition_Ins();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.Condition#getIns2 <em>Ins2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Ins2</em>'.
+   * @see org.xtext.mda.project.browserDSL.Condition#getIns2()
+   * @see #getCondition()
+   * @generated
+   */
+  EReference getCondition_Ins2();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.ActionInstruction <em>Action Instruction</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Action Instruction</em>'.
+   * @see org.xtext.mda.project.browserDSL.ActionInstruction
+   * @generated
+   */
+  EClass getActionInstruction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.ActionInstruction#getAction <em>Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Action</em>'.
+   * @see org.xtext.mda.project.browserDSL.ActionInstruction#getAction()
+   * @see #getActionInstruction()
+   * @generated
+   */
+  EReference getActionInstruction_Action();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.VariableName <em>Variable Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Variable Name</em>'.
+   * @see org.xtext.mda.project.browserDSL.VariableName
+   * @generated
+   */
+  EClass getVariableName();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.VariableName#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.mda.project.browserDSL.VariableName#getName()
+   * @see #getVariableName()
+   * @generated
+   */
+  EAttribute getVariableName_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Declaration <em>Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Declaration</em>'.
+   * @see org.xtext.mda.project.browserDSL.Declaration
+   * @generated
+   */
+  EClass getDeclaration();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Declaration#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see org.xtext.mda.project.browserDSL.Declaration#getName()
+   * @see #getDeclaration()
+   * @generated
+   */
+  EReference getDeclaration_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Declaration#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Val</em>'.
+   * @see org.xtext.mda.project.browserDSL.Declaration#getVal()
+   * @see #getDeclaration()
+   * @generated
+   */
+  EReference getDeclaration_Val();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Assignation <em>Assignation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Assignation</em>'.
+   * @see org.xtext.mda.project.browserDSL.Assignation
+   * @generated
+   */
+  EClass getAssignation();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Assignation#getVar <em>Var</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Var</em>'.
+   * @see org.xtext.mda.project.browserDSL.Assignation#getVar()
+   * @see #getAssignation()
+   * @generated
+   */
+  EReference getAssignation_Var();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Assignation#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expr</em>'.
+   * @see org.xtext.mda.project.browserDSL.Assignation#getExpr()
+   * @see #getAssignation()
+   * @generated
+   */
+  EReference getAssignation_Expr();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Expression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Expression</em>'.
+   * @see org.xtext.mda.project.browserDSL.Expression
+   * @generated
+   */
+  EClass getExpression();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Expression#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see org.xtext.mda.project.browserDSL.Expression#getType()
+   * @see #getExpression()
+   * @generated
+   */
+  EAttribute getExpression_Type();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Expression#getVar <em>Var</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Var</em>'.
+   * @see org.xtext.mda.project.browserDSL.Expression#getVar()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Var();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Expression#getAct <em>Act</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Act</em>'.
+   * @see org.xtext.mda.project.browserDSL.Expression#getAct()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Act();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Expression#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.mda.project.browserDSL.Expression#getLeft()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Expression#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.mda.project.browserDSL.Expression#getRight()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Right();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Expression#getExp <em>Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp</em>'.
+   * @see org.xtext.mda.project.browserDSL.Expression#getExp()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Exp();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Variable <em>Variable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Variable</em>'.
+   * @see org.xtext.mda.project.browserDSL.Variable
+   * @generated
+   */
+  EClass getVariable();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Variable#getVar <em>Var</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Var</em>'.
+   * @see org.xtext.mda.project.browserDSL.Variable#getVar()
+   * @see #getVariable()
+   * @generated
+   */
+  EReference getVariable_Var();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.ActionExpression <em>Action Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Action Expression</em>'.
+   * @see org.xtext.mda.project.browserDSL.ActionExpression
+   * @generated
+   */
+  EClass getActionExpression();
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Element <em>Element</em>}'.
@@ -816,6 +1614,111 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    */
   EClass getCheckableElement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Checkbox <em>Checkbox</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Checkbox</em>'.
+   * @see org.xtext.mda.project.browserDSL.Checkbox
+   * @generated
+   */
+  EClass getCheckbox();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Checkbox#getCheck <em>Check</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Check</em>'.
+   * @see org.xtext.mda.project.browserDSL.Checkbox#getCheck()
+   * @see #getCheckbox()
+   * @generated
+   */
+  EAttribute getCheckbox_Check();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Link <em>Link</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Link</em>'.
+   * @see org.xtext.mda.project.browserDSL.Link
+   * @generated
+   */
+  EClass getLink();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Link#getLink <em>Link</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Link</em>'.
+   * @see org.xtext.mda.project.browserDSL.Link#getLink()
+   * @see #getLink()
+   * @generated
+   */
+  EAttribute getLink_Link();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Button <em>Button</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Button</em>'.
+   * @see org.xtext.mda.project.browserDSL.Button
+   * @generated
+   */
+  EClass getButton();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Button#getBut <em>But</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>But</em>'.
+   * @see org.xtext.mda.project.browserDSL.Button#getBut()
+   * @see #getButton()
+   * @generated
+   */
+  EAttribute getButton_But();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Image <em>Image</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Image</em>'.
+   * @see org.xtext.mda.project.browserDSL.Image
+   * @generated
+   */
+  EClass getImage();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Image#getImg <em>Img</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Img</em>'.
+   * @see org.xtext.mda.project.browserDSL.Image#getImg()
+   * @see #getImage()
+   * @generated
+   */
+  EAttribute getImage_Img();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.TextField <em>Text Field</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Text Field</em>'.
+   * @see org.xtext.mda.project.browserDSL.TextField
+   * @generated
+   */
+  EClass getTextField();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.TextField#getText <em>Text</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Text</em>'.
+   * @see org.xtext.mda.project.browserDSL.TextField#getText()
+   * @see #getTextField()
+   * @generated
+   */
+  EAttribute getTextField_Text();
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Click <em>Click</em>}'.
@@ -868,128 +1771,6 @@ public interface BrowserDSLPackage extends EPackage
   EClass getExist();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.GoTo <em>Go To</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Go To</em>'.
-   * @see org.xtext.mda.project.browserDSL.GoTo
-   * @generated
-   */
-  EClass getGoTo();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Variable <em>Variable</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Variable</em>'.
-   * @see org.xtext.mda.project.browserDSL.Variable
-   * @generated
-   */
-  EClass getVariable();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Variable#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.mda.project.browserDSL.Variable#getName()
-   * @see #getVariable()
-   * @generated
-   */
-  EAttribute getVariable_Name();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.VariableString <em>Variable String</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Variable String</em>'.
-   * @see org.xtext.mda.project.browserDSL.VariableString
-   * @generated
-   */
-  EClass getVariableString();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.VariableUrl <em>Variable Url</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Variable Url</em>'.
-   * @see org.xtext.mda.project.browserDSL.VariableUrl
-   * @generated
-   */
-  EClass getVariableUrl();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.VariableList <em>Variable List</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Variable List</em>'.
-   * @see org.xtext.mda.project.browserDSL.VariableList
-   * @generated
-   */
-  EClass getVariableList();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.VariableList#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Value</em>'.
-   * @see org.xtext.mda.project.browserDSL.VariableList#getValue()
-   * @see #getVariableList()
-   * @generated
-   */
-  EReference getVariableList_Value();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Checkbox <em>Checkbox</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Checkbox</em>'.
-   * @see org.xtext.mda.project.browserDSL.Checkbox
-   * @generated
-   */
-  EClass getCheckbox();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Link <em>Link</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Link</em>'.
-   * @see org.xtext.mda.project.browserDSL.Link
-   * @generated
-   */
-  EClass getLink();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Button <em>Button</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Button</em>'.
-   * @see org.xtext.mda.project.browserDSL.Button
-   * @generated
-   */
-  EClass getButton();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Image <em>Image</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Image</em>'.
-   * @see org.xtext.mda.project.browserDSL.Image
-   * @generated
-   */
-  EClass getImage();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.TextField <em>Text Field</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Text Field</em>'.
-   * @see org.xtext.mda.project.browserDSL.TextField
-   * @generated
-   */
-  EClass getTextField();
-
-  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1013,14 +1794,22 @@ public interface BrowserDSLPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ModelImpl <em>Model</em>}' class.
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ProgramImpl <em>Program</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.ModelImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getModel()
+     * @see org.xtext.mda.project.browserDSL.impl.ProgramImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getProgram()
      * @generated
      */
-    EClass MODEL = eINSTANCE.getModel();
+    EClass PROGRAM = eINSTANCE.getProgram();
+
+    /**
+     * The meta object literal for the '<em><b>Sub</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROGRAM__SUB = eINSTANCE.getProgram_Sub();
 
     /**
      * The meta object literal for the '<em><b>Main</b></em>' containment reference feature.
@@ -1028,17 +1817,123 @@ public interface BrowserDSLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__MAIN = eINSTANCE.getModel_Main();
+    EReference PROGRAM__MAIN = eINSTANCE.getProgram_Main();
 
     /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.SubRoutineImpl <em>Sub Routine</em>}' class.
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.SubroutineImpl <em>Subroutine</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.SubRoutineImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getSubRoutine()
+     * @see org.xtext.mda.project.browserDSL.impl.SubroutineImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getSubroutine()
      * @generated
      */
-    EClass SUB_ROUTINE = eINSTANCE.getSubRoutine();
+    EClass SUBROUTINE = eINSTANCE.getSubroutine();
+
+    /**
+     * The meta object literal for the '<em><b>Head</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SUBROUTINE__HEAD = eINSTANCE.getSubroutine_Head();
+
+    /**
+     * The meta object literal for the '<em><b>Body</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SUBROUTINE__BODY = eINSTANCE.getSubroutine_Body();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.HeadImpl <em>Head</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.HeadImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getHead()
+     * @generated
+     */
+    EClass HEAD = eINSTANCE.getHead();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HEAD__NAME = eINSTANCE.getHead_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Var Id</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HEAD__VAR_ID = eINSTANCE.getHead_VarId();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.FunctionReferenceImpl <em>Function Reference</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.FunctionReferenceImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getFunctionReference()
+     * @generated
+     */
+    EClass FUNCTION_REFERENCE = eINSTANCE.getFunctionReference();
+
+    /**
+     * The meta object literal for the '<em><b>Function Name</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTION_REFERENCE__FUNCTION_NAME = eINSTANCE.getFunctionReference_FunctionName();
+
+    /**
+     * The meta object literal for the '<em><b>Var</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTION_REFERENCE__VAR = eINSTANCE.getFunctionReference_Var();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.VariableReferenceImpl <em>Variable Reference</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.VariableReferenceImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariableReference()
+     * @generated
+     */
+    EClass VARIABLE_REFERENCE = eINSTANCE.getVariableReference();
+
+    /**
+     * The meta object literal for the '<em><b>Var ID</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VARIABLE_REFERENCE__VAR_ID = eINSTANCE.getVariableReference_VarID();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.FunctionCallImpl <em>Function Call</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.FunctionCallImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getFunctionCall()
+     * @generated
+     */
+    EClass FUNCTION_CALL = eINSTANCE.getFunctionCall();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.FunctionNameImpl <em>Function Name</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.FunctionNameImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getFunctionName()
+     * @generated
+     */
+    EClass FUNCTION_NAME = eINSTANCE.getFunctionName();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1046,15 +1941,7 @@ public interface BrowserDSLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SUB_ROUTINE__NAME = eINSTANCE.getSubRoutine_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Action</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SUB_ROUTINE__ACTION = eINSTANCE.getSubRoutine_Action();
+    EAttribute FUNCTION_NAME__NAME = eINSTANCE.getFunctionName_Name();
 
     /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.MainImpl <em>Main</em>}' class.
@@ -1067,66 +1954,280 @@ public interface BrowserDSLPackage extends EPackage
     EClass MAIN = eINSTANCE.getMain();
 
     /**
-     * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.BodyImpl <em>Body</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.BodyImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getBody()
      * @generated
      */
-    EReference MAIN__ACTIONS = eINSTANCE.getMain_Actions();
+    EClass BODY = eINSTANCE.getBody();
 
     /**
-     * The meta object literal for the '<em><b>Action</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Instructions</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MAIN__ACTION = eINSTANCE.getMain_Action();
+    EReference BODY__INSTRUCTIONS = eINSTANCE.getBody_Instructions();
 
     /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ActionImpl <em>Action</em>}' class.
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.InstructionImpl <em>Instruction</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.ActionImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getAction()
+     * @see org.xtext.mda.project.browserDSL.impl.InstructionImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getInstruction()
      * @generated
      */
-    EClass ACTION = eINSTANCE.getAction();
+    EClass INSTRUCTION = eINSTANCE.getInstruction();
 
     /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.SubRoutineCallImpl <em>Sub Routine Call</em>}' class.
+     * The meta object literal for the '<em><b>Dec</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.SubRoutineCallImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getSubRoutineCall()
      * @generated
      */
-    EClass SUB_ROUTINE_CALL = eINSTANCE.getSubRoutineCall();
+    EReference INSTRUCTION__DEC = eINSTANCE.getInstruction_Dec();
 
     /**
-     * The meta object literal for the '<em><b>Id</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Cond</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SUB_ROUTINE_CALL__ID = eINSTANCE.getSubRoutineCall_Id();
+    EReference INSTRUCTION__COND = eINSTANCE.getInstruction_Cond();
 
     /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ListImpl <em>List</em>}' class.
+     * The meta object literal for the '<em><b>Loop</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.ListImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getList()
      * @generated
      */
-    EClass LIST = eINSTANCE.getList();
+    EAttribute INSTRUCTION__LOOP = eINSTANCE.getInstruction_Loop();
 
     /**
-     * The meta object literal for the '<em><b>Element</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Act</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LIST__ELEMENT = eINSTANCE.getList_Element();
+    EReference INSTRUCTION__ACT = eINSTANCE.getInstruction_Act();
+
+    /**
+     * The meta object literal for the '<em><b>Ass</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INSTRUCTION__ASS = eINSTANCE.getInstruction_Ass();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ConditionImpl <em>Condition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.ConditionImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getCondition()
+     * @generated
+     */
+    EClass CONDITION = eINSTANCE.getCondition();
+
+    /**
+     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITION__EXP = eINSTANCE.getCondition_Exp();
+
+    /**
+     * The meta object literal for the '<em><b>Ins</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITION__INS = eINSTANCE.getCondition_Ins();
+
+    /**
+     * The meta object literal for the '<em><b>Ins2</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITION__INS2 = eINSTANCE.getCondition_Ins2();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ActionInstructionImpl <em>Action Instruction</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.ActionInstructionImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getActionInstruction()
+     * @generated
+     */
+    EClass ACTION_INSTRUCTION = eINSTANCE.getActionInstruction();
+
+    /**
+     * The meta object literal for the '<em><b>Action</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ACTION_INSTRUCTION__ACTION = eINSTANCE.getActionInstruction_Action();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.VariableNameImpl <em>Variable Name</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.VariableNameImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariableName()
+     * @generated
+     */
+    EClass VARIABLE_NAME = eINSTANCE.getVariableName();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VARIABLE_NAME__NAME = eINSTANCE.getVariableName_Name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.DeclarationImpl <em>Declaration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.DeclarationImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getDeclaration()
+     * @generated
+     */
+    EClass DECLARATION = eINSTANCE.getDeclaration();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATION__NAME = eINSTANCE.getDeclaration_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Val</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DECLARATION__VAL = eINSTANCE.getDeclaration_Val();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.AssignationImpl <em>Assignation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.AssignationImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getAssignation()
+     * @generated
+     */
+    EClass ASSIGNATION = eINSTANCE.getAssignation();
+
+    /**
+     * The meta object literal for the '<em><b>Var</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ASSIGNATION__VAR = eINSTANCE.getAssignation_Var();
+
+    /**
+     * The meta object literal for the '<em><b>Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ASSIGNATION__EXPR = eINSTANCE.getAssignation_Expr();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ExpressionImpl <em>Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.ExpressionImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getExpression()
+     * @generated
+     */
+    EClass EXPRESSION = eINSTANCE.getExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXPRESSION__TYPE = eINSTANCE.getExpression_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Var</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__VAR = eINSTANCE.getExpression_Var();
+
+    /**
+     * The meta object literal for the '<em><b>Act</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__ACT = eINSTANCE.getExpression_Act();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__LEFT = eINSTANCE.getExpression_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__RIGHT = eINSTANCE.getExpression_Right();
+
+    /**
+     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__EXP = eINSTANCE.getExpression_Exp();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.VariableImpl <em>Variable</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.VariableImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariable()
+     * @generated
+     */
+    EClass VARIABLE = eINSTANCE.getVariable();
+
+    /**
+     * The meta object literal for the '<em><b>Var</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VARIABLE__VAR = eINSTANCE.getVariable_Var();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ActionExpressionImpl <em>Action Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.ActionExpressionImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getActionExpression()
+     * @generated
+     */
+    EClass ACTION_EXPRESSION = eINSTANCE.getActionExpression();
 
     /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ElementImpl <em>Element</em>}' class.
@@ -1167,6 +2268,96 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EClass CHECKABLE_ELEMENT = eINSTANCE.getCheckableElement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.CheckboxImpl <em>Checkbox</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.CheckboxImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getCheckbox()
+     * @generated
+     */
+    EClass CHECKBOX = eINSTANCE.getCheckbox();
+
+    /**
+     * The meta object literal for the '<em><b>Check</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHECKBOX__CHECK = eINSTANCE.getCheckbox_Check();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.LinkImpl <em>Link</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.LinkImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getLink()
+     * @generated
+     */
+    EClass LINK = eINSTANCE.getLink();
+
+    /**
+     * The meta object literal for the '<em><b>Link</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LINK__LINK = eINSTANCE.getLink_Link();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ButtonImpl <em>Button</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.ButtonImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getButton()
+     * @generated
+     */
+    EClass BUTTON = eINSTANCE.getButton();
+
+    /**
+     * The meta object literal for the '<em><b>But</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BUTTON__BUT = eINSTANCE.getButton_But();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ImageImpl <em>Image</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.ImageImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getImage()
+     * @generated
+     */
+    EClass IMAGE = eINSTANCE.getImage();
+
+    /**
+     * The meta object literal for the '<em><b>Img</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE__IMG = eINSTANCE.getImage_Img();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.TextFieldImpl <em>Text Field</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.TextFieldImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getTextField()
+     * @generated
+     */
+    EClass TEXT_FIELD = eINSTANCE.getTextField();
+
+    /**
+     * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEXT_FIELD__TEXT = eINSTANCE.getTextField_Text();
 
     /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ClickImpl <em>Click</em>}' class.
@@ -1217,122 +2408,6 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EClass EXIST = eINSTANCE.getExist();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.GoToImpl <em>Go To</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.GoToImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getGoTo()
-     * @generated
-     */
-    EClass GO_TO = eINSTANCE.getGoTo();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.VariableImpl <em>Variable</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.VariableImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariable()
-     * @generated
-     */
-    EClass VARIABLE = eINSTANCE.getVariable();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.VariableStringImpl <em>Variable String</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.VariableStringImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariableString()
-     * @generated
-     */
-    EClass VARIABLE_STRING = eINSTANCE.getVariableString();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.VariableUrlImpl <em>Variable Url</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.VariableUrlImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariableUrl()
-     * @generated
-     */
-    EClass VARIABLE_URL = eINSTANCE.getVariableUrl();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.VariableListImpl <em>Variable List</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.VariableListImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariableList()
-     * @generated
-     */
-    EClass VARIABLE_LIST = eINSTANCE.getVariableList();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference VARIABLE_LIST__VALUE = eINSTANCE.getVariableList_Value();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.CheckboxImpl <em>Checkbox</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.CheckboxImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getCheckbox()
-     * @generated
-     */
-    EClass CHECKBOX = eINSTANCE.getCheckbox();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.LinkImpl <em>Link</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.LinkImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getLink()
-     * @generated
-     */
-    EClass LINK = eINSTANCE.getLink();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ButtonImpl <em>Button</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.ButtonImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getButton()
-     * @generated
-     */
-    EClass BUTTON = eINSTANCE.getButton();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ImageImpl <em>Image</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.ImageImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getImage()
-     * @generated
-     */
-    EClass IMAGE = eINSTANCE.getImage();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.TextFieldImpl <em>Text Field</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.mda.project.browserDSL.impl.TextFieldImpl
-     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getTextField()
-     * @generated
-     */
-    EClass TEXT_FIELD = eINSTANCE.getTextField();
 
   }
 
