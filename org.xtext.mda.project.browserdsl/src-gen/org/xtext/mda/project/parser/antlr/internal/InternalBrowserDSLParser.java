@@ -21,27 +21,35 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'click('", "')'", "'fill('", "', value='", "'clear('", "'verify('", "'exist('", "'checkbox '", "'link '", "'button '", "'image '", "'textField '", "'url '"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_URL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "';'", "','", "'['", "', '", "']'", "'click('", "')'", "'fill('", "', value='", "'clear('", "'verify('", "'exist('", "'url='", "'var '", "' = '", "'checkbox '", "'link '", "'button '", "'image '", "'textField '"
     };
-    public static final int RULE_STRING=4;
-    public static final int RULE_SL_COMMENT=8;
+    public static final int RULE_STRING=5;
+    public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
-    public static final int T__11=11;
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
-    public static final int RULE_ID=5;
-    public static final int RULE_WS=9;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int RULE_INT=6;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int RULE_ID=4;
+    public static final int RULE_WS=10;
+    public static final int RULE_ANY_OTHER=11;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int RULE_INT=7;
+    public static final int T__29=29;
+    public static final int RULE_URL=6;
     public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=7;
+    public static final int RULE_ML_COMMENT=8;
     public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
     public static final int T__20=20;
     public static final int T__21=21;
 
@@ -120,67 +128,60 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModel"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:76:1: ruleModel returns [EObject current=null] : ( (lv_actions_0_0= ruleAction ) )* ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:76:1: ruleModel returns [EObject current=null] : ( ( (lv_main_0_0= ruleMain ) ) otherlv_1= ';' ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_actions_0_0 = null;
+        Token otherlv_1=null;
+        EObject lv_main_0_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:79:28: ( ( (lv_actions_0_0= ruleAction ) )* )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:80:1: ( (lv_actions_0_0= ruleAction ) )*
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:79:28: ( ( ( (lv_main_0_0= ruleMain ) ) otherlv_1= ';' ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:80:1: ( ( (lv_main_0_0= ruleMain ) ) otherlv_1= ';' )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:80:1: ( (lv_actions_0_0= ruleAction ) )*
-            loop1:
-            do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:80:1: ( ( (lv_main_0_0= ruleMain ) ) otherlv_1= ';' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:80:2: ( (lv_main_0_0= ruleMain ) ) otherlv_1= ';'
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:80:2: ( (lv_main_0_0= ruleMain ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:81:1: (lv_main_0_0= ruleMain )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:81:1: (lv_main_0_0= ruleMain )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:82:3: lv_main_0_0= ruleMain
+            {
+             
+            	        newCompositeNode(grammarAccess.getModelAccess().getMainMainParserRuleCall_0_0()); 
+            	    
+            pushFollow(FOLLOW_ruleMain_in_ruleModel131);
+            lv_main_0_0=ruleMain();
 
-                if ( (LA1_0==11||LA1_0==13||(LA1_0>=15 && LA1_0<=17)||LA1_0==23) ) {
-                    alt1=1;
-                }
-
-
-                switch (alt1) {
-            	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:81:1: (lv_actions_0_0= ruleAction )
-            	    {
-            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:81:1: (lv_actions_0_0= ruleAction )
-            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:82:3: lv_actions_0_0= ruleAction
-            	    {
-            	     
-            	    	        newCompositeNode(grammarAccess.getModelAccess().getActionsActionParserRuleCall_0()); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleAction_in_ruleModel130);
-            	    lv_actions_0_0=ruleAction();
-
-            	    state._fsp--;
+            state._fsp--;
 
 
-            	    	        if (current==null) {
-            	    	            current = createModelElementForParent(grammarAccess.getModelRule());
-            	    	        }
-            	           		add(
-            	           			current, 
-            	           			"actions",
-            	            		lv_actions_0_0, 
-            	            		"Action");
-            	    	        afterParserOrEnumRuleCall();
-            	    	    
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getModelRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"main",
+                    		lv_main_0_0, 
+                    		"Main");
+            	        afterParserOrEnumRuleCall();
+            	    
 
-            	    }
+            }
 
 
-            	    }
-            	    break;
+            }
 
-            	default :
-            	    break loop1;
-                }
-            } while (true);
+            otherlv_1=(Token)match(input,12,FOLLOW_12_in_ruleModel143); 
+
+                	newLeafNode(otherlv_1, grammarAccess.getModelAccess().getSemicolonKeyword_1());
+                
+
+            }
 
 
             }
@@ -199,8 +200,174 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleModel"
 
 
+    // $ANTLR start "entryRuleMain"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:112:1: entryRuleMain returns [EObject current=null] : iv_ruleMain= ruleMain EOF ;
+    public final EObject entryRuleMain() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleMain = null;
+
+
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:113:2: (iv_ruleMain= ruleMain EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:114:2: iv_ruleMain= ruleMain EOF
+            {
+             newCompositeNode(grammarAccess.getMainRule()); 
+            pushFollow(FOLLOW_ruleMain_in_entryRuleMain181);
+            iv_ruleMain=ruleMain();
+
+            state._fsp--;
+
+             current =iv_ruleMain; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMain191); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleMain"
+
+
+    // $ANTLR start "ruleMain"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:121:1: ruleMain returns [EObject current=null] : ( ( (lv_actions_0_0= ruleAction ) ) (otherlv_1= ',' ( (lv_action_2_0= ruleAction ) ) )* ) ;
+    public final EObject ruleMain() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_1=null;
+        EObject lv_actions_0_0 = null;
+
+        EObject lv_action_2_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:124:28: ( ( ( (lv_actions_0_0= ruleAction ) ) (otherlv_1= ',' ( (lv_action_2_0= ruleAction ) ) )* ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:125:1: ( ( (lv_actions_0_0= ruleAction ) ) (otherlv_1= ',' ( (lv_action_2_0= ruleAction ) ) )* )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:125:1: ( ( (lv_actions_0_0= ruleAction ) ) (otherlv_1= ',' ( (lv_action_2_0= ruleAction ) ) )* )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:125:2: ( (lv_actions_0_0= ruleAction ) ) (otherlv_1= ',' ( (lv_action_2_0= ruleAction ) ) )*
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:125:2: ( (lv_actions_0_0= ruleAction ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:126:1: (lv_actions_0_0= ruleAction )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:126:1: (lv_actions_0_0= ruleAction )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:127:3: lv_actions_0_0= ruleAction
+            {
+             
+            	        newCompositeNode(grammarAccess.getMainAccess().getActionsActionParserRuleCall_0_0()); 
+            	    
+            pushFollow(FOLLOW_ruleAction_in_ruleMain237);
+            lv_actions_0_0=ruleAction();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getMainRule());
+            	        }
+                   		add(
+                   			current, 
+                   			"actions",
+                    		lv_actions_0_0, 
+                    		"Action");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:143:2: (otherlv_1= ',' ( (lv_action_2_0= ruleAction ) ) )*
+            loop1:
+            do {
+                int alt1=2;
+                int LA1_0 = input.LA(1);
+
+                if ( (LA1_0==13) ) {
+                    alt1=1;
+                }
+
+
+                switch (alt1) {
+            	case 1 :
+            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:143:4: otherlv_1= ',' ( (lv_action_2_0= ruleAction ) )
+            	    {
+            	    otherlv_1=(Token)match(input,13,FOLLOW_13_in_ruleMain250); 
+
+            	        	newLeafNode(otherlv_1, grammarAccess.getMainAccess().getCommaKeyword_1_0());
+            	        
+            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:147:1: ( (lv_action_2_0= ruleAction ) )
+            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:148:1: (lv_action_2_0= ruleAction )
+            	    {
+            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:148:1: (lv_action_2_0= ruleAction )
+            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:149:3: lv_action_2_0= ruleAction
+            	    {
+            	     
+            	    	        newCompositeNode(grammarAccess.getMainAccess().getActionActionParserRuleCall_1_1_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleAction_in_ruleMain271);
+            	    lv_action_2_0=ruleAction();
+
+            	    state._fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getMainRule());
+            	    	        }
+            	           		add(
+            	           			current, 
+            	           			"action",
+            	            		lv_action_2_0, 
+            	            		"Action");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop1;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleMain"
+
+
     // $ANTLR start "entryRuleAction"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:106:1: entryRuleAction returns [EObject current=null] : iv_ruleAction= ruleAction EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:173:1: entryRuleAction returns [EObject current=null] : iv_ruleAction= ruleAction EOF ;
     public final EObject entryRuleAction() throws RecognitionException {
         EObject current = null;
 
@@ -208,17 +375,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:107:2: (iv_ruleAction= ruleAction EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:108:2: iv_ruleAction= ruleAction EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:174:2: (iv_ruleAction= ruleAction EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:175:2: iv_ruleAction= ruleAction EOF
             {
              newCompositeNode(grammarAccess.getActionRule()); 
-            pushFollow(FOLLOW_ruleAction_in_entryRuleAction166);
+            pushFollow(FOLLOW_ruleAction_in_entryRuleAction309);
             iv_ruleAction=ruleAction();
 
             state._fsp--;
 
              current =iv_ruleAction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAction176); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAction319); 
 
             }
 
@@ -236,7 +403,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAction"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:115:1: ruleAction returns [EObject current=null] : (this_Click_0= ruleClick | this_Fill_1= ruleFill | this_Clear_2= ruleClear | this_Verify_3= ruleVerify | this_Exist_4= ruleExist | this_GoTo_5= ruleGoTo ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:182:1: ruleAction returns [EObject current=null] : (this_Click_0= ruleClick | this_Fill_1= ruleFill | this_Clear_2= ruleClear | this_Verify_3= ruleVerify | this_Exist_4= ruleExist | this_GoTo_5= ruleGoTo | this_SubRoutineCall_6= ruleSubRoutineCall ) ;
     public final EObject ruleAction() throws RecognitionException {
         EObject current = null;
 
@@ -252,44 +419,51 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
         EObject this_GoTo_5 = null;
 
+        EObject this_SubRoutineCall_6 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:118:28: ( (this_Click_0= ruleClick | this_Fill_1= ruleFill | this_Clear_2= ruleClear | this_Verify_3= ruleVerify | this_Exist_4= ruleExist | this_GoTo_5= ruleGoTo ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:119:1: (this_Click_0= ruleClick | this_Fill_1= ruleFill | this_Clear_2= ruleClear | this_Verify_3= ruleVerify | this_Exist_4= ruleExist | this_GoTo_5= ruleGoTo )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:185:28: ( (this_Click_0= ruleClick | this_Fill_1= ruleFill | this_Clear_2= ruleClear | this_Verify_3= ruleVerify | this_Exist_4= ruleExist | this_GoTo_5= ruleGoTo | this_SubRoutineCall_6= ruleSubRoutineCall ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:186:1: (this_Click_0= ruleClick | this_Fill_1= ruleFill | this_Clear_2= ruleClear | this_Verify_3= ruleVerify | this_Exist_4= ruleExist | this_GoTo_5= ruleGoTo | this_SubRoutineCall_6= ruleSubRoutineCall )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:119:1: (this_Click_0= ruleClick | this_Fill_1= ruleFill | this_Clear_2= ruleClear | this_Verify_3= ruleVerify | this_Exist_4= ruleExist | this_GoTo_5= ruleGoTo )
-            int alt2=6;
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:186:1: (this_Click_0= ruleClick | this_Fill_1= ruleFill | this_Clear_2= ruleClear | this_Verify_3= ruleVerify | this_Exist_4= ruleExist | this_GoTo_5= ruleGoTo | this_SubRoutineCall_6= ruleSubRoutineCall )
+            int alt2=7;
             switch ( input.LA(1) ) {
-            case 11:
+            case 17:
                 {
                 alt2=1;
                 }
                 break;
-            case 13:
+            case 19:
                 {
                 alt2=2;
                 }
                 break;
-            case 15:
+            case 21:
                 {
                 alt2=3;
                 }
                 break;
-            case 16:
+            case 22:
                 {
                 alt2=4;
                 }
                 break;
-            case 17:
+            case 23:
                 {
                 alt2=5;
                 }
                 break;
-            case 23:
+            case 24:
                 {
                 alt2=6;
+                }
+                break;
+            case RULE_ID:
+                {
+                alt2=7;
                 }
                 break;
             default:
@@ -301,12 +475,12 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
             switch (alt2) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:120:5: this_Click_0= ruleClick
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:187:5: this_Click_0= ruleClick
                     {
                      
                             newCompositeNode(grammarAccess.getActionAccess().getClickParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleClick_in_ruleAction223);
+                    pushFollow(FOLLOW_ruleClick_in_ruleAction366);
                     this_Click_0=ruleClick();
 
                     state._fsp--;
@@ -319,12 +493,12 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:130:5: this_Fill_1= ruleFill
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:197:5: this_Fill_1= ruleFill
                     {
                      
                             newCompositeNode(grammarAccess.getActionAccess().getFillParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleFill_in_ruleAction250);
+                    pushFollow(FOLLOW_ruleFill_in_ruleAction393);
                     this_Fill_1=ruleFill();
 
                     state._fsp--;
@@ -337,12 +511,12 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:140:5: this_Clear_2= ruleClear
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:207:5: this_Clear_2= ruleClear
                     {
                      
                             newCompositeNode(grammarAccess.getActionAccess().getClearParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleClear_in_ruleAction277);
+                    pushFollow(FOLLOW_ruleClear_in_ruleAction420);
                     this_Clear_2=ruleClear();
 
                     state._fsp--;
@@ -355,12 +529,12 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:150:5: this_Verify_3= ruleVerify
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:217:5: this_Verify_3= ruleVerify
                     {
                      
                             newCompositeNode(grammarAccess.getActionAccess().getVerifyParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleVerify_in_ruleAction304);
+                    pushFollow(FOLLOW_ruleVerify_in_ruleAction447);
                     this_Verify_3=ruleVerify();
 
                     state._fsp--;
@@ -373,12 +547,12 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:160:5: this_Exist_4= ruleExist
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:227:5: this_Exist_4= ruleExist
                     {
                      
                             newCompositeNode(grammarAccess.getActionAccess().getExistParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleExist_in_ruleAction331);
+                    pushFollow(FOLLOW_ruleExist_in_ruleAction474);
                     this_Exist_4=ruleExist();
 
                     state._fsp--;
@@ -391,18 +565,36 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:170:5: this_GoTo_5= ruleGoTo
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:237:5: this_GoTo_5= ruleGoTo
                     {
                      
                             newCompositeNode(grammarAccess.getActionAccess().getGoToParserRuleCall_5()); 
                         
-                    pushFollow(FOLLOW_ruleGoTo_in_ruleAction358);
+                    pushFollow(FOLLOW_ruleGoTo_in_ruleAction501);
                     this_GoTo_5=ruleGoTo();
 
                     state._fsp--;
 
                      
                             current = this_GoTo_5; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+                case 7 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:247:5: this_SubRoutineCall_6= ruleSubRoutineCall
+                    {
+                     
+                            newCompositeNode(grammarAccess.getActionAccess().getSubRoutineCallParserRuleCall_6()); 
+                        
+                    pushFollow(FOLLOW_ruleSubRoutineCall_in_ruleAction528);
+                    this_SubRoutineCall_6=ruleSubRoutineCall();
+
+                    state._fsp--;
+
+                     
+                            current = this_SubRoutineCall_6; 
                             afterParserOrEnumRuleCall();
                         
 
@@ -428,8 +620,271 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleAction"
 
 
+    // $ANTLR start "entryRuleSubRoutineCall"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:263:1: entryRuleSubRoutineCall returns [EObject current=null] : iv_ruleSubRoutineCall= ruleSubRoutineCall EOF ;
+    public final EObject entryRuleSubRoutineCall() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleSubRoutineCall = null;
+
+
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:264:2: (iv_ruleSubRoutineCall= ruleSubRoutineCall EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:265:2: iv_ruleSubRoutineCall= ruleSubRoutineCall EOF
+            {
+             newCompositeNode(grammarAccess.getSubRoutineCallRule()); 
+            pushFollow(FOLLOW_ruleSubRoutineCall_in_entryRuleSubRoutineCall563);
+            iv_ruleSubRoutineCall=ruleSubRoutineCall();
+
+            state._fsp--;
+
+             current =iv_ruleSubRoutineCall; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSubRoutineCall573); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleSubRoutineCall"
+
+
+    // $ANTLR start "ruleSubRoutineCall"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:272:1: ruleSubRoutineCall returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
+    public final EObject ruleSubRoutineCall() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+
+         enterRule(); 
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:275:28: ( ( (otherlv_0= RULE_ID ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:276:1: ( (otherlv_0= RULE_ID ) )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:276:1: ( (otherlv_0= RULE_ID ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:277:1: (otherlv_0= RULE_ID )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:277:1: (otherlv_0= RULE_ID )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:278:3: otherlv_0= RULE_ID
+            {
+
+            			if (current==null) {
+            	            current = createModelElement(grammarAccess.getSubRoutineCallRule());
+            	        }
+                    
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSubRoutineCall617); 
+
+            		newLeafNode(otherlv_0, grammarAccess.getSubRoutineCallAccess().getIdSubRoutineCrossReference_0()); 
+            	
+
+            }
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleSubRoutineCall"
+
+
+    // $ANTLR start "entryRuleList"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:297:1: entryRuleList returns [EObject current=null] : iv_ruleList= ruleList EOF ;
+    public final EObject entryRuleList() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleList = null;
+
+
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:298:2: (iv_ruleList= ruleList EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:299:2: iv_ruleList= ruleList EOF
+            {
+             newCompositeNode(grammarAccess.getListRule()); 
+            pushFollow(FOLLOW_ruleList_in_entryRuleList652);
+            iv_ruleList=ruleList();
+
+            state._fsp--;
+
+             current =iv_ruleList; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleList662); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleList"
+
+
+    // $ANTLR start "ruleList"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:306:1: ruleList returns [EObject current=null] : (otherlv_0= '[' ( (lv_element_1_0= ruleElement ) ) (otherlv_2= ', ' ( (lv_element_3_0= ruleElement ) ) )* otherlv_4= ']' ) ;
+    public final EObject ruleList() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_2=null;
+        Token otherlv_4=null;
+        EObject lv_element_1_0 = null;
+
+        EObject lv_element_3_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:309:28: ( (otherlv_0= '[' ( (lv_element_1_0= ruleElement ) ) (otherlv_2= ', ' ( (lv_element_3_0= ruleElement ) ) )* otherlv_4= ']' ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:310:1: (otherlv_0= '[' ( (lv_element_1_0= ruleElement ) ) (otherlv_2= ', ' ( (lv_element_3_0= ruleElement ) ) )* otherlv_4= ']' )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:310:1: (otherlv_0= '[' ( (lv_element_1_0= ruleElement ) ) (otherlv_2= ', ' ( (lv_element_3_0= ruleElement ) ) )* otherlv_4= ']' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:310:3: otherlv_0= '[' ( (lv_element_1_0= ruleElement ) ) (otherlv_2= ', ' ( (lv_element_3_0= ruleElement ) ) )* otherlv_4= ']'
+            {
+            otherlv_0=(Token)match(input,14,FOLLOW_14_in_ruleList699); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getListAccess().getLeftSquareBracketKeyword_0());
+                
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:314:1: ( (lv_element_1_0= ruleElement ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:315:1: (lv_element_1_0= ruleElement )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:315:1: (lv_element_1_0= ruleElement )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:316:3: lv_element_1_0= ruleElement
+            {
+             
+            	        newCompositeNode(grammarAccess.getListAccess().getElementElementParserRuleCall_1_0()); 
+            	    
+            pushFollow(FOLLOW_ruleElement_in_ruleList720);
+            lv_element_1_0=ruleElement();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getListRule());
+            	        }
+                   		add(
+                   			current, 
+                   			"element",
+                    		lv_element_1_0, 
+                    		"Element");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:332:2: (otherlv_2= ', ' ( (lv_element_3_0= ruleElement ) ) )*
+            loop3:
+            do {
+                int alt3=2;
+                int LA3_0 = input.LA(1);
+
+                if ( (LA3_0==15) ) {
+                    alt3=1;
+                }
+
+
+                switch (alt3) {
+            	case 1 :
+            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:332:4: otherlv_2= ', ' ( (lv_element_3_0= ruleElement ) )
+            	    {
+            	    otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleList733); 
+
+            	        	newLeafNode(otherlv_2, grammarAccess.getListAccess().getCommaSpaceKeyword_2_0());
+            	        
+            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:336:1: ( (lv_element_3_0= ruleElement ) )
+            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:337:1: (lv_element_3_0= ruleElement )
+            	    {
+            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:337:1: (lv_element_3_0= ruleElement )
+            	    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:338:3: lv_element_3_0= ruleElement
+            	    {
+            	     
+            	    	        newCompositeNode(grammarAccess.getListAccess().getElementElementParserRuleCall_2_1_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleElement_in_ruleList754);
+            	    lv_element_3_0=ruleElement();
+
+            	    state._fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getListRule());
+            	    	        }
+            	           		add(
+            	           			current, 
+            	           			"element",
+            	            		lv_element_3_0, 
+            	            		"Element");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop3;
+                }
+            } while (true);
+
+            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleList768); 
+
+                	newLeafNode(otherlv_4, grammarAccess.getListAccess().getRightSquareBracketKeyword_3());
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleList"
+
+
     // $ANTLR start "entryRuleElement"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:186:1: entryRuleElement returns [EObject current=null] : iv_ruleElement= ruleElement EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:366:1: entryRuleElement returns [EObject current=null] : iv_ruleElement= ruleElement EOF ;
     public final EObject entryRuleElement() throws RecognitionException {
         EObject current = null;
 
@@ -437,17 +892,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:187:2: (iv_ruleElement= ruleElement EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:188:2: iv_ruleElement= ruleElement EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:367:2: (iv_ruleElement= ruleElement EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:368:2: iv_ruleElement= ruleElement EOF
             {
              newCompositeNode(grammarAccess.getElementRule()); 
-            pushFollow(FOLLOW_ruleElement_in_entryRuleElement393);
+            pushFollow(FOLLOW_ruleElement_in_entryRuleElement804);
             iv_ruleElement=ruleElement();
 
             state._fsp--;
 
              current =iv_ruleElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleElement403); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleElement814); 
 
             }
 
@@ -465,7 +920,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleElement"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:195:1: ruleElement returns [EObject current=null] : (this_ClickableElement_0= ruleClickableElement | this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:375:1: ruleElement returns [EObject current=null] : (this_ClickableElement_0= ruleClickableElement | this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) ;
     public final EObject ruleElement() throws RecognitionException {
         EObject current = null;
 
@@ -479,44 +934,44 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:198:28: ( (this_ClickableElement_0= ruleClickableElement | this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:199:1: (this_ClickableElement_0= ruleClickableElement | this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:378:28: ( (this_ClickableElement_0= ruleClickableElement | this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:379:1: (this_ClickableElement_0= ruleClickableElement | this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:199:1: (this_ClickableElement_0= ruleClickableElement | this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement )
-            int alt3=3;
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:379:1: (this_ClickableElement_0= ruleClickableElement | this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement )
+            int alt4=3;
             switch ( input.LA(1) ) {
-            case 19:
-            case 20:
-            case 21:
+            case 28:
+            case 29:
+            case 30:
                 {
-                alt3=1;
+                alt4=1;
                 }
                 break;
-            case 22:
+            case 31:
                 {
-                alt3=2;
+                alt4=2;
                 }
                 break;
-            case 18:
+            case 27:
                 {
-                alt3=3;
+                alt4=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 3, 0, input);
+                    new NoViableAltException("", 4, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt3) {
+            switch (alt4) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:200:5: this_ClickableElement_0= ruleClickableElement
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:380:5: this_ClickableElement_0= ruleClickableElement
                     {
                      
                             newCompositeNode(grammarAccess.getElementAccess().getClickableElementParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleClickableElement_in_ruleElement450);
+                    pushFollow(FOLLOW_ruleClickableElement_in_ruleElement861);
                     this_ClickableElement_0=ruleClickableElement();
 
                     state._fsp--;
@@ -529,12 +984,12 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:210:5: this_FillableElement_1= ruleFillableElement
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:390:5: this_FillableElement_1= ruleFillableElement
                     {
                      
                             newCompositeNode(grammarAccess.getElementAccess().getFillableElementParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleFillableElement_in_ruleElement477);
+                    pushFollow(FOLLOW_ruleFillableElement_in_ruleElement888);
                     this_FillableElement_1=ruleFillableElement();
 
                     state._fsp--;
@@ -547,12 +1002,12 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:220:5: this_CheckableElement_2= ruleCheckableElement
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:400:5: this_CheckableElement_2= ruleCheckableElement
                     {
                      
                             newCompositeNode(grammarAccess.getElementAccess().getCheckableElementParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleCheckableElement_in_ruleElement504);
+                    pushFollow(FOLLOW_ruleCheckableElement_in_ruleElement915);
                     this_CheckableElement_2=ruleCheckableElement();
 
                     state._fsp--;
@@ -585,7 +1040,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleClickableElement"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:236:1: entryRuleClickableElement returns [EObject current=null] : iv_ruleClickableElement= ruleClickableElement EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:416:1: entryRuleClickableElement returns [EObject current=null] : iv_ruleClickableElement= ruleClickableElement EOF ;
     public final EObject entryRuleClickableElement() throws RecognitionException {
         EObject current = null;
 
@@ -593,17 +1048,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:237:2: (iv_ruleClickableElement= ruleClickableElement EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:238:2: iv_ruleClickableElement= ruleClickableElement EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:417:2: (iv_ruleClickableElement= ruleClickableElement EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:418:2: iv_ruleClickableElement= ruleClickableElement EOF
             {
              newCompositeNode(grammarAccess.getClickableElementRule()); 
-            pushFollow(FOLLOW_ruleClickableElement_in_entryRuleClickableElement539);
+            pushFollow(FOLLOW_ruleClickableElement_in_entryRuleClickableElement950);
             iv_ruleClickableElement=ruleClickableElement();
 
             state._fsp--;
 
              current =iv_ruleClickableElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleClickableElement549); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleClickableElement960); 
 
             }
 
@@ -621,7 +1076,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleClickableElement"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:245:1: ruleClickableElement returns [EObject current=null] : (this_Link_0= ruleLink | this_Button_1= ruleButton | this_Image_2= ruleImage ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:425:1: ruleClickableElement returns [EObject current=null] : (this_Link_0= ruleLink | this_Button_1= ruleButton | this_Image_2= ruleImage ) ;
     public final EObject ruleClickableElement() throws RecognitionException {
         EObject current = null;
 
@@ -635,42 +1090,42 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:248:28: ( (this_Link_0= ruleLink | this_Button_1= ruleButton | this_Image_2= ruleImage ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:249:1: (this_Link_0= ruleLink | this_Button_1= ruleButton | this_Image_2= ruleImage )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:428:28: ( (this_Link_0= ruleLink | this_Button_1= ruleButton | this_Image_2= ruleImage ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:429:1: (this_Link_0= ruleLink | this_Button_1= ruleButton | this_Image_2= ruleImage )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:249:1: (this_Link_0= ruleLink | this_Button_1= ruleButton | this_Image_2= ruleImage )
-            int alt4=3;
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:429:1: (this_Link_0= ruleLink | this_Button_1= ruleButton | this_Image_2= ruleImage )
+            int alt5=3;
             switch ( input.LA(1) ) {
-            case 19:
+            case 28:
                 {
-                alt4=1;
+                alt5=1;
                 }
                 break;
-            case 20:
+            case 29:
                 {
-                alt4=2;
+                alt5=2;
                 }
                 break;
-            case 21:
+            case 30:
                 {
-                alt4=3;
+                alt5=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt4) {
+            switch (alt5) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:250:5: this_Link_0= ruleLink
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:430:5: this_Link_0= ruleLink
                     {
                      
                             newCompositeNode(grammarAccess.getClickableElementAccess().getLinkParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleLink_in_ruleClickableElement596);
+                    pushFollow(FOLLOW_ruleLink_in_ruleClickableElement1007);
                     this_Link_0=ruleLink();
 
                     state._fsp--;
@@ -683,12 +1138,12 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:260:5: this_Button_1= ruleButton
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:440:5: this_Button_1= ruleButton
                     {
                      
                             newCompositeNode(grammarAccess.getClickableElementAccess().getButtonParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleButton_in_ruleClickableElement623);
+                    pushFollow(FOLLOW_ruleButton_in_ruleClickableElement1034);
                     this_Button_1=ruleButton();
 
                     state._fsp--;
@@ -701,12 +1156,12 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:270:5: this_Image_2= ruleImage
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:450:5: this_Image_2= ruleImage
                     {
                      
                             newCompositeNode(grammarAccess.getClickableElementAccess().getImageParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleImage_in_ruleClickableElement650);
+                    pushFollow(FOLLOW_ruleImage_in_ruleClickableElement1061);
                     this_Image_2=ruleImage();
 
                     state._fsp--;
@@ -739,7 +1194,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFillableElement"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:286:1: entryRuleFillableElement returns [EObject current=null] : iv_ruleFillableElement= ruleFillableElement EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:466:1: entryRuleFillableElement returns [EObject current=null] : iv_ruleFillableElement= ruleFillableElement EOF ;
     public final EObject entryRuleFillableElement() throws RecognitionException {
         EObject current = null;
 
@@ -747,17 +1202,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:287:2: (iv_ruleFillableElement= ruleFillableElement EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:288:2: iv_ruleFillableElement= ruleFillableElement EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:467:2: (iv_ruleFillableElement= ruleFillableElement EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:468:2: iv_ruleFillableElement= ruleFillableElement EOF
             {
              newCompositeNode(grammarAccess.getFillableElementRule()); 
-            pushFollow(FOLLOW_ruleFillableElement_in_entryRuleFillableElement685);
+            pushFollow(FOLLOW_ruleFillableElement_in_entryRuleFillableElement1096);
             iv_ruleFillableElement=ruleFillableElement();
 
             state._fsp--;
 
              current =iv_ruleFillableElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFillableElement695); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFillableElement1106); 
 
             }
 
@@ -775,7 +1230,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFillableElement"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:295:1: ruleFillableElement returns [EObject current=null] : this_TextField_0= ruleTextField ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:475:1: ruleFillableElement returns [EObject current=null] : this_TextField_0= ruleTextField ;
     public final EObject ruleFillableElement() throws RecognitionException {
         EObject current = null;
 
@@ -785,13 +1240,13 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:298:28: (this_TextField_0= ruleTextField )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:300:5: this_TextField_0= ruleTextField
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:478:28: (this_TextField_0= ruleTextField )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:480:5: this_TextField_0= ruleTextField
             {
              
                     newCompositeNode(grammarAccess.getFillableElementAccess().getTextFieldParserRuleCall()); 
                 
-            pushFollow(FOLLOW_ruleTextField_in_ruleFillableElement741);
+            pushFollow(FOLLOW_ruleTextField_in_ruleFillableElement1152);
             this_TextField_0=ruleTextField();
 
             state._fsp--;
@@ -818,7 +1273,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCheckableElement"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:316:1: entryRuleCheckableElement returns [EObject current=null] : iv_ruleCheckableElement= ruleCheckableElement EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:496:1: entryRuleCheckableElement returns [EObject current=null] : iv_ruleCheckableElement= ruleCheckableElement EOF ;
     public final EObject entryRuleCheckableElement() throws RecognitionException {
         EObject current = null;
 
@@ -826,17 +1281,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:317:2: (iv_ruleCheckableElement= ruleCheckableElement EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:318:2: iv_ruleCheckableElement= ruleCheckableElement EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:497:2: (iv_ruleCheckableElement= ruleCheckableElement EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:498:2: iv_ruleCheckableElement= ruleCheckableElement EOF
             {
              newCompositeNode(grammarAccess.getCheckableElementRule()); 
-            pushFollow(FOLLOW_ruleCheckableElement_in_entryRuleCheckableElement775);
+            pushFollow(FOLLOW_ruleCheckableElement_in_entryRuleCheckableElement1186);
             iv_ruleCheckableElement=ruleCheckableElement();
 
             state._fsp--;
 
              current =iv_ruleCheckableElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCheckableElement785); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCheckableElement1196); 
 
             }
 
@@ -854,7 +1309,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCheckableElement"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:325:1: ruleCheckableElement returns [EObject current=null] : this_Checkbox_0= ruleCheckbox ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:505:1: ruleCheckableElement returns [EObject current=null] : this_Checkbox_0= ruleCheckbox ;
     public final EObject ruleCheckableElement() throws RecognitionException {
         EObject current = null;
 
@@ -864,13 +1319,13 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:328:28: (this_Checkbox_0= ruleCheckbox )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:330:5: this_Checkbox_0= ruleCheckbox
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:508:28: (this_Checkbox_0= ruleCheckbox )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:510:5: this_Checkbox_0= ruleCheckbox
             {
              
                     newCompositeNode(grammarAccess.getCheckableElementAccess().getCheckboxParserRuleCall()); 
                 
-            pushFollow(FOLLOW_ruleCheckbox_in_ruleCheckableElement831);
+            pushFollow(FOLLOW_ruleCheckbox_in_ruleCheckableElement1242);
             this_Checkbox_0=ruleCheckbox();
 
             state._fsp--;
@@ -897,7 +1352,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleClick"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:346:1: entryRuleClick returns [EObject current=null] : iv_ruleClick= ruleClick EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:526:1: entryRuleClick returns [EObject current=null] : iv_ruleClick= ruleClick EOF ;
     public final EObject entryRuleClick() throws RecognitionException {
         EObject current = null;
 
@@ -905,17 +1360,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:347:2: (iv_ruleClick= ruleClick EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:348:2: iv_ruleClick= ruleClick EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:527:2: (iv_ruleClick= ruleClick EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:528:2: iv_ruleClick= ruleClick EOF
             {
              newCompositeNode(grammarAccess.getClickRule()); 
-            pushFollow(FOLLOW_ruleClick_in_entryRuleClick865);
+            pushFollow(FOLLOW_ruleClick_in_entryRuleClick1276);
             iv_ruleClick=ruleClick();
 
             state._fsp--;
 
              current =iv_ruleClick; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleClick875); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleClick1286); 
 
             }
 
@@ -933,7 +1388,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleClick"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:355:1: ruleClick returns [EObject current=null] : (otherlv_0= 'click(' this_ClickableElement_1= ruleClickableElement otherlv_2= ')' ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:535:1: ruleClick returns [EObject current=null] : (otherlv_0= 'click(' this_ClickableElement_1= ruleClickableElement otherlv_2= ')' ) ;
     public final EObject ruleClick() throws RecognitionException {
         EObject current = null;
 
@@ -945,20 +1400,20 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:358:28: ( (otherlv_0= 'click(' this_ClickableElement_1= ruleClickableElement otherlv_2= ')' ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:359:1: (otherlv_0= 'click(' this_ClickableElement_1= ruleClickableElement otherlv_2= ')' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:538:28: ( (otherlv_0= 'click(' this_ClickableElement_1= ruleClickableElement otherlv_2= ')' ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:539:1: (otherlv_0= 'click(' this_ClickableElement_1= ruleClickableElement otherlv_2= ')' )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:359:1: (otherlv_0= 'click(' this_ClickableElement_1= ruleClickableElement otherlv_2= ')' )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:359:3: otherlv_0= 'click(' this_ClickableElement_1= ruleClickableElement otherlv_2= ')'
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:539:1: (otherlv_0= 'click(' this_ClickableElement_1= ruleClickableElement otherlv_2= ')' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:539:3: otherlv_0= 'click(' this_ClickableElement_1= ruleClickableElement otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,11,FOLLOW_11_in_ruleClick912); 
+            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleClick1323); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getClickAccess().getClickKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getClickAccess().getClickableElementParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleClickableElement_in_ruleClick934);
+            pushFollow(FOLLOW_ruleClickableElement_in_ruleClick1345);
             this_ClickableElement_1=ruleClickableElement();
 
             state._fsp--;
@@ -967,7 +1422,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     current = this_ClickableElement_1; 
                     afterParserOrEnumRuleCall();
                 
-            otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleClick945); 
+            otherlv_2=(Token)match(input,18,FOLLOW_18_in_ruleClick1356); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getClickAccess().getRightParenthesisKeyword_2());
                 
@@ -992,7 +1447,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFill"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:384:1: entryRuleFill returns [EObject current=null] : iv_ruleFill= ruleFill EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:564:1: entryRuleFill returns [EObject current=null] : iv_ruleFill= ruleFill EOF ;
     public final EObject entryRuleFill() throws RecognitionException {
         EObject current = null;
 
@@ -1000,17 +1455,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:385:2: (iv_ruleFill= ruleFill EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:386:2: iv_ruleFill= ruleFill EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:565:2: (iv_ruleFill= ruleFill EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:566:2: iv_ruleFill= ruleFill EOF
             {
              newCompositeNode(grammarAccess.getFillRule()); 
-            pushFollow(FOLLOW_ruleFill_in_entryRuleFill981);
+            pushFollow(FOLLOW_ruleFill_in_entryRuleFill1392);
             iv_ruleFill=ruleFill();
 
             state._fsp--;
 
              current =iv_ruleFill; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFill991); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFill1402); 
 
             }
 
@@ -1028,7 +1483,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFill"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:393:1: ruleFill returns [EObject current=null] : (otherlv_0= 'fill(' this_FillableElement_1= ruleFillableElement otherlv_2= ', value=' this_STRING_3= RULE_STRING otherlv_4= ')' ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:573:1: ruleFill returns [EObject current=null] : (otherlv_0= 'fill(' this_FillableElement_1= ruleFillableElement otherlv_2= ', value=' this_STRING_3= RULE_STRING otherlv_4= ')' ) ;
     public final EObject ruleFill() throws RecognitionException {
         EObject current = null;
 
@@ -1042,20 +1497,20 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:396:28: ( (otherlv_0= 'fill(' this_FillableElement_1= ruleFillableElement otherlv_2= ', value=' this_STRING_3= RULE_STRING otherlv_4= ')' ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:397:1: (otherlv_0= 'fill(' this_FillableElement_1= ruleFillableElement otherlv_2= ', value=' this_STRING_3= RULE_STRING otherlv_4= ')' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:576:28: ( (otherlv_0= 'fill(' this_FillableElement_1= ruleFillableElement otherlv_2= ', value=' this_STRING_3= RULE_STRING otherlv_4= ')' ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:577:1: (otherlv_0= 'fill(' this_FillableElement_1= ruleFillableElement otherlv_2= ', value=' this_STRING_3= RULE_STRING otherlv_4= ')' )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:397:1: (otherlv_0= 'fill(' this_FillableElement_1= ruleFillableElement otherlv_2= ', value=' this_STRING_3= RULE_STRING otherlv_4= ')' )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:397:3: otherlv_0= 'fill(' this_FillableElement_1= ruleFillableElement otherlv_2= ', value=' this_STRING_3= RULE_STRING otherlv_4= ')'
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:577:1: (otherlv_0= 'fill(' this_FillableElement_1= ruleFillableElement otherlv_2= ', value=' this_STRING_3= RULE_STRING otherlv_4= ')' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:577:3: otherlv_0= 'fill(' this_FillableElement_1= ruleFillableElement otherlv_2= ', value=' this_STRING_3= RULE_STRING otherlv_4= ')'
             {
-            otherlv_0=(Token)match(input,13,FOLLOW_13_in_ruleFill1028); 
+            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleFill1439); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFillAccess().getFillKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getFillAccess().getFillableElementParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleFillableElement_in_ruleFill1050);
+            pushFollow(FOLLOW_ruleFillableElement_in_ruleFill1461);
             this_FillableElement_1=ruleFillableElement();
 
             state._fsp--;
@@ -1064,15 +1519,15 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     current = this_FillableElement_1; 
                     afterParserOrEnumRuleCall();
                 
-            otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleFill1061); 
+            otherlv_2=(Token)match(input,20,FOLLOW_20_in_ruleFill1472); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getFillAccess().getValueKeyword_2());
                 
-            this_STRING_3=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFill1072); 
+            this_STRING_3=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFill1483); 
              
                 newLeafNode(this_STRING_3, grammarAccess.getFillAccess().getSTRINGTerminalRuleCall_3()); 
                 
-            otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleFill1083); 
+            otherlv_4=(Token)match(input,18,FOLLOW_18_in_ruleFill1494); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getFillAccess().getRightParenthesisKeyword_4());
                 
@@ -1097,7 +1552,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleClear"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:430:1: entryRuleClear returns [EObject current=null] : iv_ruleClear= ruleClear EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:610:1: entryRuleClear returns [EObject current=null] : iv_ruleClear= ruleClear EOF ;
     public final EObject entryRuleClear() throws RecognitionException {
         EObject current = null;
 
@@ -1105,17 +1560,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:431:2: (iv_ruleClear= ruleClear EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:432:2: iv_ruleClear= ruleClear EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:611:2: (iv_ruleClear= ruleClear EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:612:2: iv_ruleClear= ruleClear EOF
             {
              newCompositeNode(grammarAccess.getClearRule()); 
-            pushFollow(FOLLOW_ruleClear_in_entryRuleClear1119);
+            pushFollow(FOLLOW_ruleClear_in_entryRuleClear1530);
             iv_ruleClear=ruleClear();
 
             state._fsp--;
 
              current =iv_ruleClear; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleClear1129); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleClear1540); 
 
             }
 
@@ -1133,7 +1588,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleClear"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:439:1: ruleClear returns [EObject current=null] : (otherlv_0= 'clear(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')' ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:619:1: ruleClear returns [EObject current=null] : (otherlv_0= 'clear(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')' ) ;
     public final EObject ruleClear() throws RecognitionException {
         EObject current = null;
 
@@ -1147,40 +1602,40 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:442:28: ( (otherlv_0= 'clear(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')' ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:443:1: (otherlv_0= 'clear(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:622:28: ( (otherlv_0= 'clear(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')' ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:623:1: (otherlv_0= 'clear(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')' )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:443:1: (otherlv_0= 'clear(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')' )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:443:3: otherlv_0= 'clear(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')'
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:623:1: (otherlv_0= 'clear(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:623:3: otherlv_0= 'clear(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')'
             {
-            otherlv_0=(Token)match(input,15,FOLLOW_15_in_ruleClear1166); 
+            otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleClear1577); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getClearAccess().getClearKeyword_0());
                 
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:447:1: (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement )
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:627:1: (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement )
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA5_0==22) ) {
-                alt5=1;
+            if ( (LA6_0==31) ) {
+                alt6=1;
             }
-            else if ( (LA5_0==18) ) {
-                alt5=2;
+            else if ( (LA6_0==27) ) {
+                alt6=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:448:5: this_FillableElement_1= ruleFillableElement
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:628:5: this_FillableElement_1= ruleFillableElement
                     {
                      
                             newCompositeNode(grammarAccess.getClearAccess().getFillableElementParserRuleCall_1_0()); 
                         
-                    pushFollow(FOLLOW_ruleFillableElement_in_ruleClear1189);
+                    pushFollow(FOLLOW_ruleFillableElement_in_ruleClear1600);
                     this_FillableElement_1=ruleFillableElement();
 
                     state._fsp--;
@@ -1193,12 +1648,12 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:458:5: this_CheckableElement_2= ruleCheckableElement
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:638:5: this_CheckableElement_2= ruleCheckableElement
                     {
                      
                             newCompositeNode(grammarAccess.getClearAccess().getCheckableElementParserRuleCall_1_1()); 
                         
-                    pushFollow(FOLLOW_ruleCheckableElement_in_ruleClear1216);
+                    pushFollow(FOLLOW_ruleCheckableElement_in_ruleClear1627);
                     this_CheckableElement_2=ruleCheckableElement();
 
                     state._fsp--;
@@ -1213,7 +1668,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FOLLOW_12_in_ruleClear1228); 
+            otherlv_3=(Token)match(input,18,FOLLOW_18_in_ruleClear1639); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getClearAccess().getRightParenthesisKeyword_2());
                 
@@ -1238,7 +1693,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVerify"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:478:1: entryRuleVerify returns [EObject current=null] : iv_ruleVerify= ruleVerify EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:658:1: entryRuleVerify returns [EObject current=null] : iv_ruleVerify= ruleVerify EOF ;
     public final EObject entryRuleVerify() throws RecognitionException {
         EObject current = null;
 
@@ -1246,17 +1701,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:479:2: (iv_ruleVerify= ruleVerify EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:480:2: iv_ruleVerify= ruleVerify EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:659:2: (iv_ruleVerify= ruleVerify EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:660:2: iv_ruleVerify= ruleVerify EOF
             {
              newCompositeNode(grammarAccess.getVerifyRule()); 
-            pushFollow(FOLLOW_ruleVerify_in_entryRuleVerify1264);
+            pushFollow(FOLLOW_ruleVerify_in_entryRuleVerify1675);
             iv_ruleVerify=ruleVerify();
 
             state._fsp--;
 
              current =iv_ruleVerify; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVerify1274); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVerify1685); 
 
             }
 
@@ -1274,12 +1729,14 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVerify"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:487:1: ruleVerify returns [EObject current=null] : (otherlv_0= 'verify(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')' ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:667:1: ruleVerify returns [EObject current=null] : (otherlv_0= 'verify(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ', value=' this_STRING_4= RULE_STRING otherlv_5= ')' ) ;
     public final EObject ruleVerify() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_3=null;
+        Token this_STRING_4=null;
+        Token otherlv_5=null;
         EObject this_FillableElement_1 = null;
 
         EObject this_CheckableElement_2 = null;
@@ -1288,40 +1745,40 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:490:28: ( (otherlv_0= 'verify(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')' ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:491:1: (otherlv_0= 'verify(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:670:28: ( (otherlv_0= 'verify(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ', value=' this_STRING_4= RULE_STRING otherlv_5= ')' ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:671:1: (otherlv_0= 'verify(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ', value=' this_STRING_4= RULE_STRING otherlv_5= ')' )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:491:1: (otherlv_0= 'verify(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')' )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:491:3: otherlv_0= 'verify(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ')'
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:671:1: (otherlv_0= 'verify(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ', value=' this_STRING_4= RULE_STRING otherlv_5= ')' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:671:3: otherlv_0= 'verify(' (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement ) otherlv_3= ', value=' this_STRING_4= RULE_STRING otherlv_5= ')'
             {
-            otherlv_0=(Token)match(input,16,FOLLOW_16_in_ruleVerify1311); 
+            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleVerify1722); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getVerifyAccess().getVerifyKeyword_0());
                 
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:495:1: (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:675:1: (this_FillableElement_1= ruleFillableElement | this_CheckableElement_2= ruleCheckableElement )
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA6_0==22) ) {
-                alt6=1;
+            if ( (LA7_0==31) ) {
+                alt7=1;
             }
-            else if ( (LA6_0==18) ) {
-                alt6=2;
+            else if ( (LA7_0==27) ) {
+                alt7=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:496:5: this_FillableElement_1= ruleFillableElement
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:676:5: this_FillableElement_1= ruleFillableElement
                     {
                      
                             newCompositeNode(grammarAccess.getVerifyAccess().getFillableElementParserRuleCall_1_0()); 
                         
-                    pushFollow(FOLLOW_ruleFillableElement_in_ruleVerify1334);
+                    pushFollow(FOLLOW_ruleFillableElement_in_ruleVerify1745);
                     this_FillableElement_1=ruleFillableElement();
 
                     state._fsp--;
@@ -1334,12 +1791,12 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:506:5: this_CheckableElement_2= ruleCheckableElement
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:686:5: this_CheckableElement_2= ruleCheckableElement
                     {
                      
                             newCompositeNode(grammarAccess.getVerifyAccess().getCheckableElementParserRuleCall_1_1()); 
                         
-                    pushFollow(FOLLOW_ruleCheckableElement_in_ruleVerify1361);
+                    pushFollow(FOLLOW_ruleCheckableElement_in_ruleVerify1772);
                     this_CheckableElement_2=ruleCheckableElement();
 
                     state._fsp--;
@@ -1354,9 +1811,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FOLLOW_12_in_ruleVerify1373); 
+            otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleVerify1784); 
 
-                	newLeafNode(otherlv_3, grammarAccess.getVerifyAccess().getRightParenthesisKeyword_2());
+                	newLeafNode(otherlv_3, grammarAccess.getVerifyAccess().getValueKeyword_2());
+                
+            this_STRING_4=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleVerify1795); 
+             
+                newLeafNode(this_STRING_4, grammarAccess.getVerifyAccess().getSTRINGTerminalRuleCall_3()); 
+                
+            otherlv_5=(Token)match(input,18,FOLLOW_18_in_ruleVerify1806); 
+
+                	newLeafNode(otherlv_5, grammarAccess.getVerifyAccess().getRightParenthesisKeyword_4());
                 
 
             }
@@ -1379,7 +1844,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExist"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:526:1: entryRuleExist returns [EObject current=null] : iv_ruleExist= ruleExist EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:714:1: entryRuleExist returns [EObject current=null] : iv_ruleExist= ruleExist EOF ;
     public final EObject entryRuleExist() throws RecognitionException {
         EObject current = null;
 
@@ -1387,17 +1852,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:527:2: (iv_ruleExist= ruleExist EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:528:2: iv_ruleExist= ruleExist EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:715:2: (iv_ruleExist= ruleExist EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:716:2: iv_ruleExist= ruleExist EOF
             {
              newCompositeNode(grammarAccess.getExistRule()); 
-            pushFollow(FOLLOW_ruleExist_in_entryRuleExist1409);
+            pushFollow(FOLLOW_ruleExist_in_entryRuleExist1842);
             iv_ruleExist=ruleExist();
 
             state._fsp--;
 
              current =iv_ruleExist; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExist1419); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExist1852); 
 
             }
 
@@ -1415,7 +1880,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExist"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:535:1: ruleExist returns [EObject current=null] : (otherlv_0= 'exist(' this_Element_1= ruleElement otherlv_2= ')' ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:723:1: ruleExist returns [EObject current=null] : (otherlv_0= 'exist(' this_Element_1= ruleElement otherlv_2= ')' ) ;
     public final EObject ruleExist() throws RecognitionException {
         EObject current = null;
 
@@ -1427,20 +1892,20 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:538:28: ( (otherlv_0= 'exist(' this_Element_1= ruleElement otherlv_2= ')' ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:539:1: (otherlv_0= 'exist(' this_Element_1= ruleElement otherlv_2= ')' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:726:28: ( (otherlv_0= 'exist(' this_Element_1= ruleElement otherlv_2= ')' ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:727:1: (otherlv_0= 'exist(' this_Element_1= ruleElement otherlv_2= ')' )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:539:1: (otherlv_0= 'exist(' this_Element_1= ruleElement otherlv_2= ')' )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:539:3: otherlv_0= 'exist(' this_Element_1= ruleElement otherlv_2= ')'
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:727:1: (otherlv_0= 'exist(' this_Element_1= ruleElement otherlv_2= ')' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:727:3: otherlv_0= 'exist(' this_Element_1= ruleElement otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleExist1456); 
+            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleExist1889); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getExistAccess().getExistKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getExistAccess().getElementParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleElement_in_ruleExist1478);
+            pushFollow(FOLLOW_ruleElement_in_ruleExist1911);
             this_Element_1=ruleElement();
 
             state._fsp--;
@@ -1449,7 +1914,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
                     current = this_Element_1; 
                     afterParserOrEnumRuleCall();
                 
-            otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleExist1489); 
+            otherlv_2=(Token)match(input,18,FOLLOW_18_in_ruleExist1922); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getExistAccess().getRightParenthesisKeyword_2());
                 
@@ -1474,7 +1939,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGoTo"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:564:1: entryRuleGoTo returns [EObject current=null] : iv_ruleGoTo= ruleGoTo EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:752:1: entryRuleGoTo returns [EObject current=null] : iv_ruleGoTo= ruleGoTo EOF ;
     public final EObject entryRuleGoTo() throws RecognitionException {
         EObject current = null;
 
@@ -1482,17 +1947,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:565:2: (iv_ruleGoTo= ruleGoTo EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:566:2: iv_ruleGoTo= ruleGoTo EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:753:2: (iv_ruleGoTo= ruleGoTo EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:754:2: iv_ruleGoTo= ruleGoTo EOF
             {
              newCompositeNode(grammarAccess.getGoToRule()); 
-            pushFollow(FOLLOW_ruleGoTo_in_entryRuleGoTo1525);
+            pushFollow(FOLLOW_ruleGoTo_in_entryRuleGoTo1958);
             iv_ruleGoTo=ruleGoTo();
 
             state._fsp--;
 
              current =iv_ruleGoTo; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleGoTo1535); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGoTo1968); 
 
             }
 
@@ -1510,31 +1975,79 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGoTo"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:573:1: ruleGoTo returns [EObject current=null] : this_Url_0= ruleUrl ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:761:1: ruleGoTo returns [EObject current=null] : (otherlv_0= 'url=' (this_URL_1= RULE_URL | this_VariableUrl_2= ruleVariableUrl ) ) ;
     public final EObject ruleGoTo() throws RecognitionException {
         EObject current = null;
 
-        EObject this_Url_0 = null;
+        Token otherlv_0=null;
+        Token this_URL_1=null;
+        EObject this_VariableUrl_2 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:576:28: (this_Url_0= ruleUrl )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:578:5: this_Url_0= ruleUrl
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:764:28: ( (otherlv_0= 'url=' (this_URL_1= RULE_URL | this_VariableUrl_2= ruleVariableUrl ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:765:1: (otherlv_0= 'url=' (this_URL_1= RULE_URL | this_VariableUrl_2= ruleVariableUrl ) )
             {
-             
-                    newCompositeNode(grammarAccess.getGoToAccess().getUrlParserRuleCall()); 
-                
-            pushFollow(FOLLOW_ruleUrl_in_ruleGoTo1581);
-            this_Url_0=ruleUrl();
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:765:1: (otherlv_0= 'url=' (this_URL_1= RULE_URL | this_VariableUrl_2= ruleVariableUrl ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:765:3: otherlv_0= 'url=' (this_URL_1= RULE_URL | this_VariableUrl_2= ruleVariableUrl )
+            {
+            otherlv_0=(Token)match(input,24,FOLLOW_24_in_ruleGoTo2005); 
 
-            state._fsp--;
-
-             
-                    current = this_Url_0; 
-                    afterParserOrEnumRuleCall();
+                	newLeafNode(otherlv_0, grammarAccess.getGoToAccess().getUrlKeyword_0());
                 
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:769:1: (this_URL_1= RULE_URL | this_VariableUrl_2= ruleVariableUrl )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
+
+            if ( (LA8_0==RULE_URL) ) {
+                alt8=1;
+            }
+            else if ( (LA8_0==25) ) {
+                alt8=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 8, 0, input);
+
+                throw nvae;
+            }
+            switch (alt8) {
+                case 1 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:769:2: this_URL_1= RULE_URL
+                    {
+                    this_URL_1=(Token)match(input,RULE_URL,FOLLOW_RULE_URL_in_ruleGoTo2017); 
+                     
+                        newLeafNode(this_URL_1, grammarAccess.getGoToAccess().getURLTerminalRuleCall_1_0()); 
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:775:5: this_VariableUrl_2= ruleVariableUrl
+                    {
+                     
+                            newCompositeNode(grammarAccess.getGoToAccess().getVariableUrlParserRuleCall_1_1()); 
+                        
+                    pushFollow(FOLLOW_ruleVariableUrl_in_ruleGoTo2044);
+                    this_VariableUrl_2=ruleVariableUrl();
+
+                    state._fsp--;
+
+                     
+                            current = this_VariableUrl_2; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
 
             }
 
@@ -1552,8 +2065,574 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleGoTo"
 
 
+    // $ANTLR start "entryRuleVariable"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:791:1: entryRuleVariable returns [EObject current=null] : iv_ruleVariable= ruleVariable EOF ;
+    public final EObject entryRuleVariable() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleVariable = null;
+
+
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:792:2: (iv_ruleVariable= ruleVariable EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:793:2: iv_ruleVariable= ruleVariable EOF
+            {
+             newCompositeNode(grammarAccess.getVariableRule()); 
+            pushFollow(FOLLOW_ruleVariable_in_entryRuleVariable2080);
+            iv_ruleVariable=ruleVariable();
+
+            state._fsp--;
+
+             current =iv_ruleVariable; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVariable2090); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleVariable"
+
+
+    // $ANTLR start "ruleVariable"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:800:1: ruleVariable returns [EObject current=null] : (this_VariableList_0= ruleVariableList | this_VariableString_1= ruleVariableString | this_VariableUrl_2= ruleVariableUrl ) ;
+    public final EObject ruleVariable() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_VariableList_0 = null;
+
+        EObject this_VariableString_1 = null;
+
+        EObject this_VariableUrl_2 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:803:28: ( (this_VariableList_0= ruleVariableList | this_VariableString_1= ruleVariableString | this_VariableUrl_2= ruleVariableUrl ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:804:1: (this_VariableList_0= ruleVariableList | this_VariableString_1= ruleVariableString | this_VariableUrl_2= ruleVariableUrl )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:804:1: (this_VariableList_0= ruleVariableList | this_VariableString_1= ruleVariableString | this_VariableUrl_2= ruleVariableUrl )
+            int alt9=3;
+            int LA9_0 = input.LA(1);
+
+            if ( (LA9_0==25) ) {
+                int LA9_1 = input.LA(2);
+
+                if ( (LA9_1==RULE_STRING) ) {
+                    int LA9_2 = input.LA(3);
+
+                    if ( (LA9_2==26) ) {
+                        switch ( input.LA(4) ) {
+                        case RULE_STRING:
+                            {
+                            alt9=2;
+                            }
+                            break;
+                        case 14:
+                            {
+                            alt9=1;
+                            }
+                            break;
+                        case RULE_URL:
+                            {
+                            alt9=3;
+                            }
+                            break;
+                        default:
+                            NoViableAltException nvae =
+                                new NoViableAltException("", 9, 3, input);
+
+                            throw nvae;
+                        }
+
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 9, 2, input);
+
+                        throw nvae;
+                    }
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 9, 1, input);
+
+                    throw nvae;
+                }
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 9, 0, input);
+
+                throw nvae;
+            }
+            switch (alt9) {
+                case 1 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:805:5: this_VariableList_0= ruleVariableList
+                    {
+                     
+                            newCompositeNode(grammarAccess.getVariableAccess().getVariableListParserRuleCall_0()); 
+                        
+                    pushFollow(FOLLOW_ruleVariableList_in_ruleVariable2137);
+                    this_VariableList_0=ruleVariableList();
+
+                    state._fsp--;
+
+                     
+                            current = this_VariableList_0; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:815:5: this_VariableString_1= ruleVariableString
+                    {
+                     
+                            newCompositeNode(grammarAccess.getVariableAccess().getVariableStringParserRuleCall_1()); 
+                        
+                    pushFollow(FOLLOW_ruleVariableString_in_ruleVariable2164);
+                    this_VariableString_1=ruleVariableString();
+
+                    state._fsp--;
+
+                     
+                            current = this_VariableString_1; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+                case 3 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:825:5: this_VariableUrl_2= ruleVariableUrl
+                    {
+                     
+                            newCompositeNode(grammarAccess.getVariableAccess().getVariableUrlParserRuleCall_2()); 
+                        
+                    pushFollow(FOLLOW_ruleVariableUrl_in_ruleVariable2191);
+                    this_VariableUrl_2=ruleVariableUrl();
+
+                    state._fsp--;
+
+                     
+                            current = this_VariableUrl_2; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleVariable"
+
+
+    // $ANTLR start "entryRuleVariableString"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:841:1: entryRuleVariableString returns [EObject current=null] : iv_ruleVariableString= ruleVariableString EOF ;
+    public final EObject entryRuleVariableString() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleVariableString = null;
+
+
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:842:2: (iv_ruleVariableString= ruleVariableString EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:843:2: iv_ruleVariableString= ruleVariableString EOF
+            {
+             newCompositeNode(grammarAccess.getVariableStringRule()); 
+            pushFollow(FOLLOW_ruleVariableString_in_entryRuleVariableString2226);
+            iv_ruleVariableString=ruleVariableString();
+
+            state._fsp--;
+
+             current =iv_ruleVariableString; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVariableString2236); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleVariableString"
+
+
+    // $ANTLR start "ruleVariableString"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:850:1: ruleVariableString returns [EObject current=null] : (otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' this_STRING_3= RULE_STRING otherlv_4= ';' ) ;
+    public final EObject ruleVariableString() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token lv_name_1_0=null;
+        Token otherlv_2=null;
+        Token this_STRING_3=null;
+        Token otherlv_4=null;
+
+         enterRule(); 
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:853:28: ( (otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' this_STRING_3= RULE_STRING otherlv_4= ';' ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:854:1: (otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' this_STRING_3= RULE_STRING otherlv_4= ';' )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:854:1: (otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' this_STRING_3= RULE_STRING otherlv_4= ';' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:854:3: otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' this_STRING_3= RULE_STRING otherlv_4= ';'
+            {
+            otherlv_0=(Token)match(input,25,FOLLOW_25_in_ruleVariableString2273); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getVariableStringAccess().getVarKeyword_0());
+                
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:858:1: ( (lv_name_1_0= RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:859:1: (lv_name_1_0= RULE_STRING )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:859:1: (lv_name_1_0= RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:860:3: lv_name_1_0= RULE_STRING
+            {
+            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleVariableString2290); 
+
+            			newLeafNode(lv_name_1_0, grammarAccess.getVariableStringAccess().getNameSTRINGTerminalRuleCall_1_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getVariableStringRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_1_0, 
+                    		"STRING");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_2=(Token)match(input,26,FOLLOW_26_in_ruleVariableString2307); 
+
+                	newLeafNode(otherlv_2, grammarAccess.getVariableStringAccess().getSpaceEqualsSignSpaceKeyword_2());
+                
+            this_STRING_3=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleVariableString2318); 
+             
+                newLeafNode(this_STRING_3, grammarAccess.getVariableStringAccess().getSTRINGTerminalRuleCall_3()); 
+                
+            otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleVariableString2329); 
+
+                	newLeafNode(otherlv_4, grammarAccess.getVariableStringAccess().getSemicolonKeyword_4());
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleVariableString"
+
+
+    // $ANTLR start "entryRuleVariableUrl"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:896:1: entryRuleVariableUrl returns [EObject current=null] : iv_ruleVariableUrl= ruleVariableUrl EOF ;
+    public final EObject entryRuleVariableUrl() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleVariableUrl = null;
+
+
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:897:2: (iv_ruleVariableUrl= ruleVariableUrl EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:898:2: iv_ruleVariableUrl= ruleVariableUrl EOF
+            {
+             newCompositeNode(grammarAccess.getVariableUrlRule()); 
+            pushFollow(FOLLOW_ruleVariableUrl_in_entryRuleVariableUrl2365);
+            iv_ruleVariableUrl=ruleVariableUrl();
+
+            state._fsp--;
+
+             current =iv_ruleVariableUrl; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVariableUrl2375); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleVariableUrl"
+
+
+    // $ANTLR start "ruleVariableUrl"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:905:1: ruleVariableUrl returns [EObject current=null] : (otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' this_URL_3= RULE_URL otherlv_4= ';' ) ;
+    public final EObject ruleVariableUrl() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token lv_name_1_0=null;
+        Token otherlv_2=null;
+        Token this_URL_3=null;
+        Token otherlv_4=null;
+
+         enterRule(); 
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:908:28: ( (otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' this_URL_3= RULE_URL otherlv_4= ';' ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:909:1: (otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' this_URL_3= RULE_URL otherlv_4= ';' )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:909:1: (otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' this_URL_3= RULE_URL otherlv_4= ';' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:909:3: otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' this_URL_3= RULE_URL otherlv_4= ';'
+            {
+            otherlv_0=(Token)match(input,25,FOLLOW_25_in_ruleVariableUrl2412); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getVariableUrlAccess().getVarKeyword_0());
+                
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:913:1: ( (lv_name_1_0= RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:914:1: (lv_name_1_0= RULE_STRING )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:914:1: (lv_name_1_0= RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:915:3: lv_name_1_0= RULE_STRING
+            {
+            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleVariableUrl2429); 
+
+            			newLeafNode(lv_name_1_0, grammarAccess.getVariableUrlAccess().getNameSTRINGTerminalRuleCall_1_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getVariableUrlRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_1_0, 
+                    		"STRING");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_2=(Token)match(input,26,FOLLOW_26_in_ruleVariableUrl2446); 
+
+                	newLeafNode(otherlv_2, grammarAccess.getVariableUrlAccess().getSpaceEqualsSignSpaceKeyword_2());
+                
+            this_URL_3=(Token)match(input,RULE_URL,FOLLOW_RULE_URL_in_ruleVariableUrl2457); 
+             
+                newLeafNode(this_URL_3, grammarAccess.getVariableUrlAccess().getURLTerminalRuleCall_3()); 
+                
+            otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleVariableUrl2468); 
+
+                	newLeafNode(otherlv_4, grammarAccess.getVariableUrlAccess().getSemicolonKeyword_4());
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleVariableUrl"
+
+
+    // $ANTLR start "entryRuleVariableList"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:951:1: entryRuleVariableList returns [EObject current=null] : iv_ruleVariableList= ruleVariableList EOF ;
+    public final EObject entryRuleVariableList() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleVariableList = null;
+
+
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:952:2: (iv_ruleVariableList= ruleVariableList EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:953:2: iv_ruleVariableList= ruleVariableList EOF
+            {
+             newCompositeNode(grammarAccess.getVariableListRule()); 
+            pushFollow(FOLLOW_ruleVariableList_in_entryRuleVariableList2504);
+            iv_ruleVariableList=ruleVariableList();
+
+            state._fsp--;
+
+             current =iv_ruleVariableList; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVariableList2514); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleVariableList"
+
+
+    // $ANTLR start "ruleVariableList"
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:960:1: ruleVariableList returns [EObject current=null] : (otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' ( (lv_value_3_0= ruleList ) ) otherlv_4= ';' ) ;
+    public final EObject ruleVariableList() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token lv_name_1_0=null;
+        Token otherlv_2=null;
+        Token otherlv_4=null;
+        EObject lv_value_3_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:963:28: ( (otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' ( (lv_value_3_0= ruleList ) ) otherlv_4= ';' ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:964:1: (otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' ( (lv_value_3_0= ruleList ) ) otherlv_4= ';' )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:964:1: (otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' ( (lv_value_3_0= ruleList ) ) otherlv_4= ';' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:964:3: otherlv_0= 'var ' ( (lv_name_1_0= RULE_STRING ) ) otherlv_2= ' = ' ( (lv_value_3_0= ruleList ) ) otherlv_4= ';'
+            {
+            otherlv_0=(Token)match(input,25,FOLLOW_25_in_ruleVariableList2551); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getVariableListAccess().getVarKeyword_0());
+                
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:968:1: ( (lv_name_1_0= RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:969:1: (lv_name_1_0= RULE_STRING )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:969:1: (lv_name_1_0= RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:970:3: lv_name_1_0= RULE_STRING
+            {
+            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleVariableList2568); 
+
+            			newLeafNode(lv_name_1_0, grammarAccess.getVariableListAccess().getNameSTRINGTerminalRuleCall_1_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getVariableListRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_1_0, 
+                    		"STRING");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_2=(Token)match(input,26,FOLLOW_26_in_ruleVariableList2585); 
+
+                	newLeafNode(otherlv_2, grammarAccess.getVariableListAccess().getSpaceEqualsSignSpaceKeyword_2());
+                
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:990:1: ( (lv_value_3_0= ruleList ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:991:1: (lv_value_3_0= ruleList )
+            {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:991:1: (lv_value_3_0= ruleList )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:992:3: lv_value_3_0= ruleList
+            {
+             
+            	        newCompositeNode(grammarAccess.getVariableListAccess().getValueListParserRuleCall_3_0()); 
+            	    
+            pushFollow(FOLLOW_ruleList_in_ruleVariableList2606);
+            lv_value_3_0=ruleList();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getVariableListRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"value",
+                    		lv_value_3_0, 
+                    		"List");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleVariableList2618); 
+
+                	newLeafNode(otherlv_4, grammarAccess.getVariableListAccess().getSemicolonKeyword_4());
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleVariableList"
+
+
     // $ANTLR start "entryRuleCheckbox"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:594:1: entryRuleCheckbox returns [EObject current=null] : iv_ruleCheckbox= ruleCheckbox EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1020:1: entryRuleCheckbox returns [EObject current=null] : iv_ruleCheckbox= ruleCheckbox EOF ;
     public final EObject entryRuleCheckbox() throws RecognitionException {
         EObject current = null;
 
@@ -1561,17 +2640,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:595:2: (iv_ruleCheckbox= ruleCheckbox EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:596:2: iv_ruleCheckbox= ruleCheckbox EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1021:2: (iv_ruleCheckbox= ruleCheckbox EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1022:2: iv_ruleCheckbox= ruleCheckbox EOF
             {
              newCompositeNode(grammarAccess.getCheckboxRule()); 
-            pushFollow(FOLLOW_ruleCheckbox_in_entryRuleCheckbox1615);
+            pushFollow(FOLLOW_ruleCheckbox_in_entryRuleCheckbox2654);
             iv_ruleCheckbox=ruleCheckbox();
 
             state._fsp--;
 
              current =iv_ruleCheckbox; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCheckbox1625); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCheckbox2664); 
 
             }
 
@@ -1589,49 +2668,73 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCheckbox"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:603:1: ruleCheckbox returns [EObject current=null] : (otherlv_0= 'checkbox ' ( (lv_name_1_0= RULE_STRING ) ) ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1029:1: ruleCheckbox returns [EObject current=null] : (otherlv_0= 'checkbox ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) ) ;
     public final EObject ruleCheckbox() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token lv_name_1_0=null;
+        Token this_STRING_1=null;
+        EObject this_Variable_2 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:606:28: ( (otherlv_0= 'checkbox ' ( (lv_name_1_0= RULE_STRING ) ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:607:1: (otherlv_0= 'checkbox ' ( (lv_name_1_0= RULE_STRING ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1032:28: ( (otherlv_0= 'checkbox ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1033:1: (otherlv_0= 'checkbox ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:607:1: (otherlv_0= 'checkbox ' ( (lv_name_1_0= RULE_STRING ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:607:3: otherlv_0= 'checkbox ' ( (lv_name_1_0= RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1033:1: (otherlv_0= 'checkbox ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1033:3: otherlv_0= 'checkbox ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable )
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleCheckbox1662); 
+            otherlv_0=(Token)match(input,27,FOLLOW_27_in_ruleCheckbox2701); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getCheckboxAccess().getCheckboxKeyword_0());
                 
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:611:1: ( (lv_name_1_0= RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:612:1: (lv_name_1_0= RULE_STRING )
-            {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:612:1: (lv_name_1_0= RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:613:3: lv_name_1_0= RULE_STRING
-            {
-            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleCheckbox1679); 
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1037:1: (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable )
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getCheckboxAccess().getNameSTRINGTerminalRuleCall_1_0()); 
-            		
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getCheckboxRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"name",
-                    		lv_name_1_0, 
-                    		"STRING");
-            	    
-
+            if ( (LA10_0==RULE_STRING) ) {
+                alt10=1;
             }
+            else if ( (LA10_0==25) ) {
+                alt10=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 10, 0, input);
 
+                throw nvae;
+            }
+            switch (alt10) {
+                case 1 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1037:2: this_STRING_1= RULE_STRING
+                    {
+                    this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleCheckbox2713); 
+                     
+                        newLeafNode(this_STRING_1, grammarAccess.getCheckboxAccess().getSTRINGTerminalRuleCall_1_0()); 
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1043:5: this_Variable_2= ruleVariable
+                    {
+                     
+                            newCompositeNode(grammarAccess.getCheckboxAccess().getVariableParserRuleCall_1_1()); 
+                        
+                    pushFollow(FOLLOW_ruleVariable_in_ruleCheckbox2740);
+                    this_Variable_2=ruleVariable();
+
+                    state._fsp--;
+
+                     
+                            current = this_Variable_2; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
 
             }
 
@@ -1656,7 +2759,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLink"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:637:1: entryRuleLink returns [EObject current=null] : iv_ruleLink= ruleLink EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1059:1: entryRuleLink returns [EObject current=null] : iv_ruleLink= ruleLink EOF ;
     public final EObject entryRuleLink() throws RecognitionException {
         EObject current = null;
 
@@ -1664,17 +2767,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:638:2: (iv_ruleLink= ruleLink EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:639:2: iv_ruleLink= ruleLink EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1060:2: (iv_ruleLink= ruleLink EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1061:2: iv_ruleLink= ruleLink EOF
             {
              newCompositeNode(grammarAccess.getLinkRule()); 
-            pushFollow(FOLLOW_ruleLink_in_entryRuleLink1720);
+            pushFollow(FOLLOW_ruleLink_in_entryRuleLink2776);
             iv_ruleLink=ruleLink();
 
             state._fsp--;
 
              current =iv_ruleLink; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLink1730); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLink2786); 
 
             }
 
@@ -1692,49 +2795,73 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLink"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:646:1: ruleLink returns [EObject current=null] : (otherlv_0= 'link ' ( (lv_name_1_0= RULE_STRING ) ) ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1068:1: ruleLink returns [EObject current=null] : (otherlv_0= 'link ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) ) ;
     public final EObject ruleLink() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token lv_name_1_0=null;
+        Token this_STRING_1=null;
+        EObject this_Variable_2 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:649:28: ( (otherlv_0= 'link ' ( (lv_name_1_0= RULE_STRING ) ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:650:1: (otherlv_0= 'link ' ( (lv_name_1_0= RULE_STRING ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1071:28: ( (otherlv_0= 'link ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1072:1: (otherlv_0= 'link ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:650:1: (otherlv_0= 'link ' ( (lv_name_1_0= RULE_STRING ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:650:3: otherlv_0= 'link ' ( (lv_name_1_0= RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1072:1: (otherlv_0= 'link ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1072:3: otherlv_0= 'link ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable )
             {
-            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleLink1767); 
+            otherlv_0=(Token)match(input,28,FOLLOW_28_in_ruleLink2823); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getLinkAccess().getLinkKeyword_0());
                 
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:654:1: ( (lv_name_1_0= RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:655:1: (lv_name_1_0= RULE_STRING )
-            {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:655:1: (lv_name_1_0= RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:656:3: lv_name_1_0= RULE_STRING
-            {
-            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLink1784); 
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1076:1: (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable )
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getLinkAccess().getNameSTRINGTerminalRuleCall_1_0()); 
-            		
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getLinkRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"name",
-                    		lv_name_1_0, 
-                    		"STRING");
-            	    
-
+            if ( (LA11_0==RULE_STRING) ) {
+                alt11=1;
             }
+            else if ( (LA11_0==25) ) {
+                alt11=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 11, 0, input);
 
+                throw nvae;
+            }
+            switch (alt11) {
+                case 1 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1076:2: this_STRING_1= RULE_STRING
+                    {
+                    this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLink2835); 
+                     
+                        newLeafNode(this_STRING_1, grammarAccess.getLinkAccess().getSTRINGTerminalRuleCall_1_0()); 
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1082:5: this_Variable_2= ruleVariable
+                    {
+                     
+                            newCompositeNode(grammarAccess.getLinkAccess().getVariableParserRuleCall_1_1()); 
+                        
+                    pushFollow(FOLLOW_ruleVariable_in_ruleLink2862);
+                    this_Variable_2=ruleVariable();
+
+                    state._fsp--;
+
+                     
+                            current = this_Variable_2; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
 
             }
 
@@ -1759,7 +2886,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleButton"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:680:1: entryRuleButton returns [EObject current=null] : iv_ruleButton= ruleButton EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1098:1: entryRuleButton returns [EObject current=null] : iv_ruleButton= ruleButton EOF ;
     public final EObject entryRuleButton() throws RecognitionException {
         EObject current = null;
 
@@ -1767,17 +2894,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:681:2: (iv_ruleButton= ruleButton EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:682:2: iv_ruleButton= ruleButton EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1099:2: (iv_ruleButton= ruleButton EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1100:2: iv_ruleButton= ruleButton EOF
             {
              newCompositeNode(grammarAccess.getButtonRule()); 
-            pushFollow(FOLLOW_ruleButton_in_entryRuleButton1825);
+            pushFollow(FOLLOW_ruleButton_in_entryRuleButton2898);
             iv_ruleButton=ruleButton();
 
             state._fsp--;
 
              current =iv_ruleButton; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleButton1835); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleButton2908); 
 
             }
 
@@ -1795,49 +2922,73 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleButton"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:689:1: ruleButton returns [EObject current=null] : (otherlv_0= 'button ' ( (lv_name_1_0= RULE_STRING ) ) ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1107:1: ruleButton returns [EObject current=null] : (otherlv_0= 'button ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) ) ;
     public final EObject ruleButton() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token lv_name_1_0=null;
+        Token this_STRING_1=null;
+        EObject this_Variable_2 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:692:28: ( (otherlv_0= 'button ' ( (lv_name_1_0= RULE_STRING ) ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:693:1: (otherlv_0= 'button ' ( (lv_name_1_0= RULE_STRING ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1110:28: ( (otherlv_0= 'button ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1111:1: (otherlv_0= 'button ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:693:1: (otherlv_0= 'button ' ( (lv_name_1_0= RULE_STRING ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:693:3: otherlv_0= 'button ' ( (lv_name_1_0= RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1111:1: (otherlv_0= 'button ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1111:3: otherlv_0= 'button ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable )
             {
-            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleButton1872); 
+            otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleButton2945); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getButtonAccess().getButtonKeyword_0());
                 
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:697:1: ( (lv_name_1_0= RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:698:1: (lv_name_1_0= RULE_STRING )
-            {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:698:1: (lv_name_1_0= RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:699:3: lv_name_1_0= RULE_STRING
-            {
-            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleButton1889); 
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1115:1: (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable )
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getButtonAccess().getNameSTRINGTerminalRuleCall_1_0()); 
-            		
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getButtonRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"name",
-                    		lv_name_1_0, 
-                    		"STRING");
-            	    
-
+            if ( (LA12_0==RULE_STRING) ) {
+                alt12=1;
             }
+            else if ( (LA12_0==25) ) {
+                alt12=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 12, 0, input);
 
+                throw nvae;
+            }
+            switch (alt12) {
+                case 1 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1115:2: this_STRING_1= RULE_STRING
+                    {
+                    this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleButton2957); 
+                     
+                        newLeafNode(this_STRING_1, grammarAccess.getButtonAccess().getSTRINGTerminalRuleCall_1_0()); 
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1121:5: this_Variable_2= ruleVariable
+                    {
+                     
+                            newCompositeNode(grammarAccess.getButtonAccess().getVariableParserRuleCall_1_1()); 
+                        
+                    pushFollow(FOLLOW_ruleVariable_in_ruleButton2984);
+                    this_Variable_2=ruleVariable();
+
+                    state._fsp--;
+
+                     
+                            current = this_Variable_2; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
 
             }
 
@@ -1862,7 +3013,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImage"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:723:1: entryRuleImage returns [EObject current=null] : iv_ruleImage= ruleImage EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1137:1: entryRuleImage returns [EObject current=null] : iv_ruleImage= ruleImage EOF ;
     public final EObject entryRuleImage() throws RecognitionException {
         EObject current = null;
 
@@ -1870,17 +3021,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:724:2: (iv_ruleImage= ruleImage EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:725:2: iv_ruleImage= ruleImage EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1138:2: (iv_ruleImage= ruleImage EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1139:2: iv_ruleImage= ruleImage EOF
             {
              newCompositeNode(grammarAccess.getImageRule()); 
-            pushFollow(FOLLOW_ruleImage_in_entryRuleImage1930);
+            pushFollow(FOLLOW_ruleImage_in_entryRuleImage3020);
             iv_ruleImage=ruleImage();
 
             state._fsp--;
 
              current =iv_ruleImage; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleImage1940); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleImage3030); 
 
             }
 
@@ -1898,49 +3049,73 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImage"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:732:1: ruleImage returns [EObject current=null] : (otherlv_0= 'image ' ( (lv_name_1_0= RULE_STRING ) ) ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1146:1: ruleImage returns [EObject current=null] : (otherlv_0= 'image ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) ) ;
     public final EObject ruleImage() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token lv_name_1_0=null;
+        Token this_STRING_1=null;
+        EObject this_Variable_2 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:735:28: ( (otherlv_0= 'image ' ( (lv_name_1_0= RULE_STRING ) ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:736:1: (otherlv_0= 'image ' ( (lv_name_1_0= RULE_STRING ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1149:28: ( (otherlv_0= 'image ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1150:1: (otherlv_0= 'image ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:736:1: (otherlv_0= 'image ' ( (lv_name_1_0= RULE_STRING ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:736:3: otherlv_0= 'image ' ( (lv_name_1_0= RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1150:1: (otherlv_0= 'image ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1150:3: otherlv_0= 'image ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable )
             {
-            otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleImage1977); 
+            otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleImage3067); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getImageAccess().getImageKeyword_0());
                 
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:740:1: ( (lv_name_1_0= RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:741:1: (lv_name_1_0= RULE_STRING )
-            {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:741:1: (lv_name_1_0= RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:742:3: lv_name_1_0= RULE_STRING
-            {
-            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleImage1994); 
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1154:1: (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable )
+            int alt13=2;
+            int LA13_0 = input.LA(1);
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getImageAccess().getNameSTRINGTerminalRuleCall_1_0()); 
-            		
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getImageRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"name",
-                    		lv_name_1_0, 
-                    		"STRING");
-            	    
-
+            if ( (LA13_0==RULE_STRING) ) {
+                alt13=1;
             }
+            else if ( (LA13_0==25) ) {
+                alt13=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 13, 0, input);
 
+                throw nvae;
+            }
+            switch (alt13) {
+                case 1 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1154:2: this_STRING_1= RULE_STRING
+                    {
+                    this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleImage3079); 
+                     
+                        newLeafNode(this_STRING_1, grammarAccess.getImageAccess().getSTRINGTerminalRuleCall_1_0()); 
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1160:5: this_Variable_2= ruleVariable
+                    {
+                     
+                            newCompositeNode(grammarAccess.getImageAccess().getVariableParserRuleCall_1_1()); 
+                        
+                    pushFollow(FOLLOW_ruleVariable_in_ruleImage3106);
+                    this_Variable_2=ruleVariable();
+
+                    state._fsp--;
+
+                     
+                            current = this_Variable_2; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
 
             }
 
@@ -1965,7 +3140,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTextField"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:766:1: entryRuleTextField returns [EObject current=null] : iv_ruleTextField= ruleTextField EOF ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1176:1: entryRuleTextField returns [EObject current=null] : iv_ruleTextField= ruleTextField EOF ;
     public final EObject entryRuleTextField() throws RecognitionException {
         EObject current = null;
 
@@ -1973,17 +3148,17 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:767:2: (iv_ruleTextField= ruleTextField EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:768:2: iv_ruleTextField= ruleTextField EOF
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1177:2: (iv_ruleTextField= ruleTextField EOF )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1178:2: iv_ruleTextField= ruleTextField EOF
             {
              newCompositeNode(grammarAccess.getTextFieldRule()); 
-            pushFollow(FOLLOW_ruleTextField_in_entryRuleTextField2035);
+            pushFollow(FOLLOW_ruleTextField_in_entryRuleTextField3142);
             iv_ruleTextField=ruleTextField();
 
             state._fsp--;
 
              current =iv_ruleTextField; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTextField2045); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTextField3152); 
 
             }
 
@@ -2001,49 +3176,73 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTextField"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:775:1: ruleTextField returns [EObject current=null] : (otherlv_0= 'textField ' ( (lv_name_1_0= RULE_STRING ) ) ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1185:1: ruleTextField returns [EObject current=null] : (otherlv_0= 'textField ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) ) ;
     public final EObject ruleTextField() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token lv_name_1_0=null;
+        Token this_STRING_1=null;
+        EObject this_Variable_2 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:778:28: ( (otherlv_0= 'textField ' ( (lv_name_1_0= RULE_STRING ) ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:779:1: (otherlv_0= 'textField ' ( (lv_name_1_0= RULE_STRING ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1188:28: ( (otherlv_0= 'textField ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1189:1: (otherlv_0= 'textField ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:779:1: (otherlv_0= 'textField ' ( (lv_name_1_0= RULE_STRING ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:779:3: otherlv_0= 'textField ' ( (lv_name_1_0= RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1189:1: (otherlv_0= 'textField ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1189:3: otherlv_0= 'textField ' (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable )
             {
-            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleTextField2082); 
+            otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleTextField3189); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getTextFieldAccess().getTextFieldKeyword_0());
                 
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:783:1: ( (lv_name_1_0= RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:784:1: (lv_name_1_0= RULE_STRING )
-            {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:784:1: (lv_name_1_0= RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:785:3: lv_name_1_0= RULE_STRING
-            {
-            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTextField2099); 
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1193:1: (this_STRING_1= RULE_STRING | this_Variable_2= ruleVariable )
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getTextFieldAccess().getNameSTRINGTerminalRuleCall_1_0()); 
-            		
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getTextFieldRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"name",
-                    		lv_name_1_0, 
-                    		"STRING");
-            	    
-
+            if ( (LA14_0==RULE_STRING) ) {
+                alt14=1;
             }
+            else if ( (LA14_0==25) ) {
+                alt14=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 14, 0, input);
 
+                throw nvae;
+            }
+            switch (alt14) {
+                case 1 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1193:2: this_STRING_1= RULE_STRING
+                    {
+                    this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTextField3201); 
+                     
+                        newLeafNode(this_STRING_1, grammarAccess.getTextFieldAccess().getSTRINGTerminalRuleCall_1_0()); 
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:1199:5: this_Variable_2= ruleVariable
+                    {
+                     
+                            newCompositeNode(grammarAccess.getTextFieldAccess().getVariableParserRuleCall_1_1()); 
+                        
+                    pushFollow(FOLLOW_ruleVariable_in_ruleTextField3228);
+                    this_Variable_2=ruleVariable();
+
+                    state._fsp--;
+
+                     
+                            current = this_Variable_2; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
 
             }
 
@@ -2066,109 +3265,6 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end "ruleTextField"
 
-
-    // $ANTLR start "entryRuleUrl"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:809:1: entryRuleUrl returns [EObject current=null] : iv_ruleUrl= ruleUrl EOF ;
-    public final EObject entryRuleUrl() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleUrl = null;
-
-
-        try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:810:2: (iv_ruleUrl= ruleUrl EOF )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:811:2: iv_ruleUrl= ruleUrl EOF
-            {
-             newCompositeNode(grammarAccess.getUrlRule()); 
-            pushFollow(FOLLOW_ruleUrl_in_entryRuleUrl2140);
-            iv_ruleUrl=ruleUrl();
-
-            state._fsp--;
-
-             current =iv_ruleUrl; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUrl2150); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleUrl"
-
-
-    // $ANTLR start "ruleUrl"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:818:1: ruleUrl returns [EObject current=null] : (otherlv_0= 'url ' ( (lv_name_1_0= RULE_STRING ) ) ) ;
-    public final EObject ruleUrl() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_0=null;
-        Token lv_name_1_0=null;
-
-         enterRule(); 
-            
-        try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:821:28: ( (otherlv_0= 'url ' ( (lv_name_1_0= RULE_STRING ) ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:822:1: (otherlv_0= 'url ' ( (lv_name_1_0= RULE_STRING ) ) )
-            {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:822:1: (otherlv_0= 'url ' ( (lv_name_1_0= RULE_STRING ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:822:3: otherlv_0= 'url ' ( (lv_name_1_0= RULE_STRING ) )
-            {
-            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleUrl2187); 
-
-                	newLeafNode(otherlv_0, grammarAccess.getUrlAccess().getUrlKeyword_0());
-                
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:826:1: ( (lv_name_1_0= RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:827:1: (lv_name_1_0= RULE_STRING )
-            {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:827:1: (lv_name_1_0= RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:828:3: lv_name_1_0= RULE_STRING
-            {
-            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleUrl2204); 
-
-            			newLeafNode(lv_name_1_0, grammarAccess.getUrlAccess().getNameSTRINGTerminalRuleCall_1_0()); 
-            		
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getUrlRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"name",
-                    		lv_name_1_0, 
-                    		"STRING");
-            	    
-
-            }
-
-
-            }
-
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleUrl"
-
     // Delegated rules
 
 
@@ -2176,86 +3272,134 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleModel_in_entryRuleModel75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAction_in_ruleModel130 = new BitSet(new long[]{0x000000000083A802L});
-    public static final BitSet FOLLOW_ruleAction_in_entryRuleAction166 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAction176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClick_in_ruleAction223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFill_in_ruleAction250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClear_in_ruleAction277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVerify_in_ruleAction304 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExist_in_ruleAction331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGoTo_in_ruleAction358 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleElement_in_entryRuleElement393 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleElement403 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClickableElement_in_ruleElement450 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFillableElement_in_ruleElement477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCheckableElement_in_ruleElement504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClickableElement_in_entryRuleClickableElement539 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleClickableElement549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLink_in_ruleClickableElement596 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleButton_in_ruleClickableElement623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImage_in_ruleClickableElement650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFillableElement_in_entryRuleFillableElement685 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFillableElement695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextField_in_ruleFillableElement741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCheckableElement_in_entryRuleCheckableElement775 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCheckableElement785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCheckbox_in_ruleCheckableElement831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClick_in_entryRuleClick865 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleClick875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_ruleClick912 = new BitSet(new long[]{0x0000000000380000L});
-    public static final BitSet FOLLOW_ruleClickableElement_in_ruleClick934 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleClick945 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFill_in_entryRuleFill981 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFill991 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleFill1028 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_ruleFillableElement_in_ruleFill1050 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleFill1061 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleFill1072 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleFill1083 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClear_in_entryRuleClear1119 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleClear1129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleClear1166 = new BitSet(new long[]{0x0000000000440000L});
-    public static final BitSet FOLLOW_ruleFillableElement_in_ruleClear1189 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_ruleCheckableElement_in_ruleClear1216 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleClear1228 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVerify_in_entryRuleVerify1264 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVerify1274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_ruleVerify1311 = new BitSet(new long[]{0x0000000000440000L});
-    public static final BitSet FOLLOW_ruleFillableElement_in_ruleVerify1334 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_ruleCheckableElement_in_ruleVerify1361 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleVerify1373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExist_in_entryRuleExist1409 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExist1419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleExist1456 = new BitSet(new long[]{0x00000000007C0000L});
-    public static final BitSet FOLLOW_ruleElement_in_ruleExist1478 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleExist1489 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGoTo_in_entryRuleGoTo1525 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleGoTo1535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUrl_in_ruleGoTo1581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCheckbox_in_entryRuleCheckbox1615 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCheckbox1625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleCheckbox1662 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleCheckbox1679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLink_in_entryRuleLink1720 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLink1730 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleLink1767 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleLink1784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleButton_in_entryRuleButton1825 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleButton1835 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleButton1872 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleButton1889 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImage_in_entryRuleImage1930 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleImage1940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_ruleImage1977 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleImage1994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTextField_in_entryRuleTextField2035 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTextField2045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleTextField2082 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleTextField2099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUrl_in_entryRuleUrl2140 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUrl2150 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleUrl2187 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleUrl2204 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMain_in_ruleModel131 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleModel143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMain_in_entryRuleMain181 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMain191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAction_in_ruleMain237 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_13_in_ruleMain250 = new BitSet(new long[]{0x0000000001EA0010L});
+    public static final BitSet FOLLOW_ruleAction_in_ruleMain271 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_ruleAction_in_entryRuleAction309 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAction319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClick_in_ruleAction366 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFill_in_ruleAction393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClear_in_ruleAction420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVerify_in_ruleAction447 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExist_in_ruleAction474 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGoTo_in_ruleAction501 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSubRoutineCall_in_ruleAction528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSubRoutineCall_in_entryRuleSubRoutineCall563 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSubRoutineCall573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSubRoutineCall617 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleList_in_entryRuleList652 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleList662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleList699 = new BitSet(new long[]{0x00000000F8000000L});
+    public static final BitSet FOLLOW_ruleElement_in_ruleList720 = new BitSet(new long[]{0x0000000000018000L});
+    public static final BitSet FOLLOW_15_in_ruleList733 = new BitSet(new long[]{0x00000000F8000000L});
+    public static final BitSet FOLLOW_ruleElement_in_ruleList754 = new BitSet(new long[]{0x0000000000018000L});
+    public static final BitSet FOLLOW_16_in_ruleList768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleElement_in_entryRuleElement804 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleElement814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClickableElement_in_ruleElement861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFillableElement_in_ruleElement888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCheckableElement_in_ruleElement915 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClickableElement_in_entryRuleClickableElement950 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleClickableElement960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLink_in_ruleClickableElement1007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleButton_in_ruleClickableElement1034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImage_in_ruleClickableElement1061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFillableElement_in_entryRuleFillableElement1096 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFillableElement1106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextField_in_ruleFillableElement1152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCheckableElement_in_entryRuleCheckableElement1186 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCheckableElement1196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCheckbox_in_ruleCheckableElement1242 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClick_in_entryRuleClick1276 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleClick1286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleClick1323 = new BitSet(new long[]{0x0000000070000000L});
+    public static final BitSet FOLLOW_ruleClickableElement_in_ruleClick1345 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleClick1356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFill_in_entryRuleFill1392 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFill1402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleFill1439 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_ruleFillableElement_in_ruleFill1461 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleFill1472 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleFill1483 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleFill1494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClear_in_entryRuleClear1530 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleClear1540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_ruleClear1577 = new BitSet(new long[]{0x00000000F8000000L});
+    public static final BitSet FOLLOW_ruleFillableElement_in_ruleClear1600 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_ruleCheckableElement_in_ruleClear1627 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleClear1639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVerify_in_entryRuleVerify1675 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVerify1685 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleVerify1722 = new BitSet(new long[]{0x00000000F8000000L});
+    public static final BitSet FOLLOW_ruleFillableElement_in_ruleVerify1745 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_ruleCheckableElement_in_ruleVerify1772 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleVerify1784 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleVerify1795 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleVerify1806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExist_in_entryRuleExist1842 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExist1852 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleExist1889 = new BitSet(new long[]{0x00000000F8000000L});
+    public static final BitSet FOLLOW_ruleElement_in_ruleExist1911 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_ruleExist1922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGoTo_in_entryRuleGoTo1958 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGoTo1968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleGoTo2005 = new BitSet(new long[]{0x0000000002000040L});
+    public static final BitSet FOLLOW_RULE_URL_in_ruleGoTo2017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableUrl_in_ruleGoTo2044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_entryRuleVariable2080 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVariable2090 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableList_in_ruleVariable2137 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableString_in_ruleVariable2164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableUrl_in_ruleVariable2191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableString_in_entryRuleVariableString2226 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVariableString2236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleVariableString2273 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleVariableString2290 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_ruleVariableString2307 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleVariableString2318 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleVariableString2329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableUrl_in_entryRuleVariableUrl2365 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVariableUrl2375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleVariableUrl2412 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleVariableUrl2429 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_ruleVariableUrl2446 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_URL_in_ruleVariableUrl2457 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleVariableUrl2468 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableList_in_entryRuleVariableList2504 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVariableList2514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleVariableList2551 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleVariableList2568 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_ruleVariableList2585 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_ruleList_in_ruleVariableList2606 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_12_in_ruleVariableList2618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCheckbox_in_entryRuleCheckbox2654 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCheckbox2664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleCheckbox2701 = new BitSet(new long[]{0x0000000002000060L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleCheckbox2713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleCheckbox2740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLink_in_entryRuleLink2776 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLink2786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_ruleLink2823 = new BitSet(new long[]{0x0000000002000060L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleLink2835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleLink2862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleButton_in_entryRuleButton2898 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleButton2908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleButton2945 = new BitSet(new long[]{0x0000000002000060L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleButton2957 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleButton2984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImage_in_entryRuleImage3020 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleImage3030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleImage3067 = new BitSet(new long[]{0x0000000002000060L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleImage3079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleImage3106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTextField_in_entryRuleTextField3142 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTextField3152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleTextField3189 = new BitSet(new long[]{0x0000000002000060L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleTextField3201 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleTextField3228 = new BitSet(new long[]{0x0000000000000002L});
 
 }

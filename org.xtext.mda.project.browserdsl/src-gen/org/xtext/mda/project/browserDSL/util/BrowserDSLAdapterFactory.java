@@ -80,9 +80,29 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
+      public Adapter caseSubRoutine(SubRoutine object)
+      {
+        return createSubRoutineAdapter();
+      }
+      @Override
+      public Adapter caseMain(Main object)
+      {
+        return createMainAdapter();
+      }
+      @Override
       public Adapter caseAction(Action object)
       {
         return createActionAdapter();
+      }
+      @Override
+      public Adapter caseSubRoutineCall(SubRoutineCall object)
+      {
+        return createSubRoutineCallAdapter();
+      }
+      @Override
+      public Adapter caseList(List object)
+      {
+        return createListAdapter();
       }
       @Override
       public Adapter caseElement(Element object)
@@ -135,6 +155,26 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
         return createGoToAdapter();
       }
       @Override
+      public Adapter caseVariable(Variable object)
+      {
+        return createVariableAdapter();
+      }
+      @Override
+      public Adapter caseVariableString(VariableString object)
+      {
+        return createVariableStringAdapter();
+      }
+      @Override
+      public Adapter caseVariableUrl(VariableUrl object)
+      {
+        return createVariableUrlAdapter();
+      }
+      @Override
+      public Adapter caseVariableList(VariableList object)
+      {
+        return createVariableListAdapter();
+      }
+      @Override
       public Adapter caseCheckbox(Checkbox object)
       {
         return createCheckboxAdapter();
@@ -158,11 +198,6 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseTextField(TextField object)
       {
         return createTextFieldAdapter();
-      }
-      @Override
-      public Adapter caseUrl(Url object)
-      {
-        return createUrlAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -202,6 +237,36 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.SubRoutine <em>Sub Routine</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.SubRoutine
+   * @generated
+   */
+  public Adapter createSubRoutineAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.Main <em>Main</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.Main
+   * @generated
+   */
+  public Adapter createMainAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.Action <em>Action</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -212,6 +277,36 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.SubRoutineCall <em>Sub Routine Call</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.SubRoutineCall
+   * @generated
+   */
+  public Adapter createSubRoutineCallAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.List <em>List</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.List
+   * @generated
+   */
+  public Adapter createListAdapter()
   {
     return null;
   }
@@ -367,6 +462,66 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.Variable <em>Variable</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.Variable
+   * @generated
+   */
+  public Adapter createVariableAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.VariableString <em>Variable String</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.VariableString
+   * @generated
+   */
+  public Adapter createVariableStringAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.VariableUrl <em>Variable Url</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.VariableUrl
+   * @generated
+   */
+  public Adapter createVariableUrlAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.VariableList <em>Variable List</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.VariableList
+   * @generated
+   */
+  public Adapter createVariableListAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.Checkbox <em>Checkbox</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -437,21 +592,6 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTextFieldAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.Url <em>Url</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.mda.project.browserDSL.Url
-   * @generated
-   */
-  public Adapter createUrlAdapter()
   {
     return null;
   }

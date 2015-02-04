@@ -32,6 +32,24 @@ public interface BrowserDSLFactory extends EFactory
   Model createModel();
 
   /**
+   * Returns a new object of class '<em>Sub Routine</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sub Routine</em>'.
+   * @generated
+   */
+  SubRoutine createSubRoutine();
+
+  /**
+   * Returns a new object of class '<em>Main</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Main</em>'.
+   * @generated
+   */
+  Main createMain();
+
+  /**
    * Returns a new object of class '<em>Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -39,6 +57,24 @@ public interface BrowserDSLFactory extends EFactory
    * @generated
    */
   Action createAction();
+
+  /**
+   * Returns a new object of class '<em>Sub Routine Call</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sub Routine Call</em>'.
+   * @generated
+   */
+  SubRoutineCall createSubRoutineCall();
+
+  /**
+   * Returns a new object of class '<em>List</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List</em>'.
+   * @generated
+   */
+  List createList();
 
   /**
    * Returns a new object of class '<em>Element</em>'.
@@ -131,6 +167,42 @@ public interface BrowserDSLFactory extends EFactory
   GoTo createGoTo();
 
   /**
+   * Returns a new object of class '<em>Variable</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Variable</em>'.
+   * @generated
+   */
+  Variable createVariable();
+
+  /**
+   * Returns a new object of class '<em>Variable String</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Variable String</em>'.
+   * @generated
+   */
+  VariableString createVariableString();
+
+  /**
+   * Returns a new object of class '<em>Variable Url</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Variable Url</em>'.
+   * @generated
+   */
+  VariableUrl createVariableUrl();
+
+  /**
+   * Returns a new object of class '<em>Variable List</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Variable List</em>'.
+   * @generated
+   */
+  VariableList createVariableList();
+
+  /**
    * Returns a new object of class '<em>Checkbox</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -174,15 +246,6 @@ public interface BrowserDSLFactory extends EFactory
    * @generated
    */
   TextField createTextField();
-
-  /**
-   * Returns a new object of class '<em>Url</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Url</em>'.
-   * @generated
-   */
-  Url createUrl();
 
   /**
    * Returns the package supported by this factory.

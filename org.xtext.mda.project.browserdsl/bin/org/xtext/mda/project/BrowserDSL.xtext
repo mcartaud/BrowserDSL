@@ -3,12 +3,34 @@ grammar org.xtext.mda.project.BrowserDSL with org.eclipse.xtext.common.Terminals
 generate browserDSL "http://www.xtext.org/mda/project/BrowserDSL"
 
 Model:
-	actions+=Action*;
-	
-Action:
-	(Click | Fill | Clear | Verify | Exist | GoTo)
+//	variables+=Variable (';' variables+=Variable)* ';' 
+//	subroutines+=SubRoutine (';' subroutines+=SubRoutine)* ';'
+	main=Main ';'
+;
+
+SubRoutine:
+	'sub ' name=STRING
+	'(' (STRING ', ')* STRING ') {'
+		action+=Action (',' action+=Action)*
+	'}'
 ;
 	
+Main:
+	actions+=Action (',' action+=Action)*
+;	
+	
+Action:
+	(Click | Fill | Clear | Verify | Exist | GoTo | SubRoutineCall)
+;
+	
+SubRoutineCall :
+	id=[SubRoutine]
+;
+
+List:
+	'['element+=Element (', ' element+=Element)* ']'
+;
+
 Element:
 	ClickableElement | FillableElement | CheckableElement
 ;
@@ -38,7 +60,7 @@ Clear:
 ;
 
 Verify:
-	'verify(' (FillableElement | CheckableElement) ')'
+	'verify(' (FillableElement | CheckableElement) ', value=' STRING ')'
 ;
 
 Exist:
@@ -46,29 +68,164 @@ Exist:
 ;
 
 GoTo:
-	Url
+	'url=' (URL | VariableUrl)
+;
+
+Variable:
+	VariableList | VariableString | VariableUrl
+;
+
+VariableString:
+	'var ' name=STRING
+	' = ' STRING ';'
+;
+
+VariableUrl:
+	'var ' name=STRING
+	' = ' URL ';'
+;
+
+VariableList:
+	'var ' name=STRING
+	' = ' value=List ';'
 ;
 
 Checkbox:
-	'checkbox ' name=STRING
+	'checkbox ' (STRING | Variable)
 ;
 
 Link:
-	'link ' name=STRING
+	'link ' (STRING | Variable)
 ;
 
 Button:
-	'button ' name=STRING
+	'button ' (STRING | Variable)
 ;
 
 Image:
-	'image ' name=STRING
+	'image ' (STRING | Variable)
 ;
 
 TextField:
-	'textField ' name=STRING
+	'textField ' (STRING | Variable)
 ;
 
-Url:
-	'url ' name=STRING
-;
+terminal URL:
+    ('a'..'z')+ '://' // Protocol
+ 
+    ( // Hostname
+        (
+            ('0'..'9')+ '.' ('0'..'9')+ '.' ('0'..'9')+ '.' ('0'..'9')+
+        ) |
+        (
+            ('a'..'z'|'A'..'Z')
+            (
+                'a'..'z'|'A'..'Z'|
+                '0'..'9'|
+                '$'|
+                '-'|
+                '_'|
+                (
+                    '\\'
+                    ('0'..'9'|'a'..'f'|'A'..'F')
+                    ('0'..'9'|'a'..'f'|'A'..'F')
+                ) |
+                (
+                    '%'
+                    ('0'..'9')
+                    ('0'..'9')
+                )
+            )*
+            (
+                '.'
+                ('a'..'z'|'A'..'Z')
+                (
+                    'a'..'z'|'A'..'Z'|
+                    '0'..'9'|
+                    '$'|
+                    '-'|
+                    '_'|
+                    (
+                        '\\'
+                        ('0'..'9'|'a'..'f'|'A'..'F')
+                        ('0'..'9'|'a'..'f'|'A'..'F')
+                    ) |
+                    (
+                        '%'
+                        ('0'..'9')
+                        ('0'..'9')
+                    )
+                )*
+            )*
+        )
+    )
+    (':' ('0'..'9')+)? // Portnumber
+ 
+    ('/'
+        (
+            'a'..'z'|'A'..'Z'|
+            '0'..'9'|
+            '$'|
+            '-'|
+            '_'|
+            '~'|
+            '+'|
+            '.'|
+            (
+                '\\'
+                ('0'..'9'|'a'..'f'|'A'..'F')
+                ('0'..'9'|'a'..'f'|'A'..'F')
+            ) |
+            (
+                '%'
+                ('0'..'9')
+                ('0'..'9')
+            )
+        )*
+    )* // Path
+ 
+    ('?'
+        (
+            'a'..'z'|'A'..'Z'|
+            '0'..'9'|
+            '$'|
+            '-'|
+            '_'|
+            '='|
+            '&'|
+            ';'|
+            (
+                '\\'
+                ('0'..'9'|'a'..'f'|'A'..'F')
+                ('0'..'9'|'a'..'f'|'A'..'F')
+            ) |
+            (
+                '%'
+                ('0'..'9')
+                ('0'..'9')
+            )
+        )+
+ 
+        ('+'
+            (
+                'a'..'z'|'A'..'Z'|
+                '0'..'9'|
+                '$'|
+                '-'|
+                '_'|
+                '='|
+                '&'|
+                ';'|
+                (
+                    '\\'
+                    ('0'..'9'|'a'..'f'|'A'..'F')
+                    ('0'..'9'|'a'..'f'|'A'..'F')
+                ) |
+                (
+                    '%'
+                    ('0'..'9')
+                    ('0'..'9')
+                )
+            )+
+        )*
+    )?; // Query

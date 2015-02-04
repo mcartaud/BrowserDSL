@@ -3,14 +3,29 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="browserDSL" nsURI="http://www.xtext.org/mda/project/BrowserDSL"
     nsPrefix="browserDSL">
   <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="main" eType="#//Main" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubRoutine">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" upperBound="-1"
+        eType="#//Action" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Main">
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
+        eType="#//Action" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" upperBound="-1"
         eType="#//Action" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Action"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Element" eSuperTypes="#//Exist"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ClickableElement" eSuperTypes="#//Element #//Click">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubRoutineCall" eSuperTypes="#//Action">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="id" eType="#//SubRoutine"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="List">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" upperBound="-1"
+        eType="#//Element" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element" eSuperTypes="#//Exist"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClickableElement" eSuperTypes="#//Element #//Click"/>
   <eClassifiers xsi:type="ecore:EClass" name="FillableElement" eSuperTypes="#//Element #//Fill #//Clear #//Verify"/>
   <eClassifiers xsi:type="ecore:EClass" name="CheckableElement" eSuperTypes="#//Element #//Clear #//Verify"/>
   <eClassifiers xsi:type="ecore:EClass" name="Click" eSuperTypes="#//Action"/>
@@ -19,16 +34,18 @@
   <eClassifiers xsi:type="ecore:EClass" name="Verify" eSuperTypes="#//Action"/>
   <eClassifiers xsi:type="ecore:EClass" name="Exist" eSuperTypes="#//Action"/>
   <eClassifiers xsi:type="ecore:EClass" name="GoTo" eSuperTypes="#//Action"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Checkbox" eSuperTypes="#//CheckableElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Checkbox #//Link #//Button #//Image #//TextField">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableString" eSuperTypes="#//Variable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableUrl" eSuperTypes="#//GoTo #//Variable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableList" eSuperTypes="#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//List"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Checkbox" eSuperTypes="#//CheckableElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//ClickableElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//ClickableElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//ClickableElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TextField" eSuperTypes="#//FillableElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Url" eSuperTypes="#//GoTo">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TextField" eSuperTypes="#//FillableElement"/>
 </ecore:EPackage>

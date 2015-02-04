@@ -79,10 +79,39 @@ public class BrowserDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BrowserDSLPackage.SUB_ROUTINE:
+      {
+        SubRoutine subRoutine = (SubRoutine)theEObject;
+        T result = caseSubRoutine(subRoutine);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserDSLPackage.MAIN:
+      {
+        Main main = (Main)theEObject;
+        T result = caseMain(main);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BrowserDSLPackage.ACTION:
       {
         Action action = (Action)theEObject;
         T result = caseAction(action);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserDSLPackage.SUB_ROUTINE_CALL:
+      {
+        SubRoutineCall subRoutineCall = (SubRoutineCall)theEObject;
+        T result = caseSubRoutineCall(subRoutineCall);
+        if (result == null) result = caseAction(subRoutineCall);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserDSLPackage.LIST:
+      {
+        List list = (List)theEObject;
+        T result = caseList(list);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -179,6 +208,98 @@ public class BrowserDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BrowserDSLPackage.VARIABLE:
+      {
+        Variable variable = (Variable)theEObject;
+        T result = caseVariable(variable);
+        if (result == null) result = caseCheckbox(variable);
+        if (result == null) result = caseLink(variable);
+        if (result == null) result = caseButton(variable);
+        if (result == null) result = caseImage(variable);
+        if (result == null) result = caseTextField(variable);
+        if (result == null) result = caseCheckableElement(variable);
+        if (result == null) result = caseClickableElement(variable);
+        if (result == null) result = caseFillableElement(variable);
+        if (result == null) result = caseElement(variable);
+        if (result == null) result = caseClear(variable);
+        if (result == null) result = caseVerify(variable);
+        if (result == null) result = caseClick(variable);
+        if (result == null) result = caseFill(variable);
+        if (result == null) result = caseExist(variable);
+        if (result == null) result = caseAction(variable);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserDSLPackage.VARIABLE_STRING:
+      {
+        VariableString variableString = (VariableString)theEObject;
+        T result = caseVariableString(variableString);
+        if (result == null) result = caseVariable(variableString);
+        if (result == null) result = caseCheckbox(variableString);
+        if (result == null) result = caseLink(variableString);
+        if (result == null) result = caseButton(variableString);
+        if (result == null) result = caseImage(variableString);
+        if (result == null) result = caseTextField(variableString);
+        if (result == null) result = caseCheckableElement(variableString);
+        if (result == null) result = caseClickableElement(variableString);
+        if (result == null) result = caseFillableElement(variableString);
+        if (result == null) result = caseElement(variableString);
+        if (result == null) result = caseClear(variableString);
+        if (result == null) result = caseVerify(variableString);
+        if (result == null) result = caseClick(variableString);
+        if (result == null) result = caseFill(variableString);
+        if (result == null) result = caseExist(variableString);
+        if (result == null) result = caseAction(variableString);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserDSLPackage.VARIABLE_URL:
+      {
+        VariableUrl variableUrl = (VariableUrl)theEObject;
+        T result = caseVariableUrl(variableUrl);
+        if (result == null) result = caseGoTo(variableUrl);
+        if (result == null) result = caseVariable(variableUrl);
+        if (result == null) result = caseCheckbox(variableUrl);
+        if (result == null) result = caseLink(variableUrl);
+        if (result == null) result = caseButton(variableUrl);
+        if (result == null) result = caseImage(variableUrl);
+        if (result == null) result = caseTextField(variableUrl);
+        if (result == null) result = caseCheckableElement(variableUrl);
+        if (result == null) result = caseClickableElement(variableUrl);
+        if (result == null) result = caseFillableElement(variableUrl);
+        if (result == null) result = caseElement(variableUrl);
+        if (result == null) result = caseClear(variableUrl);
+        if (result == null) result = caseVerify(variableUrl);
+        if (result == null) result = caseClick(variableUrl);
+        if (result == null) result = caseFill(variableUrl);
+        if (result == null) result = caseExist(variableUrl);
+        if (result == null) result = caseAction(variableUrl);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserDSLPackage.VARIABLE_LIST:
+      {
+        VariableList variableList = (VariableList)theEObject;
+        T result = caseVariableList(variableList);
+        if (result == null) result = caseVariable(variableList);
+        if (result == null) result = caseCheckbox(variableList);
+        if (result == null) result = caseLink(variableList);
+        if (result == null) result = caseButton(variableList);
+        if (result == null) result = caseImage(variableList);
+        if (result == null) result = caseTextField(variableList);
+        if (result == null) result = caseCheckableElement(variableList);
+        if (result == null) result = caseClickableElement(variableList);
+        if (result == null) result = caseFillableElement(variableList);
+        if (result == null) result = caseElement(variableList);
+        if (result == null) result = caseClear(variableList);
+        if (result == null) result = caseVerify(variableList);
+        if (result == null) result = caseClick(variableList);
+        if (result == null) result = caseFill(variableList);
+        if (result == null) result = caseExist(variableList);
+        if (result == null) result = caseAction(variableList);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BrowserDSLPackage.CHECKBOX:
       {
         Checkbox checkbox = (Checkbox)theEObject;
@@ -242,15 +363,6 @@ public class BrowserDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BrowserDSLPackage.URL:
-      {
-        Url url = (Url)theEObject;
-        T result = caseUrl(url);
-        if (result == null) result = caseGoTo(url);
-        if (result == null) result = caseAction(url);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       default: return defaultCase(theEObject);
     }
   }
@@ -272,6 +384,38 @@ public class BrowserDSLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Sub Routine</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sub Routine</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSubRoutine(SubRoutine object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Main</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Main</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMain(Main object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Action</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -283,6 +427,38 @@ public class BrowserDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAction(Action object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sub Routine Call</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sub Routine Call</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSubRoutineCall(SubRoutineCall object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>List</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseList(List object)
   {
     return null;
   }
@@ -448,6 +624,70 @@ public class BrowserDSLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Variable</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVariable(Variable object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Variable String</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Variable String</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVariableString(VariableString object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Variable Url</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Variable Url</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVariableUrl(VariableUrl object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Variable List</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Variable List</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVariableList(VariableList object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Checkbox</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -523,22 +763,6 @@ public class BrowserDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTextField(TextField object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Url</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Url</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseUrl(Url object)
   {
     return null;
   }

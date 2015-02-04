@@ -2,8 +2,6 @@
  */
 package org.xtext.mda.project.browserDSL;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.mda.project.browserDSL.Model#getActions <em>Actions</em>}</li>
+ *   <li>{@link org.xtext.mda.project.browserDSL.Model#getMain <em>Main</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,19 +23,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Model extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Actions</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.mda.project.browserDSL.Action}.
+   * Returns the value of the '<em><b>Main</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Actions</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Main</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Actions</em>' containment reference list.
-   * @see org.xtext.mda.project.browserDSL.BrowserDSLPackage#getModel_Actions()
+   * @return the value of the '<em>Main</em>' containment reference.
+   * @see #setMain(Main)
+   * @see org.xtext.mda.project.browserDSL.BrowserDSLPackage#getModel_Main()
    * @model containment="true"
    * @generated
    */
-  EList<Action> getActions();
+  Main getMain();
+
+  /**
+   * Sets the value of the '{@link org.xtext.mda.project.browserDSL.Model#getMain <em>Main</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Main</em>' containment reference.
+   * @see #getMain()
+   * @generated
+   */
+  void setMain(Main value);
 
 } // Model

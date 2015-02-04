@@ -65,7 +65,11 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
     switch (eClass.getClassifierID())
     {
       case BrowserDSLPackage.MODEL: return createModel();
+      case BrowserDSLPackage.SUB_ROUTINE: return createSubRoutine();
+      case BrowserDSLPackage.MAIN: return createMain();
       case BrowserDSLPackage.ACTION: return createAction();
+      case BrowserDSLPackage.SUB_ROUTINE_CALL: return createSubRoutineCall();
+      case BrowserDSLPackage.LIST: return createList();
       case BrowserDSLPackage.ELEMENT: return createElement();
       case BrowserDSLPackage.CLICKABLE_ELEMENT: return createClickableElement();
       case BrowserDSLPackage.FILLABLE_ELEMENT: return createFillableElement();
@@ -76,12 +80,15 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
       case BrowserDSLPackage.VERIFY: return createVerify();
       case BrowserDSLPackage.EXIST: return createExist();
       case BrowserDSLPackage.GO_TO: return createGoTo();
+      case BrowserDSLPackage.VARIABLE: return createVariable();
+      case BrowserDSLPackage.VARIABLE_STRING: return createVariableString();
+      case BrowserDSLPackage.VARIABLE_URL: return createVariableUrl();
+      case BrowserDSLPackage.VARIABLE_LIST: return createVariableList();
       case BrowserDSLPackage.CHECKBOX: return createCheckbox();
       case BrowserDSLPackage.LINK: return createLink();
       case BrowserDSLPackage.BUTTON: return createButton();
       case BrowserDSLPackage.IMAGE: return createImage();
       case BrowserDSLPackage.TEXT_FIELD: return createTextField();
-      case BrowserDSLPackage.URL: return createUrl();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -103,10 +110,54 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public SubRoutine createSubRoutine()
+  {
+    SubRoutineImpl subRoutine = new SubRoutineImpl();
+    return subRoutine;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Main createMain()
+  {
+    MainImpl main = new MainImpl();
+    return main;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Action createAction()
   {
     ActionImpl action = new ActionImpl();
     return action;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SubRoutineCall createSubRoutineCall()
+  {
+    SubRoutineCallImpl subRoutineCall = new SubRoutineCallImpl();
+    return subRoutineCall;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public List createList()
+  {
+    ListImpl list = new ListImpl();
+    return list;
   }
 
   /**
@@ -224,6 +275,50 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public Variable createVariable()
+  {
+    VariableImpl variable = new VariableImpl();
+    return variable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VariableString createVariableString()
+  {
+    VariableStringImpl variableString = new VariableStringImpl();
+    return variableString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VariableUrl createVariableUrl()
+  {
+    VariableUrlImpl variableUrl = new VariableUrlImpl();
+    return variableUrl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VariableList createVariableList()
+  {
+    VariableListImpl variableList = new VariableListImpl();
+    return variableList;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Checkbox createCheckbox()
   {
     CheckboxImpl checkbox = new CheckboxImpl();
@@ -272,17 +367,6 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
   {
     TextFieldImpl textField = new TextFieldImpl();
     return textField;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Url createUrl()
-  {
-    UrlImpl url = new UrlImpl();
-    return url;
   }
 
   /**

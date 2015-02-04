@@ -8,13 +8,25 @@
   <genPackages prefix="BrowserDSL" basePackage="org.xtext.mda.project" disposableProviderFactory="true"
       fileExtensions="browserdsl" ecorePackage="BrowserDSL.ecore#/">
     <genClasses ecoreClass="BrowserDSL.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Model/actions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Model/main"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//SubRoutine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//SubRoutine/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//SubRoutine/action"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Main">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Main/actions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Main/action"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Action"/>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Element"/>
-    <genClasses ecoreClass="BrowserDSL.ecore#//ClickableElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//ClickableElement/name"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//SubRoutineCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//SubRoutineCall/id"/>
     </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//List">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//List/element"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Element"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//ClickableElement"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//FillableElement"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//CheckableElement"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Click"/>
@@ -23,17 +35,18 @@
     <genClasses ecoreClass="BrowserDSL.ecore#//Verify"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Exist"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//GoTo"/>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Checkbox">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Checkbox/name"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Variable/name"/>
     </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//VariableString"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//VariableUrl"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//VariableList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//VariableList/value"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Checkbox"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Link"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Button"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Image"/>
-    <genClasses ecoreClass="BrowserDSL.ecore#//TextField">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//TextField/name"/>
-    </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Url">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Url/name"/>
-    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//TextField"/>
   </genPackages>
 </genmodel:GenModel>
