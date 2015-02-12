@@ -235,6 +235,11 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
         return createExistAdapter();
       }
       @Override
+      public Adapter caseGoTo(GoTo object)
+      {
+        return createGoToAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -732,6 +737,21 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExistAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.GoTo <em>Go To</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.GoTo
+   * @generated
+   */
+  public Adapter createGoToAdapter()
   {
     return null;
   }

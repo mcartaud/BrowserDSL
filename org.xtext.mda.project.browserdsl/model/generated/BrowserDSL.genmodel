@@ -37,7 +37,6 @@
     <genClasses ecoreClass="BrowserDSL.ecore#//Instruction">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/dec"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/cond"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Instruction/loop"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/act"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/ass"/>
     </genClasses>
@@ -96,5 +95,8 @@
     <genClasses ecoreClass="BrowserDSL.ecore#//Clear"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Verify"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Exist"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//GoTo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//GoTo/url"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

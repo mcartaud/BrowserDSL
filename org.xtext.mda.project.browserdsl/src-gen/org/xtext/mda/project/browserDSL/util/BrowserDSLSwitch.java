@@ -360,6 +360,14 @@ public class BrowserDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BrowserDSLPackage.GO_TO:
+      {
+        GoTo goTo = (GoTo)theEObject;
+        T result = caseGoTo(goTo);
+        if (result == null) result = caseActionInstruction(goTo);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -872,6 +880,22 @@ public class BrowserDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExist(Exist object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Go To</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Go To</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGoTo(GoTo object)
   {
     return null;
   }

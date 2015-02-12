@@ -355,22 +355,13 @@ public interface BrowserDSLPackage extends EPackage
   int INSTRUCTION__COND = 1;
 
   /**
-   * The feature id for the '<em><b>Loop</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INSTRUCTION__LOOP = 2;
-
-  /**
    * The feature id for the '<em><b>Act</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INSTRUCTION__ACT = 3;
+  int INSTRUCTION__ACT = 2;
 
   /**
    * The feature id for the '<em><b>Ass</b></em>' containment reference.
@@ -379,7 +370,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INSTRUCTION__ASS = 4;
+  int INSTRUCTION__ASS = 3;
 
   /**
    * The number of structural features of the '<em>Instruction</em>' class.
@@ -388,7 +379,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INSTRUCTION_FEATURE_COUNT = 5;
+  int INSTRUCTION_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ConditionImpl <em>Condition</em>}' class.
@@ -1042,6 +1033,43 @@ public interface BrowserDSLPackage extends EPackage
    */
   int VERIFY_FEATURE_COUNT = ACTION_EXPRESSION_FEATURE_COUNT + 0;
 
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.GoToImpl <em>Go To</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.GoToImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getGoTo()
+   * @generated
+   */
+  int GO_TO = 32;
+
+  /**
+   * The feature id for the '<em><b>Action</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GO_TO__ACTION = ACTION_INSTRUCTION__ACTION;
+
+  /**
+   * The feature id for the '<em><b>Url</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GO_TO__URL = ACTION_INSTRUCTION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Go To</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GO_TO_FEATURE_COUNT = ACTION_INSTRUCTION_FEATURE_COUNT + 1;
+
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Program <em>Program</em>}'.
@@ -1285,17 +1313,6 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    */
   EReference getInstruction_Cond();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Instruction#getLoop <em>Loop</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Loop</em>'.
-   * @see org.xtext.mda.project.browserDSL.Instruction#getLoop()
-   * @see #getInstruction()
-   * @generated
-   */
-  EAttribute getInstruction_Loop();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Instruction#getAct <em>Act</em>}'.
@@ -1771,6 +1788,27 @@ public interface BrowserDSLPackage extends EPackage
   EClass getExist();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.GoTo <em>Go To</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Go To</em>'.
+   * @see org.xtext.mda.project.browserDSL.GoTo
+   * @generated
+   */
+  EClass getGoTo();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.GoTo#getUrl <em>Url</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Url</em>'.
+   * @see org.xtext.mda.project.browserDSL.GoTo#getUrl()
+   * @see #getGoTo()
+   * @generated
+   */
+  EAttribute getGoTo_Url();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1996,14 +2034,6 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EReference INSTRUCTION__COND = eINSTANCE.getInstruction_Cond();
-
-    /**
-     * The meta object literal for the '<em><b>Loop</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INSTRUCTION__LOOP = eINSTANCE.getInstruction_Loop();
 
     /**
      * The meta object literal for the '<em><b>Act</b></em>' containment reference feature.
@@ -2408,6 +2438,24 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EClass EXIST = eINSTANCE.getExist();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.GoToImpl <em>Go To</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.GoToImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getGoTo()
+     * @generated
+     */
+    EClass GO_TO = eINSTANCE.getGoTo();
+
+    /**
+     * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GO_TO__URL = eINSTANCE.getGoTo_Url();
 
   }
 

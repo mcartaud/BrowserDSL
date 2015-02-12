@@ -65,7 +65,6 @@ public class BrowserDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFunctionCallAccess().getGroup_1_3(), "rule__FunctionCall__Group_1_3__0");
 					put(grammarAccess.getMainAccess().getGroup(), "rule__Main__Group__0");
 					put(grammarAccess.getBodyAccess().getGroup(), "rule__Body__Group__0");
-					put(grammarAccess.getBodyAccess().getGroup_1(), "rule__Body__Group_1__0");
 					put(grammarAccess.getConditionAccess().getGroup(), "rule__Condition__Group__0");
 					put(grammarAccess.getDeclarationAccess().getGroup(), "rule__Declaration__Group__0");
 					put(grammarAccess.getAssignationAccess().getGroup(), "rule__Assignation__Group__0");
@@ -95,13 +94,12 @@ public class BrowserDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFunctionCallAccess().getVarAssignment_1_2(), "rule__FunctionCall__VarAssignment_1_2");
 					put(grammarAccess.getFunctionCallAccess().getVarAssignment_1_3_1(), "rule__FunctionCall__VarAssignment_1_3_1");
 					put(grammarAccess.getFunctionNameAccess().getNameAssignment(), "rule__FunctionName__NameAssignment");
-					put(grammarAccess.getBodyAccess().getInstructionsAssignment_0(), "rule__Body__InstructionsAssignment_0");
-					put(grammarAccess.getBodyAccess().getInstructionsAssignment_1_1(), "rule__Body__InstructionsAssignment_1_1");
+					put(grammarAccess.getBodyAccess().getInstructionsAssignment_1(), "rule__Body__InstructionsAssignment_1");
+					put(grammarAccess.getBodyAccess().getInstructionsAssignment_2(), "rule__Body__InstructionsAssignment_2");
 					put(grammarAccess.getInstructionAccess().getDecAssignment_0(), "rule__Instruction__DecAssignment_0");
 					put(grammarAccess.getInstructionAccess().getCondAssignment_1(), "rule__Instruction__CondAssignment_1");
-					put(grammarAccess.getInstructionAccess().getLoopAssignment_2(), "rule__Instruction__LoopAssignment_2");
-					put(grammarAccess.getInstructionAccess().getActAssignment_3(), "rule__Instruction__ActAssignment_3");
-					put(grammarAccess.getInstructionAccess().getAssAssignment_4(), "rule__Instruction__AssAssignment_4");
+					put(grammarAccess.getInstructionAccess().getActAssignment_2(), "rule__Instruction__ActAssignment_2");
+					put(grammarAccess.getInstructionAccess().getAssAssignment_3(), "rule__Instruction__AssAssignment_3");
 					put(grammarAccess.getConditionAccess().getExpAssignment_2(), "rule__Condition__ExpAssignment_2");
 					put(grammarAccess.getConditionAccess().getInsAssignment_4(), "rule__Condition__InsAssignment_4");
 					put(grammarAccess.getConditionAccess().getIns2Assignment_6(), "rule__Condition__Ins2Assignment_6");
@@ -125,6 +123,7 @@ public class BrowserDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getButtonAccess().getButAssignment_1_0(), "rule__Button__ButAssignment_1_0");
 					put(grammarAccess.getImageAccess().getImgAssignment_1_0(), "rule__Image__ImgAssignment_1_0");
 					put(grammarAccess.getTextFieldAccess().getTextAssignment_1_0(), "rule__TextField__TextAssignment_1_0");
+					put(grammarAccess.getGoToAccess().getUrlAssignment_1(), "rule__GoTo__UrlAssignment_1");
 				}
 			};
 		}

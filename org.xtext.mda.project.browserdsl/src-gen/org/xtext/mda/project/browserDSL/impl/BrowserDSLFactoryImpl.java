@@ -96,6 +96,7 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
       case BrowserDSLPackage.CLEAR: return createClear();
       case BrowserDSLPackage.VERIFY: return createVerify();
       case BrowserDSLPackage.EXIST: return createExist();
+      case BrowserDSLPackage.GO_TO: return createGoTo();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -451,6 +452,17 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
   {
     ExistImpl exist = new ExistImpl();
     return exist;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GoTo createGoTo()
+  {
+    GoToImpl goTo = new GoToImpl();
+    return goTo;
   }
 
   /**

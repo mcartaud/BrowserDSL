@@ -25,7 +25,7 @@ public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_Checkbox_TextField_CheckboxKeyword_0_or_TextFieldKeyword_0;
 	protected AbstractElementAlias match_Condition___AllKeyword_1_0_or_AnyKeyword_1_1__q;
 	protected AbstractElementAlias match_Exist_Verify_ExistKeyword_0_or_VerifyKeyword_0;
-	protected AbstractElementAlias match_Expression_EqualsSignEqualsSignKeyword_3_0_0_or_GreaterThanSignKeyword_3_0_1_or_LessThanSignKeyword_3_0_2;
+	protected AbstractElementAlias match_Expression_SpaceEqualsSignEqualsSignSpaceKeyword_3_0_0_or_SpaceGreaterThanSignSpaceKeyword_3_0_1_or_SpaceLessThanSignSpaceKeyword_3_0_2;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
@@ -36,27 +36,14 @@ public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_Checkbox_TextField_CheckboxKeyword_0_or_TextFieldKeyword_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getCheckboxAccess().getCheckboxKeyword_0()), new TokenAlias(false, false, grammarAccess.getTextFieldAccess().getTextFieldKeyword_0()));
 		match_Condition___AllKeyword_1_0_or_AnyKeyword_1_1__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getConditionAccess().getAllKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getAnyKeyword_1_1()));
 		match_Exist_Verify_ExistKeyword_0_or_VerifyKeyword_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExistAccess().getExistKeyword_0()), new TokenAlias(false, false, grammarAccess.getVerifyAccess().getVerifyKeyword_0()));
-		match_Expression_EqualsSignEqualsSignKeyword_3_0_0_or_GreaterThanSignKeyword_3_0_1_or_LessThanSignKeyword_3_0_2 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getEqualsSignEqualsSignKeyword_3_0_0()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getGreaterThanSignKeyword_3_0_1()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getLessThanSignKeyword_3_0_2()));
+		match_Expression_SpaceEqualsSignEqualsSignSpaceKeyword_3_0_0_or_SpaceGreaterThanSignSpaceKeyword_3_0_1_or_SpaceLessThanSignSpaceKeyword_3_0_2 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpressionAccess().getSpaceEqualsSignEqualsSignSpaceKeyword_3_0_0()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getSpaceGreaterThanSignSpaceKeyword_3_0_1()), new TokenAlias(false, false, grammarAccess.getExpressionAccess().getSpaceLessThanSignSpaceKeyword_3_0_2()));
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if(ruleCall.getRule() == grammarAccess.getGoToRule())
-			return getGoToToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getSTRINGRule())
+		if(ruleCall.getRule() == grammarAccess.getSTRINGRule())
 			return getSTRINGToken(semanticObject, ruleCall, node);
 		return "";
-	}
-	
-	/**
-	 * GoTo:
-	 * 	'url=' (URL)
-	 * ;
-	 */
-	protected String getGoToToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "url=://...";
 	}
 	
 	/**
@@ -89,15 +76,15 @@ public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Condition___AllKeyword_1_0_or_AnyKeyword_1_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Exist_Verify_ExistKeyword_0_or_VerifyKeyword_0.equals(syntax))
 				emit_Exist_Verify_ExistKeyword_0_or_VerifyKeyword_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Expression_EqualsSignEqualsSignKeyword_3_0_0_or_GreaterThanSignKeyword_3_0_1_or_LessThanSignKeyword_3_0_2.equals(syntax))
-				emit_Expression_EqualsSignEqualsSignKeyword_3_0_0_or_GreaterThanSignKeyword_3_0_1_or_LessThanSignKeyword_3_0_2(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Expression_SpaceEqualsSignEqualsSignSpaceKeyword_3_0_0_or_SpaceGreaterThanSignSpaceKeyword_3_0_1_or_SpaceLessThanSignSpaceKeyword_3_0_2.equals(syntax))
+				emit_Expression_SpaceEqualsSignEqualsSignSpaceKeyword_3_0_0_or_SpaceGreaterThanSignSpaceKeyword_3_0_1_or_SpaceLessThanSignSpaceKeyword_3_0_2(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
 	/**
 	 * Syntax:
-	 *     ('exist(' ('link' | 'button' | 'image')) | (('verify(' | 'exist(') ('textField' | 'checkbox'))
+	 *     ('exist(' ('link ' | 'button ' | 'image ')) | (('verify(' | 'exist(') ('textField ' | 'checkbox '))
 	 */
 	protected void emit_Button_Checkbox_Exist_Image_Link_TextField_Verify___ExistKeyword_0___ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_____or_____ExistKeyword_0_or_VerifyKeyword_0_____CheckboxKeyword_0_or_TextFieldKeyword_0____(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -105,7 +92,7 @@ public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     'link' | 'button' | 'image' | 'textField' | 'checkbox'
+	 *     'link ' | 'button ' | 'image ' | 'textField ' | 'checkbox '
 	 */
 	protected void emit_Button_Checkbox_Image_Link_TextField_ButtonKeyword_0_or_CheckboxKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0_or_TextFieldKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -113,7 +100,7 @@ public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     'link' | 'button' | 'image'
+	 *     'link ' | 'button ' | 'image '
 	 */
 	protected void emit_Button_Image_Link_ButtonKeyword_0_or_ImageKeyword_0_or_LinkKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -121,7 +108,7 @@ public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     'textField' | 'checkbox'
+	 *     'textField ' | 'checkbox '
 	 */
 	protected void emit_Checkbox_TextField_CheckboxKeyword_0_or_TextFieldKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -129,7 +116,7 @@ public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     ('all' | 'any')?
+	 *     ('all ' | 'any ')?
 	 */
 	protected void emit_Condition___AllKeyword_1_0_or_AnyKeyword_1_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -145,9 +132,9 @@ public class BrowserDSLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '==' | '>' | '<'
+	 *     ' == ' | ' > ' | ' < '
 	 */
-	protected void emit_Expression_EqualsSignEqualsSignKeyword_3_0_0_or_GreaterThanSignKeyword_3_0_1_or_LessThanSignKeyword_3_0_2(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Expression_SpaceEqualsSignEqualsSignSpaceKeyword_3_0_0_or_SpaceGreaterThanSignSpaceKeyword_3_0_1_or_SpaceLessThanSignSpaceKeyword_3_0_2(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

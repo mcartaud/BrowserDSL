@@ -24,6 +24,7 @@ import org.xtext.mda.project.browserDSL.Declaration;
 import org.xtext.mda.project.browserDSL.Expression;
 import org.xtext.mda.project.browserDSL.FunctionName;
 import org.xtext.mda.project.browserDSL.FunctionReference;
+import org.xtext.mda.project.browserDSL.GoTo;
 import org.xtext.mda.project.browserDSL.Head;
 import org.xtext.mda.project.browserDSL.Image;
 import org.xtext.mda.project.browserDSL.Instruction;
@@ -114,6 +115,13 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 				if(context == grammarAccess.getFunctionCallRule() ||
 				   context == grammarAccess.getFunctionReferenceRule()) {
 					sequence_FunctionReference(context, (FunctionReference) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.GO_TO:
+				if(context == grammarAccess.getActionInstructionRule() ||
+				   context == grammarAccess.getGoToRule()) {
+					sequence_GoTo(context, (GoTo) semanticObject); 
 					return; 
 				}
 				else break;
@@ -215,7 +223,7 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (action=Click | action=Fill | action=Clear)?
+	 *     (action=Click | action=Fill | action=Clear)
 	 */
 	protected void sequence_ActionInstruction(EObject context, ActionInstruction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -346,6 +354,15 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
+	 *     url=URL
+	 */
+	protected void sequence_GoTo(EObject context, GoTo semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (name=FunctionName | (name=FunctionName varId+=VariableName varId+=VariableName*))
 	 */
 	protected void sequence_Head(EObject context, Head semanticObject) {
@@ -371,7 +388,7 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (dec=Declaration | cond=Condition | loop=Loop | act=ActionInstruction | ass=Assignation)
+	 *     (dec=Declaration | cond=Condition | act=ActionInstruction | ass=Assignation)
 	 */
 	protected void sequence_Instruction(EObject context, Instruction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

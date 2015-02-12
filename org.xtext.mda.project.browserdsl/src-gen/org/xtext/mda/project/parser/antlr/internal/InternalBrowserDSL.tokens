@@ -1,39 +1,39 @@
-'!'=32
+' !'=32
+' < '=31
+' = '=27
+' == '=29
+' > '=30
 '()'=13
-'(var'=14
+'(var '=14
 ')'=16
 ', value='=43
-', var'=15
-'; '=18
-';'=19
-'<'=31
-'='=28
-'=='=29
-'>'=30
-'all'=21
-'any'=22
-'bool'=33
-'button'=38
-'checkbox'=36
+', var '=15
+';'=28
+'all '=21
+'any '=22
+'bool '=33
+'button '=38
+'checkbox '=36
 'clear('=44
 'click('=41
-'else'=24
+'else '=24
 'endif'=25
 'exist('=46
 'fill('=42
-'if'=20
-'image'=39
-'int'=35
-'link'=37
-'main'=17
-'string'=34
-'sub'=12
-'textField'=40
-'then'=23
-'toto'=26
-'url='=47
-'var'=27
+'goTo('=47
+'if '=20
+'image '=39
+'int '=35
+'link '=37
+'main '=17
+'string '=34
+'sub '=12
+'textField '=40
+'then '=23
+'var '=26
 'verify('=45
+'{'=18
+'}'=19
 RULE_ANY_OTHER=11
 RULE_ID=4
 RULE_INT=7

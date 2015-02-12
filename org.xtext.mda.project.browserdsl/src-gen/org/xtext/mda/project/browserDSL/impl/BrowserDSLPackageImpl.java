@@ -31,6 +31,7 @@ import org.xtext.mda.project.browserDSL.FillableElement;
 import org.xtext.mda.project.browserDSL.FunctionCall;
 import org.xtext.mda.project.browserDSL.FunctionName;
 import org.xtext.mda.project.browserDSL.FunctionReference;
+import org.xtext.mda.project.browserDSL.GoTo;
 import org.xtext.mda.project.browserDSL.Head;
 import org.xtext.mda.project.browserDSL.Image;
 import org.xtext.mda.project.browserDSL.Instruction;
@@ -275,6 +276,13 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * @generated
    */
   private EClass existEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass goToEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -574,19 +582,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getInstruction_Loop()
-  {
-    return (EAttribute)instructionEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getInstruction_Act()
   {
-    return (EReference)instructionEClass.getEStructuralFeatures().get(3);
+    return (EReference)instructionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -596,7 +594,7 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    */
   public EReference getInstruction_Ass()
   {
-    return (EReference)instructionEClass.getEStructuralFeatures().get(4);
+    return (EReference)instructionEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1034,6 +1032,26 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getGoTo()
+  {
+    return goToEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGoTo_Url()
+  {
+    return (EAttribute)goToEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public BrowserDSLFactory getBrowserDSLFactory()
   {
     return (BrowserDSLFactory)getEFactoryInstance();
@@ -1091,7 +1109,6 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     instructionEClass = createEClass(INSTRUCTION);
     createEReference(instructionEClass, INSTRUCTION__DEC);
     createEReference(instructionEClass, INSTRUCTION__COND);
-    createEAttribute(instructionEClass, INSTRUCTION__LOOP);
     createEReference(instructionEClass, INSTRUCTION__ACT);
     createEReference(instructionEClass, INSTRUCTION__ASS);
 
@@ -1159,6 +1176,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     verifyEClass = createEClass(VERIFY);
 
     existEClass = createEClass(EXIST);
+
+    goToEClass = createEClass(GO_TO);
+    createEAttribute(goToEClass, GO_TO__URL);
   }
 
   /**
@@ -1214,6 +1234,7 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     textFieldEClass.getESuperTypes().add(this.getFillableElement());
     verifyEClass.getESuperTypes().add(this.getActionExpression());
     existEClass.getESuperTypes().add(this.getActionExpression());
+    goToEClass.getESuperTypes().add(this.getActionInstruction());
 
     // Initialize classes and features; add operations and parameters
     initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1248,7 +1269,6 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     initEClass(instructionEClass, Instruction.class, "Instruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getInstruction_Dec(), this.getDeclaration(), null, "dec", null, 0, 1, Instruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getInstruction_Cond(), this.getCondition(), null, "cond", null, 0, 1, Instruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInstruction_Loop(), ecorePackage.getEString(), "loop", null, 0, 1, Instruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getInstruction_Act(), this.getActionInstruction(), null, "act", null, 0, 1, Instruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getInstruction_Ass(), this.getAssignation(), null, "ass", null, 0, 1, Instruction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1316,6 +1336,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     initEClass(verifyEClass, Verify.class, "Verify", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(existEClass, Exist.class, "Exist", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(goToEClass, GoTo.class, "GoTo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGoTo_Url(), ecorePackage.getEString(), "url", null, 0, 1, GoTo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

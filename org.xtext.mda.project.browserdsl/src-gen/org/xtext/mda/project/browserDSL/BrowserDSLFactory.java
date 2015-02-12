@@ -311,6 +311,15 @@ public interface BrowserDSLFactory extends EFactory
   Exist createExist();
 
   /**
+   * Returns a new object of class '<em>Go To</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Go To</em>'.
+   * @generated
+   */
+  GoTo createGoTo();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

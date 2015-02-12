@@ -8,12 +8,12 @@ Program:
 ;
 
 Subroutine:
-	'sub ' head=Head body+=Body '}'
+	'sub ' head=Head body+=Body
 ;
 
 Head:
-	name=FunctionName '(){'
-	| name=FunctionName '(var ' varId+=VariableName (', var ' varId+=VariableName)* '){'
+	(name=FunctionName '()')
+	| (name=FunctionName '(var ' varId+=VariableName (', var ' varId+=VariableName)* ')')
 ;
 
 FunctionReference:
@@ -38,26 +38,28 @@ Main:
 ;
 
 Body:
-	instructions+=Instruction ('; ' instructions+=Instruction)* ';'
+	'{' instructions+=Instruction (instructions+=Instruction)* '}'
 ;
 
 Instruction:
 	dec=Declaration
 	| cond=Condition
-	| loop=Loop
+	//| loop=Loop
 	| act=ActionInstruction
 	| ass=Assignation
 ;
 
 Condition:
-	'if '('all' | 'any')? exp=Expression 
-	'then ' ins+=Instruction+ 'else ' ins2+=Instruction+ 'endif'
+	'if '('all ' | 'any ')? '('exp=Expression ')'
+	'then ' ins+=Instruction+ 
+	'else ' ins2+=Instruction+ 
+	'endif'
 ;
 
-Loop:
-	'toto'
+//Loop:
+	//'toto'
 	//While | Foreach
-;
+//;
 
 ActionInstruction:
 	action=Click | action=Fill | action=Clear | GoTo
@@ -68,19 +70,19 @@ VariableName:
 ;
 
 Declaration:
-	'var ' name=VariableName ' = ' val=Expression
+	'var ' name=VariableName ' = ' val=Expression ';'
 ;
 
 Assignation:
-	var=VariableReference ' = ' expr=Expression
+	var=VariableReference ' = ' expr=Expression ';'
 ;
 
 Expression:
 	type=Type
 	| var=Variable
 	| act=ActionExpression
-	| (' == ' | ' > ' | ' < ') left=Expression right=Expression
-	| ' !' exp=Expression
+	| ((' == ' | ' > ' | ' < ') left=Expression right=Expression)
+	| (' !' exp=Expression)
 ;
 
 Type:
@@ -112,11 +114,11 @@ CheckableElement:
 ;
 
 Checkbox:
-	'checkbox ' (check=STRING | Variable)
+	'checkbox ' (check=STRING | Variable) 
 ;
 
 Link:
-	'link ' (link=STRING | Variable)
+	'link ' (link=STRING | Variable) 
 ;
 
 Button:
@@ -163,27 +165,27 @@ TextField:
 
 
 Click:
-	'click(' ClickableElement ')'
+	'click(' ClickableElement ')' ';'
 ;
 
 Fill:
-	'fill(' FillableElement ', value=' STRING ')'
+	'fill(' FillableElement ', value=' STRING ')' ';'
 ;
 
 Clear:
-	'clear(' (FillableElement | CheckableElement) ')'
+	'clear(' (FillableElement | CheckableElement) ')' ';'
 ;
 
 Verify:
-	'verify(' (FillableElement | CheckableElement) ', value=' STRING ')'
+	'verify(' (FillableElement | CheckableElement) ', value=' STRING ')' ';'
 ;
 
 Exist:
-	'exist(' Element ')'
+	'exist(' Element ')' ';'
 ;
 
 GoTo:
-	'url=' (URL)
+	'goTo(' url=URL ')' ';'
 ;
 //
 //Variable:
