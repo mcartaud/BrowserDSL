@@ -355,13 +355,22 @@ public interface BrowserDSLPackage extends EPackage
   int INSTRUCTION__COND = 1;
 
   /**
+   * The feature id for the '<em><b>While</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTRUCTION__WHILE = 2;
+
+  /**
    * The feature id for the '<em><b>Act</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INSTRUCTION__ACT = 2;
+  int INSTRUCTION__ACT = 3;
 
   /**
    * The feature id for the '<em><b>Ass</b></em>' containment reference.
@@ -370,7 +379,16 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INSTRUCTION__ASS = 3;
+  int INSTRUCTION__ASS = 4;
+
+  /**
+   * The feature id for the '<em><b>Sub</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INSTRUCTION__SUB = 5;
 
   /**
    * The number of structural features of the '<em>Instruction</em>' class.
@@ -379,7 +397,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INSTRUCTION_FEATURE_COUNT = 4;
+  int INSTRUCTION_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ConditionImpl <em>Condition</em>}' class.
@@ -428,6 +446,43 @@ public interface BrowserDSLPackage extends EPackage
   int CONDITION_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.WhileImpl <em>While</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.WhileImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getWhile()
+   * @generated
+   */
+  int WHILE = 11;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHILE__EXP = 0;
+
+  /**
+   * The feature id for the '<em><b>Ins</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHILE__INS = 1;
+
+  /**
+   * The number of structural features of the '<em>While</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WHILE_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ActionInstructionImpl <em>Action Instruction</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -435,7 +490,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getActionInstruction()
    * @generated
    */
-  int ACTION_INSTRUCTION = 11;
+  int ACTION_INSTRUCTION = 12;
 
   /**
    * The feature id for the '<em><b>Action</b></em>' containment reference.
@@ -463,7 +518,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariableName()
    * @generated
    */
-  int VARIABLE_NAME = 12;
+  int VARIABLE_NAME = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -491,7 +546,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getDeclaration()
    * @generated
    */
-  int DECLARATION = 13;
+  int DECLARATION = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -528,7 +583,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getAssignation()
    * @generated
    */
-  int ASSIGNATION = 14;
+  int ASSIGNATION = 15;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' containment reference.
@@ -565,7 +620,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 15;
+  int EXPRESSION = 16;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -631,44 +686,6 @@ public interface BrowserDSLPackage extends EPackage
   int EXPRESSION_FEATURE_COUNT = 6;
 
   /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ActionExpressionImpl <em>Action Expression</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.ActionExpressionImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getActionExpression()
-   * @generated
-   */
-  int ACTION_EXPRESSION = 17;
-
-  /**
-   * The number of structural features of the '<em>Action Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ACTION_EXPRESSION_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ExistImpl <em>Exist</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.ExistImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getExist()
-   * @generated
-   */
-  int EXIST = 31;
-
-  /**
-   * The number of structural features of the '<em>Exist</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXIST_FEATURE_COUNT = ACTION_EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ElementImpl <em>Element</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -676,7 +693,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getElement()
    * @generated
    */
-  int ELEMENT = 18;
+  int ELEMENT = 19;
 
   /**
    * The number of structural features of the '<em>Element</em>' class.
@@ -685,7 +702,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ELEMENT_FEATURE_COUNT = EXIST_FEATURE_COUNT + 0;
+  int ELEMENT_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.CheckableElementImpl <em>Checkable Element</em>}' class.
@@ -695,7 +712,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getCheckableElement()
    * @generated
    */
-  int CHECKABLE_ELEMENT = 21;
+  int CHECKABLE_ELEMENT = 22;
 
   /**
    * The number of structural features of the '<em>Checkable Element</em>' class.
@@ -714,7 +731,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getCheckbox()
    * @generated
    */
-  int CHECKBOX = 22;
+  int CHECKBOX = 23;
 
   /**
    * The feature id for the '<em><b>Check</b></em>' attribute.
@@ -742,7 +759,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVariable()
    * @generated
    */
-  int VARIABLE = 16;
+  int VARIABLE = 17;
 
   /**
    * The feature id for the '<em><b>Check</b></em>' attribute.
@@ -808,6 +825,34 @@ public interface BrowserDSLPackage extends EPackage
   int VARIABLE_FEATURE_COUNT = CHECKBOX_FEATURE_COUNT + 5;
 
   /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ActionExpressionImpl <em>Action Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.ActionExpressionImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getActionExpression()
+   * @generated
+   */
+  int ACTION_EXPRESSION = 18;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_EXPRESSION__EXPR = 0;
+
+  /**
+   * The number of structural features of the '<em>Action Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_EXPRESSION_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ClickableElementImpl <em>Clickable Element</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -815,7 +860,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getClickableElement()
    * @generated
    */
-  int CLICKABLE_ELEMENT = 19;
+  int CLICKABLE_ELEMENT = 20;
 
   /**
    * The number of structural features of the '<em>Clickable Element</em>' class.
@@ -834,7 +879,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getFillableElement()
    * @generated
    */
-  int FILLABLE_ELEMENT = 20;
+  int FILLABLE_ELEMENT = 21;
 
   /**
    * The number of structural features of the '<em>Fillable Element</em>' class.
@@ -853,7 +898,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getLink()
    * @generated
    */
-  int LINK = 23;
+  int LINK = 24;
 
   /**
    * The feature id for the '<em><b>Link</b></em>' attribute.
@@ -881,7 +926,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getButton()
    * @generated
    */
-  int BUTTON = 24;
+  int BUTTON = 25;
 
   /**
    * The feature id for the '<em><b>But</b></em>' attribute.
@@ -909,7 +954,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getImage()
    * @generated
    */
-  int IMAGE = 25;
+  int IMAGE = 26;
 
   /**
    * The feature id for the '<em><b>Img</b></em>' attribute.
@@ -937,7 +982,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getTextField()
    * @generated
    */
-  int TEXT_FIELD = 26;
+  int TEXT_FIELD = 27;
 
   /**
    * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -958,42 +1003,32 @@ public interface BrowserDSLPackage extends EPackage
   int TEXT_FIELD_FEATURE_COUNT = FILLABLE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ClickImpl <em>Click</em>}' class.
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.TypeElementImpl <em>Type Element</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.ClickImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getClick()
+   * @see org.xtext.mda.project.browserDSL.impl.TypeElementImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getTypeElement()
    * @generated
    */
-  int CLICK = 27;
+  int TYPE_ELEMENT = 28;
 
   /**
-   * The number of structural features of the '<em>Click</em>' class.
+   * The feature id for the '<em><b>Elem</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLICK_FEATURE_COUNT = 0;
+  int TYPE_ELEMENT__ELEM = 0;
 
   /**
-   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.FillImpl <em>Fill</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.mda.project.browserDSL.impl.FillImpl
-   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getFill()
-   * @generated
-   */
-  int FILL = 28;
-
-  /**
-   * The number of structural features of the '<em>Fill</em>' class.
+   * The number of structural features of the '<em>Type Element</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FILL_FEATURE_COUNT = 0;
+  int TYPE_ELEMENT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ClearImpl <em>Clear</em>}' class.
@@ -1003,7 +1038,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getClear()
    * @generated
    */
-  int CLEAR = 29;
+  int CLEAR = 33;
 
   /**
    * The number of structural features of the '<em>Clear</em>' class.
@@ -1015,6 +1050,118 @@ public interface BrowserDSLPackage extends EPackage
   int CLEAR_FEATURE_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.SelectImpl <em>Select</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.SelectImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getSelect()
+   * @generated
+   */
+  int SELECT = 29;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECT__VALUE = CLEAR_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Select</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECT_FEATURE_COUNT = CLEAR_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ClickImpl <em>Click</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.ClickImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getClick()
+   * @generated
+   */
+  int CLICK = 30;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLICK__VAL = 0;
+
+  /**
+   * The number of structural features of the '<em>Click</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLICK_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.CheckImpl <em>Check</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.CheckImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getCheck()
+   * @generated
+   */
+  int CHECK = 31;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHECK__VAL = 0;
+
+  /**
+   * The number of structural features of the '<em>Check</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHECK_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.FillImpl <em>Fill</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.FillImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getFill()
+   * @generated
+   */
+  int FILL = 32;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FILL__VAL = 0;
+
+  /**
+   * The number of structural features of the '<em>Fill</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FILL_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.VerifyImpl <em>Verify</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1022,7 +1169,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getVerify()
    * @generated
    */
-  int VERIFY = 30;
+  int VERIFY = 34;
 
   /**
    * The number of structural features of the '<em>Verify</em>' class.
@@ -1031,7 +1178,35 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VERIFY_FEATURE_COUNT = ACTION_EXPRESSION_FEATURE_COUNT + 0;
+  int VERIFY_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ExistImpl <em>Exist</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.impl.ExistImpl
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getExist()
+   * @generated
+   */
+  int EXIST = 35;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXIST__VAL = 0;
+
+  /**
+   * The number of structural features of the '<em>Exist</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXIST_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.GoToImpl <em>Go To</em>}' class.
@@ -1041,7 +1216,7 @@ public interface BrowserDSLPackage extends EPackage
    * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getGoTo()
    * @generated
    */
-  int GO_TO = 32;
+  int GO_TO = 36;
 
   /**
    * The feature id for the '<em><b>Action</b></em>' containment reference.
@@ -1315,6 +1490,17 @@ public interface BrowserDSLPackage extends EPackage
   EReference getInstruction_Cond();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Instruction#getWhile <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>While</em>'.
+   * @see org.xtext.mda.project.browserDSL.Instruction#getWhile()
+   * @see #getInstruction()
+   * @generated
+   */
+  EReference getInstruction_While();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Instruction#getAct <em>Act</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1335,6 +1521,17 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    */
   EReference getInstruction_Ass();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Instruction#getSub <em>Sub</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Sub</em>'.
+   * @see org.xtext.mda.project.browserDSL.Instruction#getSub()
+   * @see #getInstruction()
+   * @generated
+   */
+  EReference getInstruction_Sub();
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Condition <em>Condition</em>}'.
@@ -1378,6 +1575,38 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    */
   EReference getCondition_Ins2();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.While <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>While</em>'.
+   * @see org.xtext.mda.project.browserDSL.While
+   * @generated
+   */
+  EClass getWhile();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.While#getExp <em>Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp</em>'.
+   * @see org.xtext.mda.project.browserDSL.While#getExp()
+   * @see #getWhile()
+   * @generated
+   */
+  EReference getWhile_Exp();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.While#getIns <em>Ins</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Ins</em>'.
+   * @see org.xtext.mda.project.browserDSL.While#getIns()
+   * @see #getWhile()
+   * @generated
+   */
+  EReference getWhile_Ins();
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.ActionInstruction <em>Action Instruction</em>}'.
@@ -1593,6 +1822,17 @@ public interface BrowserDSLPackage extends EPackage
   EClass getActionExpression();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.ActionExpression#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expr</em>'.
+   * @see org.xtext.mda.project.browserDSL.ActionExpression#getExpr()
+   * @see #getActionExpression()
+   * @generated
+   */
+  EReference getActionExpression_Expr();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Element <em>Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1738,6 +1978,48 @@ public interface BrowserDSLPackage extends EPackage
   EAttribute getTextField_Text();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.TypeElement <em>Type Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Type Element</em>'.
+   * @see org.xtext.mda.project.browserDSL.TypeElement
+   * @generated
+   */
+  EClass getTypeElement();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.TypeElement#getElem <em>Elem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Elem</em>'.
+   * @see org.xtext.mda.project.browserDSL.TypeElement#getElem()
+   * @see #getTypeElement()
+   * @generated
+   */
+  EAttribute getTypeElement_Elem();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Select <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Select</em>'.
+   * @see org.xtext.mda.project.browserDSL.Select
+   * @generated
+   */
+  EClass getSelect();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Select#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Value</em>'.
+   * @see org.xtext.mda.project.browserDSL.Select#getValue()
+   * @see #getSelect()
+   * @generated
+   */
+  EReference getSelect_Value();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Click <em>Click</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1748,6 +2030,38 @@ public interface BrowserDSLPackage extends EPackage
   EClass getClick();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Click#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Val</em>'.
+   * @see org.xtext.mda.project.browserDSL.Click#getVal()
+   * @see #getClick()
+   * @generated
+   */
+  EReference getClick_Val();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Check <em>Check</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Check</em>'.
+   * @see org.xtext.mda.project.browserDSL.Check
+   * @generated
+   */
+  EClass getCheck();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Check#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Val</em>'.
+   * @see org.xtext.mda.project.browserDSL.Check#getVal()
+   * @see #getCheck()
+   * @generated
+   */
+  EReference getCheck_Val();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Fill <em>Fill</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1756,6 +2070,17 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    */
   EClass getFill();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Fill#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Val</em>'.
+   * @see org.xtext.mda.project.browserDSL.Fill#getVal()
+   * @see #getFill()
+   * @generated
+   */
+  EReference getFill_Val();
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Clear <em>Clear</em>}'.
@@ -1786,6 +2111,17 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    */
   EClass getExist();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Exist#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Val</em>'.
+   * @see org.xtext.mda.project.browserDSL.Exist#getVal()
+   * @see #getExist()
+   * @generated
+   */
+  EReference getExist_Val();
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.GoTo <em>Go To</em>}'.
@@ -2036,6 +2372,14 @@ public interface BrowserDSLPackage extends EPackage
     EReference INSTRUCTION__COND = eINSTANCE.getInstruction_Cond();
 
     /**
+     * The meta object literal for the '<em><b>While</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INSTRUCTION__WHILE = eINSTANCE.getInstruction_While();
+
+    /**
      * The meta object literal for the '<em><b>Act</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2050,6 +2394,14 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EReference INSTRUCTION__ASS = eINSTANCE.getInstruction_Ass();
+
+    /**
+     * The meta object literal for the '<em><b>Sub</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INSTRUCTION__SUB = eINSTANCE.getInstruction_Sub();
 
     /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ConditionImpl <em>Condition</em>}' class.
@@ -2084,6 +2436,32 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EReference CONDITION__INS2 = eINSTANCE.getCondition_Ins2();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.WhileImpl <em>While</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.WhileImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getWhile()
+     * @generated
+     */
+    EClass WHILE = eINSTANCE.getWhile();
+
+    /**
+     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference WHILE__EXP = eINSTANCE.getWhile_Exp();
+
+    /**
+     * The meta object literal for the '<em><b>Ins</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference WHILE__INS = eINSTANCE.getWhile_Ins();
 
     /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ActionInstructionImpl <em>Action Instruction</em>}' class.
@@ -2260,6 +2638,14 @@ public interface BrowserDSLPackage extends EPackage
     EClass ACTION_EXPRESSION = eINSTANCE.getActionExpression();
 
     /**
+     * The meta object literal for the '<em><b>Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ACTION_EXPRESSION__EXPR = eINSTANCE.getActionExpression_Expr();
+
+    /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ElementImpl <em>Element</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2390,6 +2776,42 @@ public interface BrowserDSLPackage extends EPackage
     EAttribute TEXT_FIELD__TEXT = eINSTANCE.getTextField_Text();
 
     /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.TypeElementImpl <em>Type Element</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.TypeElementImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getTypeElement()
+     * @generated
+     */
+    EClass TYPE_ELEMENT = eINSTANCE.getTypeElement();
+
+    /**
+     * The meta object literal for the '<em><b>Elem</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TYPE_ELEMENT__ELEM = eINSTANCE.getTypeElement_Elem();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.SelectImpl <em>Select</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.SelectImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getSelect()
+     * @generated
+     */
+    EClass SELECT = eINSTANCE.getSelect();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SELECT__VALUE = eINSTANCE.getSelect_Value();
+
+    /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ClickImpl <em>Click</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2400,6 +2822,32 @@ public interface BrowserDSLPackage extends EPackage
     EClass CLICK = eINSTANCE.getClick();
 
     /**
+     * The meta object literal for the '<em><b>Val</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CLICK__VAL = eINSTANCE.getClick_Val();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.CheckImpl <em>Check</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.impl.CheckImpl
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getCheck()
+     * @generated
+     */
+    EClass CHECK = eINSTANCE.getCheck();
+
+    /**
+     * The meta object literal for the '<em><b>Val</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHECK__VAL = eINSTANCE.getCheck_Val();
+
+    /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.FillImpl <em>Fill</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2408,6 +2856,14 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EClass FILL = eINSTANCE.getFill();
+
+    /**
+     * The meta object literal for the '<em><b>Val</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FILL__VAL = eINSTANCE.getFill_Val();
 
     /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ClearImpl <em>Clear</em>}' class.
@@ -2438,6 +2894,14 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EClass EXIST = eINSTANCE.getExist();
+
+    /**
+     * The meta object literal for the '<em><b>Val</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXIST__VAL = eINSTANCE.getExist_Val();
 
     /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.GoToImpl <em>Go To</em>}' class.

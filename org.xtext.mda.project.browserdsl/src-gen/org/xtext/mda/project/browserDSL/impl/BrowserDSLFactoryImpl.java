@@ -75,6 +75,7 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
       case BrowserDSLPackage.BODY: return createBody();
       case BrowserDSLPackage.INSTRUCTION: return createInstruction();
       case BrowserDSLPackage.CONDITION: return createCondition();
+      case BrowserDSLPackage.WHILE: return createWhile();
       case BrowserDSLPackage.ACTION_INSTRUCTION: return createActionInstruction();
       case BrowserDSLPackage.VARIABLE_NAME: return createVariableName();
       case BrowserDSLPackage.DECLARATION: return createDeclaration();
@@ -91,7 +92,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
       case BrowserDSLPackage.BUTTON: return createButton();
       case BrowserDSLPackage.IMAGE: return createImage();
       case BrowserDSLPackage.TEXT_FIELD: return createTextField();
+      case BrowserDSLPackage.TYPE_ELEMENT: return createTypeElement();
+      case BrowserDSLPackage.SELECT: return createSelect();
       case BrowserDSLPackage.CLICK: return createClick();
+      case BrowserDSLPackage.CHECK: return createCheck();
       case BrowserDSLPackage.FILL: return createFill();
       case BrowserDSLPackage.CLEAR: return createClear();
       case BrowserDSLPackage.VERIFY: return createVerify();
@@ -221,6 +225,17 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
   {
     ConditionImpl condition = new ConditionImpl();
     return condition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public While createWhile()
+  {
+    WhileImpl while_ = new WhileImpl();
+    return while_;
   }
 
   /**
@@ -404,10 +419,43 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public TypeElement createTypeElement()
+  {
+    TypeElementImpl typeElement = new TypeElementImpl();
+    return typeElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Select createSelect()
+  {
+    SelectImpl select = new SelectImpl();
+    return select;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Click createClick()
   {
     ClickImpl click = new ClickImpl();
     return click;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Check createCheck()
+  {
+    CheckImpl check = new CheckImpl();
+    return check;
   }
 
   /**

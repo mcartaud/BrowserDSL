@@ -130,6 +130,11 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
         return createConditionAdapter();
       }
       @Override
+      public Adapter caseWhile(While object)
+      {
+        return createWhileAdapter();
+      }
+      @Override
       public Adapter caseActionInstruction(ActionInstruction object)
       {
         return createActionInstructionAdapter();
@@ -210,9 +215,24 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
         return createTextFieldAdapter();
       }
       @Override
+      public Adapter caseTypeElement(TypeElement object)
+      {
+        return createTypeElementAdapter();
+      }
+      @Override
+      public Adapter caseSelect(Select object)
+      {
+        return createSelectAdapter();
+      }
+      @Override
       public Adapter caseClick(Click object)
       {
         return createClickAdapter();
+      }
+      @Override
+      public Adapter caseCheck(Check object)
+      {
+        return createCheckAdapter();
       }
       @Override
       public Adapter caseFill(Fill object)
@@ -422,6 +442,21 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createConditionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.While <em>While</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.While
+   * @generated
+   */
+  public Adapter createWhileAdapter()
   {
     return null;
   }
@@ -667,6 +702,36 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.TypeElement <em>Type Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.TypeElement
+   * @generated
+   */
+  public Adapter createTypeElementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.Select <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.Select
+   * @generated
+   */
+  public Adapter createSelectAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.Click <em>Click</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -677,6 +742,21 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createClickAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.Check <em>Check</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.Check
+   * @generated
+   */
+  public Adapter createCheckAdapter()
   {
     return null;
   }

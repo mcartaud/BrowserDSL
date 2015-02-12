@@ -4,6 +4,8 @@ package org.xtext.mda.project.browserDSL.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
 import org.xtext.mda.project.browserDSL.Verify;
 
@@ -16,7 +18,7 @@ import org.xtext.mda.project.browserDSL.Verify;
  *
  * @generated
  */
-public class VerifyImpl extends ActionExpressionImpl implements Verify
+public class VerifyImpl extends MinimalEObjectImpl.Container implements Verify
 {
   /**
    * <!-- begin-user-doc -->

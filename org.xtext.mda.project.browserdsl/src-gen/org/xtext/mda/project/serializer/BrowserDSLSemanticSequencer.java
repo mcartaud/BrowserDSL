@@ -13,15 +13,20 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEOb
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.xtext.mda.project.browserDSL.ActionExpression;
 import org.xtext.mda.project.browserDSL.ActionInstruction;
 import org.xtext.mda.project.browserDSL.Assignation;
 import org.xtext.mda.project.browserDSL.Body;
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
 import org.xtext.mda.project.browserDSL.Button;
+import org.xtext.mda.project.browserDSL.Check;
 import org.xtext.mda.project.browserDSL.Checkbox;
+import org.xtext.mda.project.browserDSL.Click;
 import org.xtext.mda.project.browserDSL.Condition;
 import org.xtext.mda.project.browserDSL.Declaration;
+import org.xtext.mda.project.browserDSL.Exist;
 import org.xtext.mda.project.browserDSL.Expression;
+import org.xtext.mda.project.browserDSL.Fill;
 import org.xtext.mda.project.browserDSL.FunctionName;
 import org.xtext.mda.project.browserDSL.FunctionReference;
 import org.xtext.mda.project.browserDSL.GoTo;
@@ -30,11 +35,14 @@ import org.xtext.mda.project.browserDSL.Image;
 import org.xtext.mda.project.browserDSL.Instruction;
 import org.xtext.mda.project.browserDSL.Link;
 import org.xtext.mda.project.browserDSL.Program;
+import org.xtext.mda.project.browserDSL.Select;
 import org.xtext.mda.project.browserDSL.Subroutine;
 import org.xtext.mda.project.browserDSL.TextField;
+import org.xtext.mda.project.browserDSL.TypeElement;
 import org.xtext.mda.project.browserDSL.Variable;
 import org.xtext.mda.project.browserDSL.VariableName;
 import org.xtext.mda.project.browserDSL.VariableReference;
+import org.xtext.mda.project.browserDSL.While;
 import org.xtext.mda.project.services.BrowserDSLGrammarAccess;
 
 @SuppressWarnings("all")
@@ -45,6 +53,12 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == BrowserDSLPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case BrowserDSLPackage.ACTION_EXPRESSION:
+				if(context == grammarAccess.getActionExpressionRule()) {
+					sequence_ActionExpression(context, (ActionExpression) semanticObject); 
+					return; 
+				}
+				else break;
 			case BrowserDSLPackage.ACTION_INSTRUCTION:
 				if(context == grammarAccess.getActionInstructionRule()) {
 					sequence_ActionInstruction(context, (ActionInstruction) semanticObject); 
@@ -65,25 +79,32 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 				}
 				else break;
 			case BrowserDSLPackage.BUTTON:
-				if(context == grammarAccess.getActionExpressionRule() ||
-				   context == grammarAccess.getButtonRule() ||
-				   context == grammarAccess.getClickRule() ||
+				if(context == grammarAccess.getButtonRule() ||
 				   context == grammarAccess.getClickableElementRule() ||
-				   context == grammarAccess.getElementRule() ||
-				   context == grammarAccess.getExistRule()) {
+				   context == grammarAccess.getElementRule()) {
 					sequence_Button(context, (Button) semanticObject); 
 					return; 
 				}
 				else break;
+			case BrowserDSLPackage.CHECK:
+				if(context == grammarAccess.getCheckRule()) {
+					sequence_Check(context, (Check) semanticObject); 
+					return; 
+				}
+				else break;
 			case BrowserDSLPackage.CHECKBOX:
-				if(context == grammarAccess.getActionExpressionRule() ||
-				   context == grammarAccess.getCheckableElementRule() ||
+				if(context == grammarAccess.getCheckableElementRule() ||
 				   context == grammarAccess.getCheckboxRule() ||
 				   context == grammarAccess.getClearRule() ||
 				   context == grammarAccess.getElementRule() ||
-				   context == grammarAccess.getExistRule() ||
 				   context == grammarAccess.getVerifyRule()) {
 					sequence_Checkbox(context, (Checkbox) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.CLICK:
+				if(context == grammarAccess.getClickRule()) {
+					sequence_Click(context, (Click) semanticObject); 
 					return; 
 				}
 				else break;
@@ -99,9 +120,21 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 					return; 
 				}
 				else break;
+			case BrowserDSLPackage.EXIST:
+				if(context == grammarAccess.getExistRule()) {
+					sequence_Exist(context, (Exist) semanticObject); 
+					return; 
+				}
+				else break;
 			case BrowserDSLPackage.EXPRESSION:
 				if(context == grammarAccess.getExpressionRule()) {
 					sequence_Expression(context, (Expression) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.FILL:
+				if(context == grammarAccess.getFillRule()) {
+					sequence_Fill(context, (Fill) semanticObject); 
 					return; 
 				}
 				else break;
@@ -132,11 +165,8 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 				}
 				else break;
 			case BrowserDSLPackage.IMAGE:
-				if(context == grammarAccess.getActionExpressionRule() ||
-				   context == grammarAccess.getClickRule() ||
-				   context == grammarAccess.getClickableElementRule() ||
+				if(context == grammarAccess.getClickableElementRule() ||
 				   context == grammarAccess.getElementRule() ||
-				   context == grammarAccess.getExistRule() ||
 				   context == grammarAccess.getImageRule()) {
 					sequence_Image(context, (Image) semanticObject); 
 					return; 
@@ -149,11 +179,8 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 				}
 				else break;
 			case BrowserDSLPackage.LINK:
-				if(context == grammarAccess.getActionExpressionRule() ||
-				   context == grammarAccess.getClickRule() ||
-				   context == grammarAccess.getClickableElementRule() ||
+				if(context == grammarAccess.getClickableElementRule() ||
 				   context == grammarAccess.getElementRule() ||
-				   context == grammarAccess.getExistRule() ||
 				   context == grammarAccess.getLinkRule()) {
 					sequence_Link(context, (Link) semanticObject); 
 					return; 
@@ -165,6 +192,14 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 					return; 
 				}
 				else break;
+			case BrowserDSLPackage.SELECT:
+				if(context == grammarAccess.getClearRule() ||
+				   context == grammarAccess.getSelectRule() ||
+				   context == grammarAccess.getVerifyRule()) {
+					sequence_Select(context, (Select) semanticObject); 
+					return; 
+				}
+				else break;
 			case BrowserDSLPackage.SUBROUTINE:
 				if(context == grammarAccess.getSubroutineRule()) {
 					sequence_Subroutine(context, (Subroutine) semanticObject); 
@@ -172,11 +207,8 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 				}
 				else break;
 			case BrowserDSLPackage.TEXT_FIELD:
-				if(context == grammarAccess.getActionExpressionRule() ||
-				   context == grammarAccess.getClearRule() ||
+				if(context == grammarAccess.getClearRule() ||
 				   context == grammarAccess.getElementRule() ||
-				   context == grammarAccess.getExistRule() ||
-				   context == grammarAccess.getFillRule() ||
 				   context == grammarAccess.getFillableElementRule() ||
 				   context == grammarAccess.getTextFieldRule() ||
 				   context == grammarAccess.getVerifyRule()) {
@@ -184,17 +216,19 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 					return; 
 				}
 				else break;
+			case BrowserDSLPackage.TYPE_ELEMENT:
+				if(context == grammarAccess.getTypeElementRule()) {
+					sequence_TypeElement(context, (TypeElement) semanticObject); 
+					return; 
+				}
+				else break;
 			case BrowserDSLPackage.VARIABLE:
-				if(context == grammarAccess.getActionExpressionRule() ||
-				   context == grammarAccess.getButtonRule() ||
+				if(context == grammarAccess.getButtonRule() ||
 				   context == grammarAccess.getCheckableElementRule() ||
 				   context == grammarAccess.getCheckboxRule() ||
 				   context == grammarAccess.getClearRule() ||
-				   context == grammarAccess.getClickRule() ||
 				   context == grammarAccess.getClickableElementRule() ||
 				   context == grammarAccess.getElementRule() ||
-				   context == grammarAccess.getExistRule() ||
-				   context == grammarAccess.getFillRule() ||
 				   context == grammarAccess.getFillableElementRule() ||
 				   context == grammarAccess.getImageRule() ||
 				   context == grammarAccess.getLinkRule() ||
@@ -217,13 +251,28 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 					return; 
 				}
 				else break;
+			case BrowserDSLPackage.WHILE:
+				if(context == grammarAccess.getWhileRule()) {
+					sequence_While(context, (While) semanticObject); 
+					return; 
+				}
+				else break;
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
 	
 	/**
 	 * Constraint:
-	 *     (action=Click | action=Fill | action=Clear)
+	 *     (expr=Verify | expr=Exist)
+	 */
+	protected void sequence_ActionExpression(EObject context, ActionExpression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (action=Click | action=Check | action=Fill | action=Clear)
 	 */
 	protected void sequence_ActionInstruction(EObject context, ActionInstruction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -276,6 +325,15 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
+	 *     (val=CheckableElement | val=Select)
+	 */
+	protected void sequence_Check(EObject context, Check semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     check=STRING
 	 */
 	protected void sequence_Checkbox(EObject context, Checkbox semanticObject) {
@@ -287,6 +345,15 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getCheckboxAccess().getCheckSTRINGTerminalRuleCall_1_0_0(), semanticObject.getCheck());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (val=ClickableElement | val=Select)
+	 */
+	protected void sequence_Click(EObject context, Click semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -320,9 +387,27 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
+	 *     (val=Element | val=Select)
+	 */
+	protected void sequence_Exist(EObject context, Exist semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (type=Type | var=Variable | act=ActionExpression | (left=Expression right=Expression) | exp=Expression)
 	 */
 	protected void sequence_Expression(EObject context, Expression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (val=FillableElement | val=Select)
+	 */
+	protected void sequence_Fill(EObject context, Fill semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -388,7 +473,14 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (dec=Declaration | cond=Condition | act=ActionInstruction | ass=Assignation)
+	 *     (
+	 *         dec=Declaration | 
+	 *         cond=Condition | 
+	 *         while=While | 
+	 *         act=ActionInstruction | 
+	 *         ass=Assignation | 
+	 *         sub=FunctionCall
+	 *     )
 	 */
 	protected void sequence_Instruction(EObject context, Instruction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -422,6 +514,22 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
+	 *     value=TypeElement
+	 */
+	protected void sequence_Select(EObject context, Select semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.SELECT__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.SELECT__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getSelectAccess().getValueTypeElementParserRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (head=Head body+=Body)
 	 */
 	protected void sequence_Subroutine(EObject context, Subroutine semanticObject) {
@@ -442,6 +550,15 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getTextFieldAccess().getTextSTRINGTerminalRuleCall_1_0_0(), semanticObject.getText());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (elem='checkbox' | elem='link' | elem='button' | elem='image' | elem='textField')
+	 */
+	protected void sequence_TypeElement(EObject context, TypeElement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -482,6 +599,15 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     var=VariableReference
 	 */
 	protected void sequence_Variable(EObject context, Variable semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (exp=Expression ins+=Instruction+)
+	 */
+	protected void sequence_While(EObject context, While semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 }

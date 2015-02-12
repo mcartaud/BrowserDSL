@@ -37,13 +37,19 @@
     <genClasses ecoreClass="BrowserDSL.ecore#//Instruction">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/dec"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/cond"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/while"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/act"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/ass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/sub"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Condition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Condition/exp"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Condition/ins"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Condition/ins2"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//While">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//While/exp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//While/ins"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//ActionInstruction">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//ActionInstruction/action"/>
@@ -70,7 +76,9 @@
     <genClasses ecoreClass="BrowserDSL.ecore#//Variable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Variable/var"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//ActionExpression"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//ActionExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//ActionExpression/expr"/>
+    </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Element"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//ClickableElement"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//FillableElement"/>
@@ -90,11 +98,26 @@
     <genClasses ecoreClass="BrowserDSL.ecore#//TextField">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//TextField/text"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Click"/>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Fill"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//TypeElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//TypeElement/elem"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Select">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Select/value"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Click">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Click/val"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Check">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Check/val"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Fill">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Fill/val"/>
+    </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Clear"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Verify"/>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Exist"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Exist">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Exist/val"/>
+    </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//GoTo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//GoTo/url"/>
     </genClasses>

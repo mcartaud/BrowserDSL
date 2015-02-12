@@ -4,6 +4,8 @@ package org.xtext.mda.project.browserDSL.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
 import org.xtext.mda.project.browserDSL.Element;
 
@@ -16,7 +18,7 @@ import org.xtext.mda.project.browserDSL.Element;
  *
  * @generated
  */
-public class ElementImpl extends ExistImpl implements Element
+public class ElementImpl extends MinimalEObjectImpl.Container implements Element
 {
   /**
    * <!-- begin-user-doc -->

@@ -13,6 +13,6 @@ package org.xtext.mda.project.browserDSL;
  * @model
  * @generated
  */
-public interface ClickableElement extends Element, Click
+public interface ClickableElement extends Element
 {
 } // ClickableElement

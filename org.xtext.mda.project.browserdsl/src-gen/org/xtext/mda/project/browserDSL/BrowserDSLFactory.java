@@ -122,6 +122,15 @@ public interface BrowserDSLFactory extends EFactory
   Condition createCondition();
 
   /**
+   * Returns a new object of class '<em>While</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>While</em>'.
+   * @generated
+   */
+  While createWhile();
+
+  /**
    * Returns a new object of class '<em>Action Instruction</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -266,6 +275,24 @@ public interface BrowserDSLFactory extends EFactory
   TextField createTextField();
 
   /**
+   * Returns a new object of class '<em>Type Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Type Element</em>'.
+   * @generated
+   */
+  TypeElement createTypeElement();
+
+  /**
+   * Returns a new object of class '<em>Select</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Select</em>'.
+   * @generated
+   */
+  Select createSelect();
+
+  /**
    * Returns a new object of class '<em>Click</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -273,6 +300,15 @@ public interface BrowserDSLFactory extends EFactory
    * @generated
    */
   Click createClick();
+
+  /**
+   * Returns a new object of class '<em>Check</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Check</em>'.
+   * @generated
+   */
+  Check createCheck();
 
   /**
    * Returns a new object of class '<em>Fill</em>'.

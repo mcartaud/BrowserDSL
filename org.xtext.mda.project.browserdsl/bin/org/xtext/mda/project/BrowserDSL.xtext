@@ -44,9 +44,10 @@ Body:
 Instruction:
 	dec=Declaration
 	| cond=Condition
-	//| loop=Loop
+	| while=While
 	| act=ActionInstruction
 	| ass=Assignation
+	| sub=FunctionCall
 ;
 
 Condition:
@@ -56,13 +57,14 @@ Condition:
 	'endif'
 ;
 
-//Loop:
-	//'toto'
-	//While | Foreach
-//;
+While:
+    'while (' exp=Expression ') do '
+        ins+=Instruction+ 
+    ' endwhile'
+;
 
 ActionInstruction:
-	action=Click | action=Fill | action=Clear | GoTo
+	action=Click | action=Check | action=Fill | action=Clear | GoTo
 ;
 
 VariableName:
@@ -94,7 +96,7 @@ Variable:
 ;
 
 ActionExpression:
-	Verify | Exist
+	expr=Verify | expr=Exist
 ;
 
 Element:
@@ -133,80 +135,43 @@ TextField:
 	'textField ' (text=STRING | Variable)
 ;
 
-//Model:
-//	variables+=Variable (';' variables+=Variable)* ';' 
-//	subroutines+=SubRoutine (';' subroutines+=SubRoutine)* ';'
-//	main=Main ';'
-//;
-//
-//SubRoutine:
-//	'sub ' name=STRING
-//	'(' (STRING ', ')* STRING ') {'
-//		action+=Action (',' action+=Action)*
-//	'}'
-//;
-//	
-//Main:
-//	actions+=Action (',' action+=Action)*
-//;	
-//	
-//Action:
-//	(Click | Fill | Clear | Verify | Exist | GoTo | SubRoutineCall)
-//;
-//	
-//SubRoutineCall :
-//	id=[SubRoutine]
-//;
-//
-//List:
-//	'['element+=Element (', ' element+=Element)* ']'
-//;
-//
+
+TypeElement:
+	elem=('checkbox'|'link'|'button'|'image'|'textField')
+;
+
+Select:
+	'select(' value=TypeElement ')'
+;
 
 
 Click:
-	'click(' ClickableElement ')' ';'
+	'click(' val=(ClickableElement | Select) ');'
+;
+
+Check:
+	'check(' val=(CheckableElement | Select) ');'
 ;
 
 Fill:
-	'fill(' FillableElement ', value=' STRING ')' ';'
+	'fill(' val=(FillableElement | Select) ', value=' STRING ');'
 ;
 
 Clear:
-	'clear(' (FillableElement | CheckableElement) ')' ';'
+	'clear(' (FillableElement | CheckableElement | Select) ');'
 ;
 
 Verify:
-	'verify(' (FillableElement | CheckableElement) ', value=' STRING ')' ';'
+	'verify(' (FillableElement | CheckableElement | Select) ', value=' STRING ');'
 ;
 
 Exist:
-	'exist(' Element ')' ';'
+	'exist(' val=(Element | Select) ');'
 ;
 
 GoTo:
-	'goTo(' url=URL ')' ';'
+	'goTo(' url=URL ');'
 ;
-//
-//Variable:
-//	VariableList | VariableString | VariableUrl
-//;
-//
-//VariableString:
-//	'var ' name=STRING
-//	' = ' STRING ';'
-//;
-//
-//VariableUrl:
-//	'var ' name=STRING
-//	' = ' URL ';'
-//;
-//
-//VariableList:
-//	'var ' name=STRING
-//	' = ' value=List ';'
-//;
-//
 
 terminal URL:
     ('a'..'z')+ '://' // Protocol
