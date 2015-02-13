@@ -34,11 +34,11 @@ FunctionName:
 ;
 
 Main:
-	'main ' Body
+	'main' body=Body
 ;
 
 Body:
-	'{browser' open=OpenBrowser '; '
+	'{ browser ' open=OpenBrowser '; '
 	instructions+=Instruction (' ' instructions+=Instruction)* 
 	'}'
 ;

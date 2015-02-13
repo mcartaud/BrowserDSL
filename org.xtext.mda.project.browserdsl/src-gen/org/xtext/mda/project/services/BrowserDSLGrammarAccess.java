@@ -274,20 +274,24 @@ public class BrowserDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Main");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMainKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cBodyParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cBodyAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cBodyBodyParserRuleCall_1_0 = (RuleCall)cBodyAssignment_1.eContents().get(0);
 		
 		//Main:
-		//	"main " Body;
+		//	"main" body=Body;
 		public ParserRule getRule() { return rule; }
 
-		//"main " Body
+		//"main" body=Body
 		public Group getGroup() { return cGroup; }
 
-		//"main "
+		//"main"
 		public Keyword getMainKeyword_0() { return cMainKeyword_0; }
 
+		//body=Body
+		public Assignment getBodyAssignment_1() { return cBodyAssignment_1; }
+
 		//Body
-		public RuleCall getBodyParserRuleCall_1() { return cBodyParserRuleCall_1; }
+		public RuleCall getBodyBodyParserRuleCall_1_0() { return cBodyBodyParserRuleCall_1_0; }
 	}
 
 	public class BodyElements extends AbstractParserRuleElementFinder {
@@ -306,13 +310,13 @@ public class BrowserDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Body:
-		//	"{browser" open=OpenBrowser "; " instructions+=Instruction (" " instructions+=Instruction)* "}";
+		//	"{ browser " open=OpenBrowser "; " instructions+=Instruction (" " instructions+=Instruction)* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"{browser" open=OpenBrowser "; " instructions+=Instruction (" " instructions+=Instruction)* "}"
+		//"{ browser " open=OpenBrowser "; " instructions+=Instruction (" " instructions+=Instruction)* "}"
 		public Group getGroup() { return cGroup; }
 
-		//"{browser"
+		//"{ browser "
 		public Keyword getBrowserKeyword_0() { return cBrowserKeyword_0; }
 
 		//open=OpenBrowser
@@ -1591,7 +1595,7 @@ public class BrowserDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Main:
-	//	"main " Body;
+	//	"main" body=Body;
 	public MainElements getMainAccess() {
 		return pMain;
 	}
@@ -1601,7 +1605,7 @@ public class BrowserDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Body:
-	//	"{browser" open=OpenBrowser "; " instructions+=Instruction (" " instructions+=Instruction)* "}";
+	//	"{ browser " open=OpenBrowser "; " instructions+=Instruction (" " instructions+=Instruction)* "}";
 	public BodyElements getBodyAccess() {
 		return pBody;
 	}

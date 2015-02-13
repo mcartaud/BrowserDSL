@@ -2555,7 +2555,7 @@ rule__Main__Group__0__Impl
 (
 { before(grammarAccess.getMainAccess().getMainKeyword_0()); }
 
-	'main ' 
+	'main' 
 
 { after(grammarAccess.getMainAccess().getMainKeyword_0()); }
 )
@@ -2583,9 +2583,9 @@ rule__Main__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getMainAccess().getBodyParserRuleCall_1()); }
-	ruleBody
-{ after(grammarAccess.getMainAccess().getBodyParserRuleCall_1()); }
+{ before(grammarAccess.getMainAccess().getBodyAssignment_1()); }
+(rule__Main__BodyAssignment_1)
+{ after(grammarAccess.getMainAccess().getBodyAssignment_1()); }
 )
 
 ;
@@ -2618,7 +2618,7 @@ rule__Body__Group__0__Impl
 (
 { before(grammarAccess.getBodyAccess().getBrowserKeyword_0()); }
 
-	'{browser' 
+	'{ browser ' 
 
 { after(grammarAccess.getBodyAccess().getBrowserKeyword_0()); }
 )
@@ -5204,6 +5204,21 @@ rule__FunctionName__NameAssignment
 (
 { before(grammarAccess.getFunctionNameAccess().getNameSTRINGTerminalRuleCall_0()); }
 	RULE_STRING{ after(grammarAccess.getFunctionNameAccess().getNameSTRINGTerminalRuleCall_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Main__BodyAssignment_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getMainAccess().getBodyBodyParserRuleCall_1_0()); }
+	ruleBody{ after(grammarAccess.getMainAccess().getBodyBodyParserRuleCall_1_0()); }
 )
 
 ;

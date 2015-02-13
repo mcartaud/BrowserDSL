@@ -505,20 +505,29 @@ ruleMain returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='main ' 
+(	otherlv_0='main' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getMainAccess().getMainKeyword_0());
     }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getMainAccess().getBodyBodyParserRuleCall_1_0()); 
+	    }
+		lv_body_1_0=ruleBody		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getMainRule());
+	        }
+       		set(
+       			$current, 
+       			"body",
+        		lv_body_1_0, 
+        		"Body");
+	        afterParserOrEnumRuleCall();
+	    }
 
-    { 
-        newCompositeNode(grammarAccess.getMainAccess().getBodyParserRuleCall_1()); 
-    }
-    this_Body_1=ruleBody
-    { 
-        $current = $this_Body_1.current; 
-        afterParserOrEnumRuleCall();
-    }
 )
+))
 ;
 
 
@@ -539,7 +548,7 @@ ruleBody returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='{browser' 
+(	otherlv_0='{ browser ' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getBodyAccess().getBrowserKeyword_0());
     }

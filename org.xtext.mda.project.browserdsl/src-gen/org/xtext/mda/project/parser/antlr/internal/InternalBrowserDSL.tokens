@@ -39,7 +39,7 @@
 'int '=42
 'link '=44
 'link'=49
-'main '=19
+'main'=19
 'select('=53
 'string '=41
 'sub '=12
@@ -49,7 +49,7 @@
 'var '=33
 'verify('=60
 'while ('=30
-'{browser'=20
+'{ browser '=20
 '}'=23
 RULE_ANY_OTHER=11
 RULE_ID=4

@@ -34,6 +34,7 @@ import org.xtext.mda.project.browserDSL.Head;
 import org.xtext.mda.project.browserDSL.Image;
 import org.xtext.mda.project.browserDSL.Instruction;
 import org.xtext.mda.project.browserDSL.Link;
+import org.xtext.mda.project.browserDSL.Main;
 import org.xtext.mda.project.browserDSL.Program;
 import org.xtext.mda.project.browserDSL.Select;
 import org.xtext.mda.project.browserDSL.Subroutine;
@@ -72,8 +73,7 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 				}
 				else break;
 			case BrowserDSLPackage.BODY:
-				if(context == grammarAccess.getBodyRule() ||
-				   context == grammarAccess.getMainRule()) {
+				if(context == grammarAccess.getBodyRule()) {
 					sequence_Body(context, (Body) semanticObject); 
 					return; 
 				}
@@ -183,6 +183,12 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 				   context == grammarAccess.getElementRule() ||
 				   context == grammarAccess.getLinkRule()) {
 					sequence_Link(context, (Link) semanticObject); 
+					return; 
+				}
+				else break;
+			case BrowserDSLPackage.MAIN:
+				if(context == grammarAccess.getMainRule()) {
+					sequence_Main(context, (Main) semanticObject); 
 					return; 
 				}
 				else break;
@@ -499,6 +505,22 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getLinkAccess().getLinkSTRINGTerminalRuleCall_1_0_0(), semanticObject.getLink());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     body=Body
+	 */
+	protected void sequence_Main(EObject context, Main semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BrowserDSLPackage.Literals.MAIN__BODY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserDSLPackage.Literals.MAIN__BODY));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getMainAccess().getBodyBodyParserRuleCall_1_0(), semanticObject.getBody());
 		feeder.finish();
 	}
 	

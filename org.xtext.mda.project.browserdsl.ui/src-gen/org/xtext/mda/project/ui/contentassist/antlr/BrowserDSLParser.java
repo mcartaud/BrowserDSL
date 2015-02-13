@@ -104,6 +104,7 @@ public class BrowserDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFunctionCallAccess().getVarAssignment_1_2(), "rule__FunctionCall__VarAssignment_1_2");
 					put(grammarAccess.getFunctionCallAccess().getVarAssignment_1_3_1(), "rule__FunctionCall__VarAssignment_1_3_1");
 					put(grammarAccess.getFunctionNameAccess().getNameAssignment(), "rule__FunctionName__NameAssignment");
+					put(grammarAccess.getMainAccess().getBodyAssignment_1(), "rule__Main__BodyAssignment_1");
 					put(grammarAccess.getBodyAccess().getOpenAssignment_1(), "rule__Body__OpenAssignment_1");
 					put(grammarAccess.getBodyAccess().getInstructionsAssignment_3(), "rule__Body__InstructionsAssignment_3");
 					put(grammarAccess.getBodyAccess().getInstructionsAssignment_4_1(), "rule__Body__InstructionsAssignment_4_1");

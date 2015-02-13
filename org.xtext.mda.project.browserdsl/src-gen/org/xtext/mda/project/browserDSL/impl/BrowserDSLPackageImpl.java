@@ -573,6 +573,16 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getMain_Body()
+  {
+    return (EReference)mainEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getBody()
   {
     return bodyEClass;
@@ -1313,6 +1323,7 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     createEAttribute(functionNameEClass, FUNCTION_NAME__NAME);
 
     mainEClass = createEClass(MAIN);
+    createEReference(mainEClass, MAIN__BODY);
 
     bodyEClass = createEClass(BODY);
     createEAttribute(bodyEClass, BODY__OPEN);
@@ -1445,7 +1456,6 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
 
     // Add supertypes to classes
     functionReferenceEClass.getESuperTypes().add(this.getFunctionCall());
-    bodyEClass.getESuperTypes().add(this.getMain());
     variableEClass.getESuperTypes().add(this.getCheckbox());
     variableEClass.getESuperTypes().add(this.getLink());
     variableEClass.getESuperTypes().add(this.getButton());
@@ -1493,6 +1503,7 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     initEAttribute(getFunctionName_Name(), ecorePackage.getEString(), "name", null, 0, 1, FunctionName.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mainEClass, Main.class, "Main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMain_Body(), this.getBody(), null, "body", null, 0, 1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(bodyEClass, Body.class, "Body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBody_Open(), this.getOpenBrowser(), "open", null, 0, 1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

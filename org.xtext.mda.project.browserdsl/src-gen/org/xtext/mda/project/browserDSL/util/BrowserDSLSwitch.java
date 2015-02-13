@@ -133,7 +133,6 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         Body body = (Body)theEObject;
         T result = caseBody(body);
-        if (result == null) result = caseMain(body);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

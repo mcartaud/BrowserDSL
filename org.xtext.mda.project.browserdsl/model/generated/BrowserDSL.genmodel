@@ -34,7 +34,9 @@
     <genClasses ecoreClass="BrowserDSL.ecore#//FunctionName">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//FunctionName/name"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Main"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Main">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Main/body"/>
+    </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Body">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Body/open"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Body/instructions"/>

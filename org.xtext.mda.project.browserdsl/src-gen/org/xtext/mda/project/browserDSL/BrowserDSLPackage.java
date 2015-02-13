@@ -291,13 +291,22 @@ public interface BrowserDSLPackage extends EPackage
   int MAIN = 7;
 
   /**
+   * The feature id for the '<em><b>Body</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN__BODY = 0;
+
+  /**
    * The number of structural features of the '<em>Main</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MAIN_FEATURE_COUNT = 0;
+  int MAIN_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.BodyImpl <em>Body</em>}' class.
@@ -316,7 +325,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY__OPEN = MAIN_FEATURE_COUNT + 0;
+  int BODY__OPEN = 0;
 
   /**
    * The feature id for the '<em><b>Instructions</b></em>' containment reference list.
@@ -325,7 +334,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY__INSTRUCTIONS = MAIN_FEATURE_COUNT + 1;
+  int BODY__INSTRUCTIONS = 1;
 
   /**
    * The number of structural features of the '<em>Body</em>' class.
@@ -334,7 +343,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY_FEATURE_COUNT = MAIN_FEATURE_COUNT + 2;
+  int BODY_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.InstructionImpl <em>Instruction</em>}' class.
@@ -1457,6 +1466,17 @@ public interface BrowserDSLPackage extends EPackage
   EClass getMain();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Main#getBody <em>Body</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Body</em>'.
+   * @see org.xtext.mda.project.browserDSL.Main#getBody()
+   * @see #getMain()
+   * @generated
+   */
+  EReference getMain_Body();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Body <em>Body</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2367,6 +2387,14 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EClass MAIN = eINSTANCE.getMain();
+
+    /**
+     * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MAIN__BODY = eINSTANCE.getMain_Body();
 
     /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.BodyImpl <em>Body</em>}' class.
