@@ -300,7 +300,7 @@ public class BrowserDSLSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (instructions+=Instruction instructions+=Instruction*)
+	 *     (open=OpenBrowser instructions+=Instruction instructions+=Instruction*)
 	 */
 	protected void sequence_Body(EObject context, Body semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

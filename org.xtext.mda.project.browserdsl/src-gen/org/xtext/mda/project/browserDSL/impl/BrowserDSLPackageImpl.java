@@ -4,6 +4,7 @@ package org.xtext.mda.project.browserDSL.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -38,6 +39,7 @@ import org.xtext.mda.project.browserDSL.Image;
 import org.xtext.mda.project.browserDSL.Instruction;
 import org.xtext.mda.project.browserDSL.Link;
 import org.xtext.mda.project.browserDSL.Main;
+import org.xtext.mda.project.browserDSL.OpenBrowser;
 import org.xtext.mda.project.browserDSL.Program;
 import org.xtext.mda.project.browserDSL.Select;
 import org.xtext.mda.project.browserDSL.Subroutine;
@@ -317,6 +319,13 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
   private EClass goToEClass = null;
 
   /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum openBrowserEEnum = null;
+
+  /**
    * Creates an instance of the model <b>Package</b>, registered with
    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
    * package URI value.
@@ -574,9 +583,19 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getBody_Open()
+  {
+    return (EAttribute)bodyEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getBody_Instructions()
   {
-    return (EReference)bodyEClass.getEStructuralFeatures().get(0);
+    return (EReference)bodyEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1234,6 +1253,16 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EEnum getOpenBrowser()
+  {
+    return openBrowserEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public BrowserDSLFactory getBrowserDSLFactory()
   {
     return (BrowserDSLFactory)getEFactoryInstance();
@@ -1286,6 +1315,7 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     mainEClass = createEClass(MAIN);
 
     bodyEClass = createEClass(BODY);
+    createEAttribute(bodyEClass, BODY__OPEN);
     createEReference(bodyEClass, BODY__INSTRUCTIONS);
 
     instructionEClass = createEClass(INSTRUCTION);
@@ -1380,6 +1410,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
 
     goToEClass = createEClass(GO_TO);
     createEAttribute(goToEClass, GO_TO__URL);
+
+    // Create enums
+    openBrowserEEnum = createEEnum(OPEN_BROWSER);
   }
 
   /**
@@ -1462,6 +1495,7 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     initEClass(mainEClass, Main.class, "Main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(bodyEClass, Body.class, "Body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBody_Open(), this.getOpenBrowser(), "open", null, 0, 1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBody_Instructions(), this.getInstruction(), null, "instructions", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(instructionEClass, Instruction.class, "Instruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1556,6 +1590,11 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
 
     initEClass(goToEClass, GoTo.class, "GoTo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGoTo_Url(), ecorePackage.getEString(), "url", null, 0, 1, GoTo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    // Initialize enums and add enum literals
+    initEEnum(openBrowserEEnum, OpenBrowser.class, "OpenBrowser");
+    addEEnumLiteral(openBrowserEEnum, OpenBrowser.CHROME);
+    addEEnumLiteral(openBrowserEEnum, OpenBrowser.FIREFOX);
 
     // Create resource
     createResource(eNS_URI);

@@ -60,6 +60,7 @@ public class BrowserDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getClearAccess().getAlternatives_1(), "rule__Clear__Alternatives_1");
 					put(grammarAccess.getVerifyAccess().getAlternatives_1(), "rule__Verify__Alternatives_1");
 					put(grammarAccess.getExistAccess().getValAlternatives_1_0(), "rule__Exist__ValAlternatives_1_0");
+					put(grammarAccess.getOpenBrowserAccess().getAlternatives(), "rule__OpenBrowser__Alternatives");
 					put(grammarAccess.getProgramAccess().getGroup(), "rule__Program__Group__0");
 					put(grammarAccess.getSubroutineAccess().getGroup(), "rule__Subroutine__Group__0");
 					put(grammarAccess.getHeadAccess().getGroup_0(), "rule__Head__Group_0__0");
@@ -70,6 +71,7 @@ public class BrowserDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFunctionCallAccess().getGroup_1_3(), "rule__FunctionCall__Group_1_3__0");
 					put(grammarAccess.getMainAccess().getGroup(), "rule__Main__Group__0");
 					put(grammarAccess.getBodyAccess().getGroup(), "rule__Body__Group__0");
+					put(grammarAccess.getBodyAccess().getGroup_5(), "rule__Body__Group_5__0");
 					put(grammarAccess.getConditionAccess().getGroup(), "rule__Condition__Group__0");
 					put(grammarAccess.getWhileAccess().getGroup(), "rule__While__Group__0");
 					put(grammarAccess.getDeclarationAccess().getGroup(), "rule__Declaration__Group__0");
@@ -102,8 +104,9 @@ public class BrowserDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFunctionCallAccess().getVarAssignment_1_2(), "rule__FunctionCall__VarAssignment_1_2");
 					put(grammarAccess.getFunctionCallAccess().getVarAssignment_1_3_1(), "rule__FunctionCall__VarAssignment_1_3_1");
 					put(grammarAccess.getFunctionNameAccess().getNameAssignment(), "rule__FunctionName__NameAssignment");
-					put(grammarAccess.getBodyAccess().getInstructionsAssignment_1(), "rule__Body__InstructionsAssignment_1");
-					put(grammarAccess.getBodyAccess().getInstructionsAssignment_2(), "rule__Body__InstructionsAssignment_2");
+					put(grammarAccess.getBodyAccess().getOpenAssignment_2(), "rule__Body__OpenAssignment_2");
+					put(grammarAccess.getBodyAccess().getInstructionsAssignment_4(), "rule__Body__InstructionsAssignment_4");
+					put(grammarAccess.getBodyAccess().getInstructionsAssignment_5_1(), "rule__Body__InstructionsAssignment_5_1");
 					put(grammarAccess.getInstructionAccess().getDecAssignment_0(), "rule__Instruction__DecAssignment_0");
 					put(grammarAccess.getInstructionAccess().getCondAssignment_1(), "rule__Instruction__CondAssignment_1");
 					put(grammarAccess.getInstructionAccess().getWhileAssignment_2(), "rule__Instruction__WhileAssignment_2");

@@ -24,6 +24,7 @@ import org.eclipse.xtext.parser.*;
 import org.eclipse.xtext.parser.impl.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
@@ -542,45 +543,75 @@ ruleBody returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_0());
     }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getBodyAccess().getInstructionsInstructionParserRuleCall_1_0()); 
-	    }
-		lv_instructions_1_0=ruleInstruction		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getBodyRule());
-	        }
-       		add(
-       			$current, 
-       			"instructions",
-        		lv_instructions_1_0, 
-        		"Instruction");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getBodyAccess().getInstructionsInstructionParserRuleCall_2_0()); 
-	    }
-		lv_instructions_2_0=ruleInstruction		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getBodyRule());
-	        }
-       		add(
-       			$current, 
-       			"instructions",
-        		lv_instructions_2_0, 
-        		"Instruction");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)*	otherlv_3='}' 
+	otherlv_1='browser' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_3());
+    	newLeafNode(otherlv_1, grammarAccess.getBodyAccess().getBrowserKeyword_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBodyAccess().getOpenOpenBrowserEnumRuleCall_2_0()); 
+	    }
+		lv_open_2_0=ruleOpenBrowser		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBodyRule());
+	        }
+       		set(
+       			$current, 
+       			"open",
+        		lv_open_2_0, 
+        		"OpenBrowser");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_3=', ' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getBodyAccess().getCommaSpaceKeyword_3());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBodyAccess().getInstructionsInstructionParserRuleCall_4_0()); 
+	    }
+		lv_instructions_4_0=ruleInstruction		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBodyRule());
+	        }
+       		add(
+       			$current, 
+       			"instructions",
+        		lv_instructions_4_0, 
+        		"Instruction");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_5=' ' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getBodyAccess().getSpaceKeyword_5_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBodyAccess().getInstructionsInstructionParserRuleCall_5_1_0()); 
+	    }
+		lv_instructions_6_0=ruleInstruction		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBodyRule());
+	        }
+       		add(
+       			$current, 
+       			"instructions",
+        		lv_instructions_6_0, 
+        		"Instruction");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_7='}' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_6());
     }
 )
 ;
@@ -2463,6 +2494,25 @@ ruleGoTo returns [EObject current=null]
 ;
 
 
+
+
+
+// Rule OpenBrowser
+ruleOpenBrowser returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='Chrome' 
+	{
+        $current = grammarAccess.getOpenBrowserAccess().getChromeEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getOpenBrowserAccess().getChromeEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='Firefox' 
+	{
+        $current = grammarAccess.getOpenBrowserAccess().getFirefoxEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getOpenBrowserAccess().getFirefoxEnumLiteralDeclaration_1()); 
+    }
+));
 
 
 

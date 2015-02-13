@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBrowserDSLParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_URL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'all '", "'any '", "' == '", "' > '", "' < '", "'bool '", "'string '", "'int '", "'checkbox'", "'link'", "'button'", "'image'", "'textField'", "'sub '", "'()'", "'(var '", "')'", "', var '", "'('", "','", "'main '", "'{'", "'}'", "'if '", "'then '", "'else '", "'endif'", "'while ('", "') do '", "' endwhile'", "'var '", "' = '", "';'", "' !'", "'checkbox '", "'link '", "'button '", "'image '", "'textField '", "'select('", "'click('", "');'", "'check('", "'fill('", "', value='", "'clear('", "'verify('", "'exist('", "'goTo('"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_URL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'all '", "'any '", "' == '", "' > '", "' < '", "'bool '", "'string '", "'int '", "'checkbox'", "'link'", "'button'", "'image'", "'textField'", "'Chrome'", "'Firefox'", "'sub '", "'()'", "'(var '", "')'", "', var '", "'('", "','", "'main '", "'{'", "'browser'", "', '", "'}'", "' '", "'if '", "'then '", "'else '", "'endif'", "'while ('", "') do '", "' endwhile'", "'var '", "' = '", "';'", "' !'", "'checkbox '", "'link '", "'button '", "'image '", "'textField '", "'select('", "'click('", "');'", "'check('", "'fill('", "', value='", "'clear('", "'verify('", "'exist('", "'goTo('"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -43,6 +43,7 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
     public static final int T__53=53;
     public static final int T__54=54;
     public static final int T__60=60;
+    public static final int T__61=61;
     public static final int RULE_ID=5;
     public static final int T__26=26;
     public static final int T__27=27;
@@ -55,8 +56,12 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
+    public static final int T__62=62;
+    public static final int T__63=63;
     public static final int T__20=20;
+    public static final int T__64=64;
     public static final int T__21=21;
+    public static final int T__65=65;
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__37=37;
@@ -3034,25 +3039,72 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleGoTo"
 
 
+    // $ANTLR start "ruleOpenBrowser"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1125:1: ruleOpenBrowser : ( ( rule__OpenBrowser__Alternatives ) ) ;
+    public final void ruleOpenBrowser() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1129:1: ( ( ( rule__OpenBrowser__Alternatives ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1130:1: ( ( rule__OpenBrowser__Alternatives ) )
+            {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1130:1: ( ( rule__OpenBrowser__Alternatives ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1131:1: ( rule__OpenBrowser__Alternatives )
+            {
+             before(grammarAccess.getOpenBrowserAccess().getAlternatives()); 
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1132:1: ( rule__OpenBrowser__Alternatives )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1132:2: rule__OpenBrowser__Alternatives
+            {
+            pushFollow(FOLLOW_rule__OpenBrowser__Alternatives_in_ruleOpenBrowser2349);
+            rule__OpenBrowser__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getOpenBrowserAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleOpenBrowser"
+
+
     // $ANTLR start "rule__Head__Alternatives"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1124:1: rule__Head__Alternatives : ( ( ( rule__Head__Group_0__0 ) ) | ( ( rule__Head__Group_1__0 ) ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1143:1: rule__Head__Alternatives : ( ( ( rule__Head__Group_0__0 ) ) | ( ( rule__Head__Group_1__0 ) ) );
     public final void rule__Head__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1128:1: ( ( ( rule__Head__Group_0__0 ) ) | ( ( rule__Head__Group_1__0 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1147:1: ( ( ( rule__Head__Group_0__0 ) ) | ( ( rule__Head__Group_1__0 ) ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
             if ( (LA1_0==RULE_STRING) ) {
                 int LA1_1 = input.LA(2);
 
-                if ( (LA1_1==27) ) {
-                    alt1=2;
-                }
-                else if ( (LA1_1==26) ) {
+                if ( (LA1_1==28) ) {
                     alt1=1;
+                }
+                else if ( (LA1_1==29) ) {
+                    alt1=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -3069,16 +3121,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1129:1: ( ( rule__Head__Group_0__0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1148:1: ( ( rule__Head__Group_0__0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1129:1: ( ( rule__Head__Group_0__0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1130:1: ( rule__Head__Group_0__0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1148:1: ( ( rule__Head__Group_0__0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1149:1: ( rule__Head__Group_0__0 )
                     {
                      before(grammarAccess.getHeadAccess().getGroup_0()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1131:1: ( rule__Head__Group_0__0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1131:2: rule__Head__Group_0__0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1150:1: ( rule__Head__Group_0__0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1150:2: rule__Head__Group_0__0
                     {
-                    pushFollow(FOLLOW_rule__Head__Group_0__0_in_rule__Head__Alternatives2348);
+                    pushFollow(FOLLOW_rule__Head__Group_0__0_in_rule__Head__Alternatives2384);
                     rule__Head__Group_0__0();
 
                     state._fsp--;
@@ -3094,16 +3146,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1135:6: ( ( rule__Head__Group_1__0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1154:6: ( ( rule__Head__Group_1__0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1135:6: ( ( rule__Head__Group_1__0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1136:1: ( rule__Head__Group_1__0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1154:6: ( ( rule__Head__Group_1__0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1155:1: ( rule__Head__Group_1__0 )
                     {
                      before(grammarAccess.getHeadAccess().getGroup_1()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1137:1: ( rule__Head__Group_1__0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1137:2: rule__Head__Group_1__0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1156:1: ( rule__Head__Group_1__0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1156:2: rule__Head__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Head__Group_1__0_in_rule__Head__Alternatives2366);
+                    pushFollow(FOLLOW_rule__Head__Group_1__0_in_rule__Head__Alternatives2402);
                     rule__Head__Group_1__0();
 
                     state._fsp--;
@@ -3136,23 +3188,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Alternatives"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1146:1: rule__FunctionCall__Alternatives : ( ( ( rule__FunctionCall__Group_0__0 ) ) | ( ( rule__FunctionCall__Group_1__0 ) ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1165:1: rule__FunctionCall__Alternatives : ( ( ( rule__FunctionCall__Group_0__0 ) ) | ( ( rule__FunctionCall__Group_1__0 ) ) );
     public final void rule__FunctionCall__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1150:1: ( ( ( rule__FunctionCall__Group_0__0 ) ) | ( ( rule__FunctionCall__Group_1__0 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1169:1: ( ( ( rule__FunctionCall__Group_0__0 ) ) | ( ( rule__FunctionCall__Group_1__0 ) ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
             if ( (LA2_0==RULE_ID) ) {
                 int LA2_1 = input.LA(2);
 
-                if ( (LA2_1==30) ) {
+                if ( (LA2_1==32) ) {
                     alt2=2;
                 }
-                else if ( (LA2_1==26) ) {
+                else if ( (LA2_1==28) ) {
                     alt2=1;
                 }
                 else {
@@ -3170,16 +3222,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt2) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1151:1: ( ( rule__FunctionCall__Group_0__0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1170:1: ( ( rule__FunctionCall__Group_0__0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1151:1: ( ( rule__FunctionCall__Group_0__0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1152:1: ( rule__FunctionCall__Group_0__0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1170:1: ( ( rule__FunctionCall__Group_0__0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1171:1: ( rule__FunctionCall__Group_0__0 )
                     {
                      before(grammarAccess.getFunctionCallAccess().getGroup_0()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1153:1: ( rule__FunctionCall__Group_0__0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1153:2: rule__FunctionCall__Group_0__0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1172:1: ( rule__FunctionCall__Group_0__0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1172:2: rule__FunctionCall__Group_0__0
                     {
-                    pushFollow(FOLLOW_rule__FunctionCall__Group_0__0_in_rule__FunctionCall__Alternatives2399);
+                    pushFollow(FOLLOW_rule__FunctionCall__Group_0__0_in_rule__FunctionCall__Alternatives2435);
                     rule__FunctionCall__Group_0__0();
 
                     state._fsp--;
@@ -3195,16 +3247,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1157:6: ( ( rule__FunctionCall__Group_1__0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1176:6: ( ( rule__FunctionCall__Group_1__0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1157:6: ( ( rule__FunctionCall__Group_1__0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1158:1: ( rule__FunctionCall__Group_1__0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1176:6: ( ( rule__FunctionCall__Group_1__0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1177:1: ( rule__FunctionCall__Group_1__0 )
                     {
                      before(grammarAccess.getFunctionCallAccess().getGroup_1()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1159:1: ( rule__FunctionCall__Group_1__0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1159:2: rule__FunctionCall__Group_1__0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1178:1: ( rule__FunctionCall__Group_1__0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1178:2: rule__FunctionCall__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__FunctionCall__Group_1__0_in_rule__FunctionCall__Alternatives2417);
+                    pushFollow(FOLLOW_rule__FunctionCall__Group_1__0_in_rule__FunctionCall__Alternatives2453);
                     rule__FunctionCall__Group_1__0();
 
                     state._fsp--;
@@ -3237,35 +3289,35 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Instruction__Alternatives"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1168:1: rule__Instruction__Alternatives : ( ( ( rule__Instruction__DecAssignment_0 ) ) | ( ( rule__Instruction__CondAssignment_1 ) ) | ( ( rule__Instruction__WhileAssignment_2 ) ) | ( ( rule__Instruction__ActAssignment_3 ) ) | ( ( rule__Instruction__AssAssignment_4 ) ) | ( ( rule__Instruction__SubAssignment_5 ) ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1187:1: rule__Instruction__Alternatives : ( ( ( rule__Instruction__DecAssignment_0 ) ) | ( ( rule__Instruction__CondAssignment_1 ) ) | ( ( rule__Instruction__WhileAssignment_2 ) ) | ( ( rule__Instruction__ActAssignment_3 ) ) | ( ( rule__Instruction__AssAssignment_4 ) ) | ( ( rule__Instruction__SubAssignment_5 ) ) );
     public final void rule__Instruction__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1172:1: ( ( ( rule__Instruction__DecAssignment_0 ) ) | ( ( rule__Instruction__CondAssignment_1 ) ) | ( ( rule__Instruction__WhileAssignment_2 ) ) | ( ( rule__Instruction__ActAssignment_3 ) ) | ( ( rule__Instruction__AssAssignment_4 ) ) | ( ( rule__Instruction__SubAssignment_5 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1191:1: ( ( ( rule__Instruction__DecAssignment_0 ) ) | ( ( rule__Instruction__CondAssignment_1 ) ) | ( ( rule__Instruction__WhileAssignment_2 ) ) | ( ( rule__Instruction__ActAssignment_3 ) ) | ( ( rule__Instruction__AssAssignment_4 ) ) | ( ( rule__Instruction__SubAssignment_5 ) ) )
             int alt3=6;
             switch ( input.LA(1) ) {
-            case 42:
+            case 47:
                 {
                 alt3=1;
                 }
                 break;
-            case 35:
+            case 40:
                 {
                 alt3=2;
                 }
                 break;
-            case 39:
+            case 44:
                 {
                 alt3=3;
                 }
                 break;
-            case 52:
-            case 54:
-            case 55:
             case 57:
+            case 59:
             case 60:
+            case 62:
+            case 65:
                 {
                 alt3=4;
                 }
@@ -3274,10 +3326,10 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                 {
                 int LA3_5 = input.LA(2);
 
-                if ( (LA3_5==26||LA3_5==30) ) {
+                if ( (LA3_5==28||LA3_5==32) ) {
                     alt3=6;
                 }
-                else if ( (LA3_5==43) ) {
+                else if ( (LA3_5==48) ) {
                     alt3=5;
                 }
                 else {
@@ -3297,16 +3349,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             switch (alt3) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1173:1: ( ( rule__Instruction__DecAssignment_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1192:1: ( ( rule__Instruction__DecAssignment_0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1173:1: ( ( rule__Instruction__DecAssignment_0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1174:1: ( rule__Instruction__DecAssignment_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1192:1: ( ( rule__Instruction__DecAssignment_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1193:1: ( rule__Instruction__DecAssignment_0 )
                     {
                      before(grammarAccess.getInstructionAccess().getDecAssignment_0()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1175:1: ( rule__Instruction__DecAssignment_0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1175:2: rule__Instruction__DecAssignment_0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1194:1: ( rule__Instruction__DecAssignment_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1194:2: rule__Instruction__DecAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Instruction__DecAssignment_0_in_rule__Instruction__Alternatives2450);
+                    pushFollow(FOLLOW_rule__Instruction__DecAssignment_0_in_rule__Instruction__Alternatives2486);
                     rule__Instruction__DecAssignment_0();
 
                     state._fsp--;
@@ -3322,16 +3374,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1179:6: ( ( rule__Instruction__CondAssignment_1 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1198:6: ( ( rule__Instruction__CondAssignment_1 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1179:6: ( ( rule__Instruction__CondAssignment_1 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1180:1: ( rule__Instruction__CondAssignment_1 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1198:6: ( ( rule__Instruction__CondAssignment_1 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1199:1: ( rule__Instruction__CondAssignment_1 )
                     {
                      before(grammarAccess.getInstructionAccess().getCondAssignment_1()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1181:1: ( rule__Instruction__CondAssignment_1 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1181:2: rule__Instruction__CondAssignment_1
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1200:1: ( rule__Instruction__CondAssignment_1 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1200:2: rule__Instruction__CondAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Instruction__CondAssignment_1_in_rule__Instruction__Alternatives2468);
+                    pushFollow(FOLLOW_rule__Instruction__CondAssignment_1_in_rule__Instruction__Alternatives2504);
                     rule__Instruction__CondAssignment_1();
 
                     state._fsp--;
@@ -3347,16 +3399,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1185:6: ( ( rule__Instruction__WhileAssignment_2 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1204:6: ( ( rule__Instruction__WhileAssignment_2 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1185:6: ( ( rule__Instruction__WhileAssignment_2 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1186:1: ( rule__Instruction__WhileAssignment_2 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1204:6: ( ( rule__Instruction__WhileAssignment_2 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1205:1: ( rule__Instruction__WhileAssignment_2 )
                     {
                      before(grammarAccess.getInstructionAccess().getWhileAssignment_2()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1187:1: ( rule__Instruction__WhileAssignment_2 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1187:2: rule__Instruction__WhileAssignment_2
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1206:1: ( rule__Instruction__WhileAssignment_2 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1206:2: rule__Instruction__WhileAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Instruction__WhileAssignment_2_in_rule__Instruction__Alternatives2486);
+                    pushFollow(FOLLOW_rule__Instruction__WhileAssignment_2_in_rule__Instruction__Alternatives2522);
                     rule__Instruction__WhileAssignment_2();
 
                     state._fsp--;
@@ -3372,16 +3424,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1191:6: ( ( rule__Instruction__ActAssignment_3 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1210:6: ( ( rule__Instruction__ActAssignment_3 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1191:6: ( ( rule__Instruction__ActAssignment_3 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1192:1: ( rule__Instruction__ActAssignment_3 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1210:6: ( ( rule__Instruction__ActAssignment_3 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1211:1: ( rule__Instruction__ActAssignment_3 )
                     {
                      before(grammarAccess.getInstructionAccess().getActAssignment_3()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1193:1: ( rule__Instruction__ActAssignment_3 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1193:2: rule__Instruction__ActAssignment_3
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1212:1: ( rule__Instruction__ActAssignment_3 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1212:2: rule__Instruction__ActAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__Instruction__ActAssignment_3_in_rule__Instruction__Alternatives2504);
+                    pushFollow(FOLLOW_rule__Instruction__ActAssignment_3_in_rule__Instruction__Alternatives2540);
                     rule__Instruction__ActAssignment_3();
 
                     state._fsp--;
@@ -3397,16 +3449,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1197:6: ( ( rule__Instruction__AssAssignment_4 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1216:6: ( ( rule__Instruction__AssAssignment_4 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1197:6: ( ( rule__Instruction__AssAssignment_4 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1198:1: ( rule__Instruction__AssAssignment_4 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1216:6: ( ( rule__Instruction__AssAssignment_4 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1217:1: ( rule__Instruction__AssAssignment_4 )
                     {
                      before(grammarAccess.getInstructionAccess().getAssAssignment_4()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1199:1: ( rule__Instruction__AssAssignment_4 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1199:2: rule__Instruction__AssAssignment_4
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1218:1: ( rule__Instruction__AssAssignment_4 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1218:2: rule__Instruction__AssAssignment_4
                     {
-                    pushFollow(FOLLOW_rule__Instruction__AssAssignment_4_in_rule__Instruction__Alternatives2522);
+                    pushFollow(FOLLOW_rule__Instruction__AssAssignment_4_in_rule__Instruction__Alternatives2558);
                     rule__Instruction__AssAssignment_4();
 
                     state._fsp--;
@@ -3422,16 +3474,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 6 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1203:6: ( ( rule__Instruction__SubAssignment_5 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1222:6: ( ( rule__Instruction__SubAssignment_5 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1203:6: ( ( rule__Instruction__SubAssignment_5 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1204:1: ( rule__Instruction__SubAssignment_5 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1222:6: ( ( rule__Instruction__SubAssignment_5 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1223:1: ( rule__Instruction__SubAssignment_5 )
                     {
                      before(grammarAccess.getInstructionAccess().getSubAssignment_5()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1205:1: ( rule__Instruction__SubAssignment_5 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1205:2: rule__Instruction__SubAssignment_5
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1224:1: ( rule__Instruction__SubAssignment_5 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1224:2: rule__Instruction__SubAssignment_5
                     {
-                    pushFollow(FOLLOW_rule__Instruction__SubAssignment_5_in_rule__Instruction__Alternatives2540);
+                    pushFollow(FOLLOW_rule__Instruction__SubAssignment_5_in_rule__Instruction__Alternatives2576);
                     rule__Instruction__SubAssignment_5();
 
                     state._fsp--;
@@ -3464,13 +3516,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Alternatives_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1214:1: rule__Condition__Alternatives_1 : ( ( 'all ' ) | ( 'any ' ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1233:1: rule__Condition__Alternatives_1 : ( ( 'all ' ) | ( 'any ' ) );
     public final void rule__Condition__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1218:1: ( ( 'all ' ) | ( 'any ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1237:1: ( ( 'all ' ) | ( 'any ' ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -3488,13 +3540,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1219:1: ( 'all ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1238:1: ( 'all ' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1219:1: ( 'all ' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1220:1: 'all '
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1238:1: ( 'all ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1239:1: 'all '
                     {
                      before(grammarAccess.getConditionAccess().getAllKeyword_1_0()); 
-                    match(input,12,FOLLOW_12_in_rule__Condition__Alternatives_12574); 
+                    match(input,12,FOLLOW_12_in_rule__Condition__Alternatives_12610); 
                      after(grammarAccess.getConditionAccess().getAllKeyword_1_0()); 
 
                     }
@@ -3503,13 +3555,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1227:6: ( 'any ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1246:6: ( 'any ' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1227:6: ( 'any ' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1228:1: 'any '
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1246:6: ( 'any ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1247:1: 'any '
                     {
                      before(grammarAccess.getConditionAccess().getAnyKeyword_1_1()); 
-                    match(input,13,FOLLOW_13_in_rule__Condition__Alternatives_12594); 
+                    match(input,13,FOLLOW_13_in_rule__Condition__Alternatives_12630); 
                      after(grammarAccess.getConditionAccess().getAnyKeyword_1_1()); 
 
                     }
@@ -3535,36 +3587,36 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ActionInstruction__Alternatives"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1240:1: rule__ActionInstruction__Alternatives : ( ( ( rule__ActionInstruction__ActionAssignment_0 ) ) | ( ( rule__ActionInstruction__ActionAssignment_1 ) ) | ( ( rule__ActionInstruction__ActionAssignment_2 ) ) | ( ( rule__ActionInstruction__ActionAssignment_3 ) ) | ( ruleGoTo ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1259:1: rule__ActionInstruction__Alternatives : ( ( ( rule__ActionInstruction__ActionAssignment_0 ) ) | ( ( rule__ActionInstruction__ActionAssignment_1 ) ) | ( ( rule__ActionInstruction__ActionAssignment_2 ) ) | ( ( rule__ActionInstruction__ActionAssignment_3 ) ) | ( ruleGoTo ) );
     public final void rule__ActionInstruction__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1244:1: ( ( ( rule__ActionInstruction__ActionAssignment_0 ) ) | ( ( rule__ActionInstruction__ActionAssignment_1 ) ) | ( ( rule__ActionInstruction__ActionAssignment_2 ) ) | ( ( rule__ActionInstruction__ActionAssignment_3 ) ) | ( ruleGoTo ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1263:1: ( ( ( rule__ActionInstruction__ActionAssignment_0 ) ) | ( ( rule__ActionInstruction__ActionAssignment_1 ) ) | ( ( rule__ActionInstruction__ActionAssignment_2 ) ) | ( ( rule__ActionInstruction__ActionAssignment_3 ) ) | ( ruleGoTo ) )
             int alt5=5;
             switch ( input.LA(1) ) {
-            case 52:
+            case 57:
                 {
                 alt5=1;
                 }
                 break;
-            case 54:
+            case 59:
                 {
                 alt5=2;
                 }
                 break;
-            case 55:
+            case 60:
                 {
                 alt5=3;
                 }
                 break;
-            case 57:
+            case 62:
                 {
                 alt5=4;
                 }
                 break;
-            case 60:
+            case 65:
                 {
                 alt5=5;
                 }
@@ -3578,16 +3630,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             switch (alt5) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1245:1: ( ( rule__ActionInstruction__ActionAssignment_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1264:1: ( ( rule__ActionInstruction__ActionAssignment_0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1245:1: ( ( rule__ActionInstruction__ActionAssignment_0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1246:1: ( rule__ActionInstruction__ActionAssignment_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1264:1: ( ( rule__ActionInstruction__ActionAssignment_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1265:1: ( rule__ActionInstruction__ActionAssignment_0 )
                     {
                      before(grammarAccess.getActionInstructionAccess().getActionAssignment_0()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1247:1: ( rule__ActionInstruction__ActionAssignment_0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1247:2: rule__ActionInstruction__ActionAssignment_0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1266:1: ( rule__ActionInstruction__ActionAssignment_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1266:2: rule__ActionInstruction__ActionAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__ActionInstruction__ActionAssignment_0_in_rule__ActionInstruction__Alternatives2628);
+                    pushFollow(FOLLOW_rule__ActionInstruction__ActionAssignment_0_in_rule__ActionInstruction__Alternatives2664);
                     rule__ActionInstruction__ActionAssignment_0();
 
                     state._fsp--;
@@ -3603,16 +3655,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1251:6: ( ( rule__ActionInstruction__ActionAssignment_1 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1270:6: ( ( rule__ActionInstruction__ActionAssignment_1 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1251:6: ( ( rule__ActionInstruction__ActionAssignment_1 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1252:1: ( rule__ActionInstruction__ActionAssignment_1 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1270:6: ( ( rule__ActionInstruction__ActionAssignment_1 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1271:1: ( rule__ActionInstruction__ActionAssignment_1 )
                     {
                      before(grammarAccess.getActionInstructionAccess().getActionAssignment_1()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1253:1: ( rule__ActionInstruction__ActionAssignment_1 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1253:2: rule__ActionInstruction__ActionAssignment_1
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1272:1: ( rule__ActionInstruction__ActionAssignment_1 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1272:2: rule__ActionInstruction__ActionAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__ActionInstruction__ActionAssignment_1_in_rule__ActionInstruction__Alternatives2646);
+                    pushFollow(FOLLOW_rule__ActionInstruction__ActionAssignment_1_in_rule__ActionInstruction__Alternatives2682);
                     rule__ActionInstruction__ActionAssignment_1();
 
                     state._fsp--;
@@ -3628,16 +3680,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1257:6: ( ( rule__ActionInstruction__ActionAssignment_2 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1276:6: ( ( rule__ActionInstruction__ActionAssignment_2 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1257:6: ( ( rule__ActionInstruction__ActionAssignment_2 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1258:1: ( rule__ActionInstruction__ActionAssignment_2 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1276:6: ( ( rule__ActionInstruction__ActionAssignment_2 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1277:1: ( rule__ActionInstruction__ActionAssignment_2 )
                     {
                      before(grammarAccess.getActionInstructionAccess().getActionAssignment_2()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1259:1: ( rule__ActionInstruction__ActionAssignment_2 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1259:2: rule__ActionInstruction__ActionAssignment_2
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1278:1: ( rule__ActionInstruction__ActionAssignment_2 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1278:2: rule__ActionInstruction__ActionAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__ActionInstruction__ActionAssignment_2_in_rule__ActionInstruction__Alternatives2664);
+                    pushFollow(FOLLOW_rule__ActionInstruction__ActionAssignment_2_in_rule__ActionInstruction__Alternatives2700);
                     rule__ActionInstruction__ActionAssignment_2();
 
                     state._fsp--;
@@ -3653,16 +3705,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1263:6: ( ( rule__ActionInstruction__ActionAssignment_3 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1282:6: ( ( rule__ActionInstruction__ActionAssignment_3 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1263:6: ( ( rule__ActionInstruction__ActionAssignment_3 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1264:1: ( rule__ActionInstruction__ActionAssignment_3 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1282:6: ( ( rule__ActionInstruction__ActionAssignment_3 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1283:1: ( rule__ActionInstruction__ActionAssignment_3 )
                     {
                      before(grammarAccess.getActionInstructionAccess().getActionAssignment_3()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1265:1: ( rule__ActionInstruction__ActionAssignment_3 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1265:2: rule__ActionInstruction__ActionAssignment_3
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1284:1: ( rule__ActionInstruction__ActionAssignment_3 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1284:2: rule__ActionInstruction__ActionAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__ActionInstruction__ActionAssignment_3_in_rule__ActionInstruction__Alternatives2682);
+                    pushFollow(FOLLOW_rule__ActionInstruction__ActionAssignment_3_in_rule__ActionInstruction__Alternatives2718);
                     rule__ActionInstruction__ActionAssignment_3();
 
                     state._fsp--;
@@ -3678,13 +3730,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1269:6: ( ruleGoTo )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1288:6: ( ruleGoTo )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1269:6: ( ruleGoTo )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1270:1: ruleGoTo
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1288:6: ( ruleGoTo )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1289:1: ruleGoTo
                     {
                      before(grammarAccess.getActionInstructionAccess().getGoToParserRuleCall_4()); 
-                    pushFollow(FOLLOW_ruleGoTo_in_rule__ActionInstruction__Alternatives2700);
+                    pushFollow(FOLLOW_ruleGoTo_in_rule__ActionInstruction__Alternatives2736);
                     ruleGoTo();
 
                     state._fsp--;
@@ -3714,13 +3766,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Alternatives"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1280:1: rule__Expression__Alternatives : ( ( ( rule__Expression__TypeAssignment_0 ) ) | ( ( rule__Expression__VarAssignment_1 ) ) | ( ( rule__Expression__ActAssignment_2 ) ) | ( ( rule__Expression__Group_3__0 ) ) | ( ( rule__Expression__Group_4__0 ) ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1299:1: rule__Expression__Alternatives : ( ( ( rule__Expression__TypeAssignment_0 ) ) | ( ( rule__Expression__VarAssignment_1 ) ) | ( ( rule__Expression__ActAssignment_2 ) ) | ( ( rule__Expression__Group_3__0 ) ) | ( ( rule__Expression__Group_4__0 ) ) );
     public final void rule__Expression__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1284:1: ( ( ( rule__Expression__TypeAssignment_0 ) ) | ( ( rule__Expression__VarAssignment_1 ) ) | ( ( rule__Expression__ActAssignment_2 ) ) | ( ( rule__Expression__Group_3__0 ) ) | ( ( rule__Expression__Group_4__0 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1303:1: ( ( ( rule__Expression__TypeAssignment_0 ) ) | ( ( rule__Expression__VarAssignment_1 ) ) | ( ( rule__Expression__ActAssignment_2 ) ) | ( ( rule__Expression__Group_3__0 ) ) | ( ( rule__Expression__Group_4__0 ) ) )
             int alt6=5;
             switch ( input.LA(1) ) {
             case 17:
@@ -3735,8 +3787,8 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                 alt6=2;
                 }
                 break;
-            case 58:
-            case 59:
+            case 63:
+            case 64:
                 {
                 alt6=3;
                 }
@@ -3748,7 +3800,7 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                 alt6=4;
                 }
                 break;
-            case 45:
+            case 50:
                 {
                 alt6=5;
                 }
@@ -3762,16 +3814,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             switch (alt6) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1285:1: ( ( rule__Expression__TypeAssignment_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1304:1: ( ( rule__Expression__TypeAssignment_0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1285:1: ( ( rule__Expression__TypeAssignment_0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1286:1: ( rule__Expression__TypeAssignment_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1304:1: ( ( rule__Expression__TypeAssignment_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1305:1: ( rule__Expression__TypeAssignment_0 )
                     {
                      before(grammarAccess.getExpressionAccess().getTypeAssignment_0()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1287:1: ( rule__Expression__TypeAssignment_0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1287:2: rule__Expression__TypeAssignment_0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1306:1: ( rule__Expression__TypeAssignment_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1306:2: rule__Expression__TypeAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Expression__TypeAssignment_0_in_rule__Expression__Alternatives2732);
+                    pushFollow(FOLLOW_rule__Expression__TypeAssignment_0_in_rule__Expression__Alternatives2768);
                     rule__Expression__TypeAssignment_0();
 
                     state._fsp--;
@@ -3787,16 +3839,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1291:6: ( ( rule__Expression__VarAssignment_1 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1310:6: ( ( rule__Expression__VarAssignment_1 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1291:6: ( ( rule__Expression__VarAssignment_1 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1292:1: ( rule__Expression__VarAssignment_1 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1310:6: ( ( rule__Expression__VarAssignment_1 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1311:1: ( rule__Expression__VarAssignment_1 )
                     {
                      before(grammarAccess.getExpressionAccess().getVarAssignment_1()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1293:1: ( rule__Expression__VarAssignment_1 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1293:2: rule__Expression__VarAssignment_1
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1312:1: ( rule__Expression__VarAssignment_1 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1312:2: rule__Expression__VarAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Expression__VarAssignment_1_in_rule__Expression__Alternatives2750);
+                    pushFollow(FOLLOW_rule__Expression__VarAssignment_1_in_rule__Expression__Alternatives2786);
                     rule__Expression__VarAssignment_1();
 
                     state._fsp--;
@@ -3812,16 +3864,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1297:6: ( ( rule__Expression__ActAssignment_2 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1316:6: ( ( rule__Expression__ActAssignment_2 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1297:6: ( ( rule__Expression__ActAssignment_2 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1298:1: ( rule__Expression__ActAssignment_2 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1316:6: ( ( rule__Expression__ActAssignment_2 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1317:1: ( rule__Expression__ActAssignment_2 )
                     {
                      before(grammarAccess.getExpressionAccess().getActAssignment_2()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1299:1: ( rule__Expression__ActAssignment_2 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1299:2: rule__Expression__ActAssignment_2
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1318:1: ( rule__Expression__ActAssignment_2 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1318:2: rule__Expression__ActAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Expression__ActAssignment_2_in_rule__Expression__Alternatives2768);
+                    pushFollow(FOLLOW_rule__Expression__ActAssignment_2_in_rule__Expression__Alternatives2804);
                     rule__Expression__ActAssignment_2();
 
                     state._fsp--;
@@ -3837,16 +3889,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1303:6: ( ( rule__Expression__Group_3__0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1322:6: ( ( rule__Expression__Group_3__0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1303:6: ( ( rule__Expression__Group_3__0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1304:1: ( rule__Expression__Group_3__0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1322:6: ( ( rule__Expression__Group_3__0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1323:1: ( rule__Expression__Group_3__0 )
                     {
                      before(grammarAccess.getExpressionAccess().getGroup_3()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1305:1: ( rule__Expression__Group_3__0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1305:2: rule__Expression__Group_3__0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1324:1: ( rule__Expression__Group_3__0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1324:2: rule__Expression__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Expression__Group_3__0_in_rule__Expression__Alternatives2786);
+                    pushFollow(FOLLOW_rule__Expression__Group_3__0_in_rule__Expression__Alternatives2822);
                     rule__Expression__Group_3__0();
 
                     state._fsp--;
@@ -3862,16 +3914,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1309:6: ( ( rule__Expression__Group_4__0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1328:6: ( ( rule__Expression__Group_4__0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1309:6: ( ( rule__Expression__Group_4__0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1310:1: ( rule__Expression__Group_4__0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1328:6: ( ( rule__Expression__Group_4__0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1329:1: ( rule__Expression__Group_4__0 )
                     {
                      before(grammarAccess.getExpressionAccess().getGroup_4()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1311:1: ( rule__Expression__Group_4__0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1311:2: rule__Expression__Group_4__0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1330:1: ( rule__Expression__Group_4__0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1330:2: rule__Expression__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__Expression__Group_4__0_in_rule__Expression__Alternatives2804);
+                    pushFollow(FOLLOW_rule__Expression__Group_4__0_in_rule__Expression__Alternatives2840);
                     rule__Expression__Group_4__0();
 
                     state._fsp--;
@@ -3904,13 +3956,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Alternatives_3_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1320:1: rule__Expression__Alternatives_3_0 : ( ( ' == ' ) | ( ' > ' ) | ( ' < ' ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1339:1: rule__Expression__Alternatives_3_0 : ( ( ' == ' ) | ( ' > ' ) | ( ' < ' ) );
     public final void rule__Expression__Alternatives_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1324:1: ( ( ' == ' ) | ( ' > ' ) | ( ' < ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1343:1: ( ( ' == ' ) | ( ' > ' ) | ( ' < ' ) )
             int alt7=3;
             switch ( input.LA(1) ) {
             case 14:
@@ -3937,13 +3989,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             switch (alt7) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1325:1: ( ' == ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1344:1: ( ' == ' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1325:1: ( ' == ' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1326:1: ' == '
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1344:1: ( ' == ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1345:1: ' == '
                     {
                      before(grammarAccess.getExpressionAccess().getSpaceEqualsSignEqualsSignSpaceKeyword_3_0_0()); 
-                    match(input,14,FOLLOW_14_in_rule__Expression__Alternatives_3_02838); 
+                    match(input,14,FOLLOW_14_in_rule__Expression__Alternatives_3_02874); 
                      after(grammarAccess.getExpressionAccess().getSpaceEqualsSignEqualsSignSpaceKeyword_3_0_0()); 
 
                     }
@@ -3952,13 +4004,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1333:6: ( ' > ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1352:6: ( ' > ' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1333:6: ( ' > ' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1334:1: ' > '
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1352:6: ( ' > ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1353:1: ' > '
                     {
                      before(grammarAccess.getExpressionAccess().getSpaceGreaterThanSignSpaceKeyword_3_0_1()); 
-                    match(input,15,FOLLOW_15_in_rule__Expression__Alternatives_3_02858); 
+                    match(input,15,FOLLOW_15_in_rule__Expression__Alternatives_3_02894); 
                      after(grammarAccess.getExpressionAccess().getSpaceGreaterThanSignSpaceKeyword_3_0_1()); 
 
                     }
@@ -3967,13 +4019,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1341:6: ( ' < ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1360:6: ( ' < ' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1341:6: ( ' < ' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1342:1: ' < '
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1360:6: ( ' < ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1361:1: ' < '
                     {
                      before(grammarAccess.getExpressionAccess().getSpaceLessThanSignSpaceKeyword_3_0_2()); 
-                    match(input,16,FOLLOW_16_in_rule__Expression__Alternatives_3_02878); 
+                    match(input,16,FOLLOW_16_in_rule__Expression__Alternatives_3_02914); 
                      after(grammarAccess.getExpressionAccess().getSpaceLessThanSignSpaceKeyword_3_0_2()); 
 
                     }
@@ -3999,13 +4051,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Type__Alternatives"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1354:1: rule__Type__Alternatives : ( ( 'bool ' ) | ( 'string ' ) | ( 'int ' ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1373:1: rule__Type__Alternatives : ( ( 'bool ' ) | ( 'string ' ) | ( 'int ' ) );
     public final void rule__Type__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1358:1: ( ( 'bool ' ) | ( 'string ' ) | ( 'int ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1377:1: ( ( 'bool ' ) | ( 'string ' ) | ( 'int ' ) )
             int alt8=3;
             switch ( input.LA(1) ) {
             case 17:
@@ -4032,13 +4084,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             switch (alt8) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1359:1: ( 'bool ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1378:1: ( 'bool ' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1359:1: ( 'bool ' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1360:1: 'bool '
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1378:1: ( 'bool ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1379:1: 'bool '
                     {
                      before(grammarAccess.getTypeAccess().getBoolKeyword_0()); 
-                    match(input,17,FOLLOW_17_in_rule__Type__Alternatives2913); 
+                    match(input,17,FOLLOW_17_in_rule__Type__Alternatives2949); 
                      after(grammarAccess.getTypeAccess().getBoolKeyword_0()); 
 
                     }
@@ -4047,13 +4099,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1367:6: ( 'string ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1386:6: ( 'string ' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1367:6: ( 'string ' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1368:1: 'string '
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1386:6: ( 'string ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1387:1: 'string '
                     {
                      before(grammarAccess.getTypeAccess().getStringKeyword_1()); 
-                    match(input,18,FOLLOW_18_in_rule__Type__Alternatives2933); 
+                    match(input,18,FOLLOW_18_in_rule__Type__Alternatives2969); 
                      after(grammarAccess.getTypeAccess().getStringKeyword_1()); 
 
                     }
@@ -4062,13 +4114,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1375:6: ( 'int ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1394:6: ( 'int ' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1375:6: ( 'int ' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1376:1: 'int '
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1394:6: ( 'int ' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1395:1: 'int '
                     {
                      before(grammarAccess.getTypeAccess().getIntKeyword_2()); 
-                    match(input,19,FOLLOW_19_in_rule__Type__Alternatives2953); 
+                    match(input,19,FOLLOW_19_in_rule__Type__Alternatives2989); 
                      after(grammarAccess.getTypeAccess().getIntKeyword_2()); 
 
                     }
@@ -4094,20 +4146,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ActionExpression__Alternatives"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1388:1: rule__ActionExpression__Alternatives : ( ( ( rule__ActionExpression__ExprAssignment_0 ) ) | ( ( rule__ActionExpression__ExprAssignment_1 ) ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1407:1: rule__ActionExpression__Alternatives : ( ( ( rule__ActionExpression__ExprAssignment_0 ) ) | ( ( rule__ActionExpression__ExprAssignment_1 ) ) );
     public final void rule__ActionExpression__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1392:1: ( ( ( rule__ActionExpression__ExprAssignment_0 ) ) | ( ( rule__ActionExpression__ExprAssignment_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1411:1: ( ( ( rule__ActionExpression__ExprAssignment_0 ) ) | ( ( rule__ActionExpression__ExprAssignment_1 ) ) )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==58) ) {
+            if ( (LA9_0==63) ) {
                 alt9=1;
             }
-            else if ( (LA9_0==59) ) {
+            else if ( (LA9_0==64) ) {
                 alt9=2;
             }
             else {
@@ -4118,16 +4170,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1393:1: ( ( rule__ActionExpression__ExprAssignment_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1412:1: ( ( rule__ActionExpression__ExprAssignment_0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1393:1: ( ( rule__ActionExpression__ExprAssignment_0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1394:1: ( rule__ActionExpression__ExprAssignment_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1412:1: ( ( rule__ActionExpression__ExprAssignment_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1413:1: ( rule__ActionExpression__ExprAssignment_0 )
                     {
                      before(grammarAccess.getActionExpressionAccess().getExprAssignment_0()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1395:1: ( rule__ActionExpression__ExprAssignment_0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1395:2: rule__ActionExpression__ExprAssignment_0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1414:1: ( rule__ActionExpression__ExprAssignment_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1414:2: rule__ActionExpression__ExprAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__ActionExpression__ExprAssignment_0_in_rule__ActionExpression__Alternatives2987);
+                    pushFollow(FOLLOW_rule__ActionExpression__ExprAssignment_0_in_rule__ActionExpression__Alternatives3023);
                     rule__ActionExpression__ExprAssignment_0();
 
                     state._fsp--;
@@ -4143,16 +4195,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1399:6: ( ( rule__ActionExpression__ExprAssignment_1 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1418:6: ( ( rule__ActionExpression__ExprAssignment_1 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1399:6: ( ( rule__ActionExpression__ExprAssignment_1 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1400:1: ( rule__ActionExpression__ExprAssignment_1 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1418:6: ( ( rule__ActionExpression__ExprAssignment_1 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1419:1: ( rule__ActionExpression__ExprAssignment_1 )
                     {
                      before(grammarAccess.getActionExpressionAccess().getExprAssignment_1()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1401:1: ( rule__ActionExpression__ExprAssignment_1 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1401:2: rule__ActionExpression__ExprAssignment_1
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1420:1: ( rule__ActionExpression__ExprAssignment_1 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1420:2: rule__ActionExpression__ExprAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__ActionExpression__ExprAssignment_1_in_rule__ActionExpression__Alternatives3005);
+                    pushFollow(FOLLOW_rule__ActionExpression__ExprAssignment_1_in_rule__ActionExpression__Alternatives3041);
                     rule__ActionExpression__ExprAssignment_1();
 
                     state._fsp--;
@@ -4185,28 +4237,28 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Element__Alternatives"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1410:1: rule__Element__Alternatives : ( ( ruleClickableElement ) | ( ruleFillableElement ) | ( ruleCheckableElement ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1429:1: rule__Element__Alternatives : ( ( ruleClickableElement ) | ( ruleFillableElement ) | ( ruleCheckableElement ) );
     public final void rule__Element__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1414:1: ( ( ruleClickableElement ) | ( ruleFillableElement ) | ( ruleCheckableElement ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1433:1: ( ( ruleClickableElement ) | ( ruleFillableElement ) | ( ruleCheckableElement ) )
             int alt10=3;
             switch ( input.LA(1) ) {
-            case 47:
-            case 48:
-            case 49:
+            case 52:
+            case 53:
+            case 54:
                 {
                 alt10=1;
                 }
                 break;
-            case 50:
+            case 55:
                 {
                 alt10=2;
                 }
                 break;
-            case 46:
+            case 51:
                 {
                 alt10=3;
                 }
@@ -4220,13 +4272,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             switch (alt10) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1415:1: ( ruleClickableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1434:1: ( ruleClickableElement )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1415:1: ( ruleClickableElement )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1416:1: ruleClickableElement
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1434:1: ( ruleClickableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1435:1: ruleClickableElement
                     {
                      before(grammarAccess.getElementAccess().getClickableElementParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleClickableElement_in_rule__Element__Alternatives3038);
+                    pushFollow(FOLLOW_ruleClickableElement_in_rule__Element__Alternatives3074);
                     ruleClickableElement();
 
                     state._fsp--;
@@ -4239,13 +4291,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1421:6: ( ruleFillableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1440:6: ( ruleFillableElement )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1421:6: ( ruleFillableElement )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1422:1: ruleFillableElement
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1440:6: ( ruleFillableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1441:1: ruleFillableElement
                     {
                      before(grammarAccess.getElementAccess().getFillableElementParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleFillableElement_in_rule__Element__Alternatives3055);
+                    pushFollow(FOLLOW_ruleFillableElement_in_rule__Element__Alternatives3091);
                     ruleFillableElement();
 
                     state._fsp--;
@@ -4258,13 +4310,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1427:6: ( ruleCheckableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1446:6: ( ruleCheckableElement )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1427:6: ( ruleCheckableElement )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1428:1: ruleCheckableElement
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1446:6: ( ruleCheckableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1447:1: ruleCheckableElement
                     {
                      before(grammarAccess.getElementAccess().getCheckableElementParserRuleCall_2()); 
-                    pushFollow(FOLLOW_ruleCheckableElement_in_rule__Element__Alternatives3072);
+                    pushFollow(FOLLOW_ruleCheckableElement_in_rule__Element__Alternatives3108);
                     ruleCheckableElement();
 
                     state._fsp--;
@@ -4294,26 +4346,26 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ClickableElement__Alternatives"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1438:1: rule__ClickableElement__Alternatives : ( ( ruleLink ) | ( ruleButton ) | ( ruleImage ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1457:1: rule__ClickableElement__Alternatives : ( ( ruleLink ) | ( ruleButton ) | ( ruleImage ) );
     public final void rule__ClickableElement__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1442:1: ( ( ruleLink ) | ( ruleButton ) | ( ruleImage ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1461:1: ( ( ruleLink ) | ( ruleButton ) | ( ruleImage ) )
             int alt11=3;
             switch ( input.LA(1) ) {
-            case 47:
+            case 52:
                 {
                 alt11=1;
                 }
                 break;
-            case 48:
+            case 53:
                 {
                 alt11=2;
                 }
                 break;
-            case 49:
+            case 54:
                 {
                 alt11=3;
                 }
@@ -4327,13 +4379,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             switch (alt11) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1443:1: ( ruleLink )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1462:1: ( ruleLink )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1443:1: ( ruleLink )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1444:1: ruleLink
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1462:1: ( ruleLink )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1463:1: ruleLink
                     {
                      before(grammarAccess.getClickableElementAccess().getLinkParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleLink_in_rule__ClickableElement__Alternatives3104);
+                    pushFollow(FOLLOW_ruleLink_in_rule__ClickableElement__Alternatives3140);
                     ruleLink();
 
                     state._fsp--;
@@ -4346,13 +4398,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1449:6: ( ruleButton )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1468:6: ( ruleButton )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1449:6: ( ruleButton )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1450:1: ruleButton
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1468:6: ( ruleButton )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1469:1: ruleButton
                     {
                      before(grammarAccess.getClickableElementAccess().getButtonParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleButton_in_rule__ClickableElement__Alternatives3121);
+                    pushFollow(FOLLOW_ruleButton_in_rule__ClickableElement__Alternatives3157);
                     ruleButton();
 
                     state._fsp--;
@@ -4365,13 +4417,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1455:6: ( ruleImage )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1474:6: ( ruleImage )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1455:6: ( ruleImage )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1456:1: ruleImage
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1474:6: ( ruleImage )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1475:1: ruleImage
                     {
                      before(grammarAccess.getClickableElementAccess().getImageParserRuleCall_2()); 
-                    pushFollow(FOLLOW_ruleImage_in_rule__ClickableElement__Alternatives3138);
+                    pushFollow(FOLLOW_ruleImage_in_rule__ClickableElement__Alternatives3174);
                     ruleImage();
 
                     state._fsp--;
@@ -4401,13 +4453,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Checkbox__Alternatives_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1466:1: rule__Checkbox__Alternatives_1 : ( ( ( rule__Checkbox__CheckAssignment_1_0 ) ) | ( ruleVariable ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1485:1: rule__Checkbox__Alternatives_1 : ( ( ( rule__Checkbox__CheckAssignment_1_0 ) ) | ( ruleVariable ) );
     public final void rule__Checkbox__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1470:1: ( ( ( rule__Checkbox__CheckAssignment_1_0 ) ) | ( ruleVariable ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1489:1: ( ( ( rule__Checkbox__CheckAssignment_1_0 ) ) | ( ruleVariable ) )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -4425,16 +4477,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1471:1: ( ( rule__Checkbox__CheckAssignment_1_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1490:1: ( ( rule__Checkbox__CheckAssignment_1_0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1471:1: ( ( rule__Checkbox__CheckAssignment_1_0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1472:1: ( rule__Checkbox__CheckAssignment_1_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1490:1: ( ( rule__Checkbox__CheckAssignment_1_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1491:1: ( rule__Checkbox__CheckAssignment_1_0 )
                     {
                      before(grammarAccess.getCheckboxAccess().getCheckAssignment_1_0()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1473:1: ( rule__Checkbox__CheckAssignment_1_0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1473:2: rule__Checkbox__CheckAssignment_1_0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1492:1: ( rule__Checkbox__CheckAssignment_1_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1492:2: rule__Checkbox__CheckAssignment_1_0
                     {
-                    pushFollow(FOLLOW_rule__Checkbox__CheckAssignment_1_0_in_rule__Checkbox__Alternatives_13170);
+                    pushFollow(FOLLOW_rule__Checkbox__CheckAssignment_1_0_in_rule__Checkbox__Alternatives_13206);
                     rule__Checkbox__CheckAssignment_1_0();
 
                     state._fsp--;
@@ -4450,13 +4502,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1477:6: ( ruleVariable )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1496:6: ( ruleVariable )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1477:6: ( ruleVariable )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1478:1: ruleVariable
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1496:6: ( ruleVariable )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1497:1: ruleVariable
                     {
                      before(grammarAccess.getCheckboxAccess().getVariableParserRuleCall_1_1()); 
-                    pushFollow(FOLLOW_ruleVariable_in_rule__Checkbox__Alternatives_13188);
+                    pushFollow(FOLLOW_ruleVariable_in_rule__Checkbox__Alternatives_13224);
                     ruleVariable();
 
                     state._fsp--;
@@ -4486,13 +4538,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Link__Alternatives_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1488:1: rule__Link__Alternatives_1 : ( ( ( rule__Link__LinkAssignment_1_0 ) ) | ( ruleVariable ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1507:1: rule__Link__Alternatives_1 : ( ( ( rule__Link__LinkAssignment_1_0 ) ) | ( ruleVariable ) );
     public final void rule__Link__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1492:1: ( ( ( rule__Link__LinkAssignment_1_0 ) ) | ( ruleVariable ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1511:1: ( ( ( rule__Link__LinkAssignment_1_0 ) ) | ( ruleVariable ) )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -4510,16 +4562,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt13) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1493:1: ( ( rule__Link__LinkAssignment_1_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1512:1: ( ( rule__Link__LinkAssignment_1_0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1493:1: ( ( rule__Link__LinkAssignment_1_0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1494:1: ( rule__Link__LinkAssignment_1_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1512:1: ( ( rule__Link__LinkAssignment_1_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1513:1: ( rule__Link__LinkAssignment_1_0 )
                     {
                      before(grammarAccess.getLinkAccess().getLinkAssignment_1_0()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1495:1: ( rule__Link__LinkAssignment_1_0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1495:2: rule__Link__LinkAssignment_1_0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1514:1: ( rule__Link__LinkAssignment_1_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1514:2: rule__Link__LinkAssignment_1_0
                     {
-                    pushFollow(FOLLOW_rule__Link__LinkAssignment_1_0_in_rule__Link__Alternatives_13220);
+                    pushFollow(FOLLOW_rule__Link__LinkAssignment_1_0_in_rule__Link__Alternatives_13256);
                     rule__Link__LinkAssignment_1_0();
 
                     state._fsp--;
@@ -4535,13 +4587,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1499:6: ( ruleVariable )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1518:6: ( ruleVariable )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1499:6: ( ruleVariable )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1500:1: ruleVariable
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1518:6: ( ruleVariable )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1519:1: ruleVariable
                     {
                      before(grammarAccess.getLinkAccess().getVariableParserRuleCall_1_1()); 
-                    pushFollow(FOLLOW_ruleVariable_in_rule__Link__Alternatives_13238);
+                    pushFollow(FOLLOW_ruleVariable_in_rule__Link__Alternatives_13274);
                     ruleVariable();
 
                     state._fsp--;
@@ -4571,13 +4623,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Button__Alternatives_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1510:1: rule__Button__Alternatives_1 : ( ( ( rule__Button__ButAssignment_1_0 ) ) | ( ruleVariable ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1529:1: rule__Button__Alternatives_1 : ( ( ( rule__Button__ButAssignment_1_0 ) ) | ( ruleVariable ) );
     public final void rule__Button__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1514:1: ( ( ( rule__Button__ButAssignment_1_0 ) ) | ( ruleVariable ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1533:1: ( ( ( rule__Button__ButAssignment_1_0 ) ) | ( ruleVariable ) )
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -4595,16 +4647,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt14) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1515:1: ( ( rule__Button__ButAssignment_1_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1534:1: ( ( rule__Button__ButAssignment_1_0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1515:1: ( ( rule__Button__ButAssignment_1_0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1516:1: ( rule__Button__ButAssignment_1_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1534:1: ( ( rule__Button__ButAssignment_1_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1535:1: ( rule__Button__ButAssignment_1_0 )
                     {
                      before(grammarAccess.getButtonAccess().getButAssignment_1_0()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1517:1: ( rule__Button__ButAssignment_1_0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1517:2: rule__Button__ButAssignment_1_0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1536:1: ( rule__Button__ButAssignment_1_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1536:2: rule__Button__ButAssignment_1_0
                     {
-                    pushFollow(FOLLOW_rule__Button__ButAssignment_1_0_in_rule__Button__Alternatives_13270);
+                    pushFollow(FOLLOW_rule__Button__ButAssignment_1_0_in_rule__Button__Alternatives_13306);
                     rule__Button__ButAssignment_1_0();
 
                     state._fsp--;
@@ -4620,13 +4672,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1521:6: ( ruleVariable )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1540:6: ( ruleVariable )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1521:6: ( ruleVariable )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1522:1: ruleVariable
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1540:6: ( ruleVariable )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1541:1: ruleVariable
                     {
                      before(grammarAccess.getButtonAccess().getVariableParserRuleCall_1_1()); 
-                    pushFollow(FOLLOW_ruleVariable_in_rule__Button__Alternatives_13288);
+                    pushFollow(FOLLOW_ruleVariable_in_rule__Button__Alternatives_13324);
                     ruleVariable();
 
                     state._fsp--;
@@ -4656,13 +4708,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Image__Alternatives_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1532:1: rule__Image__Alternatives_1 : ( ( ( rule__Image__ImgAssignment_1_0 ) ) | ( ruleVariable ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1551:1: rule__Image__Alternatives_1 : ( ( ( rule__Image__ImgAssignment_1_0 ) ) | ( ruleVariable ) );
     public final void rule__Image__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1536:1: ( ( ( rule__Image__ImgAssignment_1_0 ) ) | ( ruleVariable ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1555:1: ( ( ( rule__Image__ImgAssignment_1_0 ) ) | ( ruleVariable ) )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -4680,16 +4732,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt15) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1537:1: ( ( rule__Image__ImgAssignment_1_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1556:1: ( ( rule__Image__ImgAssignment_1_0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1537:1: ( ( rule__Image__ImgAssignment_1_0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1538:1: ( rule__Image__ImgAssignment_1_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1556:1: ( ( rule__Image__ImgAssignment_1_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1557:1: ( rule__Image__ImgAssignment_1_0 )
                     {
                      before(grammarAccess.getImageAccess().getImgAssignment_1_0()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1539:1: ( rule__Image__ImgAssignment_1_0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1539:2: rule__Image__ImgAssignment_1_0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1558:1: ( rule__Image__ImgAssignment_1_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1558:2: rule__Image__ImgAssignment_1_0
                     {
-                    pushFollow(FOLLOW_rule__Image__ImgAssignment_1_0_in_rule__Image__Alternatives_13320);
+                    pushFollow(FOLLOW_rule__Image__ImgAssignment_1_0_in_rule__Image__Alternatives_13356);
                     rule__Image__ImgAssignment_1_0();
 
                     state._fsp--;
@@ -4705,13 +4757,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1543:6: ( ruleVariable )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1562:6: ( ruleVariable )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1543:6: ( ruleVariable )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1544:1: ruleVariable
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1562:6: ( ruleVariable )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1563:1: ruleVariable
                     {
                      before(grammarAccess.getImageAccess().getVariableParserRuleCall_1_1()); 
-                    pushFollow(FOLLOW_ruleVariable_in_rule__Image__Alternatives_13338);
+                    pushFollow(FOLLOW_ruleVariable_in_rule__Image__Alternatives_13374);
                     ruleVariable();
 
                     state._fsp--;
@@ -4741,13 +4793,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TextField__Alternatives_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1554:1: rule__TextField__Alternatives_1 : ( ( ( rule__TextField__TextAssignment_1_0 ) ) | ( ruleVariable ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1573:1: rule__TextField__Alternatives_1 : ( ( ( rule__TextField__TextAssignment_1_0 ) ) | ( ruleVariable ) );
     public final void rule__TextField__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1558:1: ( ( ( rule__TextField__TextAssignment_1_0 ) ) | ( ruleVariable ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1577:1: ( ( ( rule__TextField__TextAssignment_1_0 ) ) | ( ruleVariable ) )
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -4765,16 +4817,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt16) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1559:1: ( ( rule__TextField__TextAssignment_1_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1578:1: ( ( rule__TextField__TextAssignment_1_0 ) )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1559:1: ( ( rule__TextField__TextAssignment_1_0 ) )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1560:1: ( rule__TextField__TextAssignment_1_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1578:1: ( ( rule__TextField__TextAssignment_1_0 ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1579:1: ( rule__TextField__TextAssignment_1_0 )
                     {
                      before(grammarAccess.getTextFieldAccess().getTextAssignment_1_0()); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1561:1: ( rule__TextField__TextAssignment_1_0 )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1561:2: rule__TextField__TextAssignment_1_0
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1580:1: ( rule__TextField__TextAssignment_1_0 )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1580:2: rule__TextField__TextAssignment_1_0
                     {
-                    pushFollow(FOLLOW_rule__TextField__TextAssignment_1_0_in_rule__TextField__Alternatives_13370);
+                    pushFollow(FOLLOW_rule__TextField__TextAssignment_1_0_in_rule__TextField__Alternatives_13406);
                     rule__TextField__TextAssignment_1_0();
 
                     state._fsp--;
@@ -4790,13 +4842,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1565:6: ( ruleVariable )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1584:6: ( ruleVariable )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1565:6: ( ruleVariable )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1566:1: ruleVariable
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1584:6: ( ruleVariable )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1585:1: ruleVariable
                     {
                      before(grammarAccess.getTextFieldAccess().getVariableParserRuleCall_1_1()); 
-                    pushFollow(FOLLOW_ruleVariable_in_rule__TextField__Alternatives_13388);
+                    pushFollow(FOLLOW_ruleVariable_in_rule__TextField__Alternatives_13424);
                     ruleVariable();
 
                     state._fsp--;
@@ -4826,13 +4878,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TypeElement__ElemAlternatives_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1576:1: rule__TypeElement__ElemAlternatives_0 : ( ( 'checkbox' ) | ( 'link' ) | ( 'button' ) | ( 'image' ) | ( 'textField' ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1595:1: rule__TypeElement__ElemAlternatives_0 : ( ( 'checkbox' ) | ( 'link' ) | ( 'button' ) | ( 'image' ) | ( 'textField' ) );
     public final void rule__TypeElement__ElemAlternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1580:1: ( ( 'checkbox' ) | ( 'link' ) | ( 'button' ) | ( 'image' ) | ( 'textField' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1599:1: ( ( 'checkbox' ) | ( 'link' ) | ( 'button' ) | ( 'image' ) | ( 'textField' ) )
             int alt17=5;
             switch ( input.LA(1) ) {
             case 20:
@@ -4869,13 +4921,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             switch (alt17) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1581:1: ( 'checkbox' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1600:1: ( 'checkbox' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1581:1: ( 'checkbox' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1582:1: 'checkbox'
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1600:1: ( 'checkbox' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1601:1: 'checkbox'
                     {
                      before(grammarAccess.getTypeElementAccess().getElemCheckboxKeyword_0_0()); 
-                    match(input,20,FOLLOW_20_in_rule__TypeElement__ElemAlternatives_03421); 
+                    match(input,20,FOLLOW_20_in_rule__TypeElement__ElemAlternatives_03457); 
                      after(grammarAccess.getTypeElementAccess().getElemCheckboxKeyword_0_0()); 
 
                     }
@@ -4884,13 +4936,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1589:6: ( 'link' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1608:6: ( 'link' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1589:6: ( 'link' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1590:1: 'link'
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1608:6: ( 'link' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1609:1: 'link'
                     {
                      before(grammarAccess.getTypeElementAccess().getElemLinkKeyword_0_1()); 
-                    match(input,21,FOLLOW_21_in_rule__TypeElement__ElemAlternatives_03441); 
+                    match(input,21,FOLLOW_21_in_rule__TypeElement__ElemAlternatives_03477); 
                      after(grammarAccess.getTypeElementAccess().getElemLinkKeyword_0_1()); 
 
                     }
@@ -4899,13 +4951,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1597:6: ( 'button' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1616:6: ( 'button' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1597:6: ( 'button' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1598:1: 'button'
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1616:6: ( 'button' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1617:1: 'button'
                     {
                      before(grammarAccess.getTypeElementAccess().getElemButtonKeyword_0_2()); 
-                    match(input,22,FOLLOW_22_in_rule__TypeElement__ElemAlternatives_03461); 
+                    match(input,22,FOLLOW_22_in_rule__TypeElement__ElemAlternatives_03497); 
                      after(grammarAccess.getTypeElementAccess().getElemButtonKeyword_0_2()); 
 
                     }
@@ -4914,13 +4966,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1605:6: ( 'image' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1624:6: ( 'image' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1605:6: ( 'image' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1606:1: 'image'
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1624:6: ( 'image' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1625:1: 'image'
                     {
                      before(grammarAccess.getTypeElementAccess().getElemImageKeyword_0_3()); 
-                    match(input,23,FOLLOW_23_in_rule__TypeElement__ElemAlternatives_03481); 
+                    match(input,23,FOLLOW_23_in_rule__TypeElement__ElemAlternatives_03517); 
                      after(grammarAccess.getTypeElementAccess().getElemImageKeyword_0_3()); 
 
                     }
@@ -4929,13 +4981,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1613:6: ( 'textField' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1632:6: ( 'textField' )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1613:6: ( 'textField' )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1614:1: 'textField'
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1632:6: ( 'textField' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1633:1: 'textField'
                     {
                      before(grammarAccess.getTypeElementAccess().getElemTextFieldKeyword_0_4()); 
-                    match(input,24,FOLLOW_24_in_rule__TypeElement__ElemAlternatives_03501); 
+                    match(input,24,FOLLOW_24_in_rule__TypeElement__ElemAlternatives_03537); 
                      after(grammarAccess.getTypeElementAccess().getElemTextFieldKeyword_0_4()); 
 
                     }
@@ -4961,20 +5013,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Click__ValAlternatives_1_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1626:1: rule__Click__ValAlternatives_1_0 : ( ( ruleClickableElement ) | ( ruleSelect ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1645:1: rule__Click__ValAlternatives_1_0 : ( ( ruleClickableElement ) | ( ruleSelect ) );
     public final void rule__Click__ValAlternatives_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1630:1: ( ( ruleClickableElement ) | ( ruleSelect ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1649:1: ( ( ruleClickableElement ) | ( ruleSelect ) )
             int alt18=2;
             int LA18_0 = input.LA(1);
 
-            if ( ((LA18_0>=47 && LA18_0<=49)) ) {
+            if ( ((LA18_0>=52 && LA18_0<=54)) ) {
                 alt18=1;
             }
-            else if ( (LA18_0==51) ) {
+            else if ( (LA18_0==56) ) {
                 alt18=2;
             }
             else {
@@ -4985,13 +5037,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt18) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1631:1: ( ruleClickableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1650:1: ( ruleClickableElement )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1631:1: ( ruleClickableElement )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1632:1: ruleClickableElement
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1650:1: ( ruleClickableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1651:1: ruleClickableElement
                     {
                      before(grammarAccess.getClickAccess().getValClickableElementParserRuleCall_1_0_0()); 
-                    pushFollow(FOLLOW_ruleClickableElement_in_rule__Click__ValAlternatives_1_03535);
+                    pushFollow(FOLLOW_ruleClickableElement_in_rule__Click__ValAlternatives_1_03571);
                     ruleClickableElement();
 
                     state._fsp--;
@@ -5004,13 +5056,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1637:6: ( ruleSelect )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1656:6: ( ruleSelect )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1637:6: ( ruleSelect )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1638:1: ruleSelect
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1656:6: ( ruleSelect )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1657:1: ruleSelect
                     {
                      before(grammarAccess.getClickAccess().getValSelectParserRuleCall_1_0_1()); 
-                    pushFollow(FOLLOW_ruleSelect_in_rule__Click__ValAlternatives_1_03552);
+                    pushFollow(FOLLOW_ruleSelect_in_rule__Click__ValAlternatives_1_03588);
                     ruleSelect();
 
                     state._fsp--;
@@ -5040,20 +5092,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Check__ValAlternatives_1_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1648:1: rule__Check__ValAlternatives_1_0 : ( ( ruleCheckableElement ) | ( ruleSelect ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1667:1: rule__Check__ValAlternatives_1_0 : ( ( ruleCheckableElement ) | ( ruleSelect ) );
     public final void rule__Check__ValAlternatives_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1652:1: ( ( ruleCheckableElement ) | ( ruleSelect ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1671:1: ( ( ruleCheckableElement ) | ( ruleSelect ) )
             int alt19=2;
             int LA19_0 = input.LA(1);
 
-            if ( (LA19_0==46) ) {
+            if ( (LA19_0==51) ) {
                 alt19=1;
             }
-            else if ( (LA19_0==51) ) {
+            else if ( (LA19_0==56) ) {
                 alt19=2;
             }
             else {
@@ -5064,13 +5116,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt19) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1653:1: ( ruleCheckableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1672:1: ( ruleCheckableElement )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1653:1: ( ruleCheckableElement )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1654:1: ruleCheckableElement
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1672:1: ( ruleCheckableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1673:1: ruleCheckableElement
                     {
                      before(grammarAccess.getCheckAccess().getValCheckableElementParserRuleCall_1_0_0()); 
-                    pushFollow(FOLLOW_ruleCheckableElement_in_rule__Check__ValAlternatives_1_03584);
+                    pushFollow(FOLLOW_ruleCheckableElement_in_rule__Check__ValAlternatives_1_03620);
                     ruleCheckableElement();
 
                     state._fsp--;
@@ -5083,13 +5135,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1659:6: ( ruleSelect )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1678:6: ( ruleSelect )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1659:6: ( ruleSelect )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1660:1: ruleSelect
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1678:6: ( ruleSelect )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1679:1: ruleSelect
                     {
                      before(grammarAccess.getCheckAccess().getValSelectParserRuleCall_1_0_1()); 
-                    pushFollow(FOLLOW_ruleSelect_in_rule__Check__ValAlternatives_1_03601);
+                    pushFollow(FOLLOW_ruleSelect_in_rule__Check__ValAlternatives_1_03637);
                     ruleSelect();
 
                     state._fsp--;
@@ -5119,20 +5171,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Fill__ValAlternatives_1_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1670:1: rule__Fill__ValAlternatives_1_0 : ( ( ruleFillableElement ) | ( ruleSelect ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1689:1: rule__Fill__ValAlternatives_1_0 : ( ( ruleFillableElement ) | ( ruleSelect ) );
     public final void rule__Fill__ValAlternatives_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1674:1: ( ( ruleFillableElement ) | ( ruleSelect ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1693:1: ( ( ruleFillableElement ) | ( ruleSelect ) )
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( (LA20_0==50) ) {
+            if ( (LA20_0==55) ) {
                 alt20=1;
             }
-            else if ( (LA20_0==51) ) {
+            else if ( (LA20_0==56) ) {
                 alt20=2;
             }
             else {
@@ -5143,13 +5195,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt20) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1675:1: ( ruleFillableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1694:1: ( ruleFillableElement )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1675:1: ( ruleFillableElement )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1676:1: ruleFillableElement
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1694:1: ( ruleFillableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1695:1: ruleFillableElement
                     {
                      before(grammarAccess.getFillAccess().getValFillableElementParserRuleCall_1_0_0()); 
-                    pushFollow(FOLLOW_ruleFillableElement_in_rule__Fill__ValAlternatives_1_03633);
+                    pushFollow(FOLLOW_ruleFillableElement_in_rule__Fill__ValAlternatives_1_03669);
                     ruleFillableElement();
 
                     state._fsp--;
@@ -5162,13 +5214,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1681:6: ( ruleSelect )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1700:6: ( ruleSelect )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1681:6: ( ruleSelect )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1682:1: ruleSelect
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1700:6: ( ruleSelect )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1701:1: ruleSelect
                     {
                      before(grammarAccess.getFillAccess().getValSelectParserRuleCall_1_0_1()); 
-                    pushFollow(FOLLOW_ruleSelect_in_rule__Fill__ValAlternatives_1_03650);
+                    pushFollow(FOLLOW_ruleSelect_in_rule__Fill__ValAlternatives_1_03686);
                     ruleSelect();
 
                     state._fsp--;
@@ -5198,26 +5250,26 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Clear__Alternatives_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1692:1: rule__Clear__Alternatives_1 : ( ( ruleFillableElement ) | ( ruleCheckableElement ) | ( ruleSelect ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1711:1: rule__Clear__Alternatives_1 : ( ( ruleFillableElement ) | ( ruleCheckableElement ) | ( ruleSelect ) );
     public final void rule__Clear__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1696:1: ( ( ruleFillableElement ) | ( ruleCheckableElement ) | ( ruleSelect ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1715:1: ( ( ruleFillableElement ) | ( ruleCheckableElement ) | ( ruleSelect ) )
             int alt21=3;
             switch ( input.LA(1) ) {
-            case 50:
+            case 55:
                 {
                 alt21=1;
                 }
                 break;
-            case 46:
+            case 51:
                 {
                 alt21=2;
                 }
                 break;
-            case 51:
+            case 56:
                 {
                 alt21=3;
                 }
@@ -5231,13 +5283,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             switch (alt21) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1697:1: ( ruleFillableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1716:1: ( ruleFillableElement )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1697:1: ( ruleFillableElement )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1698:1: ruleFillableElement
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1716:1: ( ruleFillableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1717:1: ruleFillableElement
                     {
                      before(grammarAccess.getClearAccess().getFillableElementParserRuleCall_1_0()); 
-                    pushFollow(FOLLOW_ruleFillableElement_in_rule__Clear__Alternatives_13682);
+                    pushFollow(FOLLOW_ruleFillableElement_in_rule__Clear__Alternatives_13718);
                     ruleFillableElement();
 
                     state._fsp--;
@@ -5250,13 +5302,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1703:6: ( ruleCheckableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1722:6: ( ruleCheckableElement )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1703:6: ( ruleCheckableElement )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1704:1: ruleCheckableElement
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1722:6: ( ruleCheckableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1723:1: ruleCheckableElement
                     {
                      before(grammarAccess.getClearAccess().getCheckableElementParserRuleCall_1_1()); 
-                    pushFollow(FOLLOW_ruleCheckableElement_in_rule__Clear__Alternatives_13699);
+                    pushFollow(FOLLOW_ruleCheckableElement_in_rule__Clear__Alternatives_13735);
                     ruleCheckableElement();
 
                     state._fsp--;
@@ -5269,13 +5321,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1709:6: ( ruleSelect )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1728:6: ( ruleSelect )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1709:6: ( ruleSelect )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1710:1: ruleSelect
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1728:6: ( ruleSelect )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1729:1: ruleSelect
                     {
                      before(grammarAccess.getClearAccess().getSelectParserRuleCall_1_2()); 
-                    pushFollow(FOLLOW_ruleSelect_in_rule__Clear__Alternatives_13716);
+                    pushFollow(FOLLOW_ruleSelect_in_rule__Clear__Alternatives_13752);
                     ruleSelect();
 
                     state._fsp--;
@@ -5305,26 +5357,26 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Verify__Alternatives_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1720:1: rule__Verify__Alternatives_1 : ( ( ruleFillableElement ) | ( ruleCheckableElement ) | ( ruleSelect ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1739:1: rule__Verify__Alternatives_1 : ( ( ruleFillableElement ) | ( ruleCheckableElement ) | ( ruleSelect ) );
     public final void rule__Verify__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1724:1: ( ( ruleFillableElement ) | ( ruleCheckableElement ) | ( ruleSelect ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1743:1: ( ( ruleFillableElement ) | ( ruleCheckableElement ) | ( ruleSelect ) )
             int alt22=3;
             switch ( input.LA(1) ) {
-            case 50:
+            case 55:
                 {
                 alt22=1;
                 }
                 break;
-            case 46:
+            case 51:
                 {
                 alt22=2;
                 }
                 break;
-            case 51:
+            case 56:
                 {
                 alt22=3;
                 }
@@ -5338,13 +5390,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             switch (alt22) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1725:1: ( ruleFillableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1744:1: ( ruleFillableElement )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1725:1: ( ruleFillableElement )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1726:1: ruleFillableElement
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1744:1: ( ruleFillableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1745:1: ruleFillableElement
                     {
                      before(grammarAccess.getVerifyAccess().getFillableElementParserRuleCall_1_0()); 
-                    pushFollow(FOLLOW_ruleFillableElement_in_rule__Verify__Alternatives_13748);
+                    pushFollow(FOLLOW_ruleFillableElement_in_rule__Verify__Alternatives_13784);
                     ruleFillableElement();
 
                     state._fsp--;
@@ -5357,13 +5409,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1731:6: ( ruleCheckableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1750:6: ( ruleCheckableElement )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1731:6: ( ruleCheckableElement )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1732:1: ruleCheckableElement
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1750:6: ( ruleCheckableElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1751:1: ruleCheckableElement
                     {
                      before(grammarAccess.getVerifyAccess().getCheckableElementParserRuleCall_1_1()); 
-                    pushFollow(FOLLOW_ruleCheckableElement_in_rule__Verify__Alternatives_13765);
+                    pushFollow(FOLLOW_ruleCheckableElement_in_rule__Verify__Alternatives_13801);
                     ruleCheckableElement();
 
                     state._fsp--;
@@ -5376,13 +5428,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1737:6: ( ruleSelect )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1756:6: ( ruleSelect )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1737:6: ( ruleSelect )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1738:1: ruleSelect
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1756:6: ( ruleSelect )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1757:1: ruleSelect
                     {
                      before(grammarAccess.getVerifyAccess().getSelectParserRuleCall_1_2()); 
-                    pushFollow(FOLLOW_ruleSelect_in_rule__Verify__Alternatives_13782);
+                    pushFollow(FOLLOW_ruleSelect_in_rule__Verify__Alternatives_13818);
                     ruleSelect();
 
                     state._fsp--;
@@ -5412,20 +5464,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Exist__ValAlternatives_1_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1748:1: rule__Exist__ValAlternatives_1_0 : ( ( ruleElement ) | ( ruleSelect ) );
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1767:1: rule__Exist__ValAlternatives_1_0 : ( ( ruleElement ) | ( ruleSelect ) );
     public final void rule__Exist__ValAlternatives_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1752:1: ( ( ruleElement ) | ( ruleSelect ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1771:1: ( ( ruleElement ) | ( ruleSelect ) )
             int alt23=2;
             int LA23_0 = input.LA(1);
 
-            if ( ((LA23_0>=46 && LA23_0<=50)) ) {
+            if ( ((LA23_0>=51 && LA23_0<=55)) ) {
                 alt23=1;
             }
-            else if ( (LA23_0==51) ) {
+            else if ( (LA23_0==56) ) {
                 alt23=2;
             }
             else {
@@ -5436,13 +5488,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             }
             switch (alt23) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1753:1: ( ruleElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1772:1: ( ruleElement )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1753:1: ( ruleElement )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1754:1: ruleElement
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1772:1: ( ruleElement )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1773:1: ruleElement
                     {
                      before(grammarAccess.getExistAccess().getValElementParserRuleCall_1_0_0()); 
-                    pushFollow(FOLLOW_ruleElement_in_rule__Exist__ValAlternatives_1_03814);
+                    pushFollow(FOLLOW_ruleElement_in_rule__Exist__ValAlternatives_1_03850);
                     ruleElement();
 
                     state._fsp--;
@@ -5455,13 +5507,13 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1759:6: ( ruleSelect )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1778:6: ( ruleSelect )
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1759:6: ( ruleSelect )
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1760:1: ruleSelect
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1778:6: ( ruleSelect )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1779:1: ruleSelect
                     {
                      before(grammarAccess.getExistAccess().getValSelectParserRuleCall_1_0_1()); 
-                    pushFollow(FOLLOW_ruleSelect_in_rule__Exist__ValAlternatives_1_03831);
+                    pushFollow(FOLLOW_ruleSelect_in_rule__Exist__ValAlternatives_1_03867);
                     ruleSelect();
 
                     state._fsp--;
@@ -5490,22 +5542,105 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Exist__ValAlternatives_1_0"
 
 
+    // $ANTLR start "rule__OpenBrowser__Alternatives"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1789:1: rule__OpenBrowser__Alternatives : ( ( ( 'Chrome' ) ) | ( ( 'Firefox' ) ) );
+    public final void rule__OpenBrowser__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1793:1: ( ( ( 'Chrome' ) ) | ( ( 'Firefox' ) ) )
+            int alt24=2;
+            int LA24_0 = input.LA(1);
+
+            if ( (LA24_0==25) ) {
+                alt24=1;
+            }
+            else if ( (LA24_0==26) ) {
+                alt24=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 24, 0, input);
+
+                throw nvae;
+            }
+            switch (alt24) {
+                case 1 :
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1794:1: ( ( 'Chrome' ) )
+                    {
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1794:1: ( ( 'Chrome' ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1795:1: ( 'Chrome' )
+                    {
+                     before(grammarAccess.getOpenBrowserAccess().getChromeEnumLiteralDeclaration_0()); 
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1796:1: ( 'Chrome' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1796:3: 'Chrome'
+                    {
+                    match(input,25,FOLLOW_25_in_rule__OpenBrowser__Alternatives3900); 
+
+                    }
+
+                     after(grammarAccess.getOpenBrowserAccess().getChromeEnumLiteralDeclaration_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1801:6: ( ( 'Firefox' ) )
+                    {
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1801:6: ( ( 'Firefox' ) )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1802:1: ( 'Firefox' )
+                    {
+                     before(grammarAccess.getOpenBrowserAccess().getFirefoxEnumLiteralDeclaration_1()); 
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1803:1: ( 'Firefox' )
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1803:3: 'Firefox'
+                    {
+                    match(input,26,FOLLOW_26_in_rule__OpenBrowser__Alternatives3921); 
+
+                    }
+
+                     after(grammarAccess.getOpenBrowserAccess().getFirefoxEnumLiteralDeclaration_1()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__OpenBrowser__Alternatives"
+
+
     // $ANTLR start "rule__Program__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1772:1: rule__Program__Group__0 : rule__Program__Group__0__Impl rule__Program__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1815:1: rule__Program__Group__0 : rule__Program__Group__0__Impl rule__Program__Group__1 ;
     public final void rule__Program__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1776:1: ( rule__Program__Group__0__Impl rule__Program__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1777:2: rule__Program__Group__0__Impl rule__Program__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1819:1: ( rule__Program__Group__0__Impl rule__Program__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1820:2: rule__Program__Group__0__Impl rule__Program__Group__1
             {
-            pushFollow(FOLLOW_rule__Program__Group__0__Impl_in_rule__Program__Group__03861);
+            pushFollow(FOLLOW_rule__Program__Group__0__Impl_in_rule__Program__Group__03954);
             rule__Program__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Program__Group__1_in_rule__Program__Group__03864);
+            pushFollow(FOLLOW_rule__Program__Group__1_in_rule__Program__Group__03957);
             rule__Program__Group__1();
 
             state._fsp--;
@@ -5529,35 +5664,35 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1784:1: rule__Program__Group__0__Impl : ( ( rule__Program__SubAssignment_0 )* ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1827:1: rule__Program__Group__0__Impl : ( ( rule__Program__SubAssignment_0 )* ) ;
     public final void rule__Program__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1788:1: ( ( ( rule__Program__SubAssignment_0 )* ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1789:1: ( ( rule__Program__SubAssignment_0 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1831:1: ( ( ( rule__Program__SubAssignment_0 )* ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1832:1: ( ( rule__Program__SubAssignment_0 )* )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1789:1: ( ( rule__Program__SubAssignment_0 )* )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1790:1: ( rule__Program__SubAssignment_0 )*
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1832:1: ( ( rule__Program__SubAssignment_0 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1833:1: ( rule__Program__SubAssignment_0 )*
             {
              before(grammarAccess.getProgramAccess().getSubAssignment_0()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1791:1: ( rule__Program__SubAssignment_0 )*
-            loop24:
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1834:1: ( rule__Program__SubAssignment_0 )*
+            loop25:
             do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
+                int alt25=2;
+                int LA25_0 = input.LA(1);
 
-                if ( (LA24_0==25) ) {
-                    alt24=1;
+                if ( (LA25_0==27) ) {
+                    alt25=1;
                 }
 
 
-                switch (alt24) {
+                switch (alt25) {
             	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1791:2: rule__Program__SubAssignment_0
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1834:2: rule__Program__SubAssignment_0
             	    {
-            	    pushFollow(FOLLOW_rule__Program__SubAssignment_0_in_rule__Program__Group__0__Impl3891);
+            	    pushFollow(FOLLOW_rule__Program__SubAssignment_0_in_rule__Program__Group__0__Impl3984);
             	    rule__Program__SubAssignment_0();
 
             	    state._fsp--;
@@ -5567,7 +5702,7 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop24;
+            	    break loop25;
                 }
             } while (true);
 
@@ -5594,16 +5729,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1801:1: rule__Program__Group__1 : rule__Program__Group__1__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1844:1: rule__Program__Group__1 : rule__Program__Group__1__Impl ;
     public final void rule__Program__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1805:1: ( rule__Program__Group__1__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1806:2: rule__Program__Group__1__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1848:1: ( rule__Program__Group__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1849:2: rule__Program__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Program__Group__1__Impl_in_rule__Program__Group__13922);
+            pushFollow(FOLLOW_rule__Program__Group__1__Impl_in_rule__Program__Group__14015);
             rule__Program__Group__1__Impl();
 
             state._fsp--;
@@ -5627,23 +5762,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1812:1: rule__Program__Group__1__Impl : ( ( rule__Program__MainAssignment_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1855:1: rule__Program__Group__1__Impl : ( ( rule__Program__MainAssignment_1 ) ) ;
     public final void rule__Program__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1816:1: ( ( ( rule__Program__MainAssignment_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1817:1: ( ( rule__Program__MainAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1859:1: ( ( ( rule__Program__MainAssignment_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1860:1: ( ( rule__Program__MainAssignment_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1817:1: ( ( rule__Program__MainAssignment_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1818:1: ( rule__Program__MainAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1860:1: ( ( rule__Program__MainAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1861:1: ( rule__Program__MainAssignment_1 )
             {
              before(grammarAccess.getProgramAccess().getMainAssignment_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1819:1: ( rule__Program__MainAssignment_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1819:2: rule__Program__MainAssignment_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1862:1: ( rule__Program__MainAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1862:2: rule__Program__MainAssignment_1
             {
-            pushFollow(FOLLOW_rule__Program__MainAssignment_1_in_rule__Program__Group__1__Impl3949);
+            pushFollow(FOLLOW_rule__Program__MainAssignment_1_in_rule__Program__Group__1__Impl4042);
             rule__Program__MainAssignment_1();
 
             state._fsp--;
@@ -5674,21 +5809,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Subroutine__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1833:1: rule__Subroutine__Group__0 : rule__Subroutine__Group__0__Impl rule__Subroutine__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1876:1: rule__Subroutine__Group__0 : rule__Subroutine__Group__0__Impl rule__Subroutine__Group__1 ;
     public final void rule__Subroutine__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1837:1: ( rule__Subroutine__Group__0__Impl rule__Subroutine__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1838:2: rule__Subroutine__Group__0__Impl rule__Subroutine__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1880:1: ( rule__Subroutine__Group__0__Impl rule__Subroutine__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1881:2: rule__Subroutine__Group__0__Impl rule__Subroutine__Group__1
             {
-            pushFollow(FOLLOW_rule__Subroutine__Group__0__Impl_in_rule__Subroutine__Group__03983);
+            pushFollow(FOLLOW_rule__Subroutine__Group__0__Impl_in_rule__Subroutine__Group__04076);
             rule__Subroutine__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Subroutine__Group__1_in_rule__Subroutine__Group__03986);
+            pushFollow(FOLLOW_rule__Subroutine__Group__1_in_rule__Subroutine__Group__04079);
             rule__Subroutine__Group__1();
 
             state._fsp--;
@@ -5712,20 +5847,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Subroutine__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1845:1: rule__Subroutine__Group__0__Impl : ( 'sub ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1888:1: rule__Subroutine__Group__0__Impl : ( 'sub ' ) ;
     public final void rule__Subroutine__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1849:1: ( ( 'sub ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1850:1: ( 'sub ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1892:1: ( ( 'sub ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1893:1: ( 'sub ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1850:1: ( 'sub ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1851:1: 'sub '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1893:1: ( 'sub ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1894:1: 'sub '
             {
              before(grammarAccess.getSubroutineAccess().getSubKeyword_0()); 
-            match(input,25,FOLLOW_25_in_rule__Subroutine__Group__0__Impl4014); 
+            match(input,27,FOLLOW_27_in_rule__Subroutine__Group__0__Impl4107); 
              after(grammarAccess.getSubroutineAccess().getSubKeyword_0()); 
 
             }
@@ -5749,21 +5884,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Subroutine__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1864:1: rule__Subroutine__Group__1 : rule__Subroutine__Group__1__Impl rule__Subroutine__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1907:1: rule__Subroutine__Group__1 : rule__Subroutine__Group__1__Impl rule__Subroutine__Group__2 ;
     public final void rule__Subroutine__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1868:1: ( rule__Subroutine__Group__1__Impl rule__Subroutine__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1869:2: rule__Subroutine__Group__1__Impl rule__Subroutine__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1911:1: ( rule__Subroutine__Group__1__Impl rule__Subroutine__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1912:2: rule__Subroutine__Group__1__Impl rule__Subroutine__Group__2
             {
-            pushFollow(FOLLOW_rule__Subroutine__Group__1__Impl_in_rule__Subroutine__Group__14045);
+            pushFollow(FOLLOW_rule__Subroutine__Group__1__Impl_in_rule__Subroutine__Group__14138);
             rule__Subroutine__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Subroutine__Group__2_in_rule__Subroutine__Group__14048);
+            pushFollow(FOLLOW_rule__Subroutine__Group__2_in_rule__Subroutine__Group__14141);
             rule__Subroutine__Group__2();
 
             state._fsp--;
@@ -5787,23 +5922,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Subroutine__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1876:1: rule__Subroutine__Group__1__Impl : ( ( rule__Subroutine__HeadAssignment_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1919:1: rule__Subroutine__Group__1__Impl : ( ( rule__Subroutine__HeadAssignment_1 ) ) ;
     public final void rule__Subroutine__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1880:1: ( ( ( rule__Subroutine__HeadAssignment_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1881:1: ( ( rule__Subroutine__HeadAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1923:1: ( ( ( rule__Subroutine__HeadAssignment_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1924:1: ( ( rule__Subroutine__HeadAssignment_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1881:1: ( ( rule__Subroutine__HeadAssignment_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1882:1: ( rule__Subroutine__HeadAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1924:1: ( ( rule__Subroutine__HeadAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1925:1: ( rule__Subroutine__HeadAssignment_1 )
             {
              before(grammarAccess.getSubroutineAccess().getHeadAssignment_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1883:1: ( rule__Subroutine__HeadAssignment_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1883:2: rule__Subroutine__HeadAssignment_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1926:1: ( rule__Subroutine__HeadAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1926:2: rule__Subroutine__HeadAssignment_1
             {
-            pushFollow(FOLLOW_rule__Subroutine__HeadAssignment_1_in_rule__Subroutine__Group__1__Impl4075);
+            pushFollow(FOLLOW_rule__Subroutine__HeadAssignment_1_in_rule__Subroutine__Group__1__Impl4168);
             rule__Subroutine__HeadAssignment_1();
 
             state._fsp--;
@@ -5834,16 +5969,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Subroutine__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1893:1: rule__Subroutine__Group__2 : rule__Subroutine__Group__2__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1936:1: rule__Subroutine__Group__2 : rule__Subroutine__Group__2__Impl ;
     public final void rule__Subroutine__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1897:1: ( rule__Subroutine__Group__2__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1898:2: rule__Subroutine__Group__2__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1940:1: ( rule__Subroutine__Group__2__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1941:2: rule__Subroutine__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Subroutine__Group__2__Impl_in_rule__Subroutine__Group__24105);
+            pushFollow(FOLLOW_rule__Subroutine__Group__2__Impl_in_rule__Subroutine__Group__24198);
             rule__Subroutine__Group__2__Impl();
 
             state._fsp--;
@@ -5867,23 +6002,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Subroutine__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1904:1: rule__Subroutine__Group__2__Impl : ( ( rule__Subroutine__BodyAssignment_2 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1947:1: rule__Subroutine__Group__2__Impl : ( ( rule__Subroutine__BodyAssignment_2 ) ) ;
     public final void rule__Subroutine__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1908:1: ( ( ( rule__Subroutine__BodyAssignment_2 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1909:1: ( ( rule__Subroutine__BodyAssignment_2 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1951:1: ( ( ( rule__Subroutine__BodyAssignment_2 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1952:1: ( ( rule__Subroutine__BodyAssignment_2 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1909:1: ( ( rule__Subroutine__BodyAssignment_2 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1910:1: ( rule__Subroutine__BodyAssignment_2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1952:1: ( ( rule__Subroutine__BodyAssignment_2 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1953:1: ( rule__Subroutine__BodyAssignment_2 )
             {
              before(grammarAccess.getSubroutineAccess().getBodyAssignment_2()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1911:1: ( rule__Subroutine__BodyAssignment_2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1911:2: rule__Subroutine__BodyAssignment_2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1954:1: ( rule__Subroutine__BodyAssignment_2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1954:2: rule__Subroutine__BodyAssignment_2
             {
-            pushFollow(FOLLOW_rule__Subroutine__BodyAssignment_2_in_rule__Subroutine__Group__2__Impl4132);
+            pushFollow(FOLLOW_rule__Subroutine__BodyAssignment_2_in_rule__Subroutine__Group__2__Impl4225);
             rule__Subroutine__BodyAssignment_2();
 
             state._fsp--;
@@ -5914,21 +6049,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_0__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1927:1: rule__Head__Group_0__0 : rule__Head__Group_0__0__Impl rule__Head__Group_0__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1970:1: rule__Head__Group_0__0 : rule__Head__Group_0__0__Impl rule__Head__Group_0__1 ;
     public final void rule__Head__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1931:1: ( rule__Head__Group_0__0__Impl rule__Head__Group_0__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1932:2: rule__Head__Group_0__0__Impl rule__Head__Group_0__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1974:1: ( rule__Head__Group_0__0__Impl rule__Head__Group_0__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1975:2: rule__Head__Group_0__0__Impl rule__Head__Group_0__1
             {
-            pushFollow(FOLLOW_rule__Head__Group_0__0__Impl_in_rule__Head__Group_0__04168);
+            pushFollow(FOLLOW_rule__Head__Group_0__0__Impl_in_rule__Head__Group_0__04261);
             rule__Head__Group_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Head__Group_0__1_in_rule__Head__Group_0__04171);
+            pushFollow(FOLLOW_rule__Head__Group_0__1_in_rule__Head__Group_0__04264);
             rule__Head__Group_0__1();
 
             state._fsp--;
@@ -5952,23 +6087,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_0__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1939:1: rule__Head__Group_0__0__Impl : ( ( rule__Head__NameAssignment_0_0 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1982:1: rule__Head__Group_0__0__Impl : ( ( rule__Head__NameAssignment_0_0 ) ) ;
     public final void rule__Head__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1943:1: ( ( ( rule__Head__NameAssignment_0_0 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1944:1: ( ( rule__Head__NameAssignment_0_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1986:1: ( ( ( rule__Head__NameAssignment_0_0 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1987:1: ( ( rule__Head__NameAssignment_0_0 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1944:1: ( ( rule__Head__NameAssignment_0_0 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1945:1: ( rule__Head__NameAssignment_0_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1987:1: ( ( rule__Head__NameAssignment_0_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1988:1: ( rule__Head__NameAssignment_0_0 )
             {
              before(grammarAccess.getHeadAccess().getNameAssignment_0_0()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1946:1: ( rule__Head__NameAssignment_0_0 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1946:2: rule__Head__NameAssignment_0_0
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1989:1: ( rule__Head__NameAssignment_0_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1989:2: rule__Head__NameAssignment_0_0
             {
-            pushFollow(FOLLOW_rule__Head__NameAssignment_0_0_in_rule__Head__Group_0__0__Impl4198);
+            pushFollow(FOLLOW_rule__Head__NameAssignment_0_0_in_rule__Head__Group_0__0__Impl4291);
             rule__Head__NameAssignment_0_0();
 
             state._fsp--;
@@ -5999,16 +6134,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_0__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1956:1: rule__Head__Group_0__1 : rule__Head__Group_0__1__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1999:1: rule__Head__Group_0__1 : rule__Head__Group_0__1__Impl ;
     public final void rule__Head__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1960:1: ( rule__Head__Group_0__1__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1961:2: rule__Head__Group_0__1__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2003:1: ( rule__Head__Group_0__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2004:2: rule__Head__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Head__Group_0__1__Impl_in_rule__Head__Group_0__14228);
+            pushFollow(FOLLOW_rule__Head__Group_0__1__Impl_in_rule__Head__Group_0__14321);
             rule__Head__Group_0__1__Impl();
 
             state._fsp--;
@@ -6032,20 +6167,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_0__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1967:1: rule__Head__Group_0__1__Impl : ( '()' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2010:1: rule__Head__Group_0__1__Impl : ( '()' ) ;
     public final void rule__Head__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1971:1: ( ( '()' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1972:1: ( '()' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2014:1: ( ( '()' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2015:1: ( '()' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1972:1: ( '()' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1973:1: '()'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2015:1: ( '()' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2016:1: '()'
             {
              before(grammarAccess.getHeadAccess().getLeftParenthesisRightParenthesisKeyword_0_1()); 
-            match(input,26,FOLLOW_26_in_rule__Head__Group_0__1__Impl4256); 
+            match(input,28,FOLLOW_28_in_rule__Head__Group_0__1__Impl4349); 
              after(grammarAccess.getHeadAccess().getLeftParenthesisRightParenthesisKeyword_0_1()); 
 
             }
@@ -6069,21 +6204,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1990:1: rule__Head__Group_1__0 : rule__Head__Group_1__0__Impl rule__Head__Group_1__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2033:1: rule__Head__Group_1__0 : rule__Head__Group_1__0__Impl rule__Head__Group_1__1 ;
     public final void rule__Head__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1994:1: ( rule__Head__Group_1__0__Impl rule__Head__Group_1__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1995:2: rule__Head__Group_1__0__Impl rule__Head__Group_1__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2037:1: ( rule__Head__Group_1__0__Impl rule__Head__Group_1__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2038:2: rule__Head__Group_1__0__Impl rule__Head__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Head__Group_1__0__Impl_in_rule__Head__Group_1__04291);
+            pushFollow(FOLLOW_rule__Head__Group_1__0__Impl_in_rule__Head__Group_1__04384);
             rule__Head__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Head__Group_1__1_in_rule__Head__Group_1__04294);
+            pushFollow(FOLLOW_rule__Head__Group_1__1_in_rule__Head__Group_1__04387);
             rule__Head__Group_1__1();
 
             state._fsp--;
@@ -6107,23 +6242,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2002:1: rule__Head__Group_1__0__Impl : ( ( rule__Head__NameAssignment_1_0 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2045:1: rule__Head__Group_1__0__Impl : ( ( rule__Head__NameAssignment_1_0 ) ) ;
     public final void rule__Head__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2006:1: ( ( ( rule__Head__NameAssignment_1_0 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2007:1: ( ( rule__Head__NameAssignment_1_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2049:1: ( ( ( rule__Head__NameAssignment_1_0 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2050:1: ( ( rule__Head__NameAssignment_1_0 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2007:1: ( ( rule__Head__NameAssignment_1_0 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2008:1: ( rule__Head__NameAssignment_1_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2050:1: ( ( rule__Head__NameAssignment_1_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2051:1: ( rule__Head__NameAssignment_1_0 )
             {
              before(grammarAccess.getHeadAccess().getNameAssignment_1_0()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2009:1: ( rule__Head__NameAssignment_1_0 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2009:2: rule__Head__NameAssignment_1_0
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2052:1: ( rule__Head__NameAssignment_1_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2052:2: rule__Head__NameAssignment_1_0
             {
-            pushFollow(FOLLOW_rule__Head__NameAssignment_1_0_in_rule__Head__Group_1__0__Impl4321);
+            pushFollow(FOLLOW_rule__Head__NameAssignment_1_0_in_rule__Head__Group_1__0__Impl4414);
             rule__Head__NameAssignment_1_0();
 
             state._fsp--;
@@ -6154,21 +6289,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2019:1: rule__Head__Group_1__1 : rule__Head__Group_1__1__Impl rule__Head__Group_1__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2062:1: rule__Head__Group_1__1 : rule__Head__Group_1__1__Impl rule__Head__Group_1__2 ;
     public final void rule__Head__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2023:1: ( rule__Head__Group_1__1__Impl rule__Head__Group_1__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2024:2: rule__Head__Group_1__1__Impl rule__Head__Group_1__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2066:1: ( rule__Head__Group_1__1__Impl rule__Head__Group_1__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2067:2: rule__Head__Group_1__1__Impl rule__Head__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Head__Group_1__1__Impl_in_rule__Head__Group_1__14351);
+            pushFollow(FOLLOW_rule__Head__Group_1__1__Impl_in_rule__Head__Group_1__14444);
             rule__Head__Group_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Head__Group_1__2_in_rule__Head__Group_1__14354);
+            pushFollow(FOLLOW_rule__Head__Group_1__2_in_rule__Head__Group_1__14447);
             rule__Head__Group_1__2();
 
             state._fsp--;
@@ -6192,20 +6327,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2031:1: rule__Head__Group_1__1__Impl : ( '(var ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2074:1: rule__Head__Group_1__1__Impl : ( '(var ' ) ;
     public final void rule__Head__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2035:1: ( ( '(var ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2036:1: ( '(var ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2078:1: ( ( '(var ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2079:1: ( '(var ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2036:1: ( '(var ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2037:1: '(var '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2079:1: ( '(var ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2080:1: '(var '
             {
              before(grammarAccess.getHeadAccess().getVarKeyword_1_1()); 
-            match(input,27,FOLLOW_27_in_rule__Head__Group_1__1__Impl4382); 
+            match(input,29,FOLLOW_29_in_rule__Head__Group_1__1__Impl4475); 
              after(grammarAccess.getHeadAccess().getVarKeyword_1_1()); 
 
             }
@@ -6229,21 +6364,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2050:1: rule__Head__Group_1__2 : rule__Head__Group_1__2__Impl rule__Head__Group_1__3 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2093:1: rule__Head__Group_1__2 : rule__Head__Group_1__2__Impl rule__Head__Group_1__3 ;
     public final void rule__Head__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2054:1: ( rule__Head__Group_1__2__Impl rule__Head__Group_1__3 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2055:2: rule__Head__Group_1__2__Impl rule__Head__Group_1__3
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2097:1: ( rule__Head__Group_1__2__Impl rule__Head__Group_1__3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2098:2: rule__Head__Group_1__2__Impl rule__Head__Group_1__3
             {
-            pushFollow(FOLLOW_rule__Head__Group_1__2__Impl_in_rule__Head__Group_1__24413);
+            pushFollow(FOLLOW_rule__Head__Group_1__2__Impl_in_rule__Head__Group_1__24506);
             rule__Head__Group_1__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Head__Group_1__3_in_rule__Head__Group_1__24416);
+            pushFollow(FOLLOW_rule__Head__Group_1__3_in_rule__Head__Group_1__24509);
             rule__Head__Group_1__3();
 
             state._fsp--;
@@ -6267,23 +6402,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2062:1: rule__Head__Group_1__2__Impl : ( ( rule__Head__VarIdAssignment_1_2 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2105:1: rule__Head__Group_1__2__Impl : ( ( rule__Head__VarIdAssignment_1_2 ) ) ;
     public final void rule__Head__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2066:1: ( ( ( rule__Head__VarIdAssignment_1_2 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2067:1: ( ( rule__Head__VarIdAssignment_1_2 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2109:1: ( ( ( rule__Head__VarIdAssignment_1_2 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2110:1: ( ( rule__Head__VarIdAssignment_1_2 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2067:1: ( ( rule__Head__VarIdAssignment_1_2 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2068:1: ( rule__Head__VarIdAssignment_1_2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2110:1: ( ( rule__Head__VarIdAssignment_1_2 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2111:1: ( rule__Head__VarIdAssignment_1_2 )
             {
              before(grammarAccess.getHeadAccess().getVarIdAssignment_1_2()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2069:1: ( rule__Head__VarIdAssignment_1_2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2069:2: rule__Head__VarIdAssignment_1_2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2112:1: ( rule__Head__VarIdAssignment_1_2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2112:2: rule__Head__VarIdAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__Head__VarIdAssignment_1_2_in_rule__Head__Group_1__2__Impl4443);
+            pushFollow(FOLLOW_rule__Head__VarIdAssignment_1_2_in_rule__Head__Group_1__2__Impl4536);
             rule__Head__VarIdAssignment_1_2();
 
             state._fsp--;
@@ -6314,21 +6449,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1__3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2079:1: rule__Head__Group_1__3 : rule__Head__Group_1__3__Impl rule__Head__Group_1__4 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2122:1: rule__Head__Group_1__3 : rule__Head__Group_1__3__Impl rule__Head__Group_1__4 ;
     public final void rule__Head__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2083:1: ( rule__Head__Group_1__3__Impl rule__Head__Group_1__4 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2084:2: rule__Head__Group_1__3__Impl rule__Head__Group_1__4
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2126:1: ( rule__Head__Group_1__3__Impl rule__Head__Group_1__4 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2127:2: rule__Head__Group_1__3__Impl rule__Head__Group_1__4
             {
-            pushFollow(FOLLOW_rule__Head__Group_1__3__Impl_in_rule__Head__Group_1__34473);
+            pushFollow(FOLLOW_rule__Head__Group_1__3__Impl_in_rule__Head__Group_1__34566);
             rule__Head__Group_1__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Head__Group_1__4_in_rule__Head__Group_1__34476);
+            pushFollow(FOLLOW_rule__Head__Group_1__4_in_rule__Head__Group_1__34569);
             rule__Head__Group_1__4();
 
             state._fsp--;
@@ -6352,35 +6487,35 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1__3__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2091:1: rule__Head__Group_1__3__Impl : ( ( rule__Head__Group_1_3__0 )* ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2134:1: rule__Head__Group_1__3__Impl : ( ( rule__Head__Group_1_3__0 )* ) ;
     public final void rule__Head__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2095:1: ( ( ( rule__Head__Group_1_3__0 )* ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2096:1: ( ( rule__Head__Group_1_3__0 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2138:1: ( ( ( rule__Head__Group_1_3__0 )* ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2139:1: ( ( rule__Head__Group_1_3__0 )* )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2096:1: ( ( rule__Head__Group_1_3__0 )* )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2097:1: ( rule__Head__Group_1_3__0 )*
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2139:1: ( ( rule__Head__Group_1_3__0 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2140:1: ( rule__Head__Group_1_3__0 )*
             {
              before(grammarAccess.getHeadAccess().getGroup_1_3()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2098:1: ( rule__Head__Group_1_3__0 )*
-            loop25:
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2141:1: ( rule__Head__Group_1_3__0 )*
+            loop26:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt26=2;
+                int LA26_0 = input.LA(1);
 
-                if ( (LA25_0==29) ) {
-                    alt25=1;
+                if ( (LA26_0==31) ) {
+                    alt26=1;
                 }
 
 
-                switch (alt25) {
+                switch (alt26) {
             	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2098:2: rule__Head__Group_1_3__0
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2141:2: rule__Head__Group_1_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__Head__Group_1_3__0_in_rule__Head__Group_1__3__Impl4503);
+            	    pushFollow(FOLLOW_rule__Head__Group_1_3__0_in_rule__Head__Group_1__3__Impl4596);
             	    rule__Head__Group_1_3__0();
 
             	    state._fsp--;
@@ -6390,7 +6525,7 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop26;
                 }
             } while (true);
 
@@ -6417,16 +6552,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1__4"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2108:1: rule__Head__Group_1__4 : rule__Head__Group_1__4__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2151:1: rule__Head__Group_1__4 : rule__Head__Group_1__4__Impl ;
     public final void rule__Head__Group_1__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2112:1: ( rule__Head__Group_1__4__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2113:2: rule__Head__Group_1__4__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2155:1: ( rule__Head__Group_1__4__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2156:2: rule__Head__Group_1__4__Impl
             {
-            pushFollow(FOLLOW_rule__Head__Group_1__4__Impl_in_rule__Head__Group_1__44534);
+            pushFollow(FOLLOW_rule__Head__Group_1__4__Impl_in_rule__Head__Group_1__44627);
             rule__Head__Group_1__4__Impl();
 
             state._fsp--;
@@ -6450,20 +6585,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1__4__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2119:1: rule__Head__Group_1__4__Impl : ( ')' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2162:1: rule__Head__Group_1__4__Impl : ( ')' ) ;
     public final void rule__Head__Group_1__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2123:1: ( ( ')' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2124:1: ( ')' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2166:1: ( ( ')' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2167:1: ( ')' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2124:1: ( ')' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2125:1: ')'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2167:1: ( ')' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2168:1: ')'
             {
              before(grammarAccess.getHeadAccess().getRightParenthesisKeyword_1_4()); 
-            match(input,28,FOLLOW_28_in_rule__Head__Group_1__4__Impl4562); 
+            match(input,30,FOLLOW_30_in_rule__Head__Group_1__4__Impl4655); 
              after(grammarAccess.getHeadAccess().getRightParenthesisKeyword_1_4()); 
 
             }
@@ -6487,21 +6622,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1_3__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2148:1: rule__Head__Group_1_3__0 : rule__Head__Group_1_3__0__Impl rule__Head__Group_1_3__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2191:1: rule__Head__Group_1_3__0 : rule__Head__Group_1_3__0__Impl rule__Head__Group_1_3__1 ;
     public final void rule__Head__Group_1_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2152:1: ( rule__Head__Group_1_3__0__Impl rule__Head__Group_1_3__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2153:2: rule__Head__Group_1_3__0__Impl rule__Head__Group_1_3__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2195:1: ( rule__Head__Group_1_3__0__Impl rule__Head__Group_1_3__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2196:2: rule__Head__Group_1_3__0__Impl rule__Head__Group_1_3__1
             {
-            pushFollow(FOLLOW_rule__Head__Group_1_3__0__Impl_in_rule__Head__Group_1_3__04603);
+            pushFollow(FOLLOW_rule__Head__Group_1_3__0__Impl_in_rule__Head__Group_1_3__04696);
             rule__Head__Group_1_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Head__Group_1_3__1_in_rule__Head__Group_1_3__04606);
+            pushFollow(FOLLOW_rule__Head__Group_1_3__1_in_rule__Head__Group_1_3__04699);
             rule__Head__Group_1_3__1();
 
             state._fsp--;
@@ -6525,20 +6660,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1_3__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2160:1: rule__Head__Group_1_3__0__Impl : ( ', var ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2203:1: rule__Head__Group_1_3__0__Impl : ( ', var ' ) ;
     public final void rule__Head__Group_1_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2164:1: ( ( ', var ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2165:1: ( ', var ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2207:1: ( ( ', var ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2208:1: ( ', var ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2165:1: ( ', var ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2166:1: ', var '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2208:1: ( ', var ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2209:1: ', var '
             {
              before(grammarAccess.getHeadAccess().getVarKeyword_1_3_0()); 
-            match(input,29,FOLLOW_29_in_rule__Head__Group_1_3__0__Impl4634); 
+            match(input,31,FOLLOW_31_in_rule__Head__Group_1_3__0__Impl4727); 
              after(grammarAccess.getHeadAccess().getVarKeyword_1_3_0()); 
 
             }
@@ -6562,16 +6697,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1_3__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2179:1: rule__Head__Group_1_3__1 : rule__Head__Group_1_3__1__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2222:1: rule__Head__Group_1_3__1 : rule__Head__Group_1_3__1__Impl ;
     public final void rule__Head__Group_1_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2183:1: ( rule__Head__Group_1_3__1__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2184:2: rule__Head__Group_1_3__1__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2226:1: ( rule__Head__Group_1_3__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2227:2: rule__Head__Group_1_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Head__Group_1_3__1__Impl_in_rule__Head__Group_1_3__14665);
+            pushFollow(FOLLOW_rule__Head__Group_1_3__1__Impl_in_rule__Head__Group_1_3__14758);
             rule__Head__Group_1_3__1__Impl();
 
             state._fsp--;
@@ -6595,23 +6730,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__Group_1_3__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2190:1: rule__Head__Group_1_3__1__Impl : ( ( rule__Head__VarIdAssignment_1_3_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2233:1: rule__Head__Group_1_3__1__Impl : ( ( rule__Head__VarIdAssignment_1_3_1 ) ) ;
     public final void rule__Head__Group_1_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2194:1: ( ( ( rule__Head__VarIdAssignment_1_3_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2195:1: ( ( rule__Head__VarIdAssignment_1_3_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2237:1: ( ( ( rule__Head__VarIdAssignment_1_3_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2238:1: ( ( rule__Head__VarIdAssignment_1_3_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2195:1: ( ( rule__Head__VarIdAssignment_1_3_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2196:1: ( rule__Head__VarIdAssignment_1_3_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2238:1: ( ( rule__Head__VarIdAssignment_1_3_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2239:1: ( rule__Head__VarIdAssignment_1_3_1 )
             {
              before(grammarAccess.getHeadAccess().getVarIdAssignment_1_3_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2197:1: ( rule__Head__VarIdAssignment_1_3_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2197:2: rule__Head__VarIdAssignment_1_3_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2240:1: ( rule__Head__VarIdAssignment_1_3_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2240:2: rule__Head__VarIdAssignment_1_3_1
             {
-            pushFollow(FOLLOW_rule__Head__VarIdAssignment_1_3_1_in_rule__Head__Group_1_3__1__Impl4692);
+            pushFollow(FOLLOW_rule__Head__VarIdAssignment_1_3_1_in_rule__Head__Group_1_3__1__Impl4785);
             rule__Head__VarIdAssignment_1_3_1();
 
             state._fsp--;
@@ -6642,21 +6777,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_0__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2211:1: rule__FunctionCall__Group_0__0 : rule__FunctionCall__Group_0__0__Impl rule__FunctionCall__Group_0__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2254:1: rule__FunctionCall__Group_0__0 : rule__FunctionCall__Group_0__0__Impl rule__FunctionCall__Group_0__1 ;
     public final void rule__FunctionCall__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2215:1: ( rule__FunctionCall__Group_0__0__Impl rule__FunctionCall__Group_0__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2216:2: rule__FunctionCall__Group_0__0__Impl rule__FunctionCall__Group_0__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2258:1: ( rule__FunctionCall__Group_0__0__Impl rule__FunctionCall__Group_0__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2259:2: rule__FunctionCall__Group_0__0__Impl rule__FunctionCall__Group_0__1
             {
-            pushFollow(FOLLOW_rule__FunctionCall__Group_0__0__Impl_in_rule__FunctionCall__Group_0__04726);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_0__0__Impl_in_rule__FunctionCall__Group_0__04819);
             rule__FunctionCall__Group_0__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FunctionCall__Group_0__1_in_rule__FunctionCall__Group_0__04729);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_0__1_in_rule__FunctionCall__Group_0__04822);
             rule__FunctionCall__Group_0__1();
 
             state._fsp--;
@@ -6680,20 +6815,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_0__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2223:1: rule__FunctionCall__Group_0__0__Impl : ( ruleFunctionReference ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2266:1: rule__FunctionCall__Group_0__0__Impl : ( ruleFunctionReference ) ;
     public final void rule__FunctionCall__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2227:1: ( ( ruleFunctionReference ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2228:1: ( ruleFunctionReference )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2270:1: ( ( ruleFunctionReference ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2271:1: ( ruleFunctionReference )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2228:1: ( ruleFunctionReference )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2229:1: ruleFunctionReference
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2271:1: ( ruleFunctionReference )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2272:1: ruleFunctionReference
             {
              before(grammarAccess.getFunctionCallAccess().getFunctionReferenceParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleFunctionReference_in_rule__FunctionCall__Group_0__0__Impl4756);
+            pushFollow(FOLLOW_ruleFunctionReference_in_rule__FunctionCall__Group_0__0__Impl4849);
             ruleFunctionReference();
 
             state._fsp--;
@@ -6721,16 +6856,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_0__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2240:1: rule__FunctionCall__Group_0__1 : rule__FunctionCall__Group_0__1__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2283:1: rule__FunctionCall__Group_0__1 : rule__FunctionCall__Group_0__1__Impl ;
     public final void rule__FunctionCall__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2244:1: ( rule__FunctionCall__Group_0__1__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2245:2: rule__FunctionCall__Group_0__1__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2287:1: ( rule__FunctionCall__Group_0__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2288:2: rule__FunctionCall__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__FunctionCall__Group_0__1__Impl_in_rule__FunctionCall__Group_0__14785);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_0__1__Impl_in_rule__FunctionCall__Group_0__14878);
             rule__FunctionCall__Group_0__1__Impl();
 
             state._fsp--;
@@ -6754,20 +6889,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_0__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2251:1: rule__FunctionCall__Group_0__1__Impl : ( '()' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2294:1: rule__FunctionCall__Group_0__1__Impl : ( '()' ) ;
     public final void rule__FunctionCall__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2255:1: ( ( '()' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2256:1: ( '()' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2298:1: ( ( '()' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2299:1: ( '()' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2256:1: ( '()' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2257:1: '()'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2299:1: ( '()' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2300:1: '()'
             {
              before(grammarAccess.getFunctionCallAccess().getLeftParenthesisRightParenthesisKeyword_0_1()); 
-            match(input,26,FOLLOW_26_in_rule__FunctionCall__Group_0__1__Impl4813); 
+            match(input,28,FOLLOW_28_in_rule__FunctionCall__Group_0__1__Impl4906); 
              after(grammarAccess.getFunctionCallAccess().getLeftParenthesisRightParenthesisKeyword_0_1()); 
 
             }
@@ -6791,21 +6926,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2274:1: rule__FunctionCall__Group_1__0 : rule__FunctionCall__Group_1__0__Impl rule__FunctionCall__Group_1__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2317:1: rule__FunctionCall__Group_1__0 : rule__FunctionCall__Group_1__0__Impl rule__FunctionCall__Group_1__1 ;
     public final void rule__FunctionCall__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2278:1: ( rule__FunctionCall__Group_1__0__Impl rule__FunctionCall__Group_1__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2279:2: rule__FunctionCall__Group_1__0__Impl rule__FunctionCall__Group_1__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2321:1: ( rule__FunctionCall__Group_1__0__Impl rule__FunctionCall__Group_1__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2322:2: rule__FunctionCall__Group_1__0__Impl rule__FunctionCall__Group_1__1
             {
-            pushFollow(FOLLOW_rule__FunctionCall__Group_1__0__Impl_in_rule__FunctionCall__Group_1__04848);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_1__0__Impl_in_rule__FunctionCall__Group_1__04941);
             rule__FunctionCall__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FunctionCall__Group_1__1_in_rule__FunctionCall__Group_1__04851);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_1__1_in_rule__FunctionCall__Group_1__04944);
             rule__FunctionCall__Group_1__1();
 
             state._fsp--;
@@ -6829,20 +6964,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2286:1: rule__FunctionCall__Group_1__0__Impl : ( ruleFunctionReference ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2329:1: rule__FunctionCall__Group_1__0__Impl : ( ruleFunctionReference ) ;
     public final void rule__FunctionCall__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2290:1: ( ( ruleFunctionReference ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2291:1: ( ruleFunctionReference )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2333:1: ( ( ruleFunctionReference ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2334:1: ( ruleFunctionReference )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2291:1: ( ruleFunctionReference )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2292:1: ruleFunctionReference
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2334:1: ( ruleFunctionReference )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2335:1: ruleFunctionReference
             {
              before(grammarAccess.getFunctionCallAccess().getFunctionReferenceParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleFunctionReference_in_rule__FunctionCall__Group_1__0__Impl4878);
+            pushFollow(FOLLOW_ruleFunctionReference_in_rule__FunctionCall__Group_1__0__Impl4971);
             ruleFunctionReference();
 
             state._fsp--;
@@ -6870,21 +7005,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2303:1: rule__FunctionCall__Group_1__1 : rule__FunctionCall__Group_1__1__Impl rule__FunctionCall__Group_1__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2346:1: rule__FunctionCall__Group_1__1 : rule__FunctionCall__Group_1__1__Impl rule__FunctionCall__Group_1__2 ;
     public final void rule__FunctionCall__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2307:1: ( rule__FunctionCall__Group_1__1__Impl rule__FunctionCall__Group_1__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2308:2: rule__FunctionCall__Group_1__1__Impl rule__FunctionCall__Group_1__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2350:1: ( rule__FunctionCall__Group_1__1__Impl rule__FunctionCall__Group_1__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2351:2: rule__FunctionCall__Group_1__1__Impl rule__FunctionCall__Group_1__2
             {
-            pushFollow(FOLLOW_rule__FunctionCall__Group_1__1__Impl_in_rule__FunctionCall__Group_1__14907);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_1__1__Impl_in_rule__FunctionCall__Group_1__15000);
             rule__FunctionCall__Group_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FunctionCall__Group_1__2_in_rule__FunctionCall__Group_1__14910);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_1__2_in_rule__FunctionCall__Group_1__15003);
             rule__FunctionCall__Group_1__2();
 
             state._fsp--;
@@ -6908,20 +7043,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2315:1: rule__FunctionCall__Group_1__1__Impl : ( '(' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2358:1: rule__FunctionCall__Group_1__1__Impl : ( '(' ) ;
     public final void rule__FunctionCall__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2319:1: ( ( '(' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2320:1: ( '(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2362:1: ( ( '(' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2363:1: ( '(' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2320:1: ( '(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2321:1: '('
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2363:1: ( '(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2364:1: '('
             {
              before(grammarAccess.getFunctionCallAccess().getLeftParenthesisKeyword_1_1()); 
-            match(input,30,FOLLOW_30_in_rule__FunctionCall__Group_1__1__Impl4938); 
+            match(input,32,FOLLOW_32_in_rule__FunctionCall__Group_1__1__Impl5031); 
              after(grammarAccess.getFunctionCallAccess().getLeftParenthesisKeyword_1_1()); 
 
             }
@@ -6945,21 +7080,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2334:1: rule__FunctionCall__Group_1__2 : rule__FunctionCall__Group_1__2__Impl rule__FunctionCall__Group_1__3 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2377:1: rule__FunctionCall__Group_1__2 : rule__FunctionCall__Group_1__2__Impl rule__FunctionCall__Group_1__3 ;
     public final void rule__FunctionCall__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2338:1: ( rule__FunctionCall__Group_1__2__Impl rule__FunctionCall__Group_1__3 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2339:2: rule__FunctionCall__Group_1__2__Impl rule__FunctionCall__Group_1__3
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2381:1: ( rule__FunctionCall__Group_1__2__Impl rule__FunctionCall__Group_1__3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2382:2: rule__FunctionCall__Group_1__2__Impl rule__FunctionCall__Group_1__3
             {
-            pushFollow(FOLLOW_rule__FunctionCall__Group_1__2__Impl_in_rule__FunctionCall__Group_1__24969);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_1__2__Impl_in_rule__FunctionCall__Group_1__25062);
             rule__FunctionCall__Group_1__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FunctionCall__Group_1__3_in_rule__FunctionCall__Group_1__24972);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_1__3_in_rule__FunctionCall__Group_1__25065);
             rule__FunctionCall__Group_1__3();
 
             state._fsp--;
@@ -6983,23 +7118,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2346:1: rule__FunctionCall__Group_1__2__Impl : ( ( rule__FunctionCall__VarAssignment_1_2 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2389:1: rule__FunctionCall__Group_1__2__Impl : ( ( rule__FunctionCall__VarAssignment_1_2 ) ) ;
     public final void rule__FunctionCall__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2350:1: ( ( ( rule__FunctionCall__VarAssignment_1_2 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2351:1: ( ( rule__FunctionCall__VarAssignment_1_2 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2393:1: ( ( ( rule__FunctionCall__VarAssignment_1_2 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2394:1: ( ( rule__FunctionCall__VarAssignment_1_2 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2351:1: ( ( rule__FunctionCall__VarAssignment_1_2 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2352:1: ( rule__FunctionCall__VarAssignment_1_2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2394:1: ( ( rule__FunctionCall__VarAssignment_1_2 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2395:1: ( rule__FunctionCall__VarAssignment_1_2 )
             {
              before(grammarAccess.getFunctionCallAccess().getVarAssignment_1_2()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2353:1: ( rule__FunctionCall__VarAssignment_1_2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2353:2: rule__FunctionCall__VarAssignment_1_2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2396:1: ( rule__FunctionCall__VarAssignment_1_2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2396:2: rule__FunctionCall__VarAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__FunctionCall__VarAssignment_1_2_in_rule__FunctionCall__Group_1__2__Impl4999);
+            pushFollow(FOLLOW_rule__FunctionCall__VarAssignment_1_2_in_rule__FunctionCall__Group_1__2__Impl5092);
             rule__FunctionCall__VarAssignment_1_2();
 
             state._fsp--;
@@ -7030,21 +7165,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1__3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2363:1: rule__FunctionCall__Group_1__3 : rule__FunctionCall__Group_1__3__Impl rule__FunctionCall__Group_1__4 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2406:1: rule__FunctionCall__Group_1__3 : rule__FunctionCall__Group_1__3__Impl rule__FunctionCall__Group_1__4 ;
     public final void rule__FunctionCall__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2367:1: ( rule__FunctionCall__Group_1__3__Impl rule__FunctionCall__Group_1__4 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2368:2: rule__FunctionCall__Group_1__3__Impl rule__FunctionCall__Group_1__4
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2410:1: ( rule__FunctionCall__Group_1__3__Impl rule__FunctionCall__Group_1__4 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2411:2: rule__FunctionCall__Group_1__3__Impl rule__FunctionCall__Group_1__4
             {
-            pushFollow(FOLLOW_rule__FunctionCall__Group_1__3__Impl_in_rule__FunctionCall__Group_1__35029);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_1__3__Impl_in_rule__FunctionCall__Group_1__35122);
             rule__FunctionCall__Group_1__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FunctionCall__Group_1__4_in_rule__FunctionCall__Group_1__35032);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_1__4_in_rule__FunctionCall__Group_1__35125);
             rule__FunctionCall__Group_1__4();
 
             state._fsp--;
@@ -7068,35 +7203,35 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1__3__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2375:1: rule__FunctionCall__Group_1__3__Impl : ( ( rule__FunctionCall__Group_1_3__0 )* ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2418:1: rule__FunctionCall__Group_1__3__Impl : ( ( rule__FunctionCall__Group_1_3__0 )* ) ;
     public final void rule__FunctionCall__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2379:1: ( ( ( rule__FunctionCall__Group_1_3__0 )* ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2380:1: ( ( rule__FunctionCall__Group_1_3__0 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2422:1: ( ( ( rule__FunctionCall__Group_1_3__0 )* ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2423:1: ( ( rule__FunctionCall__Group_1_3__0 )* )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2380:1: ( ( rule__FunctionCall__Group_1_3__0 )* )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2381:1: ( rule__FunctionCall__Group_1_3__0 )*
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2423:1: ( ( rule__FunctionCall__Group_1_3__0 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2424:1: ( rule__FunctionCall__Group_1_3__0 )*
             {
              before(grammarAccess.getFunctionCallAccess().getGroup_1_3()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2382:1: ( rule__FunctionCall__Group_1_3__0 )*
-            loop26:
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2425:1: ( rule__FunctionCall__Group_1_3__0 )*
+            loop27:
             do {
-                int alt26=2;
-                int LA26_0 = input.LA(1);
+                int alt27=2;
+                int LA27_0 = input.LA(1);
 
-                if ( (LA26_0==31) ) {
-                    alt26=1;
+                if ( (LA27_0==33) ) {
+                    alt27=1;
                 }
 
 
-                switch (alt26) {
+                switch (alt27) {
             	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2382:2: rule__FunctionCall__Group_1_3__0
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2425:2: rule__FunctionCall__Group_1_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__FunctionCall__Group_1_3__0_in_rule__FunctionCall__Group_1__3__Impl5059);
+            	    pushFollow(FOLLOW_rule__FunctionCall__Group_1_3__0_in_rule__FunctionCall__Group_1__3__Impl5152);
             	    rule__FunctionCall__Group_1_3__0();
 
             	    state._fsp--;
@@ -7106,7 +7241,7 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop26;
+            	    break loop27;
                 }
             } while (true);
 
@@ -7133,16 +7268,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1__4"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2392:1: rule__FunctionCall__Group_1__4 : rule__FunctionCall__Group_1__4__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2435:1: rule__FunctionCall__Group_1__4 : rule__FunctionCall__Group_1__4__Impl ;
     public final void rule__FunctionCall__Group_1__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2396:1: ( rule__FunctionCall__Group_1__4__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2397:2: rule__FunctionCall__Group_1__4__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2439:1: ( rule__FunctionCall__Group_1__4__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2440:2: rule__FunctionCall__Group_1__4__Impl
             {
-            pushFollow(FOLLOW_rule__FunctionCall__Group_1__4__Impl_in_rule__FunctionCall__Group_1__45090);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_1__4__Impl_in_rule__FunctionCall__Group_1__45183);
             rule__FunctionCall__Group_1__4__Impl();
 
             state._fsp--;
@@ -7166,20 +7301,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1__4__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2403:1: rule__FunctionCall__Group_1__4__Impl : ( ')' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2446:1: rule__FunctionCall__Group_1__4__Impl : ( ')' ) ;
     public final void rule__FunctionCall__Group_1__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2407:1: ( ( ')' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2408:1: ( ')' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2450:1: ( ( ')' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2451:1: ( ')' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2408:1: ( ')' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2409:1: ')'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2451:1: ( ')' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2452:1: ')'
             {
              before(grammarAccess.getFunctionCallAccess().getRightParenthesisKeyword_1_4()); 
-            match(input,28,FOLLOW_28_in_rule__FunctionCall__Group_1__4__Impl5118); 
+            match(input,30,FOLLOW_30_in_rule__FunctionCall__Group_1__4__Impl5211); 
              after(grammarAccess.getFunctionCallAccess().getRightParenthesisKeyword_1_4()); 
 
             }
@@ -7203,21 +7338,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1_3__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2432:1: rule__FunctionCall__Group_1_3__0 : rule__FunctionCall__Group_1_3__0__Impl rule__FunctionCall__Group_1_3__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2475:1: rule__FunctionCall__Group_1_3__0 : rule__FunctionCall__Group_1_3__0__Impl rule__FunctionCall__Group_1_3__1 ;
     public final void rule__FunctionCall__Group_1_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2436:1: ( rule__FunctionCall__Group_1_3__0__Impl rule__FunctionCall__Group_1_3__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2437:2: rule__FunctionCall__Group_1_3__0__Impl rule__FunctionCall__Group_1_3__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2479:1: ( rule__FunctionCall__Group_1_3__0__Impl rule__FunctionCall__Group_1_3__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2480:2: rule__FunctionCall__Group_1_3__0__Impl rule__FunctionCall__Group_1_3__1
             {
-            pushFollow(FOLLOW_rule__FunctionCall__Group_1_3__0__Impl_in_rule__FunctionCall__Group_1_3__05159);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_1_3__0__Impl_in_rule__FunctionCall__Group_1_3__05252);
             rule__FunctionCall__Group_1_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FunctionCall__Group_1_3__1_in_rule__FunctionCall__Group_1_3__05162);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_1_3__1_in_rule__FunctionCall__Group_1_3__05255);
             rule__FunctionCall__Group_1_3__1();
 
             state._fsp--;
@@ -7241,20 +7376,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1_3__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2444:1: rule__FunctionCall__Group_1_3__0__Impl : ( ',' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2487:1: rule__FunctionCall__Group_1_3__0__Impl : ( ',' ) ;
     public final void rule__FunctionCall__Group_1_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2448:1: ( ( ',' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2449:1: ( ',' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2491:1: ( ( ',' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2492:1: ( ',' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2449:1: ( ',' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2450:1: ','
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2492:1: ( ',' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2493:1: ','
             {
              before(grammarAccess.getFunctionCallAccess().getCommaKeyword_1_3_0()); 
-            match(input,31,FOLLOW_31_in_rule__FunctionCall__Group_1_3__0__Impl5190); 
+            match(input,33,FOLLOW_33_in_rule__FunctionCall__Group_1_3__0__Impl5283); 
              after(grammarAccess.getFunctionCallAccess().getCommaKeyword_1_3_0()); 
 
             }
@@ -7278,16 +7413,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1_3__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2463:1: rule__FunctionCall__Group_1_3__1 : rule__FunctionCall__Group_1_3__1__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2506:1: rule__FunctionCall__Group_1_3__1 : rule__FunctionCall__Group_1_3__1__Impl ;
     public final void rule__FunctionCall__Group_1_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2467:1: ( rule__FunctionCall__Group_1_3__1__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2468:2: rule__FunctionCall__Group_1_3__1__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2510:1: ( rule__FunctionCall__Group_1_3__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2511:2: rule__FunctionCall__Group_1_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__FunctionCall__Group_1_3__1__Impl_in_rule__FunctionCall__Group_1_3__15221);
+            pushFollow(FOLLOW_rule__FunctionCall__Group_1_3__1__Impl_in_rule__FunctionCall__Group_1_3__15314);
             rule__FunctionCall__Group_1_3__1__Impl();
 
             state._fsp--;
@@ -7311,23 +7446,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group_1_3__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2474:1: rule__FunctionCall__Group_1_3__1__Impl : ( ( rule__FunctionCall__VarAssignment_1_3_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2517:1: rule__FunctionCall__Group_1_3__1__Impl : ( ( rule__FunctionCall__VarAssignment_1_3_1 ) ) ;
     public final void rule__FunctionCall__Group_1_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2478:1: ( ( ( rule__FunctionCall__VarAssignment_1_3_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2479:1: ( ( rule__FunctionCall__VarAssignment_1_3_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2521:1: ( ( ( rule__FunctionCall__VarAssignment_1_3_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2522:1: ( ( rule__FunctionCall__VarAssignment_1_3_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2479:1: ( ( rule__FunctionCall__VarAssignment_1_3_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2480:1: ( rule__FunctionCall__VarAssignment_1_3_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2522:1: ( ( rule__FunctionCall__VarAssignment_1_3_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2523:1: ( rule__FunctionCall__VarAssignment_1_3_1 )
             {
              before(grammarAccess.getFunctionCallAccess().getVarAssignment_1_3_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2481:1: ( rule__FunctionCall__VarAssignment_1_3_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2481:2: rule__FunctionCall__VarAssignment_1_3_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2524:1: ( rule__FunctionCall__VarAssignment_1_3_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2524:2: rule__FunctionCall__VarAssignment_1_3_1
             {
-            pushFollow(FOLLOW_rule__FunctionCall__VarAssignment_1_3_1_in_rule__FunctionCall__Group_1_3__1__Impl5248);
+            pushFollow(FOLLOW_rule__FunctionCall__VarAssignment_1_3_1_in_rule__FunctionCall__Group_1_3__1__Impl5341);
             rule__FunctionCall__VarAssignment_1_3_1();
 
             state._fsp--;
@@ -7358,21 +7493,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Main__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2495:1: rule__Main__Group__0 : rule__Main__Group__0__Impl rule__Main__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2538:1: rule__Main__Group__0 : rule__Main__Group__0__Impl rule__Main__Group__1 ;
     public final void rule__Main__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2499:1: ( rule__Main__Group__0__Impl rule__Main__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2500:2: rule__Main__Group__0__Impl rule__Main__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2542:1: ( rule__Main__Group__0__Impl rule__Main__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2543:2: rule__Main__Group__0__Impl rule__Main__Group__1
             {
-            pushFollow(FOLLOW_rule__Main__Group__0__Impl_in_rule__Main__Group__05282);
+            pushFollow(FOLLOW_rule__Main__Group__0__Impl_in_rule__Main__Group__05375);
             rule__Main__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Main__Group__1_in_rule__Main__Group__05285);
+            pushFollow(FOLLOW_rule__Main__Group__1_in_rule__Main__Group__05378);
             rule__Main__Group__1();
 
             state._fsp--;
@@ -7396,20 +7531,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Main__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2507:1: rule__Main__Group__0__Impl : ( 'main ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2550:1: rule__Main__Group__0__Impl : ( 'main ' ) ;
     public final void rule__Main__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2511:1: ( ( 'main ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2512:1: ( 'main ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2554:1: ( ( 'main ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2555:1: ( 'main ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2512:1: ( 'main ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2513:1: 'main '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2555:1: ( 'main ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2556:1: 'main '
             {
              before(grammarAccess.getMainAccess().getMainKeyword_0()); 
-            match(input,32,FOLLOW_32_in_rule__Main__Group__0__Impl5313); 
+            match(input,34,FOLLOW_34_in_rule__Main__Group__0__Impl5406); 
              after(grammarAccess.getMainAccess().getMainKeyword_0()); 
 
             }
@@ -7433,16 +7568,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Main__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2526:1: rule__Main__Group__1 : rule__Main__Group__1__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2569:1: rule__Main__Group__1 : rule__Main__Group__1__Impl ;
     public final void rule__Main__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2530:1: ( rule__Main__Group__1__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2531:2: rule__Main__Group__1__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2573:1: ( rule__Main__Group__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2574:2: rule__Main__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Main__Group__1__Impl_in_rule__Main__Group__15344);
+            pushFollow(FOLLOW_rule__Main__Group__1__Impl_in_rule__Main__Group__15437);
             rule__Main__Group__1__Impl();
 
             state._fsp--;
@@ -7466,20 +7601,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Main__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2537:1: rule__Main__Group__1__Impl : ( ruleBody ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2580:1: rule__Main__Group__1__Impl : ( ruleBody ) ;
     public final void rule__Main__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2541:1: ( ( ruleBody ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2542:1: ( ruleBody )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2584:1: ( ( ruleBody ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2585:1: ( ruleBody )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2542:1: ( ruleBody )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2543:1: ruleBody
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2585:1: ( ruleBody )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2586:1: ruleBody
             {
              before(grammarAccess.getMainAccess().getBodyParserRuleCall_1()); 
-            pushFollow(FOLLOW_ruleBody_in_rule__Main__Group__1__Impl5371);
+            pushFollow(FOLLOW_ruleBody_in_rule__Main__Group__1__Impl5464);
             ruleBody();
 
             state._fsp--;
@@ -7507,21 +7642,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2558:1: rule__Body__Group__0 : rule__Body__Group__0__Impl rule__Body__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2601:1: rule__Body__Group__0 : rule__Body__Group__0__Impl rule__Body__Group__1 ;
     public final void rule__Body__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2562:1: ( rule__Body__Group__0__Impl rule__Body__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2563:2: rule__Body__Group__0__Impl rule__Body__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2605:1: ( rule__Body__Group__0__Impl rule__Body__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2606:2: rule__Body__Group__0__Impl rule__Body__Group__1
             {
-            pushFollow(FOLLOW_rule__Body__Group__0__Impl_in_rule__Body__Group__05404);
+            pushFollow(FOLLOW_rule__Body__Group__0__Impl_in_rule__Body__Group__05497);
             rule__Body__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group__1_in_rule__Body__Group__05407);
+            pushFollow(FOLLOW_rule__Body__Group__1_in_rule__Body__Group__05500);
             rule__Body__Group__1();
 
             state._fsp--;
@@ -7545,20 +7680,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2570:1: rule__Body__Group__0__Impl : ( '{' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2613:1: rule__Body__Group__0__Impl : ( '{' ) ;
     public final void rule__Body__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2574:1: ( ( '{' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2575:1: ( '{' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2617:1: ( ( '{' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2618:1: ( '{' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2575:1: ( '{' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2576:1: '{'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2618:1: ( '{' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2619:1: '{'
             {
              before(grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_0()); 
-            match(input,33,FOLLOW_33_in_rule__Body__Group__0__Impl5435); 
+            match(input,35,FOLLOW_35_in_rule__Body__Group__0__Impl5528); 
              after(grammarAccess.getBodyAccess().getLeftCurlyBracketKeyword_0()); 
 
             }
@@ -7582,21 +7717,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2589:1: rule__Body__Group__1 : rule__Body__Group__1__Impl rule__Body__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2632:1: rule__Body__Group__1 : rule__Body__Group__1__Impl rule__Body__Group__2 ;
     public final void rule__Body__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2593:1: ( rule__Body__Group__1__Impl rule__Body__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2594:2: rule__Body__Group__1__Impl rule__Body__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2636:1: ( rule__Body__Group__1__Impl rule__Body__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2637:2: rule__Body__Group__1__Impl rule__Body__Group__2
             {
-            pushFollow(FOLLOW_rule__Body__Group__1__Impl_in_rule__Body__Group__15466);
+            pushFollow(FOLLOW_rule__Body__Group__1__Impl_in_rule__Body__Group__15559);
             rule__Body__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group__2_in_rule__Body__Group__15469);
+            pushFollow(FOLLOW_rule__Body__Group__2_in_rule__Body__Group__15562);
             rule__Body__Group__2();
 
             state._fsp--;
@@ -7620,31 +7755,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2601:1: rule__Body__Group__1__Impl : ( ( rule__Body__InstructionsAssignment_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2644:1: rule__Body__Group__1__Impl : ( 'browser' ) ;
     public final void rule__Body__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2605:1: ( ( ( rule__Body__InstructionsAssignment_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2606:1: ( ( rule__Body__InstructionsAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2648:1: ( ( 'browser' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2649:1: ( 'browser' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2606:1: ( ( rule__Body__InstructionsAssignment_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2607:1: ( rule__Body__InstructionsAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2649:1: ( 'browser' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2650:1: 'browser'
             {
-             before(grammarAccess.getBodyAccess().getInstructionsAssignment_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2608:1: ( rule__Body__InstructionsAssignment_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2608:2: rule__Body__InstructionsAssignment_1
-            {
-            pushFollow(FOLLOW_rule__Body__InstructionsAssignment_1_in_rule__Body__Group__1__Impl5496);
-            rule__Body__InstructionsAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getBodyAccess().getInstructionsAssignment_1()); 
+             before(grammarAccess.getBodyAccess().getBrowserKeyword_1()); 
+            match(input,36,FOLLOW_36_in_rule__Body__Group__1__Impl5590); 
+             after(grammarAccess.getBodyAccess().getBrowserKeyword_1()); 
 
             }
 
@@ -7667,21 +7792,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2618:1: rule__Body__Group__2 : rule__Body__Group__2__Impl rule__Body__Group__3 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2663:1: rule__Body__Group__2 : rule__Body__Group__2__Impl rule__Body__Group__3 ;
     public final void rule__Body__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2622:1: ( rule__Body__Group__2__Impl rule__Body__Group__3 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2623:2: rule__Body__Group__2__Impl rule__Body__Group__3
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2667:1: ( rule__Body__Group__2__Impl rule__Body__Group__3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2668:2: rule__Body__Group__2__Impl rule__Body__Group__3
             {
-            pushFollow(FOLLOW_rule__Body__Group__2__Impl_in_rule__Body__Group__25526);
+            pushFollow(FOLLOW_rule__Body__Group__2__Impl_in_rule__Body__Group__25621);
             rule__Body__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Body__Group__3_in_rule__Body__Group__25529);
+            pushFollow(FOLLOW_rule__Body__Group__3_in_rule__Body__Group__25624);
             rule__Body__Group__3();
 
             state._fsp--;
@@ -7705,49 +7830,31 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2630:1: rule__Body__Group__2__Impl : ( ( rule__Body__InstructionsAssignment_2 )* ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2675:1: rule__Body__Group__2__Impl : ( ( rule__Body__OpenAssignment_2 ) ) ;
     public final void rule__Body__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2634:1: ( ( ( rule__Body__InstructionsAssignment_2 )* ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2635:1: ( ( rule__Body__InstructionsAssignment_2 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2679:1: ( ( ( rule__Body__OpenAssignment_2 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2680:1: ( ( rule__Body__OpenAssignment_2 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2635:1: ( ( rule__Body__InstructionsAssignment_2 )* )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2636:1: ( rule__Body__InstructionsAssignment_2 )*
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2680:1: ( ( rule__Body__OpenAssignment_2 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2681:1: ( rule__Body__OpenAssignment_2 )
             {
-             before(grammarAccess.getBodyAccess().getInstructionsAssignment_2()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2637:1: ( rule__Body__InstructionsAssignment_2 )*
-            loop27:
-            do {
-                int alt27=2;
-                int LA27_0 = input.LA(1);
+             before(grammarAccess.getBodyAccess().getOpenAssignment_2()); 
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2682:1: ( rule__Body__OpenAssignment_2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2682:2: rule__Body__OpenAssignment_2
+            {
+            pushFollow(FOLLOW_rule__Body__OpenAssignment_2_in_rule__Body__Group__2__Impl5651);
+            rule__Body__OpenAssignment_2();
 
-                if ( (LA27_0==RULE_ID||LA27_0==35||LA27_0==39||LA27_0==42||LA27_0==52||(LA27_0>=54 && LA27_0<=55)||LA27_0==57||LA27_0==60) ) {
-                    alt27=1;
-                }
+            state._fsp--;
 
 
-                switch (alt27) {
-            	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2637:2: rule__Body__InstructionsAssignment_2
-            	    {
-            	    pushFollow(FOLLOW_rule__Body__InstructionsAssignment_2_in_rule__Body__Group__2__Impl5556);
-            	    rule__Body__InstructionsAssignment_2();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop27;
-                }
-            } while (true);
-
-             after(grammarAccess.getBodyAccess().getInstructionsAssignment_2()); 
+             after(grammarAccess.getBodyAccess().getOpenAssignment_2()); 
 
             }
 
@@ -7770,17 +7877,22 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group__3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2647:1: rule__Body__Group__3 : rule__Body__Group__3__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2692:1: rule__Body__Group__3 : rule__Body__Group__3__Impl rule__Body__Group__4 ;
     public final void rule__Body__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2651:1: ( rule__Body__Group__3__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2652:2: rule__Body__Group__3__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2696:1: ( rule__Body__Group__3__Impl rule__Body__Group__4 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2697:2: rule__Body__Group__3__Impl rule__Body__Group__4
             {
-            pushFollow(FOLLOW_rule__Body__Group__3__Impl_in_rule__Body__Group__35587);
+            pushFollow(FOLLOW_rule__Body__Group__3__Impl_in_rule__Body__Group__35681);
             rule__Body__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Body__Group__4_in_rule__Body__Group__35684);
+            rule__Body__Group__4();
 
             state._fsp--;
 
@@ -7803,21 +7915,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group__3__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2658:1: rule__Body__Group__3__Impl : ( '}' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2704:1: rule__Body__Group__3__Impl : ( ', ' ) ;
     public final void rule__Body__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2662:1: ( ( '}' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2663:1: ( '}' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2708:1: ( ( ', ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2709:1: ( ', ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2663:1: ( '}' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2664:1: '}'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2709:1: ( ', ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2710:1: ', '
             {
-             before(grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_3()); 
-            match(input,34,FOLLOW_34_in_rule__Body__Group__3__Impl5615); 
-             after(grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_3()); 
+             before(grammarAccess.getBodyAccess().getCommaSpaceKeyword_3()); 
+            match(input,37,FOLLOW_37_in_rule__Body__Group__3__Impl5712); 
+             after(grammarAccess.getBodyAccess().getCommaSpaceKeyword_3()); 
 
             }
 
@@ -7839,22 +7951,435 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Body__Group__3__Impl"
 
 
+    // $ANTLR start "rule__Body__Group__4"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2723:1: rule__Body__Group__4 : rule__Body__Group__4__Impl rule__Body__Group__5 ;
+    public final void rule__Body__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2727:1: ( rule__Body__Group__4__Impl rule__Body__Group__5 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2728:2: rule__Body__Group__4__Impl rule__Body__Group__5
+            {
+            pushFollow(FOLLOW_rule__Body__Group__4__Impl_in_rule__Body__Group__45743);
+            rule__Body__Group__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Body__Group__5_in_rule__Body__Group__45746);
+            rule__Body__Group__5();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Body__Group__4"
+
+
+    // $ANTLR start "rule__Body__Group__4__Impl"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2735:1: rule__Body__Group__4__Impl : ( ( rule__Body__InstructionsAssignment_4 ) ) ;
+    public final void rule__Body__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2739:1: ( ( ( rule__Body__InstructionsAssignment_4 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2740:1: ( ( rule__Body__InstructionsAssignment_4 ) )
+            {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2740:1: ( ( rule__Body__InstructionsAssignment_4 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2741:1: ( rule__Body__InstructionsAssignment_4 )
+            {
+             before(grammarAccess.getBodyAccess().getInstructionsAssignment_4()); 
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2742:1: ( rule__Body__InstructionsAssignment_4 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2742:2: rule__Body__InstructionsAssignment_4
+            {
+            pushFollow(FOLLOW_rule__Body__InstructionsAssignment_4_in_rule__Body__Group__4__Impl5773);
+            rule__Body__InstructionsAssignment_4();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBodyAccess().getInstructionsAssignment_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Body__Group__4__Impl"
+
+
+    // $ANTLR start "rule__Body__Group__5"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2752:1: rule__Body__Group__5 : rule__Body__Group__5__Impl rule__Body__Group__6 ;
+    public final void rule__Body__Group__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2756:1: ( rule__Body__Group__5__Impl rule__Body__Group__6 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2757:2: rule__Body__Group__5__Impl rule__Body__Group__6
+            {
+            pushFollow(FOLLOW_rule__Body__Group__5__Impl_in_rule__Body__Group__55803);
+            rule__Body__Group__5__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Body__Group__6_in_rule__Body__Group__55806);
+            rule__Body__Group__6();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Body__Group__5"
+
+
+    // $ANTLR start "rule__Body__Group__5__Impl"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2764:1: rule__Body__Group__5__Impl : ( ( rule__Body__Group_5__0 )* ) ;
+    public final void rule__Body__Group__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2768:1: ( ( ( rule__Body__Group_5__0 )* ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2769:1: ( ( rule__Body__Group_5__0 )* )
+            {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2769:1: ( ( rule__Body__Group_5__0 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2770:1: ( rule__Body__Group_5__0 )*
+            {
+             before(grammarAccess.getBodyAccess().getGroup_5()); 
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2771:1: ( rule__Body__Group_5__0 )*
+            loop28:
+            do {
+                int alt28=2;
+                int LA28_0 = input.LA(1);
+
+                if ( (LA28_0==39) ) {
+                    alt28=1;
+                }
+
+
+                switch (alt28) {
+            	case 1 :
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2771:2: rule__Body__Group_5__0
+            	    {
+            	    pushFollow(FOLLOW_rule__Body__Group_5__0_in_rule__Body__Group__5__Impl5833);
+            	    rule__Body__Group_5__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop28;
+                }
+            } while (true);
+
+             after(grammarAccess.getBodyAccess().getGroup_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Body__Group__5__Impl"
+
+
+    // $ANTLR start "rule__Body__Group__6"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2781:1: rule__Body__Group__6 : rule__Body__Group__6__Impl ;
+    public final void rule__Body__Group__6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2785:1: ( rule__Body__Group__6__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2786:2: rule__Body__Group__6__Impl
+            {
+            pushFollow(FOLLOW_rule__Body__Group__6__Impl_in_rule__Body__Group__65864);
+            rule__Body__Group__6__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Body__Group__6"
+
+
+    // $ANTLR start "rule__Body__Group__6__Impl"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2792:1: rule__Body__Group__6__Impl : ( '}' ) ;
+    public final void rule__Body__Group__6__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2796:1: ( ( '}' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2797:1: ( '}' )
+            {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2797:1: ( '}' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2798:1: '}'
+            {
+             before(grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_6()); 
+            match(input,38,FOLLOW_38_in_rule__Body__Group__6__Impl5892); 
+             after(grammarAccess.getBodyAccess().getRightCurlyBracketKeyword_6()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Body__Group__6__Impl"
+
+
+    // $ANTLR start "rule__Body__Group_5__0"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2825:1: rule__Body__Group_5__0 : rule__Body__Group_5__0__Impl rule__Body__Group_5__1 ;
+    public final void rule__Body__Group_5__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2829:1: ( rule__Body__Group_5__0__Impl rule__Body__Group_5__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2830:2: rule__Body__Group_5__0__Impl rule__Body__Group_5__1
+            {
+            pushFollow(FOLLOW_rule__Body__Group_5__0__Impl_in_rule__Body__Group_5__05937);
+            rule__Body__Group_5__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Body__Group_5__1_in_rule__Body__Group_5__05940);
+            rule__Body__Group_5__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Body__Group_5__0"
+
+
+    // $ANTLR start "rule__Body__Group_5__0__Impl"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2837:1: rule__Body__Group_5__0__Impl : ( ' ' ) ;
+    public final void rule__Body__Group_5__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2841:1: ( ( ' ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2842:1: ( ' ' )
+            {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2842:1: ( ' ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2843:1: ' '
+            {
+             before(grammarAccess.getBodyAccess().getSpaceKeyword_5_0()); 
+            match(input,39,FOLLOW_39_in_rule__Body__Group_5__0__Impl5968); 
+             after(grammarAccess.getBodyAccess().getSpaceKeyword_5_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Body__Group_5__0__Impl"
+
+
+    // $ANTLR start "rule__Body__Group_5__1"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2856:1: rule__Body__Group_5__1 : rule__Body__Group_5__1__Impl ;
+    public final void rule__Body__Group_5__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2860:1: ( rule__Body__Group_5__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2861:2: rule__Body__Group_5__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Body__Group_5__1__Impl_in_rule__Body__Group_5__15999);
+            rule__Body__Group_5__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Body__Group_5__1"
+
+
+    // $ANTLR start "rule__Body__Group_5__1__Impl"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2867:1: rule__Body__Group_5__1__Impl : ( ( rule__Body__InstructionsAssignment_5_1 ) ) ;
+    public final void rule__Body__Group_5__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2871:1: ( ( ( rule__Body__InstructionsAssignment_5_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2872:1: ( ( rule__Body__InstructionsAssignment_5_1 ) )
+            {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2872:1: ( ( rule__Body__InstructionsAssignment_5_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2873:1: ( rule__Body__InstructionsAssignment_5_1 )
+            {
+             before(grammarAccess.getBodyAccess().getInstructionsAssignment_5_1()); 
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2874:1: ( rule__Body__InstructionsAssignment_5_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2874:2: rule__Body__InstructionsAssignment_5_1
+            {
+            pushFollow(FOLLOW_rule__Body__InstructionsAssignment_5_1_in_rule__Body__Group_5__1__Impl6026);
+            rule__Body__InstructionsAssignment_5_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBodyAccess().getInstructionsAssignment_5_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Body__Group_5__1__Impl"
+
+
     // $ANTLR start "rule__Condition__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2685:1: rule__Condition__Group__0 : rule__Condition__Group__0__Impl rule__Condition__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2888:1: rule__Condition__Group__0 : rule__Condition__Group__0__Impl rule__Condition__Group__1 ;
     public final void rule__Condition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2689:1: ( rule__Condition__Group__0__Impl rule__Condition__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2690:2: rule__Condition__Group__0__Impl rule__Condition__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2892:1: ( rule__Condition__Group__0__Impl rule__Condition__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2893:2: rule__Condition__Group__0__Impl rule__Condition__Group__1
             {
-            pushFollow(FOLLOW_rule__Condition__Group__0__Impl_in_rule__Condition__Group__05654);
+            pushFollow(FOLLOW_rule__Condition__Group__0__Impl_in_rule__Condition__Group__06060);
             rule__Condition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Condition__Group__1_in_rule__Condition__Group__05657);
+            pushFollow(FOLLOW_rule__Condition__Group__1_in_rule__Condition__Group__06063);
             rule__Condition__Group__1();
 
             state._fsp--;
@@ -7878,20 +8403,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2697:1: rule__Condition__Group__0__Impl : ( 'if ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2900:1: rule__Condition__Group__0__Impl : ( 'if ' ) ;
     public final void rule__Condition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2701:1: ( ( 'if ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2702:1: ( 'if ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2904:1: ( ( 'if ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2905:1: ( 'if ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2702:1: ( 'if ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2703:1: 'if '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2905:1: ( 'if ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2906:1: 'if '
             {
              before(grammarAccess.getConditionAccess().getIfKeyword_0()); 
-            match(input,35,FOLLOW_35_in_rule__Condition__Group__0__Impl5685); 
+            match(input,40,FOLLOW_40_in_rule__Condition__Group__0__Impl6091); 
              after(grammarAccess.getConditionAccess().getIfKeyword_0()); 
 
             }
@@ -7915,21 +8440,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2716:1: rule__Condition__Group__1 : rule__Condition__Group__1__Impl rule__Condition__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2919:1: rule__Condition__Group__1 : rule__Condition__Group__1__Impl rule__Condition__Group__2 ;
     public final void rule__Condition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2720:1: ( rule__Condition__Group__1__Impl rule__Condition__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2721:2: rule__Condition__Group__1__Impl rule__Condition__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2923:1: ( rule__Condition__Group__1__Impl rule__Condition__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2924:2: rule__Condition__Group__1__Impl rule__Condition__Group__2
             {
-            pushFollow(FOLLOW_rule__Condition__Group__1__Impl_in_rule__Condition__Group__15716);
+            pushFollow(FOLLOW_rule__Condition__Group__1__Impl_in_rule__Condition__Group__16122);
             rule__Condition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Condition__Group__2_in_rule__Condition__Group__15719);
+            pushFollow(FOLLOW_rule__Condition__Group__2_in_rule__Condition__Group__16125);
             rule__Condition__Group__2();
 
             state._fsp--;
@@ -7953,31 +8478,31 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2728:1: rule__Condition__Group__1__Impl : ( ( rule__Condition__Alternatives_1 )? ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2931:1: rule__Condition__Group__1__Impl : ( ( rule__Condition__Alternatives_1 )? ) ;
     public final void rule__Condition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2732:1: ( ( ( rule__Condition__Alternatives_1 )? ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2733:1: ( ( rule__Condition__Alternatives_1 )? )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2935:1: ( ( ( rule__Condition__Alternatives_1 )? ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2936:1: ( ( rule__Condition__Alternatives_1 )? )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2733:1: ( ( rule__Condition__Alternatives_1 )? )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2734:1: ( rule__Condition__Alternatives_1 )?
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2936:1: ( ( rule__Condition__Alternatives_1 )? )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2937:1: ( rule__Condition__Alternatives_1 )?
             {
              before(grammarAccess.getConditionAccess().getAlternatives_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2735:1: ( rule__Condition__Alternatives_1 )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2938:1: ( rule__Condition__Alternatives_1 )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( ((LA28_0>=12 && LA28_0<=13)) ) {
-                alt28=1;
+            if ( ((LA29_0>=12 && LA29_0<=13)) ) {
+                alt29=1;
             }
-            switch (alt28) {
+            switch (alt29) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2735:2: rule__Condition__Alternatives_1
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2938:2: rule__Condition__Alternatives_1
                     {
-                    pushFollow(FOLLOW_rule__Condition__Alternatives_1_in_rule__Condition__Group__1__Impl5746);
+                    pushFollow(FOLLOW_rule__Condition__Alternatives_1_in_rule__Condition__Group__1__Impl6152);
                     rule__Condition__Alternatives_1();
 
                     state._fsp--;
@@ -8011,21 +8536,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2745:1: rule__Condition__Group__2 : rule__Condition__Group__2__Impl rule__Condition__Group__3 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2948:1: rule__Condition__Group__2 : rule__Condition__Group__2__Impl rule__Condition__Group__3 ;
     public final void rule__Condition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2749:1: ( rule__Condition__Group__2__Impl rule__Condition__Group__3 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2750:2: rule__Condition__Group__2__Impl rule__Condition__Group__3
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2952:1: ( rule__Condition__Group__2__Impl rule__Condition__Group__3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2953:2: rule__Condition__Group__2__Impl rule__Condition__Group__3
             {
-            pushFollow(FOLLOW_rule__Condition__Group__2__Impl_in_rule__Condition__Group__25777);
+            pushFollow(FOLLOW_rule__Condition__Group__2__Impl_in_rule__Condition__Group__26183);
             rule__Condition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Condition__Group__3_in_rule__Condition__Group__25780);
+            pushFollow(FOLLOW_rule__Condition__Group__3_in_rule__Condition__Group__26186);
             rule__Condition__Group__3();
 
             state._fsp--;
@@ -8049,20 +8574,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2757:1: rule__Condition__Group__2__Impl : ( '(' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2960:1: rule__Condition__Group__2__Impl : ( '(' ) ;
     public final void rule__Condition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2761:1: ( ( '(' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2762:1: ( '(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2964:1: ( ( '(' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2965:1: ( '(' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2762:1: ( '(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2763:1: '('
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2965:1: ( '(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2966:1: '('
             {
              before(grammarAccess.getConditionAccess().getLeftParenthesisKeyword_2()); 
-            match(input,30,FOLLOW_30_in_rule__Condition__Group__2__Impl5808); 
+            match(input,32,FOLLOW_32_in_rule__Condition__Group__2__Impl6214); 
              after(grammarAccess.getConditionAccess().getLeftParenthesisKeyword_2()); 
 
             }
@@ -8086,21 +8611,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2776:1: rule__Condition__Group__3 : rule__Condition__Group__3__Impl rule__Condition__Group__4 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2979:1: rule__Condition__Group__3 : rule__Condition__Group__3__Impl rule__Condition__Group__4 ;
     public final void rule__Condition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2780:1: ( rule__Condition__Group__3__Impl rule__Condition__Group__4 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2781:2: rule__Condition__Group__3__Impl rule__Condition__Group__4
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2983:1: ( rule__Condition__Group__3__Impl rule__Condition__Group__4 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2984:2: rule__Condition__Group__3__Impl rule__Condition__Group__4
             {
-            pushFollow(FOLLOW_rule__Condition__Group__3__Impl_in_rule__Condition__Group__35839);
+            pushFollow(FOLLOW_rule__Condition__Group__3__Impl_in_rule__Condition__Group__36245);
             rule__Condition__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Condition__Group__4_in_rule__Condition__Group__35842);
+            pushFollow(FOLLOW_rule__Condition__Group__4_in_rule__Condition__Group__36248);
             rule__Condition__Group__4();
 
             state._fsp--;
@@ -8124,23 +8649,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__3__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2788:1: rule__Condition__Group__3__Impl : ( ( rule__Condition__ExpAssignment_3 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2991:1: rule__Condition__Group__3__Impl : ( ( rule__Condition__ExpAssignment_3 ) ) ;
     public final void rule__Condition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2792:1: ( ( ( rule__Condition__ExpAssignment_3 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2793:1: ( ( rule__Condition__ExpAssignment_3 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2995:1: ( ( ( rule__Condition__ExpAssignment_3 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2996:1: ( ( rule__Condition__ExpAssignment_3 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2793:1: ( ( rule__Condition__ExpAssignment_3 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2794:1: ( rule__Condition__ExpAssignment_3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2996:1: ( ( rule__Condition__ExpAssignment_3 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2997:1: ( rule__Condition__ExpAssignment_3 )
             {
              before(grammarAccess.getConditionAccess().getExpAssignment_3()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2795:1: ( rule__Condition__ExpAssignment_3 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2795:2: rule__Condition__ExpAssignment_3
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2998:1: ( rule__Condition__ExpAssignment_3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2998:2: rule__Condition__ExpAssignment_3
             {
-            pushFollow(FOLLOW_rule__Condition__ExpAssignment_3_in_rule__Condition__Group__3__Impl5869);
+            pushFollow(FOLLOW_rule__Condition__ExpAssignment_3_in_rule__Condition__Group__3__Impl6275);
             rule__Condition__ExpAssignment_3();
 
             state._fsp--;
@@ -8171,21 +8696,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__4"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2805:1: rule__Condition__Group__4 : rule__Condition__Group__4__Impl rule__Condition__Group__5 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3008:1: rule__Condition__Group__4 : rule__Condition__Group__4__Impl rule__Condition__Group__5 ;
     public final void rule__Condition__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2809:1: ( rule__Condition__Group__4__Impl rule__Condition__Group__5 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2810:2: rule__Condition__Group__4__Impl rule__Condition__Group__5
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3012:1: ( rule__Condition__Group__4__Impl rule__Condition__Group__5 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3013:2: rule__Condition__Group__4__Impl rule__Condition__Group__5
             {
-            pushFollow(FOLLOW_rule__Condition__Group__4__Impl_in_rule__Condition__Group__45899);
+            pushFollow(FOLLOW_rule__Condition__Group__4__Impl_in_rule__Condition__Group__46305);
             rule__Condition__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Condition__Group__5_in_rule__Condition__Group__45902);
+            pushFollow(FOLLOW_rule__Condition__Group__5_in_rule__Condition__Group__46308);
             rule__Condition__Group__5();
 
             state._fsp--;
@@ -8209,20 +8734,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__4__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2817:1: rule__Condition__Group__4__Impl : ( ')' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3020:1: rule__Condition__Group__4__Impl : ( ')' ) ;
     public final void rule__Condition__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2821:1: ( ( ')' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2822:1: ( ')' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3024:1: ( ( ')' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3025:1: ( ')' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2822:1: ( ')' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2823:1: ')'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3025:1: ( ')' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3026:1: ')'
             {
              before(grammarAccess.getConditionAccess().getRightParenthesisKeyword_4()); 
-            match(input,28,FOLLOW_28_in_rule__Condition__Group__4__Impl5930); 
+            match(input,30,FOLLOW_30_in_rule__Condition__Group__4__Impl6336); 
              after(grammarAccess.getConditionAccess().getRightParenthesisKeyword_4()); 
 
             }
@@ -8246,21 +8771,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__5"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2836:1: rule__Condition__Group__5 : rule__Condition__Group__5__Impl rule__Condition__Group__6 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3039:1: rule__Condition__Group__5 : rule__Condition__Group__5__Impl rule__Condition__Group__6 ;
     public final void rule__Condition__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2840:1: ( rule__Condition__Group__5__Impl rule__Condition__Group__6 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2841:2: rule__Condition__Group__5__Impl rule__Condition__Group__6
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3043:1: ( rule__Condition__Group__5__Impl rule__Condition__Group__6 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3044:2: rule__Condition__Group__5__Impl rule__Condition__Group__6
             {
-            pushFollow(FOLLOW_rule__Condition__Group__5__Impl_in_rule__Condition__Group__55961);
+            pushFollow(FOLLOW_rule__Condition__Group__5__Impl_in_rule__Condition__Group__56367);
             rule__Condition__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Condition__Group__6_in_rule__Condition__Group__55964);
+            pushFollow(FOLLOW_rule__Condition__Group__6_in_rule__Condition__Group__56370);
             rule__Condition__Group__6();
 
             state._fsp--;
@@ -8284,20 +8809,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__5__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2848:1: rule__Condition__Group__5__Impl : ( 'then ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3051:1: rule__Condition__Group__5__Impl : ( 'then ' ) ;
     public final void rule__Condition__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2852:1: ( ( 'then ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2853:1: ( 'then ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3055:1: ( ( 'then ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3056:1: ( 'then ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2853:1: ( 'then ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2854:1: 'then '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3056:1: ( 'then ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3057:1: 'then '
             {
              before(grammarAccess.getConditionAccess().getThenKeyword_5()); 
-            match(input,36,FOLLOW_36_in_rule__Condition__Group__5__Impl5992); 
+            match(input,41,FOLLOW_41_in_rule__Condition__Group__5__Impl6398); 
              after(grammarAccess.getConditionAccess().getThenKeyword_5()); 
 
             }
@@ -8321,21 +8846,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__6"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2867:1: rule__Condition__Group__6 : rule__Condition__Group__6__Impl rule__Condition__Group__7 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3070:1: rule__Condition__Group__6 : rule__Condition__Group__6__Impl rule__Condition__Group__7 ;
     public final void rule__Condition__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2871:1: ( rule__Condition__Group__6__Impl rule__Condition__Group__7 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2872:2: rule__Condition__Group__6__Impl rule__Condition__Group__7
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3074:1: ( rule__Condition__Group__6__Impl rule__Condition__Group__7 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3075:2: rule__Condition__Group__6__Impl rule__Condition__Group__7
             {
-            pushFollow(FOLLOW_rule__Condition__Group__6__Impl_in_rule__Condition__Group__66023);
+            pushFollow(FOLLOW_rule__Condition__Group__6__Impl_in_rule__Condition__Group__66429);
             rule__Condition__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Condition__Group__7_in_rule__Condition__Group__66026);
+            pushFollow(FOLLOW_rule__Condition__Group__7_in_rule__Condition__Group__66432);
             rule__Condition__Group__7();
 
             state._fsp--;
@@ -8359,26 +8884,26 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__6__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2879:1: rule__Condition__Group__6__Impl : ( ( ( rule__Condition__InsAssignment_6 ) ) ( ( rule__Condition__InsAssignment_6 )* ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3082:1: rule__Condition__Group__6__Impl : ( ( ( rule__Condition__InsAssignment_6 ) ) ( ( rule__Condition__InsAssignment_6 )* ) ) ;
     public final void rule__Condition__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2883:1: ( ( ( ( rule__Condition__InsAssignment_6 ) ) ( ( rule__Condition__InsAssignment_6 )* ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2884:1: ( ( ( rule__Condition__InsAssignment_6 ) ) ( ( rule__Condition__InsAssignment_6 )* ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3086:1: ( ( ( ( rule__Condition__InsAssignment_6 ) ) ( ( rule__Condition__InsAssignment_6 )* ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3087:1: ( ( ( rule__Condition__InsAssignment_6 ) ) ( ( rule__Condition__InsAssignment_6 )* ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2884:1: ( ( ( rule__Condition__InsAssignment_6 ) ) ( ( rule__Condition__InsAssignment_6 )* ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2885:1: ( ( rule__Condition__InsAssignment_6 ) ) ( ( rule__Condition__InsAssignment_6 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3087:1: ( ( ( rule__Condition__InsAssignment_6 ) ) ( ( rule__Condition__InsAssignment_6 )* ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3088:1: ( ( rule__Condition__InsAssignment_6 ) ) ( ( rule__Condition__InsAssignment_6 )* )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2885:1: ( ( rule__Condition__InsAssignment_6 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2886:1: ( rule__Condition__InsAssignment_6 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3088:1: ( ( rule__Condition__InsAssignment_6 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3089:1: ( rule__Condition__InsAssignment_6 )
             {
              before(grammarAccess.getConditionAccess().getInsAssignment_6()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2887:1: ( rule__Condition__InsAssignment_6 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2887:2: rule__Condition__InsAssignment_6
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3090:1: ( rule__Condition__InsAssignment_6 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3090:2: rule__Condition__InsAssignment_6
             {
-            pushFollow(FOLLOW_rule__Condition__InsAssignment_6_in_rule__Condition__Group__6__Impl6055);
+            pushFollow(FOLLOW_rule__Condition__InsAssignment_6_in_rule__Condition__Group__6__Impl6461);
             rule__Condition__InsAssignment_6();
 
             state._fsp--;
@@ -8390,26 +8915,26 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             }
 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2890:1: ( ( rule__Condition__InsAssignment_6 )* )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2891:1: ( rule__Condition__InsAssignment_6 )*
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3093:1: ( ( rule__Condition__InsAssignment_6 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3094:1: ( rule__Condition__InsAssignment_6 )*
             {
              before(grammarAccess.getConditionAccess().getInsAssignment_6()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2892:1: ( rule__Condition__InsAssignment_6 )*
-            loop29:
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3095:1: ( rule__Condition__InsAssignment_6 )*
+            loop30:
             do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA29_0==RULE_ID||LA29_0==35||LA29_0==39||LA29_0==42||LA29_0==52||(LA29_0>=54 && LA29_0<=55)||LA29_0==57||LA29_0==60) ) {
-                    alt29=1;
+                if ( (LA30_0==RULE_ID||LA30_0==40||LA30_0==44||LA30_0==47||LA30_0==57||(LA30_0>=59 && LA30_0<=60)||LA30_0==62||LA30_0==65) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt30) {
             	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2892:2: rule__Condition__InsAssignment_6
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3095:2: rule__Condition__InsAssignment_6
             	    {
-            	    pushFollow(FOLLOW_rule__Condition__InsAssignment_6_in_rule__Condition__Group__6__Impl6067);
+            	    pushFollow(FOLLOW_rule__Condition__InsAssignment_6_in_rule__Condition__Group__6__Impl6473);
             	    rule__Condition__InsAssignment_6();
 
             	    state._fsp--;
@@ -8419,7 +8944,7 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop30;
                 }
             } while (true);
 
@@ -8449,21 +8974,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__7"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2903:1: rule__Condition__Group__7 : rule__Condition__Group__7__Impl rule__Condition__Group__8 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3106:1: rule__Condition__Group__7 : rule__Condition__Group__7__Impl rule__Condition__Group__8 ;
     public final void rule__Condition__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2907:1: ( rule__Condition__Group__7__Impl rule__Condition__Group__8 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2908:2: rule__Condition__Group__7__Impl rule__Condition__Group__8
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3110:1: ( rule__Condition__Group__7__Impl rule__Condition__Group__8 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3111:2: rule__Condition__Group__7__Impl rule__Condition__Group__8
             {
-            pushFollow(FOLLOW_rule__Condition__Group__7__Impl_in_rule__Condition__Group__76100);
+            pushFollow(FOLLOW_rule__Condition__Group__7__Impl_in_rule__Condition__Group__76506);
             rule__Condition__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Condition__Group__8_in_rule__Condition__Group__76103);
+            pushFollow(FOLLOW_rule__Condition__Group__8_in_rule__Condition__Group__76509);
             rule__Condition__Group__8();
 
             state._fsp--;
@@ -8487,20 +9012,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__7__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2915:1: rule__Condition__Group__7__Impl : ( 'else ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3118:1: rule__Condition__Group__7__Impl : ( 'else ' ) ;
     public final void rule__Condition__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2919:1: ( ( 'else ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2920:1: ( 'else ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3122:1: ( ( 'else ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3123:1: ( 'else ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2920:1: ( 'else ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2921:1: 'else '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3123:1: ( 'else ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3124:1: 'else '
             {
              before(grammarAccess.getConditionAccess().getElseKeyword_7()); 
-            match(input,37,FOLLOW_37_in_rule__Condition__Group__7__Impl6131); 
+            match(input,42,FOLLOW_42_in_rule__Condition__Group__7__Impl6537); 
              after(grammarAccess.getConditionAccess().getElseKeyword_7()); 
 
             }
@@ -8524,21 +9049,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__8"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2934:1: rule__Condition__Group__8 : rule__Condition__Group__8__Impl rule__Condition__Group__9 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3137:1: rule__Condition__Group__8 : rule__Condition__Group__8__Impl rule__Condition__Group__9 ;
     public final void rule__Condition__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2938:1: ( rule__Condition__Group__8__Impl rule__Condition__Group__9 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2939:2: rule__Condition__Group__8__Impl rule__Condition__Group__9
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3141:1: ( rule__Condition__Group__8__Impl rule__Condition__Group__9 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3142:2: rule__Condition__Group__8__Impl rule__Condition__Group__9
             {
-            pushFollow(FOLLOW_rule__Condition__Group__8__Impl_in_rule__Condition__Group__86162);
+            pushFollow(FOLLOW_rule__Condition__Group__8__Impl_in_rule__Condition__Group__86568);
             rule__Condition__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Condition__Group__9_in_rule__Condition__Group__86165);
+            pushFollow(FOLLOW_rule__Condition__Group__9_in_rule__Condition__Group__86571);
             rule__Condition__Group__9();
 
             state._fsp--;
@@ -8562,26 +9087,26 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__8__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2946:1: rule__Condition__Group__8__Impl : ( ( ( rule__Condition__Ins2Assignment_8 ) ) ( ( rule__Condition__Ins2Assignment_8 )* ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3149:1: rule__Condition__Group__8__Impl : ( ( ( rule__Condition__Ins2Assignment_8 ) ) ( ( rule__Condition__Ins2Assignment_8 )* ) ) ;
     public final void rule__Condition__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2950:1: ( ( ( ( rule__Condition__Ins2Assignment_8 ) ) ( ( rule__Condition__Ins2Assignment_8 )* ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2951:1: ( ( ( rule__Condition__Ins2Assignment_8 ) ) ( ( rule__Condition__Ins2Assignment_8 )* ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3153:1: ( ( ( ( rule__Condition__Ins2Assignment_8 ) ) ( ( rule__Condition__Ins2Assignment_8 )* ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3154:1: ( ( ( rule__Condition__Ins2Assignment_8 ) ) ( ( rule__Condition__Ins2Assignment_8 )* ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2951:1: ( ( ( rule__Condition__Ins2Assignment_8 ) ) ( ( rule__Condition__Ins2Assignment_8 )* ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2952:1: ( ( rule__Condition__Ins2Assignment_8 ) ) ( ( rule__Condition__Ins2Assignment_8 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3154:1: ( ( ( rule__Condition__Ins2Assignment_8 ) ) ( ( rule__Condition__Ins2Assignment_8 )* ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3155:1: ( ( rule__Condition__Ins2Assignment_8 ) ) ( ( rule__Condition__Ins2Assignment_8 )* )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2952:1: ( ( rule__Condition__Ins2Assignment_8 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2953:1: ( rule__Condition__Ins2Assignment_8 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3155:1: ( ( rule__Condition__Ins2Assignment_8 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3156:1: ( rule__Condition__Ins2Assignment_8 )
             {
              before(grammarAccess.getConditionAccess().getIns2Assignment_8()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2954:1: ( rule__Condition__Ins2Assignment_8 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2954:2: rule__Condition__Ins2Assignment_8
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3157:1: ( rule__Condition__Ins2Assignment_8 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3157:2: rule__Condition__Ins2Assignment_8
             {
-            pushFollow(FOLLOW_rule__Condition__Ins2Assignment_8_in_rule__Condition__Group__8__Impl6194);
+            pushFollow(FOLLOW_rule__Condition__Ins2Assignment_8_in_rule__Condition__Group__8__Impl6600);
             rule__Condition__Ins2Assignment_8();
 
             state._fsp--;
@@ -8593,26 +9118,26 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             }
 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2957:1: ( ( rule__Condition__Ins2Assignment_8 )* )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2958:1: ( rule__Condition__Ins2Assignment_8 )*
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3160:1: ( ( rule__Condition__Ins2Assignment_8 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3161:1: ( rule__Condition__Ins2Assignment_8 )*
             {
              before(grammarAccess.getConditionAccess().getIns2Assignment_8()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2959:1: ( rule__Condition__Ins2Assignment_8 )*
-            loop30:
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3162:1: ( rule__Condition__Ins2Assignment_8 )*
+            loop31:
             do {
-                int alt30=2;
-                int LA30_0 = input.LA(1);
+                int alt31=2;
+                int LA31_0 = input.LA(1);
 
-                if ( (LA30_0==RULE_ID||LA30_0==35||LA30_0==39||LA30_0==42||LA30_0==52||(LA30_0>=54 && LA30_0<=55)||LA30_0==57||LA30_0==60) ) {
-                    alt30=1;
+                if ( (LA31_0==RULE_ID||LA31_0==40||LA31_0==44||LA31_0==47||LA31_0==57||(LA31_0>=59 && LA31_0<=60)||LA31_0==62||LA31_0==65) ) {
+                    alt31=1;
                 }
 
 
-                switch (alt30) {
+                switch (alt31) {
             	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2959:2: rule__Condition__Ins2Assignment_8
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3162:2: rule__Condition__Ins2Assignment_8
             	    {
-            	    pushFollow(FOLLOW_rule__Condition__Ins2Assignment_8_in_rule__Condition__Group__8__Impl6206);
+            	    pushFollow(FOLLOW_rule__Condition__Ins2Assignment_8_in_rule__Condition__Group__8__Impl6612);
             	    rule__Condition__Ins2Assignment_8();
 
             	    state._fsp--;
@@ -8622,7 +9147,7 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop30;
+            	    break loop31;
                 }
             } while (true);
 
@@ -8652,16 +9177,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__9"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2970:1: rule__Condition__Group__9 : rule__Condition__Group__9__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3173:1: rule__Condition__Group__9 : rule__Condition__Group__9__Impl ;
     public final void rule__Condition__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2974:1: ( rule__Condition__Group__9__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2975:2: rule__Condition__Group__9__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3177:1: ( rule__Condition__Group__9__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3178:2: rule__Condition__Group__9__Impl
             {
-            pushFollow(FOLLOW_rule__Condition__Group__9__Impl_in_rule__Condition__Group__96239);
+            pushFollow(FOLLOW_rule__Condition__Group__9__Impl_in_rule__Condition__Group__96645);
             rule__Condition__Group__9__Impl();
 
             state._fsp--;
@@ -8685,20 +9210,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Group__9__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2981:1: rule__Condition__Group__9__Impl : ( 'endif' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3184:1: rule__Condition__Group__9__Impl : ( 'endif' ) ;
     public final void rule__Condition__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2985:1: ( ( 'endif' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2986:1: ( 'endif' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3188:1: ( ( 'endif' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3189:1: ( 'endif' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2986:1: ( 'endif' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2987:1: 'endif'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3189:1: ( 'endif' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3190:1: 'endif'
             {
              before(grammarAccess.getConditionAccess().getEndifKeyword_9()); 
-            match(input,38,FOLLOW_38_in_rule__Condition__Group__9__Impl6267); 
+            match(input,43,FOLLOW_43_in_rule__Condition__Group__9__Impl6673); 
              after(grammarAccess.getConditionAccess().getEndifKeyword_9()); 
 
             }
@@ -8722,21 +9247,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__While__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3020:1: rule__While__Group__0 : rule__While__Group__0__Impl rule__While__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3223:1: rule__While__Group__0 : rule__While__Group__0__Impl rule__While__Group__1 ;
     public final void rule__While__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3024:1: ( rule__While__Group__0__Impl rule__While__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3025:2: rule__While__Group__0__Impl rule__While__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3227:1: ( rule__While__Group__0__Impl rule__While__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3228:2: rule__While__Group__0__Impl rule__While__Group__1
             {
-            pushFollow(FOLLOW_rule__While__Group__0__Impl_in_rule__While__Group__06318);
+            pushFollow(FOLLOW_rule__While__Group__0__Impl_in_rule__While__Group__06724);
             rule__While__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__While__Group__1_in_rule__While__Group__06321);
+            pushFollow(FOLLOW_rule__While__Group__1_in_rule__While__Group__06727);
             rule__While__Group__1();
 
             state._fsp--;
@@ -8760,20 +9285,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__While__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3032:1: rule__While__Group__0__Impl : ( 'while (' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3235:1: rule__While__Group__0__Impl : ( 'while (' ) ;
     public final void rule__While__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3036:1: ( ( 'while (' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3037:1: ( 'while (' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3239:1: ( ( 'while (' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3240:1: ( 'while (' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3037:1: ( 'while (' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3038:1: 'while ('
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3240:1: ( 'while (' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3241:1: 'while ('
             {
              before(grammarAccess.getWhileAccess().getWhileKeyword_0()); 
-            match(input,39,FOLLOW_39_in_rule__While__Group__0__Impl6349); 
+            match(input,44,FOLLOW_44_in_rule__While__Group__0__Impl6755); 
              after(grammarAccess.getWhileAccess().getWhileKeyword_0()); 
 
             }
@@ -8797,21 +9322,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__While__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3051:1: rule__While__Group__1 : rule__While__Group__1__Impl rule__While__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3254:1: rule__While__Group__1 : rule__While__Group__1__Impl rule__While__Group__2 ;
     public final void rule__While__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3055:1: ( rule__While__Group__1__Impl rule__While__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3056:2: rule__While__Group__1__Impl rule__While__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3258:1: ( rule__While__Group__1__Impl rule__While__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3259:2: rule__While__Group__1__Impl rule__While__Group__2
             {
-            pushFollow(FOLLOW_rule__While__Group__1__Impl_in_rule__While__Group__16380);
+            pushFollow(FOLLOW_rule__While__Group__1__Impl_in_rule__While__Group__16786);
             rule__While__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__While__Group__2_in_rule__While__Group__16383);
+            pushFollow(FOLLOW_rule__While__Group__2_in_rule__While__Group__16789);
             rule__While__Group__2();
 
             state._fsp--;
@@ -8835,23 +9360,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__While__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3063:1: rule__While__Group__1__Impl : ( ( rule__While__ExpAssignment_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3266:1: rule__While__Group__1__Impl : ( ( rule__While__ExpAssignment_1 ) ) ;
     public final void rule__While__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3067:1: ( ( ( rule__While__ExpAssignment_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3068:1: ( ( rule__While__ExpAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3270:1: ( ( ( rule__While__ExpAssignment_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3271:1: ( ( rule__While__ExpAssignment_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3068:1: ( ( rule__While__ExpAssignment_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3069:1: ( rule__While__ExpAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3271:1: ( ( rule__While__ExpAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3272:1: ( rule__While__ExpAssignment_1 )
             {
              before(grammarAccess.getWhileAccess().getExpAssignment_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3070:1: ( rule__While__ExpAssignment_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3070:2: rule__While__ExpAssignment_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3273:1: ( rule__While__ExpAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3273:2: rule__While__ExpAssignment_1
             {
-            pushFollow(FOLLOW_rule__While__ExpAssignment_1_in_rule__While__Group__1__Impl6410);
+            pushFollow(FOLLOW_rule__While__ExpAssignment_1_in_rule__While__Group__1__Impl6816);
             rule__While__ExpAssignment_1();
 
             state._fsp--;
@@ -8882,21 +9407,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__While__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3080:1: rule__While__Group__2 : rule__While__Group__2__Impl rule__While__Group__3 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3283:1: rule__While__Group__2 : rule__While__Group__2__Impl rule__While__Group__3 ;
     public final void rule__While__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3084:1: ( rule__While__Group__2__Impl rule__While__Group__3 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3085:2: rule__While__Group__2__Impl rule__While__Group__3
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3287:1: ( rule__While__Group__2__Impl rule__While__Group__3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3288:2: rule__While__Group__2__Impl rule__While__Group__3
             {
-            pushFollow(FOLLOW_rule__While__Group__2__Impl_in_rule__While__Group__26440);
+            pushFollow(FOLLOW_rule__While__Group__2__Impl_in_rule__While__Group__26846);
             rule__While__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__While__Group__3_in_rule__While__Group__26443);
+            pushFollow(FOLLOW_rule__While__Group__3_in_rule__While__Group__26849);
             rule__While__Group__3();
 
             state._fsp--;
@@ -8920,20 +9445,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__While__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3092:1: rule__While__Group__2__Impl : ( ') do ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3295:1: rule__While__Group__2__Impl : ( ') do ' ) ;
     public final void rule__While__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3096:1: ( ( ') do ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3097:1: ( ') do ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3299:1: ( ( ') do ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3300:1: ( ') do ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3097:1: ( ') do ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3098:1: ') do '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3300:1: ( ') do ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3301:1: ') do '
             {
              before(grammarAccess.getWhileAccess().getDoKeyword_2()); 
-            match(input,40,FOLLOW_40_in_rule__While__Group__2__Impl6471); 
+            match(input,45,FOLLOW_45_in_rule__While__Group__2__Impl6877); 
              after(grammarAccess.getWhileAccess().getDoKeyword_2()); 
 
             }
@@ -8957,21 +9482,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__While__Group__3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3111:1: rule__While__Group__3 : rule__While__Group__3__Impl rule__While__Group__4 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3314:1: rule__While__Group__3 : rule__While__Group__3__Impl rule__While__Group__4 ;
     public final void rule__While__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3115:1: ( rule__While__Group__3__Impl rule__While__Group__4 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3116:2: rule__While__Group__3__Impl rule__While__Group__4
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3318:1: ( rule__While__Group__3__Impl rule__While__Group__4 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3319:2: rule__While__Group__3__Impl rule__While__Group__4
             {
-            pushFollow(FOLLOW_rule__While__Group__3__Impl_in_rule__While__Group__36502);
+            pushFollow(FOLLOW_rule__While__Group__3__Impl_in_rule__While__Group__36908);
             rule__While__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__While__Group__4_in_rule__While__Group__36505);
+            pushFollow(FOLLOW_rule__While__Group__4_in_rule__While__Group__36911);
             rule__While__Group__4();
 
             state._fsp--;
@@ -8995,26 +9520,26 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__While__Group__3__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3123:1: rule__While__Group__3__Impl : ( ( ( rule__While__InsAssignment_3 ) ) ( ( rule__While__InsAssignment_3 )* ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3326:1: rule__While__Group__3__Impl : ( ( ( rule__While__InsAssignment_3 ) ) ( ( rule__While__InsAssignment_3 )* ) ) ;
     public final void rule__While__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3127:1: ( ( ( ( rule__While__InsAssignment_3 ) ) ( ( rule__While__InsAssignment_3 )* ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3128:1: ( ( ( rule__While__InsAssignment_3 ) ) ( ( rule__While__InsAssignment_3 )* ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3330:1: ( ( ( ( rule__While__InsAssignment_3 ) ) ( ( rule__While__InsAssignment_3 )* ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3331:1: ( ( ( rule__While__InsAssignment_3 ) ) ( ( rule__While__InsAssignment_3 )* ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3128:1: ( ( ( rule__While__InsAssignment_3 ) ) ( ( rule__While__InsAssignment_3 )* ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3129:1: ( ( rule__While__InsAssignment_3 ) ) ( ( rule__While__InsAssignment_3 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3331:1: ( ( ( rule__While__InsAssignment_3 ) ) ( ( rule__While__InsAssignment_3 )* ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3332:1: ( ( rule__While__InsAssignment_3 ) ) ( ( rule__While__InsAssignment_3 )* )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3129:1: ( ( rule__While__InsAssignment_3 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3130:1: ( rule__While__InsAssignment_3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3332:1: ( ( rule__While__InsAssignment_3 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3333:1: ( rule__While__InsAssignment_3 )
             {
              before(grammarAccess.getWhileAccess().getInsAssignment_3()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3131:1: ( rule__While__InsAssignment_3 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3131:2: rule__While__InsAssignment_3
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3334:1: ( rule__While__InsAssignment_3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3334:2: rule__While__InsAssignment_3
             {
-            pushFollow(FOLLOW_rule__While__InsAssignment_3_in_rule__While__Group__3__Impl6534);
+            pushFollow(FOLLOW_rule__While__InsAssignment_3_in_rule__While__Group__3__Impl6940);
             rule__While__InsAssignment_3();
 
             state._fsp--;
@@ -9026,26 +9551,26 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
             }
 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3134:1: ( ( rule__While__InsAssignment_3 )* )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3135:1: ( rule__While__InsAssignment_3 )*
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3337:1: ( ( rule__While__InsAssignment_3 )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3338:1: ( rule__While__InsAssignment_3 )*
             {
              before(grammarAccess.getWhileAccess().getInsAssignment_3()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3136:1: ( rule__While__InsAssignment_3 )*
-            loop31:
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3339:1: ( rule__While__InsAssignment_3 )*
+            loop32:
             do {
-                int alt31=2;
-                int LA31_0 = input.LA(1);
+                int alt32=2;
+                int LA32_0 = input.LA(1);
 
-                if ( (LA31_0==RULE_ID||LA31_0==35||LA31_0==39||LA31_0==42||LA31_0==52||(LA31_0>=54 && LA31_0<=55)||LA31_0==57||LA31_0==60) ) {
-                    alt31=1;
+                if ( (LA32_0==RULE_ID||LA32_0==40||LA32_0==44||LA32_0==47||LA32_0==57||(LA32_0>=59 && LA32_0<=60)||LA32_0==62||LA32_0==65) ) {
+                    alt32=1;
                 }
 
 
-                switch (alt31) {
+                switch (alt32) {
             	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3136:2: rule__While__InsAssignment_3
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3339:2: rule__While__InsAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__While__InsAssignment_3_in_rule__While__Group__3__Impl6546);
+            	    pushFollow(FOLLOW_rule__While__InsAssignment_3_in_rule__While__Group__3__Impl6952);
             	    rule__While__InsAssignment_3();
 
             	    state._fsp--;
@@ -9055,7 +9580,7 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop31;
+            	    break loop32;
                 }
             } while (true);
 
@@ -9085,16 +9610,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__While__Group__4"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3147:1: rule__While__Group__4 : rule__While__Group__4__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3350:1: rule__While__Group__4 : rule__While__Group__4__Impl ;
     public final void rule__While__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3151:1: ( rule__While__Group__4__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3152:2: rule__While__Group__4__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3354:1: ( rule__While__Group__4__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3355:2: rule__While__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__While__Group__4__Impl_in_rule__While__Group__46579);
+            pushFollow(FOLLOW_rule__While__Group__4__Impl_in_rule__While__Group__46985);
             rule__While__Group__4__Impl();
 
             state._fsp--;
@@ -9118,20 +9643,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__While__Group__4__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3158:1: rule__While__Group__4__Impl : ( ' endwhile' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3361:1: rule__While__Group__4__Impl : ( ' endwhile' ) ;
     public final void rule__While__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3162:1: ( ( ' endwhile' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3163:1: ( ' endwhile' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3365:1: ( ( ' endwhile' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3366:1: ( ' endwhile' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3163:1: ( ' endwhile' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3164:1: ' endwhile'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3366:1: ( ' endwhile' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3367:1: ' endwhile'
             {
              before(grammarAccess.getWhileAccess().getEndwhileKeyword_4()); 
-            match(input,41,FOLLOW_41_in_rule__While__Group__4__Impl6607); 
+            match(input,46,FOLLOW_46_in_rule__While__Group__4__Impl7013); 
              after(grammarAccess.getWhileAccess().getEndwhileKeyword_4()); 
 
             }
@@ -9155,21 +9680,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Declaration__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3187:1: rule__Declaration__Group__0 : rule__Declaration__Group__0__Impl rule__Declaration__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3390:1: rule__Declaration__Group__0 : rule__Declaration__Group__0__Impl rule__Declaration__Group__1 ;
     public final void rule__Declaration__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3191:1: ( rule__Declaration__Group__0__Impl rule__Declaration__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3192:2: rule__Declaration__Group__0__Impl rule__Declaration__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3394:1: ( rule__Declaration__Group__0__Impl rule__Declaration__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3395:2: rule__Declaration__Group__0__Impl rule__Declaration__Group__1
             {
-            pushFollow(FOLLOW_rule__Declaration__Group__0__Impl_in_rule__Declaration__Group__06648);
+            pushFollow(FOLLOW_rule__Declaration__Group__0__Impl_in_rule__Declaration__Group__07054);
             rule__Declaration__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Declaration__Group__1_in_rule__Declaration__Group__06651);
+            pushFollow(FOLLOW_rule__Declaration__Group__1_in_rule__Declaration__Group__07057);
             rule__Declaration__Group__1();
 
             state._fsp--;
@@ -9193,20 +9718,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Declaration__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3199:1: rule__Declaration__Group__0__Impl : ( 'var ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3402:1: rule__Declaration__Group__0__Impl : ( 'var ' ) ;
     public final void rule__Declaration__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3203:1: ( ( 'var ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3204:1: ( 'var ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3406:1: ( ( 'var ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3407:1: ( 'var ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3204:1: ( 'var ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3205:1: 'var '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3407:1: ( 'var ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3408:1: 'var '
             {
              before(grammarAccess.getDeclarationAccess().getVarKeyword_0()); 
-            match(input,42,FOLLOW_42_in_rule__Declaration__Group__0__Impl6679); 
+            match(input,47,FOLLOW_47_in_rule__Declaration__Group__0__Impl7085); 
              after(grammarAccess.getDeclarationAccess().getVarKeyword_0()); 
 
             }
@@ -9230,21 +9755,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Declaration__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3218:1: rule__Declaration__Group__1 : rule__Declaration__Group__1__Impl rule__Declaration__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3421:1: rule__Declaration__Group__1 : rule__Declaration__Group__1__Impl rule__Declaration__Group__2 ;
     public final void rule__Declaration__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3222:1: ( rule__Declaration__Group__1__Impl rule__Declaration__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3223:2: rule__Declaration__Group__1__Impl rule__Declaration__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3425:1: ( rule__Declaration__Group__1__Impl rule__Declaration__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3426:2: rule__Declaration__Group__1__Impl rule__Declaration__Group__2
             {
-            pushFollow(FOLLOW_rule__Declaration__Group__1__Impl_in_rule__Declaration__Group__16710);
+            pushFollow(FOLLOW_rule__Declaration__Group__1__Impl_in_rule__Declaration__Group__17116);
             rule__Declaration__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Declaration__Group__2_in_rule__Declaration__Group__16713);
+            pushFollow(FOLLOW_rule__Declaration__Group__2_in_rule__Declaration__Group__17119);
             rule__Declaration__Group__2();
 
             state._fsp--;
@@ -9268,23 +9793,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Declaration__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3230:1: rule__Declaration__Group__1__Impl : ( ( rule__Declaration__NameAssignment_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3433:1: rule__Declaration__Group__1__Impl : ( ( rule__Declaration__NameAssignment_1 ) ) ;
     public final void rule__Declaration__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3234:1: ( ( ( rule__Declaration__NameAssignment_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3235:1: ( ( rule__Declaration__NameAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3437:1: ( ( ( rule__Declaration__NameAssignment_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3438:1: ( ( rule__Declaration__NameAssignment_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3235:1: ( ( rule__Declaration__NameAssignment_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3236:1: ( rule__Declaration__NameAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3438:1: ( ( rule__Declaration__NameAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3439:1: ( rule__Declaration__NameAssignment_1 )
             {
              before(grammarAccess.getDeclarationAccess().getNameAssignment_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3237:1: ( rule__Declaration__NameAssignment_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3237:2: rule__Declaration__NameAssignment_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3440:1: ( rule__Declaration__NameAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3440:2: rule__Declaration__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Declaration__NameAssignment_1_in_rule__Declaration__Group__1__Impl6740);
+            pushFollow(FOLLOW_rule__Declaration__NameAssignment_1_in_rule__Declaration__Group__1__Impl7146);
             rule__Declaration__NameAssignment_1();
 
             state._fsp--;
@@ -9315,21 +9840,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Declaration__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3247:1: rule__Declaration__Group__2 : rule__Declaration__Group__2__Impl rule__Declaration__Group__3 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3450:1: rule__Declaration__Group__2 : rule__Declaration__Group__2__Impl rule__Declaration__Group__3 ;
     public final void rule__Declaration__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3251:1: ( rule__Declaration__Group__2__Impl rule__Declaration__Group__3 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3252:2: rule__Declaration__Group__2__Impl rule__Declaration__Group__3
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3454:1: ( rule__Declaration__Group__2__Impl rule__Declaration__Group__3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3455:2: rule__Declaration__Group__2__Impl rule__Declaration__Group__3
             {
-            pushFollow(FOLLOW_rule__Declaration__Group__2__Impl_in_rule__Declaration__Group__26770);
+            pushFollow(FOLLOW_rule__Declaration__Group__2__Impl_in_rule__Declaration__Group__27176);
             rule__Declaration__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Declaration__Group__3_in_rule__Declaration__Group__26773);
+            pushFollow(FOLLOW_rule__Declaration__Group__3_in_rule__Declaration__Group__27179);
             rule__Declaration__Group__3();
 
             state._fsp--;
@@ -9353,20 +9878,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Declaration__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3259:1: rule__Declaration__Group__2__Impl : ( ' = ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3462:1: rule__Declaration__Group__2__Impl : ( ' = ' ) ;
     public final void rule__Declaration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3263:1: ( ( ' = ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3264:1: ( ' = ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3466:1: ( ( ' = ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3467:1: ( ' = ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3264:1: ( ' = ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3265:1: ' = '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3467:1: ( ' = ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3468:1: ' = '
             {
              before(grammarAccess.getDeclarationAccess().getSpaceEqualsSignSpaceKeyword_2()); 
-            match(input,43,FOLLOW_43_in_rule__Declaration__Group__2__Impl6801); 
+            match(input,48,FOLLOW_48_in_rule__Declaration__Group__2__Impl7207); 
              after(grammarAccess.getDeclarationAccess().getSpaceEqualsSignSpaceKeyword_2()); 
 
             }
@@ -9390,21 +9915,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Declaration__Group__3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3278:1: rule__Declaration__Group__3 : rule__Declaration__Group__3__Impl rule__Declaration__Group__4 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3481:1: rule__Declaration__Group__3 : rule__Declaration__Group__3__Impl rule__Declaration__Group__4 ;
     public final void rule__Declaration__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3282:1: ( rule__Declaration__Group__3__Impl rule__Declaration__Group__4 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3283:2: rule__Declaration__Group__3__Impl rule__Declaration__Group__4
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3485:1: ( rule__Declaration__Group__3__Impl rule__Declaration__Group__4 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3486:2: rule__Declaration__Group__3__Impl rule__Declaration__Group__4
             {
-            pushFollow(FOLLOW_rule__Declaration__Group__3__Impl_in_rule__Declaration__Group__36832);
+            pushFollow(FOLLOW_rule__Declaration__Group__3__Impl_in_rule__Declaration__Group__37238);
             rule__Declaration__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Declaration__Group__4_in_rule__Declaration__Group__36835);
+            pushFollow(FOLLOW_rule__Declaration__Group__4_in_rule__Declaration__Group__37241);
             rule__Declaration__Group__4();
 
             state._fsp--;
@@ -9428,23 +9953,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Declaration__Group__3__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3290:1: rule__Declaration__Group__3__Impl : ( ( rule__Declaration__ValAssignment_3 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3493:1: rule__Declaration__Group__3__Impl : ( ( rule__Declaration__ValAssignment_3 ) ) ;
     public final void rule__Declaration__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3294:1: ( ( ( rule__Declaration__ValAssignment_3 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3295:1: ( ( rule__Declaration__ValAssignment_3 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3497:1: ( ( ( rule__Declaration__ValAssignment_3 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3498:1: ( ( rule__Declaration__ValAssignment_3 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3295:1: ( ( rule__Declaration__ValAssignment_3 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3296:1: ( rule__Declaration__ValAssignment_3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3498:1: ( ( rule__Declaration__ValAssignment_3 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3499:1: ( rule__Declaration__ValAssignment_3 )
             {
              before(grammarAccess.getDeclarationAccess().getValAssignment_3()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3297:1: ( rule__Declaration__ValAssignment_3 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3297:2: rule__Declaration__ValAssignment_3
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3500:1: ( rule__Declaration__ValAssignment_3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3500:2: rule__Declaration__ValAssignment_3
             {
-            pushFollow(FOLLOW_rule__Declaration__ValAssignment_3_in_rule__Declaration__Group__3__Impl6862);
+            pushFollow(FOLLOW_rule__Declaration__ValAssignment_3_in_rule__Declaration__Group__3__Impl7268);
             rule__Declaration__ValAssignment_3();
 
             state._fsp--;
@@ -9475,16 +10000,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Declaration__Group__4"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3307:1: rule__Declaration__Group__4 : rule__Declaration__Group__4__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3510:1: rule__Declaration__Group__4 : rule__Declaration__Group__4__Impl ;
     public final void rule__Declaration__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3311:1: ( rule__Declaration__Group__4__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3312:2: rule__Declaration__Group__4__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3514:1: ( rule__Declaration__Group__4__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3515:2: rule__Declaration__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Declaration__Group__4__Impl_in_rule__Declaration__Group__46892);
+            pushFollow(FOLLOW_rule__Declaration__Group__4__Impl_in_rule__Declaration__Group__47298);
             rule__Declaration__Group__4__Impl();
 
             state._fsp--;
@@ -9508,20 +10033,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Declaration__Group__4__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3318:1: rule__Declaration__Group__4__Impl : ( ';' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3521:1: rule__Declaration__Group__4__Impl : ( ';' ) ;
     public final void rule__Declaration__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3322:1: ( ( ';' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3323:1: ( ';' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3525:1: ( ( ';' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3526:1: ( ';' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3323:1: ( ';' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3324:1: ';'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3526:1: ( ';' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3527:1: ';'
             {
              before(grammarAccess.getDeclarationAccess().getSemicolonKeyword_4()); 
-            match(input,44,FOLLOW_44_in_rule__Declaration__Group__4__Impl6920); 
+            match(input,49,FOLLOW_49_in_rule__Declaration__Group__4__Impl7326); 
              after(grammarAccess.getDeclarationAccess().getSemicolonKeyword_4()); 
 
             }
@@ -9545,21 +10070,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Assignation__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3347:1: rule__Assignation__Group__0 : rule__Assignation__Group__0__Impl rule__Assignation__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3550:1: rule__Assignation__Group__0 : rule__Assignation__Group__0__Impl rule__Assignation__Group__1 ;
     public final void rule__Assignation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3351:1: ( rule__Assignation__Group__0__Impl rule__Assignation__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3352:2: rule__Assignation__Group__0__Impl rule__Assignation__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3554:1: ( rule__Assignation__Group__0__Impl rule__Assignation__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3555:2: rule__Assignation__Group__0__Impl rule__Assignation__Group__1
             {
-            pushFollow(FOLLOW_rule__Assignation__Group__0__Impl_in_rule__Assignation__Group__06961);
+            pushFollow(FOLLOW_rule__Assignation__Group__0__Impl_in_rule__Assignation__Group__07367);
             rule__Assignation__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Assignation__Group__1_in_rule__Assignation__Group__06964);
+            pushFollow(FOLLOW_rule__Assignation__Group__1_in_rule__Assignation__Group__07370);
             rule__Assignation__Group__1();
 
             state._fsp--;
@@ -9583,23 +10108,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Assignation__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3359:1: rule__Assignation__Group__0__Impl : ( ( rule__Assignation__VarAssignment_0 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3562:1: rule__Assignation__Group__0__Impl : ( ( rule__Assignation__VarAssignment_0 ) ) ;
     public final void rule__Assignation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3363:1: ( ( ( rule__Assignation__VarAssignment_0 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3364:1: ( ( rule__Assignation__VarAssignment_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3566:1: ( ( ( rule__Assignation__VarAssignment_0 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3567:1: ( ( rule__Assignation__VarAssignment_0 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3364:1: ( ( rule__Assignation__VarAssignment_0 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3365:1: ( rule__Assignation__VarAssignment_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3567:1: ( ( rule__Assignation__VarAssignment_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3568:1: ( rule__Assignation__VarAssignment_0 )
             {
              before(grammarAccess.getAssignationAccess().getVarAssignment_0()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3366:1: ( rule__Assignation__VarAssignment_0 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3366:2: rule__Assignation__VarAssignment_0
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3569:1: ( rule__Assignation__VarAssignment_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3569:2: rule__Assignation__VarAssignment_0
             {
-            pushFollow(FOLLOW_rule__Assignation__VarAssignment_0_in_rule__Assignation__Group__0__Impl6991);
+            pushFollow(FOLLOW_rule__Assignation__VarAssignment_0_in_rule__Assignation__Group__0__Impl7397);
             rule__Assignation__VarAssignment_0();
 
             state._fsp--;
@@ -9630,21 +10155,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Assignation__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3376:1: rule__Assignation__Group__1 : rule__Assignation__Group__1__Impl rule__Assignation__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3579:1: rule__Assignation__Group__1 : rule__Assignation__Group__1__Impl rule__Assignation__Group__2 ;
     public final void rule__Assignation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3380:1: ( rule__Assignation__Group__1__Impl rule__Assignation__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3381:2: rule__Assignation__Group__1__Impl rule__Assignation__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3583:1: ( rule__Assignation__Group__1__Impl rule__Assignation__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3584:2: rule__Assignation__Group__1__Impl rule__Assignation__Group__2
             {
-            pushFollow(FOLLOW_rule__Assignation__Group__1__Impl_in_rule__Assignation__Group__17021);
+            pushFollow(FOLLOW_rule__Assignation__Group__1__Impl_in_rule__Assignation__Group__17427);
             rule__Assignation__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Assignation__Group__2_in_rule__Assignation__Group__17024);
+            pushFollow(FOLLOW_rule__Assignation__Group__2_in_rule__Assignation__Group__17430);
             rule__Assignation__Group__2();
 
             state._fsp--;
@@ -9668,20 +10193,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Assignation__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3388:1: rule__Assignation__Group__1__Impl : ( ' = ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3591:1: rule__Assignation__Group__1__Impl : ( ' = ' ) ;
     public final void rule__Assignation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3392:1: ( ( ' = ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3393:1: ( ' = ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3595:1: ( ( ' = ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3596:1: ( ' = ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3393:1: ( ' = ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3394:1: ' = '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3596:1: ( ' = ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3597:1: ' = '
             {
              before(grammarAccess.getAssignationAccess().getSpaceEqualsSignSpaceKeyword_1()); 
-            match(input,43,FOLLOW_43_in_rule__Assignation__Group__1__Impl7052); 
+            match(input,48,FOLLOW_48_in_rule__Assignation__Group__1__Impl7458); 
              after(grammarAccess.getAssignationAccess().getSpaceEqualsSignSpaceKeyword_1()); 
 
             }
@@ -9705,21 +10230,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Assignation__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3407:1: rule__Assignation__Group__2 : rule__Assignation__Group__2__Impl rule__Assignation__Group__3 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3610:1: rule__Assignation__Group__2 : rule__Assignation__Group__2__Impl rule__Assignation__Group__3 ;
     public final void rule__Assignation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3411:1: ( rule__Assignation__Group__2__Impl rule__Assignation__Group__3 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3412:2: rule__Assignation__Group__2__Impl rule__Assignation__Group__3
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3614:1: ( rule__Assignation__Group__2__Impl rule__Assignation__Group__3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3615:2: rule__Assignation__Group__2__Impl rule__Assignation__Group__3
             {
-            pushFollow(FOLLOW_rule__Assignation__Group__2__Impl_in_rule__Assignation__Group__27083);
+            pushFollow(FOLLOW_rule__Assignation__Group__2__Impl_in_rule__Assignation__Group__27489);
             rule__Assignation__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Assignation__Group__3_in_rule__Assignation__Group__27086);
+            pushFollow(FOLLOW_rule__Assignation__Group__3_in_rule__Assignation__Group__27492);
             rule__Assignation__Group__3();
 
             state._fsp--;
@@ -9743,23 +10268,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Assignation__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3419:1: rule__Assignation__Group__2__Impl : ( ( rule__Assignation__ExprAssignment_2 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3622:1: rule__Assignation__Group__2__Impl : ( ( rule__Assignation__ExprAssignment_2 ) ) ;
     public final void rule__Assignation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3423:1: ( ( ( rule__Assignation__ExprAssignment_2 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3424:1: ( ( rule__Assignation__ExprAssignment_2 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3626:1: ( ( ( rule__Assignation__ExprAssignment_2 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3627:1: ( ( rule__Assignation__ExprAssignment_2 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3424:1: ( ( rule__Assignation__ExprAssignment_2 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3425:1: ( rule__Assignation__ExprAssignment_2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3627:1: ( ( rule__Assignation__ExprAssignment_2 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3628:1: ( rule__Assignation__ExprAssignment_2 )
             {
              before(grammarAccess.getAssignationAccess().getExprAssignment_2()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3426:1: ( rule__Assignation__ExprAssignment_2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3426:2: rule__Assignation__ExprAssignment_2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3629:1: ( rule__Assignation__ExprAssignment_2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3629:2: rule__Assignation__ExprAssignment_2
             {
-            pushFollow(FOLLOW_rule__Assignation__ExprAssignment_2_in_rule__Assignation__Group__2__Impl7113);
+            pushFollow(FOLLOW_rule__Assignation__ExprAssignment_2_in_rule__Assignation__Group__2__Impl7519);
             rule__Assignation__ExprAssignment_2();
 
             state._fsp--;
@@ -9790,16 +10315,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Assignation__Group__3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3436:1: rule__Assignation__Group__3 : rule__Assignation__Group__3__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3639:1: rule__Assignation__Group__3 : rule__Assignation__Group__3__Impl ;
     public final void rule__Assignation__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3440:1: ( rule__Assignation__Group__3__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3441:2: rule__Assignation__Group__3__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3643:1: ( rule__Assignation__Group__3__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3644:2: rule__Assignation__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Assignation__Group__3__Impl_in_rule__Assignation__Group__37143);
+            pushFollow(FOLLOW_rule__Assignation__Group__3__Impl_in_rule__Assignation__Group__37549);
             rule__Assignation__Group__3__Impl();
 
             state._fsp--;
@@ -9823,20 +10348,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Assignation__Group__3__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3447:1: rule__Assignation__Group__3__Impl : ( ';' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3650:1: rule__Assignation__Group__3__Impl : ( ';' ) ;
     public final void rule__Assignation__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3451:1: ( ( ';' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3452:1: ( ';' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3654:1: ( ( ';' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3655:1: ( ';' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3452:1: ( ';' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3453:1: ';'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3655:1: ( ';' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3656:1: ';'
             {
              before(grammarAccess.getAssignationAccess().getSemicolonKeyword_3()); 
-            match(input,44,FOLLOW_44_in_rule__Assignation__Group__3__Impl7171); 
+            match(input,49,FOLLOW_49_in_rule__Assignation__Group__3__Impl7577); 
              after(grammarAccess.getAssignationAccess().getSemicolonKeyword_3()); 
 
             }
@@ -9860,21 +10385,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Group_3__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3474:1: rule__Expression__Group_3__0 : rule__Expression__Group_3__0__Impl rule__Expression__Group_3__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3677:1: rule__Expression__Group_3__0 : rule__Expression__Group_3__0__Impl rule__Expression__Group_3__1 ;
     public final void rule__Expression__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3478:1: ( rule__Expression__Group_3__0__Impl rule__Expression__Group_3__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3479:2: rule__Expression__Group_3__0__Impl rule__Expression__Group_3__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3681:1: ( rule__Expression__Group_3__0__Impl rule__Expression__Group_3__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3682:2: rule__Expression__Group_3__0__Impl rule__Expression__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Expression__Group_3__0__Impl_in_rule__Expression__Group_3__07210);
+            pushFollow(FOLLOW_rule__Expression__Group_3__0__Impl_in_rule__Expression__Group_3__07616);
             rule__Expression__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Expression__Group_3__1_in_rule__Expression__Group_3__07213);
+            pushFollow(FOLLOW_rule__Expression__Group_3__1_in_rule__Expression__Group_3__07619);
             rule__Expression__Group_3__1();
 
             state._fsp--;
@@ -9898,23 +10423,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Group_3__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3486:1: rule__Expression__Group_3__0__Impl : ( ( rule__Expression__Alternatives_3_0 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3689:1: rule__Expression__Group_3__0__Impl : ( ( rule__Expression__Alternatives_3_0 ) ) ;
     public final void rule__Expression__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3490:1: ( ( ( rule__Expression__Alternatives_3_0 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3491:1: ( ( rule__Expression__Alternatives_3_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3693:1: ( ( ( rule__Expression__Alternatives_3_0 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3694:1: ( ( rule__Expression__Alternatives_3_0 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3491:1: ( ( rule__Expression__Alternatives_3_0 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3492:1: ( rule__Expression__Alternatives_3_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3694:1: ( ( rule__Expression__Alternatives_3_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3695:1: ( rule__Expression__Alternatives_3_0 )
             {
              before(grammarAccess.getExpressionAccess().getAlternatives_3_0()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3493:1: ( rule__Expression__Alternatives_3_0 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3493:2: rule__Expression__Alternatives_3_0
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3696:1: ( rule__Expression__Alternatives_3_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3696:2: rule__Expression__Alternatives_3_0
             {
-            pushFollow(FOLLOW_rule__Expression__Alternatives_3_0_in_rule__Expression__Group_3__0__Impl7240);
+            pushFollow(FOLLOW_rule__Expression__Alternatives_3_0_in_rule__Expression__Group_3__0__Impl7646);
             rule__Expression__Alternatives_3_0();
 
             state._fsp--;
@@ -9945,21 +10470,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Group_3__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3503:1: rule__Expression__Group_3__1 : rule__Expression__Group_3__1__Impl rule__Expression__Group_3__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3706:1: rule__Expression__Group_3__1 : rule__Expression__Group_3__1__Impl rule__Expression__Group_3__2 ;
     public final void rule__Expression__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3507:1: ( rule__Expression__Group_3__1__Impl rule__Expression__Group_3__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3508:2: rule__Expression__Group_3__1__Impl rule__Expression__Group_3__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3710:1: ( rule__Expression__Group_3__1__Impl rule__Expression__Group_3__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3711:2: rule__Expression__Group_3__1__Impl rule__Expression__Group_3__2
             {
-            pushFollow(FOLLOW_rule__Expression__Group_3__1__Impl_in_rule__Expression__Group_3__17270);
+            pushFollow(FOLLOW_rule__Expression__Group_3__1__Impl_in_rule__Expression__Group_3__17676);
             rule__Expression__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Expression__Group_3__2_in_rule__Expression__Group_3__17273);
+            pushFollow(FOLLOW_rule__Expression__Group_3__2_in_rule__Expression__Group_3__17679);
             rule__Expression__Group_3__2();
 
             state._fsp--;
@@ -9983,23 +10508,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Group_3__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3515:1: rule__Expression__Group_3__1__Impl : ( ( rule__Expression__LeftAssignment_3_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3718:1: rule__Expression__Group_3__1__Impl : ( ( rule__Expression__LeftAssignment_3_1 ) ) ;
     public final void rule__Expression__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3519:1: ( ( ( rule__Expression__LeftAssignment_3_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3520:1: ( ( rule__Expression__LeftAssignment_3_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3722:1: ( ( ( rule__Expression__LeftAssignment_3_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3723:1: ( ( rule__Expression__LeftAssignment_3_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3520:1: ( ( rule__Expression__LeftAssignment_3_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3521:1: ( rule__Expression__LeftAssignment_3_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3723:1: ( ( rule__Expression__LeftAssignment_3_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3724:1: ( rule__Expression__LeftAssignment_3_1 )
             {
              before(grammarAccess.getExpressionAccess().getLeftAssignment_3_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3522:1: ( rule__Expression__LeftAssignment_3_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3522:2: rule__Expression__LeftAssignment_3_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3725:1: ( rule__Expression__LeftAssignment_3_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3725:2: rule__Expression__LeftAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Expression__LeftAssignment_3_1_in_rule__Expression__Group_3__1__Impl7300);
+            pushFollow(FOLLOW_rule__Expression__LeftAssignment_3_1_in_rule__Expression__Group_3__1__Impl7706);
             rule__Expression__LeftAssignment_3_1();
 
             state._fsp--;
@@ -10030,16 +10555,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Group_3__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3532:1: rule__Expression__Group_3__2 : rule__Expression__Group_3__2__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3735:1: rule__Expression__Group_3__2 : rule__Expression__Group_3__2__Impl ;
     public final void rule__Expression__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3536:1: ( rule__Expression__Group_3__2__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3537:2: rule__Expression__Group_3__2__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3739:1: ( rule__Expression__Group_3__2__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3740:2: rule__Expression__Group_3__2__Impl
             {
-            pushFollow(FOLLOW_rule__Expression__Group_3__2__Impl_in_rule__Expression__Group_3__27330);
+            pushFollow(FOLLOW_rule__Expression__Group_3__2__Impl_in_rule__Expression__Group_3__27736);
             rule__Expression__Group_3__2__Impl();
 
             state._fsp--;
@@ -10063,23 +10588,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Group_3__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3543:1: rule__Expression__Group_3__2__Impl : ( ( rule__Expression__RightAssignment_3_2 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3746:1: rule__Expression__Group_3__2__Impl : ( ( rule__Expression__RightAssignment_3_2 ) ) ;
     public final void rule__Expression__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3547:1: ( ( ( rule__Expression__RightAssignment_3_2 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3548:1: ( ( rule__Expression__RightAssignment_3_2 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3750:1: ( ( ( rule__Expression__RightAssignment_3_2 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3751:1: ( ( rule__Expression__RightAssignment_3_2 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3548:1: ( ( rule__Expression__RightAssignment_3_2 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3549:1: ( rule__Expression__RightAssignment_3_2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3751:1: ( ( rule__Expression__RightAssignment_3_2 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3752:1: ( rule__Expression__RightAssignment_3_2 )
             {
              before(grammarAccess.getExpressionAccess().getRightAssignment_3_2()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3550:1: ( rule__Expression__RightAssignment_3_2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3550:2: rule__Expression__RightAssignment_3_2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3753:1: ( rule__Expression__RightAssignment_3_2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3753:2: rule__Expression__RightAssignment_3_2
             {
-            pushFollow(FOLLOW_rule__Expression__RightAssignment_3_2_in_rule__Expression__Group_3__2__Impl7357);
+            pushFollow(FOLLOW_rule__Expression__RightAssignment_3_2_in_rule__Expression__Group_3__2__Impl7763);
             rule__Expression__RightAssignment_3_2();
 
             state._fsp--;
@@ -10110,21 +10635,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Group_4__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3566:1: rule__Expression__Group_4__0 : rule__Expression__Group_4__0__Impl rule__Expression__Group_4__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3769:1: rule__Expression__Group_4__0 : rule__Expression__Group_4__0__Impl rule__Expression__Group_4__1 ;
     public final void rule__Expression__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3570:1: ( rule__Expression__Group_4__0__Impl rule__Expression__Group_4__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3571:2: rule__Expression__Group_4__0__Impl rule__Expression__Group_4__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3773:1: ( rule__Expression__Group_4__0__Impl rule__Expression__Group_4__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3774:2: rule__Expression__Group_4__0__Impl rule__Expression__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Expression__Group_4__0__Impl_in_rule__Expression__Group_4__07393);
+            pushFollow(FOLLOW_rule__Expression__Group_4__0__Impl_in_rule__Expression__Group_4__07799);
             rule__Expression__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Expression__Group_4__1_in_rule__Expression__Group_4__07396);
+            pushFollow(FOLLOW_rule__Expression__Group_4__1_in_rule__Expression__Group_4__07802);
             rule__Expression__Group_4__1();
 
             state._fsp--;
@@ -10148,20 +10673,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Group_4__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3578:1: rule__Expression__Group_4__0__Impl : ( ' !' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3781:1: rule__Expression__Group_4__0__Impl : ( ' !' ) ;
     public final void rule__Expression__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3582:1: ( ( ' !' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3583:1: ( ' !' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3785:1: ( ( ' !' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3786:1: ( ' !' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3583:1: ( ' !' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3584:1: ' !'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3786:1: ( ' !' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3787:1: ' !'
             {
              before(grammarAccess.getExpressionAccess().getSpaceExclamationMarkKeyword_4_0()); 
-            match(input,45,FOLLOW_45_in_rule__Expression__Group_4__0__Impl7424); 
+            match(input,50,FOLLOW_50_in_rule__Expression__Group_4__0__Impl7830); 
              after(grammarAccess.getExpressionAccess().getSpaceExclamationMarkKeyword_4_0()); 
 
             }
@@ -10185,16 +10710,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Group_4__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3597:1: rule__Expression__Group_4__1 : rule__Expression__Group_4__1__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3800:1: rule__Expression__Group_4__1 : rule__Expression__Group_4__1__Impl ;
     public final void rule__Expression__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3601:1: ( rule__Expression__Group_4__1__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3602:2: rule__Expression__Group_4__1__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3804:1: ( rule__Expression__Group_4__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3805:2: rule__Expression__Group_4__1__Impl
             {
-            pushFollow(FOLLOW_rule__Expression__Group_4__1__Impl_in_rule__Expression__Group_4__17455);
+            pushFollow(FOLLOW_rule__Expression__Group_4__1__Impl_in_rule__Expression__Group_4__17861);
             rule__Expression__Group_4__1__Impl();
 
             state._fsp--;
@@ -10218,23 +10743,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__Group_4__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3608:1: rule__Expression__Group_4__1__Impl : ( ( rule__Expression__ExpAssignment_4_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3811:1: rule__Expression__Group_4__1__Impl : ( ( rule__Expression__ExpAssignment_4_1 ) ) ;
     public final void rule__Expression__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3612:1: ( ( ( rule__Expression__ExpAssignment_4_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3613:1: ( ( rule__Expression__ExpAssignment_4_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3815:1: ( ( ( rule__Expression__ExpAssignment_4_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3816:1: ( ( rule__Expression__ExpAssignment_4_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3613:1: ( ( rule__Expression__ExpAssignment_4_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3614:1: ( rule__Expression__ExpAssignment_4_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3816:1: ( ( rule__Expression__ExpAssignment_4_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3817:1: ( rule__Expression__ExpAssignment_4_1 )
             {
              before(grammarAccess.getExpressionAccess().getExpAssignment_4_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3615:1: ( rule__Expression__ExpAssignment_4_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3615:2: rule__Expression__ExpAssignment_4_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3818:1: ( rule__Expression__ExpAssignment_4_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3818:2: rule__Expression__ExpAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__Expression__ExpAssignment_4_1_in_rule__Expression__Group_4__1__Impl7482);
+            pushFollow(FOLLOW_rule__Expression__ExpAssignment_4_1_in_rule__Expression__Group_4__1__Impl7888);
             rule__Expression__ExpAssignment_4_1();
 
             state._fsp--;
@@ -10265,21 +10790,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Checkbox__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3629:1: rule__Checkbox__Group__0 : rule__Checkbox__Group__0__Impl rule__Checkbox__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3832:1: rule__Checkbox__Group__0 : rule__Checkbox__Group__0__Impl rule__Checkbox__Group__1 ;
     public final void rule__Checkbox__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3633:1: ( rule__Checkbox__Group__0__Impl rule__Checkbox__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3634:2: rule__Checkbox__Group__0__Impl rule__Checkbox__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3836:1: ( rule__Checkbox__Group__0__Impl rule__Checkbox__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3837:2: rule__Checkbox__Group__0__Impl rule__Checkbox__Group__1
             {
-            pushFollow(FOLLOW_rule__Checkbox__Group__0__Impl_in_rule__Checkbox__Group__07516);
+            pushFollow(FOLLOW_rule__Checkbox__Group__0__Impl_in_rule__Checkbox__Group__07922);
             rule__Checkbox__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Checkbox__Group__1_in_rule__Checkbox__Group__07519);
+            pushFollow(FOLLOW_rule__Checkbox__Group__1_in_rule__Checkbox__Group__07925);
             rule__Checkbox__Group__1();
 
             state._fsp--;
@@ -10303,20 +10828,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Checkbox__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3641:1: rule__Checkbox__Group__0__Impl : ( 'checkbox ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3844:1: rule__Checkbox__Group__0__Impl : ( 'checkbox ' ) ;
     public final void rule__Checkbox__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3645:1: ( ( 'checkbox ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3646:1: ( 'checkbox ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3848:1: ( ( 'checkbox ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3849:1: ( 'checkbox ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3646:1: ( 'checkbox ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3647:1: 'checkbox '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3849:1: ( 'checkbox ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3850:1: 'checkbox '
             {
              before(grammarAccess.getCheckboxAccess().getCheckboxKeyword_0()); 
-            match(input,46,FOLLOW_46_in_rule__Checkbox__Group__0__Impl7547); 
+            match(input,51,FOLLOW_51_in_rule__Checkbox__Group__0__Impl7953); 
              after(grammarAccess.getCheckboxAccess().getCheckboxKeyword_0()); 
 
             }
@@ -10340,16 +10865,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Checkbox__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3660:1: rule__Checkbox__Group__1 : rule__Checkbox__Group__1__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3863:1: rule__Checkbox__Group__1 : rule__Checkbox__Group__1__Impl ;
     public final void rule__Checkbox__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3664:1: ( rule__Checkbox__Group__1__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3665:2: rule__Checkbox__Group__1__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3867:1: ( rule__Checkbox__Group__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3868:2: rule__Checkbox__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Checkbox__Group__1__Impl_in_rule__Checkbox__Group__17578);
+            pushFollow(FOLLOW_rule__Checkbox__Group__1__Impl_in_rule__Checkbox__Group__17984);
             rule__Checkbox__Group__1__Impl();
 
             state._fsp--;
@@ -10373,23 +10898,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Checkbox__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3671:1: rule__Checkbox__Group__1__Impl : ( ( rule__Checkbox__Alternatives_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3874:1: rule__Checkbox__Group__1__Impl : ( ( rule__Checkbox__Alternatives_1 ) ) ;
     public final void rule__Checkbox__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3675:1: ( ( ( rule__Checkbox__Alternatives_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3676:1: ( ( rule__Checkbox__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3878:1: ( ( ( rule__Checkbox__Alternatives_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3879:1: ( ( rule__Checkbox__Alternatives_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3676:1: ( ( rule__Checkbox__Alternatives_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3677:1: ( rule__Checkbox__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3879:1: ( ( rule__Checkbox__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3880:1: ( rule__Checkbox__Alternatives_1 )
             {
              before(grammarAccess.getCheckboxAccess().getAlternatives_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3678:1: ( rule__Checkbox__Alternatives_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3678:2: rule__Checkbox__Alternatives_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3881:1: ( rule__Checkbox__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3881:2: rule__Checkbox__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__Checkbox__Alternatives_1_in_rule__Checkbox__Group__1__Impl7605);
+            pushFollow(FOLLOW_rule__Checkbox__Alternatives_1_in_rule__Checkbox__Group__1__Impl8011);
             rule__Checkbox__Alternatives_1();
 
             state._fsp--;
@@ -10420,21 +10945,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Link__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3692:1: rule__Link__Group__0 : rule__Link__Group__0__Impl rule__Link__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3895:1: rule__Link__Group__0 : rule__Link__Group__0__Impl rule__Link__Group__1 ;
     public final void rule__Link__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3696:1: ( rule__Link__Group__0__Impl rule__Link__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3697:2: rule__Link__Group__0__Impl rule__Link__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3899:1: ( rule__Link__Group__0__Impl rule__Link__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3900:2: rule__Link__Group__0__Impl rule__Link__Group__1
             {
-            pushFollow(FOLLOW_rule__Link__Group__0__Impl_in_rule__Link__Group__07639);
+            pushFollow(FOLLOW_rule__Link__Group__0__Impl_in_rule__Link__Group__08045);
             rule__Link__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Link__Group__1_in_rule__Link__Group__07642);
+            pushFollow(FOLLOW_rule__Link__Group__1_in_rule__Link__Group__08048);
             rule__Link__Group__1();
 
             state._fsp--;
@@ -10458,20 +10983,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Link__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3704:1: rule__Link__Group__0__Impl : ( 'link ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3907:1: rule__Link__Group__0__Impl : ( 'link ' ) ;
     public final void rule__Link__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3708:1: ( ( 'link ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3709:1: ( 'link ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3911:1: ( ( 'link ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3912:1: ( 'link ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3709:1: ( 'link ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3710:1: 'link '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3912:1: ( 'link ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3913:1: 'link '
             {
              before(grammarAccess.getLinkAccess().getLinkKeyword_0()); 
-            match(input,47,FOLLOW_47_in_rule__Link__Group__0__Impl7670); 
+            match(input,52,FOLLOW_52_in_rule__Link__Group__0__Impl8076); 
              after(grammarAccess.getLinkAccess().getLinkKeyword_0()); 
 
             }
@@ -10495,16 +11020,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Link__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3723:1: rule__Link__Group__1 : rule__Link__Group__1__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3926:1: rule__Link__Group__1 : rule__Link__Group__1__Impl ;
     public final void rule__Link__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3727:1: ( rule__Link__Group__1__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3728:2: rule__Link__Group__1__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3930:1: ( rule__Link__Group__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3931:2: rule__Link__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Link__Group__1__Impl_in_rule__Link__Group__17701);
+            pushFollow(FOLLOW_rule__Link__Group__1__Impl_in_rule__Link__Group__18107);
             rule__Link__Group__1__Impl();
 
             state._fsp--;
@@ -10528,23 +11053,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Link__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3734:1: rule__Link__Group__1__Impl : ( ( rule__Link__Alternatives_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3937:1: rule__Link__Group__1__Impl : ( ( rule__Link__Alternatives_1 ) ) ;
     public final void rule__Link__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3738:1: ( ( ( rule__Link__Alternatives_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3739:1: ( ( rule__Link__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3941:1: ( ( ( rule__Link__Alternatives_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3942:1: ( ( rule__Link__Alternatives_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3739:1: ( ( rule__Link__Alternatives_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3740:1: ( rule__Link__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3942:1: ( ( rule__Link__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3943:1: ( rule__Link__Alternatives_1 )
             {
              before(grammarAccess.getLinkAccess().getAlternatives_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3741:1: ( rule__Link__Alternatives_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3741:2: rule__Link__Alternatives_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3944:1: ( rule__Link__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3944:2: rule__Link__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__Link__Alternatives_1_in_rule__Link__Group__1__Impl7728);
+            pushFollow(FOLLOW_rule__Link__Alternatives_1_in_rule__Link__Group__1__Impl8134);
             rule__Link__Alternatives_1();
 
             state._fsp--;
@@ -10575,21 +11100,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Button__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3755:1: rule__Button__Group__0 : rule__Button__Group__0__Impl rule__Button__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3958:1: rule__Button__Group__0 : rule__Button__Group__0__Impl rule__Button__Group__1 ;
     public final void rule__Button__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3759:1: ( rule__Button__Group__0__Impl rule__Button__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3760:2: rule__Button__Group__0__Impl rule__Button__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3962:1: ( rule__Button__Group__0__Impl rule__Button__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3963:2: rule__Button__Group__0__Impl rule__Button__Group__1
             {
-            pushFollow(FOLLOW_rule__Button__Group__0__Impl_in_rule__Button__Group__07762);
+            pushFollow(FOLLOW_rule__Button__Group__0__Impl_in_rule__Button__Group__08168);
             rule__Button__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Button__Group__1_in_rule__Button__Group__07765);
+            pushFollow(FOLLOW_rule__Button__Group__1_in_rule__Button__Group__08171);
             rule__Button__Group__1();
 
             state._fsp--;
@@ -10613,20 +11138,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Button__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3767:1: rule__Button__Group__0__Impl : ( 'button ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3970:1: rule__Button__Group__0__Impl : ( 'button ' ) ;
     public final void rule__Button__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3771:1: ( ( 'button ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3772:1: ( 'button ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3974:1: ( ( 'button ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3975:1: ( 'button ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3772:1: ( 'button ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3773:1: 'button '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3975:1: ( 'button ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3976:1: 'button '
             {
              before(grammarAccess.getButtonAccess().getButtonKeyword_0()); 
-            match(input,48,FOLLOW_48_in_rule__Button__Group__0__Impl7793); 
+            match(input,53,FOLLOW_53_in_rule__Button__Group__0__Impl8199); 
              after(grammarAccess.getButtonAccess().getButtonKeyword_0()); 
 
             }
@@ -10650,16 +11175,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Button__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3786:1: rule__Button__Group__1 : rule__Button__Group__1__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3989:1: rule__Button__Group__1 : rule__Button__Group__1__Impl ;
     public final void rule__Button__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3790:1: ( rule__Button__Group__1__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3791:2: rule__Button__Group__1__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3993:1: ( rule__Button__Group__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3994:2: rule__Button__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Button__Group__1__Impl_in_rule__Button__Group__17824);
+            pushFollow(FOLLOW_rule__Button__Group__1__Impl_in_rule__Button__Group__18230);
             rule__Button__Group__1__Impl();
 
             state._fsp--;
@@ -10683,23 +11208,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Button__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3797:1: rule__Button__Group__1__Impl : ( ( rule__Button__Alternatives_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4000:1: rule__Button__Group__1__Impl : ( ( rule__Button__Alternatives_1 ) ) ;
     public final void rule__Button__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3801:1: ( ( ( rule__Button__Alternatives_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3802:1: ( ( rule__Button__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4004:1: ( ( ( rule__Button__Alternatives_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4005:1: ( ( rule__Button__Alternatives_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3802:1: ( ( rule__Button__Alternatives_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3803:1: ( rule__Button__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4005:1: ( ( rule__Button__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4006:1: ( rule__Button__Alternatives_1 )
             {
              before(grammarAccess.getButtonAccess().getAlternatives_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3804:1: ( rule__Button__Alternatives_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3804:2: rule__Button__Alternatives_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4007:1: ( rule__Button__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4007:2: rule__Button__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__Button__Alternatives_1_in_rule__Button__Group__1__Impl7851);
+            pushFollow(FOLLOW_rule__Button__Alternatives_1_in_rule__Button__Group__1__Impl8257);
             rule__Button__Alternatives_1();
 
             state._fsp--;
@@ -10730,21 +11255,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Image__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3818:1: rule__Image__Group__0 : rule__Image__Group__0__Impl rule__Image__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4021:1: rule__Image__Group__0 : rule__Image__Group__0__Impl rule__Image__Group__1 ;
     public final void rule__Image__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3822:1: ( rule__Image__Group__0__Impl rule__Image__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3823:2: rule__Image__Group__0__Impl rule__Image__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4025:1: ( rule__Image__Group__0__Impl rule__Image__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4026:2: rule__Image__Group__0__Impl rule__Image__Group__1
             {
-            pushFollow(FOLLOW_rule__Image__Group__0__Impl_in_rule__Image__Group__07885);
+            pushFollow(FOLLOW_rule__Image__Group__0__Impl_in_rule__Image__Group__08291);
             rule__Image__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Image__Group__1_in_rule__Image__Group__07888);
+            pushFollow(FOLLOW_rule__Image__Group__1_in_rule__Image__Group__08294);
             rule__Image__Group__1();
 
             state._fsp--;
@@ -10768,20 +11293,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Image__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3830:1: rule__Image__Group__0__Impl : ( 'image ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4033:1: rule__Image__Group__0__Impl : ( 'image ' ) ;
     public final void rule__Image__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3834:1: ( ( 'image ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3835:1: ( 'image ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4037:1: ( ( 'image ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4038:1: ( 'image ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3835:1: ( 'image ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3836:1: 'image '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4038:1: ( 'image ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4039:1: 'image '
             {
              before(grammarAccess.getImageAccess().getImageKeyword_0()); 
-            match(input,49,FOLLOW_49_in_rule__Image__Group__0__Impl7916); 
+            match(input,54,FOLLOW_54_in_rule__Image__Group__0__Impl8322); 
              after(grammarAccess.getImageAccess().getImageKeyword_0()); 
 
             }
@@ -10805,16 +11330,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Image__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3849:1: rule__Image__Group__1 : rule__Image__Group__1__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4052:1: rule__Image__Group__1 : rule__Image__Group__1__Impl ;
     public final void rule__Image__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3853:1: ( rule__Image__Group__1__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3854:2: rule__Image__Group__1__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4056:1: ( rule__Image__Group__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4057:2: rule__Image__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Image__Group__1__Impl_in_rule__Image__Group__17947);
+            pushFollow(FOLLOW_rule__Image__Group__1__Impl_in_rule__Image__Group__18353);
             rule__Image__Group__1__Impl();
 
             state._fsp--;
@@ -10838,23 +11363,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Image__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3860:1: rule__Image__Group__1__Impl : ( ( rule__Image__Alternatives_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4063:1: rule__Image__Group__1__Impl : ( ( rule__Image__Alternatives_1 ) ) ;
     public final void rule__Image__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3864:1: ( ( ( rule__Image__Alternatives_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3865:1: ( ( rule__Image__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4067:1: ( ( ( rule__Image__Alternatives_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4068:1: ( ( rule__Image__Alternatives_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3865:1: ( ( rule__Image__Alternatives_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3866:1: ( rule__Image__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4068:1: ( ( rule__Image__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4069:1: ( rule__Image__Alternatives_1 )
             {
              before(grammarAccess.getImageAccess().getAlternatives_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3867:1: ( rule__Image__Alternatives_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3867:2: rule__Image__Alternatives_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4070:1: ( rule__Image__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4070:2: rule__Image__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__Image__Alternatives_1_in_rule__Image__Group__1__Impl7974);
+            pushFollow(FOLLOW_rule__Image__Alternatives_1_in_rule__Image__Group__1__Impl8380);
             rule__Image__Alternatives_1();
 
             state._fsp--;
@@ -10885,21 +11410,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TextField__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3881:1: rule__TextField__Group__0 : rule__TextField__Group__0__Impl rule__TextField__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4084:1: rule__TextField__Group__0 : rule__TextField__Group__0__Impl rule__TextField__Group__1 ;
     public final void rule__TextField__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3885:1: ( rule__TextField__Group__0__Impl rule__TextField__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3886:2: rule__TextField__Group__0__Impl rule__TextField__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4088:1: ( rule__TextField__Group__0__Impl rule__TextField__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4089:2: rule__TextField__Group__0__Impl rule__TextField__Group__1
             {
-            pushFollow(FOLLOW_rule__TextField__Group__0__Impl_in_rule__TextField__Group__08008);
+            pushFollow(FOLLOW_rule__TextField__Group__0__Impl_in_rule__TextField__Group__08414);
             rule__TextField__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__TextField__Group__1_in_rule__TextField__Group__08011);
+            pushFollow(FOLLOW_rule__TextField__Group__1_in_rule__TextField__Group__08417);
             rule__TextField__Group__1();
 
             state._fsp--;
@@ -10923,20 +11448,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TextField__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3893:1: rule__TextField__Group__0__Impl : ( 'textField ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4096:1: rule__TextField__Group__0__Impl : ( 'textField ' ) ;
     public final void rule__TextField__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3897:1: ( ( 'textField ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3898:1: ( 'textField ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4100:1: ( ( 'textField ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4101:1: ( 'textField ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3898:1: ( 'textField ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3899:1: 'textField '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4101:1: ( 'textField ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4102:1: 'textField '
             {
              before(grammarAccess.getTextFieldAccess().getTextFieldKeyword_0()); 
-            match(input,50,FOLLOW_50_in_rule__TextField__Group__0__Impl8039); 
+            match(input,55,FOLLOW_55_in_rule__TextField__Group__0__Impl8445); 
              after(grammarAccess.getTextFieldAccess().getTextFieldKeyword_0()); 
 
             }
@@ -10960,16 +11485,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TextField__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3912:1: rule__TextField__Group__1 : rule__TextField__Group__1__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4115:1: rule__TextField__Group__1 : rule__TextField__Group__1__Impl ;
     public final void rule__TextField__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3916:1: ( rule__TextField__Group__1__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3917:2: rule__TextField__Group__1__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4119:1: ( rule__TextField__Group__1__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4120:2: rule__TextField__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__TextField__Group__1__Impl_in_rule__TextField__Group__18070);
+            pushFollow(FOLLOW_rule__TextField__Group__1__Impl_in_rule__TextField__Group__18476);
             rule__TextField__Group__1__Impl();
 
             state._fsp--;
@@ -10993,23 +11518,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TextField__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3923:1: rule__TextField__Group__1__Impl : ( ( rule__TextField__Alternatives_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4126:1: rule__TextField__Group__1__Impl : ( ( rule__TextField__Alternatives_1 ) ) ;
     public final void rule__TextField__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3927:1: ( ( ( rule__TextField__Alternatives_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3928:1: ( ( rule__TextField__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4130:1: ( ( ( rule__TextField__Alternatives_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4131:1: ( ( rule__TextField__Alternatives_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3928:1: ( ( rule__TextField__Alternatives_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3929:1: ( rule__TextField__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4131:1: ( ( rule__TextField__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4132:1: ( rule__TextField__Alternatives_1 )
             {
              before(grammarAccess.getTextFieldAccess().getAlternatives_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3930:1: ( rule__TextField__Alternatives_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3930:2: rule__TextField__Alternatives_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4133:1: ( rule__TextField__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4133:2: rule__TextField__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__TextField__Alternatives_1_in_rule__TextField__Group__1__Impl8097);
+            pushFollow(FOLLOW_rule__TextField__Alternatives_1_in_rule__TextField__Group__1__Impl8503);
             rule__TextField__Alternatives_1();
 
             state._fsp--;
@@ -11040,21 +11565,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Select__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3944:1: rule__Select__Group__0 : rule__Select__Group__0__Impl rule__Select__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4147:1: rule__Select__Group__0 : rule__Select__Group__0__Impl rule__Select__Group__1 ;
     public final void rule__Select__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3948:1: ( rule__Select__Group__0__Impl rule__Select__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3949:2: rule__Select__Group__0__Impl rule__Select__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4151:1: ( rule__Select__Group__0__Impl rule__Select__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4152:2: rule__Select__Group__0__Impl rule__Select__Group__1
             {
-            pushFollow(FOLLOW_rule__Select__Group__0__Impl_in_rule__Select__Group__08131);
+            pushFollow(FOLLOW_rule__Select__Group__0__Impl_in_rule__Select__Group__08537);
             rule__Select__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Select__Group__1_in_rule__Select__Group__08134);
+            pushFollow(FOLLOW_rule__Select__Group__1_in_rule__Select__Group__08540);
             rule__Select__Group__1();
 
             state._fsp--;
@@ -11078,20 +11603,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Select__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3956:1: rule__Select__Group__0__Impl : ( 'select(' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4159:1: rule__Select__Group__0__Impl : ( 'select(' ) ;
     public final void rule__Select__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3960:1: ( ( 'select(' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3961:1: ( 'select(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4163:1: ( ( 'select(' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4164:1: ( 'select(' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3961:1: ( 'select(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3962:1: 'select('
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4164:1: ( 'select(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4165:1: 'select('
             {
              before(grammarAccess.getSelectAccess().getSelectKeyword_0()); 
-            match(input,51,FOLLOW_51_in_rule__Select__Group__0__Impl8162); 
+            match(input,56,FOLLOW_56_in_rule__Select__Group__0__Impl8568); 
              after(grammarAccess.getSelectAccess().getSelectKeyword_0()); 
 
             }
@@ -11115,21 +11640,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Select__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3975:1: rule__Select__Group__1 : rule__Select__Group__1__Impl rule__Select__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4178:1: rule__Select__Group__1 : rule__Select__Group__1__Impl rule__Select__Group__2 ;
     public final void rule__Select__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3979:1: ( rule__Select__Group__1__Impl rule__Select__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3980:2: rule__Select__Group__1__Impl rule__Select__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4182:1: ( rule__Select__Group__1__Impl rule__Select__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4183:2: rule__Select__Group__1__Impl rule__Select__Group__2
             {
-            pushFollow(FOLLOW_rule__Select__Group__1__Impl_in_rule__Select__Group__18193);
+            pushFollow(FOLLOW_rule__Select__Group__1__Impl_in_rule__Select__Group__18599);
             rule__Select__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Select__Group__2_in_rule__Select__Group__18196);
+            pushFollow(FOLLOW_rule__Select__Group__2_in_rule__Select__Group__18602);
             rule__Select__Group__2();
 
             state._fsp--;
@@ -11153,23 +11678,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Select__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3987:1: rule__Select__Group__1__Impl : ( ( rule__Select__ValueAssignment_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4190:1: rule__Select__Group__1__Impl : ( ( rule__Select__ValueAssignment_1 ) ) ;
     public final void rule__Select__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3991:1: ( ( ( rule__Select__ValueAssignment_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3992:1: ( ( rule__Select__ValueAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4194:1: ( ( ( rule__Select__ValueAssignment_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4195:1: ( ( rule__Select__ValueAssignment_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3992:1: ( ( rule__Select__ValueAssignment_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3993:1: ( rule__Select__ValueAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4195:1: ( ( rule__Select__ValueAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4196:1: ( rule__Select__ValueAssignment_1 )
             {
              before(grammarAccess.getSelectAccess().getValueAssignment_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3994:1: ( rule__Select__ValueAssignment_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:3994:2: rule__Select__ValueAssignment_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4197:1: ( rule__Select__ValueAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4197:2: rule__Select__ValueAssignment_1
             {
-            pushFollow(FOLLOW_rule__Select__ValueAssignment_1_in_rule__Select__Group__1__Impl8223);
+            pushFollow(FOLLOW_rule__Select__ValueAssignment_1_in_rule__Select__Group__1__Impl8629);
             rule__Select__ValueAssignment_1();
 
             state._fsp--;
@@ -11200,16 +11725,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Select__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4004:1: rule__Select__Group__2 : rule__Select__Group__2__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4207:1: rule__Select__Group__2 : rule__Select__Group__2__Impl ;
     public final void rule__Select__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4008:1: ( rule__Select__Group__2__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4009:2: rule__Select__Group__2__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4211:1: ( rule__Select__Group__2__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4212:2: rule__Select__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Select__Group__2__Impl_in_rule__Select__Group__28253);
+            pushFollow(FOLLOW_rule__Select__Group__2__Impl_in_rule__Select__Group__28659);
             rule__Select__Group__2__Impl();
 
             state._fsp--;
@@ -11233,20 +11758,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Select__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4015:1: rule__Select__Group__2__Impl : ( ')' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4218:1: rule__Select__Group__2__Impl : ( ')' ) ;
     public final void rule__Select__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4019:1: ( ( ')' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4020:1: ( ')' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4222:1: ( ( ')' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4223:1: ( ')' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4020:1: ( ')' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4021:1: ')'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4223:1: ( ')' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4224:1: ')'
             {
              before(grammarAccess.getSelectAccess().getRightParenthesisKeyword_2()); 
-            match(input,28,FOLLOW_28_in_rule__Select__Group__2__Impl8281); 
+            match(input,30,FOLLOW_30_in_rule__Select__Group__2__Impl8687); 
              after(grammarAccess.getSelectAccess().getRightParenthesisKeyword_2()); 
 
             }
@@ -11270,21 +11795,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Click__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4040:1: rule__Click__Group__0 : rule__Click__Group__0__Impl rule__Click__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4243:1: rule__Click__Group__0 : rule__Click__Group__0__Impl rule__Click__Group__1 ;
     public final void rule__Click__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4044:1: ( rule__Click__Group__0__Impl rule__Click__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4045:2: rule__Click__Group__0__Impl rule__Click__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4247:1: ( rule__Click__Group__0__Impl rule__Click__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4248:2: rule__Click__Group__0__Impl rule__Click__Group__1
             {
-            pushFollow(FOLLOW_rule__Click__Group__0__Impl_in_rule__Click__Group__08318);
+            pushFollow(FOLLOW_rule__Click__Group__0__Impl_in_rule__Click__Group__08724);
             rule__Click__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Click__Group__1_in_rule__Click__Group__08321);
+            pushFollow(FOLLOW_rule__Click__Group__1_in_rule__Click__Group__08727);
             rule__Click__Group__1();
 
             state._fsp--;
@@ -11308,20 +11833,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Click__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4052:1: rule__Click__Group__0__Impl : ( 'click(' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4255:1: rule__Click__Group__0__Impl : ( 'click(' ) ;
     public final void rule__Click__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4056:1: ( ( 'click(' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4057:1: ( 'click(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4259:1: ( ( 'click(' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4260:1: ( 'click(' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4057:1: ( 'click(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4058:1: 'click('
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4260:1: ( 'click(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4261:1: 'click('
             {
              before(grammarAccess.getClickAccess().getClickKeyword_0()); 
-            match(input,52,FOLLOW_52_in_rule__Click__Group__0__Impl8349); 
+            match(input,57,FOLLOW_57_in_rule__Click__Group__0__Impl8755); 
              after(grammarAccess.getClickAccess().getClickKeyword_0()); 
 
             }
@@ -11345,21 +11870,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Click__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4071:1: rule__Click__Group__1 : rule__Click__Group__1__Impl rule__Click__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4274:1: rule__Click__Group__1 : rule__Click__Group__1__Impl rule__Click__Group__2 ;
     public final void rule__Click__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4075:1: ( rule__Click__Group__1__Impl rule__Click__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4076:2: rule__Click__Group__1__Impl rule__Click__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4278:1: ( rule__Click__Group__1__Impl rule__Click__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4279:2: rule__Click__Group__1__Impl rule__Click__Group__2
             {
-            pushFollow(FOLLOW_rule__Click__Group__1__Impl_in_rule__Click__Group__18380);
+            pushFollow(FOLLOW_rule__Click__Group__1__Impl_in_rule__Click__Group__18786);
             rule__Click__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Click__Group__2_in_rule__Click__Group__18383);
+            pushFollow(FOLLOW_rule__Click__Group__2_in_rule__Click__Group__18789);
             rule__Click__Group__2();
 
             state._fsp--;
@@ -11383,23 +11908,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Click__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4083:1: rule__Click__Group__1__Impl : ( ( rule__Click__ValAssignment_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4286:1: rule__Click__Group__1__Impl : ( ( rule__Click__ValAssignment_1 ) ) ;
     public final void rule__Click__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4087:1: ( ( ( rule__Click__ValAssignment_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4088:1: ( ( rule__Click__ValAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4290:1: ( ( ( rule__Click__ValAssignment_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4291:1: ( ( rule__Click__ValAssignment_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4088:1: ( ( rule__Click__ValAssignment_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4089:1: ( rule__Click__ValAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4291:1: ( ( rule__Click__ValAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4292:1: ( rule__Click__ValAssignment_1 )
             {
              before(grammarAccess.getClickAccess().getValAssignment_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4090:1: ( rule__Click__ValAssignment_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4090:2: rule__Click__ValAssignment_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4293:1: ( rule__Click__ValAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4293:2: rule__Click__ValAssignment_1
             {
-            pushFollow(FOLLOW_rule__Click__ValAssignment_1_in_rule__Click__Group__1__Impl8410);
+            pushFollow(FOLLOW_rule__Click__ValAssignment_1_in_rule__Click__Group__1__Impl8816);
             rule__Click__ValAssignment_1();
 
             state._fsp--;
@@ -11430,16 +11955,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Click__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4100:1: rule__Click__Group__2 : rule__Click__Group__2__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4303:1: rule__Click__Group__2 : rule__Click__Group__2__Impl ;
     public final void rule__Click__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4104:1: ( rule__Click__Group__2__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4105:2: rule__Click__Group__2__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4307:1: ( rule__Click__Group__2__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4308:2: rule__Click__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Click__Group__2__Impl_in_rule__Click__Group__28440);
+            pushFollow(FOLLOW_rule__Click__Group__2__Impl_in_rule__Click__Group__28846);
             rule__Click__Group__2__Impl();
 
             state._fsp--;
@@ -11463,20 +11988,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Click__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4111:1: rule__Click__Group__2__Impl : ( ');' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4314:1: rule__Click__Group__2__Impl : ( ');' ) ;
     public final void rule__Click__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4115:1: ( ( ');' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4116:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4318:1: ( ( ');' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4319:1: ( ');' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4116:1: ( ');' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4117:1: ');'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4319:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4320:1: ');'
             {
              before(grammarAccess.getClickAccess().getRightParenthesisSemicolonKeyword_2()); 
-            match(input,53,FOLLOW_53_in_rule__Click__Group__2__Impl8468); 
+            match(input,58,FOLLOW_58_in_rule__Click__Group__2__Impl8874); 
              after(grammarAccess.getClickAccess().getRightParenthesisSemicolonKeyword_2()); 
 
             }
@@ -11500,21 +12025,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Check__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4136:1: rule__Check__Group__0 : rule__Check__Group__0__Impl rule__Check__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4339:1: rule__Check__Group__0 : rule__Check__Group__0__Impl rule__Check__Group__1 ;
     public final void rule__Check__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4140:1: ( rule__Check__Group__0__Impl rule__Check__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4141:2: rule__Check__Group__0__Impl rule__Check__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4343:1: ( rule__Check__Group__0__Impl rule__Check__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4344:2: rule__Check__Group__0__Impl rule__Check__Group__1
             {
-            pushFollow(FOLLOW_rule__Check__Group__0__Impl_in_rule__Check__Group__08505);
+            pushFollow(FOLLOW_rule__Check__Group__0__Impl_in_rule__Check__Group__08911);
             rule__Check__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Check__Group__1_in_rule__Check__Group__08508);
+            pushFollow(FOLLOW_rule__Check__Group__1_in_rule__Check__Group__08914);
             rule__Check__Group__1();
 
             state._fsp--;
@@ -11538,20 +12063,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Check__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4148:1: rule__Check__Group__0__Impl : ( 'check(' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4351:1: rule__Check__Group__0__Impl : ( 'check(' ) ;
     public final void rule__Check__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4152:1: ( ( 'check(' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4153:1: ( 'check(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4355:1: ( ( 'check(' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4356:1: ( 'check(' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4153:1: ( 'check(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4154:1: 'check('
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4356:1: ( 'check(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4357:1: 'check('
             {
              before(grammarAccess.getCheckAccess().getCheckKeyword_0()); 
-            match(input,54,FOLLOW_54_in_rule__Check__Group__0__Impl8536); 
+            match(input,59,FOLLOW_59_in_rule__Check__Group__0__Impl8942); 
              after(grammarAccess.getCheckAccess().getCheckKeyword_0()); 
 
             }
@@ -11575,21 +12100,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Check__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4167:1: rule__Check__Group__1 : rule__Check__Group__1__Impl rule__Check__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4370:1: rule__Check__Group__1 : rule__Check__Group__1__Impl rule__Check__Group__2 ;
     public final void rule__Check__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4171:1: ( rule__Check__Group__1__Impl rule__Check__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4172:2: rule__Check__Group__1__Impl rule__Check__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4374:1: ( rule__Check__Group__1__Impl rule__Check__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4375:2: rule__Check__Group__1__Impl rule__Check__Group__2
             {
-            pushFollow(FOLLOW_rule__Check__Group__1__Impl_in_rule__Check__Group__18567);
+            pushFollow(FOLLOW_rule__Check__Group__1__Impl_in_rule__Check__Group__18973);
             rule__Check__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Check__Group__2_in_rule__Check__Group__18570);
+            pushFollow(FOLLOW_rule__Check__Group__2_in_rule__Check__Group__18976);
             rule__Check__Group__2();
 
             state._fsp--;
@@ -11613,23 +12138,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Check__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4179:1: rule__Check__Group__1__Impl : ( ( rule__Check__ValAssignment_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4382:1: rule__Check__Group__1__Impl : ( ( rule__Check__ValAssignment_1 ) ) ;
     public final void rule__Check__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4183:1: ( ( ( rule__Check__ValAssignment_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4184:1: ( ( rule__Check__ValAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4386:1: ( ( ( rule__Check__ValAssignment_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4387:1: ( ( rule__Check__ValAssignment_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4184:1: ( ( rule__Check__ValAssignment_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4185:1: ( rule__Check__ValAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4387:1: ( ( rule__Check__ValAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4388:1: ( rule__Check__ValAssignment_1 )
             {
              before(grammarAccess.getCheckAccess().getValAssignment_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4186:1: ( rule__Check__ValAssignment_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4186:2: rule__Check__ValAssignment_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4389:1: ( rule__Check__ValAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4389:2: rule__Check__ValAssignment_1
             {
-            pushFollow(FOLLOW_rule__Check__ValAssignment_1_in_rule__Check__Group__1__Impl8597);
+            pushFollow(FOLLOW_rule__Check__ValAssignment_1_in_rule__Check__Group__1__Impl9003);
             rule__Check__ValAssignment_1();
 
             state._fsp--;
@@ -11660,16 +12185,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Check__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4196:1: rule__Check__Group__2 : rule__Check__Group__2__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4399:1: rule__Check__Group__2 : rule__Check__Group__2__Impl ;
     public final void rule__Check__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4200:1: ( rule__Check__Group__2__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4201:2: rule__Check__Group__2__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4403:1: ( rule__Check__Group__2__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4404:2: rule__Check__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Check__Group__2__Impl_in_rule__Check__Group__28627);
+            pushFollow(FOLLOW_rule__Check__Group__2__Impl_in_rule__Check__Group__29033);
             rule__Check__Group__2__Impl();
 
             state._fsp--;
@@ -11693,20 +12218,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Check__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4207:1: rule__Check__Group__2__Impl : ( ');' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4410:1: rule__Check__Group__2__Impl : ( ');' ) ;
     public final void rule__Check__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4211:1: ( ( ');' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4212:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4414:1: ( ( ');' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4415:1: ( ');' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4212:1: ( ');' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4213:1: ');'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4415:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4416:1: ');'
             {
              before(grammarAccess.getCheckAccess().getRightParenthesisSemicolonKeyword_2()); 
-            match(input,53,FOLLOW_53_in_rule__Check__Group__2__Impl8655); 
+            match(input,58,FOLLOW_58_in_rule__Check__Group__2__Impl9061); 
              after(grammarAccess.getCheckAccess().getRightParenthesisSemicolonKeyword_2()); 
 
             }
@@ -11730,21 +12255,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Fill__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4232:1: rule__Fill__Group__0 : rule__Fill__Group__0__Impl rule__Fill__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4435:1: rule__Fill__Group__0 : rule__Fill__Group__0__Impl rule__Fill__Group__1 ;
     public final void rule__Fill__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4236:1: ( rule__Fill__Group__0__Impl rule__Fill__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4237:2: rule__Fill__Group__0__Impl rule__Fill__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4439:1: ( rule__Fill__Group__0__Impl rule__Fill__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4440:2: rule__Fill__Group__0__Impl rule__Fill__Group__1
             {
-            pushFollow(FOLLOW_rule__Fill__Group__0__Impl_in_rule__Fill__Group__08692);
+            pushFollow(FOLLOW_rule__Fill__Group__0__Impl_in_rule__Fill__Group__09098);
             rule__Fill__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Fill__Group__1_in_rule__Fill__Group__08695);
+            pushFollow(FOLLOW_rule__Fill__Group__1_in_rule__Fill__Group__09101);
             rule__Fill__Group__1();
 
             state._fsp--;
@@ -11768,20 +12293,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Fill__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4244:1: rule__Fill__Group__0__Impl : ( 'fill(' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4447:1: rule__Fill__Group__0__Impl : ( 'fill(' ) ;
     public final void rule__Fill__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4248:1: ( ( 'fill(' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4249:1: ( 'fill(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4451:1: ( ( 'fill(' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4452:1: ( 'fill(' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4249:1: ( 'fill(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4250:1: 'fill('
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4452:1: ( 'fill(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4453:1: 'fill('
             {
              before(grammarAccess.getFillAccess().getFillKeyword_0()); 
-            match(input,55,FOLLOW_55_in_rule__Fill__Group__0__Impl8723); 
+            match(input,60,FOLLOW_60_in_rule__Fill__Group__0__Impl9129); 
              after(grammarAccess.getFillAccess().getFillKeyword_0()); 
 
             }
@@ -11805,21 +12330,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Fill__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4263:1: rule__Fill__Group__1 : rule__Fill__Group__1__Impl rule__Fill__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4466:1: rule__Fill__Group__1 : rule__Fill__Group__1__Impl rule__Fill__Group__2 ;
     public final void rule__Fill__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4267:1: ( rule__Fill__Group__1__Impl rule__Fill__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4268:2: rule__Fill__Group__1__Impl rule__Fill__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4470:1: ( rule__Fill__Group__1__Impl rule__Fill__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4471:2: rule__Fill__Group__1__Impl rule__Fill__Group__2
             {
-            pushFollow(FOLLOW_rule__Fill__Group__1__Impl_in_rule__Fill__Group__18754);
+            pushFollow(FOLLOW_rule__Fill__Group__1__Impl_in_rule__Fill__Group__19160);
             rule__Fill__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Fill__Group__2_in_rule__Fill__Group__18757);
+            pushFollow(FOLLOW_rule__Fill__Group__2_in_rule__Fill__Group__19163);
             rule__Fill__Group__2();
 
             state._fsp--;
@@ -11843,23 +12368,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Fill__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4275:1: rule__Fill__Group__1__Impl : ( ( rule__Fill__ValAssignment_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4478:1: rule__Fill__Group__1__Impl : ( ( rule__Fill__ValAssignment_1 ) ) ;
     public final void rule__Fill__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4279:1: ( ( ( rule__Fill__ValAssignment_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4280:1: ( ( rule__Fill__ValAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4482:1: ( ( ( rule__Fill__ValAssignment_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4483:1: ( ( rule__Fill__ValAssignment_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4280:1: ( ( rule__Fill__ValAssignment_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4281:1: ( rule__Fill__ValAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4483:1: ( ( rule__Fill__ValAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4484:1: ( rule__Fill__ValAssignment_1 )
             {
              before(grammarAccess.getFillAccess().getValAssignment_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4282:1: ( rule__Fill__ValAssignment_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4282:2: rule__Fill__ValAssignment_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4485:1: ( rule__Fill__ValAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4485:2: rule__Fill__ValAssignment_1
             {
-            pushFollow(FOLLOW_rule__Fill__ValAssignment_1_in_rule__Fill__Group__1__Impl8784);
+            pushFollow(FOLLOW_rule__Fill__ValAssignment_1_in_rule__Fill__Group__1__Impl9190);
             rule__Fill__ValAssignment_1();
 
             state._fsp--;
@@ -11890,21 +12415,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Fill__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4292:1: rule__Fill__Group__2 : rule__Fill__Group__2__Impl rule__Fill__Group__3 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4495:1: rule__Fill__Group__2 : rule__Fill__Group__2__Impl rule__Fill__Group__3 ;
     public final void rule__Fill__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4296:1: ( rule__Fill__Group__2__Impl rule__Fill__Group__3 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4297:2: rule__Fill__Group__2__Impl rule__Fill__Group__3
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4499:1: ( rule__Fill__Group__2__Impl rule__Fill__Group__3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4500:2: rule__Fill__Group__2__Impl rule__Fill__Group__3
             {
-            pushFollow(FOLLOW_rule__Fill__Group__2__Impl_in_rule__Fill__Group__28814);
+            pushFollow(FOLLOW_rule__Fill__Group__2__Impl_in_rule__Fill__Group__29220);
             rule__Fill__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Fill__Group__3_in_rule__Fill__Group__28817);
+            pushFollow(FOLLOW_rule__Fill__Group__3_in_rule__Fill__Group__29223);
             rule__Fill__Group__3();
 
             state._fsp--;
@@ -11928,20 +12453,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Fill__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4304:1: rule__Fill__Group__2__Impl : ( ', value=' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4507:1: rule__Fill__Group__2__Impl : ( ', value=' ) ;
     public final void rule__Fill__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4308:1: ( ( ', value=' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4309:1: ( ', value=' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4511:1: ( ( ', value=' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4512:1: ( ', value=' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4309:1: ( ', value=' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4310:1: ', value='
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4512:1: ( ', value=' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4513:1: ', value='
             {
              before(grammarAccess.getFillAccess().getValueKeyword_2()); 
-            match(input,56,FOLLOW_56_in_rule__Fill__Group__2__Impl8845); 
+            match(input,61,FOLLOW_61_in_rule__Fill__Group__2__Impl9251); 
              after(grammarAccess.getFillAccess().getValueKeyword_2()); 
 
             }
@@ -11965,21 +12490,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Fill__Group__3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4323:1: rule__Fill__Group__3 : rule__Fill__Group__3__Impl rule__Fill__Group__4 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4526:1: rule__Fill__Group__3 : rule__Fill__Group__3__Impl rule__Fill__Group__4 ;
     public final void rule__Fill__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4327:1: ( rule__Fill__Group__3__Impl rule__Fill__Group__4 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4328:2: rule__Fill__Group__3__Impl rule__Fill__Group__4
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4530:1: ( rule__Fill__Group__3__Impl rule__Fill__Group__4 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4531:2: rule__Fill__Group__3__Impl rule__Fill__Group__4
             {
-            pushFollow(FOLLOW_rule__Fill__Group__3__Impl_in_rule__Fill__Group__38876);
+            pushFollow(FOLLOW_rule__Fill__Group__3__Impl_in_rule__Fill__Group__39282);
             rule__Fill__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Fill__Group__4_in_rule__Fill__Group__38879);
+            pushFollow(FOLLOW_rule__Fill__Group__4_in_rule__Fill__Group__39285);
             rule__Fill__Group__4();
 
             state._fsp--;
@@ -12003,20 +12528,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Fill__Group__3__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4335:1: rule__Fill__Group__3__Impl : ( RULE_STRING ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4538:1: rule__Fill__Group__3__Impl : ( RULE_STRING ) ;
     public final void rule__Fill__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4339:1: ( ( RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4340:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4542:1: ( ( RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4543:1: ( RULE_STRING )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4340:1: ( RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4341:1: RULE_STRING
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4543:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4544:1: RULE_STRING
             {
              before(grammarAccess.getFillAccess().getSTRINGTerminalRuleCall_3()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Fill__Group__3__Impl8906); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Fill__Group__3__Impl9312); 
              after(grammarAccess.getFillAccess().getSTRINGTerminalRuleCall_3()); 
 
             }
@@ -12040,16 +12565,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Fill__Group__4"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4352:1: rule__Fill__Group__4 : rule__Fill__Group__4__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4555:1: rule__Fill__Group__4 : rule__Fill__Group__4__Impl ;
     public final void rule__Fill__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4356:1: ( rule__Fill__Group__4__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4357:2: rule__Fill__Group__4__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4559:1: ( rule__Fill__Group__4__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4560:2: rule__Fill__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Fill__Group__4__Impl_in_rule__Fill__Group__48935);
+            pushFollow(FOLLOW_rule__Fill__Group__4__Impl_in_rule__Fill__Group__49341);
             rule__Fill__Group__4__Impl();
 
             state._fsp--;
@@ -12073,20 +12598,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Fill__Group__4__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4363:1: rule__Fill__Group__4__Impl : ( ');' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4566:1: rule__Fill__Group__4__Impl : ( ');' ) ;
     public final void rule__Fill__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4367:1: ( ( ');' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4368:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4570:1: ( ( ');' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4571:1: ( ');' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4368:1: ( ');' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4369:1: ');'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4571:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4572:1: ');'
             {
              before(grammarAccess.getFillAccess().getRightParenthesisSemicolonKeyword_4()); 
-            match(input,53,FOLLOW_53_in_rule__Fill__Group__4__Impl8963); 
+            match(input,58,FOLLOW_58_in_rule__Fill__Group__4__Impl9369); 
              after(grammarAccess.getFillAccess().getRightParenthesisSemicolonKeyword_4()); 
 
             }
@@ -12110,21 +12635,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Clear__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4392:1: rule__Clear__Group__0 : rule__Clear__Group__0__Impl rule__Clear__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4595:1: rule__Clear__Group__0 : rule__Clear__Group__0__Impl rule__Clear__Group__1 ;
     public final void rule__Clear__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4396:1: ( rule__Clear__Group__0__Impl rule__Clear__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4397:2: rule__Clear__Group__0__Impl rule__Clear__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4599:1: ( rule__Clear__Group__0__Impl rule__Clear__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4600:2: rule__Clear__Group__0__Impl rule__Clear__Group__1
             {
-            pushFollow(FOLLOW_rule__Clear__Group__0__Impl_in_rule__Clear__Group__09004);
+            pushFollow(FOLLOW_rule__Clear__Group__0__Impl_in_rule__Clear__Group__09410);
             rule__Clear__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Clear__Group__1_in_rule__Clear__Group__09007);
+            pushFollow(FOLLOW_rule__Clear__Group__1_in_rule__Clear__Group__09413);
             rule__Clear__Group__1();
 
             state._fsp--;
@@ -12148,20 +12673,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Clear__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4404:1: rule__Clear__Group__0__Impl : ( 'clear(' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4607:1: rule__Clear__Group__0__Impl : ( 'clear(' ) ;
     public final void rule__Clear__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4408:1: ( ( 'clear(' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4409:1: ( 'clear(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4611:1: ( ( 'clear(' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4612:1: ( 'clear(' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4409:1: ( 'clear(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4410:1: 'clear('
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4612:1: ( 'clear(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4613:1: 'clear('
             {
              before(grammarAccess.getClearAccess().getClearKeyword_0()); 
-            match(input,57,FOLLOW_57_in_rule__Clear__Group__0__Impl9035); 
+            match(input,62,FOLLOW_62_in_rule__Clear__Group__0__Impl9441); 
              after(grammarAccess.getClearAccess().getClearKeyword_0()); 
 
             }
@@ -12185,21 +12710,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Clear__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4423:1: rule__Clear__Group__1 : rule__Clear__Group__1__Impl rule__Clear__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4626:1: rule__Clear__Group__1 : rule__Clear__Group__1__Impl rule__Clear__Group__2 ;
     public final void rule__Clear__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4427:1: ( rule__Clear__Group__1__Impl rule__Clear__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4428:2: rule__Clear__Group__1__Impl rule__Clear__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4630:1: ( rule__Clear__Group__1__Impl rule__Clear__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4631:2: rule__Clear__Group__1__Impl rule__Clear__Group__2
             {
-            pushFollow(FOLLOW_rule__Clear__Group__1__Impl_in_rule__Clear__Group__19066);
+            pushFollow(FOLLOW_rule__Clear__Group__1__Impl_in_rule__Clear__Group__19472);
             rule__Clear__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Clear__Group__2_in_rule__Clear__Group__19069);
+            pushFollow(FOLLOW_rule__Clear__Group__2_in_rule__Clear__Group__19475);
             rule__Clear__Group__2();
 
             state._fsp--;
@@ -12223,23 +12748,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Clear__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4435:1: rule__Clear__Group__1__Impl : ( ( rule__Clear__Alternatives_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4638:1: rule__Clear__Group__1__Impl : ( ( rule__Clear__Alternatives_1 ) ) ;
     public final void rule__Clear__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4439:1: ( ( ( rule__Clear__Alternatives_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4440:1: ( ( rule__Clear__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4642:1: ( ( ( rule__Clear__Alternatives_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4643:1: ( ( rule__Clear__Alternatives_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4440:1: ( ( rule__Clear__Alternatives_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4441:1: ( rule__Clear__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4643:1: ( ( rule__Clear__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4644:1: ( rule__Clear__Alternatives_1 )
             {
              before(grammarAccess.getClearAccess().getAlternatives_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4442:1: ( rule__Clear__Alternatives_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4442:2: rule__Clear__Alternatives_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4645:1: ( rule__Clear__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4645:2: rule__Clear__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__Clear__Alternatives_1_in_rule__Clear__Group__1__Impl9096);
+            pushFollow(FOLLOW_rule__Clear__Alternatives_1_in_rule__Clear__Group__1__Impl9502);
             rule__Clear__Alternatives_1();
 
             state._fsp--;
@@ -12270,16 +12795,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Clear__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4452:1: rule__Clear__Group__2 : rule__Clear__Group__2__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4655:1: rule__Clear__Group__2 : rule__Clear__Group__2__Impl ;
     public final void rule__Clear__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4456:1: ( rule__Clear__Group__2__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4457:2: rule__Clear__Group__2__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4659:1: ( rule__Clear__Group__2__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4660:2: rule__Clear__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Clear__Group__2__Impl_in_rule__Clear__Group__29126);
+            pushFollow(FOLLOW_rule__Clear__Group__2__Impl_in_rule__Clear__Group__29532);
             rule__Clear__Group__2__Impl();
 
             state._fsp--;
@@ -12303,20 +12828,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Clear__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4463:1: rule__Clear__Group__2__Impl : ( ');' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4666:1: rule__Clear__Group__2__Impl : ( ');' ) ;
     public final void rule__Clear__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4467:1: ( ( ');' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4468:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4670:1: ( ( ');' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4671:1: ( ');' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4468:1: ( ');' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4469:1: ');'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4671:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4672:1: ');'
             {
              before(grammarAccess.getClearAccess().getRightParenthesisSemicolonKeyword_2()); 
-            match(input,53,FOLLOW_53_in_rule__Clear__Group__2__Impl9154); 
+            match(input,58,FOLLOW_58_in_rule__Clear__Group__2__Impl9560); 
              after(grammarAccess.getClearAccess().getRightParenthesisSemicolonKeyword_2()); 
 
             }
@@ -12340,21 +12865,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Verify__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4488:1: rule__Verify__Group__0 : rule__Verify__Group__0__Impl rule__Verify__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4691:1: rule__Verify__Group__0 : rule__Verify__Group__0__Impl rule__Verify__Group__1 ;
     public final void rule__Verify__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4492:1: ( rule__Verify__Group__0__Impl rule__Verify__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4493:2: rule__Verify__Group__0__Impl rule__Verify__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4695:1: ( rule__Verify__Group__0__Impl rule__Verify__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4696:2: rule__Verify__Group__0__Impl rule__Verify__Group__1
             {
-            pushFollow(FOLLOW_rule__Verify__Group__0__Impl_in_rule__Verify__Group__09191);
+            pushFollow(FOLLOW_rule__Verify__Group__0__Impl_in_rule__Verify__Group__09597);
             rule__Verify__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Verify__Group__1_in_rule__Verify__Group__09194);
+            pushFollow(FOLLOW_rule__Verify__Group__1_in_rule__Verify__Group__09600);
             rule__Verify__Group__1();
 
             state._fsp--;
@@ -12378,20 +12903,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Verify__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4500:1: rule__Verify__Group__0__Impl : ( 'verify(' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4703:1: rule__Verify__Group__0__Impl : ( 'verify(' ) ;
     public final void rule__Verify__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4504:1: ( ( 'verify(' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4505:1: ( 'verify(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4707:1: ( ( 'verify(' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4708:1: ( 'verify(' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4505:1: ( 'verify(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4506:1: 'verify('
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4708:1: ( 'verify(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4709:1: 'verify('
             {
              before(grammarAccess.getVerifyAccess().getVerifyKeyword_0()); 
-            match(input,58,FOLLOW_58_in_rule__Verify__Group__0__Impl9222); 
+            match(input,63,FOLLOW_63_in_rule__Verify__Group__0__Impl9628); 
              after(grammarAccess.getVerifyAccess().getVerifyKeyword_0()); 
 
             }
@@ -12415,21 +12940,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Verify__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4519:1: rule__Verify__Group__1 : rule__Verify__Group__1__Impl rule__Verify__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4722:1: rule__Verify__Group__1 : rule__Verify__Group__1__Impl rule__Verify__Group__2 ;
     public final void rule__Verify__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4523:1: ( rule__Verify__Group__1__Impl rule__Verify__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4524:2: rule__Verify__Group__1__Impl rule__Verify__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4726:1: ( rule__Verify__Group__1__Impl rule__Verify__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4727:2: rule__Verify__Group__1__Impl rule__Verify__Group__2
             {
-            pushFollow(FOLLOW_rule__Verify__Group__1__Impl_in_rule__Verify__Group__19253);
+            pushFollow(FOLLOW_rule__Verify__Group__1__Impl_in_rule__Verify__Group__19659);
             rule__Verify__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Verify__Group__2_in_rule__Verify__Group__19256);
+            pushFollow(FOLLOW_rule__Verify__Group__2_in_rule__Verify__Group__19662);
             rule__Verify__Group__2();
 
             state._fsp--;
@@ -12453,23 +12978,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Verify__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4531:1: rule__Verify__Group__1__Impl : ( ( rule__Verify__Alternatives_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4734:1: rule__Verify__Group__1__Impl : ( ( rule__Verify__Alternatives_1 ) ) ;
     public final void rule__Verify__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4535:1: ( ( ( rule__Verify__Alternatives_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4536:1: ( ( rule__Verify__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4738:1: ( ( ( rule__Verify__Alternatives_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4739:1: ( ( rule__Verify__Alternatives_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4536:1: ( ( rule__Verify__Alternatives_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4537:1: ( rule__Verify__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4739:1: ( ( rule__Verify__Alternatives_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4740:1: ( rule__Verify__Alternatives_1 )
             {
              before(grammarAccess.getVerifyAccess().getAlternatives_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4538:1: ( rule__Verify__Alternatives_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4538:2: rule__Verify__Alternatives_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4741:1: ( rule__Verify__Alternatives_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4741:2: rule__Verify__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__Verify__Alternatives_1_in_rule__Verify__Group__1__Impl9283);
+            pushFollow(FOLLOW_rule__Verify__Alternatives_1_in_rule__Verify__Group__1__Impl9689);
             rule__Verify__Alternatives_1();
 
             state._fsp--;
@@ -12500,21 +13025,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Verify__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4548:1: rule__Verify__Group__2 : rule__Verify__Group__2__Impl rule__Verify__Group__3 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4751:1: rule__Verify__Group__2 : rule__Verify__Group__2__Impl rule__Verify__Group__3 ;
     public final void rule__Verify__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4552:1: ( rule__Verify__Group__2__Impl rule__Verify__Group__3 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4553:2: rule__Verify__Group__2__Impl rule__Verify__Group__3
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4755:1: ( rule__Verify__Group__2__Impl rule__Verify__Group__3 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4756:2: rule__Verify__Group__2__Impl rule__Verify__Group__3
             {
-            pushFollow(FOLLOW_rule__Verify__Group__2__Impl_in_rule__Verify__Group__29313);
+            pushFollow(FOLLOW_rule__Verify__Group__2__Impl_in_rule__Verify__Group__29719);
             rule__Verify__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Verify__Group__3_in_rule__Verify__Group__29316);
+            pushFollow(FOLLOW_rule__Verify__Group__3_in_rule__Verify__Group__29722);
             rule__Verify__Group__3();
 
             state._fsp--;
@@ -12538,20 +13063,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Verify__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4560:1: rule__Verify__Group__2__Impl : ( ', value=' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4763:1: rule__Verify__Group__2__Impl : ( ', value=' ) ;
     public final void rule__Verify__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4564:1: ( ( ', value=' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4565:1: ( ', value=' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4767:1: ( ( ', value=' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4768:1: ( ', value=' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4565:1: ( ', value=' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4566:1: ', value='
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4768:1: ( ', value=' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4769:1: ', value='
             {
              before(grammarAccess.getVerifyAccess().getValueKeyword_2()); 
-            match(input,56,FOLLOW_56_in_rule__Verify__Group__2__Impl9344); 
+            match(input,61,FOLLOW_61_in_rule__Verify__Group__2__Impl9750); 
              after(grammarAccess.getVerifyAccess().getValueKeyword_2()); 
 
             }
@@ -12575,21 +13100,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Verify__Group__3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4579:1: rule__Verify__Group__3 : rule__Verify__Group__3__Impl rule__Verify__Group__4 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4782:1: rule__Verify__Group__3 : rule__Verify__Group__3__Impl rule__Verify__Group__4 ;
     public final void rule__Verify__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4583:1: ( rule__Verify__Group__3__Impl rule__Verify__Group__4 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4584:2: rule__Verify__Group__3__Impl rule__Verify__Group__4
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4786:1: ( rule__Verify__Group__3__Impl rule__Verify__Group__4 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4787:2: rule__Verify__Group__3__Impl rule__Verify__Group__4
             {
-            pushFollow(FOLLOW_rule__Verify__Group__3__Impl_in_rule__Verify__Group__39375);
+            pushFollow(FOLLOW_rule__Verify__Group__3__Impl_in_rule__Verify__Group__39781);
             rule__Verify__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Verify__Group__4_in_rule__Verify__Group__39378);
+            pushFollow(FOLLOW_rule__Verify__Group__4_in_rule__Verify__Group__39784);
             rule__Verify__Group__4();
 
             state._fsp--;
@@ -12613,20 +13138,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Verify__Group__3__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4591:1: rule__Verify__Group__3__Impl : ( RULE_STRING ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4794:1: rule__Verify__Group__3__Impl : ( RULE_STRING ) ;
     public final void rule__Verify__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4595:1: ( ( RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4596:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4798:1: ( ( RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4799:1: ( RULE_STRING )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4596:1: ( RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4597:1: RULE_STRING
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4799:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4800:1: RULE_STRING
             {
              before(grammarAccess.getVerifyAccess().getSTRINGTerminalRuleCall_3()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Verify__Group__3__Impl9405); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Verify__Group__3__Impl9811); 
              after(grammarAccess.getVerifyAccess().getSTRINGTerminalRuleCall_3()); 
 
             }
@@ -12650,16 +13175,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Verify__Group__4"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4608:1: rule__Verify__Group__4 : rule__Verify__Group__4__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4811:1: rule__Verify__Group__4 : rule__Verify__Group__4__Impl ;
     public final void rule__Verify__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4612:1: ( rule__Verify__Group__4__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4613:2: rule__Verify__Group__4__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4815:1: ( rule__Verify__Group__4__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4816:2: rule__Verify__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Verify__Group__4__Impl_in_rule__Verify__Group__49434);
+            pushFollow(FOLLOW_rule__Verify__Group__4__Impl_in_rule__Verify__Group__49840);
             rule__Verify__Group__4__Impl();
 
             state._fsp--;
@@ -12683,20 +13208,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Verify__Group__4__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4619:1: rule__Verify__Group__4__Impl : ( ');' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4822:1: rule__Verify__Group__4__Impl : ( ');' ) ;
     public final void rule__Verify__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4623:1: ( ( ');' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4624:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4826:1: ( ( ');' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4827:1: ( ');' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4624:1: ( ');' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4625:1: ');'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4827:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4828:1: ');'
             {
              before(grammarAccess.getVerifyAccess().getRightParenthesisSemicolonKeyword_4()); 
-            match(input,53,FOLLOW_53_in_rule__Verify__Group__4__Impl9462); 
+            match(input,58,FOLLOW_58_in_rule__Verify__Group__4__Impl9868); 
              after(grammarAccess.getVerifyAccess().getRightParenthesisSemicolonKeyword_4()); 
 
             }
@@ -12720,21 +13245,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Exist__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4648:1: rule__Exist__Group__0 : rule__Exist__Group__0__Impl rule__Exist__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4851:1: rule__Exist__Group__0 : rule__Exist__Group__0__Impl rule__Exist__Group__1 ;
     public final void rule__Exist__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4652:1: ( rule__Exist__Group__0__Impl rule__Exist__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4653:2: rule__Exist__Group__0__Impl rule__Exist__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4855:1: ( rule__Exist__Group__0__Impl rule__Exist__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4856:2: rule__Exist__Group__0__Impl rule__Exist__Group__1
             {
-            pushFollow(FOLLOW_rule__Exist__Group__0__Impl_in_rule__Exist__Group__09503);
+            pushFollow(FOLLOW_rule__Exist__Group__0__Impl_in_rule__Exist__Group__09909);
             rule__Exist__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Exist__Group__1_in_rule__Exist__Group__09506);
+            pushFollow(FOLLOW_rule__Exist__Group__1_in_rule__Exist__Group__09912);
             rule__Exist__Group__1();
 
             state._fsp--;
@@ -12758,20 +13283,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Exist__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4660:1: rule__Exist__Group__0__Impl : ( 'exist(' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4863:1: rule__Exist__Group__0__Impl : ( 'exist(' ) ;
     public final void rule__Exist__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4664:1: ( ( 'exist(' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4665:1: ( 'exist(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4867:1: ( ( 'exist(' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4868:1: ( 'exist(' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4665:1: ( 'exist(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4666:1: 'exist('
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4868:1: ( 'exist(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4869:1: 'exist('
             {
              before(grammarAccess.getExistAccess().getExistKeyword_0()); 
-            match(input,59,FOLLOW_59_in_rule__Exist__Group__0__Impl9534); 
+            match(input,64,FOLLOW_64_in_rule__Exist__Group__0__Impl9940); 
              after(grammarAccess.getExistAccess().getExistKeyword_0()); 
 
             }
@@ -12795,21 +13320,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Exist__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4679:1: rule__Exist__Group__1 : rule__Exist__Group__1__Impl rule__Exist__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4882:1: rule__Exist__Group__1 : rule__Exist__Group__1__Impl rule__Exist__Group__2 ;
     public final void rule__Exist__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4683:1: ( rule__Exist__Group__1__Impl rule__Exist__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4684:2: rule__Exist__Group__1__Impl rule__Exist__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4886:1: ( rule__Exist__Group__1__Impl rule__Exist__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4887:2: rule__Exist__Group__1__Impl rule__Exist__Group__2
             {
-            pushFollow(FOLLOW_rule__Exist__Group__1__Impl_in_rule__Exist__Group__19565);
+            pushFollow(FOLLOW_rule__Exist__Group__1__Impl_in_rule__Exist__Group__19971);
             rule__Exist__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Exist__Group__2_in_rule__Exist__Group__19568);
+            pushFollow(FOLLOW_rule__Exist__Group__2_in_rule__Exist__Group__19974);
             rule__Exist__Group__2();
 
             state._fsp--;
@@ -12833,23 +13358,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Exist__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4691:1: rule__Exist__Group__1__Impl : ( ( rule__Exist__ValAssignment_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4894:1: rule__Exist__Group__1__Impl : ( ( rule__Exist__ValAssignment_1 ) ) ;
     public final void rule__Exist__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4695:1: ( ( ( rule__Exist__ValAssignment_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4696:1: ( ( rule__Exist__ValAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4898:1: ( ( ( rule__Exist__ValAssignment_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4899:1: ( ( rule__Exist__ValAssignment_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4696:1: ( ( rule__Exist__ValAssignment_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4697:1: ( rule__Exist__ValAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4899:1: ( ( rule__Exist__ValAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4900:1: ( rule__Exist__ValAssignment_1 )
             {
              before(grammarAccess.getExistAccess().getValAssignment_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4698:1: ( rule__Exist__ValAssignment_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4698:2: rule__Exist__ValAssignment_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4901:1: ( rule__Exist__ValAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4901:2: rule__Exist__ValAssignment_1
             {
-            pushFollow(FOLLOW_rule__Exist__ValAssignment_1_in_rule__Exist__Group__1__Impl9595);
+            pushFollow(FOLLOW_rule__Exist__ValAssignment_1_in_rule__Exist__Group__1__Impl10001);
             rule__Exist__ValAssignment_1();
 
             state._fsp--;
@@ -12880,16 +13405,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Exist__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4708:1: rule__Exist__Group__2 : rule__Exist__Group__2__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4911:1: rule__Exist__Group__2 : rule__Exist__Group__2__Impl ;
     public final void rule__Exist__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4712:1: ( rule__Exist__Group__2__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4713:2: rule__Exist__Group__2__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4915:1: ( rule__Exist__Group__2__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4916:2: rule__Exist__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Exist__Group__2__Impl_in_rule__Exist__Group__29625);
+            pushFollow(FOLLOW_rule__Exist__Group__2__Impl_in_rule__Exist__Group__210031);
             rule__Exist__Group__2__Impl();
 
             state._fsp--;
@@ -12913,20 +13438,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Exist__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4719:1: rule__Exist__Group__2__Impl : ( ');' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4922:1: rule__Exist__Group__2__Impl : ( ');' ) ;
     public final void rule__Exist__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4723:1: ( ( ');' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4724:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4926:1: ( ( ');' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4927:1: ( ');' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4724:1: ( ');' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4725:1: ');'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4927:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4928:1: ');'
             {
              before(grammarAccess.getExistAccess().getRightParenthesisSemicolonKeyword_2()); 
-            match(input,53,FOLLOW_53_in_rule__Exist__Group__2__Impl9653); 
+            match(input,58,FOLLOW_58_in_rule__Exist__Group__2__Impl10059); 
              after(grammarAccess.getExistAccess().getRightParenthesisSemicolonKeyword_2()); 
 
             }
@@ -12950,21 +13475,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__GoTo__Group__0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4744:1: rule__GoTo__Group__0 : rule__GoTo__Group__0__Impl rule__GoTo__Group__1 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4947:1: rule__GoTo__Group__0 : rule__GoTo__Group__0__Impl rule__GoTo__Group__1 ;
     public final void rule__GoTo__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4748:1: ( rule__GoTo__Group__0__Impl rule__GoTo__Group__1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4749:2: rule__GoTo__Group__0__Impl rule__GoTo__Group__1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4951:1: ( rule__GoTo__Group__0__Impl rule__GoTo__Group__1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4952:2: rule__GoTo__Group__0__Impl rule__GoTo__Group__1
             {
-            pushFollow(FOLLOW_rule__GoTo__Group__0__Impl_in_rule__GoTo__Group__09690);
+            pushFollow(FOLLOW_rule__GoTo__Group__0__Impl_in_rule__GoTo__Group__010096);
             rule__GoTo__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GoTo__Group__1_in_rule__GoTo__Group__09693);
+            pushFollow(FOLLOW_rule__GoTo__Group__1_in_rule__GoTo__Group__010099);
             rule__GoTo__Group__1();
 
             state._fsp--;
@@ -12988,20 +13513,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__GoTo__Group__0__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4756:1: rule__GoTo__Group__0__Impl : ( 'goTo(' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4959:1: rule__GoTo__Group__0__Impl : ( 'goTo(' ) ;
     public final void rule__GoTo__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4760:1: ( ( 'goTo(' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4761:1: ( 'goTo(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4963:1: ( ( 'goTo(' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4964:1: ( 'goTo(' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4761:1: ( 'goTo(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4762:1: 'goTo('
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4964:1: ( 'goTo(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4965:1: 'goTo('
             {
              before(grammarAccess.getGoToAccess().getGoToKeyword_0()); 
-            match(input,60,FOLLOW_60_in_rule__GoTo__Group__0__Impl9721); 
+            match(input,65,FOLLOW_65_in_rule__GoTo__Group__0__Impl10127); 
              after(grammarAccess.getGoToAccess().getGoToKeyword_0()); 
 
             }
@@ -13025,21 +13550,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__GoTo__Group__1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4775:1: rule__GoTo__Group__1 : rule__GoTo__Group__1__Impl rule__GoTo__Group__2 ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4978:1: rule__GoTo__Group__1 : rule__GoTo__Group__1__Impl rule__GoTo__Group__2 ;
     public final void rule__GoTo__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4779:1: ( rule__GoTo__Group__1__Impl rule__GoTo__Group__2 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4780:2: rule__GoTo__Group__1__Impl rule__GoTo__Group__2
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4982:1: ( rule__GoTo__Group__1__Impl rule__GoTo__Group__2 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4983:2: rule__GoTo__Group__1__Impl rule__GoTo__Group__2
             {
-            pushFollow(FOLLOW_rule__GoTo__Group__1__Impl_in_rule__GoTo__Group__19752);
+            pushFollow(FOLLOW_rule__GoTo__Group__1__Impl_in_rule__GoTo__Group__110158);
             rule__GoTo__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GoTo__Group__2_in_rule__GoTo__Group__19755);
+            pushFollow(FOLLOW_rule__GoTo__Group__2_in_rule__GoTo__Group__110161);
             rule__GoTo__Group__2();
 
             state._fsp--;
@@ -13063,23 +13588,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__GoTo__Group__1__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4787:1: rule__GoTo__Group__1__Impl : ( ( rule__GoTo__UrlAssignment_1 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4990:1: rule__GoTo__Group__1__Impl : ( ( rule__GoTo__UrlAssignment_1 ) ) ;
     public final void rule__GoTo__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4791:1: ( ( ( rule__GoTo__UrlAssignment_1 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4792:1: ( ( rule__GoTo__UrlAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4994:1: ( ( ( rule__GoTo__UrlAssignment_1 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4995:1: ( ( rule__GoTo__UrlAssignment_1 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4792:1: ( ( rule__GoTo__UrlAssignment_1 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4793:1: ( rule__GoTo__UrlAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4995:1: ( ( rule__GoTo__UrlAssignment_1 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4996:1: ( rule__GoTo__UrlAssignment_1 )
             {
              before(grammarAccess.getGoToAccess().getUrlAssignment_1()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4794:1: ( rule__GoTo__UrlAssignment_1 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4794:2: rule__GoTo__UrlAssignment_1
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4997:1: ( rule__GoTo__UrlAssignment_1 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4997:2: rule__GoTo__UrlAssignment_1
             {
-            pushFollow(FOLLOW_rule__GoTo__UrlAssignment_1_in_rule__GoTo__Group__1__Impl9782);
+            pushFollow(FOLLOW_rule__GoTo__UrlAssignment_1_in_rule__GoTo__Group__1__Impl10188);
             rule__GoTo__UrlAssignment_1();
 
             state._fsp--;
@@ -13110,16 +13635,16 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__GoTo__Group__2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4804:1: rule__GoTo__Group__2 : rule__GoTo__Group__2__Impl ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5007:1: rule__GoTo__Group__2 : rule__GoTo__Group__2__Impl ;
     public final void rule__GoTo__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4808:1: ( rule__GoTo__Group__2__Impl )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4809:2: rule__GoTo__Group__2__Impl
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5011:1: ( rule__GoTo__Group__2__Impl )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5012:2: rule__GoTo__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__GoTo__Group__2__Impl_in_rule__GoTo__Group__29812);
+            pushFollow(FOLLOW_rule__GoTo__Group__2__Impl_in_rule__GoTo__Group__210218);
             rule__GoTo__Group__2__Impl();
 
             state._fsp--;
@@ -13143,20 +13668,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__GoTo__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4815:1: rule__GoTo__Group__2__Impl : ( ');' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5018:1: rule__GoTo__Group__2__Impl : ( ');' ) ;
     public final void rule__GoTo__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4819:1: ( ( ');' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4820:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5022:1: ( ( ');' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5023:1: ( ');' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4820:1: ( ');' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4821:1: ');'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5023:1: ( ');' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5024:1: ');'
             {
              before(grammarAccess.getGoToAccess().getRightParenthesisSemicolonKeyword_2()); 
-            match(input,53,FOLLOW_53_in_rule__GoTo__Group__2__Impl9840); 
+            match(input,58,FOLLOW_58_in_rule__GoTo__Group__2__Impl10246); 
              after(grammarAccess.getGoToAccess().getRightParenthesisSemicolonKeyword_2()); 
 
             }
@@ -13180,20 +13705,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__SubAssignment_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4841:1: rule__Program__SubAssignment_0 : ( ruleSubroutine ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5044:1: rule__Program__SubAssignment_0 : ( ruleSubroutine ) ;
     public final void rule__Program__SubAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4845:1: ( ( ruleSubroutine ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4846:1: ( ruleSubroutine )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5048:1: ( ( ruleSubroutine ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5049:1: ( ruleSubroutine )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4846:1: ( ruleSubroutine )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4847:1: ruleSubroutine
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5049:1: ( ruleSubroutine )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5050:1: ruleSubroutine
             {
              before(grammarAccess.getProgramAccess().getSubSubroutineParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleSubroutine_in_rule__Program__SubAssignment_09882);
+            pushFollow(FOLLOW_ruleSubroutine_in_rule__Program__SubAssignment_010288);
             ruleSubroutine();
 
             state._fsp--;
@@ -13221,20 +13746,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Program__MainAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4856:1: rule__Program__MainAssignment_1 : ( ruleMain ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5059:1: rule__Program__MainAssignment_1 : ( ruleMain ) ;
     public final void rule__Program__MainAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4860:1: ( ( ruleMain ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4861:1: ( ruleMain )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5063:1: ( ( ruleMain ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5064:1: ( ruleMain )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4861:1: ( ruleMain )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4862:1: ruleMain
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5064:1: ( ruleMain )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5065:1: ruleMain
             {
              before(grammarAccess.getProgramAccess().getMainMainParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleMain_in_rule__Program__MainAssignment_19913);
+            pushFollow(FOLLOW_ruleMain_in_rule__Program__MainAssignment_110319);
             ruleMain();
 
             state._fsp--;
@@ -13262,20 +13787,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Subroutine__HeadAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4871:1: rule__Subroutine__HeadAssignment_1 : ( ruleHead ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5074:1: rule__Subroutine__HeadAssignment_1 : ( ruleHead ) ;
     public final void rule__Subroutine__HeadAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4875:1: ( ( ruleHead ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4876:1: ( ruleHead )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5078:1: ( ( ruleHead ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5079:1: ( ruleHead )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4876:1: ( ruleHead )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:1: ruleHead
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5079:1: ( ruleHead )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5080:1: ruleHead
             {
              before(grammarAccess.getSubroutineAccess().getHeadHeadParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleHead_in_rule__Subroutine__HeadAssignment_19944);
+            pushFollow(FOLLOW_ruleHead_in_rule__Subroutine__HeadAssignment_110350);
             ruleHead();
 
             state._fsp--;
@@ -13303,20 +13828,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Subroutine__BodyAssignment_2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4886:1: rule__Subroutine__BodyAssignment_2 : ( ruleBody ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5089:1: rule__Subroutine__BodyAssignment_2 : ( ruleBody ) ;
     public final void rule__Subroutine__BodyAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4890:1: ( ( ruleBody ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4891:1: ( ruleBody )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5093:1: ( ( ruleBody ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5094:1: ( ruleBody )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4891:1: ( ruleBody )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4892:1: ruleBody
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5094:1: ( ruleBody )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5095:1: ruleBody
             {
              before(grammarAccess.getSubroutineAccess().getBodyBodyParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleBody_in_rule__Subroutine__BodyAssignment_29975);
+            pushFollow(FOLLOW_ruleBody_in_rule__Subroutine__BodyAssignment_210381);
             ruleBody();
 
             state._fsp--;
@@ -13344,20 +13869,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__NameAssignment_0_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4901:1: rule__Head__NameAssignment_0_0 : ( ruleFunctionName ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5104:1: rule__Head__NameAssignment_0_0 : ( ruleFunctionName ) ;
     public final void rule__Head__NameAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4905:1: ( ( ruleFunctionName ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4906:1: ( ruleFunctionName )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5108:1: ( ( ruleFunctionName ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5109:1: ( ruleFunctionName )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4906:1: ( ruleFunctionName )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4907:1: ruleFunctionName
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5109:1: ( ruleFunctionName )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5110:1: ruleFunctionName
             {
              before(grammarAccess.getHeadAccess().getNameFunctionNameParserRuleCall_0_0_0()); 
-            pushFollow(FOLLOW_ruleFunctionName_in_rule__Head__NameAssignment_0_010006);
+            pushFollow(FOLLOW_ruleFunctionName_in_rule__Head__NameAssignment_0_010412);
             ruleFunctionName();
 
             state._fsp--;
@@ -13385,20 +13910,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__NameAssignment_1_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4916:1: rule__Head__NameAssignment_1_0 : ( ruleFunctionName ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5119:1: rule__Head__NameAssignment_1_0 : ( ruleFunctionName ) ;
     public final void rule__Head__NameAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4920:1: ( ( ruleFunctionName ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4921:1: ( ruleFunctionName )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5123:1: ( ( ruleFunctionName ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5124:1: ( ruleFunctionName )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4921:1: ( ruleFunctionName )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4922:1: ruleFunctionName
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5124:1: ( ruleFunctionName )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5125:1: ruleFunctionName
             {
              before(grammarAccess.getHeadAccess().getNameFunctionNameParserRuleCall_1_0_0()); 
-            pushFollow(FOLLOW_ruleFunctionName_in_rule__Head__NameAssignment_1_010037);
+            pushFollow(FOLLOW_ruleFunctionName_in_rule__Head__NameAssignment_1_010443);
             ruleFunctionName();
 
             state._fsp--;
@@ -13426,20 +13951,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__VarIdAssignment_1_2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4931:1: rule__Head__VarIdAssignment_1_2 : ( ruleVariableName ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5134:1: rule__Head__VarIdAssignment_1_2 : ( ruleVariableName ) ;
     public final void rule__Head__VarIdAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4935:1: ( ( ruleVariableName ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4936:1: ( ruleVariableName )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5138:1: ( ( ruleVariableName ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5139:1: ( ruleVariableName )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4936:1: ( ruleVariableName )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4937:1: ruleVariableName
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5139:1: ( ruleVariableName )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5140:1: ruleVariableName
             {
              before(grammarAccess.getHeadAccess().getVarIdVariableNameParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleVariableName_in_rule__Head__VarIdAssignment_1_210068);
+            pushFollow(FOLLOW_ruleVariableName_in_rule__Head__VarIdAssignment_1_210474);
             ruleVariableName();
 
             state._fsp--;
@@ -13467,20 +13992,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Head__VarIdAssignment_1_3_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4946:1: rule__Head__VarIdAssignment_1_3_1 : ( ruleVariableName ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5149:1: rule__Head__VarIdAssignment_1_3_1 : ( ruleVariableName ) ;
     public final void rule__Head__VarIdAssignment_1_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4950:1: ( ( ruleVariableName ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4951:1: ( ruleVariableName )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5153:1: ( ( ruleVariableName ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5154:1: ( ruleVariableName )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4951:1: ( ruleVariableName )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4952:1: ruleVariableName
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5154:1: ( ruleVariableName )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5155:1: ruleVariableName
             {
              before(grammarAccess.getHeadAccess().getVarIdVariableNameParserRuleCall_1_3_1_0()); 
-            pushFollow(FOLLOW_ruleVariableName_in_rule__Head__VarIdAssignment_1_3_110099);
+            pushFollow(FOLLOW_ruleVariableName_in_rule__Head__VarIdAssignment_1_3_110505);
             ruleVariableName();
 
             state._fsp--;
@@ -13508,24 +14033,24 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionReference__FunctionNameAssignment"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4961:1: rule__FunctionReference__FunctionNameAssignment : ( ( RULE_ID ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5164:1: rule__FunctionReference__FunctionNameAssignment : ( ( RULE_ID ) ) ;
     public final void rule__FunctionReference__FunctionNameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4965:1: ( ( ( RULE_ID ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4966:1: ( ( RULE_ID ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5168:1: ( ( ( RULE_ID ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5169:1: ( ( RULE_ID ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4966:1: ( ( RULE_ID ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4967:1: ( RULE_ID )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5169:1: ( ( RULE_ID ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5170:1: ( RULE_ID )
             {
              before(grammarAccess.getFunctionReferenceAccess().getFunctionNameFunctionNameCrossReference_0()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4968:1: ( RULE_ID )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4969:1: RULE_ID
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5171:1: ( RULE_ID )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5172:1: RULE_ID
             {
              before(grammarAccess.getFunctionReferenceAccess().getFunctionNameFunctionNameIDTerminalRuleCall_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FunctionReference__FunctionNameAssignment10134); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FunctionReference__FunctionNameAssignment10540); 
              after(grammarAccess.getFunctionReferenceAccess().getFunctionNameFunctionNameIDTerminalRuleCall_0_1()); 
 
             }
@@ -13553,24 +14078,24 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VariableReference__VarIDAssignment"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4980:1: rule__VariableReference__VarIDAssignment : ( ( RULE_ID ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5183:1: rule__VariableReference__VarIDAssignment : ( ( RULE_ID ) ) ;
     public final void rule__VariableReference__VarIDAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4984:1: ( ( ( RULE_ID ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4985:1: ( ( RULE_ID ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5187:1: ( ( ( RULE_ID ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5188:1: ( ( RULE_ID ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4985:1: ( ( RULE_ID ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4986:1: ( RULE_ID )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5188:1: ( ( RULE_ID ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5189:1: ( RULE_ID )
             {
              before(grammarAccess.getVariableReferenceAccess().getVarIDVariableNameCrossReference_0()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4987:1: ( RULE_ID )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4988:1: RULE_ID
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5190:1: ( RULE_ID )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5191:1: RULE_ID
             {
              before(grammarAccess.getVariableReferenceAccess().getVarIDVariableNameIDTerminalRuleCall_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__VariableReference__VarIDAssignment10173); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__VariableReference__VarIDAssignment10579); 
              after(grammarAccess.getVariableReferenceAccess().getVarIDVariableNameIDTerminalRuleCall_0_1()); 
 
             }
@@ -13598,20 +14123,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__VarAssignment_1_2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4999:1: rule__FunctionCall__VarAssignment_1_2 : ( ruleExpression ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5202:1: rule__FunctionCall__VarAssignment_1_2 : ( ruleExpression ) ;
     public final void rule__FunctionCall__VarAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5003:1: ( ( ruleExpression ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5004:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5206:1: ( ( ruleExpression ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5207:1: ( ruleExpression )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5004:1: ( ruleExpression )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5005:1: ruleExpression
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5207:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5208:1: ruleExpression
             {
              before(grammarAccess.getFunctionCallAccess().getVarExpressionParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__FunctionCall__VarAssignment_1_210208);
+            pushFollow(FOLLOW_ruleExpression_in_rule__FunctionCall__VarAssignment_1_210614);
             ruleExpression();
 
             state._fsp--;
@@ -13639,20 +14164,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__VarAssignment_1_3_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5014:1: rule__FunctionCall__VarAssignment_1_3_1 : ( ruleExpression ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5217:1: rule__FunctionCall__VarAssignment_1_3_1 : ( ruleExpression ) ;
     public final void rule__FunctionCall__VarAssignment_1_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5018:1: ( ( ruleExpression ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5019:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5221:1: ( ( ruleExpression ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5222:1: ( ruleExpression )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5019:1: ( ruleExpression )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5020:1: ruleExpression
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5222:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5223:1: ruleExpression
             {
              before(grammarAccess.getFunctionCallAccess().getVarExpressionParserRuleCall_1_3_1_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__FunctionCall__VarAssignment_1_3_110239);
+            pushFollow(FOLLOW_ruleExpression_in_rule__FunctionCall__VarAssignment_1_3_110645);
             ruleExpression();
 
             state._fsp--;
@@ -13680,20 +14205,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionName__NameAssignment"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5029:1: rule__FunctionName__NameAssignment : ( RULE_STRING ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5232:1: rule__FunctionName__NameAssignment : ( RULE_STRING ) ;
     public final void rule__FunctionName__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5033:1: ( ( RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5034:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5236:1: ( ( RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5237:1: ( RULE_STRING )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5034:1: ( RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5035:1: RULE_STRING
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5237:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5238:1: RULE_STRING
             {
              before(grammarAccess.getFunctionNameAccess().getNameSTRINGTerminalRuleCall_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__FunctionName__NameAssignment10270); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__FunctionName__NameAssignment10676); 
              after(grammarAccess.getFunctionNameAccess().getNameSTRINGTerminalRuleCall_0()); 
 
             }
@@ -13716,26 +14241,26 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__FunctionName__NameAssignment"
 
 
-    // $ANTLR start "rule__Body__InstructionsAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5044:1: rule__Body__InstructionsAssignment_1 : ( ruleInstruction ) ;
-    public final void rule__Body__InstructionsAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Body__OpenAssignment_2"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5247:1: rule__Body__OpenAssignment_2 : ( ruleOpenBrowser ) ;
+    public final void rule__Body__OpenAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5048:1: ( ( ruleInstruction ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5049:1: ( ruleInstruction )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5251:1: ( ( ruleOpenBrowser ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5252:1: ( ruleOpenBrowser )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5049:1: ( ruleInstruction )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5050:1: ruleInstruction
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5252:1: ( ruleOpenBrowser )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5253:1: ruleOpenBrowser
             {
-             before(grammarAccess.getBodyAccess().getInstructionsInstructionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleInstruction_in_rule__Body__InstructionsAssignment_110301);
-            ruleInstruction();
+             before(grammarAccess.getBodyAccess().getOpenOpenBrowserEnumRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleOpenBrowser_in_rule__Body__OpenAssignment_210707);
+            ruleOpenBrowser();
 
             state._fsp--;
 
-             after(grammarAccess.getBodyAccess().getInstructionsInstructionParserRuleCall_1_0()); 
+             after(grammarAccess.getBodyAccess().getOpenOpenBrowserEnumRuleCall_2_0()); 
 
             }
 
@@ -13754,29 +14279,29 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Body__InstructionsAssignment_1"
+    // $ANTLR end "rule__Body__OpenAssignment_2"
 
 
-    // $ANTLR start "rule__Body__InstructionsAssignment_2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5059:1: rule__Body__InstructionsAssignment_2 : ( ruleInstruction ) ;
-    public final void rule__Body__InstructionsAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__Body__InstructionsAssignment_4"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5262:1: rule__Body__InstructionsAssignment_4 : ( ruleInstruction ) ;
+    public final void rule__Body__InstructionsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5063:1: ( ( ruleInstruction ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5064:1: ( ruleInstruction )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5266:1: ( ( ruleInstruction ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5267:1: ( ruleInstruction )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5064:1: ( ruleInstruction )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5065:1: ruleInstruction
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5267:1: ( ruleInstruction )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5268:1: ruleInstruction
             {
-             before(grammarAccess.getBodyAccess().getInstructionsInstructionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleInstruction_in_rule__Body__InstructionsAssignment_210332);
+             before(grammarAccess.getBodyAccess().getInstructionsInstructionParserRuleCall_4_0()); 
+            pushFollow(FOLLOW_ruleInstruction_in_rule__Body__InstructionsAssignment_410738);
             ruleInstruction();
 
             state._fsp--;
 
-             after(grammarAccess.getBodyAccess().getInstructionsInstructionParserRuleCall_2_0()); 
+             after(grammarAccess.getBodyAccess().getInstructionsInstructionParserRuleCall_4_0()); 
 
             }
 
@@ -13795,24 +14320,65 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Body__InstructionsAssignment_2"
+    // $ANTLR end "rule__Body__InstructionsAssignment_4"
+
+
+    // $ANTLR start "rule__Body__InstructionsAssignment_5_1"
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5277:1: rule__Body__InstructionsAssignment_5_1 : ( ruleInstruction ) ;
+    public final void rule__Body__InstructionsAssignment_5_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5281:1: ( ( ruleInstruction ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5282:1: ( ruleInstruction )
+            {
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5282:1: ( ruleInstruction )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5283:1: ruleInstruction
+            {
+             before(grammarAccess.getBodyAccess().getInstructionsInstructionParserRuleCall_5_1_0()); 
+            pushFollow(FOLLOW_ruleInstruction_in_rule__Body__InstructionsAssignment_5_110769);
+            ruleInstruction();
+
+            state._fsp--;
+
+             after(grammarAccess.getBodyAccess().getInstructionsInstructionParserRuleCall_5_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Body__InstructionsAssignment_5_1"
 
 
     // $ANTLR start "rule__Instruction__DecAssignment_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5074:1: rule__Instruction__DecAssignment_0 : ( ruleDeclaration ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5292:1: rule__Instruction__DecAssignment_0 : ( ruleDeclaration ) ;
     public final void rule__Instruction__DecAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5078:1: ( ( ruleDeclaration ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5079:1: ( ruleDeclaration )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5296:1: ( ( ruleDeclaration ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5297:1: ( ruleDeclaration )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5079:1: ( ruleDeclaration )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5080:1: ruleDeclaration
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5297:1: ( ruleDeclaration )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5298:1: ruleDeclaration
             {
              before(grammarAccess.getInstructionAccess().getDecDeclarationParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleDeclaration_in_rule__Instruction__DecAssignment_010363);
+            pushFollow(FOLLOW_ruleDeclaration_in_rule__Instruction__DecAssignment_010800);
             ruleDeclaration();
 
             state._fsp--;
@@ -13840,20 +14406,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Instruction__CondAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5089:1: rule__Instruction__CondAssignment_1 : ( ruleCondition ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5307:1: rule__Instruction__CondAssignment_1 : ( ruleCondition ) ;
     public final void rule__Instruction__CondAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5093:1: ( ( ruleCondition ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5094:1: ( ruleCondition )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5311:1: ( ( ruleCondition ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5312:1: ( ruleCondition )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5094:1: ( ruleCondition )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5095:1: ruleCondition
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5312:1: ( ruleCondition )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5313:1: ruleCondition
             {
              before(grammarAccess.getInstructionAccess().getCondConditionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleCondition_in_rule__Instruction__CondAssignment_110394);
+            pushFollow(FOLLOW_ruleCondition_in_rule__Instruction__CondAssignment_110831);
             ruleCondition();
 
             state._fsp--;
@@ -13881,20 +14447,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Instruction__WhileAssignment_2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5104:1: rule__Instruction__WhileAssignment_2 : ( ruleWhile ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5322:1: rule__Instruction__WhileAssignment_2 : ( ruleWhile ) ;
     public final void rule__Instruction__WhileAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5108:1: ( ( ruleWhile ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5109:1: ( ruleWhile )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5326:1: ( ( ruleWhile ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5327:1: ( ruleWhile )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5109:1: ( ruleWhile )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5110:1: ruleWhile
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5327:1: ( ruleWhile )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5328:1: ruleWhile
             {
              before(grammarAccess.getInstructionAccess().getWhileWhileParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleWhile_in_rule__Instruction__WhileAssignment_210425);
+            pushFollow(FOLLOW_ruleWhile_in_rule__Instruction__WhileAssignment_210862);
             ruleWhile();
 
             state._fsp--;
@@ -13922,20 +14488,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Instruction__ActAssignment_3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5119:1: rule__Instruction__ActAssignment_3 : ( ruleActionInstruction ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5337:1: rule__Instruction__ActAssignment_3 : ( ruleActionInstruction ) ;
     public final void rule__Instruction__ActAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5123:1: ( ( ruleActionInstruction ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5124:1: ( ruleActionInstruction )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5341:1: ( ( ruleActionInstruction ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5342:1: ( ruleActionInstruction )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5124:1: ( ruleActionInstruction )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5125:1: ruleActionInstruction
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5342:1: ( ruleActionInstruction )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5343:1: ruleActionInstruction
             {
              before(grammarAccess.getInstructionAccess().getActActionInstructionParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleActionInstruction_in_rule__Instruction__ActAssignment_310456);
+            pushFollow(FOLLOW_ruleActionInstruction_in_rule__Instruction__ActAssignment_310893);
             ruleActionInstruction();
 
             state._fsp--;
@@ -13963,20 +14529,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Instruction__AssAssignment_4"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5134:1: rule__Instruction__AssAssignment_4 : ( ruleAssignation ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5352:1: rule__Instruction__AssAssignment_4 : ( ruleAssignation ) ;
     public final void rule__Instruction__AssAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5138:1: ( ( ruleAssignation ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5139:1: ( ruleAssignation )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5356:1: ( ( ruleAssignation ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5357:1: ( ruleAssignation )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5139:1: ( ruleAssignation )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5140:1: ruleAssignation
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5357:1: ( ruleAssignation )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5358:1: ruleAssignation
             {
              before(grammarAccess.getInstructionAccess().getAssAssignationParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleAssignation_in_rule__Instruction__AssAssignment_410487);
+            pushFollow(FOLLOW_ruleAssignation_in_rule__Instruction__AssAssignment_410924);
             ruleAssignation();
 
             state._fsp--;
@@ -14004,20 +14570,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Instruction__SubAssignment_5"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5149:1: rule__Instruction__SubAssignment_5 : ( ruleFunctionCall ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5367:1: rule__Instruction__SubAssignment_5 : ( ruleFunctionCall ) ;
     public final void rule__Instruction__SubAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5153:1: ( ( ruleFunctionCall ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5154:1: ( ruleFunctionCall )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5371:1: ( ( ruleFunctionCall ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5372:1: ( ruleFunctionCall )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5154:1: ( ruleFunctionCall )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5155:1: ruleFunctionCall
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5372:1: ( ruleFunctionCall )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5373:1: ruleFunctionCall
             {
              before(grammarAccess.getInstructionAccess().getSubFunctionCallParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleFunctionCall_in_rule__Instruction__SubAssignment_510518);
+            pushFollow(FOLLOW_ruleFunctionCall_in_rule__Instruction__SubAssignment_510955);
             ruleFunctionCall();
 
             state._fsp--;
@@ -14045,20 +14611,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__ExpAssignment_3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5164:1: rule__Condition__ExpAssignment_3 : ( ruleExpression ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5382:1: rule__Condition__ExpAssignment_3 : ( ruleExpression ) ;
     public final void rule__Condition__ExpAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5168:1: ( ( ruleExpression ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5169:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5386:1: ( ( ruleExpression ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5387:1: ( ruleExpression )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5169:1: ( ruleExpression )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5170:1: ruleExpression
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5387:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5388:1: ruleExpression
             {
              before(grammarAccess.getConditionAccess().getExpExpressionParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Condition__ExpAssignment_310549);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Condition__ExpAssignment_310986);
             ruleExpression();
 
             state._fsp--;
@@ -14086,20 +14652,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__InsAssignment_6"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5179:1: rule__Condition__InsAssignment_6 : ( ruleInstruction ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5397:1: rule__Condition__InsAssignment_6 : ( ruleInstruction ) ;
     public final void rule__Condition__InsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5183:1: ( ( ruleInstruction ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5184:1: ( ruleInstruction )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5401:1: ( ( ruleInstruction ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5402:1: ( ruleInstruction )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5184:1: ( ruleInstruction )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5185:1: ruleInstruction
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5402:1: ( ruleInstruction )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5403:1: ruleInstruction
             {
              before(grammarAccess.getConditionAccess().getInsInstructionParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleInstruction_in_rule__Condition__InsAssignment_610580);
+            pushFollow(FOLLOW_ruleInstruction_in_rule__Condition__InsAssignment_611017);
             ruleInstruction();
 
             state._fsp--;
@@ -14127,20 +14693,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Condition__Ins2Assignment_8"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5194:1: rule__Condition__Ins2Assignment_8 : ( ruleInstruction ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5412:1: rule__Condition__Ins2Assignment_8 : ( ruleInstruction ) ;
     public final void rule__Condition__Ins2Assignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5198:1: ( ( ruleInstruction ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5199:1: ( ruleInstruction )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5416:1: ( ( ruleInstruction ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5417:1: ( ruleInstruction )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5199:1: ( ruleInstruction )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5200:1: ruleInstruction
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5417:1: ( ruleInstruction )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5418:1: ruleInstruction
             {
              before(grammarAccess.getConditionAccess().getIns2InstructionParserRuleCall_8_0()); 
-            pushFollow(FOLLOW_ruleInstruction_in_rule__Condition__Ins2Assignment_810611);
+            pushFollow(FOLLOW_ruleInstruction_in_rule__Condition__Ins2Assignment_811048);
             ruleInstruction();
 
             state._fsp--;
@@ -14168,20 +14734,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__While__ExpAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5209:1: rule__While__ExpAssignment_1 : ( ruleExpression ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5427:1: rule__While__ExpAssignment_1 : ( ruleExpression ) ;
     public final void rule__While__ExpAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5213:1: ( ( ruleExpression ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5214:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5431:1: ( ( ruleExpression ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5432:1: ( ruleExpression )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5214:1: ( ruleExpression )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5215:1: ruleExpression
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5432:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5433:1: ruleExpression
             {
              before(grammarAccess.getWhileAccess().getExpExpressionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__While__ExpAssignment_110642);
+            pushFollow(FOLLOW_ruleExpression_in_rule__While__ExpAssignment_111079);
             ruleExpression();
 
             state._fsp--;
@@ -14209,20 +14775,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__While__InsAssignment_3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5224:1: rule__While__InsAssignment_3 : ( ruleInstruction ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5442:1: rule__While__InsAssignment_3 : ( ruleInstruction ) ;
     public final void rule__While__InsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5228:1: ( ( ruleInstruction ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5229:1: ( ruleInstruction )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5446:1: ( ( ruleInstruction ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5447:1: ( ruleInstruction )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5229:1: ( ruleInstruction )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5230:1: ruleInstruction
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5447:1: ( ruleInstruction )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5448:1: ruleInstruction
             {
              before(grammarAccess.getWhileAccess().getInsInstructionParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleInstruction_in_rule__While__InsAssignment_310673);
+            pushFollow(FOLLOW_ruleInstruction_in_rule__While__InsAssignment_311110);
             ruleInstruction();
 
             state._fsp--;
@@ -14250,20 +14816,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ActionInstruction__ActionAssignment_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5239:1: rule__ActionInstruction__ActionAssignment_0 : ( ruleClick ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5457:1: rule__ActionInstruction__ActionAssignment_0 : ( ruleClick ) ;
     public final void rule__ActionInstruction__ActionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5243:1: ( ( ruleClick ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5244:1: ( ruleClick )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5461:1: ( ( ruleClick ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5462:1: ( ruleClick )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5244:1: ( ruleClick )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5245:1: ruleClick
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5462:1: ( ruleClick )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5463:1: ruleClick
             {
              before(grammarAccess.getActionInstructionAccess().getActionClickParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleClick_in_rule__ActionInstruction__ActionAssignment_010704);
+            pushFollow(FOLLOW_ruleClick_in_rule__ActionInstruction__ActionAssignment_011141);
             ruleClick();
 
             state._fsp--;
@@ -14291,20 +14857,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ActionInstruction__ActionAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5254:1: rule__ActionInstruction__ActionAssignment_1 : ( ruleCheck ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5472:1: rule__ActionInstruction__ActionAssignment_1 : ( ruleCheck ) ;
     public final void rule__ActionInstruction__ActionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5258:1: ( ( ruleCheck ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5259:1: ( ruleCheck )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5476:1: ( ( ruleCheck ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5477:1: ( ruleCheck )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5259:1: ( ruleCheck )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5260:1: ruleCheck
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5477:1: ( ruleCheck )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5478:1: ruleCheck
             {
              before(grammarAccess.getActionInstructionAccess().getActionCheckParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleCheck_in_rule__ActionInstruction__ActionAssignment_110735);
+            pushFollow(FOLLOW_ruleCheck_in_rule__ActionInstruction__ActionAssignment_111172);
             ruleCheck();
 
             state._fsp--;
@@ -14332,20 +14898,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ActionInstruction__ActionAssignment_2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5269:1: rule__ActionInstruction__ActionAssignment_2 : ( ruleFill ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5487:1: rule__ActionInstruction__ActionAssignment_2 : ( ruleFill ) ;
     public final void rule__ActionInstruction__ActionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5273:1: ( ( ruleFill ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5274:1: ( ruleFill )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5491:1: ( ( ruleFill ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5492:1: ( ruleFill )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5274:1: ( ruleFill )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5275:1: ruleFill
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5492:1: ( ruleFill )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5493:1: ruleFill
             {
              before(grammarAccess.getActionInstructionAccess().getActionFillParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleFill_in_rule__ActionInstruction__ActionAssignment_210766);
+            pushFollow(FOLLOW_ruleFill_in_rule__ActionInstruction__ActionAssignment_211203);
             ruleFill();
 
             state._fsp--;
@@ -14373,20 +14939,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ActionInstruction__ActionAssignment_3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5284:1: rule__ActionInstruction__ActionAssignment_3 : ( ruleClear ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5502:1: rule__ActionInstruction__ActionAssignment_3 : ( ruleClear ) ;
     public final void rule__ActionInstruction__ActionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5288:1: ( ( ruleClear ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5289:1: ( ruleClear )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5506:1: ( ( ruleClear ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5507:1: ( ruleClear )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5289:1: ( ruleClear )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5290:1: ruleClear
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5507:1: ( ruleClear )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5508:1: ruleClear
             {
              before(grammarAccess.getActionInstructionAccess().getActionClearParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleClear_in_rule__ActionInstruction__ActionAssignment_310797);
+            pushFollow(FOLLOW_ruleClear_in_rule__ActionInstruction__ActionAssignment_311234);
             ruleClear();
 
             state._fsp--;
@@ -14414,20 +14980,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VariableName__NameAssignment"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5299:1: rule__VariableName__NameAssignment : ( RULE_STRING ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5517:1: rule__VariableName__NameAssignment : ( RULE_STRING ) ;
     public final void rule__VariableName__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5303:1: ( ( RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5304:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5521:1: ( ( RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5522:1: ( RULE_STRING )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5304:1: ( RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5305:1: RULE_STRING
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5522:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5523:1: RULE_STRING
             {
              before(grammarAccess.getVariableNameAccess().getNameSTRINGTerminalRuleCall_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__VariableName__NameAssignment10828); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__VariableName__NameAssignment11265); 
              after(grammarAccess.getVariableNameAccess().getNameSTRINGTerminalRuleCall_0()); 
 
             }
@@ -14451,20 +15017,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Declaration__NameAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5314:1: rule__Declaration__NameAssignment_1 : ( ruleVariableName ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5532:1: rule__Declaration__NameAssignment_1 : ( ruleVariableName ) ;
     public final void rule__Declaration__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5318:1: ( ( ruleVariableName ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5319:1: ( ruleVariableName )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5536:1: ( ( ruleVariableName ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5537:1: ( ruleVariableName )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5319:1: ( ruleVariableName )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5320:1: ruleVariableName
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5537:1: ( ruleVariableName )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5538:1: ruleVariableName
             {
              before(grammarAccess.getDeclarationAccess().getNameVariableNameParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleVariableName_in_rule__Declaration__NameAssignment_110859);
+            pushFollow(FOLLOW_ruleVariableName_in_rule__Declaration__NameAssignment_111296);
             ruleVariableName();
 
             state._fsp--;
@@ -14492,20 +15058,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Declaration__ValAssignment_3"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5329:1: rule__Declaration__ValAssignment_3 : ( ruleExpression ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5547:1: rule__Declaration__ValAssignment_3 : ( ruleExpression ) ;
     public final void rule__Declaration__ValAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5333:1: ( ( ruleExpression ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5334:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5551:1: ( ( ruleExpression ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5552:1: ( ruleExpression )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5334:1: ( ruleExpression )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5335:1: ruleExpression
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5552:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5553:1: ruleExpression
             {
              before(grammarAccess.getDeclarationAccess().getValExpressionParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Declaration__ValAssignment_310890);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Declaration__ValAssignment_311327);
             ruleExpression();
 
             state._fsp--;
@@ -14533,20 +15099,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Assignation__VarAssignment_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5344:1: rule__Assignation__VarAssignment_0 : ( ruleVariableReference ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5562:1: rule__Assignation__VarAssignment_0 : ( ruleVariableReference ) ;
     public final void rule__Assignation__VarAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5348:1: ( ( ruleVariableReference ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5349:1: ( ruleVariableReference )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5566:1: ( ( ruleVariableReference ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5567:1: ( ruleVariableReference )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5349:1: ( ruleVariableReference )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5350:1: ruleVariableReference
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5567:1: ( ruleVariableReference )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5568:1: ruleVariableReference
             {
              before(grammarAccess.getAssignationAccess().getVarVariableReferenceParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleVariableReference_in_rule__Assignation__VarAssignment_010921);
+            pushFollow(FOLLOW_ruleVariableReference_in_rule__Assignation__VarAssignment_011358);
             ruleVariableReference();
 
             state._fsp--;
@@ -14574,20 +15140,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Assignation__ExprAssignment_2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5359:1: rule__Assignation__ExprAssignment_2 : ( ruleExpression ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5577:1: rule__Assignation__ExprAssignment_2 : ( ruleExpression ) ;
     public final void rule__Assignation__ExprAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5363:1: ( ( ruleExpression ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5364:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5581:1: ( ( ruleExpression ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5582:1: ( ruleExpression )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5364:1: ( ruleExpression )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5365:1: ruleExpression
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5582:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5583:1: ruleExpression
             {
              before(grammarAccess.getAssignationAccess().getExprExpressionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Assignation__ExprAssignment_210952);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Assignation__ExprAssignment_211389);
             ruleExpression();
 
             state._fsp--;
@@ -14615,20 +15181,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__TypeAssignment_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5374:1: rule__Expression__TypeAssignment_0 : ( ruleType ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5592:1: rule__Expression__TypeAssignment_0 : ( ruleType ) ;
     public final void rule__Expression__TypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5378:1: ( ( ruleType ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5379:1: ( ruleType )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5596:1: ( ( ruleType ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5597:1: ( ruleType )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5379:1: ( ruleType )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5380:1: ruleType
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5597:1: ( ruleType )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5598:1: ruleType
             {
              before(grammarAccess.getExpressionAccess().getTypeTypeParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleType_in_rule__Expression__TypeAssignment_010983);
+            pushFollow(FOLLOW_ruleType_in_rule__Expression__TypeAssignment_011420);
             ruleType();
 
             state._fsp--;
@@ -14656,20 +15222,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__VarAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5389:1: rule__Expression__VarAssignment_1 : ( ruleVariable ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5607:1: rule__Expression__VarAssignment_1 : ( ruleVariable ) ;
     public final void rule__Expression__VarAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5393:1: ( ( ruleVariable ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5394:1: ( ruleVariable )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5611:1: ( ( ruleVariable ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5612:1: ( ruleVariable )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5394:1: ( ruleVariable )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5395:1: ruleVariable
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5612:1: ( ruleVariable )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5613:1: ruleVariable
             {
              before(grammarAccess.getExpressionAccess().getVarVariableParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleVariable_in_rule__Expression__VarAssignment_111014);
+            pushFollow(FOLLOW_ruleVariable_in_rule__Expression__VarAssignment_111451);
             ruleVariable();
 
             state._fsp--;
@@ -14697,20 +15263,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__ActAssignment_2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5404:1: rule__Expression__ActAssignment_2 : ( ruleActionExpression ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5622:1: rule__Expression__ActAssignment_2 : ( ruleActionExpression ) ;
     public final void rule__Expression__ActAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5408:1: ( ( ruleActionExpression ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5409:1: ( ruleActionExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5626:1: ( ( ruleActionExpression ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5627:1: ( ruleActionExpression )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5409:1: ( ruleActionExpression )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5410:1: ruleActionExpression
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5627:1: ( ruleActionExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5628:1: ruleActionExpression
             {
              before(grammarAccess.getExpressionAccess().getActActionExpressionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleActionExpression_in_rule__Expression__ActAssignment_211045);
+            pushFollow(FOLLOW_ruleActionExpression_in_rule__Expression__ActAssignment_211482);
             ruleActionExpression();
 
             state._fsp--;
@@ -14738,20 +15304,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__LeftAssignment_3_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5419:1: rule__Expression__LeftAssignment_3_1 : ( ruleExpression ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5637:1: rule__Expression__LeftAssignment_3_1 : ( ruleExpression ) ;
     public final void rule__Expression__LeftAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5423:1: ( ( ruleExpression ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5424:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5641:1: ( ( ruleExpression ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5642:1: ( ruleExpression )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5424:1: ( ruleExpression )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5425:1: ruleExpression
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5642:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5643:1: ruleExpression
             {
              before(grammarAccess.getExpressionAccess().getLeftExpressionParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Expression__LeftAssignment_3_111076);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Expression__LeftAssignment_3_111513);
             ruleExpression();
 
             state._fsp--;
@@ -14779,20 +15345,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__RightAssignment_3_2"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5434:1: rule__Expression__RightAssignment_3_2 : ( ruleExpression ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5652:1: rule__Expression__RightAssignment_3_2 : ( ruleExpression ) ;
     public final void rule__Expression__RightAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5438:1: ( ( ruleExpression ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5439:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5656:1: ( ( ruleExpression ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5657:1: ( ruleExpression )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5439:1: ( ruleExpression )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5440:1: ruleExpression
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5657:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5658:1: ruleExpression
             {
              before(grammarAccess.getExpressionAccess().getRightExpressionParserRuleCall_3_2_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Expression__RightAssignment_3_211107);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Expression__RightAssignment_3_211544);
             ruleExpression();
 
             state._fsp--;
@@ -14820,20 +15386,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Expression__ExpAssignment_4_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5449:1: rule__Expression__ExpAssignment_4_1 : ( ruleExpression ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5667:1: rule__Expression__ExpAssignment_4_1 : ( ruleExpression ) ;
     public final void rule__Expression__ExpAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5453:1: ( ( ruleExpression ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5454:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5671:1: ( ( ruleExpression ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5672:1: ( ruleExpression )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5454:1: ( ruleExpression )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5455:1: ruleExpression
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5672:1: ( ruleExpression )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5673:1: ruleExpression
             {
              before(grammarAccess.getExpressionAccess().getExpExpressionParserRuleCall_4_1_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Expression__ExpAssignment_4_111138);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Expression__ExpAssignment_4_111575);
             ruleExpression();
 
             state._fsp--;
@@ -14861,20 +15427,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Variable__VarAssignment"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5464:1: rule__Variable__VarAssignment : ( ruleVariableReference ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5682:1: rule__Variable__VarAssignment : ( ruleVariableReference ) ;
     public final void rule__Variable__VarAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5468:1: ( ( ruleVariableReference ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5469:1: ( ruleVariableReference )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5686:1: ( ( ruleVariableReference ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5687:1: ( ruleVariableReference )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5469:1: ( ruleVariableReference )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5470:1: ruleVariableReference
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5687:1: ( ruleVariableReference )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5688:1: ruleVariableReference
             {
              before(grammarAccess.getVariableAccess().getVarVariableReferenceParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleVariableReference_in_rule__Variable__VarAssignment11169);
+            pushFollow(FOLLOW_ruleVariableReference_in_rule__Variable__VarAssignment11606);
             ruleVariableReference();
 
             state._fsp--;
@@ -14902,20 +15468,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ActionExpression__ExprAssignment_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5479:1: rule__ActionExpression__ExprAssignment_0 : ( ruleVerify ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5697:1: rule__ActionExpression__ExprAssignment_0 : ( ruleVerify ) ;
     public final void rule__ActionExpression__ExprAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5483:1: ( ( ruleVerify ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5484:1: ( ruleVerify )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5701:1: ( ( ruleVerify ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5702:1: ( ruleVerify )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5484:1: ( ruleVerify )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5485:1: ruleVerify
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5702:1: ( ruleVerify )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5703:1: ruleVerify
             {
              before(grammarAccess.getActionExpressionAccess().getExprVerifyParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleVerify_in_rule__ActionExpression__ExprAssignment_011200);
+            pushFollow(FOLLOW_ruleVerify_in_rule__ActionExpression__ExprAssignment_011637);
             ruleVerify();
 
             state._fsp--;
@@ -14943,20 +15509,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ActionExpression__ExprAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5494:1: rule__ActionExpression__ExprAssignment_1 : ( ruleExist ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5712:1: rule__ActionExpression__ExprAssignment_1 : ( ruleExist ) ;
     public final void rule__ActionExpression__ExprAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5498:1: ( ( ruleExist ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5499:1: ( ruleExist )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5716:1: ( ( ruleExist ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5717:1: ( ruleExist )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5499:1: ( ruleExist )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5500:1: ruleExist
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5717:1: ( ruleExist )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5718:1: ruleExist
             {
              before(grammarAccess.getActionExpressionAccess().getExprExistParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleExist_in_rule__ActionExpression__ExprAssignment_111231);
+            pushFollow(FOLLOW_ruleExist_in_rule__ActionExpression__ExprAssignment_111668);
             ruleExist();
 
             state._fsp--;
@@ -14984,20 +15550,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Checkbox__CheckAssignment_1_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5509:1: rule__Checkbox__CheckAssignment_1_0 : ( RULE_STRING ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5727:1: rule__Checkbox__CheckAssignment_1_0 : ( RULE_STRING ) ;
     public final void rule__Checkbox__CheckAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5513:1: ( ( RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5514:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5731:1: ( ( RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5732:1: ( RULE_STRING )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5514:1: ( RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5515:1: RULE_STRING
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5732:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5733:1: RULE_STRING
             {
              before(grammarAccess.getCheckboxAccess().getCheckSTRINGTerminalRuleCall_1_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Checkbox__CheckAssignment_1_011262); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Checkbox__CheckAssignment_1_011699); 
              after(grammarAccess.getCheckboxAccess().getCheckSTRINGTerminalRuleCall_1_0_0()); 
 
             }
@@ -15021,20 +15587,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Link__LinkAssignment_1_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5524:1: rule__Link__LinkAssignment_1_0 : ( RULE_STRING ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5742:1: rule__Link__LinkAssignment_1_0 : ( RULE_STRING ) ;
     public final void rule__Link__LinkAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5528:1: ( ( RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5529:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5746:1: ( ( RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5747:1: ( RULE_STRING )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5529:1: ( RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5530:1: RULE_STRING
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5747:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5748:1: RULE_STRING
             {
              before(grammarAccess.getLinkAccess().getLinkSTRINGTerminalRuleCall_1_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Link__LinkAssignment_1_011293); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Link__LinkAssignment_1_011730); 
              after(grammarAccess.getLinkAccess().getLinkSTRINGTerminalRuleCall_1_0_0()); 
 
             }
@@ -15058,20 +15624,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Button__ButAssignment_1_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5539:1: rule__Button__ButAssignment_1_0 : ( RULE_STRING ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5757:1: rule__Button__ButAssignment_1_0 : ( RULE_STRING ) ;
     public final void rule__Button__ButAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5543:1: ( ( RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5544:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5761:1: ( ( RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5762:1: ( RULE_STRING )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5544:1: ( RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5545:1: RULE_STRING
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5762:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5763:1: RULE_STRING
             {
              before(grammarAccess.getButtonAccess().getButSTRINGTerminalRuleCall_1_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Button__ButAssignment_1_011324); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Button__ButAssignment_1_011761); 
              after(grammarAccess.getButtonAccess().getButSTRINGTerminalRuleCall_1_0_0()); 
 
             }
@@ -15095,20 +15661,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Image__ImgAssignment_1_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5554:1: rule__Image__ImgAssignment_1_0 : ( RULE_STRING ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5772:1: rule__Image__ImgAssignment_1_0 : ( RULE_STRING ) ;
     public final void rule__Image__ImgAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5558:1: ( ( RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5559:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5776:1: ( ( RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5777:1: ( RULE_STRING )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5559:1: ( RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5560:1: RULE_STRING
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5777:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5778:1: RULE_STRING
             {
              before(grammarAccess.getImageAccess().getImgSTRINGTerminalRuleCall_1_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Image__ImgAssignment_1_011355); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Image__ImgAssignment_1_011792); 
              after(grammarAccess.getImageAccess().getImgSTRINGTerminalRuleCall_1_0_0()); 
 
             }
@@ -15132,20 +15698,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TextField__TextAssignment_1_0"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5569:1: rule__TextField__TextAssignment_1_0 : ( RULE_STRING ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5787:1: rule__TextField__TextAssignment_1_0 : ( RULE_STRING ) ;
     public final void rule__TextField__TextAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5573:1: ( ( RULE_STRING ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5574:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5791:1: ( ( RULE_STRING ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5792:1: ( RULE_STRING )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5574:1: ( RULE_STRING )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5575:1: RULE_STRING
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5792:1: ( RULE_STRING )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5793:1: RULE_STRING
             {
              before(grammarAccess.getTextFieldAccess().getTextSTRINGTerminalRuleCall_1_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextField__TextAssignment_1_011386); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TextField__TextAssignment_1_011823); 
              after(grammarAccess.getTextFieldAccess().getTextSTRINGTerminalRuleCall_1_0_0()); 
 
             }
@@ -15169,23 +15735,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TypeElement__ElemAssignment"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5584:1: rule__TypeElement__ElemAssignment : ( ( rule__TypeElement__ElemAlternatives_0 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5802:1: rule__TypeElement__ElemAssignment : ( ( rule__TypeElement__ElemAlternatives_0 ) ) ;
     public final void rule__TypeElement__ElemAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5588:1: ( ( ( rule__TypeElement__ElemAlternatives_0 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5589:1: ( ( rule__TypeElement__ElemAlternatives_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5806:1: ( ( ( rule__TypeElement__ElemAlternatives_0 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5807:1: ( ( rule__TypeElement__ElemAlternatives_0 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5589:1: ( ( rule__TypeElement__ElemAlternatives_0 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5590:1: ( rule__TypeElement__ElemAlternatives_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5807:1: ( ( rule__TypeElement__ElemAlternatives_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5808:1: ( rule__TypeElement__ElemAlternatives_0 )
             {
              before(grammarAccess.getTypeElementAccess().getElemAlternatives_0()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5591:1: ( rule__TypeElement__ElemAlternatives_0 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5591:2: rule__TypeElement__ElemAlternatives_0
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5809:1: ( rule__TypeElement__ElemAlternatives_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5809:2: rule__TypeElement__ElemAlternatives_0
             {
-            pushFollow(FOLLOW_rule__TypeElement__ElemAlternatives_0_in_rule__TypeElement__ElemAssignment11417);
+            pushFollow(FOLLOW_rule__TypeElement__ElemAlternatives_0_in_rule__TypeElement__ElemAssignment11854);
             rule__TypeElement__ElemAlternatives_0();
 
             state._fsp--;
@@ -15216,20 +15782,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Select__ValueAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5600:1: rule__Select__ValueAssignment_1 : ( ruleTypeElement ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5818:1: rule__Select__ValueAssignment_1 : ( ruleTypeElement ) ;
     public final void rule__Select__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5604:1: ( ( ruleTypeElement ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5605:1: ( ruleTypeElement )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5822:1: ( ( ruleTypeElement ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5823:1: ( ruleTypeElement )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5605:1: ( ruleTypeElement )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5606:1: ruleTypeElement
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5823:1: ( ruleTypeElement )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5824:1: ruleTypeElement
             {
              before(grammarAccess.getSelectAccess().getValueTypeElementParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleTypeElement_in_rule__Select__ValueAssignment_111450);
+            pushFollow(FOLLOW_ruleTypeElement_in_rule__Select__ValueAssignment_111887);
             ruleTypeElement();
 
             state._fsp--;
@@ -15257,23 +15823,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Click__ValAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5615:1: rule__Click__ValAssignment_1 : ( ( rule__Click__ValAlternatives_1_0 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5833:1: rule__Click__ValAssignment_1 : ( ( rule__Click__ValAlternatives_1_0 ) ) ;
     public final void rule__Click__ValAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5619:1: ( ( ( rule__Click__ValAlternatives_1_0 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5620:1: ( ( rule__Click__ValAlternatives_1_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5837:1: ( ( ( rule__Click__ValAlternatives_1_0 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5838:1: ( ( rule__Click__ValAlternatives_1_0 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5620:1: ( ( rule__Click__ValAlternatives_1_0 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5621:1: ( rule__Click__ValAlternatives_1_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5838:1: ( ( rule__Click__ValAlternatives_1_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5839:1: ( rule__Click__ValAlternatives_1_0 )
             {
              before(grammarAccess.getClickAccess().getValAlternatives_1_0()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5622:1: ( rule__Click__ValAlternatives_1_0 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5622:2: rule__Click__ValAlternatives_1_0
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5840:1: ( rule__Click__ValAlternatives_1_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5840:2: rule__Click__ValAlternatives_1_0
             {
-            pushFollow(FOLLOW_rule__Click__ValAlternatives_1_0_in_rule__Click__ValAssignment_111481);
+            pushFollow(FOLLOW_rule__Click__ValAlternatives_1_0_in_rule__Click__ValAssignment_111918);
             rule__Click__ValAlternatives_1_0();
 
             state._fsp--;
@@ -15304,23 +15870,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Check__ValAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5631:1: rule__Check__ValAssignment_1 : ( ( rule__Check__ValAlternatives_1_0 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5849:1: rule__Check__ValAssignment_1 : ( ( rule__Check__ValAlternatives_1_0 ) ) ;
     public final void rule__Check__ValAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5635:1: ( ( ( rule__Check__ValAlternatives_1_0 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5636:1: ( ( rule__Check__ValAlternatives_1_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5853:1: ( ( ( rule__Check__ValAlternatives_1_0 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5854:1: ( ( rule__Check__ValAlternatives_1_0 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5636:1: ( ( rule__Check__ValAlternatives_1_0 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5637:1: ( rule__Check__ValAlternatives_1_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5854:1: ( ( rule__Check__ValAlternatives_1_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5855:1: ( rule__Check__ValAlternatives_1_0 )
             {
              before(grammarAccess.getCheckAccess().getValAlternatives_1_0()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5638:1: ( rule__Check__ValAlternatives_1_0 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5638:2: rule__Check__ValAlternatives_1_0
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5856:1: ( rule__Check__ValAlternatives_1_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5856:2: rule__Check__ValAlternatives_1_0
             {
-            pushFollow(FOLLOW_rule__Check__ValAlternatives_1_0_in_rule__Check__ValAssignment_111514);
+            pushFollow(FOLLOW_rule__Check__ValAlternatives_1_0_in_rule__Check__ValAssignment_111951);
             rule__Check__ValAlternatives_1_0();
 
             state._fsp--;
@@ -15351,23 +15917,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Fill__ValAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5647:1: rule__Fill__ValAssignment_1 : ( ( rule__Fill__ValAlternatives_1_0 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5865:1: rule__Fill__ValAssignment_1 : ( ( rule__Fill__ValAlternatives_1_0 ) ) ;
     public final void rule__Fill__ValAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5651:1: ( ( ( rule__Fill__ValAlternatives_1_0 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5652:1: ( ( rule__Fill__ValAlternatives_1_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5869:1: ( ( ( rule__Fill__ValAlternatives_1_0 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5870:1: ( ( rule__Fill__ValAlternatives_1_0 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5652:1: ( ( rule__Fill__ValAlternatives_1_0 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5653:1: ( rule__Fill__ValAlternatives_1_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5870:1: ( ( rule__Fill__ValAlternatives_1_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5871:1: ( rule__Fill__ValAlternatives_1_0 )
             {
              before(grammarAccess.getFillAccess().getValAlternatives_1_0()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5654:1: ( rule__Fill__ValAlternatives_1_0 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5654:2: rule__Fill__ValAlternatives_1_0
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5872:1: ( rule__Fill__ValAlternatives_1_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5872:2: rule__Fill__ValAlternatives_1_0
             {
-            pushFollow(FOLLOW_rule__Fill__ValAlternatives_1_0_in_rule__Fill__ValAssignment_111547);
+            pushFollow(FOLLOW_rule__Fill__ValAlternatives_1_0_in_rule__Fill__ValAssignment_111984);
             rule__Fill__ValAlternatives_1_0();
 
             state._fsp--;
@@ -15398,23 +15964,23 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Exist__ValAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5663:1: rule__Exist__ValAssignment_1 : ( ( rule__Exist__ValAlternatives_1_0 ) ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5881:1: rule__Exist__ValAssignment_1 : ( ( rule__Exist__ValAlternatives_1_0 ) ) ;
     public final void rule__Exist__ValAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5667:1: ( ( ( rule__Exist__ValAlternatives_1_0 ) ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5668:1: ( ( rule__Exist__ValAlternatives_1_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5885:1: ( ( ( rule__Exist__ValAlternatives_1_0 ) ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5886:1: ( ( rule__Exist__ValAlternatives_1_0 ) )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5668:1: ( ( rule__Exist__ValAlternatives_1_0 ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5669:1: ( rule__Exist__ValAlternatives_1_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5886:1: ( ( rule__Exist__ValAlternatives_1_0 ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5887:1: ( rule__Exist__ValAlternatives_1_0 )
             {
              before(grammarAccess.getExistAccess().getValAlternatives_1_0()); 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5670:1: ( rule__Exist__ValAlternatives_1_0 )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5670:2: rule__Exist__ValAlternatives_1_0
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5888:1: ( rule__Exist__ValAlternatives_1_0 )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5888:2: rule__Exist__ValAlternatives_1_0
             {
-            pushFollow(FOLLOW_rule__Exist__ValAlternatives_1_0_in_rule__Exist__ValAssignment_111580);
+            pushFollow(FOLLOW_rule__Exist__ValAlternatives_1_0_in_rule__Exist__ValAssignment_112017);
             rule__Exist__ValAlternatives_1_0();
 
             state._fsp--;
@@ -15445,20 +16011,20 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__GoTo__UrlAssignment_1"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5679:1: rule__GoTo__UrlAssignment_1 : ( RULE_URL ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5897:1: rule__GoTo__UrlAssignment_1 : ( RULE_URL ) ;
     public final void rule__GoTo__UrlAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5683:1: ( ( RULE_URL ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5684:1: ( RULE_URL )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5901:1: ( ( RULE_URL ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5902:1: ( RULE_URL )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5684:1: ( RULE_URL )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5685:1: RULE_URL
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5902:1: ( RULE_URL )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5903:1: RULE_URL
             {
              before(grammarAccess.getGoToAccess().getUrlURLTerminalRuleCall_1_0()); 
-            match(input,RULE_URL,FOLLOW_RULE_URL_in_rule__GoTo__UrlAssignment_111613); 
+            match(input,RULE_URL,FOLLOW_RULE_URL_in_rule__GoTo__UrlAssignment_112050); 
              after(grammarAccess.getGoToAccess().getUrlURLTerminalRuleCall_1_0()); 
 
             }
@@ -15599,388 +16165,406 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_ruleGoTo_in_entryRuleGoTo2279 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGoTo2286 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__GoTo__Group__0_in_ruleGoTo2312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__Group_0__0_in_rule__Head__Alternatives2348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__Group_1__0_in_rule__Head__Alternatives2366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_0__0_in_rule__FunctionCall__Alternatives2399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__0_in_rule__FunctionCall__Alternatives2417 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Instruction__DecAssignment_0_in_rule__Instruction__Alternatives2450 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Instruction__CondAssignment_1_in_rule__Instruction__Alternatives2468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Instruction__WhileAssignment_2_in_rule__Instruction__Alternatives2486 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Instruction__ActAssignment_3_in_rule__Instruction__Alternatives2504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Instruction__AssAssignment_4_in_rule__Instruction__Alternatives2522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Instruction__SubAssignment_5_in_rule__Instruction__Alternatives2540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Condition__Alternatives_12574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Condition__Alternatives_12594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActionInstruction__ActionAssignment_0_in_rule__ActionInstruction__Alternatives2628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActionInstruction__ActionAssignment_1_in_rule__ActionInstruction__Alternatives2646 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActionInstruction__ActionAssignment_2_in_rule__ActionInstruction__Alternatives2664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActionInstruction__ActionAssignment_3_in_rule__ActionInstruction__Alternatives2682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGoTo_in_rule__ActionInstruction__Alternatives2700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__TypeAssignment_0_in_rule__Expression__Alternatives2732 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__VarAssignment_1_in_rule__Expression__Alternatives2750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__ActAssignment_2_in_rule__Expression__Alternatives2768 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_3__0_in_rule__Expression__Alternatives2786 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_4__0_in_rule__Expression__Alternatives2804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Expression__Alternatives_3_02838 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Expression__Alternatives_3_02858 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Expression__Alternatives_3_02878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Type__Alternatives2913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Type__Alternatives2933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__Type__Alternatives2953 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActionExpression__ExprAssignment_0_in_rule__ActionExpression__Alternatives2987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ActionExpression__ExprAssignment_1_in_rule__ActionExpression__Alternatives3005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClickableElement_in_rule__Element__Alternatives3038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFillableElement_in_rule__Element__Alternatives3055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCheckableElement_in_rule__Element__Alternatives3072 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLink_in_rule__ClickableElement__Alternatives3104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleButton_in_rule__ClickableElement__Alternatives3121 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImage_in_rule__ClickableElement__Alternatives3138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Checkbox__CheckAssignment_1_0_in_rule__Checkbox__Alternatives_13170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_rule__Checkbox__Alternatives_13188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__LinkAssignment_1_0_in_rule__Link__Alternatives_13220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_rule__Link__Alternatives_13238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Button__ButAssignment_1_0_in_rule__Button__Alternatives_13270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_rule__Button__Alternatives_13288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Image__ImgAssignment_1_0_in_rule__Image__Alternatives_13320 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_rule__Image__Alternatives_13338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextField__TextAssignment_1_0_in_rule__TextField__Alternatives_13370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_rule__TextField__Alternatives_13388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__TypeElement__ElemAlternatives_03421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__TypeElement__ElemAlternatives_03441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__TypeElement__ElemAlternatives_03461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__TypeElement__ElemAlternatives_03481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__TypeElement__ElemAlternatives_03501 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClickableElement_in_rule__Click__ValAlternatives_1_03535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelect_in_rule__Click__ValAlternatives_1_03552 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCheckableElement_in_rule__Check__ValAlternatives_1_03584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelect_in_rule__Check__ValAlternatives_1_03601 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFillableElement_in_rule__Fill__ValAlternatives_1_03633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelect_in_rule__Fill__ValAlternatives_1_03650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFillableElement_in_rule__Clear__Alternatives_13682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCheckableElement_in_rule__Clear__Alternatives_13699 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelect_in_rule__Clear__Alternatives_13716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFillableElement_in_rule__Verify__Alternatives_13748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCheckableElement_in_rule__Verify__Alternatives_13765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelect_in_rule__Verify__Alternatives_13782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleElement_in_rule__Exist__ValAlternatives_1_03814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelect_in_rule__Exist__ValAlternatives_1_03831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Program__Group__0__Impl_in_rule__Program__Group__03861 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Program__Group__1_in_rule__Program__Group__03864 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Program__SubAssignment_0_in_rule__Program__Group__0__Impl3891 = new BitSet(new long[]{0x0000000002000002L});
-    public static final BitSet FOLLOW_rule__Program__Group__1__Impl_in_rule__Program__Group__13922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Program__MainAssignment_1_in_rule__Program__Group__1__Impl3949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__0__Impl_in_rule__Subroutine__Group__03983 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__1_in_rule__Subroutine__Group__03986 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Subroutine__Group__0__Impl4014 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__1__Impl_in_rule__Subroutine__Group__14045 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__2_in_rule__Subroutine__Group__14048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__HeadAssignment_1_in_rule__Subroutine__Group__1__Impl4075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__Group__2__Impl_in_rule__Subroutine__Group__24105 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Subroutine__BodyAssignment_2_in_rule__Subroutine__Group__2__Impl4132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__Group_0__0__Impl_in_rule__Head__Group_0__04168 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__Head__Group_0__1_in_rule__Head__Group_0__04171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__NameAssignment_0_0_in_rule__Head__Group_0__0__Impl4198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__Group_0__1__Impl_in_rule__Head__Group_0__14228 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Head__Group_0__1__Impl4256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__Group_1__0__Impl_in_rule__Head__Group_1__04291 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__Head__Group_1__1_in_rule__Head__Group_1__04294 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__NameAssignment_1_0_in_rule__Head__Group_1__0__Impl4321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__Group_1__1__Impl_in_rule__Head__Group_1__14351 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Head__Group_1__2_in_rule__Head__Group_1__14354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Head__Group_1__1__Impl4382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__Group_1__2__Impl_in_rule__Head__Group_1__24413 = new BitSet(new long[]{0x0000000030000000L});
-    public static final BitSet FOLLOW_rule__Head__Group_1__3_in_rule__Head__Group_1__24416 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__VarIdAssignment_1_2_in_rule__Head__Group_1__2__Impl4443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__Group_1__3__Impl_in_rule__Head__Group_1__34473 = new BitSet(new long[]{0x0000000030000000L});
-    public static final BitSet FOLLOW_rule__Head__Group_1__4_in_rule__Head__Group_1__34476 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__Group_1_3__0_in_rule__Head__Group_1__3__Impl4503 = new BitSet(new long[]{0x0000000020000002L});
-    public static final BitSet FOLLOW_rule__Head__Group_1__4__Impl_in_rule__Head__Group_1__44534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Head__Group_1__4__Impl4562 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__Group_1_3__0__Impl_in_rule__Head__Group_1_3__04603 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Head__Group_1_3__1_in_rule__Head__Group_1_3__04606 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Head__Group_1_3__0__Impl4634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__Group_1_3__1__Impl_in_rule__Head__Group_1_3__14665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Head__VarIdAssignment_1_3_1_in_rule__Head__Group_1_3__1__Impl4692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_0__0__Impl_in_rule__FunctionCall__Group_0__04726 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_0__1_in_rule__FunctionCall__Group_0__04729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctionReference_in_rule__FunctionCall__Group_0__0__Impl4756 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_0__1__Impl_in_rule__FunctionCall__Group_0__14785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__FunctionCall__Group_0__1__Impl4813 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__0__Impl_in_rule__FunctionCall__Group_1__04848 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__1_in_rule__FunctionCall__Group_1__04851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctionReference_in_rule__FunctionCall__Group_1__0__Impl4878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__1__Impl_in_rule__FunctionCall__Group_1__14907 = new BitSet(new long[]{0x0C002000000FC020L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__2_in_rule__FunctionCall__Group_1__14910 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__FunctionCall__Group_1__1__Impl4938 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__2__Impl_in_rule__FunctionCall__Group_1__24969 = new BitSet(new long[]{0x0000000090000000L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__3_in_rule__FunctionCall__Group_1__24972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__VarAssignment_1_2_in_rule__FunctionCall__Group_1__2__Impl4999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__3__Impl_in_rule__FunctionCall__Group_1__35029 = new BitSet(new long[]{0x0000000090000000L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__4_in_rule__FunctionCall__Group_1__35032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1_3__0_in_rule__FunctionCall__Group_1__3__Impl5059 = new BitSet(new long[]{0x0000000080000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__4__Impl_in_rule__FunctionCall__Group_1__45090 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__FunctionCall__Group_1__4__Impl5118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1_3__0__Impl_in_rule__FunctionCall__Group_1_3__05159 = new BitSet(new long[]{0x0C002000000FC020L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1_3__1_in_rule__FunctionCall__Group_1_3__05162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__FunctionCall__Group_1_3__0__Impl5190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__Group_1_3__1__Impl_in_rule__FunctionCall__Group_1_3__15221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FunctionCall__VarAssignment_1_3_1_in_rule__FunctionCall__Group_1_3__1__Impl5248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Main__Group__0__Impl_in_rule__Main__Group__05282 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__Main__Group__1_in_rule__Main__Group__05285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Main__Group__0__Impl5313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Main__Group__1__Impl_in_rule__Main__Group__15344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBody_in_rule__Main__Group__1__Impl5371 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group__0__Impl_in_rule__Body__Group__05404 = new BitSet(new long[]{0x12D0048800000020L});
-    public static final BitSet FOLLOW_rule__Body__Group__1_in_rule__Body__Group__05407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Body__Group__0__Impl5435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group__1__Impl_in_rule__Body__Group__15466 = new BitSet(new long[]{0x12D0048C00000020L});
-    public static final BitSet FOLLOW_rule__Body__Group__2_in_rule__Body__Group__15469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__InstructionsAssignment_1_in_rule__Body__Group__1__Impl5496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__Group__2__Impl_in_rule__Body__Group__25526 = new BitSet(new long[]{0x12D0048C00000020L});
-    public static final BitSet FOLLOW_rule__Body__Group__3_in_rule__Body__Group__25529 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Body__InstructionsAssignment_2_in_rule__Body__Group__2__Impl5556 = new BitSet(new long[]{0x12D0048800000022L});
-    public static final BitSet FOLLOW_rule__Body__Group__3__Impl_in_rule__Body__Group__35587 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Body__Group__3__Impl5615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Condition__Group__0__Impl_in_rule__Condition__Group__05654 = new BitSet(new long[]{0x0000000040003000L});
-    public static final BitSet FOLLOW_rule__Condition__Group__1_in_rule__Condition__Group__05657 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Condition__Group__0__Impl5685 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Condition__Group__1__Impl_in_rule__Condition__Group__15716 = new BitSet(new long[]{0x0000000040003000L});
-    public static final BitSet FOLLOW_rule__Condition__Group__2_in_rule__Condition__Group__15719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Condition__Alternatives_1_in_rule__Condition__Group__1__Impl5746 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Condition__Group__2__Impl_in_rule__Condition__Group__25777 = new BitSet(new long[]{0x0C002000000FC020L});
-    public static final BitSet FOLLOW_rule__Condition__Group__3_in_rule__Condition__Group__25780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Condition__Group__2__Impl5808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Condition__Group__3__Impl_in_rule__Condition__Group__35839 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__Condition__Group__4_in_rule__Condition__Group__35842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Condition__ExpAssignment_3_in_rule__Condition__Group__3__Impl5869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Condition__Group__4__Impl_in_rule__Condition__Group__45899 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_rule__Condition__Group__5_in_rule__Condition__Group__45902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Condition__Group__4__Impl5930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Condition__Group__5__Impl_in_rule__Condition__Group__55961 = new BitSet(new long[]{0x12D0048800000020L});
-    public static final BitSet FOLLOW_rule__Condition__Group__6_in_rule__Condition__Group__55964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__Condition__Group__5__Impl5992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Condition__Group__6__Impl_in_rule__Condition__Group__66023 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_rule__Condition__Group__7_in_rule__Condition__Group__66026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Condition__InsAssignment_6_in_rule__Condition__Group__6__Impl6055 = new BitSet(new long[]{0x12D0048800000022L});
-    public static final BitSet FOLLOW_rule__Condition__InsAssignment_6_in_rule__Condition__Group__6__Impl6067 = new BitSet(new long[]{0x12D0048800000022L});
-    public static final BitSet FOLLOW_rule__Condition__Group__7__Impl_in_rule__Condition__Group__76100 = new BitSet(new long[]{0x12D0048800000020L});
-    public static final BitSet FOLLOW_rule__Condition__Group__8_in_rule__Condition__Group__76103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__Condition__Group__7__Impl6131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Condition__Group__8__Impl_in_rule__Condition__Group__86162 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_rule__Condition__Group__9_in_rule__Condition__Group__86165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Condition__Ins2Assignment_8_in_rule__Condition__Group__8__Impl6194 = new BitSet(new long[]{0x12D0048800000022L});
-    public static final BitSet FOLLOW_rule__Condition__Ins2Assignment_8_in_rule__Condition__Group__8__Impl6206 = new BitSet(new long[]{0x12D0048800000022L});
-    public static final BitSet FOLLOW_rule__Condition__Group__9__Impl_in_rule__Condition__Group__96239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__Condition__Group__9__Impl6267 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__While__Group__0__Impl_in_rule__While__Group__06318 = new BitSet(new long[]{0x0C002000000FC020L});
-    public static final BitSet FOLLOW_rule__While__Group__1_in_rule__While__Group__06321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__While__Group__0__Impl6349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__While__Group__1__Impl_in_rule__While__Group__16380 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_rule__While__Group__2_in_rule__While__Group__16383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__While__ExpAssignment_1_in_rule__While__Group__1__Impl6410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__While__Group__2__Impl_in_rule__While__Group__26440 = new BitSet(new long[]{0x12D0048800000020L});
-    public static final BitSet FOLLOW_rule__While__Group__3_in_rule__While__Group__26443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__While__Group__2__Impl6471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__While__Group__3__Impl_in_rule__While__Group__36502 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__While__Group__4_in_rule__While__Group__36505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__While__InsAssignment_3_in_rule__While__Group__3__Impl6534 = new BitSet(new long[]{0x12D0048800000022L});
-    public static final BitSet FOLLOW_rule__While__InsAssignment_3_in_rule__While__Group__3__Impl6546 = new BitSet(new long[]{0x12D0048800000022L});
-    public static final BitSet FOLLOW_rule__While__Group__4__Impl_in_rule__While__Group__46579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__While__Group__4__Impl6607 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Declaration__Group__0__Impl_in_rule__Declaration__Group__06648 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Declaration__Group__1_in_rule__Declaration__Group__06651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__Declaration__Group__0__Impl6679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Declaration__Group__1__Impl_in_rule__Declaration__Group__16710 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_rule__Declaration__Group__2_in_rule__Declaration__Group__16713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Declaration__NameAssignment_1_in_rule__Declaration__Group__1__Impl6740 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Declaration__Group__2__Impl_in_rule__Declaration__Group__26770 = new BitSet(new long[]{0x0C002000000FC020L});
-    public static final BitSet FOLLOW_rule__Declaration__Group__3_in_rule__Declaration__Group__26773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__Declaration__Group__2__Impl6801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Declaration__Group__3__Impl_in_rule__Declaration__Group__36832 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_rule__Declaration__Group__4_in_rule__Declaration__Group__36835 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Declaration__ValAssignment_3_in_rule__Declaration__Group__3__Impl6862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Declaration__Group__4__Impl_in_rule__Declaration__Group__46892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__Declaration__Group__4__Impl6920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assignation__Group__0__Impl_in_rule__Assignation__Group__06961 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_rule__Assignation__Group__1_in_rule__Assignation__Group__06964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assignation__VarAssignment_0_in_rule__Assignation__Group__0__Impl6991 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assignation__Group__1__Impl_in_rule__Assignation__Group__17021 = new BitSet(new long[]{0x0C002000000FC020L});
-    public static final BitSet FOLLOW_rule__Assignation__Group__2_in_rule__Assignation__Group__17024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__Assignation__Group__1__Impl7052 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assignation__Group__2__Impl_in_rule__Assignation__Group__27083 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_rule__Assignation__Group__3_in_rule__Assignation__Group__27086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assignation__ExprAssignment_2_in_rule__Assignation__Group__2__Impl7113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Assignation__Group__3__Impl_in_rule__Assignation__Group__37143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__Assignation__Group__3__Impl7171 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_3__0__Impl_in_rule__Expression__Group_3__07210 = new BitSet(new long[]{0x0C002000000FC020L});
-    public static final BitSet FOLLOW_rule__Expression__Group_3__1_in_rule__Expression__Group_3__07213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Alternatives_3_0_in_rule__Expression__Group_3__0__Impl7240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_3__1__Impl_in_rule__Expression__Group_3__17270 = new BitSet(new long[]{0x0C002000000FC020L});
-    public static final BitSet FOLLOW_rule__Expression__Group_3__2_in_rule__Expression__Group_3__17273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__LeftAssignment_3_1_in_rule__Expression__Group_3__1__Impl7300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_3__2__Impl_in_rule__Expression__Group_3__27330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__RightAssignment_3_2_in_rule__Expression__Group_3__2__Impl7357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_4__0__Impl_in_rule__Expression__Group_4__07393 = new BitSet(new long[]{0x0C002000000FC020L});
-    public static final BitSet FOLLOW_rule__Expression__Group_4__1_in_rule__Expression__Group_4__07396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_rule__Expression__Group_4__0__Impl7424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_4__1__Impl_in_rule__Expression__Group_4__17455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__ExpAssignment_4_1_in_rule__Expression__Group_4__1__Impl7482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Checkbox__Group__0__Impl_in_rule__Checkbox__Group__07516 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Checkbox__Group__1_in_rule__Checkbox__Group__07519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_rule__Checkbox__Group__0__Impl7547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Checkbox__Group__1__Impl_in_rule__Checkbox__Group__17578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Checkbox__Alternatives_1_in_rule__Checkbox__Group__1__Impl7605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group__0__Impl_in_rule__Link__Group__07639 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Link__Group__1_in_rule__Link__Group__07642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rule__Link__Group__0__Impl7670 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Group__1__Impl_in_rule__Link__Group__17701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Link__Alternatives_1_in_rule__Link__Group__1__Impl7728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Button__Group__0__Impl_in_rule__Button__Group__07762 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Button__Group__1_in_rule__Button__Group__07765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rule__Button__Group__0__Impl7793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Button__Group__1__Impl_in_rule__Button__Group__17824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Button__Alternatives_1_in_rule__Button__Group__1__Impl7851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Image__Group__0__Impl_in_rule__Image__Group__07885 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Image__Group__1_in_rule__Image__Group__07888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_rule__Image__Group__0__Impl7916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Image__Group__1__Impl_in_rule__Image__Group__17947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Image__Alternatives_1_in_rule__Image__Group__1__Impl7974 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextField__Group__0__Impl_in_rule__TextField__Group__08008 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__TextField__Group__1_in_rule__TextField__Group__08011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_rule__TextField__Group__0__Impl8039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextField__Group__1__Impl_in_rule__TextField__Group__18070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TextField__Alternatives_1_in_rule__TextField__Group__1__Impl8097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Select__Group__0__Impl_in_rule__Select__Group__08131 = new BitSet(new long[]{0x0000000001F00000L});
-    public static final BitSet FOLLOW_rule__Select__Group__1_in_rule__Select__Group__08134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_rule__Select__Group__0__Impl8162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Select__Group__1__Impl_in_rule__Select__Group__18193 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__Select__Group__2_in_rule__Select__Group__18196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Select__ValueAssignment_1_in_rule__Select__Group__1__Impl8223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Select__Group__2__Impl_in_rule__Select__Group__28253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Select__Group__2__Impl8281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Click__Group__0__Impl_in_rule__Click__Group__08318 = new BitSet(new long[]{0x000B800000000000L});
-    public static final BitSet FOLLOW_rule__Click__Group__1_in_rule__Click__Group__08321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_rule__Click__Group__0__Impl8349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Click__Group__1__Impl_in_rule__Click__Group__18380 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_rule__Click__Group__2_in_rule__Click__Group__18383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Click__ValAssignment_1_in_rule__Click__Group__1__Impl8410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Click__Group__2__Impl_in_rule__Click__Group__28440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rule__Click__Group__2__Impl8468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Check__Group__0__Impl_in_rule__Check__Group__08505 = new BitSet(new long[]{0x000BC00000000000L});
-    public static final BitSet FOLLOW_rule__Check__Group__1_in_rule__Check__Group__08508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_rule__Check__Group__0__Impl8536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Check__Group__1__Impl_in_rule__Check__Group__18567 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_rule__Check__Group__2_in_rule__Check__Group__18570 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Check__ValAssignment_1_in_rule__Check__Group__1__Impl8597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Check__Group__2__Impl_in_rule__Check__Group__28627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rule__Check__Group__2__Impl8655 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__Group__0__Impl_in_rule__Fill__Group__08692 = new BitSet(new long[]{0x000F800000000000L});
-    public static final BitSet FOLLOW_rule__Fill__Group__1_in_rule__Fill__Group__08695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_rule__Fill__Group__0__Impl8723 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__Group__1__Impl_in_rule__Fill__Group__18754 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_rule__Fill__Group__2_in_rule__Fill__Group__18757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__ValAssignment_1_in_rule__Fill__Group__1__Impl8784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__Group__2__Impl_in_rule__Fill__Group__28814 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Fill__Group__3_in_rule__Fill__Group__28817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_rule__Fill__Group__2__Impl8845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__Group__3__Impl_in_rule__Fill__Group__38876 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_rule__Fill__Group__4_in_rule__Fill__Group__38879 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Fill__Group__3__Impl8906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__Group__4__Impl_in_rule__Fill__Group__48935 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rule__Fill__Group__4__Impl8963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Clear__Group__0__Impl_in_rule__Clear__Group__09004 = new BitSet(new long[]{0x000FC00000000000L});
-    public static final BitSet FOLLOW_rule__Clear__Group__1_in_rule__Clear__Group__09007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_rule__Clear__Group__0__Impl9035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Clear__Group__1__Impl_in_rule__Clear__Group__19066 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_rule__Clear__Group__2_in_rule__Clear__Group__19069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Clear__Alternatives_1_in_rule__Clear__Group__1__Impl9096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Clear__Group__2__Impl_in_rule__Clear__Group__29126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rule__Clear__Group__2__Impl9154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Verify__Group__0__Impl_in_rule__Verify__Group__09191 = new BitSet(new long[]{0x000FC00000000000L});
-    public static final BitSet FOLLOW_rule__Verify__Group__1_in_rule__Verify__Group__09194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rule__Verify__Group__0__Impl9222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Verify__Group__1__Impl_in_rule__Verify__Group__19253 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_rule__Verify__Group__2_in_rule__Verify__Group__19256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Verify__Alternatives_1_in_rule__Verify__Group__1__Impl9283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Verify__Group__2__Impl_in_rule__Verify__Group__29313 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Verify__Group__3_in_rule__Verify__Group__29316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_rule__Verify__Group__2__Impl9344 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Verify__Group__3__Impl_in_rule__Verify__Group__39375 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_rule__Verify__Group__4_in_rule__Verify__Group__39378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Verify__Group__3__Impl9405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Verify__Group__4__Impl_in_rule__Verify__Group__49434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rule__Verify__Group__4__Impl9462 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exist__Group__0__Impl_in_rule__Exist__Group__09503 = new BitSet(new long[]{0x000FC00000000000L});
-    public static final BitSet FOLLOW_rule__Exist__Group__1_in_rule__Exist__Group__09506 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__Exist__Group__0__Impl9534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exist__Group__1__Impl_in_rule__Exist__Group__19565 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_rule__Exist__Group__2_in_rule__Exist__Group__19568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exist__ValAssignment_1_in_rule__Exist__Group__1__Impl9595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exist__Group__2__Impl_in_rule__Exist__Group__29625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rule__Exist__Group__2__Impl9653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GoTo__Group__0__Impl_in_rule__GoTo__Group__09690 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__GoTo__Group__1_in_rule__GoTo__Group__09693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_rule__GoTo__Group__0__Impl9721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GoTo__Group__1__Impl_in_rule__GoTo__Group__19752 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_rule__GoTo__Group__2_in_rule__GoTo__Group__19755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GoTo__UrlAssignment_1_in_rule__GoTo__Group__1__Impl9782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GoTo__Group__2__Impl_in_rule__GoTo__Group__29812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rule__GoTo__Group__2__Impl9840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSubroutine_in_rule__Program__SubAssignment_09882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMain_in_rule__Program__MainAssignment_19913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHead_in_rule__Subroutine__HeadAssignment_19944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBody_in_rule__Subroutine__BodyAssignment_29975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctionName_in_rule__Head__NameAssignment_0_010006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctionName_in_rule__Head__NameAssignment_1_010037 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariableName_in_rule__Head__VarIdAssignment_1_210068 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariableName_in_rule__Head__VarIdAssignment_1_3_110099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__FunctionReference__FunctionNameAssignment10134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__VariableReference__VarIDAssignment10173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__FunctionCall__VarAssignment_1_210208 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__FunctionCall__VarAssignment_1_3_110239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__FunctionName__NameAssignment10270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInstruction_in_rule__Body__InstructionsAssignment_110301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInstruction_in_rule__Body__InstructionsAssignment_210332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDeclaration_in_rule__Instruction__DecAssignment_010363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCondition_in_rule__Instruction__CondAssignment_110394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWhile_in_rule__Instruction__WhileAssignment_210425 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActionInstruction_in_rule__Instruction__ActAssignment_310456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAssignation_in_rule__Instruction__AssAssignment_410487 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctionCall_in_rule__Instruction__SubAssignment_510518 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Condition__ExpAssignment_310549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInstruction_in_rule__Condition__InsAssignment_610580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInstruction_in_rule__Condition__Ins2Assignment_810611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__While__ExpAssignment_110642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInstruction_in_rule__While__InsAssignment_310673 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClick_in_rule__ActionInstruction__ActionAssignment_010704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCheck_in_rule__ActionInstruction__ActionAssignment_110735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFill_in_rule__ActionInstruction__ActionAssignment_210766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClear_in_rule__ActionInstruction__ActionAssignment_310797 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__VariableName__NameAssignment10828 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariableName_in_rule__Declaration__NameAssignment_110859 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Declaration__ValAssignment_310890 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariableReference_in_rule__Assignation__VarAssignment_010921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Assignation__ExprAssignment_210952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleType_in_rule__Expression__TypeAssignment_010983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_rule__Expression__VarAssignment_111014 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleActionExpression_in_rule__Expression__ActAssignment_211045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Expression__LeftAssignment_3_111076 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Expression__RightAssignment_3_211107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Expression__ExpAssignment_4_111138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariableReference_in_rule__Variable__VarAssignment11169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVerify_in_rule__ActionExpression__ExprAssignment_011200 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExist_in_rule__ActionExpression__ExprAssignment_111231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Checkbox__CheckAssignment_1_011262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Link__LinkAssignment_1_011293 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Button__ButAssignment_1_011324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Image__ImgAssignment_1_011355 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextField__TextAssignment_1_011386 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TypeElement__ElemAlternatives_0_in_rule__TypeElement__ElemAssignment11417 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTypeElement_in_rule__Select__ValueAssignment_111450 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Click__ValAlternatives_1_0_in_rule__Click__ValAssignment_111481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Check__ValAlternatives_1_0_in_rule__Check__ValAssignment_111514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fill__ValAlternatives_1_0_in_rule__Fill__ValAssignment_111547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exist__ValAlternatives_1_0_in_rule__Exist__ValAssignment_111580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_URL_in_rule__GoTo__UrlAssignment_111613 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OpenBrowser__Alternatives_in_ruleOpenBrowser2349 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__Group_0__0_in_rule__Head__Alternatives2384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__Group_1__0_in_rule__Head__Alternatives2402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_0__0_in_rule__FunctionCall__Alternatives2435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__0_in_rule__FunctionCall__Alternatives2453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Instruction__DecAssignment_0_in_rule__Instruction__Alternatives2486 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Instruction__CondAssignment_1_in_rule__Instruction__Alternatives2504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Instruction__WhileAssignment_2_in_rule__Instruction__Alternatives2522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Instruction__ActAssignment_3_in_rule__Instruction__Alternatives2540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Instruction__AssAssignment_4_in_rule__Instruction__Alternatives2558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Instruction__SubAssignment_5_in_rule__Instruction__Alternatives2576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Condition__Alternatives_12610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Condition__Alternatives_12630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ActionInstruction__ActionAssignment_0_in_rule__ActionInstruction__Alternatives2664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ActionInstruction__ActionAssignment_1_in_rule__ActionInstruction__Alternatives2682 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ActionInstruction__ActionAssignment_2_in_rule__ActionInstruction__Alternatives2700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ActionInstruction__ActionAssignment_3_in_rule__ActionInstruction__Alternatives2718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGoTo_in_rule__ActionInstruction__Alternatives2736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__TypeAssignment_0_in_rule__Expression__Alternatives2768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__VarAssignment_1_in_rule__Expression__Alternatives2786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__ActAssignment_2_in_rule__Expression__Alternatives2804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_3__0_in_rule__Expression__Alternatives2822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_4__0_in_rule__Expression__Alternatives2840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Expression__Alternatives_3_02874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Expression__Alternatives_3_02894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Expression__Alternatives_3_02914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Type__Alternatives2949 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__Type__Alternatives2969 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__Type__Alternatives2989 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ActionExpression__ExprAssignment_0_in_rule__ActionExpression__Alternatives3023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ActionExpression__ExprAssignment_1_in_rule__ActionExpression__Alternatives3041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClickableElement_in_rule__Element__Alternatives3074 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFillableElement_in_rule__Element__Alternatives3091 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCheckableElement_in_rule__Element__Alternatives3108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLink_in_rule__ClickableElement__Alternatives3140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleButton_in_rule__ClickableElement__Alternatives3157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImage_in_rule__ClickableElement__Alternatives3174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Checkbox__CheckAssignment_1_0_in_rule__Checkbox__Alternatives_13206 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_rule__Checkbox__Alternatives_13224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__LinkAssignment_1_0_in_rule__Link__Alternatives_13256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_rule__Link__Alternatives_13274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Button__ButAssignment_1_0_in_rule__Button__Alternatives_13306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_rule__Button__Alternatives_13324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__ImgAssignment_1_0_in_rule__Image__Alternatives_13356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_rule__Image__Alternatives_13374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextField__TextAssignment_1_0_in_rule__TextField__Alternatives_13406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_rule__TextField__Alternatives_13424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__TypeElement__ElemAlternatives_03457 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__TypeElement__ElemAlternatives_03477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__TypeElement__ElemAlternatives_03497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__TypeElement__ElemAlternatives_03517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__TypeElement__ElemAlternatives_03537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClickableElement_in_rule__Click__ValAlternatives_1_03571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelect_in_rule__Click__ValAlternatives_1_03588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCheckableElement_in_rule__Check__ValAlternatives_1_03620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelect_in_rule__Check__ValAlternatives_1_03637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFillableElement_in_rule__Fill__ValAlternatives_1_03669 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelect_in_rule__Fill__ValAlternatives_1_03686 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFillableElement_in_rule__Clear__Alternatives_13718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCheckableElement_in_rule__Clear__Alternatives_13735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelect_in_rule__Clear__Alternatives_13752 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFillableElement_in_rule__Verify__Alternatives_13784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCheckableElement_in_rule__Verify__Alternatives_13801 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelect_in_rule__Verify__Alternatives_13818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleElement_in_rule__Exist__ValAlternatives_1_03850 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelect_in_rule__Exist__ValAlternatives_1_03867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__OpenBrowser__Alternatives3900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__OpenBrowser__Alternatives3921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Program__Group__0__Impl_in_rule__Program__Group__03954 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__Program__Group__1_in_rule__Program__Group__03957 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Program__SubAssignment_0_in_rule__Program__Group__0__Impl3984 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__Program__Group__1__Impl_in_rule__Program__Group__14015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Program__MainAssignment_1_in_rule__Program__Group__1__Impl4042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__0__Impl_in_rule__Subroutine__Group__04076 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__1_in_rule__Subroutine__Group__04079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Subroutine__Group__0__Impl4107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__1__Impl_in_rule__Subroutine__Group__14138 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__2_in_rule__Subroutine__Group__14141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__HeadAssignment_1_in_rule__Subroutine__Group__1__Impl4168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__Group__2__Impl_in_rule__Subroutine__Group__24198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Subroutine__BodyAssignment_2_in_rule__Subroutine__Group__2__Impl4225 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__Group_0__0__Impl_in_rule__Head__Group_0__04261 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__Head__Group_0__1_in_rule__Head__Group_0__04264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__NameAssignment_0_0_in_rule__Head__Group_0__0__Impl4291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__Group_0__1__Impl_in_rule__Head__Group_0__14321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Head__Group_0__1__Impl4349 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__Group_1__0__Impl_in_rule__Head__Group_1__04384 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__Head__Group_1__1_in_rule__Head__Group_1__04387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__NameAssignment_1_0_in_rule__Head__Group_1__0__Impl4414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__Group_1__1__Impl_in_rule__Head__Group_1__14444 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Head__Group_1__2_in_rule__Head__Group_1__14447 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__Head__Group_1__1__Impl4475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__Group_1__2__Impl_in_rule__Head__Group_1__24506 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_rule__Head__Group_1__3_in_rule__Head__Group_1__24509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__VarIdAssignment_1_2_in_rule__Head__Group_1__2__Impl4536 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__Group_1__3__Impl_in_rule__Head__Group_1__34566 = new BitSet(new long[]{0x00000000C0000000L});
+    public static final BitSet FOLLOW_rule__Head__Group_1__4_in_rule__Head__Group_1__34569 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__Group_1_3__0_in_rule__Head__Group_1__3__Impl4596 = new BitSet(new long[]{0x0000000080000002L});
+    public static final BitSet FOLLOW_rule__Head__Group_1__4__Impl_in_rule__Head__Group_1__44627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Head__Group_1__4__Impl4655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__Group_1_3__0__Impl_in_rule__Head__Group_1_3__04696 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Head__Group_1_3__1_in_rule__Head__Group_1_3__04699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Head__Group_1_3__0__Impl4727 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__Group_1_3__1__Impl_in_rule__Head__Group_1_3__14758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Head__VarIdAssignment_1_3_1_in_rule__Head__Group_1_3__1__Impl4785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_0__0__Impl_in_rule__FunctionCall__Group_0__04819 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_0__1_in_rule__FunctionCall__Group_0__04822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctionReference_in_rule__FunctionCall__Group_0__0__Impl4849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_0__1__Impl_in_rule__FunctionCall__Group_0__14878 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__FunctionCall__Group_0__1__Impl4906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__0__Impl_in_rule__FunctionCall__Group_1__04941 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__1_in_rule__FunctionCall__Group_1__04944 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctionReference_in_rule__FunctionCall__Group_1__0__Impl4971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__1__Impl_in_rule__FunctionCall__Group_1__15000 = new BitSet(new long[]{0x80040000000FC020L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__2_in_rule__FunctionCall__Group_1__15003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__FunctionCall__Group_1__1__Impl5031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__2__Impl_in_rule__FunctionCall__Group_1__25062 = new BitSet(new long[]{0x0000000240000000L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__3_in_rule__FunctionCall__Group_1__25065 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__VarAssignment_1_2_in_rule__FunctionCall__Group_1__2__Impl5092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__3__Impl_in_rule__FunctionCall__Group_1__35122 = new BitSet(new long[]{0x0000000240000000L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__4_in_rule__FunctionCall__Group_1__35125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1_3__0_in_rule__FunctionCall__Group_1__3__Impl5152 = new BitSet(new long[]{0x0000000200000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1__4__Impl_in_rule__FunctionCall__Group_1__45183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__FunctionCall__Group_1__4__Impl5211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1_3__0__Impl_in_rule__FunctionCall__Group_1_3__05252 = new BitSet(new long[]{0x80040000000FC020L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1_3__1_in_rule__FunctionCall__Group_1_3__05255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__FunctionCall__Group_1_3__0__Impl5283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__Group_1_3__1__Impl_in_rule__FunctionCall__Group_1_3__15314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FunctionCall__VarAssignment_1_3_1_in_rule__FunctionCall__Group_1_3__1__Impl5341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Main__Group__0__Impl_in_rule__Main__Group__05375 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Main__Group__1_in_rule__Main__Group__05378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Main__Group__0__Impl5406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Main__Group__1__Impl_in_rule__Main__Group__15437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBody_in_rule__Main__Group__1__Impl5464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__0__Impl_in_rule__Body__Group__05497 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_rule__Body__Group__1_in_rule__Body__Group__05500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Body__Group__0__Impl5528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__1__Impl_in_rule__Body__Group__15559 = new BitSet(new long[]{0x0000000006000000L});
+    public static final BitSet FOLLOW_rule__Body__Group__2_in_rule__Body__Group__15562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Body__Group__1__Impl5590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__2__Impl_in_rule__Body__Group__25621 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_rule__Body__Group__3_in_rule__Body__Group__25624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__OpenAssignment_2_in_rule__Body__Group__2__Impl5651 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__3__Impl_in_rule__Body__Group__35681 = new BitSet(new long[]{0x5A00910000000020L,0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__4_in_rule__Body__Group__35684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Body__Group__3__Impl5712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__4__Impl_in_rule__Body__Group__45743 = new BitSet(new long[]{0x000000C000000000L});
+    public static final BitSet FOLLOW_rule__Body__Group__5_in_rule__Body__Group__45746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__InstructionsAssignment_4_in_rule__Body__Group__4__Impl5773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__5__Impl_in_rule__Body__Group__55803 = new BitSet(new long[]{0x000000C000000000L});
+    public static final BitSet FOLLOW_rule__Body__Group__6_in_rule__Body__Group__55806 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_5__0_in_rule__Body__Group__5__Impl5833 = new BitSet(new long[]{0x0000008000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group__6__Impl_in_rule__Body__Group__65864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Body__Group__6__Impl5892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_5__0__Impl_in_rule__Body__Group_5__05937 = new BitSet(new long[]{0x5A00910000000020L,0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_5__1_in_rule__Body__Group_5__05940 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__Body__Group_5__0__Impl5968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__Group_5__1__Impl_in_rule__Body__Group_5__15999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Body__InstructionsAssignment_5_1_in_rule__Body__Group_5__1__Impl6026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Group__0__Impl_in_rule__Condition__Group__06060 = new BitSet(new long[]{0x0000000100003000L});
+    public static final BitSet FOLLOW_rule__Condition__Group__1_in_rule__Condition__Group__06063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Condition__Group__0__Impl6091 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Group__1__Impl_in_rule__Condition__Group__16122 = new BitSet(new long[]{0x0000000100003000L});
+    public static final BitSet FOLLOW_rule__Condition__Group__2_in_rule__Condition__Group__16125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Alternatives_1_in_rule__Condition__Group__1__Impl6152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Group__2__Impl_in_rule__Condition__Group__26183 = new BitSet(new long[]{0x80040000000FC020L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__Condition__Group__3_in_rule__Condition__Group__26186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Condition__Group__2__Impl6214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Group__3__Impl_in_rule__Condition__Group__36245 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__Condition__Group__4_in_rule__Condition__Group__36248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__ExpAssignment_3_in_rule__Condition__Group__3__Impl6275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Group__4__Impl_in_rule__Condition__Group__46305 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Condition__Group__5_in_rule__Condition__Group__46308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Condition__Group__4__Impl6336 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Group__5__Impl_in_rule__Condition__Group__56367 = new BitSet(new long[]{0x5A00910000000020L,0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Group__6_in_rule__Condition__Group__56370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Condition__Group__5__Impl6398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Group__6__Impl_in_rule__Condition__Group__66429 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__Condition__Group__7_in_rule__Condition__Group__66432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__InsAssignment_6_in_rule__Condition__Group__6__Impl6461 = new BitSet(new long[]{0x5A00910000000022L,0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__InsAssignment_6_in_rule__Condition__Group__6__Impl6473 = new BitSet(new long[]{0x5A00910000000022L,0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Group__7__Impl_in_rule__Condition__Group__76506 = new BitSet(new long[]{0x5A00910000000020L,0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Group__8_in_rule__Condition__Group__76509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__Condition__Group__7__Impl6537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Group__8__Impl_in_rule__Condition__Group__86568 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_rule__Condition__Group__9_in_rule__Condition__Group__86571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Ins2Assignment_8_in_rule__Condition__Group__8__Impl6600 = new BitSet(new long[]{0x5A00910000000022L,0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Ins2Assignment_8_in_rule__Condition__Group__8__Impl6612 = new BitSet(new long[]{0x5A00910000000022L,0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Condition__Group__9__Impl_in_rule__Condition__Group__96645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__Condition__Group__9__Impl6673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__While__Group__0__Impl_in_rule__While__Group__06724 = new BitSet(new long[]{0x80040000000FC020L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__While__Group__1_in_rule__While__Group__06727 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__While__Group__0__Impl6755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__While__Group__1__Impl_in_rule__While__Group__16786 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_rule__While__Group__2_in_rule__While__Group__16789 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__While__ExpAssignment_1_in_rule__While__Group__1__Impl6816 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__While__Group__2__Impl_in_rule__While__Group__26846 = new BitSet(new long[]{0x5A00910000000020L,0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__While__Group__3_in_rule__While__Group__26849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_rule__While__Group__2__Impl6877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__While__Group__3__Impl_in_rule__While__Group__36908 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_rule__While__Group__4_in_rule__While__Group__36911 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__While__InsAssignment_3_in_rule__While__Group__3__Impl6940 = new BitSet(new long[]{0x5A00910000000022L,0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__While__InsAssignment_3_in_rule__While__Group__3__Impl6952 = new BitSet(new long[]{0x5A00910000000022L,0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__While__Group__4__Impl_in_rule__While__Group__46985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_rule__While__Group__4__Impl7013 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Declaration__Group__0__Impl_in_rule__Declaration__Group__07054 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Declaration__Group__1_in_rule__Declaration__Group__07057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Declaration__Group__0__Impl7085 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Declaration__Group__1__Impl_in_rule__Declaration__Group__17116 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_rule__Declaration__Group__2_in_rule__Declaration__Group__17119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Declaration__NameAssignment_1_in_rule__Declaration__Group__1__Impl7146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Declaration__Group__2__Impl_in_rule__Declaration__Group__27176 = new BitSet(new long[]{0x80040000000FC020L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__Declaration__Group__3_in_rule__Declaration__Group__27179 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__Declaration__Group__2__Impl7207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Declaration__Group__3__Impl_in_rule__Declaration__Group__37238 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_rule__Declaration__Group__4_in_rule__Declaration__Group__37241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Declaration__ValAssignment_3_in_rule__Declaration__Group__3__Impl7268 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Declaration__Group__4__Impl_in_rule__Declaration__Group__47298 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_rule__Declaration__Group__4__Impl7326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Assignation__Group__0__Impl_in_rule__Assignation__Group__07367 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_rule__Assignation__Group__1_in_rule__Assignation__Group__07370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Assignation__VarAssignment_0_in_rule__Assignation__Group__0__Impl7397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Assignation__Group__1__Impl_in_rule__Assignation__Group__17427 = new BitSet(new long[]{0x80040000000FC020L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__Assignation__Group__2_in_rule__Assignation__Group__17430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__Assignation__Group__1__Impl7458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Assignation__Group__2__Impl_in_rule__Assignation__Group__27489 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_rule__Assignation__Group__3_in_rule__Assignation__Group__27492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Assignation__ExprAssignment_2_in_rule__Assignation__Group__2__Impl7519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Assignation__Group__3__Impl_in_rule__Assignation__Group__37549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_rule__Assignation__Group__3__Impl7577 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_3__0__Impl_in_rule__Expression__Group_3__07616 = new BitSet(new long[]{0x80040000000FC020L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__Expression__Group_3__1_in_rule__Expression__Group_3__07619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Alternatives_3_0_in_rule__Expression__Group_3__0__Impl7646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_3__1__Impl_in_rule__Expression__Group_3__17676 = new BitSet(new long[]{0x80040000000FC020L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__Expression__Group_3__2_in_rule__Expression__Group_3__17679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__LeftAssignment_3_1_in_rule__Expression__Group_3__1__Impl7706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_3__2__Impl_in_rule__Expression__Group_3__27736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__RightAssignment_3_2_in_rule__Expression__Group_3__2__Impl7763 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_4__0__Impl_in_rule__Expression__Group_4__07799 = new BitSet(new long[]{0x80040000000FC020L,0x0000000000000001L});
+    public static final BitSet FOLLOW_rule__Expression__Group_4__1_in_rule__Expression__Group_4__07802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_rule__Expression__Group_4__0__Impl7830 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_4__1__Impl_in_rule__Expression__Group_4__17861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__ExpAssignment_4_1_in_rule__Expression__Group_4__1__Impl7888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Checkbox__Group__0__Impl_in_rule__Checkbox__Group__07922 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__Checkbox__Group__1_in_rule__Checkbox__Group__07925 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_rule__Checkbox__Group__0__Impl7953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Checkbox__Group__1__Impl_in_rule__Checkbox__Group__17984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Checkbox__Alternatives_1_in_rule__Checkbox__Group__1__Impl8011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group__0__Impl_in_rule__Link__Group__08045 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__Link__Group__1_in_rule__Link__Group__08048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_rule__Link__Group__0__Impl8076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Group__1__Impl_in_rule__Link__Group__18107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Link__Alternatives_1_in_rule__Link__Group__1__Impl8134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Button__Group__0__Impl_in_rule__Button__Group__08168 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__Button__Group__1_in_rule__Button__Group__08171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_rule__Button__Group__0__Impl8199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Button__Group__1__Impl_in_rule__Button__Group__18230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Button__Alternatives_1_in_rule__Button__Group__1__Impl8257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group__0__Impl_in_rule__Image__Group__08291 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__Image__Group__1_in_rule__Image__Group__08294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_rule__Image__Group__0__Impl8322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group__1__Impl_in_rule__Image__Group__18353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Alternatives_1_in_rule__Image__Group__1__Impl8380 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextField__Group__0__Impl_in_rule__TextField__Group__08414 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__TextField__Group__1_in_rule__TextField__Group__08417 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_rule__TextField__Group__0__Impl8445 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextField__Group__1__Impl_in_rule__TextField__Group__18476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TextField__Alternatives_1_in_rule__TextField__Group__1__Impl8503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Select__Group__0__Impl_in_rule__Select__Group__08537 = new BitSet(new long[]{0x0000000001F00000L});
+    public static final BitSet FOLLOW_rule__Select__Group__1_in_rule__Select__Group__08540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_rule__Select__Group__0__Impl8568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Select__Group__1__Impl_in_rule__Select__Group__18599 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_rule__Select__Group__2_in_rule__Select__Group__18602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Select__ValueAssignment_1_in_rule__Select__Group__1__Impl8629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Select__Group__2__Impl_in_rule__Select__Group__28659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Select__Group__2__Impl8687 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Click__Group__0__Impl_in_rule__Click__Group__08724 = new BitSet(new long[]{0x0170000000000000L});
+    public static final BitSet FOLLOW_rule__Click__Group__1_in_rule__Click__Group__08727 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_rule__Click__Group__0__Impl8755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Click__Group__1__Impl_in_rule__Click__Group__18786 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_rule__Click__Group__2_in_rule__Click__Group__18789 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Click__ValAssignment_1_in_rule__Click__Group__1__Impl8816 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Click__Group__2__Impl_in_rule__Click__Group__28846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__Click__Group__2__Impl8874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Check__Group__0__Impl_in_rule__Check__Group__08911 = new BitSet(new long[]{0x0178000000000000L});
+    public static final BitSet FOLLOW_rule__Check__Group__1_in_rule__Check__Group__08914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_rule__Check__Group__0__Impl8942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Check__Group__1__Impl_in_rule__Check__Group__18973 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_rule__Check__Group__2_in_rule__Check__Group__18976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Check__ValAssignment_1_in_rule__Check__Group__1__Impl9003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Check__Group__2__Impl_in_rule__Check__Group__29033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__Check__Group__2__Impl9061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__Group__0__Impl_in_rule__Fill__Group__09098 = new BitSet(new long[]{0x01F0000000000000L});
+    public static final BitSet FOLLOW_rule__Fill__Group__1_in_rule__Fill__Group__09101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rule__Fill__Group__0__Impl9129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__Group__1__Impl_in_rule__Fill__Group__19160 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_rule__Fill__Group__2_in_rule__Fill__Group__19163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__ValAssignment_1_in_rule__Fill__Group__1__Impl9190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__Group__2__Impl_in_rule__Fill__Group__29220 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Fill__Group__3_in_rule__Fill__Group__29223 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rule__Fill__Group__2__Impl9251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__Group__3__Impl_in_rule__Fill__Group__39282 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_rule__Fill__Group__4_in_rule__Fill__Group__39285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Fill__Group__3__Impl9312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__Group__4__Impl_in_rule__Fill__Group__49341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__Fill__Group__4__Impl9369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Clear__Group__0__Impl_in_rule__Clear__Group__09410 = new BitSet(new long[]{0x01F8000000000000L});
+    public static final BitSet FOLLOW_rule__Clear__Group__1_in_rule__Clear__Group__09413 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_rule__Clear__Group__0__Impl9441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Clear__Group__1__Impl_in_rule__Clear__Group__19472 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_rule__Clear__Group__2_in_rule__Clear__Group__19475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Clear__Alternatives_1_in_rule__Clear__Group__1__Impl9502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Clear__Group__2__Impl_in_rule__Clear__Group__29532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__Clear__Group__2__Impl9560 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Verify__Group__0__Impl_in_rule__Verify__Group__09597 = new BitSet(new long[]{0x01F8000000000000L});
+    public static final BitSet FOLLOW_rule__Verify__Group__1_in_rule__Verify__Group__09600 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_rule__Verify__Group__0__Impl9628 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Verify__Group__1__Impl_in_rule__Verify__Group__19659 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_rule__Verify__Group__2_in_rule__Verify__Group__19662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Verify__Alternatives_1_in_rule__Verify__Group__1__Impl9689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Verify__Group__2__Impl_in_rule__Verify__Group__29719 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Verify__Group__3_in_rule__Verify__Group__29722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rule__Verify__Group__2__Impl9750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Verify__Group__3__Impl_in_rule__Verify__Group__39781 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_rule__Verify__Group__4_in_rule__Verify__Group__39784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Verify__Group__3__Impl9811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Verify__Group__4__Impl_in_rule__Verify__Group__49840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__Verify__Group__4__Impl9868 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exist__Group__0__Impl_in_rule__Exist__Group__09909 = new BitSet(new long[]{0x01F8000000000000L});
+    public static final BitSet FOLLOW_rule__Exist__Group__1_in_rule__Exist__Group__09912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rule__Exist__Group__0__Impl9940 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exist__Group__1__Impl_in_rule__Exist__Group__19971 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_rule__Exist__Group__2_in_rule__Exist__Group__19974 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exist__ValAssignment_1_in_rule__Exist__Group__1__Impl10001 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exist__Group__2__Impl_in_rule__Exist__Group__210031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__Exist__Group__2__Impl10059 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GoTo__Group__0__Impl_in_rule__GoTo__Group__010096 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__GoTo__Group__1_in_rule__GoTo__Group__010099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_rule__GoTo__Group__0__Impl10127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GoTo__Group__1__Impl_in_rule__GoTo__Group__110158 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_rule__GoTo__Group__2_in_rule__GoTo__Group__110161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GoTo__UrlAssignment_1_in_rule__GoTo__Group__1__Impl10188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GoTo__Group__2__Impl_in_rule__GoTo__Group__210218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__GoTo__Group__2__Impl10246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSubroutine_in_rule__Program__SubAssignment_010288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMain_in_rule__Program__MainAssignment_110319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHead_in_rule__Subroutine__HeadAssignment_110350 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBody_in_rule__Subroutine__BodyAssignment_210381 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctionName_in_rule__Head__NameAssignment_0_010412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctionName_in_rule__Head__NameAssignment_1_010443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableName_in_rule__Head__VarIdAssignment_1_210474 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableName_in_rule__Head__VarIdAssignment_1_3_110505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__FunctionReference__FunctionNameAssignment10540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__VariableReference__VarIDAssignment10579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__FunctionCall__VarAssignment_1_210614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__FunctionCall__VarAssignment_1_3_110645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__FunctionName__NameAssignment10676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOpenBrowser_in_rule__Body__OpenAssignment_210707 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInstruction_in_rule__Body__InstructionsAssignment_410738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInstruction_in_rule__Body__InstructionsAssignment_5_110769 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDeclaration_in_rule__Instruction__DecAssignment_010800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCondition_in_rule__Instruction__CondAssignment_110831 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWhile_in_rule__Instruction__WhileAssignment_210862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActionInstruction_in_rule__Instruction__ActAssignment_310893 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAssignation_in_rule__Instruction__AssAssignment_410924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctionCall_in_rule__Instruction__SubAssignment_510955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Condition__ExpAssignment_310986 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInstruction_in_rule__Condition__InsAssignment_611017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInstruction_in_rule__Condition__Ins2Assignment_811048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__While__ExpAssignment_111079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInstruction_in_rule__While__InsAssignment_311110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClick_in_rule__ActionInstruction__ActionAssignment_011141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCheck_in_rule__ActionInstruction__ActionAssignment_111172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFill_in_rule__ActionInstruction__ActionAssignment_211203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClear_in_rule__ActionInstruction__ActionAssignment_311234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__VariableName__NameAssignment11265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableName_in_rule__Declaration__NameAssignment_111296 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Declaration__ValAssignment_311327 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableReference_in_rule__Assignation__VarAssignment_011358 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Assignation__ExprAssignment_211389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleType_in_rule__Expression__TypeAssignment_011420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_rule__Expression__VarAssignment_111451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleActionExpression_in_rule__Expression__ActAssignment_211482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Expression__LeftAssignment_3_111513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Expression__RightAssignment_3_211544 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Expression__ExpAssignment_4_111575 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariableReference_in_rule__Variable__VarAssignment11606 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVerify_in_rule__ActionExpression__ExprAssignment_011637 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExist_in_rule__ActionExpression__ExprAssignment_111668 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Checkbox__CheckAssignment_1_011699 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Link__LinkAssignment_1_011730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Button__ButAssignment_1_011761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Image__ImgAssignment_1_011792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TextField__TextAssignment_1_011823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TypeElement__ElemAlternatives_0_in_rule__TypeElement__ElemAssignment11854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTypeElement_in_rule__Select__ValueAssignment_111887 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Click__ValAlternatives_1_0_in_rule__Click__ValAssignment_111918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Check__ValAlternatives_1_0_in_rule__Check__ValAssignment_111951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fill__ValAlternatives_1_0_in_rule__Fill__ValAssignment_111984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exist__ValAlternatives_1_0_in_rule__Exist__ValAssignment_112017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_URL_in_rule__GoTo__UrlAssignment_112050 = new BitSet(new long[]{0x0000000000000002L});
 
 }

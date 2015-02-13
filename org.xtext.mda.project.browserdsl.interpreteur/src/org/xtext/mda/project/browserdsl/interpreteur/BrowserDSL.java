@@ -6,7 +6,7 @@ public class BrowserDSL {
 
 	public static void start(EObject eobject) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("prprprprpprprprprprpprpr");
 	}
 
 	

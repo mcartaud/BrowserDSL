@@ -32,8 +32,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Main"/>
   <eClassifiers xsi:type="ecore:EClass" name="Body" eSuperTypes="#//Main">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="open" eType="#//OpenBrowser"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
         eType="#//Instruction" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OpenBrowser">
+    <eLiterals name="Chrome" literal="Chrome"/>
+    <eLiterals name="Firefox" value="1" literal="Firefox"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Instruction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dec" eType="#//Declaration"

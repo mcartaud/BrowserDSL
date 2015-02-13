@@ -7,6 +7,10 @@
     editorPluginID="org.xtext.mda.project.browserdsl.editor" runtimeVersion="2.10">
   <genPackages prefix="BrowserDSL" basePackage="org.xtext.mda.project" disposableProviderFactory="true"
       fileExtensions="browserdsl" ecorePackage="BrowserDSL.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="BrowserDSL.ecore#//OpenBrowser">
+      <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//OpenBrowser/Chrome"/>
+      <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//OpenBrowser/Firefox"/>
+    </genEnums>
     <genClasses ecoreClass="BrowserDSL.ecore#//Program">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Program/sub"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Program/main"/>
@@ -32,6 +36,7 @@
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Main"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Body">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Body/open"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Body/instructions"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Instruction">

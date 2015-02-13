@@ -38,7 +38,14 @@ Main:
 ;
 
 Body:
-	'{' instructions+=Instruction (instructions+=Instruction)* '}'
+	'{'
+	'browser' open=OpenBrowser ', '
+	instructions+=Instruction (' ' instructions+=Instruction)* 
+	'}'
+;
+
+enum OpenBrowser:
+	Chrome | Firefox
 ;
 
 Instruction:

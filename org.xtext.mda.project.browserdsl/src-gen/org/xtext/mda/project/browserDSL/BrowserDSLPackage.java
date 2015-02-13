@@ -4,6 +4,7 @@ package org.xtext.mda.project.browserDSL;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -309,13 +310,22 @@ public interface BrowserDSLPackage extends EPackage
   int BODY = 8;
 
   /**
+   * The feature id for the '<em><b>Open</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BODY__OPEN = MAIN_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Instructions</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BODY__INSTRUCTIONS = MAIN_FEATURE_COUNT + 0;
+  int BODY__INSTRUCTIONS = MAIN_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Body</em>' class.
@@ -324,7 +334,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BODY_FEATURE_COUNT = MAIN_FEATURE_COUNT + 1;
+  int BODY_FEATURE_COUNT = MAIN_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.InstructionImpl <em>Instruction</em>}' class.
@@ -1245,6 +1255,16 @@ public interface BrowserDSLPackage extends EPackage
    */
   int GO_TO_FEATURE_COUNT = ACTION_INSTRUCTION_FEATURE_COUNT + 1;
 
+  /**
+   * The meta object id for the '{@link org.xtext.mda.project.browserDSL.OpenBrowser <em>Open Browser</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.mda.project.browserDSL.OpenBrowser
+   * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getOpenBrowser()
+   * @generated
+   */
+  int OPEN_BROWSER = 37;
+
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Program <em>Program</em>}'.
@@ -1445,6 +1465,17 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    */
   EClass getBody();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Body#getOpen <em>Open</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Open</em>'.
+   * @see org.xtext.mda.project.browserDSL.Body#getOpen()
+   * @see #getBody()
+   * @generated
+   */
+  EAttribute getBody_Open();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.Body#getInstructions <em>Instructions</em>}'.
@@ -2145,6 +2176,16 @@ public interface BrowserDSLPackage extends EPackage
   EAttribute getGoTo_Url();
 
   /**
+   * Returns the meta object for enum '{@link org.xtext.mda.project.browserDSL.OpenBrowser <em>Open Browser</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Open Browser</em>'.
+   * @see org.xtext.mda.project.browserDSL.OpenBrowser
+   * @generated
+   */
+  EEnum getOpenBrowser();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2336,6 +2377,14 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EClass BODY = eINSTANCE.getBody();
+
+    /**
+     * The meta object literal for the '<em><b>Open</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BODY__OPEN = eINSTANCE.getBody_Open();
 
     /**
      * The meta object literal for the '<em><b>Instructions</b></em>' containment reference list feature.
@@ -2920,6 +2969,16 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EAttribute GO_TO__URL = eINSTANCE.getGoTo_Url();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.OpenBrowser <em>Open Browser</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.mda.project.browserDSL.OpenBrowser
+     * @see org.xtext.mda.project.browserDSL.impl.BrowserDSLPackageImpl#getOpenBrowser()
+     * @generated
+     */
+    EEnum OPEN_BROWSER = eINSTANCE.getOpenBrowser();
 
   }
 
