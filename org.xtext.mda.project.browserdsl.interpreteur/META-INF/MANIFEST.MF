@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Interpreteur
-Bundle-SymbolicName: org.xtext.mda.project.browserdsl.interpreteur;singleton:=true
+Bundle-SymbolicName: org.xtext.mda.project.browserdsl.interpreter;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.xtext.mda.project.browserdsl.interpreteur.Activator
 Require-Bundle: org.eclipse.ui,

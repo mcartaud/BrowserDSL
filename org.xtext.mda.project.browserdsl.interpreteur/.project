@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.xtext.mda.project.browserdsl.interpreteur</name>
+	<name>org.xtext.mda.project.browserdsl.interpreter</name>
 	<comment></comment>
 	<projects>
 	</projects>
