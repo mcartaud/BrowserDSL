@@ -3,60 +3,28 @@
 <plugin>
 
    <extension
-         point="org.eclipse.ui.commands">
-      <category
-            name="Sample Category"
-            id="org.xtext.mda.project.browserdsl.interpreteur.commands.category">
-      </category>
-      <command
-            name="Sample Command"
-            categoryId="org.xtext.mda.project.browserdsl.interpreteur.commands.category"
-            id="org.xtext.mda.project.browserdsl.interpreteur.commands.sampleCommand">
-      </command>
-   </extension>
-   <extension
-         point="org.eclipse.ui.handlers">
-      <handler
-            commandId="org.xtext.mda.project.browserdsl.interpreteur.commands.sampleCommand"
-            class="org.xtext.mda.project.browserdsl.interpreteur.handlers.SampleHandler">
-      </handler>
-   </extension>
-   <extension
-         point="org.eclipse.ui.bindings">
-      <key
-            commandId="org.xtext.mda.project.browserdsl.interpreteur.commands.sampleCommand"
-            contextId="org.eclipse.ui.contexts.window"
-            sequence="M1+6"
-            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
-      </key>
-   </extension>
-   <extension
-         point="org.eclipse.ui.menus">
-      <menuContribution
-            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="BrowserDSL Action Set"
+            visible="true"
+            id="BrowserDSL.interpreteur.actionSet">
          <menu
-               label="Sample Menu"
-               mnemonic="M"
-               id="org.xtext.mda.project.browserdsl.interpreteur.menus.sampleMenu">
-            <command
-                  commandId="org.xtext.mda.project.browserdsl.interpreteur.commands.sampleCommand"
-                  mnemonic="S"
-                  id="org.xtext.mda.project.browserdsl.interpreteur.menus.sampleCommand">
-            </command>
+               label="BrowserDSL"
+               id="browserdslMenu">
+            <separator
+                  name="browserdslGroup">
+            </separator>
          </menu>
-      </menuContribution>
-      <menuContribution
-            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
-         <toolbar
-               id="org.xtext.mda.project.browserdsl.interpreteur.toolbars.sampleToolbar">
-            <command
-                  commandId="org.xtext.mda.project.browserdsl.interpreteur.commands.sampleCommand"
-                  icon="icons/sample.gif"
-                  tooltip="Say hello world"
-                  id="org.xtext.mda.project.browserdsl.interpreteur.toolbars.sampleCommand">
-            </command>
-         </toolbar>
-      </menuContribution>
+         <action
+               label="Execute BrowserDSL"
+               icon="icons/sample.gif"
+               class="org.xtext.mda.project.browserdsl.interpreteur.actions.InterpreterAction"
+               tooltip="Execute the currently selected browserdsl model"
+               menubarPath="browserdslMenu/browserdslGroup"
+               toolbarPath="browserdslGroup"
+               id="browserdsl">
+         </action>
+      </actionSet>
    </extension>
-
+   
 </plugin>
