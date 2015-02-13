@@ -12,21 +12,22 @@ import org.xtext.mda.project.browserDSL.Subroutine;
 public class BrowserDSL {
 
 	private static WebDriver driver = null;
-	private static int browser;
+	private static OpenBrowser browser;
 	
 	private BrowserDSL(){ }
 	
 	public static void start(Program program) {
 		EList<Subroutine> subs = program.getSub();
 		Main main = program.getMain();
-		browser = main.eGet();
+		browser = main.getBody().getOpen();
+		getBrowser().get("http://google.fr");
 	}
 	
 	public static WebDriver getBrowser() {
 		if (driver == null) {
-			if (browser == OpenBrowser.CHROME_VALUE) {
+			if (browser == OpenBrowser.CHROME) {
 				driver = new ChromeDriver();
-			} else if (browser == OpenBrowser.FIREFOX_VALUE) {
+			} else if (browser == OpenBrowser.FIREFOX) {
 				driver = new FirefoxDriver();
 			}
 		}

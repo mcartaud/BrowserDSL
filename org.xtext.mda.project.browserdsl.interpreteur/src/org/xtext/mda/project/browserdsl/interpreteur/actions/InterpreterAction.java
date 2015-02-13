@@ -44,8 +44,6 @@ public class InterpreterAction implements IWorkbenchWindowActionDelegate {
 
 		IFile file = (IFile) activeEditor.getEditorInput().getAdapter(IFile.class); 
 
-		System.out.println("Loading file: " + file.getFullPath().toString());
-
 		ResourceSet rs = new ResourceSetImpl();
 
 		Resource resource = rs.getResource(URI.createURI(file.getFullPath().toString()), true);
