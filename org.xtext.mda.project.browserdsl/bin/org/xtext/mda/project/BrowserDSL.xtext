@@ -38,7 +38,7 @@ Main:
 ;
 
 Body:
-	'{browser' open=OpenBrowser ', '
+	'{browser' open=OpenBrowser '; '
 	instructions+=Instruction (' ' instructions+=Instruction)* 
 	'}'
 ;

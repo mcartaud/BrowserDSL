@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBrowserDSLParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_URL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'all '", "'any '", "' == '", "' > '", "' < '", "'bool '", "'string '", "'int '", "'checkbox'", "'link'", "'button'", "'image'", "'textField'", "'Chrome'", "'Firefox'", "'sub '", "'()'", "'(var '", "')'", "', var '", "'('", "','", "'main '", "'{browser'", "', '", "'}'", "' '", "'if '", "'then '", "'else '", "'endif'", "'while ('", "') do '", "' endwhile'", "'var '", "' = '", "';'", "' !'", "'checkbox '", "'link '", "'button '", "'image '", "'textField '", "'select('", "'click('", "');'", "'check('", "'fill('", "', value='", "'clear('", "'verify('", "'exist('", "'goTo('"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_URL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'all '", "'any '", "' == '", "' > '", "' < '", "'bool '", "'string '", "'int '", "'checkbox'", "'link'", "'button'", "'image'", "'textField'", "'Chrome'", "'Firefox'", "'sub '", "'()'", "'(var '", "')'", "', var '", "'('", "','", "'main '", "'{browser'", "'; '", "'}'", "' '", "'if '", "'then '", "'else '", "'endif'", "'while ('", "') do '", "' endwhile'", "'var '", "' = '", "';'", "' !'", "'checkbox '", "'link '", "'button '", "'image '", "'textField '", "'select('", "'click('", "');'", "'check('", "'fill('", "', value='", "'clear('", "'verify('", "'exist('", "'goTo('"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -7839,21 +7839,21 @@ public class InternalBrowserDSLParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Body__Group__2__Impl"
-    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2673:1: rule__Body__Group__2__Impl : ( ', ' ) ;
+    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2673:1: rule__Body__Group__2__Impl : ( '; ' ) ;
     public final void rule__Body__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2677:1: ( ( ', ' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2678:1: ( ', ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2677:1: ( ( '; ' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2678:1: ( '; ' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2678:1: ( ', ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2679:1: ', '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2678:1: ( '; ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:2679:1: '; '
             {
-             before(grammarAccess.getBodyAccess().getCommaSpaceKeyword_2()); 
+             before(grammarAccess.getBodyAccess().getSemicolonSpaceKeyword_2()); 
             match(input,36,FOLLOW_36_in_rule__Body__Group__2__Impl5650); 
-             after(grammarAccess.getBodyAccess().getCommaSpaceKeyword_2()); 
+             after(grammarAccess.getBodyAccess().getSemicolonSpaceKeyword_2()); 
 
             }
 

@@ -2676,11 +2676,11 @@ rule__Body__Group__2__Impl
     }
 :
 (
-{ before(grammarAccess.getBodyAccess().getCommaSpaceKeyword_2()); }
+{ before(grammarAccess.getBodyAccess().getSemicolonSpaceKeyword_2()); }
 
-	', ' 
+	'; ' 
 
-{ after(grammarAccess.getBodyAccess().getCommaSpaceKeyword_2()); }
+{ after(grammarAccess.getBodyAccess().getSemicolonSpaceKeyword_2()); }
 )
 
 ;
