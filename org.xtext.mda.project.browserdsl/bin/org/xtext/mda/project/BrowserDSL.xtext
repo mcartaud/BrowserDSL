@@ -38,14 +38,13 @@ Main:
 ;
 
 Body:
-	'{'
-	'browser' open=OpenBrowser ', '
+	'{browser' open=OpenBrowser ', '
 	instructions+=Instruction (' ' instructions+=Instruction)* 
 	'}'
 ;
 
 enum OpenBrowser:
-	Chrome | Firefox
+	Chrome|Firefox
 ;
 
 Instruction:

@@ -293,61 +293,57 @@ public class BrowserDSLGrammarAccess extends AbstractGrammarElementFinder {
 	public class BodyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Body");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cBrowserKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cOpenAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cOpenOpenBrowserEnumRuleCall_2_0 = (RuleCall)cOpenAssignment_2.eContents().get(0);
-		private final Keyword cCommaSpaceKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cInstructionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cInstructionsInstructionParserRuleCall_4_0 = (RuleCall)cInstructionsAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cSpaceKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cInstructionsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cInstructionsInstructionParserRuleCall_5_1_0 = (RuleCall)cInstructionsAssignment_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cBrowserKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cOpenAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cOpenOpenBrowserEnumRuleCall_1_0 = (RuleCall)cOpenAssignment_1.eContents().get(0);
+		private final Keyword cCommaSpaceKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cInstructionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cInstructionsInstructionParserRuleCall_3_0 = (RuleCall)cInstructionsAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cSpaceKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cInstructionsAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cInstructionsInstructionParserRuleCall_4_1_0 = (RuleCall)cInstructionsAssignment_4_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Body:
-		//	"{" "browser" open=OpenBrowser ", " instructions+=Instruction (" " instructions+=Instruction)* "}";
+		//	"{browser" open=OpenBrowser ", " instructions+=Instruction (" " instructions+=Instruction)* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"{" "browser" open=OpenBrowser ", " instructions+=Instruction (" " instructions+=Instruction)* "}"
+		//"{browser" open=OpenBrowser ", " instructions+=Instruction (" " instructions+=Instruction)* "}"
 		public Group getGroup() { return cGroup; }
 
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
-
-		//"browser"
-		public Keyword getBrowserKeyword_1() { return cBrowserKeyword_1; }
+		//"{browser"
+		public Keyword getBrowserKeyword_0() { return cBrowserKeyword_0; }
 
 		//open=OpenBrowser
-		public Assignment getOpenAssignment_2() { return cOpenAssignment_2; }
+		public Assignment getOpenAssignment_1() { return cOpenAssignment_1; }
 
 		//OpenBrowser
-		public RuleCall getOpenOpenBrowserEnumRuleCall_2_0() { return cOpenOpenBrowserEnumRuleCall_2_0; }
+		public RuleCall getOpenOpenBrowserEnumRuleCall_1_0() { return cOpenOpenBrowserEnumRuleCall_1_0; }
 
 		//", "
-		public Keyword getCommaSpaceKeyword_3() { return cCommaSpaceKeyword_3; }
+		public Keyword getCommaSpaceKeyword_2() { return cCommaSpaceKeyword_2; }
 
 		//instructions+=Instruction
-		public Assignment getInstructionsAssignment_4() { return cInstructionsAssignment_4; }
+		public Assignment getInstructionsAssignment_3() { return cInstructionsAssignment_3; }
 
 		//Instruction
-		public RuleCall getInstructionsInstructionParserRuleCall_4_0() { return cInstructionsInstructionParserRuleCall_4_0; }
+		public RuleCall getInstructionsInstructionParserRuleCall_3_0() { return cInstructionsInstructionParserRuleCall_3_0; }
 
 		//(" " instructions+=Instruction)*
-		public Group getGroup_5() { return cGroup_5; }
+		public Group getGroup_4() { return cGroup_4; }
 
 		//" "
-		public Keyword getSpaceKeyword_5_0() { return cSpaceKeyword_5_0; }
+		public Keyword getSpaceKeyword_4_0() { return cSpaceKeyword_4_0; }
 
 		//instructions+=Instruction
-		public Assignment getInstructionsAssignment_5_1() { return cInstructionsAssignment_5_1; }
+		public Assignment getInstructionsAssignment_4_1() { return cInstructionsAssignment_4_1; }
 
 		//Instruction
-		public RuleCall getInstructionsInstructionParserRuleCall_5_1_0() { return cInstructionsInstructionParserRuleCall_5_1_0; }
+		public RuleCall getInstructionsInstructionParserRuleCall_4_1_0() { return cInstructionsInstructionParserRuleCall_4_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class InstructionElements extends AbstractParserRuleElementFinder {
@@ -1605,7 +1601,7 @@ public class BrowserDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Body:
-	//	"{" "browser" open=OpenBrowser ", " instructions+=Instruction (" " instructions+=Instruction)* "}";
+	//	"{browser" open=OpenBrowser ", " instructions+=Instruction (" " instructions+=Instruction)* "}";
 	public BodyElements getBodyAccess() {
 		return pBody;
 	}
