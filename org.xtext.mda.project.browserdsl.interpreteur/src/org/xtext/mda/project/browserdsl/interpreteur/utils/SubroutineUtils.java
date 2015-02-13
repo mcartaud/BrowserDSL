@@ -12,7 +12,7 @@ public class SubroutineUtils {
 	private HashMap<String, Subroutine> subroutines;
 	
 	private SubroutineUtils(Program program) {
-		computeSubroutines(program.getSub());
+		computeSubroutines(program.getSubroutines());
 	}
 	
 	private void computeSubroutines(EList<Subroutine> list) {

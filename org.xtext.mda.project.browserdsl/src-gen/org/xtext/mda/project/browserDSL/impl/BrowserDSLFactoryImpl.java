@@ -82,6 +82,8 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
       case BrowserDSLPackage.DECLARATION: return createDeclaration();
       case BrowserDSLPackage.ASSIGNATION: return createAssignation();
       case BrowserDSLPackage.EXPRESSION: return createExpression();
+      case BrowserDSLPackage.NOT_EPRESSION: return createNotEpression();
+      case BrowserDSLPackage.BINARIE_EXPRESSION: return createBinarieExpression();
       case BrowserDSLPackage.VARIABLE: return createVariable();
       case BrowserDSLPackage.ACTION_EXPRESSION: return createActionExpression();
       case BrowserDSLPackage.ELEMENT: return createElement();
@@ -93,7 +95,6 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
       case BrowserDSLPackage.BUTTON: return createButton();
       case BrowserDSLPackage.IMAGE: return createImage();
       case BrowserDSLPackage.TEXT_FIELD: return createTextField();
-      case BrowserDSLPackage.TYPE_ELEMENT: return createTypeElement();
       case BrowserDSLPackage.SELECT: return createSelect();
       case BrowserDSLPackage.CLICK: return createClick();
       case BrowserDSLPackage.CHECK: return createCheck();
@@ -102,6 +103,7 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
       case BrowserDSLPackage.VERIFY: return createVerify();
       case BrowserDSLPackage.EXIST: return createExist();
       case BrowserDSLPackage.GO_TO: return createGoTo();
+      case BrowserDSLPackage.STRING_VALUE: return createStringValue();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -119,6 +121,8 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
     {
       case BrowserDSLPackage.OPEN_BROWSER:
         return createOpenBrowserFromString(eDataType, initialValue);
+      case BrowserDSLPackage.TYPE_ELEMENT:
+        return createTypeElementFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -136,6 +140,8 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
     {
       case BrowserDSLPackage.OPEN_BROWSER:
         return convertOpenBrowserToString(eDataType, instanceValue);
+      case BrowserDSLPackage.TYPE_ELEMENT:
+        return convertTypeElementToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -333,6 +339,28 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public NotEpression createNotEpression()
+  {
+    NotEpressionImpl notEpression = new NotEpressionImpl();
+    return notEpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BinarieExpression createBinarieExpression()
+  {
+    BinarieExpressionImpl binarieExpression = new BinarieExpressionImpl();
+    return binarieExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Variable createVariable()
   {
     VariableImpl variable = new VariableImpl();
@@ -454,17 +482,6 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public TypeElement createTypeElement()
-  {
-    TypeElementImpl typeElement = new TypeElementImpl();
-    return typeElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Select createSelect()
   {
     SelectImpl select = new SelectImpl();
@@ -553,6 +570,17 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public StringValue createStringValue()
+  {
+    StringValueImpl stringValue = new StringValueImpl();
+    return stringValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public OpenBrowser createOpenBrowserFromString(EDataType eDataType, String initialValue)
   {
     OpenBrowser result = OpenBrowser.get(initialValue);
@@ -566,6 +594,28 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * @generated
    */
   public String convertOpenBrowserToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TypeElement createTypeElementFromString(EDataType eDataType, String initialValue)
+  {
+    TypeElement result = TypeElement.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertTypeElementToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

@@ -160,6 +160,16 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
+      public Adapter caseNotEpression(NotEpression object)
+      {
+        return createNotEpressionAdapter();
+      }
+      @Override
+      public Adapter caseBinarieExpression(BinarieExpression object)
+      {
+        return createBinarieExpressionAdapter();
+      }
+      @Override
       public Adapter caseVariable(Variable object)
       {
         return createVariableAdapter();
@@ -215,11 +225,6 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
         return createTextFieldAdapter();
       }
       @Override
-      public Adapter caseTypeElement(TypeElement object)
-      {
-        return createTypeElementAdapter();
-      }
-      @Override
       public Adapter caseSelect(Select object)
       {
         return createSelectAdapter();
@@ -258,6 +263,11 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseGoTo(GoTo object)
       {
         return createGoToAdapter();
+      }
+      @Override
+      public Adapter caseStringValue(StringValue object)
+      {
+        return createStringValueAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -537,6 +547,36 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.NotEpression <em>Not Epression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.NotEpression
+   * @generated
+   */
+  public Adapter createNotEpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.BinarieExpression <em>Binarie Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.BinarieExpression
+   * @generated
+   */
+  public Adapter createBinarieExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.Variable <em>Variable</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -702,21 +742,6 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.TypeElement <em>Type Element</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.mda.project.browserDSL.TypeElement
-   * @generated
-   */
-  public Adapter createTypeElementAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.Select <em>Select</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -832,6 +857,21 @@ public class BrowserDSLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createGoToAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.mda.project.browserDSL.StringValue <em>String Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.mda.project.browserDSL.StringValue
+   * @generated
+   */
+  public Adapter createStringValueAdapter()
   {
     return null;
   }

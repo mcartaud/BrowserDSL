@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
 import org.xtext.mda.project.browserDSL.Click;
@@ -22,23 +21,23 @@ import org.xtext.mda.project.browserDSL.Click;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.mda.project.browserDSL.impl.ClickImpl#getVal <em>Val</em>}</li>
+ *   <li>{@link org.xtext.mda.project.browserDSL.impl.ClickImpl#getElement <em>Element</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ClickImpl extends MinimalEObjectImpl.Container implements Click
+public class ClickImpl extends ActionInstructionImpl implements Click
 {
   /**
-   * The cached value of the '{@link #getVal() <em>Val</em>}' containment reference.
+   * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVal()
+   * @see #getElement()
    * @generated
    * @ordered
    */
-  protected EObject val;
+  protected EObject element;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,9 +65,9 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getVal()
+  public EObject getElement()
   {
-    return val;
+    return element;
   }
 
   /**
@@ -76,13 +75,13 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVal(EObject newVal, NotificationChain msgs)
+  public NotificationChain basicSetElement(EObject newElement, NotificationChain msgs)
   {
-    EObject oldVal = val;
-    val = newVal;
+    EObject oldElement = element;
+    element = newElement;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CLICK__VAL, oldVal, newVal);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CLICK__ELEMENT, oldElement, newElement);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -93,20 +92,20 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVal(EObject newVal)
+  public void setElement(EObject newElement)
   {
-    if (newVal != val)
+    if (newElement != element)
     {
       NotificationChain msgs = null;
-      if (val != null)
-        msgs = ((InternalEObject)val).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CLICK__VAL, null, msgs);
-      if (newVal != null)
-        msgs = ((InternalEObject)newVal).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CLICK__VAL, null, msgs);
-      msgs = basicSetVal(newVal, msgs);
+      if (element != null)
+        msgs = ((InternalEObject)element).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CLICK__ELEMENT, null, msgs);
+      if (newElement != null)
+        msgs = ((InternalEObject)newElement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CLICK__ELEMENT, null, msgs);
+      msgs = basicSetElement(newElement, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CLICK__VAL, newVal, newVal));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CLICK__ELEMENT, newElement, newElement));
   }
 
   /**
@@ -119,8 +118,8 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__VAL:
-        return basicSetVal(null, msgs);
+      case BrowserDSLPackage.CLICK__ELEMENT:
+        return basicSetElement(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -135,8 +134,8 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__VAL:
-        return getVal();
+      case BrowserDSLPackage.CLICK__ELEMENT:
+        return getElement();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -151,8 +150,8 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__VAL:
-        setVal((EObject)newValue);
+      case BrowserDSLPackage.CLICK__ELEMENT:
+        setElement((EObject)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,8 +167,8 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__VAL:
-        setVal((EObject)null);
+      case BrowserDSLPackage.CLICK__ELEMENT:
+        setElement((EObject)null);
         return;
     }
     super.eUnset(featureID);
@@ -185,8 +184,8 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__VAL:
-        return val != null;
+      case BrowserDSLPackage.CLICK__ELEMENT:
+        return element != null;
     }
     return super.eIsSet(featureID);
   }

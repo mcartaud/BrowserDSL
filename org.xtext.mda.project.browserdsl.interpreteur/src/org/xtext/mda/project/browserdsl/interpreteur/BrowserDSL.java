@@ -19,7 +19,7 @@ public class BrowserDSL {
 	public static void start(Program program) {
 		SubroutineUtils.getSubroutineList(program);
 		Main main = program.getMain();
-		browser = main.getBody().getOpen();
+		browser = program.getBrowser();
 		getBrowser().get("http://google.fr");
 		System.out.println("tototoot");
 	}

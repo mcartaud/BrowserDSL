@@ -97,7 +97,6 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         FunctionReference functionReference = (FunctionReference)theEObject;
         T result = caseFunctionReference(functionReference);
-        if (result == null) result = caseFunctionCall(functionReference);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -105,6 +104,8 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         VariableReference variableReference = (VariableReference)theEObject;
         T result = caseVariableReference(variableReference);
+        if (result == null) result = caseVariable(variableReference);
+        if (result == null) result = caseExpression(variableReference);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -112,6 +113,7 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         FunctionCall functionCall = (FunctionCall)theEObject;
         T result = caseFunctionCall(functionCall);
+        if (result == null) result = caseInstruction(functionCall);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -147,6 +149,7 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         Condition condition = (Condition)theEObject;
         T result = caseCondition(condition);
+        if (result == null) result = caseInstruction(condition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -154,6 +157,7 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         While while_ = (While)theEObject;
         T result = caseWhile(while_);
+        if (result == null) result = caseInstruction(while_);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -161,6 +165,7 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         ActionInstruction actionInstruction = (ActionInstruction)theEObject;
         T result = caseActionInstruction(actionInstruction);
+        if (result == null) result = caseInstruction(actionInstruction);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -175,6 +180,7 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         Declaration declaration = (Declaration)theEObject;
         T result = caseDeclaration(declaration);
+        if (result == null) result = caseInstruction(declaration);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -182,6 +188,7 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         Assignation assignation = (Assignation)theEObject;
         T result = caseAssignation(assignation);
+        if (result == null) result = caseInstruction(assignation);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -192,21 +199,27 @@ public class BrowserDSLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BrowserDSLPackage.NOT_EPRESSION:
+      {
+        NotEpression notEpression = (NotEpression)theEObject;
+        T result = caseNotEpression(notEpression);
+        if (result == null) result = caseExpression(notEpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserDSLPackage.BINARIE_EXPRESSION:
+      {
+        BinarieExpression binarieExpression = (BinarieExpression)theEObject;
+        T result = caseBinarieExpression(binarieExpression);
+        if (result == null) result = caseExpression(binarieExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BrowserDSLPackage.VARIABLE:
       {
         Variable variable = (Variable)theEObject;
         T result = caseVariable(variable);
-        if (result == null) result = caseCheckbox(variable);
-        if (result == null) result = caseLink(variable);
-        if (result == null) result = caseButton(variable);
-        if (result == null) result = caseImage(variable);
-        if (result == null) result = caseTextField(variable);
-        if (result == null) result = caseCheckableElement(variable);
-        if (result == null) result = caseClickableElement(variable);
-        if (result == null) result = caseFillableElement(variable);
-        if (result == null) result = caseElement(variable);
-        if (result == null) result = caseClear(variable);
-        if (result == null) result = caseVerify(variable);
+        if (result == null) result = caseExpression(variable);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -214,6 +227,7 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         ActionExpression actionExpression = (ActionExpression)theEObject;
         T result = caseActionExpression(actionExpression);
+        if (result == null) result = caseExpression(actionExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -237,8 +251,6 @@ public class BrowserDSLSwitch<T> extends Switch<T>
         FillableElement fillableElement = (FillableElement)theEObject;
         T result = caseFillableElement(fillableElement);
         if (result == null) result = caseElement(fillableElement);
-        if (result == null) result = caseClear(fillableElement);
-        if (result == null) result = caseVerify(fillableElement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -247,8 +259,6 @@ public class BrowserDSLSwitch<T> extends Switch<T>
         CheckableElement checkableElement = (CheckableElement)theEObject;
         T result = caseCheckableElement(checkableElement);
         if (result == null) result = caseElement(checkableElement);
-        if (result == null) result = caseClear(checkableElement);
-        if (result == null) result = caseVerify(checkableElement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -258,8 +268,6 @@ public class BrowserDSLSwitch<T> extends Switch<T>
         T result = caseCheckbox(checkbox);
         if (result == null) result = caseCheckableElement(checkbox);
         if (result == null) result = caseElement(checkbox);
-        if (result == null) result = caseClear(checkbox);
-        if (result == null) result = caseVerify(checkbox);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -296,15 +304,6 @@ public class BrowserDSLSwitch<T> extends Switch<T>
         T result = caseTextField(textField);
         if (result == null) result = caseFillableElement(textField);
         if (result == null) result = caseElement(textField);
-        if (result == null) result = caseClear(textField);
-        if (result == null) result = caseVerify(textField);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case BrowserDSLPackage.TYPE_ELEMENT:
-      {
-        TypeElement typeElement = (TypeElement)theEObject;
-        T result = caseTypeElement(typeElement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -312,8 +311,6 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         Select select = (Select)theEObject;
         T result = caseSelect(select);
-        if (result == null) result = caseClear(select);
-        if (result == null) result = caseVerify(select);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -321,6 +318,8 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         Click click = (Click)theEObject;
         T result = caseClick(click);
+        if (result == null) result = caseActionInstruction(click);
+        if (result == null) result = caseInstruction(click);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -328,6 +327,8 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         Check check = (Check)theEObject;
         T result = caseCheck(check);
+        if (result == null) result = caseActionInstruction(check);
+        if (result == null) result = caseInstruction(check);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -335,6 +336,8 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         Fill fill = (Fill)theEObject;
         T result = caseFill(fill);
+        if (result == null) result = caseActionInstruction(fill);
+        if (result == null) result = caseInstruction(fill);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -342,6 +345,8 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         Clear clear = (Clear)theEObject;
         T result = caseClear(clear);
+        if (result == null) result = caseActionInstruction(clear);
+        if (result == null) result = caseInstruction(clear);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -349,6 +354,8 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         Verify verify = (Verify)theEObject;
         T result = caseVerify(verify);
+        if (result == null) result = caseActionExpression(verify);
+        if (result == null) result = caseExpression(verify);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -356,6 +363,8 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         Exist exist = (Exist)theEObject;
         T result = caseExist(exist);
+        if (result == null) result = caseActionExpression(exist);
+        if (result == null) result = caseExpression(exist);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -364,6 +373,15 @@ public class BrowserDSLSwitch<T> extends Switch<T>
         GoTo goTo = (GoTo)theEObject;
         T result = caseGoTo(goTo);
         if (result == null) result = caseActionInstruction(goTo);
+        if (result == null) result = caseInstruction(goTo);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserDSLPackage.STRING_VALUE:
+      {
+        StringValue stringValue = (StringValue)theEObject;
+        T result = caseStringValue(stringValue);
+        if (result == null) result = caseExpression(stringValue);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -644,6 +662,38 @@ public class BrowserDSLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Not Epression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Not Epression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNotEpression(NotEpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Binarie Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Binarie Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBinarieExpression(BinarieExpression object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -820,22 +870,6 @@ public class BrowserDSLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Type Element</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Type Element</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTypeElement(TypeElement object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Select</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -959,6 +993,22 @@ public class BrowserDSLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseGoTo(GoTo object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>String Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>String Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStringValue(StringValue object)
   {
     return null;
   }

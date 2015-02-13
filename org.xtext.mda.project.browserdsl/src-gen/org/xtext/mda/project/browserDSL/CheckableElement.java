@@ -13,6 +13,6 @@ package org.xtext.mda.project.browserDSL;
  * @model
  * @generated
  */
-public interface CheckableElement extends Element, Clear, Verify
+public interface CheckableElement extends Element
 {
 } // CheckableElement

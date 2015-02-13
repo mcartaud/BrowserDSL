@@ -3,13 +3,16 @@
 package org.xtext.mda.project.browserDSL.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
 import org.xtext.mda.project.browserDSL.Checkbox;
+import org.xtext.mda.project.browserDSL.Expression;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +21,7 @@ import org.xtext.mda.project.browserDSL.Checkbox;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.mda.project.browserDSL.impl.CheckboxImpl#getCheck <em>Check</em>}</li>
+ *   <li>{@link org.xtext.mda.project.browserDSL.impl.CheckboxImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -27,24 +30,14 @@ import org.xtext.mda.project.browserDSL.Checkbox;
 public class CheckboxImpl extends CheckableElementImpl implements Checkbox
 {
   /**
-   * The default value of the '{@link #getCheck() <em>Check</em>}' attribute.
+   * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCheck()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected static final String CHECK_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getCheck() <em>Check</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCheck()
-   * @generated
-   * @ordered
-   */
-  protected String check = CHECK_EDEFAULT;
+  protected Expression value;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,9 +65,9 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getCheck()
+  public Expression getValue()
   {
-    return check;
+    return value;
   }
 
   /**
@@ -82,12 +75,53 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setCheck(String newCheck)
+  public NotificationChain basicSetValue(Expression newValue, NotificationChain msgs)
   {
-    String oldCheck = check;
-    check = newCheck;
+    Expression oldValue = value;
+    value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CHECKBOX__CHECK, oldCheck, check));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CHECKBOX__VALUE, oldValue, newValue);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setValue(Expression newValue)
+  {
+    if (newValue != value)
+    {
+      NotificationChain msgs = null;
+      if (value != null)
+        msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CHECKBOX__VALUE, null, msgs);
+      if (newValue != null)
+        msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CHECKBOX__VALUE, null, msgs);
+      msgs = basicSetValue(newValue, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CHECKBOX__VALUE, newValue, newValue));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case BrowserDSLPackage.CHECKBOX__VALUE:
+        return basicSetValue(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -100,8 +134,8 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CHECKBOX__CHECK:
-        return getCheck();
+      case BrowserDSLPackage.CHECKBOX__VALUE:
+        return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -116,8 +150,8 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CHECKBOX__CHECK:
-        setCheck((String)newValue);
+      case BrowserDSLPackage.CHECKBOX__VALUE:
+        setValue((Expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -133,8 +167,8 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CHECKBOX__CHECK:
-        setCheck(CHECK_EDEFAULT);
+      case BrowserDSLPackage.CHECKBOX__VALUE:
+        setValue((Expression)null);
         return;
     }
     super.eUnset(featureID);
@@ -150,27 +184,10 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CHECKBOX__CHECK:
-        return CHECK_EDEFAULT == null ? check != null : !CHECK_EDEFAULT.equals(check);
+      case BrowserDSLPackage.CHECKBOX__VALUE:
+        return value != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (check: ");
-    result.append(check);
-    result.append(')');
-    return result.toString();
   }
 
 } //CheckboxImpl
