@@ -1606,6 +1606,7 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     initEEnum(openBrowserEEnum, OpenBrowser.class, "OpenBrowser");
     addEEnumLiteral(openBrowserEEnum, OpenBrowser.CHROME);
     addEEnumLiteral(openBrowserEEnum, OpenBrowser.FIREFOX);
+    addEEnumLiteral(openBrowserEEnum, OpenBrowser.HTML_UNIT_DRIVER);
 
     // Create resource
     createResource(eNS_URI);

@@ -1805,6 +1805,13 @@ rule__OpenBrowser__Alternatives
 { after(grammarAccess.getOpenBrowserAccess().getFirefoxEnumLiteralDeclaration_1()); }
 )
 
+    |(
+{ before(grammarAccess.getOpenBrowserAccess().getHtmlUnitDriverEnumLiteralDeclaration_2()); }
+(	'HtmlUnitDriver' 
+)
+{ after(grammarAccess.getOpenBrowserAccess().getHtmlUnitDriverEnumLiteralDeclaration_2()); }
+)
+
 ;
 finally {
 	restoreStackSize(stackSize);

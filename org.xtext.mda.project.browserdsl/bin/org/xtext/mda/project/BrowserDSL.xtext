@@ -44,7 +44,7 @@ Body:
 ;
 
 enum OpenBrowser:
-	Chrome|Firefox
+	Chrome|Firefox|HtmlUnitDriver
 ;
 
 Instruction:

@@ -2517,6 +2517,12 @@ ruleOpenBrowser returns [Enumerator current=null]
         $current = grammarAccess.getOpenBrowserAccess().getFirefoxEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_1, grammarAccess.getOpenBrowserAccess().getFirefoxEnumLiteralDeclaration_1()); 
     }
+)
+    |(	enumLiteral_2='HtmlUnitDriver' 
+	{
+        $current = grammarAccess.getOpenBrowserAccess().getHtmlUnitDriverEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getOpenBrowserAccess().getHtmlUnitDriverEnumLiteralDeclaration_2()); 
+    }
 ));
 
 

@@ -1384,12 +1384,14 @@ public class BrowserDSLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cChromeChromeKeyword_0_0 = (Keyword)cChromeEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cFirefoxEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cFirefoxFirefoxKeyword_1_0 = (Keyword)cFirefoxEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cHtmlUnitDriverEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cHtmlUnitDriverHtmlUnitDriverKeyword_2_0 = (Keyword)cHtmlUnitDriverEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum OpenBrowser:
-		//	Chrome | Firefox;
+		//	Chrome | Firefox | HtmlUnitDriver;
 		public EnumRule getRule() { return rule; }
 
-		//Chrome | Firefox
+		//Chrome | Firefox | HtmlUnitDriver
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//Chrome
@@ -1403,6 +1405,12 @@ public class BrowserDSLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"Firefox"
 		public Keyword getFirefoxFirefoxKeyword_1_0() { return cFirefoxFirefoxKeyword_1_0; }
+
+		//HtmlUnitDriver
+		public EnumLiteralDeclaration getHtmlUnitDriverEnumLiteralDeclaration_2() { return cHtmlUnitDriverEnumLiteralDeclaration_2; }
+
+		//"HtmlUnitDriver"
+		public Keyword getHtmlUnitDriverHtmlUnitDriverKeyword_2_0() { return cHtmlUnitDriverHtmlUnitDriverKeyword_2_0; }
 	}
 	
 	private final ProgramElements pProgram;
@@ -1615,7 +1623,7 @@ public class BrowserDSLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum OpenBrowser:
-	//	Chrome | Firefox;
+	//	Chrome | Firefox | HtmlUnitDriver;
 	public OpenBrowserElements getOpenBrowserAccess() {
 		return unknownRuleOpenBrowser;
 	}

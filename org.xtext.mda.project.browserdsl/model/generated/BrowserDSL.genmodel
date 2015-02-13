@@ -10,6 +10,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="BrowserDSL.ecore#//OpenBrowser">
       <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//OpenBrowser/Chrome"/>
       <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//OpenBrowser/Firefox"/>
+      <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//OpenBrowser/HtmlUnitDriver"/>
     </genEnums>
     <genClasses ecoreClass="BrowserDSL.ecore#//Program">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Program/sub"/>

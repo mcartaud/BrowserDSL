@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_URL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'sub '", "'()'", "'(var '", "', var '", "')'", "'('", "','", "'main'", "'{ browser '", "'; '", "' '", "'}'", "'if '", "'all '", "'any '", "'then '", "'else '", "'endif'", "'while ('", "') do '", "' endwhile'", "'var '", "' = '", "';'", "' == '", "' > '", "' < '", "' !'", "'bool '", "'string '", "'int '", "'checkbox '", "'link '", "'button '", "'image '", "'textField '", "'checkbox'", "'link'", "'button'", "'image'", "'textField'", "'select('", "'click('", "');'", "'check('", "'fill('", "', value='", "'clear('", "'verify('", "'exist('", "'goTo('", "'Chrome'", "'Firefox'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_URL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'sub '", "'()'", "'(var '", "', var '", "')'", "'('", "','", "'main'", "'{ browser '", "'; '", "' '", "'}'", "'if '", "'all '", "'any '", "'then '", "'else '", "'endif'", "'while ('", "') do '", "' endwhile'", "'var '", "' = '", "';'", "' == '", "' > '", "' < '", "' !'", "'bool '", "'string '", "'int '", "'checkbox '", "'link '", "'button '", "'image '", "'textField '", "'checkbox'", "'link'", "'button'", "'image'", "'textField'", "'select('", "'click('", "');'", "'check('", "'fill('", "', value='", "'clear('", "'verify('", "'exist('", "'goTo('", "'Chrome'", "'Firefox'", "'HtmlUnitDriver'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -61,6 +61,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
     public static final int T__20=20;
     public static final int T__64=64;
     public static final int T__21=21;
+    public static final int T__65=65;
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=9;
     public static final int T__37=37;
@@ -6516,34 +6517,44 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOpenBrowser"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:2506:1: ruleOpenBrowser returns [Enumerator current=null] : ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Firefox' ) ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:2506:1: ruleOpenBrowser returns [Enumerator current=null] : ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Firefox' ) | (enumLiteral_2= 'HtmlUnitDriver' ) ) ;
     public final Enumerator ruleOpenBrowser() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
         Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
 
          enterRule(); 
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:2508:28: ( ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Firefox' ) ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:2509:1: ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Firefox' ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:2508:28: ( ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Firefox' ) | (enumLiteral_2= 'HtmlUnitDriver' ) ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:2509:1: ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Firefox' ) | (enumLiteral_2= 'HtmlUnitDriver' ) )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:2509:1: ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Firefox' ) )
-            int alt31=2;
-            int LA31_0 = input.LA(1);
-
-            if ( (LA31_0==63) ) {
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:2509:1: ( (enumLiteral_0= 'Chrome' ) | (enumLiteral_1= 'Firefox' ) | (enumLiteral_2= 'HtmlUnitDriver' ) )
+            int alt31=3;
+            switch ( input.LA(1) ) {
+            case 63:
+                {
                 alt31=1;
-            }
-            else if ( (LA31_0==64) ) {
+                }
+                break;
+            case 64:
+                {
                 alt31=2;
-            }
-            else {
+                }
+                break;
+            case 65:
+                {
+                alt31=3;
+                }
+                break;
+            default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 31, 0, input);
 
                 throw nvae;
             }
+
             switch (alt31) {
                 case 1 :
                     // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:2509:2: (enumLiteral_0= 'Chrome' )
@@ -6572,6 +6583,23 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
                             current = grammarAccess.getOpenBrowserAccess().getFirefoxEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getOpenBrowserAccess().getFirefoxEnumLiteralDeclaration_1()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:2521:6: (enumLiteral_2= 'HtmlUnitDriver' )
+                    {
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:2521:6: (enumLiteral_2= 'HtmlUnitDriver' )
+                    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:2521:8: enumLiteral_2= 'HtmlUnitDriver'
+                    {
+                    enumLiteral_2=(Token)match(input,65,FOLLOW_65_in_ruleOpenBrowser5715); 
+
+                            current = grammarAccess.getOpenBrowserAccess().getHtmlUnitDriverEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_2, grammarAccess.getOpenBrowserAccess().getHtmlUnitDriverEnumLiteralDeclaration_2()); 
                         
 
                     }
@@ -6647,7 +6675,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleBody_in_ruleMain1083 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBody_in_entryRuleBody1119 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBody1129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleBody1166 = new BitSet(new long[]{0x8000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_20_in_ruleBody1166 = new BitSet(new long[]{0x8000000000000000L,0x0000000000000003L});
     public static final BitSet FOLLOW_ruleOpenBrowser_in_ruleBody1187 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_21_in_ruleBody1199 = new BitSet(new long[]{0x4B40000241000010L});
     public static final BitSet FOLLOW_ruleInstruction_in_ruleBody1220 = new BitSet(new long[]{0x0000000000C00000L});
@@ -6831,5 +6859,6 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_55_in_ruleGoTo5631 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_63_in_ruleOpenBrowser5681 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_64_in_ruleOpenBrowser5698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleOpenBrowser5715 = new BitSet(new long[]{0x0000000000000002L});
 
 }
