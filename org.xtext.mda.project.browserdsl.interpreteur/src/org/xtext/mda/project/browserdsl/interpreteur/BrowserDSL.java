@@ -17,9 +17,9 @@ public class BrowserDSL {
 	private BrowserDSL(){ }
 	
 	public static void start(Program program) {
-		EList<Subroutine> subs = program.getSub();
+		EList<Subroutine> subs = program.getSubroutines();
 		Main main = program.getMain();
-		browser = main.getBody().getOpen();
+		browser = program.getBrowser();
 		getBrowser().get("http://google.fr");
 	}
 	

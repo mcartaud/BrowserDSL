@@ -11,7 +11,7 @@ package org.xtext.mda.project.browserDSL;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.mda.project.browserDSL.Checkbox#getCheck <em>Check</em>}</li>
+ *   <li>{@link org.xtext.mda.project.browserDSL.Checkbox#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -22,29 +22,29 @@ package org.xtext.mda.project.browserDSL;
 public interface Checkbox extends CheckableElement
 {
   /**
-   * Returns the value of the '<em><b>Check</b></em>' attribute.
+   * Returns the value of the '<em><b>Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Check</em>' attribute isn't clear,
+   * If the meaning of the '<em>Value</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Check</em>' attribute.
-   * @see #setCheck(String)
-   * @see org.xtext.mda.project.browserDSL.BrowserDSLPackage#getCheckbox_Check()
-   * @model
+   * @return the value of the '<em>Value</em>' containment reference.
+   * @see #setValue(Expression)
+   * @see org.xtext.mda.project.browserDSL.BrowserDSLPackage#getCheckbox_Value()
+   * @model containment="true"
    * @generated
    */
-  String getCheck();
+  Expression getValue();
 
   /**
-   * Sets the value of the '{@link org.xtext.mda.project.browserDSL.Checkbox#getCheck <em>Check</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.mda.project.browserDSL.Checkbox#getValue <em>Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Check</em>' attribute.
-   * @see #getCheck()
+   * @param value the new value of the '<em>Value</em>' containment reference.
+   * @see #getValue()
    * @generated
    */
-  void setCheck(String value);
+  void setValue(Expression value);
 
 } // Checkbox

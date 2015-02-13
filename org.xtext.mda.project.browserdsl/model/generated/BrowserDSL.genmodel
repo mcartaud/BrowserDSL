@@ -11,8 +11,16 @@
       <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//OpenBrowser/Chrome"/>
       <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//OpenBrowser/Firefox"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="BrowserDSL.ecore#//TypeElement">
+      <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//TypeElement/Checkbox"/>
+      <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//TypeElement/Link"/>
+      <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//TypeElement/Button"/>
+      <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//TypeElement/Image"/>
+      <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//TypeElement/TextField"/>
+    </genEnums>
     <genClasses ecoreClass="BrowserDSL.ecore#//Program">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Program/sub"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Program/browser"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Program/subroutines"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Program/main"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Subroutine">
@@ -21,16 +29,18 @@
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Head">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Head/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Head/varId"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Head/nameParameters"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//FunctionReference">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//FunctionReference/functionName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//FunctionReference/var"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//VariableReference">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//VariableReference/varID"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//FunctionCall"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//FunctionCall">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//FunctionCall/function"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//FunctionCall/parameters"/>
+    </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//FunctionName">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//FunctionName/name"/>
     </genClasses>
@@ -38,95 +48,82 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Main/body"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Body">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Body/open"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Body/instructions"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Instruction">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/dec"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/cond"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/while"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/act"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/ass"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Instruction/sub"/>
-    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Instruction"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Condition">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Condition/exp"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Condition/ins"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Condition/ins2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Condition/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Condition/instructionsIf"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Condition/instructionsElse"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//While">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//While/exp"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//While/ins"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//While/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//While/instructions"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//ActionInstruction">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//ActionInstruction/action"/>
-    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//ActionInstruction"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//VariableName">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//VariableName/name"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Declaration">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Declaration/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Declaration/val"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Declaration/variable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Declaration/value"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Assignation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Assignation/var"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Assignation/expr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Assignation/variable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Assignation/value"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Expression">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Expression/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Expression/var"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Expression/act"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Expression/left"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Expression/right"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Expression/exp"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Expression"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//NotEpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//NotEpression/exp"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Variable">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Variable/var"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//BinarieExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//BinarieExpression/leftExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//BinarieExpression/rightExpression"/>
     </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Variable"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//ActionExpression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//ActionExpression/expr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//ActionExpression/element"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Element"/>
-    <genClasses ecoreClass="BrowserDSL.ecore#//ClickableElement"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//ClickableElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//ClickableElement/value"/>
+    </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//FillableElement"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//CheckableElement"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Checkbox">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Checkbox/check"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Checkbox/value"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Link">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Link/link"/>
-    </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Button">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Button/but"/>
-    </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Image">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Image/img"/>
-    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Link"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Button"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Image"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//TextField">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//TextField/text"/>
-    </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//TypeElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//TypeElement/elem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//TextField/value"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Select">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Select/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Select/value"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Click">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Click/val"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Click/element"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Check">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Check/val"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Check/element"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Fill">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Fill/val"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Fill/element"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Fill/value"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Clear"/>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Verify"/>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Exist">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Exist/val"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Clear">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Clear/element"/>
     </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Verify">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Verify/value"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Exist"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//GoTo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//GoTo/url"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//StringValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//StringValue/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

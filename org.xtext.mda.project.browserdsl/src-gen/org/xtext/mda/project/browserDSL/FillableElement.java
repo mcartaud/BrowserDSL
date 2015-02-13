@@ -13,6 +13,6 @@ package org.xtext.mda.project.browserDSL;
  * @model
  * @generated
  */
-public interface FillableElement extends Element, Clear, Verify
+public interface FillableElement extends Element
 {
 } // FillableElement
