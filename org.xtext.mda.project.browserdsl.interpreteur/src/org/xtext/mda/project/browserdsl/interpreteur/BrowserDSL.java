@@ -1,21 +1,36 @@
 package org.xtext.mda.project.browserdsl.interpreteur;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.xtext.mda.project.browserDSL.Main;
+import org.xtext.mda.project.browserDSL.OpenBrowser;
+import org.xtext.mda.project.browserDSL.Program;
+import org.xtext.mda.project.browserDSL.Subroutine;
 
 public class BrowserDSL {
 
-	public static void start(EObject eobject) {
+	private static WebDriver driver = null;
+	private static int browser;
 	
-		System.out.println("ppppppppppp");
-		
-		WebDriver driver = new FirefoxDriver();
-		driver.get("http://www.google.com");
-		
-		
-		
-		driver.quit();
+	private BrowserDSL(){ }
+	
+	public static void start(Program program) {
+		EList<Subroutine> subs = program.getSub();
+		Main main = program.getMain();
+		browser = main.eGet();
+	}
+	
+	public static WebDriver getBrowser() {
+		if (driver == null) {
+			if (browser == OpenBrowser.CHROME_VALUE) {
+				driver = new ChromeDriver();
+			} else if (browser == OpenBrowser.FIREFOX_VALUE) {
+				driver = new FirefoxDriver();
+			}
+		}
+		return driver;
 	}
 
 	

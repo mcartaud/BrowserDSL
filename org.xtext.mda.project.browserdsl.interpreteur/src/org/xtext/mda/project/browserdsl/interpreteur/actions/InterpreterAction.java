@@ -11,6 +11,7 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.IWorkbenchWindowActionDelegate;
+import org.xtext.mda.project.browserDSL.Program;
 import org.xtext.mda.project.browserdsl.interpreteur.BrowserDSL;
 
 
@@ -51,7 +52,10 @@ public class InterpreterAction implements IWorkbenchWindowActionDelegate {
 
 		EObject eobject = resource.getContents().get(0);
 		
-		BrowserDSL.start(eobject);
+		if (eobject instanceof Program) {
+			BrowserDSL.start((Program) eobject);
+		}
+		
 	}
 
 	/**
