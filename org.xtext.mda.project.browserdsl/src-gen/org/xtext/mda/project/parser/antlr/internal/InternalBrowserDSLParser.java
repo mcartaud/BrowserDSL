@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_URL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'sub '", "'()'", "'(var '", "', var '", "')'", "'('", "','", "'main '", "'{browser'", "', '", "' '", "'}'", "'if '", "'all '", "'any '", "'then '", "'else '", "'endif'", "'while ('", "') do '", "' endwhile'", "'var '", "' = '", "';'", "' == '", "' > '", "' < '", "' !'", "'bool '", "'string '", "'int '", "'checkbox '", "'link '", "'button '", "'image '", "'textField '", "'checkbox'", "'link'", "'button'", "'image'", "'textField'", "'select('", "'click('", "');'", "'check('", "'fill('", "', value='", "'clear('", "'verify('", "'exist('", "'goTo('", "'Chrome'", "'Firefox'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_URL", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'sub '", "'()'", "'(var '", "', var '", "')'", "'('", "','", "'main '", "'{browser'", "'; '", "' '", "'}'", "'if '", "'all '", "'any '", "'then '", "'else '", "'endif'", "'while ('", "') do '", "' endwhile'", "'var '", "' = '", "';'", "' == '", "' > '", "' < '", "' !'", "'bool '", "'string '", "'int '", "'checkbox '", "'link '", "'button '", "'image '", "'textField '", "'checkbox'", "'link'", "'button'", "'image'", "'textField'", "'select('", "'click('", "');'", "'check('", "'fill('", "', value='", "'clear('", "'verify('", "'exist('", "'goTo('", "'Chrome'", "'Firefox'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -1367,7 +1367,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBody"
-    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:538:1: ruleBody returns [EObject current=null] : (otherlv_0= '{browser' ( (lv_open_1_0= ruleOpenBrowser ) ) otherlv_2= ', ' ( (lv_instructions_3_0= ruleInstruction ) ) (otherlv_4= ' ' ( (lv_instructions_5_0= ruleInstruction ) ) )* otherlv_6= '}' ) ;
+    // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:538:1: ruleBody returns [EObject current=null] : (otherlv_0= '{browser' ( (lv_open_1_0= ruleOpenBrowser ) ) otherlv_2= '; ' ( (lv_instructions_3_0= ruleInstruction ) ) (otherlv_4= ' ' ( (lv_instructions_5_0= ruleInstruction ) ) )* otherlv_6= '}' ) ;
     public final EObject ruleBody() throws RecognitionException {
         EObject current = null;
 
@@ -1385,11 +1385,11 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:541:28: ( (otherlv_0= '{browser' ( (lv_open_1_0= ruleOpenBrowser ) ) otherlv_2= ', ' ( (lv_instructions_3_0= ruleInstruction ) ) (otherlv_4= ' ' ( (lv_instructions_5_0= ruleInstruction ) ) )* otherlv_6= '}' ) )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:542:1: (otherlv_0= '{browser' ( (lv_open_1_0= ruleOpenBrowser ) ) otherlv_2= ', ' ( (lv_instructions_3_0= ruleInstruction ) ) (otherlv_4= ' ' ( (lv_instructions_5_0= ruleInstruction ) ) )* otherlv_6= '}' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:541:28: ( (otherlv_0= '{browser' ( (lv_open_1_0= ruleOpenBrowser ) ) otherlv_2= '; ' ( (lv_instructions_3_0= ruleInstruction ) ) (otherlv_4= ' ' ( (lv_instructions_5_0= ruleInstruction ) ) )* otherlv_6= '}' ) )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:542:1: (otherlv_0= '{browser' ( (lv_open_1_0= ruleOpenBrowser ) ) otherlv_2= '; ' ( (lv_instructions_3_0= ruleInstruction ) ) (otherlv_4= ' ' ( (lv_instructions_5_0= ruleInstruction ) ) )* otherlv_6= '}' )
             {
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:542:1: (otherlv_0= '{browser' ( (lv_open_1_0= ruleOpenBrowser ) ) otherlv_2= ', ' ( (lv_instructions_3_0= ruleInstruction ) ) (otherlv_4= ' ' ( (lv_instructions_5_0= ruleInstruction ) ) )* otherlv_6= '}' )
-            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:542:3: otherlv_0= '{browser' ( (lv_open_1_0= ruleOpenBrowser ) ) otherlv_2= ', ' ( (lv_instructions_3_0= ruleInstruction ) ) (otherlv_4= ' ' ( (lv_instructions_5_0= ruleInstruction ) ) )* otherlv_6= '}'
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:542:1: (otherlv_0= '{browser' ( (lv_open_1_0= ruleOpenBrowser ) ) otherlv_2= '; ' ( (lv_instructions_3_0= ruleInstruction ) ) (otherlv_4= ' ' ( (lv_instructions_5_0= ruleInstruction ) ) )* otherlv_6= '}' )
+            // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:542:3: otherlv_0= '{browser' ( (lv_open_1_0= ruleOpenBrowser ) ) otherlv_2= '; ' ( (lv_instructions_3_0= ruleInstruction ) ) (otherlv_4= ' ' ( (lv_instructions_5_0= ruleInstruction ) ) )* otherlv_6= '}'
             {
             otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleBody1166); 
 
@@ -1428,7 +1428,7 @@ public class InternalBrowserDSLParser extends AbstractInternalAntlrParser {
 
             otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleBody1199); 
 
-                	newLeafNode(otherlv_2, grammarAccess.getBodyAccess().getCommaSpaceKeyword_2());
+                	newLeafNode(otherlv_2, grammarAccess.getBodyAccess().getSemicolonSpaceKeyword_2());
                 
             // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:568:1: ( (lv_instructions_3_0= ruleInstruction ) )
             // ../org.xtext.mda.project.browserdsl/src-gen/org/xtext/mda/project/parser/antlr/internal/InternalBrowserDSL.g:569:1: (lv_instructions_3_0= ruleInstruction )

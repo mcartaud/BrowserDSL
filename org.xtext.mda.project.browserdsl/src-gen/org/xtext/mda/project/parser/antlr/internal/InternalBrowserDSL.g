@@ -561,9 +561,9 @@ ruleBody returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2=', ' 
+)	otherlv_2='; ' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getBodyAccess().getCommaSpaceKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getBodyAccess().getSemicolonSpaceKeyword_2());
     }
 (
 (

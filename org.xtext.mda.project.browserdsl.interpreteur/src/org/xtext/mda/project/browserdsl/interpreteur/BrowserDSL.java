@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class BrowserDSL {
 
 	public static void start(EObject eobject) {
+
 	
 		System.out.println("ppppppppppp");
 		
@@ -16,6 +17,7 @@ public class BrowserDSL {
 		
 		
 		driver.quit();
+
 	}
 
 	
