@@ -11,7 +11,44 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.xtext.mda.project.browserDSL.*;
+import org.xtext.mda.project.browserDSL.Body;
+import org.xtext.mda.project.browserDSL.BooleanValue;
+import org.xtext.mda.project.browserDSL.BrowserDSLFactory;
+import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
+import org.xtext.mda.project.browserDSL.Button;
+import org.xtext.mda.project.browserDSL.ButtonAction;
+import org.xtext.mda.project.browserDSL.CallType;
+import org.xtext.mda.project.browserDSL.CheckValue;
+import org.xtext.mda.project.browserDSL.Checkbox;
+import org.xtext.mda.project.browserDSL.CheckboxAction;
+import org.xtext.mda.project.browserDSL.Clear;
+import org.xtext.mda.project.browserDSL.Click;
+import org.xtext.mda.project.browserDSL.Declaration;
+import org.xtext.mda.project.browserDSL.Fill;
+import org.xtext.mda.project.browserDSL.FunctionCall;
+import org.xtext.mda.project.browserDSL.FunctionName;
+import org.xtext.mda.project.browserDSL.FunctionReference;
+import org.xtext.mda.project.browserDSL.GoTo;
+import org.xtext.mda.project.browserDSL.Head;
+import org.xtext.mda.project.browserDSL.Image;
+import org.xtext.mda.project.browserDSL.ImageAction;
+import org.xtext.mda.project.browserDSL.Instruction;
+import org.xtext.mda.project.browserDSL.IntValue;
+import org.xtext.mda.project.browserDSL.IsCheck;
+import org.xtext.mda.project.browserDSL.Link;
+import org.xtext.mda.project.browserDSL.LinkAction;
+import org.xtext.mda.project.browserDSL.Main;
+import org.xtext.mda.project.browserDSL.OpenBrowser;
+import org.xtext.mda.project.browserDSL.Program;
+import org.xtext.mda.project.browserDSL.StringValue;
+import org.xtext.mda.project.browserDSL.SubBody;
+import org.xtext.mda.project.browserDSL.Subroutine;
+import org.xtext.mda.project.browserDSL.TextAction;
+import org.xtext.mda.project.browserDSL.TextField;
+import org.xtext.mda.project.browserDSL.Values;
+import org.xtext.mda.project.browserDSL.Variable;
+import org.xtext.mda.project.browserDSL.VariableName;
+import org.xtext.mda.project.browserDSL.VariableReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,43 +104,39 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
     {
       case BrowserDSLPackage.PROGRAM: return createProgram();
       case BrowserDSLPackage.SUBROUTINE: return createSubroutine();
+      case BrowserDSLPackage.SUB_BODY: return createSubBody();
       case BrowserDSLPackage.HEAD: return createHead();
-      case BrowserDSLPackage.FUNCTION_REFERENCE: return createFunctionReference();
-      case BrowserDSLPackage.VARIABLE_REFERENCE: return createVariableReference();
-      case BrowserDSLPackage.FUNCTION_CALL: return createFunctionCall();
       case BrowserDSLPackage.FUNCTION_NAME: return createFunctionName();
       case BrowserDSLPackage.MAIN: return createMain();
       case BrowserDSLPackage.BODY: return createBody();
-      case BrowserDSLPackage.INSTRUCTION: return createInstruction();
-      case BrowserDSLPackage.CONDITION: return createCondition();
-      case BrowserDSLPackage.WHILE: return createWhile();
-      case BrowserDSLPackage.ACTION_INSTRUCTION: return createActionInstruction();
+      case BrowserDSLPackage.VARIABLE_REFERENCE: return createVariableReference();
+      case BrowserDSLPackage.FUNCTION_REFERENCE: return createFunctionReference();
+      case BrowserDSLPackage.FUNCTION_CALL: return createFunctionCall();
+      case BrowserDSLPackage.CALL_TYPE: return createCallType();
+      case BrowserDSLPackage.VARIABLE: return createVariable();
       case BrowserDSLPackage.VARIABLE_NAME: return createVariableName();
       case BrowserDSLPackage.DECLARATION: return createDeclaration();
-      case BrowserDSLPackage.ASSIGNATION: return createAssignation();
-      case BrowserDSLPackage.EXPRESSION: return createExpression();
-      case BrowserDSLPackage.NOT_EPRESSION: return createNotEpression();
-      case BrowserDSLPackage.BINARIE_EXPRESSION: return createBinarieExpression();
-      case BrowserDSLPackage.VARIABLE: return createVariable();
-      case BrowserDSLPackage.ACTION_EXPRESSION: return createActionExpression();
-      case BrowserDSLPackage.ELEMENT: return createElement();
-      case BrowserDSLPackage.CLICKABLE_ELEMENT: return createClickableElement();
-      case BrowserDSLPackage.FILLABLE_ELEMENT: return createFillableElement();
-      case BrowserDSLPackage.CHECKABLE_ELEMENT: return createCheckableElement();
+      case BrowserDSLPackage.INSTRUCTION: return createInstruction();
+      case BrowserDSLPackage.GO_TO: return createGoTo();
       case BrowserDSLPackage.CHECKBOX: return createCheckbox();
       case BrowserDSLPackage.LINK: return createLink();
       case BrowserDSLPackage.BUTTON: return createButton();
       case BrowserDSLPackage.IMAGE: return createImage();
       case BrowserDSLPackage.TEXT_FIELD: return createTextField();
-      case BrowserDSLPackage.SELECT: return createSelect();
+      case BrowserDSLPackage.CHECKBOX_ACTION: return createCheckboxAction();
+      case BrowserDSLPackage.LINK_ACTION: return createLinkAction();
+      case BrowserDSLPackage.BUTTON_ACTION: return createButtonAction();
+      case BrowserDSLPackage.IMAGE_ACTION: return createImageAction();
+      case BrowserDSLPackage.TEXT_ACTION: return createTextAction();
       case BrowserDSLPackage.CLICK: return createClick();
-      case BrowserDSLPackage.CHECK: return createCheck();
-      case BrowserDSLPackage.FILL: return createFill();
+      case BrowserDSLPackage.IS_CHECK: return createIsCheck();
       case BrowserDSLPackage.CLEAR: return createClear();
-      case BrowserDSLPackage.VERIFY: return createVerify();
-      case BrowserDSLPackage.EXIST: return createExist();
-      case BrowserDSLPackage.GO_TO: return createGoTo();
+      case BrowserDSLPackage.CHECK_VALUE: return createCheckValue();
+      case BrowserDSLPackage.FILL: return createFill();
+      case BrowserDSLPackage.VALUES: return createValues();
+      case BrowserDSLPackage.INT_VALUE: return createIntValue();
       case BrowserDSLPackage.STRING_VALUE: return createStringValue();
+      case BrowserDSLPackage.BOOLEAN_VALUE: return createBooleanValue();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -119,10 +152,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
   {
     switch (eDataType.getClassifierID())
     {
+      case BrowserDSLPackage.BOOLEAN:
+        return createBooleanFromString(eDataType, initialValue);
       case BrowserDSLPackage.OPEN_BROWSER:
         return createOpenBrowserFromString(eDataType, initialValue);
-      case BrowserDSLPackage.TYPE_ELEMENT:
-        return createTypeElementFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -138,10 +171,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
   {
     switch (eDataType.getClassifierID())
     {
+      case BrowserDSLPackage.BOOLEAN:
+        return convertBooleanToString(eDataType, instanceValue);
       case BrowserDSLPackage.OPEN_BROWSER:
         return convertOpenBrowserToString(eDataType, instanceValue);
-      case BrowserDSLPackage.TYPE_ELEMENT:
-        return convertTypeElementToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -174,43 +207,21 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public SubBody createSubBody()
+  {
+    SubBodyImpl subBody = new SubBodyImpl();
+    return subBody;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Head createHead()
   {
     HeadImpl head = new HeadImpl();
     return head;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FunctionReference createFunctionReference()
-  {
-    FunctionReferenceImpl functionReference = new FunctionReferenceImpl();
-    return functionReference;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public VariableReference createVariableReference()
-  {
-    VariableReferenceImpl variableReference = new VariableReferenceImpl();
-    return variableReference;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FunctionCall createFunctionCall()
-  {
-    FunctionCallImpl functionCall = new FunctionCallImpl();
-    return functionCall;
   }
 
   /**
@@ -251,10 +262,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Instruction createInstruction()
+  public VariableReference createVariableReference()
   {
-    InstructionImpl instruction = new InstructionImpl();
-    return instruction;
+    VariableReferenceImpl variableReference = new VariableReferenceImpl();
+    return variableReference;
   }
 
   /**
@@ -262,10 +273,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Condition createCondition()
+  public FunctionReference createFunctionReference()
   {
-    ConditionImpl condition = new ConditionImpl();
-    return condition;
+    FunctionReferenceImpl functionReference = new FunctionReferenceImpl();
+    return functionReference;
   }
 
   /**
@@ -273,10 +284,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public While createWhile()
+  public FunctionCall createFunctionCall()
   {
-    WhileImpl while_ = new WhileImpl();
-    return while_;
+    FunctionCallImpl functionCall = new FunctionCallImpl();
+    return functionCall;
   }
 
   /**
@@ -284,10 +295,21 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public ActionInstruction createActionInstruction()
+  public CallType createCallType()
   {
-    ActionInstructionImpl actionInstruction = new ActionInstructionImpl();
-    return actionInstruction;
+    CallTypeImpl callType = new CallTypeImpl();
+    return callType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Variable createVariable()
+  {
+    VariableImpl variable = new VariableImpl();
+    return variable;
   }
 
   /**
@@ -317,10 +339,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Assignation createAssignation()
+  public Instruction createInstruction()
   {
-    AssignationImpl assignation = new AssignationImpl();
-    return assignation;
+    InstructionImpl instruction = new InstructionImpl();
+    return instruction;
   }
 
   /**
@@ -328,98 +350,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression createExpression()
+  public GoTo createGoTo()
   {
-    ExpressionImpl expression = new ExpressionImpl();
-    return expression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotEpression createNotEpression()
-  {
-    NotEpressionImpl notEpression = new NotEpressionImpl();
-    return notEpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public BinarieExpression createBinarieExpression()
-  {
-    BinarieExpressionImpl binarieExpression = new BinarieExpressionImpl();
-    return binarieExpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Variable createVariable()
-  {
-    VariableImpl variable = new VariableImpl();
-    return variable;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ActionExpression createActionExpression()
-  {
-    ActionExpressionImpl actionExpression = new ActionExpressionImpl();
-    return actionExpression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Element createElement()
-  {
-    ElementImpl element = new ElementImpl();
-    return element;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ClickableElement createClickableElement()
-  {
-    ClickableElementImpl clickableElement = new ClickableElementImpl();
-    return clickableElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public FillableElement createFillableElement()
-  {
-    FillableElementImpl fillableElement = new FillableElementImpl();
-    return fillableElement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public CheckableElement createCheckableElement()
-  {
-    CheckableElementImpl checkableElement = new CheckableElementImpl();
-    return checkableElement;
+    GoToImpl goTo = new GoToImpl();
+    return goTo;
   }
 
   /**
@@ -482,10 +416,54 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Select createSelect()
+  public CheckboxAction createCheckboxAction()
   {
-    SelectImpl select = new SelectImpl();
-    return select;
+    CheckboxActionImpl checkboxAction = new CheckboxActionImpl();
+    return checkboxAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LinkAction createLinkAction()
+  {
+    LinkActionImpl linkAction = new LinkActionImpl();
+    return linkAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ButtonAction createButtonAction()
+  {
+    ButtonActionImpl buttonAction = new ButtonActionImpl();
+    return buttonAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ImageAction createImageAction()
+  {
+    ImageActionImpl imageAction = new ImageActionImpl();
+    return imageAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextAction createTextAction()
+  {
+    TextActionImpl textAction = new TextActionImpl();
+    return textAction;
   }
 
   /**
@@ -504,21 +482,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Check createCheck()
+  public IsCheck createIsCheck()
   {
-    CheckImpl check = new CheckImpl();
-    return check;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Fill createFill()
-  {
-    FillImpl fill = new FillImpl();
-    return fill;
+    IsCheckImpl isCheck = new IsCheckImpl();
+    return isCheck;
   }
 
   /**
@@ -537,10 +504,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Verify createVerify()
+  public CheckValue createCheckValue()
   {
-    VerifyImpl verify = new VerifyImpl();
-    return verify;
+    CheckValueImpl checkValue = new CheckValueImpl();
+    return checkValue;
   }
 
   /**
@@ -548,10 +515,10 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Exist createExist()
+  public Fill createFill()
   {
-    ExistImpl exist = new ExistImpl();
-    return exist;
+    FillImpl fill = new FillImpl();
+    return fill;
   }
 
   /**
@@ -559,10 +526,21 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public GoTo createGoTo()
+  public Values createValues()
   {
-    GoToImpl goTo = new GoToImpl();
-    return goTo;
+    ValuesImpl values = new ValuesImpl();
+    return values;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IntValue createIntValue()
+  {
+    IntValueImpl intValue = new IntValueImpl();
+    return intValue;
   }
 
   /**
@@ -574,6 +552,39 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
   {
     StringValueImpl stringValue = new StringValueImpl();
     return stringValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BooleanValue createBooleanValue()
+  {
+    BooleanValueImpl booleanValue = new BooleanValueImpl();
+    return booleanValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public org.xtext.mda.project.browserDSL.Boolean createBooleanFromString(EDataType eDataType, String initialValue)
+  {
+    org.xtext.mda.project.browserDSL.Boolean result = org.xtext.mda.project.browserDSL.Boolean.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertBooleanToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**
@@ -594,28 +605,6 @@ public class BrowserDSLFactoryImpl extends EFactoryImpl implements BrowserDSLFac
    * @generated
    */
   public String convertOpenBrowserToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TypeElement createTypeElementFromString(EDataType eDataType, String initialValue)
-  {
-    TypeElement result = TypeElement.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertTypeElementToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

@@ -3,13 +3,11 @@
 package org.xtext.mda.project.browserDSL.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
 import org.xtext.mda.project.browserDSL.Click;
@@ -21,23 +19,33 @@ import org.xtext.mda.project.browserDSL.Click;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.mda.project.browserDSL.impl.ClickImpl#getElement <em>Element</em>}</li>
+ *   <li>{@link org.xtext.mda.project.browserDSL.impl.ClickImpl#getVal <em>Val</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ClickImpl extends ActionInstructionImpl implements Click
+public class ClickImpl extends MinimalEObjectImpl.Container implements Click
 {
   /**
-   * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference.
+   * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getElement()
+   * @see #getVal()
    * @generated
    * @ordered
    */
-  protected EObject element;
+  protected static final String VAL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getVal() <em>Val</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVal()
+   * @generated
+   * @ordered
+   */
+  protected String val = VAL_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -65,9 +73,9 @@ public class ClickImpl extends ActionInstructionImpl implements Click
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getElement()
+  public String getVal()
   {
-    return element;
+    return val;
   }
 
   /**
@@ -75,53 +83,12 @@ public class ClickImpl extends ActionInstructionImpl implements Click
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetElement(EObject newElement, NotificationChain msgs)
+  public void setVal(String newVal)
   {
-    EObject oldElement = element;
-    element = newElement;
+    String oldVal = val;
+    val = newVal;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CLICK__ELEMENT, oldElement, newElement);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setElement(EObject newElement)
-  {
-    if (newElement != element)
-    {
-      NotificationChain msgs = null;
-      if (element != null)
-        msgs = ((InternalEObject)element).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CLICK__ELEMENT, null, msgs);
-      if (newElement != null)
-        msgs = ((InternalEObject)newElement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CLICK__ELEMENT, null, msgs);
-      msgs = basicSetElement(newElement, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CLICK__ELEMENT, newElement, newElement));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case BrowserDSLPackage.CLICK__ELEMENT:
-        return basicSetElement(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CLICK__VAL, oldVal, val));
   }
 
   /**
@@ -134,8 +101,8 @@ public class ClickImpl extends ActionInstructionImpl implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__ELEMENT:
-        return getElement();
+      case BrowserDSLPackage.CLICK__VAL:
+        return getVal();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -150,8 +117,8 @@ public class ClickImpl extends ActionInstructionImpl implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__ELEMENT:
-        setElement((EObject)newValue);
+      case BrowserDSLPackage.CLICK__VAL:
+        setVal((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -167,8 +134,8 @@ public class ClickImpl extends ActionInstructionImpl implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__ELEMENT:
-        setElement((EObject)null);
+      case BrowserDSLPackage.CLICK__VAL:
+        setVal(VAL_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -184,10 +151,27 @@ public class ClickImpl extends ActionInstructionImpl implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__ELEMENT:
-        return element != null;
+      case BrowserDSLPackage.CLICK__VAL:
+        return VAL_EDEFAULT == null ? val != null : !VAL_EDEFAULT.equals(val);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (val: ");
+    result.append(val);
+    result.append(')');
+    return result.toString();
   }
 
 } //ClickImpl

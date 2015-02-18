@@ -10,49 +10,44 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.xtext.mda.project.browserDSL.ActionExpression;
-import org.xtext.mda.project.browserDSL.ActionInstruction;
-import org.xtext.mda.project.browserDSL.Assignation;
-import org.xtext.mda.project.browserDSL.BinarieExpression;
 import org.xtext.mda.project.browserDSL.Body;
+import org.xtext.mda.project.browserDSL.BooleanValue;
 import org.xtext.mda.project.browserDSL.BrowserDSLFactory;
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
 import org.xtext.mda.project.browserDSL.Button;
-import org.xtext.mda.project.browserDSL.Check;
-import org.xtext.mda.project.browserDSL.CheckableElement;
+import org.xtext.mda.project.browserDSL.ButtonAction;
+import org.xtext.mda.project.browserDSL.CallType;
+import org.xtext.mda.project.browserDSL.CheckValue;
 import org.xtext.mda.project.browserDSL.Checkbox;
+import org.xtext.mda.project.browserDSL.CheckboxAction;
 import org.xtext.mda.project.browserDSL.Clear;
 import org.xtext.mda.project.browserDSL.Click;
-import org.xtext.mda.project.browserDSL.ClickableElement;
-import org.xtext.mda.project.browserDSL.Condition;
 import org.xtext.mda.project.browserDSL.Declaration;
-import org.xtext.mda.project.browserDSL.Element;
-import org.xtext.mda.project.browserDSL.Exist;
-import org.xtext.mda.project.browserDSL.Expression;
 import org.xtext.mda.project.browserDSL.Fill;
-import org.xtext.mda.project.browserDSL.FillableElement;
 import org.xtext.mda.project.browserDSL.FunctionCall;
 import org.xtext.mda.project.browserDSL.FunctionName;
 import org.xtext.mda.project.browserDSL.FunctionReference;
 import org.xtext.mda.project.browserDSL.GoTo;
 import org.xtext.mda.project.browserDSL.Head;
 import org.xtext.mda.project.browserDSL.Image;
+import org.xtext.mda.project.browserDSL.ImageAction;
 import org.xtext.mda.project.browserDSL.Instruction;
+import org.xtext.mda.project.browserDSL.IntValue;
+import org.xtext.mda.project.browserDSL.IsCheck;
 import org.xtext.mda.project.browserDSL.Link;
+import org.xtext.mda.project.browserDSL.LinkAction;
 import org.xtext.mda.project.browserDSL.Main;
-import org.xtext.mda.project.browserDSL.NotEpression;
 import org.xtext.mda.project.browserDSL.OpenBrowser;
 import org.xtext.mda.project.browserDSL.Program;
-import org.xtext.mda.project.browserDSL.Select;
 import org.xtext.mda.project.browserDSL.StringValue;
+import org.xtext.mda.project.browserDSL.SubBody;
 import org.xtext.mda.project.browserDSL.Subroutine;
+import org.xtext.mda.project.browserDSL.TextAction;
 import org.xtext.mda.project.browserDSL.TextField;
-import org.xtext.mda.project.browserDSL.TypeElement;
+import org.xtext.mda.project.browserDSL.Values;
 import org.xtext.mda.project.browserDSL.Variable;
 import org.xtext.mda.project.browserDSL.VariableName;
 import org.xtext.mda.project.browserDSL.VariableReference;
-import org.xtext.mda.project.browserDSL.Verify;
-import org.xtext.mda.project.browserDSL.While;
 
 /**
  * <!-- begin-user-doc -->
@@ -81,28 +76,14 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass subBodyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass headEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass functionReferenceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass variableReferenceEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass functionCallEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -130,28 +111,35 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass instructionEClass = null;
+  private EClass variableReferenceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass conditionEClass = null;
+  private EClass functionReferenceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass whileEClass = null;
+  private EClass functionCallEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass actionInstructionEClass = null;
+  private EClass callTypeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass variableEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -172,70 +160,14 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass assignationEClass = null;
+  private EClass instructionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass expressionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass notEpressionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass binarieExpressionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass variableEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass actionExpressionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass elementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass clickableElementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass fillableElementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass checkableElementEClass = null;
+  private EClass goToEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -277,7 +209,35 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass selectEClass = null;
+  private EClass checkboxActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass linkActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass buttonActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass imageActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass textActionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -291,14 +251,7 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass checkEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass fillEClass = null;
+  private EClass isCheckEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -312,21 +265,28 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass verifyEClass = null;
+  private EClass checkValueEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass existEClass = null;
+  private EClass fillEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass goToEClass = null;
+  private EClass valuesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass intValueEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -340,14 +300,21 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EEnum openBrowserEEnum = null;
+  private EClass booleanValueEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EEnum typeElementEEnum = null;
+  private EEnum booleanEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum openBrowserEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -437,7 +404,7 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getProgram_Subroutines()
+  public EReference getProgram_Variables()
   {
     return (EReference)programEClass.getEStructuralFeatures().get(1);
   }
@@ -447,9 +414,19 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getProgram_Main()
+  public EReference getProgram_Subroutines()
   {
     return (EReference)programEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getProgram_Main()
+  {
+    return (EReference)programEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -487,6 +464,26 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getSubBody()
+  {
+    return subBodyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSubBody_Instructions()
+  {
+    return (EReference)subBodyEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getHead()
   {
     return headEClass;
@@ -510,76 +507,6 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
   public EReference getHead_NameParameters()
   {
     return (EReference)headEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFunctionReference()
-  {
-    return functionReferenceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFunctionReference_FunctionName()
-  {
-    return (EReference)functionReferenceEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getVariableReference()
-  {
-    return variableReferenceEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getVariableReference_VarID()
-  {
-    return (EReference)variableReferenceEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFunctionCall()
-  {
-    return functionCallEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFunctionCall_Function()
-  {
-    return (EReference)functionCallEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFunctionCall_Parameters()
-  {
-    return (EReference)functionCallEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -637,7 +564,7 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getBody_Instructions()
+  public EReference getBody_Go()
   {
     return (EReference)bodyEClass.getEStructuralFeatures().get(0);
   }
@@ -647,9 +574,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getInstruction()
+  public EReference getBody_Instructions()
   {
-    return instructionEClass;
+    return (EReference)bodyEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -657,9 +584,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getCondition()
+  public EClass getVariableReference()
   {
-    return conditionEClass;
+    return variableReferenceEClass;
   }
 
   /**
@@ -667,9 +594,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getCondition_Expression()
+  public EReference getVariableReference_VarID()
   {
-    return (EReference)conditionEClass.getEStructuralFeatures().get(0);
+    return (EReference)variableReferenceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -677,9 +604,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getCondition_InstructionsIf()
+  public EClass getFunctionReference()
   {
-    return (EReference)conditionEClass.getEStructuralFeatures().get(1);
+    return functionReferenceEClass;
   }
 
   /**
@@ -687,9 +614,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getCondition_InstructionsElse()
+  public EReference getFunctionReference_FunctionName()
   {
-    return (EReference)conditionEClass.getEStructuralFeatures().get(2);
+    return (EReference)functionReferenceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -697,9 +624,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getWhile()
+  public EClass getFunctionCall()
   {
-    return whileEClass;
+    return functionCallEClass;
   }
 
   /**
@@ -707,9 +634,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getWhile_Expression()
+  public EReference getFunctionCall_Function()
   {
-    return (EReference)whileEClass.getEStructuralFeatures().get(0);
+    return (EReference)functionCallEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -717,9 +644,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getWhile_Instructions()
+  public EReference getFunctionCall_Parameters()
   {
-    return (EReference)whileEClass.getEStructuralFeatures().get(1);
+    return (EReference)functionCallEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -727,9 +654,19 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getActionInstruction()
+  public EClass getCallType()
   {
-    return actionInstructionEClass;
+    return callTypeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVariable()
+  {
+    return variableEClass;
   }
 
   /**
@@ -787,379 +724,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getAssignation()
+  public EClass getInstruction()
   {
-    return assignationEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAssignation_Variable()
-  {
-    return (EReference)assignationEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getAssignation_Value()
-  {
-    return (EReference)assignationEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getExpression()
-  {
-    return expressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getNotEpression()
-  {
-    return notEpressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getNotEpression_Exp()
-  {
-    return (EReference)notEpressionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getBinarieExpression()
-  {
-    return binarieExpressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBinarieExpression_LeftExpression()
-  {
-    return (EReference)binarieExpressionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBinarieExpression_RightExpression()
-  {
-    return (EReference)binarieExpressionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getVariable()
-  {
-    return variableEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getActionExpression()
-  {
-    return actionExpressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getActionExpression_Element()
-  {
-    return (EReference)actionExpressionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getElement()
-  {
-    return elementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getClickableElement()
-  {
-    return clickableElementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getClickableElement_Value()
-  {
-    return (EReference)clickableElementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFillableElement()
-  {
-    return fillableElementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getCheckableElement()
-  {
-    return checkableElementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getCheckbox()
-  {
-    return checkboxEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getCheckbox_Value()
-  {
-    return (EReference)checkboxEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLink()
-  {
-    return linkEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getButton()
-  {
-    return buttonEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getImage()
-  {
-    return imageEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getTextField()
-  {
-    return textFieldEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getTextField_Value()
-  {
-    return (EReference)textFieldEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getSelect()
-  {
-    return selectEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getSelect_Value()
-  {
-    return (EAttribute)selectEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getClick()
-  {
-    return clickEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getClick_Element()
-  {
-    return (EReference)clickEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getCheck()
-  {
-    return checkEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getCheck_Element()
-  {
-    return (EReference)checkEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFill()
-  {
-    return fillEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFill_Element()
-  {
-    return (EReference)fillEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getFill_Value()
-  {
-    return (EAttribute)fillEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getClear()
-  {
-    return clearEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getClear_Element()
-  {
-    return (EReference)clearEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getVerify()
-  {
-    return verifyEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getVerify_Value()
-  {
-    return (EAttribute)verifyEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getExist()
-  {
-    return existEClass;
+    return instructionEClass;
   }
 
   /**
@@ -1187,6 +754,386 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getCheckbox()
+  {
+    return checkboxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCheckbox_Id()
+  {
+    return (EReference)checkboxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCheckbox_Action()
+  {
+    return (EReference)checkboxEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLink()
+  {
+    return linkEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLink_Id()
+  {
+    return (EReference)linkEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLink_Action()
+  {
+    return (EReference)linkEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getButton()
+  {
+    return buttonEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getButton_Id()
+  {
+    return (EReference)buttonEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getButton_Action()
+  {
+    return (EReference)buttonEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getImage()
+  {
+    return imageEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getImage_Id()
+  {
+    return (EReference)imageEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getImage_Action()
+  {
+    return (EReference)imageEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTextField()
+  {
+    return textFieldEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTextField_Id()
+  {
+    return (EReference)textFieldEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTextField_Action()
+  {
+    return (EReference)textFieldEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCheckboxAction()
+  {
+    return checkboxActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCheckboxAction_CheckAction()
+  {
+    return (EReference)checkboxActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLinkAction()
+  {
+    return linkActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLinkAction_LinkAction()
+  {
+    return (EReference)linkActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getButtonAction()
+  {
+    return buttonActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getButtonAction_ButtonAction()
+  {
+    return (EReference)buttonActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getImageAction()
+  {
+    return imageActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getImageAction_ImageAction()
+  {
+    return (EReference)imageActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTextAction()
+  {
+    return textActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTextAction_TaxtAction()
+  {
+    return (EReference)textActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getClick()
+  {
+    return clickEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getClick_Val()
+  {
+    return (EAttribute)clickEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIsCheck()
+  {
+    return isCheckEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIsCheck_Val()
+  {
+    return (EAttribute)isCheckEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getClear()
+  {
+    return clearEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getClear_Val()
+  {
+    return (EAttribute)clearEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getCheckValue()
+  {
+    return checkValueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getCheckValue_Value()
+  {
+    return (EReference)checkValueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFill()
+  {
+    return fillEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFill_Value()
+  {
+    return (EReference)fillEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getValues()
+  {
+    return valuesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIntValue()
+  {
+    return intValueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIntValue_Value()
+  {
+    return (EAttribute)intValueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getStringValue()
   {
     return stringValueEClass;
@@ -1207,9 +1154,9 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EEnum getOpenBrowser()
+  public EClass getBooleanValue()
   {
-    return openBrowserEEnum;
+    return booleanValueEClass;
   }
 
   /**
@@ -1217,9 +1164,29 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EEnum getTypeElement()
+  public EAttribute getBooleanValue_Value()
   {
-    return typeElementEEnum;
+    return (EAttribute)booleanValueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getBoolean()
+  {
+    return booleanEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getOpenBrowser()
+  {
+    return openBrowserEEnum;
   }
 
   /**
@@ -1254,6 +1221,7 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     // Create classes and their features
     programEClass = createEClass(PROGRAM);
     createEAttribute(programEClass, PROGRAM__BROWSER);
+    createEReference(programEClass, PROGRAM__VARIABLES);
     createEReference(programEClass, PROGRAM__SUBROUTINES);
     createEReference(programEClass, PROGRAM__MAIN);
 
@@ -1261,19 +1229,12 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     createEReference(subroutineEClass, SUBROUTINE__HEAD);
     createEReference(subroutineEClass, SUBROUTINE__BODY);
 
+    subBodyEClass = createEClass(SUB_BODY);
+    createEReference(subBodyEClass, SUB_BODY__INSTRUCTIONS);
+
     headEClass = createEClass(HEAD);
     createEReference(headEClass, HEAD__NAME);
     createEReference(headEClass, HEAD__NAME_PARAMETERS);
-
-    functionReferenceEClass = createEClass(FUNCTION_REFERENCE);
-    createEReference(functionReferenceEClass, FUNCTION_REFERENCE__FUNCTION_NAME);
-
-    variableReferenceEClass = createEClass(VARIABLE_REFERENCE);
-    createEReference(variableReferenceEClass, VARIABLE_REFERENCE__VAR_ID);
-
-    functionCallEClass = createEClass(FUNCTION_CALL);
-    createEReference(functionCallEClass, FUNCTION_CALL__FUNCTION);
-    createEReference(functionCallEClass, FUNCTION_CALL__PARAMETERS);
 
     functionNameEClass = createEClass(FUNCTION_NAME);
     createEAttribute(functionNameEClass, FUNCTION_NAME__NAME);
@@ -1282,20 +1243,22 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     createEReference(mainEClass, MAIN__BODY);
 
     bodyEClass = createEClass(BODY);
+    createEReference(bodyEClass, BODY__GO);
     createEReference(bodyEClass, BODY__INSTRUCTIONS);
 
-    instructionEClass = createEClass(INSTRUCTION);
+    variableReferenceEClass = createEClass(VARIABLE_REFERENCE);
+    createEReference(variableReferenceEClass, VARIABLE_REFERENCE__VAR_ID);
 
-    conditionEClass = createEClass(CONDITION);
-    createEReference(conditionEClass, CONDITION__EXPRESSION);
-    createEReference(conditionEClass, CONDITION__INSTRUCTIONS_IF);
-    createEReference(conditionEClass, CONDITION__INSTRUCTIONS_ELSE);
+    functionReferenceEClass = createEClass(FUNCTION_REFERENCE);
+    createEReference(functionReferenceEClass, FUNCTION_REFERENCE__FUNCTION_NAME);
 
-    whileEClass = createEClass(WHILE);
-    createEReference(whileEClass, WHILE__EXPRESSION);
-    createEReference(whileEClass, WHILE__INSTRUCTIONS);
+    functionCallEClass = createEClass(FUNCTION_CALL);
+    createEReference(functionCallEClass, FUNCTION_CALL__FUNCTION);
+    createEReference(functionCallEClass, FUNCTION_CALL__PARAMETERS);
 
-    actionInstructionEClass = createEClass(ACTION_INSTRUCTION);
+    callTypeEClass = createEClass(CALL_TYPE);
+
+    variableEClass = createEClass(VARIABLE);
 
     variableNameEClass = createEClass(VARIABLE_NAME);
     createEAttribute(variableNameEClass, VARIABLE_NAME__NAME);
@@ -1304,75 +1267,75 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     createEReference(declarationEClass, DECLARATION__VARIABLE);
     createEReference(declarationEClass, DECLARATION__VALUE);
 
-    assignationEClass = createEClass(ASSIGNATION);
-    createEReference(assignationEClass, ASSIGNATION__VARIABLE);
-    createEReference(assignationEClass, ASSIGNATION__VALUE);
-
-    expressionEClass = createEClass(EXPRESSION);
-
-    notEpressionEClass = createEClass(NOT_EPRESSION);
-    createEReference(notEpressionEClass, NOT_EPRESSION__EXP);
-
-    binarieExpressionEClass = createEClass(BINARIE_EXPRESSION);
-    createEReference(binarieExpressionEClass, BINARIE_EXPRESSION__LEFT_EXPRESSION);
-    createEReference(binarieExpressionEClass, BINARIE_EXPRESSION__RIGHT_EXPRESSION);
-
-    variableEClass = createEClass(VARIABLE);
-
-    actionExpressionEClass = createEClass(ACTION_EXPRESSION);
-    createEReference(actionExpressionEClass, ACTION_EXPRESSION__ELEMENT);
-
-    elementEClass = createEClass(ELEMENT);
-
-    clickableElementEClass = createEClass(CLICKABLE_ELEMENT);
-    createEReference(clickableElementEClass, CLICKABLE_ELEMENT__VALUE);
-
-    fillableElementEClass = createEClass(FILLABLE_ELEMENT);
-
-    checkableElementEClass = createEClass(CHECKABLE_ELEMENT);
-
-    checkboxEClass = createEClass(CHECKBOX);
-    createEReference(checkboxEClass, CHECKBOX__VALUE);
-
-    linkEClass = createEClass(LINK);
-
-    buttonEClass = createEClass(BUTTON);
-
-    imageEClass = createEClass(IMAGE);
-
-    textFieldEClass = createEClass(TEXT_FIELD);
-    createEReference(textFieldEClass, TEXT_FIELD__VALUE);
-
-    selectEClass = createEClass(SELECT);
-    createEAttribute(selectEClass, SELECT__VALUE);
-
-    clickEClass = createEClass(CLICK);
-    createEReference(clickEClass, CLICK__ELEMENT);
-
-    checkEClass = createEClass(CHECK);
-    createEReference(checkEClass, CHECK__ELEMENT);
-
-    fillEClass = createEClass(FILL);
-    createEReference(fillEClass, FILL__ELEMENT);
-    createEAttribute(fillEClass, FILL__VALUE);
-
-    clearEClass = createEClass(CLEAR);
-    createEReference(clearEClass, CLEAR__ELEMENT);
-
-    verifyEClass = createEClass(VERIFY);
-    createEAttribute(verifyEClass, VERIFY__VALUE);
-
-    existEClass = createEClass(EXIST);
+    instructionEClass = createEClass(INSTRUCTION);
 
     goToEClass = createEClass(GO_TO);
     createEAttribute(goToEClass, GO_TO__URL);
 
+    checkboxEClass = createEClass(CHECKBOX);
+    createEReference(checkboxEClass, CHECKBOX__ID);
+    createEReference(checkboxEClass, CHECKBOX__ACTION);
+
+    linkEClass = createEClass(LINK);
+    createEReference(linkEClass, LINK__ID);
+    createEReference(linkEClass, LINK__ACTION);
+
+    buttonEClass = createEClass(BUTTON);
+    createEReference(buttonEClass, BUTTON__ID);
+    createEReference(buttonEClass, BUTTON__ACTION);
+
+    imageEClass = createEClass(IMAGE);
+    createEReference(imageEClass, IMAGE__ID);
+    createEReference(imageEClass, IMAGE__ACTION);
+
+    textFieldEClass = createEClass(TEXT_FIELD);
+    createEReference(textFieldEClass, TEXT_FIELD__ID);
+    createEReference(textFieldEClass, TEXT_FIELD__ACTION);
+
+    checkboxActionEClass = createEClass(CHECKBOX_ACTION);
+    createEReference(checkboxActionEClass, CHECKBOX_ACTION__CHECK_ACTION);
+
+    linkActionEClass = createEClass(LINK_ACTION);
+    createEReference(linkActionEClass, LINK_ACTION__LINK_ACTION);
+
+    buttonActionEClass = createEClass(BUTTON_ACTION);
+    createEReference(buttonActionEClass, BUTTON_ACTION__BUTTON_ACTION);
+
+    imageActionEClass = createEClass(IMAGE_ACTION);
+    createEReference(imageActionEClass, IMAGE_ACTION__IMAGE_ACTION);
+
+    textActionEClass = createEClass(TEXT_ACTION);
+    createEReference(textActionEClass, TEXT_ACTION__TAXT_ACTION);
+
+    clickEClass = createEClass(CLICK);
+    createEAttribute(clickEClass, CLICK__VAL);
+
+    isCheckEClass = createEClass(IS_CHECK);
+    createEAttribute(isCheckEClass, IS_CHECK__VAL);
+
+    clearEClass = createEClass(CLEAR);
+    createEAttribute(clearEClass, CLEAR__VAL);
+
+    checkValueEClass = createEClass(CHECK_VALUE);
+    createEReference(checkValueEClass, CHECK_VALUE__VALUE);
+
+    fillEClass = createEClass(FILL);
+    createEReference(fillEClass, FILL__VALUE);
+
+    valuesEClass = createEClass(VALUES);
+
+    intValueEClass = createEClass(INT_VALUE);
+    createEAttribute(intValueEClass, INT_VALUE__VALUE);
+
     stringValueEClass = createEClass(STRING_VALUE);
     createEAttribute(stringValueEClass, STRING_VALUE__VALUE);
 
+    booleanValueEClass = createEClass(BOOLEAN_VALUE);
+    createEAttribute(booleanValueEClass, BOOLEAN_VALUE__VALUE);
+
     // Create enums
+    booleanEEnum = createEEnum(BOOLEAN);
     openBrowserEEnum = createEEnum(OPEN_BROWSER);
-    typeElementEEnum = createEEnum(TYPE_ELEMENT);
   }
 
   /**
@@ -1406,55 +1369,39 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     // Add supertypes to classes
     variableReferenceEClass.getESuperTypes().add(this.getVariable());
     functionCallEClass.getESuperTypes().add(this.getInstruction());
-    conditionEClass.getESuperTypes().add(this.getInstruction());
-    whileEClass.getESuperTypes().add(this.getInstruction());
-    actionInstructionEClass.getESuperTypes().add(this.getInstruction());
-    declarationEClass.getESuperTypes().add(this.getInstruction());
-    assignationEClass.getESuperTypes().add(this.getInstruction());
-    notEpressionEClass.getESuperTypes().add(this.getExpression());
-    binarieExpressionEClass.getESuperTypes().add(this.getExpression());
-    variableEClass.getESuperTypes().add(this.getExpression());
-    actionExpressionEClass.getESuperTypes().add(this.getExpression());
-    clickableElementEClass.getESuperTypes().add(this.getElement());
-    fillableElementEClass.getESuperTypes().add(this.getElement());
-    checkableElementEClass.getESuperTypes().add(this.getElement());
-    checkboxEClass.getESuperTypes().add(this.getCheckableElement());
-    linkEClass.getESuperTypes().add(this.getClickableElement());
-    buttonEClass.getESuperTypes().add(this.getClickableElement());
-    imageEClass.getESuperTypes().add(this.getClickableElement());
-    textFieldEClass.getESuperTypes().add(this.getFillableElement());
-    clickEClass.getESuperTypes().add(this.getActionInstruction());
-    checkEClass.getESuperTypes().add(this.getActionInstruction());
-    fillEClass.getESuperTypes().add(this.getActionInstruction());
-    clearEClass.getESuperTypes().add(this.getActionInstruction());
-    verifyEClass.getESuperTypes().add(this.getActionExpression());
-    existEClass.getESuperTypes().add(this.getActionExpression());
-    goToEClass.getESuperTypes().add(this.getActionInstruction());
-    stringValueEClass.getESuperTypes().add(this.getExpression());
+    variableEClass.getESuperTypes().add(this.getCallType());
+    goToEClass.getESuperTypes().add(this.getInstruction());
+    checkboxEClass.getESuperTypes().add(this.getInstruction());
+    linkEClass.getESuperTypes().add(this.getInstruction());
+    buttonEClass.getESuperTypes().add(this.getInstruction());
+    imageEClass.getESuperTypes().add(this.getInstruction());
+    textFieldEClass.getESuperTypes().add(this.getInstruction());
+    isCheckEClass.getESuperTypes().add(this.getCheckboxAction());
+    clearEClass.getESuperTypes().add(this.getCheckboxAction());
+    clearEClass.getESuperTypes().add(this.getTextAction());
+    fillEClass.getESuperTypes().add(this.getTextAction());
+    valuesEClass.getESuperTypes().add(this.getCallType());
+    intValueEClass.getESuperTypes().add(this.getValues());
+    stringValueEClass.getESuperTypes().add(this.getValues());
+    booleanValueEClass.getESuperTypes().add(this.getValues());
 
     // Initialize classes and features; add operations and parameters
     initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getProgram_Browser(), this.getOpenBrowser(), "browser", null, 0, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProgram_Variables(), this.getDeclaration(), null, "variables", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProgram_Subroutines(), this.getSubroutine(), null, "subroutines", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getProgram_Main(), this.getMain(), null, "main", null, 0, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(subroutineEClass, Subroutine.class, "Subroutine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSubroutine_Head(), this.getHead(), null, "head", null, 0, 1, Subroutine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSubroutine_Body(), this.getBody(), null, "body", null, 0, 1, Subroutine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSubroutine_Body(), this.getSubBody(), null, "body", null, 0, 1, Subroutine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(subBodyEClass, SubBody.class, "SubBody", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSubBody_Instructions(), this.getInstruction(), null, "instructions", null, 0, -1, SubBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(headEClass, Head.class, "Head", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getHead_Name(), this.getFunctionName(), null, "name", null, 0, 1, Head.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getHead_NameParameters(), this.getVariableName(), null, "nameParameters", null, 0, -1, Head.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(functionReferenceEClass, FunctionReference.class, "FunctionReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFunctionReference_FunctionName(), this.getFunctionName(), null, "functionName", null, 0, 1, FunctionReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(variableReferenceEClass, VariableReference.class, "VariableReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getVariableReference_VarID(), this.getVariableName(), null, "varID", null, 0, 1, VariableReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(functionCallEClass, FunctionCall.class, "FunctionCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFunctionCall_Function(), this.getFunctionReference(), null, "function", null, 0, 1, FunctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFunctionCall_Parameters(), this.getExpression(), null, "parameters", null, 0, -1, FunctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(functionNameEClass, FunctionName.class, "FunctionName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFunctionName_Name(), ecorePackage.getEString(), "name", null, 0, 1, FunctionName.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1463,106 +1410,105 @@ public class BrowserDSLPackageImpl extends EPackageImpl implements BrowserDSLPac
     initEReference(getMain_Body(), this.getBody(), null, "body", null, 0, 1, Main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(bodyEClass, Body.class, "Body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getBody_Go(), this.getGoTo(), null, "go", null, 0, 1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBody_Instructions(), this.getInstruction(), null, "instructions", null, 0, -1, Body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(instructionEClass, Instruction.class, "Instruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(variableReferenceEClass, VariableReference.class, "VariableReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getVariableReference_VarID(), this.getVariableName(), null, "varID", null, 0, 1, VariableReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getCondition_Expression(), this.getExpression(), null, "expression", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCondition_InstructionsIf(), this.getInstruction(), null, "instructionsIf", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCondition_InstructionsElse(), this.getInstruction(), null, "instructionsElse", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(functionReferenceEClass, FunctionReference.class, "FunctionReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFunctionReference_FunctionName(), this.getFunctionName(), null, "functionName", null, 0, 1, FunctionReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(whileEClass, While.class, "While", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getWhile_Expression(), this.getExpression(), null, "expression", null, 0, 1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getWhile_Instructions(), this.getInstruction(), null, "instructions", null, 0, -1, While.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(functionCallEClass, FunctionCall.class, "FunctionCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFunctionCall_Function(), this.getFunctionReference(), null, "function", null, 0, 1, FunctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFunctionCall_Parameters(), this.getCallType(), null, "parameters", null, 0, -1, FunctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(actionInstructionEClass, ActionInstruction.class, "ActionInstruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(callTypeEClass, CallType.class, "CallType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(variableNameEClass, VariableName.class, "VariableName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVariableName_Name(), ecorePackage.getEString(), "name", null, 0, 1, VariableName.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(declarationEClass, Declaration.class, "Declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDeclaration_Variable(), this.getVariableName(), null, "variable", null, 0, 1, Declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDeclaration_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, Declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDeclaration_Value(), this.getValues(), null, "value", null, 0, 1, Declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(assignationEClass, Assignation.class, "Assignation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAssignation_Variable(), this.getVariableReference(), null, "variable", null, 0, 1, Assignation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAssignation_Value(), this.getExpression(), null, "value", null, 0, 1, Assignation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(notEpressionEClass, NotEpression.class, "NotEpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getNotEpression_Exp(), this.getExpression(), null, "exp", null, 0, 1, NotEpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(binarieExpressionEClass, BinarieExpression.class, "BinarieExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBinarieExpression_LeftExpression(), this.getExpression(), null, "leftExpression", null, 0, 1, BinarieExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBinarieExpression_RightExpression(), this.getExpression(), null, "rightExpression", null, 0, 1, BinarieExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(actionExpressionEClass, ActionExpression.class, "ActionExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getActionExpression_Element(), ecorePackage.getEObject(), null, "element", null, 0, 1, ActionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(clickableElementEClass, ClickableElement.class, "ClickableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getClickableElement_Value(), this.getExpression(), null, "value", null, 0, 1, ClickableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(fillableElementEClass, FillableElement.class, "FillableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(checkableElementEClass, CheckableElement.class, "CheckableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(checkboxEClass, Checkbox.class, "Checkbox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getCheckbox_Value(), this.getExpression(), null, "value", null, 0, 1, Checkbox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(textFieldEClass, TextField.class, "TextField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTextField_Value(), this.getExpression(), null, "value", null, 0, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(selectEClass, Select.class, "Select", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSelect_Value(), this.getTypeElement(), "value", null, 0, 1, Select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(clickEClass, Click.class, "Click", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getClick_Element(), ecorePackage.getEObject(), null, "element", null, 0, 1, Click.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(checkEClass, Check.class, "Check", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getCheck_Element(), ecorePackage.getEObject(), null, "element", null, 0, 1, Check.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(fillEClass, Fill.class, "Fill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFill_Element(), ecorePackage.getEObject(), null, "element", null, 0, 1, Fill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFill_Value(), ecorePackage.getEString(), "value", null, 0, 1, Fill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(clearEClass, Clear.class, "Clear", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getClear_Element(), ecorePackage.getEObject(), null, "element", null, 0, 1, Clear.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(verifyEClass, Verify.class, "Verify", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getVerify_Value(), ecorePackage.getEString(), "value", null, 0, 1, Verify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(existEClass, Exist.class, "Exist", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(instructionEClass, Instruction.class, "Instruction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(goToEClass, GoTo.class, "GoTo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGoTo_Url(), ecorePackage.getEString(), "url", null, 0, 1, GoTo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(checkboxEClass, Checkbox.class, "Checkbox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCheckbox_Id(), this.getCallType(), null, "id", null, 0, 1, Checkbox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCheckbox_Action(), this.getCheckboxAction(), null, "action", null, 0, 1, Checkbox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLink_Id(), this.getCallType(), null, "id", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLink_Action(), this.getLinkAction(), null, "action", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getButton_Id(), this.getCallType(), null, "id", null, 0, 1, Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getButton_Action(), this.getButtonAction(), null, "action", null, 0, 1, Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getImage_Id(), this.getCallType(), null, "id", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getImage_Action(), this.getImageAction(), null, "action", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textFieldEClass, TextField.class, "TextField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTextField_Id(), this.getCallType(), null, "id", null, 0, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTextField_Action(), this.getTextAction(), null, "action", null, 0, 1, TextField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(checkboxActionEClass, CheckboxAction.class, "CheckboxAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCheckboxAction_CheckAction(), this.getClick(), null, "checkAction", null, 0, 1, CheckboxAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(linkActionEClass, LinkAction.class, "LinkAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLinkAction_LinkAction(), this.getClick(), null, "linkAction", null, 0, 1, LinkAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(buttonActionEClass, ButtonAction.class, "ButtonAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getButtonAction_ButtonAction(), this.getClick(), null, "ButtonAction", null, 0, 1, ButtonAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(imageActionEClass, ImageAction.class, "ImageAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getImageAction_ImageAction(), this.getClick(), null, "ImageAction", null, 0, 1, ImageAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(textActionEClass, TextAction.class, "TextAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTextAction_TaxtAction(), this.getCheckValue(), null, "taxtAction", null, 0, 1, TextAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(clickEClass, Click.class, "Click", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getClick_Val(), ecorePackage.getEString(), "val", null, 0, 1, Click.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(isCheckEClass, IsCheck.class, "IsCheck", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIsCheck_Val(), this.getBoolean(), "val", null, 0, 1, IsCheck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(clearEClass, Clear.class, "Clear", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getClear_Val(), ecorePackage.getEString(), "val", null, 0, 1, Clear.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(checkValueEClass, CheckValue.class, "CheckValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCheckValue_Value(), this.getCallType(), null, "value", null, 0, 1, CheckValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fillEClass, Fill.class, "Fill", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFill_Value(), this.getCallType(), null, "value", null, 0, 1, Fill.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(valuesEClass, Values.class, "Values", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(intValueEClass, IntValue.class, "IntValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIntValue_Value(), ecorePackage.getEInt(), "value", null, 0, 1, IntValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(stringValueEClass, StringValue.class, "StringValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getStringValue_Value(), ecorePackage.getEString(), "value", null, 0, 1, StringValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(booleanValueEClass, BooleanValue.class, "BooleanValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBooleanValue_Value(), this.getBoolean(), "value", null, 0, 1, BooleanValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     // Initialize enums and add enum literals
+    initEEnum(booleanEEnum, org.xtext.mda.project.browserDSL.Boolean.class, "Boolean");
+    addEEnumLiteral(booleanEEnum, org.xtext.mda.project.browserDSL.Boolean.TRUE);
+    addEEnumLiteral(booleanEEnum, org.xtext.mda.project.browserDSL.Boolean.FALSE);
+
     initEEnum(openBrowserEEnum, OpenBrowser.class, "OpenBrowser");
     addEEnumLiteral(openBrowserEEnum, OpenBrowser.CHROME);
     addEEnumLiteral(openBrowserEEnum, OpenBrowser.FIREFOX);
     addEEnumLiteral(openBrowserEEnum, OpenBrowser.HTML_UNIT_DRIVER);
-
-    initEEnum(typeElementEEnum, TypeElement.class, "TypeElement");
-    addEEnumLiteral(typeElementEEnum, TypeElement.CHECKBOX);
-    addEEnumLiteral(typeElementEEnum, TypeElement.LINK);
-    addEEnumLiteral(typeElementEEnum, TypeElement.BUTTON);
-    addEEnumLiteral(typeElementEEnum, TypeElement.IMAGE);
-    addEEnumLiteral(typeElementEEnum, TypeElement.TEXT_FIELD);
 
     // Create resource
     createResource(eNS_URI);

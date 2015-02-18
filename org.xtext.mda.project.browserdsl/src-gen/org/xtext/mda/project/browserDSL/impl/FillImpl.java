@@ -6,12 +6,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
+import org.xtext.mda.project.browserDSL.CallType;
 import org.xtext.mda.project.browserDSL.Fill;
 
 /**
@@ -21,44 +21,23 @@ import org.xtext.mda.project.browserDSL.Fill;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.mda.project.browserDSL.impl.FillImpl#getElement <em>Element</em>}</li>
  *   <li>{@link org.xtext.mda.project.browserDSL.impl.FillImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class FillImpl extends ActionInstructionImpl implements Fill
+public class FillImpl extends TextActionImpl implements Fill
 {
   /**
-   * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getElement()
-   * @generated
-   * @ordered
-   */
-  protected EObject element;
-
-  /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getValue()
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected String value = VALUE_EDEFAULT;
+  protected CallType value;
 
   /**
    * <!-- begin-user-doc -->
@@ -86,9 +65,9 @@ public class FillImpl extends ActionInstructionImpl implements Fill
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getElement()
+  public CallType getValue()
   {
-    return element;
+    return value;
   }
 
   /**
@@ -96,13 +75,13 @@ public class FillImpl extends ActionInstructionImpl implements Fill
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetElement(EObject newElement, NotificationChain msgs)
+  public NotificationChain basicSetValue(CallType newValue, NotificationChain msgs)
   {
-    EObject oldElement = element;
-    element = newElement;
+    CallType oldValue = value;
+    value = newValue;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.FILL__ELEMENT, oldElement, newElement);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.FILL__VALUE, oldValue, newValue);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -113,43 +92,20 @@ public class FillImpl extends ActionInstructionImpl implements Fill
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setElement(EObject newElement)
+  public void setValue(CallType newValue)
   {
-    if (newElement != element)
+    if (newValue != value)
     {
       NotificationChain msgs = null;
-      if (element != null)
-        msgs = ((InternalEObject)element).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.FILL__ELEMENT, null, msgs);
-      if (newElement != null)
-        msgs = ((InternalEObject)newElement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.FILL__ELEMENT, null, msgs);
-      msgs = basicSetElement(newElement, msgs);
+      if (value != null)
+        msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.FILL__VALUE, null, msgs);
+      if (newValue != null)
+        msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.FILL__VALUE, null, msgs);
+      msgs = basicSetValue(newValue, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.FILL__ELEMENT, newElement, newElement));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getValue()
-  {
-    return value;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setValue(String newValue)
-  {
-    String oldValue = value;
-    value = newValue;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.FILL__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.FILL__VALUE, newValue, newValue));
   }
 
   /**
@@ -162,8 +118,8 @@ public class FillImpl extends ActionInstructionImpl implements Fill
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.FILL__ELEMENT:
-        return basicSetElement(null, msgs);
+      case BrowserDSLPackage.FILL__VALUE:
+        return basicSetValue(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -178,8 +134,6 @@ public class FillImpl extends ActionInstructionImpl implements Fill
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.FILL__ELEMENT:
-        return getElement();
       case BrowserDSLPackage.FILL__VALUE:
         return getValue();
     }
@@ -196,11 +150,8 @@ public class FillImpl extends ActionInstructionImpl implements Fill
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.FILL__ELEMENT:
-        setElement((EObject)newValue);
-        return;
       case BrowserDSLPackage.FILL__VALUE:
-        setValue((String)newValue);
+        setValue((CallType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -216,11 +167,8 @@ public class FillImpl extends ActionInstructionImpl implements Fill
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.FILL__ELEMENT:
-        setElement((EObject)null);
-        return;
       case BrowserDSLPackage.FILL__VALUE:
-        setValue(VALUE_EDEFAULT);
+        setValue((CallType)null);
         return;
     }
     super.eUnset(featureID);
@@ -236,29 +184,10 @@ public class FillImpl extends ActionInstructionImpl implements Fill
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.FILL__ELEMENT:
-        return element != null;
       case BrowserDSLPackage.FILL__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+        return value != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (value: ");
-    result.append(value);
-    result.append(')');
-    return result.toString();
   }
 
 } //FillImpl

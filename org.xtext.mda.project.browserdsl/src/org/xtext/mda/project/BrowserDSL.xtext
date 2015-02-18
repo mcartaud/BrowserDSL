@@ -4,30 +4,22 @@ generate browserDSL "http://www.xtext.org/mda/project/BrowserDSL"
 
 Program:
 	'browser ' browser=OpenBrowser ';'
+	variables+=Declaration*
 	subroutines+=Subroutine*
 	main=Main	
 ;
 
 Subroutine:
-	'sub ' head=Head body=Body
+	'sub ' head=Head body=SubBody
+;
+
+SubBody:
+	'{' instructions+=Instruction ';' (instructions+=Instruction ';')* '}'
 ;
 
 Head:
 	(name=FunctionName '()')
 	| (name=FunctionName '(var ' nameParameters+=VariableName (', var ' nameParameters+=VariableName)* ')')
-;
-
-FunctionReference:
-	functionName=[FunctionName]
-;
-
-VariableReference:
-	varID=[VariableName]
-;
-
-FunctionCall:
-	(function = FunctionReference '();' )
-	| (function = FunctionReference '(' parameters+=Expression (', ' parameters+=Expression)* ');')
 ;
 
 FunctionName:
@@ -40,38 +32,30 @@ Main:
 
 Body:
 	'{'
-	instructions+=Instruction ( instructions+=Instruction)* 
+	go=GoTo ';'
+	instructions+=Instruction';' ( instructions+=Instruction ';')* 
 	'}'
 ;
 
-enum OpenBrowser:
-	Chrome|Firefox|HtmlUnitDriver
+VariableReference:
+	varID=[VariableName]
 ;
 
-Instruction:
-	Declaration
-	| Condition
-	| While
-	| ActionInstruction
-	| Assignation
-	| FunctionCall
+FunctionReference:
+	functionName=[FunctionName]
 ;
 
-Condition:
-	'if '('all ' | 'any ')? '('expression=Expression ')'
-	'then ' instructionsIf+=Instruction+ 
-	('else ' instructionsElse+=Instruction+)?
-	'endif '
+FunctionCall:
+	(function = FunctionReference '()' )
+	| (function = FunctionReference '(' parameters+=CallType (', ' parameters+=CallType)* ')')
 ;
 
-While:
-    'while (' expression=Expression ') do '
-        instructions+=Instruction+ 
-    'endwhile'
+CallType:
+	Values | Variable
 ;
 
-ActionInstruction:
-	Click | Check | Fill | Clear | GoTo
+Variable:
+	VariableReference
 ;
 
 VariableName:
@@ -79,110 +63,99 @@ VariableName:
 ;
 
 Declaration:
-	'var ' variable=VariableName ' = ' value=(Expression|Element) ';'
+	'var ' variable=VariableName ' = ' value=Values ';'
 ;
 
-Assignation:
-	variable=VariableReference ' = ' value=Expression ';'
-;
-
-Expression:
-	StringValue | Variable | ActionExpression | NotEpression | BinarieExpression
-;
-
-NotEpression:
-	' !' exp=Expression
-;
-
-BinarieExpression:
-	((' == ' | ' > ' | ' < ') leftExpression=Expression rightExpression=Expression)
-;
-
-
-Variable:
-	VariableReference
-;
-
-ActionExpression:
-	Verify | Exist
-;
-
-Element:
-	ClickableElement | FillableElement | CheckableElement
-;
-
-ClickableElement:
-	Link | Button | Image
-;
-
-FillableElement:
-	TextField
-;
-
-CheckableElement:
-	Checkbox
-;
-
-Checkbox:
-	'checkbox ' (value=(StringValue | Variable)) 
-;
-
-Link:
-	'link ' (value=(StringValue | Variable)) 
-;
-
-Button:
-	'button ' (value=(StringValue | Variable))
-;
-
-Image:
-	'image ' (value=(StringValue | Variable))
-;
-
-TextField:
-	'textField ' (value=(StringValue | Variable))
-;
-
-
-Select:
-	'select(' value=TypeElement ')'
-;
-
-
-Click:
-	'click(' element=(ClickableElement | Select | Variable) ');'
-;
-
-Check:
-	'check(' element=(CheckableElement | Select | Variable) ');'
-;
-
-Fill:
-	'fill(' element=(FillableElement | Select | Variable) ', value=' value=STRING ');'
-;
-
-Clear:
-	'clear(' element=(FillableElement | CheckableElement | Select | Variable) ');'
-;
-
-Verify:
-	'verify(' element=(FillableElement | CheckableElement | Select | Variable) ', value=' value=STRING ');'
-;
-
-Exist:
-	'exist(' element=(Element | Select | Variable) ');'
+Instruction:
+	Link | Button | Image | TextField | Checkbox | GoTo | FunctionCall
 ;
 
 GoTo:
-	'goTo(' url=URL ');'
+	'goTo(' url=URL ')'
 ;
 
-enum TypeElement:
-	Checkbox|Link|Button|Image|TextField
+Checkbox:
+	'checkbox( ' id=(Values | Variable) ' )' action=CheckboxAction
+;
+
+Link:
+	'link( ' id=(Values | Variable) ' )' action=LinkAction
+;
+
+Button:
+	'button( ' id=(Values | Variable) ' )' action=ButtonAction
+;
+
+Image:
+	'image( ' id=(Values | Variable) ' )' action=ImageAction
+;
+
+TextField:
+	'textField( ' id=(Values | Variable) ' )' action=TextAction
+;
+
+CheckboxAction:
+	checkAction = Click | IsCheck | Clear
+;
+
+LinkAction:
+	linkAction = Click
+;
+
+ButtonAction:
+	ButtonAction = Click
+;
+
+ImageAction:
+	ImageAction = Click
+;
+
+TextAction:
+	taxtAction = CheckValue | Fill | Clear
+;
+
+Click:
+	val='.click()'
+;
+
+IsCheck:
+	'.isCheck(' val=Boolean ')'
+;
+
+Clear:
+	val='.clear()'
+;
+
+CheckValue:
+	'.verify(' value=(Variable | Values) ')'
+;
+
+Fill:
+	'.fill(' value=(Variable | Values) ')'
+;
+
+Values:
+	IntValue | StringValue | BooleanValue
+;
+
+IntValue:
+	value=INT
 ;
 
 StringValue : 
 	value=STRING
+;
+
+BooleanValue:
+	value=Boolean
+;
+
+enum Boolean:
+	true | false
+;
+
+enum OpenBrowser:
+	Chrome|Firefox|HtmlUnitDriver
 ;
 
 terminal URL:

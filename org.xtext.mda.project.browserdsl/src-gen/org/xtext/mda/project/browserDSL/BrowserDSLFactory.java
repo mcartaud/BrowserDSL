@@ -41,6 +41,15 @@ public interface BrowserDSLFactory extends EFactory
   Subroutine createSubroutine();
 
   /**
+   * Returns a new object of class '<em>Sub Body</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sub Body</em>'.
+   * @generated
+   */
+  SubBody createSubBody();
+
+  /**
    * Returns a new object of class '<em>Head</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -48,33 +57,6 @@ public interface BrowserDSLFactory extends EFactory
    * @generated
    */
   Head createHead();
-
-  /**
-   * Returns a new object of class '<em>Function Reference</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Function Reference</em>'.
-   * @generated
-   */
-  FunctionReference createFunctionReference();
-
-  /**
-   * Returns a new object of class '<em>Variable Reference</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Variable Reference</em>'.
-   * @generated
-   */
-  VariableReference createVariableReference();
-
-  /**
-   * Returns a new object of class '<em>Function Call</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Function Call</em>'.
-   * @generated
-   */
-  FunctionCall createFunctionCall();
 
   /**
    * Returns a new object of class '<em>Function Name</em>'.
@@ -104,40 +86,49 @@ public interface BrowserDSLFactory extends EFactory
   Body createBody();
 
   /**
-   * Returns a new object of class '<em>Instruction</em>'.
+   * Returns a new object of class '<em>Variable Reference</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Instruction</em>'.
+   * @return a new object of class '<em>Variable Reference</em>'.
    * @generated
    */
-  Instruction createInstruction();
+  VariableReference createVariableReference();
 
   /**
-   * Returns a new object of class '<em>Condition</em>'.
+   * Returns a new object of class '<em>Function Reference</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Condition</em>'.
+   * @return a new object of class '<em>Function Reference</em>'.
    * @generated
    */
-  Condition createCondition();
+  FunctionReference createFunctionReference();
 
   /**
-   * Returns a new object of class '<em>While</em>'.
+   * Returns a new object of class '<em>Function Call</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>While</em>'.
+   * @return a new object of class '<em>Function Call</em>'.
    * @generated
    */
-  While createWhile();
+  FunctionCall createFunctionCall();
 
   /**
-   * Returns a new object of class '<em>Action Instruction</em>'.
+   * Returns a new object of class '<em>Call Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Action Instruction</em>'.
+   * @return a new object of class '<em>Call Type</em>'.
    * @generated
    */
-  ActionInstruction createActionInstruction();
+  CallType createCallType();
+
+  /**
+   * Returns a new object of class '<em>Variable</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Variable</em>'.
+   * @generated
+   */
+  Variable createVariable();
 
   /**
    * Returns a new object of class '<em>Variable Name</em>'.
@@ -158,94 +149,22 @@ public interface BrowserDSLFactory extends EFactory
   Declaration createDeclaration();
 
   /**
-   * Returns a new object of class '<em>Assignation</em>'.
+   * Returns a new object of class '<em>Instruction</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Assignation</em>'.
+   * @return a new object of class '<em>Instruction</em>'.
    * @generated
    */
-  Assignation createAssignation();
+  Instruction createInstruction();
 
   /**
-   * Returns a new object of class '<em>Expression</em>'.
+   * Returns a new object of class '<em>Go To</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Expression</em>'.
+   * @return a new object of class '<em>Go To</em>'.
    * @generated
    */
-  Expression createExpression();
-
-  /**
-   * Returns a new object of class '<em>Not Epression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Not Epression</em>'.
-   * @generated
-   */
-  NotEpression createNotEpression();
-
-  /**
-   * Returns a new object of class '<em>Binarie Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Binarie Expression</em>'.
-   * @generated
-   */
-  BinarieExpression createBinarieExpression();
-
-  /**
-   * Returns a new object of class '<em>Variable</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Variable</em>'.
-   * @generated
-   */
-  Variable createVariable();
-
-  /**
-   * Returns a new object of class '<em>Action Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Action Expression</em>'.
-   * @generated
-   */
-  ActionExpression createActionExpression();
-
-  /**
-   * Returns a new object of class '<em>Element</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Element</em>'.
-   * @generated
-   */
-  Element createElement();
-
-  /**
-   * Returns a new object of class '<em>Clickable Element</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Clickable Element</em>'.
-   * @generated
-   */
-  ClickableElement createClickableElement();
-
-  /**
-   * Returns a new object of class '<em>Fillable Element</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Fillable Element</em>'.
-   * @generated
-   */
-  FillableElement createFillableElement();
-
-  /**
-   * Returns a new object of class '<em>Checkable Element</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Checkable Element</em>'.
-   * @generated
-   */
-  CheckableElement createCheckableElement();
+  GoTo createGoTo();
 
   /**
    * Returns a new object of class '<em>Checkbox</em>'.
@@ -293,13 +212,49 @@ public interface BrowserDSLFactory extends EFactory
   TextField createTextField();
 
   /**
-   * Returns a new object of class '<em>Select</em>'.
+   * Returns a new object of class '<em>Checkbox Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Select</em>'.
+   * @return a new object of class '<em>Checkbox Action</em>'.
    * @generated
    */
-  Select createSelect();
+  CheckboxAction createCheckboxAction();
+
+  /**
+   * Returns a new object of class '<em>Link Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Link Action</em>'.
+   * @generated
+   */
+  LinkAction createLinkAction();
+
+  /**
+   * Returns a new object of class '<em>Button Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Button Action</em>'.
+   * @generated
+   */
+  ButtonAction createButtonAction();
+
+  /**
+   * Returns a new object of class '<em>Image Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Image Action</em>'.
+   * @generated
+   */
+  ImageAction createImageAction();
+
+  /**
+   * Returns a new object of class '<em>Text Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Text Action</em>'.
+   * @generated
+   */
+  TextAction createTextAction();
 
   /**
    * Returns a new object of class '<em>Click</em>'.
@@ -311,22 +266,13 @@ public interface BrowserDSLFactory extends EFactory
   Click createClick();
 
   /**
-   * Returns a new object of class '<em>Check</em>'.
+   * Returns a new object of class '<em>Is Check</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Check</em>'.
+   * @return a new object of class '<em>Is Check</em>'.
    * @generated
    */
-  Check createCheck();
-
-  /**
-   * Returns a new object of class '<em>Fill</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Fill</em>'.
-   * @generated
-   */
-  Fill createFill();
+  IsCheck createIsCheck();
 
   /**
    * Returns a new object of class '<em>Clear</em>'.
@@ -338,31 +284,40 @@ public interface BrowserDSLFactory extends EFactory
   Clear createClear();
 
   /**
-   * Returns a new object of class '<em>Verify</em>'.
+   * Returns a new object of class '<em>Check Value</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Verify</em>'.
+   * @return a new object of class '<em>Check Value</em>'.
    * @generated
    */
-  Verify createVerify();
+  CheckValue createCheckValue();
 
   /**
-   * Returns a new object of class '<em>Exist</em>'.
+   * Returns a new object of class '<em>Fill</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Exist</em>'.
+   * @return a new object of class '<em>Fill</em>'.
    * @generated
    */
-  Exist createExist();
+  Fill createFill();
 
   /**
-   * Returns a new object of class '<em>Go To</em>'.
+   * Returns a new object of class '<em>Values</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Go To</em>'.
+   * @return a new object of class '<em>Values</em>'.
    * @generated
    */
-  GoTo createGoTo();
+  Values createValues();
+
+  /**
+   * Returns a new object of class '<em>Int Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Int Value</em>'.
+   * @generated
+   */
+  IntValue createIntValue();
 
   /**
    * Returns a new object of class '<em>String Value</em>'.
@@ -372,6 +327,15 @@ public interface BrowserDSLFactory extends EFactory
    * @generated
    */
   StringValue createStringValue();
+
+  /**
+   * Returns a new object of class '<em>Boolean Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Boolean Value</em>'.
+   * @generated
+   */
+  BooleanValue createBooleanValue();
 
   /**
    * Returns the package supported by this factory.

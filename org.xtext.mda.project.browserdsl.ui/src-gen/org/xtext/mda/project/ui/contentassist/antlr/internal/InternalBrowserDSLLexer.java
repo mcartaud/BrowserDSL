@@ -12,27 +12,30 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalBrowserDSLLexer extends Lexer {
-    public static final int T__50=50;
+    public static final int RULE_STRING=4;
+    public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
-    public static final int T__59=59;
+    public static final int T__37=37;
     public static final int T__16=16;
+    public static final int T__38=38;
     public static final int T__17=17;
+    public static final int T__39=39;
     public static final int T__18=18;
-    public static final int T__55=55;
+    public static final int T__33=33;
     public static final int T__12=12;
-    public static final int T__56=56;
+    public static final int T__34=34;
     public static final int T__13=13;
-    public static final int T__57=57;
+    public static final int T__35=35;
     public static final int T__14=14;
-    public static final int T__58=58;
-    public static final int T__51=51;
-    public static final int T__52=52;
-    public static final int T__53=53;
-    public static final int T__54=54;
-    public static final int T__60=60;
-    public static final int T__61=61;
-    public static final int RULE_ID=4;
+    public static final int T__36=36;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int RULE_ID=5;
+    public static final int RULE_WS=10;
+    public static final int RULE_ANY_OTHER=11;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
@@ -44,34 +47,11 @@ public class InternalBrowserDSLLexer extends Lexer {
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
-    public static final int T__62=62;
-    public static final int T__20=20;
-    public static final int T__21=21;
-    public static final int RULE_STRING=5;
-    public static final int RULE_SL_COMMENT=9;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
-    public static final int T__33=33;
-    public static final int T__34=34;
-    public static final int T__35=35;
-    public static final int T__36=36;
-    public static final int EOF=-1;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
-    public static final int RULE_WS=10;
-    public static final int RULE_ANY_OTHER=11;
-    public static final int T__48=48;
-    public static final int T__49=49;
-    public static final int T__44=44;
-    public static final int T__45=45;
-    public static final int T__46=46;
-    public static final int T__47=47;
     public static final int T__40=40;
     public static final int T__41=41;
+    public static final int T__20=20;
     public static final int T__42=42;
-    public static final int T__43=43;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -91,10 +71,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:11:7: ( 'all ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:11:9: 'all '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:11:7: ( 'true' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:11:9: 'true'
             {
-            match("all "); 
+            match("true"); 
 
 
             }
@@ -112,10 +92,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:12:7: ( 'any ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:12:9: 'any '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:12:7: ( 'false' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:12:9: 'false'
             {
-            match("any "); 
+            match("false"); 
 
 
             }
@@ -133,10 +113,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:13:7: ( ' == ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:13:9: ' == '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:13:7: ( 'Chrome' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:13:9: 'Chrome'
             {
-            match(" == "); 
+            match("Chrome"); 
 
 
             }
@@ -154,10 +134,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:14:7: ( ' > ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:14:9: ' > '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:14:7: ( 'Firefox' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:14:9: 'Firefox'
             {
-            match(" > "); 
+            match("Firefox"); 
 
 
             }
@@ -175,10 +155,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:15:7: ( ' < ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:15:9: ' < '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:15:7: ( 'HtmlUnitDriver' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:15:9: 'HtmlUnitDriver'
             {
-            match(" < "); 
+            match("HtmlUnitDriver"); 
 
 
             }
@@ -196,10 +176,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:16:7: ( 'Chrome' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:16:9: 'Chrome'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:16:7: ( 'browser ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:16:9: 'browser '
             {
-            match("Chrome"); 
+            match("browser "); 
 
 
             }
@@ -217,11 +197,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:17:7: ( 'Firefox' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:17:9: 'Firefox'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:17:7: ( ';' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:17:9: ';'
             {
-            match("Firefox"); 
-
+            match(';'); 
 
             }
 
@@ -238,10 +217,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:18:7: ( 'HtmlUnitDriver' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:18:9: 'HtmlUnitDriver'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:18:7: ( 'sub ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:18:9: 'sub '
             {
-            match("HtmlUnitDriver"); 
+            match("sub "); 
 
 
             }
@@ -259,11 +238,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:19:7: ( 'Checkbox' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:19:9: 'Checkbox'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:19:7: ( '{' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:19:9: '{'
             {
-            match("Checkbox"); 
-
+            match('{'); 
 
             }
 
@@ -280,11 +258,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:20:7: ( 'Link' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:20:9: 'Link'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:20:7: ( '}' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:20:9: '}'
             {
-            match("Link"); 
-
+            match('}'); 
 
             }
 
@@ -301,10 +278,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:21:7: ( 'Button' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:21:9: 'Button'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:21:7: ( '()' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:21:9: '()'
             {
-            match("Button"); 
+            match("()"); 
 
 
             }
@@ -322,10 +299,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:22:7: ( 'Image' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:22:9: 'Image'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:22:7: ( '(var ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:22:9: '(var '
             {
-            match("Image"); 
+            match("(var "); 
 
 
             }
@@ -343,11 +320,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:23:7: ( 'TextField' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:23:9: 'TextField'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:23:7: ( ')' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:23:9: ')'
             {
-            match("TextField"); 
-
+            match(')'); 
 
             }
 
@@ -364,10 +340,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:24:7: ( 'browser ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:24:9: 'browser '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:24:7: ( ', var ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:24:9: ', var '
             {
-            match("browser "); 
+            match(", var "); 
 
 
             }
@@ -385,10 +361,11 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:25:7: ( ';' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:25:9: ';'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:25:7: ( 'main' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:25:9: 'main'
             {
-            match(';'); 
+            match("main"); 
+
 
             }
 
@@ -405,11 +382,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:26:7: ( 'sub ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:26:9: 'sub '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:26:7: ( '(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:26:9: '('
             {
-            match("sub "); 
-
+            match('('); 
 
             }
 
@@ -426,10 +402,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:27:7: ( '()' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:27:9: '()'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:27:7: ( ', ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:27:9: ', '
             {
-            match("()"); 
+            match(", "); 
 
 
             }
@@ -447,10 +423,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:28:7: ( '(var ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:28:9: '(var '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:28:7: ( 'var ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:28:9: 'var '
             {
-            match("(var "); 
+            match("var "); 
 
 
             }
@@ -468,10 +444,11 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:29:7: ( ')' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:29:9: ')'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:29:7: ( ' = ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:29:9: ' = '
             {
-            match(')'); 
+            match(" = "); 
+
 
             }
 
@@ -488,10 +465,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:30:7: ( ', var ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:30:9: ', var '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:30:7: ( 'goTo(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:30:9: 'goTo('
             {
-            match(", var "); 
+            match("goTo("); 
 
 
             }
@@ -509,10 +486,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:31:7: ( '();' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:31:9: '();'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:31:7: ( 'checkbox( ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:31:9: 'checkbox( '
             {
-            match("();"); 
+            match("checkbox( "); 
 
 
             }
@@ -530,10 +507,11 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:32:7: ( '(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:32:9: '('
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:32:7: ( ' )' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:32:9: ' )'
             {
-            match('('); 
+            match(" )"); 
+
 
             }
 
@@ -550,10 +528,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:33:7: ( ');' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:33:9: ');'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:33:7: ( 'link( ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:33:9: 'link( '
             {
-            match(");"); 
+            match("link( "); 
 
 
             }
@@ -571,10 +549,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:34:7: ( ', ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:34:9: ', '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:34:7: ( 'button( ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:34:9: 'button( '
             {
-            match(", "); 
+            match("button( "); 
 
 
             }
@@ -592,10 +570,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:35:7: ( 'main' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:35:9: 'main'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:35:7: ( 'image( ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:35:9: 'image( '
             {
-            match("main"); 
+            match("image( "); 
 
 
             }
@@ -613,10 +591,11 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:36:7: ( '{' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:36:9: '{'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:36:7: ( 'textField( ' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:36:9: 'textField( '
             {
-            match('{'); 
+            match("textField( "); 
+
 
             }
 
@@ -633,10 +612,11 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:37:7: ( '}' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:37:9: '}'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:37:7: ( '.isCheck(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:37:9: '.isCheck('
             {
-            match('}'); 
+            match(".isCheck("); 
+
 
             }
 
@@ -653,10 +633,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:38:7: ( 'if ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:38:9: 'if '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:38:7: ( '.verify(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:38:9: '.verify('
             {
-            match("if "); 
+            match(".verify("); 
 
 
             }
@@ -674,10 +654,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:39:7: ( 'then ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:39:9: 'then '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:39:7: ( '.fill(' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:39:9: '.fill('
             {
-            match("then "); 
+            match(".fill("); 
 
 
             }
@@ -695,10 +675,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:40:7: ( 'endif ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:40:9: 'endif '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:40:7: ( '.click()' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:40:9: '.click()'
             {
-            match("endif "); 
+            match(".click()"); 
 
 
             }
@@ -716,10 +696,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:41:7: ( 'else ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:41:9: 'else '
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:41:7: ( '.clear()' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:41:9: '.clear()'
             {
-            match("else "); 
+            match(".clear()"); 
 
 
             }
@@ -732,435 +712,15 @@ public class InternalBrowserDSLLexer extends Lexer {
     }
     // $ANTLR end "T__42"
 
-    // $ANTLR start "T__43"
-    public final void mT__43() throws RecognitionException {
-        try {
-            int _type = T__43;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:42:7: ( 'while (' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:42:9: 'while ('
-            {
-            match("while ("); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__43"
-
-    // $ANTLR start "T__44"
-    public final void mT__44() throws RecognitionException {
-        try {
-            int _type = T__44;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:43:7: ( ') do ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:43:9: ') do '
-            {
-            match(") do "); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__44"
-
-    // $ANTLR start "T__45"
-    public final void mT__45() throws RecognitionException {
-        try {
-            int _type = T__45;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:44:7: ( 'endwhile' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:44:9: 'endwhile'
-            {
-            match("endwhile"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__45"
-
-    // $ANTLR start "T__46"
-    public final void mT__46() throws RecognitionException {
-        try {
-            int _type = T__46;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:45:7: ( 'var ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:45:9: 'var '
-            {
-            match("var "); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__46"
-
-    // $ANTLR start "T__47"
-    public final void mT__47() throws RecognitionException {
-        try {
-            int _type = T__47;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:46:7: ( ' = ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:46:9: ' = '
-            {
-            match(" = "); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__47"
-
-    // $ANTLR start "T__48"
-    public final void mT__48() throws RecognitionException {
-        try {
-            int _type = T__48;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:47:7: ( ' !' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:47:9: ' !'
-            {
-            match(" !"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__48"
-
-    // $ANTLR start "T__49"
-    public final void mT__49() throws RecognitionException {
-        try {
-            int _type = T__49;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:48:7: ( 'checkbox ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:48:9: 'checkbox '
-            {
-            match("checkbox "); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__49"
-
-    // $ANTLR start "T__50"
-    public final void mT__50() throws RecognitionException {
-        try {
-            int _type = T__50;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:49:7: ( 'link ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:49:9: 'link '
-            {
-            match("link "); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__50"
-
-    // $ANTLR start "T__51"
-    public final void mT__51() throws RecognitionException {
-        try {
-            int _type = T__51;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:50:7: ( 'button ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:50:9: 'button '
-            {
-            match("button "); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__51"
-
-    // $ANTLR start "T__52"
-    public final void mT__52() throws RecognitionException {
-        try {
-            int _type = T__52;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:51:7: ( 'image ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:51:9: 'image '
-            {
-            match("image "); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__52"
-
-    // $ANTLR start "T__53"
-    public final void mT__53() throws RecognitionException {
-        try {
-            int _type = T__53;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:52:7: ( 'textField ' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:52:9: 'textField '
-            {
-            match("textField "); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__53"
-
-    // $ANTLR start "T__54"
-    public final void mT__54() throws RecognitionException {
-        try {
-            int _type = T__54;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:53:7: ( 'select(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:53:9: 'select('
-            {
-            match("select("); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__54"
-
-    // $ANTLR start "T__55"
-    public final void mT__55() throws RecognitionException {
-        try {
-            int _type = T__55;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:54:7: ( 'click(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:54:9: 'click('
-            {
-            match("click("); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__55"
-
-    // $ANTLR start "T__56"
-    public final void mT__56() throws RecognitionException {
-        try {
-            int _type = T__56;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:55:7: ( 'check(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:55:9: 'check('
-            {
-            match("check("); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__56"
-
-    // $ANTLR start "T__57"
-    public final void mT__57() throws RecognitionException {
-        try {
-            int _type = T__57;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:56:7: ( 'fill(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:56:9: 'fill('
-            {
-            match("fill("); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__57"
-
-    // $ANTLR start "T__58"
-    public final void mT__58() throws RecognitionException {
-        try {
-            int _type = T__58;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:57:7: ( ', value=' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:57:9: ', value='
-            {
-            match(", value="); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__58"
-
-    // $ANTLR start "T__59"
-    public final void mT__59() throws RecognitionException {
-        try {
-            int _type = T__59;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:58:7: ( 'clear(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:58:9: 'clear('
-            {
-            match("clear("); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__59"
-
-    // $ANTLR start "T__60"
-    public final void mT__60() throws RecognitionException {
-        try {
-            int _type = T__60;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:59:7: ( 'verify(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:59:9: 'verify('
-            {
-            match("verify("); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__60"
-
-    // $ANTLR start "T__61"
-    public final void mT__61() throws RecognitionException {
-        try {
-            int _type = T__61;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:60:7: ( 'exist(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:60:9: 'exist('
-            {
-            match("exist("); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__61"
-
-    // $ANTLR start "T__62"
-    public final void mT__62() throws RecognitionException {
-        try {
-            int _type = T__62;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:61:7: ( 'goTo(' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:61:9: 'goTo('
-            {
-            match("goTo("); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__62"
-
     // $ANTLR start "RULE_URL"
     public final void mRULE_URL() throws RecognitionException {
         try {
             int _type = RULE_URL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:10: ( ( 'a' .. 'z' )+ '://' ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ | ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ) ( ':' ( '0' .. '9' )+ )? ( '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ( '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )* )? )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:12: ( 'a' .. 'z' )+ '://' ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ | ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ) ( ':' ( '0' .. '9' )+ )? ( '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ( '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )* )?
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:10: ( ( 'a' .. 'z' )+ '://' ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ | ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ) ( ':' ( '0' .. '9' )+ )? ( '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ( '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )* )? )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:12: ( 'a' .. 'z' )+ '://' ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ | ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ) ( ':' ( '0' .. '9' )+ )? ( '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ( '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )* )?
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:12: ( 'a' .. 'z' )+
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:12: ( 'a' .. 'z' )+
             int cnt1=0;
             loop1:
             do {
@@ -1174,7 +734,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:13: 'a' .. 'z'
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:13: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); 
 
@@ -1192,7 +752,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
             match("://"); 
 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:30: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ | ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:30: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ | ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1210,9 +770,9 @@ public class InternalBrowserDSLLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:31: ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:31: ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:31: ( '0' .. '9' )+
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:31: ( '0' .. '9' )+
                     int cnt2=0;
                     loop2:
                     do {
@@ -1226,7 +786,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:32: '0' .. '9'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:32: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -1243,7 +803,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:47: ( '0' .. '9' )+
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:47: ( '0' .. '9' )+
                     int cnt3=0;
                     loop3:
                     do {
@@ -1257,7 +817,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:48: '0' .. '9'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:48: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -1274,7 +834,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:63: ( '0' .. '9' )+
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:63: ( '0' .. '9' )+
                     int cnt4=0;
                     loop4:
                     do {
@@ -1288,7 +848,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:64: '0' .. '9'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:64: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -1305,7 +865,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:79: ( '0' .. '9' )+
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:79: ( '0' .. '9' )+
                     int cnt5=0;
                     loop5:
                     do {
@@ -1319,7 +879,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:80: '0' .. '9'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:80: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -1339,7 +899,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:91: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )*
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:91: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )*
                     {
                     if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                         input.consume();
@@ -1350,56 +910,56 @@ public class InternalBrowserDSLLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:111: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:111: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
                     loop6:
                     do {
                         int alt6=9;
                         alt6 = dfa6.predict(input);
                         switch (alt6) {
                     	case 1 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:112: 'a' .. 'z'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:112: 'a' .. 'z'
                     	    {
                     	    matchRange('a','z'); 
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:121: 'A' .. 'Z'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:121: 'A' .. 'Z'
                     	    {
                     	    matchRange('A','Z'); 
 
                     	    }
                     	    break;
                     	case 3 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:130: '0' .. '9'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:130: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
                     	    }
                     	    break;
                     	case 4 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:139: '$'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:139: '$'
                     	    {
                     	    match('$'); 
 
                     	    }
                     	    break;
                     	case 5 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:143: '-'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:143: '-'
                     	    {
                     	    match('-'); 
 
                     	    }
                     	    break;
                     	case 6 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:147: '_'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:147: '_'
                     	    {
                     	    match('_'); 
 
                     	    }
                     	    break;
                     	case 7 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:151: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:151: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
                     	    {
                     	    match('\\'); 
                     	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
@@ -1424,7 +984,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 8 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:214: '%' '0' .. '9' '0' .. '9'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:214: '%' '0' .. '9' '0' .. '9'
                     	    {
                     	    match('%'); 
                     	    matchRange('0','9'); 
@@ -1438,7 +998,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                         }
                     } while (true);
 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:238: ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )*
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:238: ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )*
                     loop8:
                     do {
                         int alt8=2;
@@ -1451,7 +1011,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:239: '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:239: '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
                     	    {
                     	    match('.'); 
                     	    if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
@@ -1463,56 +1023,56 @@ public class InternalBrowserDSLLexer extends Lexer {
                     	        recover(mse);
                     	        throw mse;}
 
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:263: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:263: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
                     	    loop7:
                     	    do {
                     	        int alt7=9;
                     	        alt7 = dfa7.predict(input);
                     	        switch (alt7) {
                     	    	case 1 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:264: 'a' .. 'z'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:264: 'a' .. 'z'
                     	    	    {
                     	    	    matchRange('a','z'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 2 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:273: 'A' .. 'Z'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:273: 'A' .. 'Z'
                     	    	    {
                     	    	    matchRange('A','Z'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 3 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:282: '0' .. '9'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:282: '0' .. '9'
                     	    	    {
                     	    	    matchRange('0','9'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 4 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:291: '$'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:291: '$'
                     	    	    {
                     	    	    match('$'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 5 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:295: '-'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:295: '-'
                     	    	    {
                     	    	    match('-'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 6 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:299: '_'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:299: '_'
                     	    	    {
                     	    	    match('_'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 7 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:303: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:303: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
                     	    	    {
                     	    	    match('\\'); 
                     	    	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
@@ -1537,7 +1097,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                     	    	    }
                     	    	    break;
                     	    	case 8 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:366: '%' '0' .. '9' '0' .. '9'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:366: '%' '0' .. '9' '0' .. '9'
                     	    	    {
                     	    	    match('%'); 
                     	    	    matchRange('0','9'); 
@@ -1566,7 +1126,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
             }
 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:393: ( ':' ( '0' .. '9' )+ )?
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:393: ( ':' ( '0' .. '9' )+ )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1575,10 +1135,10 @@ public class InternalBrowserDSLLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:394: ':' ( '0' .. '9' )+
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:394: ':' ( '0' .. '9' )+
                     {
                     match(':'); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:398: ( '0' .. '9' )+
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:398: ( '0' .. '9' )+
                     int cnt10=0;
                     loop10:
                     do {
@@ -1592,7 +1152,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:399: '0' .. '9'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:399: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -1614,7 +1174,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
             }
 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:412: ( '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )*
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:412: ( '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )*
             loop13:
             do {
                 int alt13=2;
@@ -1627,80 +1187,80 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:413: '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:413: '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
             	    {
             	    match('/'); 
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:417: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:417: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
             	    loop12:
             	    do {
             	        int alt12=12;
             	        alt12 = dfa12.predict(input);
             	        switch (alt12) {
             	    	case 1 :
-            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:418: 'a' .. 'z'
+            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:418: 'a' .. 'z'
             	    	    {
             	    	    matchRange('a','z'); 
 
             	    	    }
             	    	    break;
             	    	case 2 :
-            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:427: 'A' .. 'Z'
+            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:427: 'A' .. 'Z'
             	    	    {
             	    	    matchRange('A','Z'); 
 
             	    	    }
             	    	    break;
             	    	case 3 :
-            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:436: '0' .. '9'
+            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:436: '0' .. '9'
             	    	    {
             	    	    matchRange('0','9'); 
 
             	    	    }
             	    	    break;
             	    	case 4 :
-            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:445: '$'
+            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:445: '$'
             	    	    {
             	    	    match('$'); 
 
             	    	    }
             	    	    break;
             	    	case 5 :
-            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:449: '-'
+            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:449: '-'
             	    	    {
             	    	    match('-'); 
 
             	    	    }
             	    	    break;
             	    	case 6 :
-            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:453: '_'
+            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:453: '_'
             	    	    {
             	    	    match('_'); 
 
             	    	    }
             	    	    break;
             	    	case 7 :
-            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:457: '~'
+            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:457: '~'
             	    	    {
             	    	    match('~'); 
 
             	    	    }
             	    	    break;
             	    	case 8 :
-            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:461: '+'
+            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:461: '+'
             	    	    {
             	    	    match('+'); 
 
             	    	    }
             	    	    break;
             	    	case 9 :
-            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:465: '.'
+            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:465: '.'
             	    	    {
             	    	    match('.'); 
 
             	    	    }
             	    	    break;
             	    	case 10 :
-            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:469: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:469: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
             	    	    {
             	    	    match('\\'); 
             	    	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
@@ -1725,7 +1285,7 @@ public class InternalBrowserDSLLexer extends Lexer {
             	    	    }
             	    	    break;
             	    	case 11 :
-            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:532: '%' '0' .. '9' '0' .. '9'
+            	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:532: '%' '0' .. '9' '0' .. '9'
             	    	    {
             	    	    match('%'); 
             	    	    matchRange('0','9'); 
@@ -1748,7 +1308,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:558: ( '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )* )?
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:558: ( '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )* )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -1757,10 +1317,10 @@ public class InternalBrowserDSLLexer extends Lexer {
             }
             switch (alt17) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:559: '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )*
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:559: '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )*
                     {
                     match('?'); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:563: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:563: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+
                     int cnt14=0;
                     loop14:
                     do {
@@ -1768,70 +1328,70 @@ public class InternalBrowserDSLLexer extends Lexer {
                         alt14 = dfa14.predict(input);
                         switch (alt14) {
                     	case 1 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:564: 'a' .. 'z'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:564: 'a' .. 'z'
                     	    {
                     	    matchRange('a','z'); 
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:573: 'A' .. 'Z'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:573: 'A' .. 'Z'
                     	    {
                     	    matchRange('A','Z'); 
 
                     	    }
                     	    break;
                     	case 3 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:582: '0' .. '9'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:582: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
                     	    }
                     	    break;
                     	case 4 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:591: '$'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:591: '$'
                     	    {
                     	    match('$'); 
 
                     	    }
                     	    break;
                     	case 5 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:595: '-'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:595: '-'
                     	    {
                     	    match('-'); 
 
                     	    }
                     	    break;
                     	case 6 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:599: '_'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:599: '_'
                     	    {
                     	    match('_'); 
 
                     	    }
                     	    break;
                     	case 7 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:603: '='
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:603: '='
                     	    {
                     	    match('='); 
 
                     	    }
                     	    break;
                     	case 8 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:607: '&'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:607: '&'
                     	    {
                     	    match('&'); 
 
                     	    }
                     	    break;
                     	case 9 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:611: ';'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:611: ';'
                     	    {
                     	    match(';'); 
 
                     	    }
                     	    break;
                     	case 10 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:615: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:615: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
                     	    {
                     	    match('\\'); 
                     	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
@@ -1856,7 +1416,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 11 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:678: '%' '0' .. '9' '0' .. '9'
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:678: '%' '0' .. '9' '0' .. '9'
                     	    {
                     	    match('%'); 
                     	    matchRange('0','9'); 
@@ -1874,7 +1434,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                         cnt14++;
                     } while (true);
 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:702: ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )*
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:702: ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )*
                     loop16:
                     do {
                         int alt16=2;
@@ -1887,10 +1447,10 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                         switch (alt16) {
                     	case 1 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:703: '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:703: '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+
                     	    {
                     	    match('+'); 
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:707: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:707: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+
                     	    int cnt15=0;
                     	    loop15:
                     	    do {
@@ -1898,70 +1458,70 @@ public class InternalBrowserDSLLexer extends Lexer {
                     	        alt15 = dfa15.predict(input);
                     	        switch (alt15) {
                     	    	case 1 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:708: 'a' .. 'z'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:708: 'a' .. 'z'
                     	    	    {
                     	    	    matchRange('a','z'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 2 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:717: 'A' .. 'Z'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:717: 'A' .. 'Z'
                     	    	    {
                     	    	    matchRange('A','Z'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 3 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:726: '0' .. '9'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:726: '0' .. '9'
                     	    	    {
                     	    	    matchRange('0','9'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 4 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:735: '$'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:735: '$'
                     	    	    {
                     	    	    match('$'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 5 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:739: '-'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:739: '-'
                     	    	    {
                     	    	    match('-'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 6 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:743: '_'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:743: '_'
                     	    	    {
                     	    	    match('_'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 7 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:747: '='
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:747: '='
                     	    	    {
                     	    	    match('='); 
 
                     	    	    }
                     	    	    break;
                     	    	case 8 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:751: '&'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:751: '&'
                     	    	    {
                     	    	    match('&'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 9 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:755: ';'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:755: ';'
                     	    	    {
                     	    	    match(';'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 10 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:759: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:759: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
                     	    	    {
                     	    	    match('\\'); 
                     	    	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
@@ -1986,7 +1546,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                     	    	    }
                     	    	    break;
                     	    	case 11 :
-                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5825:822: '%' '0' .. '9' '0' .. '9'
+                    	    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4877:822: '%' '0' .. '9' '0' .. '9'
                     	    	    {
                     	    	    match('%'); 
                     	    	    matchRange('0','9'); 
@@ -2035,10 +1595,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5827:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5827:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4879:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4879:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5827:11: ( '^' )?
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4879:11: ( '^' )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -2047,7 +1607,7 @@ public class InternalBrowserDSLLexer extends Lexer {
             }
             switch (alt18) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5827:11: '^'
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4879:11: '^'
                     {
                     match('^'); 
 
@@ -2065,7 +1625,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5827:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4879:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop19:
             do {
                 int alt19=2;
@@ -2114,10 +1674,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5829:10: ( ( '0' .. '9' )+ )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5829:12: ( '0' .. '9' )+
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4881:10: ( ( '0' .. '9' )+ )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4881:12: ( '0' .. '9' )+
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5829:12: ( '0' .. '9' )+
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4881:12: ( '0' .. '9' )+
             int cnt20=0;
             loop20:
             do {
@@ -2131,7 +1691,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                 switch (alt20) {
             	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5829:13: '0' .. '9'
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4881:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2163,10 +1723,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5831:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5831:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4883:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4883:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5831:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4883:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -2184,10 +1744,10 @@ public class InternalBrowserDSLLexer extends Lexer {
             }
             switch (alt23) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5831:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4883:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5831:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4883:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop21:
                     do {
                         int alt21=3;
@@ -2203,7 +1763,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                         switch (alt21) {
                     	case 1 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5831:21: '\\\\' .
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4883:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -2211,7 +1771,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5831:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4883:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2236,10 +1796,10 @@ public class InternalBrowserDSLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5831:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4883:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5831:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4883:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop22:
                     do {
                         int alt22=3;
@@ -2255,7 +1815,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                         switch (alt22) {
                     	case 1 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5831:54: '\\\\' .
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4883:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -2263,7 +1823,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5831:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4883:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2306,12 +1866,12 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5833:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5833:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4885:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4885:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5833:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4885:24: ( options {greedy=false; } : . )*
             loop24:
             do {
                 int alt24=2;
@@ -2336,7 +1896,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                 switch (alt24) {
             	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5833:52: .
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4885:52: .
             	    {
             	    matchAny(); 
 
@@ -2366,12 +1926,12 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5835:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5835:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4887:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4887:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5835:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4887:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop25:
             do {
                 int alt25=2;
@@ -2384,7 +1944,7 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                 switch (alt25) {
             	case 1 :
-            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5835:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4887:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2404,7 +1964,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5835:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4887:40: ( ( '\\r' )? '\\n' )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -2413,9 +1973,9 @@ public class InternalBrowserDSLLexer extends Lexer {
             }
             switch (alt27) {
                 case 1 :
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5835:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4887:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5835:41: ( '\\r' )?
+                    // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4887:41: ( '\\r' )?
                     int alt26=2;
                     int LA26_0 = input.LA(1);
 
@@ -2424,7 +1984,7 @@ public class InternalBrowserDSLLexer extends Lexer {
                     }
                     switch (alt26) {
                         case 1 :
-                            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5835:41: '\\r'
+                            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4887:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2456,10 +2016,10 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5837:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5837:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4889:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4889:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5837:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4889:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt28=0;
             loop28:
             do {
@@ -2513,8 +2073,8 @@ public class InternalBrowserDSLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5839:16: ( . )
-            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:5839:18: .
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4891:16: ( . )
+            // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:4891:18: .
             {
             matchAny(); 
 
@@ -2529,8 +2089,8 @@ public class InternalBrowserDSLLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | RULE_URL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt29=59;
+        // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | RULE_URL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt29=39;
         alt29 = dfa29.predict(input);
         switch (alt29) {
             case 1 :
@@ -2751,196 +2311,56 @@ public class InternalBrowserDSLLexer extends Lexer {
                 }
                 break;
             case 32 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:196: T__43
-                {
-                mT__43(); 
-
-                }
-                break;
-            case 33 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:202: T__44
-                {
-                mT__44(); 
-
-                }
-                break;
-            case 34 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:208: T__45
-                {
-                mT__45(); 
-
-                }
-                break;
-            case 35 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:214: T__46
-                {
-                mT__46(); 
-
-                }
-                break;
-            case 36 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:220: T__47
-                {
-                mT__47(); 
-
-                }
-                break;
-            case 37 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:226: T__48
-                {
-                mT__48(); 
-
-                }
-                break;
-            case 38 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:232: T__49
-                {
-                mT__49(); 
-
-                }
-                break;
-            case 39 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:238: T__50
-                {
-                mT__50(); 
-
-                }
-                break;
-            case 40 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:244: T__51
-                {
-                mT__51(); 
-
-                }
-                break;
-            case 41 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:250: T__52
-                {
-                mT__52(); 
-
-                }
-                break;
-            case 42 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:256: T__53
-                {
-                mT__53(); 
-
-                }
-                break;
-            case 43 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:262: T__54
-                {
-                mT__54(); 
-
-                }
-                break;
-            case 44 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:268: T__55
-                {
-                mT__55(); 
-
-                }
-                break;
-            case 45 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:274: T__56
-                {
-                mT__56(); 
-
-                }
-                break;
-            case 46 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:280: T__57
-                {
-                mT__57(); 
-
-                }
-                break;
-            case 47 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:286: T__58
-                {
-                mT__58(); 
-
-                }
-                break;
-            case 48 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:292: T__59
-                {
-                mT__59(); 
-
-                }
-                break;
-            case 49 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:298: T__60
-                {
-                mT__60(); 
-
-                }
-                break;
-            case 50 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:304: T__61
-                {
-                mT__61(); 
-
-                }
-                break;
-            case 51 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:310: T__62
-                {
-                mT__62(); 
-
-                }
-                break;
-            case 52 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:316: RULE_URL
+                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:196: RULE_URL
                 {
                 mRULE_URL(); 
 
                 }
                 break;
-            case 53 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:325: RULE_ID
+            case 33 :
+                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:205: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 54 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:333: RULE_INT
+            case 34 :
+                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:213: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 55 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:342: RULE_STRING
+            case 35 :
+                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:222: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 56 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:354: RULE_ML_COMMENT
+            case 36 :
+                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:234: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 57 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:370: RULE_SL_COMMENT
+            case 37 :
+                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:250: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 58 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:386: RULE_WS
+            case 38 :
+                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:266: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 59 :
-                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:394: RULE_ANY_OTHER
+            case 39 :
+                // ../org.xtext.mda.project.browserdsl.ui/src-gen/org/xtext/mda/project/ui/contentassist/antlr/internal/InternalBrowserDSL.g:1:274: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -3013,7 +2433,7 @@ public class InternalBrowserDSLLexer extends Lexer {
             this.transition = DFA6_transition;
         }
         public String getDescription() {
-            return "()* loopback of 5825:111: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*";
+            return "()* loopback of 4877:111: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*";
         }
     }
     static final String DFA7_eotS =
@@ -3071,7 +2491,7 @@ public class InternalBrowserDSLLexer extends Lexer {
             this.transition = DFA7_transition;
         }
         public String getDescription() {
-            return "()* loopback of 5825:263: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*";
+            return "()* loopback of 4877:263: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*";
         }
     }
     static final String DFA12_eotS =
@@ -3132,7 +2552,7 @@ public class InternalBrowserDSLLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "()* loopback of 5825:417: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*";
+            return "()* loopback of 4877:417: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*";
         }
     }
     static final String DFA14_eotS =
@@ -3193,7 +2613,7 @@ public class InternalBrowserDSLLexer extends Lexer {
             this.transition = DFA14_transition;
         }
         public String getDescription() {
-            return "()+ loopback of 5825:563: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+";
+            return "()+ loopback of 4877:563: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+";
         }
     }
     static final String DFA15_eotS =
@@ -3254,263 +2674,168 @@ public class InternalBrowserDSLLexer extends Lexer {
             this.transition = DFA15_transition;
         }
         public String getDescription() {
-            return "()+ loopback of 5825:707: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+";
+            return "()+ loopback of 4877:707: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+";
         }
     }
     static final String DFA29_eotS =
-        "\1\uffff\1\47\1\56\10\47\1\uffff\1\47\1\75\1\100\1\44\1\47\2\uffff\12\47\1\44\2\uffff\3\44\2\uffff\2\47\2\uffff\1\47\5\uffff\11\47\1\uffff\2\47\1\151\5\uffff\1\153\1\47\2\uffff\17\47\4\uffff\2\47\2\uffff\14\47\4\uffff\1\47\1\uffff\17\47\2\uffff\4\47\1\u00a1\5\47\1\uffff\1\47\1\uffff\1\u00aa\10\47\1\uffff\13\47\1\uffff\1\47\1\u00bf\4\47\3\uffff\1\47\1\uffff\3\47\1\uffff\6\47\3\uffff\1\u00cf\3\47\1\u00d3\1\uffff\4\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\4\uffff\1\47\1\u00dd\1\47\1\uffff\2\47\2\uffff\2\47\1\uffff\1\47\1\u00e4\1\uffff\2\47\1\uffff\1\47\1\u00e8\1\47\1\uffff\1\47\1\u00eb\1\47\2\uffff\1\47\2\uffff\3\47\1\u00f1\1\uffff";
+        "\1\uffff\6\43\1\uffff\1\43\2\uffff\1\60\1\uffff\1\36\2\43\1\67\4\43\1\36\1\43\1\36\2\uffff\3\36\2\uffff\2\43\1\uffff\1\43\1\uffff\6\43\1\uffff\1\43\6\uffff\1\116\2\43\3\uffff\4\43\10\uffff\11\43\2\uffff\6\43\1\uffff\1\147\7\43\1\uffff\1\157\1\uffff\4\43\3\uffff\1\43\1\165\5\43\2\uffff\1\43\1\uffff\2\43\1\uffff\1\176\5\43\1\uffff\1\43\1\uffff\1\u0085\2\43\1\uffff\2\43\1\uffff\1\43\1\uffff\3\43\2\uffff\4\43\1\u0092\1\uffff";
     static final String DFA29_eofS =
-        "\u00f2\uffff";
+        "\u0093\uffff";
     static final String DFA29_minS =
-        "\1\0\1\72\1\41\1\150\1\151\1\164\1\151\1\165\1\155\1\145\1\72\1\uffff\1\72\1\51\2\40\1\72\2\uffff\12\72\1\101\2\uffff\2\0\1\52\2\uffff\2\72\2\uffff\1\72\1\40\4\uffff\1\145\1\162\1\155\1\156\1\164\1\141\1\170\2\72\1\uffff\2\72\1\73\5\uffff\1\166\1\72\2\uffff\1\40\16\72\4\uffff\2\40\2\uffff\1\157\1\143\1\145\1\154\1\153\1\164\1\147\1\164\2\72\1\40\1\72\2\uffff\1\141\1\uffff\1\72\1\uffff\7\72\1\40\6\72\1\157\2\uffff\1\155\1\153\1\146\1\125\1\60\1\157\1\145\1\106\2\72\1\uffff\1\72\1\154\1\60\1\72\1\40\3\72\1\40\2\72\1\uffff\4\72\1\40\2\50\1\145\1\142\1\157\1\156\1\uffff\1\156\1\60\1\151\3\72\3\uffff\1\40\1\uffff\1\151\1\40\1\72\1\uffff\1\50\1\40\1\72\3\50\3\uffff\1\60\1\157\1\170\1\151\1\60\1\uffff\1\145\1\72\1\40\1\50\1\uffff\1\145\1\uffff\1\72\2\uffff\1\50\1\72\4\uffff\1\170\1\60\1\164\1\uffff\1\154\1\40\2\uffff\1\154\1\72\1\uffff\1\72\1\60\1\uffff\1\104\1\144\1\uffff\1\144\1\60\1\40\1\uffff\1\162\1\60\1\40\2\uffff\1\151\2\uffff\1\166\1\145\1\162\1\60\1\uffff";
+        "\1\0\2\72\1\150\1\151\1\164\1\72\1\uffff\1\72\2\uffff\1\51\1\uffff\1\40\2\72\1\51\4\72\1\143\1\72\1\101\2\uffff\2\0\1\52\2\uffff\2\72\1\uffff\1\72\1\uffff\1\72\2\162\1\155\2\72\1\uffff\1\72\6\uffff\1\166\2\72\3\uffff\4\72\3\uffff\1\154\4\uffff\3\72\1\157\1\145\1\154\2\72\1\40\2\uffff\1\72\1\40\1\157\3\72\1\145\1\60\2\72\1\155\1\146\1\125\2\72\1\uffff\1\60\1\uffff\1\50\1\72\1\50\1\72\3\uffff\1\151\1\60\1\145\1\157\1\156\2\72\2\uffff\1\72\1\uffff\1\50\1\145\1\uffff\1\60\1\170\1\151\1\72\1\50\1\72\1\uffff\1\154\1\uffff\1\60\1\164\1\40\1\uffff\1\72\1\144\1\uffff\1\104\1\uffff\2\50\1\162\2\uffff\1\151\1\166\1\145\1\162\1\60\1\uffff";
     static final String DFA29_maxS =
-        "\1\uffff\1\172\1\76\1\150\1\151\1\164\1\151\1\165\1\155\1\145\1\172\1\uffff\1\172\1\166\1\73\1\40\1\172\2\uffff\13\172\2\uffff\2\uffff\1\57\2\uffff\2\172\2\uffff\1\172\1\75\4\uffff\2\162\1\155\1\156\1\164\1\141\1\170\2\172\1\uffff\2\172\1\73\5\uffff\1\166\1\172\2\uffff\17\172\4\uffff\2\172\2\uffff\1\157\1\143\1\145\1\154\1\153\1\164\1\147\1\164\4\172\2\uffff\1\141\1\uffff\1\172\1\uffff\16\172\1\157\2\uffff\1\155\1\153\1\146\1\125\1\172\1\157\1\145\1\106\2\172\1\uffff\1\172\1\162\11\172\1\uffff\6\172\1\50\1\145\1\142\1\157\1\156\1\uffff\1\156\1\172\1\151\3\172\3\uffff\1\172\1\uffff\1\151\2\172\1\uffff\6\172\3\uffff\1\172\1\157\1\170\1\151\1\172\1\uffff\1\145\3\172\1\uffff\1\145\1\uffff\1\172\2\uffff\2\172\4\uffff\1\170\1\172\1\164\1\uffff\1\154\1\172\2\uffff\1\154\1\172\1\uffff\2\172\1\uffff\1\104\1\144\1\uffff\1\144\2\172\1\uffff\1\162\1\172\1\40\2\uffff\1\151\2\uffff\1\166\1\145\1\162\1\172\1\uffff";
+        "\1\uffff\2\172\1\150\1\151\1\164\1\172\1\uffff\1\172\2\uffff\1\166\1\uffff\1\40\2\172\1\75\4\172\1\166\2\172\2\uffff\2\uffff\1\57\2\uffff\2\172\1\uffff\1\172\1\uffff\1\172\2\162\1\155\2\172\1\uffff\1\172\6\uffff\1\166\2\172\3\uffff\4\172\3\uffff\1\154\4\uffff\3\172\1\157\1\145\1\154\3\172\2\uffff\2\172\1\157\3\172\1\151\3\172\1\155\1\146\1\125\2\172\1\uffff\1\172\1\uffff\1\50\3\172\3\uffff\1\151\1\172\1\145\1\157\1\156\2\172\2\uffff\1\172\1\uffff\1\172\1\145\1\uffff\1\172\1\170\1\151\3\172\1\uffff\1\154\1\uffff\1\172\1\164\1\172\1\uffff\1\172\1\144\1\uffff\1\104\1\uffff\1\172\1\50\1\162\2\uffff\1\151\1\166\1\145\1\162\1\172\1\uffff";
     static final String DFA29_acceptS =
-        "\13\uffff\1\17\5\uffff\1\32\1\33\13\uffff\1\65\1\66\3\uffff\1\72\1\73\2\uffff\1\65\1\64\2\uffff\1\4\1\5\1\45\1\72\11\uffff\1\17\3\uffff\1\22\1\26\1\27\1\41\1\23\2\uffff\1\32\1\33\17\uffff\1\66\1\67\1\70\1\71\2\uffff\1\3\1\44\14\uffff\1\25\1\21\1\uffff\1\30\1\uffff\1\34\17\uffff\1\1\1\2\12\uffff\1\20\13\uffff\1\43\13\uffff\1\12\6\uffff\1\24\1\57\1\31\1\uffff\1\35\3\uffff\1\37\6\uffff\1\47\1\56\1\63\5\uffff\1\14\4\uffff\1\51\1\uffff\1\36\1\uffff\1\62\1\40\2\uffff\1\55\1\54\1\60\1\6\3\uffff\1\13\2\uffff\1\50\1\53\2\uffff\1\61\2\uffff\1\7\2\uffff\1\16\3\uffff\1\11\3\uffff\1\42\1\46\1\uffff\1\15\1\52\4\uffff\1\10";
+        "\7\uffff\1\7\1\uffff\1\11\1\12\1\uffff\1\15\13\uffff\1\41\1\42\3\uffff\1\46\1\47\2\uffff\1\40\1\uffff\1\41\6\uffff\1\7\1\uffff\1\11\1\12\1\13\1\14\1\20\1\15\3\uffff\1\23\1\26\1\46\4\uffff\1\33\1\34\1\35\1\uffff\1\42\1\43\1\44\1\45\11\uffff\1\16\1\21\17\uffff\1\10\1\uffff\1\22\4\uffff\1\36\1\37\1\1\7\uffff\1\17\1\24\1\uffff\1\27\2\uffff\1\2\6\uffff\1\31\1\uffff\1\3\3\uffff\1\30\2\uffff\1\4\1\uffff\1\6\3\uffff\1\25\1\32\5\uffff\1\5";
     static final String DFA29_specialS =
-        "\1\1\37\uffff\1\2\1\0\u00d0\uffff}>";
+        "\1\0\31\uffff\1\2\1\1\167\uffff}>";
     static final String[] DFA29_transitionS = {
-            "\11\44\2\43\2\44\1\43\22\44\1\2\1\44\1\40\4\44\1\41\1\15\1\16\2\44\1\17\2\44\1\42\12\37\1\44\1\13\5\44\1\36\1\7\1\3\2\36\1\4\1\36\1\5\1\10\2\36\1\6\7\36\1\11\6\36\3\44\1\35\1\36\1\44\1\1\1\12\1\30\1\34\1\25\1\32\1\33\1\34\1\23\2\34\1\31\1\20\5\34\1\14\1\24\1\34\1\27\1\26\3\34\1\21\1\44\1\22\uff82\44",
-            "\1\50\46\uffff\13\51\1\45\1\51\1\46\14\51",
-            "\1\55\32\uffff\1\54\1\52\1\53",
-            "\1\57",
-            "\1\60",
-            "\1\61",
+            "\11\36\2\35\2\36\1\35\22\36\1\20\1\36\1\32\4\36\1\33\1\13\1\14\2\36\1\15\1\36\1\25\1\34\12\31\1\36\1\7\5\36\2\30\1\3\2\30\1\4\1\30\1\5\22\30\3\36\1\27\1\30\1\36\1\26\1\6\1\22\2\26\1\2\1\21\1\26\1\24\2\26\1\23\1\16\5\26\1\10\1\1\1\26\1\17\4\26\1\11\1\36\1\12\uff82\36",
+            "\1\41\46\uffff\4\42\1\40\14\42\1\37\10\42",
+            "\1\41\46\uffff\1\44\31\42",
+            "\1\45",
+            "\1\46",
+            "\1\47",
+            "\1\41\46\uffff\21\42\1\50\2\42\1\51\5\42",
+            "",
+            "\1\41\46\uffff\24\42\1\53\5\42",
+            "",
+            "",
+            "\1\56\114\uffff\1\57",
+            "",
             "\1\62",
-            "\1\63",
-            "\1\64",
-            "\1\65",
-            "\1\50\46\uffff\21\51\1\66\2\51\1\67\5\51",
-            "",
-            "\1\50\46\uffff\4\51\1\72\17\51\1\71\5\51",
-            "\1\73\114\uffff\1\74",
-            "\1\77\32\uffff\1\76",
-            "\1\101",
-            "\1\50\46\uffff\1\102\31\51",
-            "",
-            "",
-            "\1\50\46\uffff\5\51\1\105\6\51\1\106\15\51",
-            "\1\50\46\uffff\4\51\1\110\2\51\1\107\22\51",
-            "\1\50\46\uffff\13\51\1\112\1\51\1\111\11\51\1\113\2\51",
-            "\1\50\46\uffff\7\51\1\114\22\51",
-            "\1\50\46\uffff\1\115\3\51\1\116\25\51",
-            "\1\50\46\uffff\7\51\1\117\3\51\1\120\16\51",
-            "\1\50\46\uffff\10\51\1\121\21\51",
-            "\1\50\46\uffff\10\51\1\122\21\51",
-            "\1\50\46\uffff\16\51\1\123\13\51",
-            "\1\50\46\uffff\32\51",
-            "\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\41\46\uffff\1\63\31\42",
+            "\1\41\46\uffff\1\64\31\42",
+            "\1\66\23\uffff\1\65",
+            "\1\41\46\uffff\16\42\1\70\13\42",
+            "\1\41\46\uffff\7\42\1\71\22\42",
+            "\1\41\46\uffff\10\42\1\72\21\42",
+            "\1\41\46\uffff\14\42\1\73\15\42",
+            "\1\77\2\uffff\1\76\2\uffff\1\74\14\uffff\1\75",
+            "\1\41\46\uffff\32\42",
+            "\32\43\4\uffff\1\43\1\uffff\32\43",
             "",
             "",
-            "\0\125",
-            "\0\125",
-            "\1\126\4\uffff\1\127",
+            "\0\101",
+            "\0\101",
+            "\1\102\4\uffff\1\103",
             "",
             "",
-            "\1\50\46\uffff\13\51\1\130\16\51",
-            "\1\50\46\uffff\30\51\1\131\1\51",
+            "\1\41\46\uffff\24\42\1\104\5\42",
+            "\1\41\46\uffff\27\42\1\105\2\42",
             "",
+            "\1\41\46\uffff\32\42",
             "",
-            "\1\50\46\uffff\32\51",
-            "\1\133\34\uffff\1\132",
+            "\1\41\46\uffff\13\42\1\106\16\42",
+            "\1\107",
+            "\1\110",
+            "\1\111",
+            "\1\41\46\uffff\16\42\1\112\13\42",
+            "\1\41\46\uffff\23\42\1\113\6\42",
+            "",
+            "\1\41\46\uffff\1\42\1\114\30\42",
             "",
             "",
             "",
             "",
-            "\1\135\14\uffff\1\134",
-            "\1\136",
-            "\1\137",
-            "\1\140",
+            "",
+            "",
+            "\1\115",
+            "\1\41\46\uffff\10\42\1\117\21\42",
+            "\1\41\46\uffff\21\42\1\120\10\42",
+            "",
+            "",
+            "",
+            "\1\41\31\uffff\1\121\14\uffff\32\42",
+            "\1\41\46\uffff\4\42\1\122\25\42",
+            "\1\41\46\uffff\15\42\1\123\14\42",
+            "\1\41\46\uffff\1\124\31\42",
+            "",
+            "",
+            "",
+            "\1\125",
+            "",
+            "",
+            "",
+            "",
+            "\1\41\46\uffff\4\42\1\126\25\42",
+            "\1\41\46\uffff\23\42\1\127\6\42",
+            "\1\41\46\uffff\22\42\1\130\7\42",
+            "\1\131",
+            "\1\132",
+            "\1\133",
+            "\1\41\46\uffff\26\42\1\134\3\42",
+            "\1\41\46\uffff\23\42\1\135\6\42",
+            "\1\136\31\uffff\1\41\46\uffff\32\42",
+            "",
+            "",
+            "\1\41\46\uffff\15\42\1\137\14\42",
+            "\1\140\31\uffff\1\41\46\uffff\32\42",
             "\1\141",
-            "\1\142",
-            "\1\143",
-            "\1\50\46\uffff\16\51\1\144\13\51",
-            "\1\50\46\uffff\23\51\1\145\6\51",
-            "",
-            "\1\50\46\uffff\1\51\1\146\30\51",
-            "\1\50\46\uffff\13\51\1\147\16\51",
-            "\1\150",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\1\41\46\uffff\2\42\1\142\27\42",
+            "\1\41\46\uffff\12\42\1\143\17\42",
+            "\1\41\46\uffff\6\42\1\144\23\42",
+            "\1\146\3\uffff\1\145",
+            "\12\43\1\41\6\uffff\32\43\4\uffff\1\43\1\uffff\32\42",
+            "\1\41\13\uffff\1\150\32\uffff\32\42",
+            "\1\41\46\uffff\4\42\1\151\25\42",
             "\1\152",
-            "\1\50\46\uffff\10\51\1\154\21\51",
+            "\1\153",
+            "\1\154",
+            "\1\41\46\uffff\22\42\1\155\7\42",
+            "\1\41\46\uffff\16\42\1\156\13\42",
             "",
+            "\12\43\1\41\6\uffff\32\43\4\uffff\1\43\1\uffff\32\42",
             "",
-            "\1\155\31\uffff\1\50\46\uffff\32\51",
-            "\1\50\46\uffff\1\156\31\51",
-            "\1\50\46\uffff\4\51\1\157\25\51",
-            "\1\50\46\uffff\27\51\1\160\2\51",
-            "\1\50\46\uffff\3\51\1\161\26\51",
-            "\1\50\46\uffff\22\51\1\162\7\51",
-            "\1\50\46\uffff\10\51\1\163\21\51",
-            "\1\50\46\uffff\10\51\1\164\21\51",
-            "\1\50\46\uffff\21\51\1\165\10\51",
-            "\1\50\46\uffff\21\51\1\166\10\51",
-            "\1\50\46\uffff\4\51\1\167\25\51",
-            "\1\50\46\uffff\4\51\1\171\3\51\1\170\21\51",
-            "\1\50\46\uffff\15\51\1\172\14\51",
-            "\1\50\46\uffff\13\51\1\173\16\51",
-            "\1\50\31\uffff\1\174\14\uffff\32\51",
+            "\1\160",
+            "\1\41\46\uffff\12\42\1\161\17\42",
+            "\1\162\21\uffff\1\41\46\uffff\32\42",
+            "\1\41\46\uffff\4\42\1\163\25\42",
             "",
             "",
             "",
+            "\1\164",
+            "\12\43\1\41\6\uffff\32\43\4\uffff\1\43\1\uffff\32\42",
+            "\1\166",
+            "\1\167",
+            "\1\170",
+            "\1\41\46\uffff\4\42\1\171\25\42",
+            "\1\41\46\uffff\15\42\1\172\14\42",
             "",
-            "\1\175\31\uffff\1\50\46\uffff\32\51",
-            "\1\176\31\uffff\1\50\46\uffff\32\51",
             "",
+            "\1\41\46\uffff\1\42\1\173\30\42",
             "",
+            "\1\174\21\uffff\1\41\46\uffff\32\42",
+            "\1\175",
+            "",
+            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
             "\1\177",
             "\1\u0080",
-            "\1\u0081",
-            "\1\u0082",
-            "\1\u0083",
+            "\1\41\46\uffff\21\42\1\u0081\10\42",
+            "\1\u0082\21\uffff\1\41\46\uffff\32\42",
+            "\1\41\46\uffff\16\42\1\u0083\13\42",
+            "",
             "\1\u0084",
-            "\1\u0085",
+            "",
+            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
             "\1\u0086",
-            "\1\50\46\uffff\26\51\1\u0087\3\51",
-            "\1\50\46\uffff\23\51\1\u0088\6\51",
-            "\1\u0089\31\uffff\1\50\46\uffff\32\51",
-            "\1\50\46\uffff\4\51\1\u008a\25\51",
+            "\1\u0087\31\uffff\1\41\46\uffff\32\42",
+            "",
+            "\1\41\46\uffff\27\42\1\u0088\2\42",
+            "\1\u0089",
+            "",
+            "\1\u008a",
+            "",
+            "\1\u008b\21\uffff\1\41\46\uffff\32\42",
+            "\1\u008c",
+            "\1\u008d",
             "",
             "",
-            "\1\u008b",
-            "",
-            "\1\50\46\uffff\15\51\1\u008c\14\51",
-            "",
-            "\1\50\46\uffff\6\51\1\u008d\23\51",
-            "\1\50\46\uffff\15\51\1\u008e\14\51",
-            "\1\50\46\uffff\23\51\1\u008f\6\51",
-            "\1\50\46\uffff\10\51\1\u0090\15\51\1\u0091\3\51",
-            "\1\50\46\uffff\4\51\1\u0092\25\51",
-            "\1\50\46\uffff\22\51\1\u0093\7\51",
-            "\1\50\46\uffff\13\51\1\u0094\16\51",
-            "\1\u0095\31\uffff\1\50\46\uffff\32\51",
-            "\1\50\46\uffff\10\51\1\u0096\21\51",
-            "\1\50\46\uffff\2\51\1\u0097\27\51",
-            "\1\50\46\uffff\2\51\1\u0098\27\51",
-            "\1\50\46\uffff\1\u0099\31\51",
-            "\1\50\46\uffff\12\51\1\u009a\17\51",
-            "\1\50\46\uffff\13\51\1\u009b\16\51",
-            "\1\u009c",
-            "",
-            "",
-            "\1\u009d",
-            "\1\u009e",
-            "\1\u009f",
-            "\1\u00a0",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\1\u00a2",
-            "\1\u00a3",
-            "\1\u00a4",
-            "\1\50\46\uffff\22\51\1\u00a5\7\51",
-            "\1\50\46\uffff\16\51\1\u00a6\13\51",
-            "",
-            "\1\50\46\uffff\2\51\1\u00a7\27\51",
-            "\1\u00a9\5\uffff\1\u00a8",
-            "\12\47\1\50\6\uffff\32\47\4\uffff\1\47\1\uffff\32\51",
-            "\1\50\46\uffff\4\51\1\u00ab\25\51",
-            "\1\u00ac\31\uffff\1\50\46\uffff\32\51",
-            "\1\50\13\uffff\1\u00ad\32\uffff\32\51",
-            "\1\50\46\uffff\5\51\1\u00ae\24\51",
-            "\1\50\46\uffff\7\51\1\u00af\22\51",
-            "\1\u00b0\31\uffff\1\50\46\uffff\32\51",
-            "\1\50\46\uffff\23\51\1\u00b1\6\51",
-            "\1\50\46\uffff\4\51\1\u00b2\25\51",
-            "",
-            "\1\50\46\uffff\5\51\1\u00b3\24\51",
-            "\1\50\46\uffff\12\51\1\u00b4\17\51",
-            "\1\50\46\uffff\12\51\1\u00b5\17\51",
-            "\1\50\46\uffff\21\51\1\u00b6\10\51",
-            "\1\u00b7\31\uffff\1\50\46\uffff\32\51",
-            "\1\u00b8\21\uffff\1\50\46\uffff\32\51",
-            "\1\u00b9",
-            "\1\u00ba",
-            "\1\u00bb",
-            "\1\u00bc",
-            "\1\u00bd",
-            "",
-            "\1\u00be",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\1\u00c0",
-            "\1\50\46\uffff\4\51\1\u00c1\25\51",
-            "\1\50\46\uffff\15\51\1\u00c2\14\51",
-            "\1\50\46\uffff\23\51\1\u00c3\6\51",
-            "",
-            "",
-            "",
-            "\1\u00c4\31\uffff\1\50\46\uffff\32\51",
-            "",
-            "\1\u00c5",
-            "\1\u00c6\31\uffff\1\50\46\uffff\32\51",
-            "\1\50\46\uffff\10\51\1\u00c7\21\51",
-            "",
-            "\1\u00c8\21\uffff\1\50\46\uffff\32\51",
-            "\1\u00c9\31\uffff\1\50\46\uffff\32\51",
-            "\1\50\46\uffff\30\51\1\u00ca\1\51",
-            "\1\u00cc\21\uffff\1\50\46\uffff\1\51\1\u00cb\30\51",
-            "\1\u00cd\21\uffff\1\50\46\uffff\32\51",
-            "\1\u00ce\21\uffff\1\50\46\uffff\32\51",
-            "",
-            "",
-            "",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\1\u00d0",
-            "\1\u00d1",
-            "\1\u00d2",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "",
-            "\1\u00d4",
-            "\1\50\46\uffff\21\51\1\u00d5\10\51",
-            "\1\u00d6\31\uffff\1\50\46\uffff\32\51",
-            "\1\u00d7\21\uffff\1\50\46\uffff\32\51",
-            "",
-            "\1\u00d8",
-            "",
-            "\1\50\46\uffff\13\51\1\u00d9\16\51",
-            "",
-            "",
-            "\1\u00da\21\uffff\1\50\46\uffff\32\51",
-            "\1\50\46\uffff\16\51\1\u00db\13\51",
-            "",
-            "",
-            "",
-            "",
-            "\1\u00dc",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\1\u00de",
-            "",
-            "\1\u00df",
-            "\1\u00e0\31\uffff\1\50\46\uffff\32\51",
-            "",
-            "",
-            "\1\u00e1",
-            "\1\50\46\uffff\4\51\1\u00e2\25\51",
-            "",
-            "\1\50\46\uffff\27\51\1\u00e3\2\51",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "",
-            "\1\u00e5",
-            "\1\u00e6",
-            "",
-            "\1\u00e7",
-            "\12\47\1\50\6\uffff\32\47\4\uffff\1\47\1\uffff\32\51",
-            "\1\u00e9\31\uffff\1\50\46\uffff\32\51",
-            "",
-            "\1\u00ea",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\1\u00ec",
-            "",
-            "",
-            "\1\u00ed",
-            "",
-            "",
-            "\1\u00ee",
-            "\1\u00ef",
-            "\1\u00f0",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u008e",
+            "\1\u008f",
+            "\1\u0090",
+            "\1\u0091",
+            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
             ""
     };
 
@@ -3544,29 +2869,19 @@ public class InternalBrowserDSLLexer extends Lexer {
             this.transition = DFA29_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | RULE_URL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | RULE_URL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA29_33 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA29_33>='\u0000' && LA29_33<='\uFFFF')) ) {s = 85;}
-
-                        else s = 36;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
                         int LA29_0 = input.LA(1);
 
                         s = -1;
-                        if ( (LA29_0=='a') ) {s = 1;}
+                        if ( (LA29_0=='t') ) {s = 1;}
 
-                        else if ( (LA29_0==' ') ) {s = 2;}
+                        else if ( (LA29_0=='f') ) {s = 2;}
 
                         else if ( (LA29_0=='C') ) {s = 3;}
 
@@ -3574,77 +2889,75 @@ public class InternalBrowserDSLLexer extends Lexer {
 
                         else if ( (LA29_0=='H') ) {s = 5;}
 
-                        else if ( (LA29_0=='L') ) {s = 6;}
+                        else if ( (LA29_0=='b') ) {s = 6;}
 
-                        else if ( (LA29_0=='B') ) {s = 7;}
+                        else if ( (LA29_0==';') ) {s = 7;}
 
-                        else if ( (LA29_0=='I') ) {s = 8;}
+                        else if ( (LA29_0=='s') ) {s = 8;}
 
-                        else if ( (LA29_0=='T') ) {s = 9;}
+                        else if ( (LA29_0=='{') ) {s = 9;}
 
-                        else if ( (LA29_0=='b') ) {s = 10;}
+                        else if ( (LA29_0=='}') ) {s = 10;}
 
-                        else if ( (LA29_0==';') ) {s = 11;}
+                        else if ( (LA29_0=='(') ) {s = 11;}
 
-                        else if ( (LA29_0=='s') ) {s = 12;}
+                        else if ( (LA29_0==')') ) {s = 12;}
 
-                        else if ( (LA29_0=='(') ) {s = 13;}
+                        else if ( (LA29_0==',') ) {s = 13;}
 
-                        else if ( (LA29_0==')') ) {s = 14;}
+                        else if ( (LA29_0=='m') ) {s = 14;}
 
-                        else if ( (LA29_0==',') ) {s = 15;}
+                        else if ( (LA29_0=='v') ) {s = 15;}
 
-                        else if ( (LA29_0=='m') ) {s = 16;}
+                        else if ( (LA29_0==' ') ) {s = 16;}
 
-                        else if ( (LA29_0=='{') ) {s = 17;}
+                        else if ( (LA29_0=='g') ) {s = 17;}
 
-                        else if ( (LA29_0=='}') ) {s = 18;}
+                        else if ( (LA29_0=='c') ) {s = 18;}
 
-                        else if ( (LA29_0=='i') ) {s = 19;}
+                        else if ( (LA29_0=='l') ) {s = 19;}
 
-                        else if ( (LA29_0=='t') ) {s = 20;}
+                        else if ( (LA29_0=='i') ) {s = 20;}
 
-                        else if ( (LA29_0=='e') ) {s = 21;}
+                        else if ( (LA29_0=='.') ) {s = 21;}
 
-                        else if ( (LA29_0=='w') ) {s = 22;}
+                        else if ( (LA29_0=='a'||(LA29_0>='d' && LA29_0<='e')||LA29_0=='h'||(LA29_0>='j' && LA29_0<='k')||(LA29_0>='n' && LA29_0<='r')||LA29_0=='u'||(LA29_0>='w' && LA29_0<='z')) ) {s = 22;}
 
-                        else if ( (LA29_0=='v') ) {s = 23;}
+                        else if ( (LA29_0=='^') ) {s = 23;}
 
-                        else if ( (LA29_0=='c') ) {s = 24;}
+                        else if ( ((LA29_0>='A' && LA29_0<='B')||(LA29_0>='D' && LA29_0<='E')||LA29_0=='G'||(LA29_0>='I' && LA29_0<='Z')||LA29_0=='_') ) {s = 24;}
 
-                        else if ( (LA29_0=='l') ) {s = 25;}
+                        else if ( ((LA29_0>='0' && LA29_0<='9')) ) {s = 25;}
 
-                        else if ( (LA29_0=='f') ) {s = 26;}
+                        else if ( (LA29_0=='\"') ) {s = 26;}
 
-                        else if ( (LA29_0=='g') ) {s = 27;}
+                        else if ( (LA29_0=='\'') ) {s = 27;}
 
-                        else if ( (LA29_0=='d'||LA29_0=='h'||(LA29_0>='j' && LA29_0<='k')||(LA29_0>='n' && LA29_0<='r')||LA29_0=='u'||(LA29_0>='x' && LA29_0<='z')) ) {s = 28;}
+                        else if ( (LA29_0=='/') ) {s = 28;}
 
-                        else if ( (LA29_0=='^') ) {s = 29;}
+                        else if ( ((LA29_0>='\t' && LA29_0<='\n')||LA29_0=='\r') ) {s = 29;}
 
-                        else if ( (LA29_0=='A'||(LA29_0>='D' && LA29_0<='E')||LA29_0=='G'||(LA29_0>='J' && LA29_0<='K')||(LA29_0>='M' && LA29_0<='S')||(LA29_0>='U' && LA29_0<='Z')||LA29_0=='_') ) {s = 30;}
+                        else if ( ((LA29_0>='\u0000' && LA29_0<='\b')||(LA29_0>='\u000B' && LA29_0<='\f')||(LA29_0>='\u000E' && LA29_0<='\u001F')||LA29_0=='!'||(LA29_0>='#' && LA29_0<='&')||(LA29_0>='*' && LA29_0<='+')||LA29_0=='-'||LA29_0==':'||(LA29_0>='<' && LA29_0<='@')||(LA29_0>='[' && LA29_0<=']')||LA29_0=='`'||LA29_0=='|'||(LA29_0>='~' && LA29_0<='\uFFFF')) ) {s = 30;}
 
-                        else if ( ((LA29_0>='0' && LA29_0<='9')) ) {s = 31;}
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA29_27 = input.LA(1);
 
-                        else if ( (LA29_0=='\"') ) {s = 32;}
+                        s = -1;
+                        if ( ((LA29_27>='\u0000' && LA29_27<='\uFFFF')) ) {s = 65;}
 
-                        else if ( (LA29_0=='\'') ) {s = 33;}
-
-                        else if ( (LA29_0=='/') ) {s = 34;}
-
-                        else if ( ((LA29_0>='\t' && LA29_0<='\n')||LA29_0=='\r') ) {s = 35;}
-
-                        else if ( ((LA29_0>='\u0000' && LA29_0<='\b')||(LA29_0>='\u000B' && LA29_0<='\f')||(LA29_0>='\u000E' && LA29_0<='\u001F')||LA29_0=='!'||(LA29_0>='#' && LA29_0<='&')||(LA29_0>='*' && LA29_0<='+')||(LA29_0>='-' && LA29_0<='.')||LA29_0==':'||(LA29_0>='<' && LA29_0<='@')||(LA29_0>='[' && LA29_0<=']')||LA29_0=='`'||LA29_0=='|'||(LA29_0>='~' && LA29_0<='\uFFFF')) ) {s = 36;}
+                        else s = 30;
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA29_32 = input.LA(1);
+                        int LA29_26 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA29_32>='\u0000' && LA29_32<='\uFFFF')) ) {s = 85;}
+                        if ( ((LA29_26>='\u0000' && LA29_26<='\uFFFF')) ) {s = 65;}
 
-                        else s = 36;
+                        else s = 30;
 
                         if ( s>=0 ) return s;
                         break;

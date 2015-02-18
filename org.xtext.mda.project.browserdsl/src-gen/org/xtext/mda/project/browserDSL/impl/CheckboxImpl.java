@@ -11,8 +11,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
+import org.xtext.mda.project.browserDSL.CallType;
 import org.xtext.mda.project.browserDSL.Checkbox;
-import org.xtext.mda.project.browserDSL.Expression;
+import org.xtext.mda.project.browserDSL.CheckboxAction;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,23 +22,34 @@ import org.xtext.mda.project.browserDSL.Expression;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.mda.project.browserDSL.impl.CheckboxImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.xtext.mda.project.browserDSL.impl.CheckboxImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.xtext.mda.project.browserDSL.impl.CheckboxImpl#getAction <em>Action</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class CheckboxImpl extends CheckableElementImpl implements Checkbox
+public class CheckboxImpl extends InstructionImpl implements Checkbox
 {
   /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
+   * The cached value of the '{@link #getId() <em>Id</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getId()
    * @generated
    * @ordered
    */
-  protected Expression value;
+  protected CallType id;
+
+  /**
+   * The cached value of the '{@link #getAction() <em>Action</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAction()
+   * @generated
+   * @ordered
+   */
+  protected CheckboxAction action;
 
   /**
    * <!-- begin-user-doc -->
@@ -65,9 +77,9 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getValue()
+  public CallType getId()
   {
-    return value;
+    return id;
   }
 
   /**
@@ -75,13 +87,13 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetValue(Expression newValue, NotificationChain msgs)
+  public NotificationChain basicSetId(CallType newId, NotificationChain msgs)
   {
-    Expression oldValue = value;
-    value = newValue;
+    CallType oldId = id;
+    id = newId;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CHECKBOX__VALUE, oldValue, newValue);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CHECKBOX__ID, oldId, newId);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -92,20 +104,68 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(Expression newValue)
+  public void setId(CallType newId)
   {
-    if (newValue != value)
+    if (newId != id)
     {
       NotificationChain msgs = null;
-      if (value != null)
-        msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CHECKBOX__VALUE, null, msgs);
-      if (newValue != null)
-        msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CHECKBOX__VALUE, null, msgs);
-      msgs = basicSetValue(newValue, msgs);
+      if (id != null)
+        msgs = ((InternalEObject)id).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CHECKBOX__ID, null, msgs);
+      if (newId != null)
+        msgs = ((InternalEObject)newId).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CHECKBOX__ID, null, msgs);
+      msgs = basicSetId(newId, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CHECKBOX__VALUE, newValue, newValue));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CHECKBOX__ID, newId, newId));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CheckboxAction getAction()
+  {
+    return action;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAction(CheckboxAction newAction, NotificationChain msgs)
+  {
+    CheckboxAction oldAction = action;
+    action = newAction;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CHECKBOX__ACTION, oldAction, newAction);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAction(CheckboxAction newAction)
+  {
+    if (newAction != action)
+    {
+      NotificationChain msgs = null;
+      if (action != null)
+        msgs = ((InternalEObject)action).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CHECKBOX__ACTION, null, msgs);
+      if (newAction != null)
+        msgs = ((InternalEObject)newAction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.CHECKBOX__ACTION, null, msgs);
+      msgs = basicSetAction(newAction, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CHECKBOX__ACTION, newAction, newAction));
   }
 
   /**
@@ -118,8 +178,10 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CHECKBOX__VALUE:
-        return basicSetValue(null, msgs);
+      case BrowserDSLPackage.CHECKBOX__ID:
+        return basicSetId(null, msgs);
+      case BrowserDSLPackage.CHECKBOX__ACTION:
+        return basicSetAction(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -134,8 +196,10 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CHECKBOX__VALUE:
-        return getValue();
+      case BrowserDSLPackage.CHECKBOX__ID:
+        return getId();
+      case BrowserDSLPackage.CHECKBOX__ACTION:
+        return getAction();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -150,8 +214,11 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CHECKBOX__VALUE:
-        setValue((Expression)newValue);
+      case BrowserDSLPackage.CHECKBOX__ID:
+        setId((CallType)newValue);
+        return;
+      case BrowserDSLPackage.CHECKBOX__ACTION:
+        setAction((CheckboxAction)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -167,8 +234,11 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CHECKBOX__VALUE:
-        setValue((Expression)null);
+      case BrowserDSLPackage.CHECKBOX__ID:
+        setId((CallType)null);
+        return;
+      case BrowserDSLPackage.CHECKBOX__ACTION:
+        setAction((CheckboxAction)null);
         return;
     }
     super.eUnset(featureID);
@@ -184,8 +254,10 @@ public class CheckboxImpl extends CheckableElementImpl implements Checkbox
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CHECKBOX__VALUE:
-        return value != null;
+      case BrowserDSLPackage.CHECKBOX__ID:
+        return id != null;
+      case BrowserDSLPackage.CHECKBOX__ACTION:
+        return action != null;
     }
     return super.eIsSet(featureID);
   }

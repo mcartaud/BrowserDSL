@@ -11,7 +11,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
-import org.xtext.mda.project.browserDSL.Expression;
+import org.xtext.mda.project.browserDSL.CallType;
+import org.xtext.mda.project.browserDSL.TextAction;
 import org.xtext.mda.project.browserDSL.TextField;
 
 /**
@@ -21,23 +22,34 @@ import org.xtext.mda.project.browserDSL.TextField;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.mda.project.browserDSL.impl.TextFieldImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.xtext.mda.project.browserDSL.impl.TextFieldImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.xtext.mda.project.browserDSL.impl.TextFieldImpl#getAction <em>Action</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class TextFieldImpl extends FillableElementImpl implements TextField
+public class TextFieldImpl extends InstructionImpl implements TextField
 {
   /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
+   * The cached value of the '{@link #getId() <em>Id</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getId()
    * @generated
    * @ordered
    */
-  protected Expression value;
+  protected CallType id;
+
+  /**
+   * The cached value of the '{@link #getAction() <em>Action</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAction()
+   * @generated
+   * @ordered
+   */
+  protected TextAction action;
 
   /**
    * <!-- begin-user-doc -->
@@ -65,9 +77,9 @@ public class TextFieldImpl extends FillableElementImpl implements TextField
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression getValue()
+  public CallType getId()
   {
-    return value;
+    return id;
   }
 
   /**
@@ -75,13 +87,13 @@ public class TextFieldImpl extends FillableElementImpl implements TextField
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetValue(Expression newValue, NotificationChain msgs)
+  public NotificationChain basicSetId(CallType newId, NotificationChain msgs)
   {
-    Expression oldValue = value;
-    value = newValue;
+    CallType oldId = id;
+    id = newId;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.TEXT_FIELD__VALUE, oldValue, newValue);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.TEXT_FIELD__ID, oldId, newId);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -92,20 +104,68 @@ public class TextFieldImpl extends FillableElementImpl implements TextField
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setValue(Expression newValue)
+  public void setId(CallType newId)
   {
-    if (newValue != value)
+    if (newId != id)
     {
       NotificationChain msgs = null;
-      if (value != null)
-        msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.TEXT_FIELD__VALUE, null, msgs);
-      if (newValue != null)
-        msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.TEXT_FIELD__VALUE, null, msgs);
-      msgs = basicSetValue(newValue, msgs);
+      if (id != null)
+        msgs = ((InternalEObject)id).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.TEXT_FIELD__ID, null, msgs);
+      if (newId != null)
+        msgs = ((InternalEObject)newId).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.TEXT_FIELD__ID, null, msgs);
+      msgs = basicSetId(newId, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.TEXT_FIELD__VALUE, newValue, newValue));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.TEXT_FIELD__ID, newId, newId));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TextAction getAction()
+  {
+    return action;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAction(TextAction newAction, NotificationChain msgs)
+  {
+    TextAction oldAction = action;
+    action = newAction;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.TEXT_FIELD__ACTION, oldAction, newAction);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAction(TextAction newAction)
+  {
+    if (newAction != action)
+    {
+      NotificationChain msgs = null;
+      if (action != null)
+        msgs = ((InternalEObject)action).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.TEXT_FIELD__ACTION, null, msgs);
+      if (newAction != null)
+        msgs = ((InternalEObject)newAction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserDSLPackage.TEXT_FIELD__ACTION, null, msgs);
+      msgs = basicSetAction(newAction, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.TEXT_FIELD__ACTION, newAction, newAction));
   }
 
   /**
@@ -118,8 +178,10 @@ public class TextFieldImpl extends FillableElementImpl implements TextField
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.TEXT_FIELD__VALUE:
-        return basicSetValue(null, msgs);
+      case BrowserDSLPackage.TEXT_FIELD__ID:
+        return basicSetId(null, msgs);
+      case BrowserDSLPackage.TEXT_FIELD__ACTION:
+        return basicSetAction(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -134,8 +196,10 @@ public class TextFieldImpl extends FillableElementImpl implements TextField
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.TEXT_FIELD__VALUE:
-        return getValue();
+      case BrowserDSLPackage.TEXT_FIELD__ID:
+        return getId();
+      case BrowserDSLPackage.TEXT_FIELD__ACTION:
+        return getAction();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -150,8 +214,11 @@ public class TextFieldImpl extends FillableElementImpl implements TextField
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.TEXT_FIELD__VALUE:
-        setValue((Expression)newValue);
+      case BrowserDSLPackage.TEXT_FIELD__ID:
+        setId((CallType)newValue);
+        return;
+      case BrowserDSLPackage.TEXT_FIELD__ACTION:
+        setAction((TextAction)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -167,8 +234,11 @@ public class TextFieldImpl extends FillableElementImpl implements TextField
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.TEXT_FIELD__VALUE:
-        setValue((Expression)null);
+      case BrowserDSLPackage.TEXT_FIELD__ID:
+        setId((CallType)null);
+        return;
+      case BrowserDSLPackage.TEXT_FIELD__ACTION:
+        setAction((TextAction)null);
         return;
     }
     super.eUnset(featureID);
@@ -184,8 +254,10 @@ public class TextFieldImpl extends FillableElementImpl implements TextField
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.TEXT_FIELD__VALUE:
-        return value != null;
+      case BrowserDSLPackage.TEXT_FIELD__ID:
+        return id != null;
+      case BrowserDSLPackage.TEXT_FIELD__ACTION:
+        return action != null;
     }
     return super.eIsSet(featureID);
   }
