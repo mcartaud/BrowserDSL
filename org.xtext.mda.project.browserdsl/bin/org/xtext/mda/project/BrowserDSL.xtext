@@ -75,23 +75,23 @@ GoTo:
 ;
 
 Checkbox:
-	'checkbox( ' id=(Values | Variable) ' )' action=CheckboxAction
+	'checkbox(' id=(Values | Variable) ')' action=CheckboxAction
 ;
 
 Link:
-	'link( ' id=(Values | Variable) ' )' action=LinkAction
+	'link(' id=(Values | Variable) ')' action=LinkAction
 ;
 
 Button:
-	'button( ' id=(Values | Variable) ' )' action=ButtonAction
+	'button(' id=(Values | Variable) ')' action=ButtonAction
 ;
 
 Image:
-	'image( ' id=(Values | Variable) ' )' action=ImageAction
+	'image(' id=(Values | Variable) ')' action=ImageAction
 ;
 
 TextField:
-	'textField( ' id=(Values | Variable) ' )' action=TextAction
+	'textField(' id=(Values | Variable) ')' action=TextAction
 ;
 
 CheckboxAction:
