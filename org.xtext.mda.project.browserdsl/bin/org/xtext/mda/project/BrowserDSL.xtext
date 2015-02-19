@@ -67,7 +67,7 @@ Declaration:
 ;
 
 Instruction:
-	Link|Button|Image|TextField|Checkbox|GoTo|FunctionCall
+	Link|Button|Picture|TextField|Checkbox|GoTo|FunctionCall
 ;
 
 GoTo:
@@ -86,8 +86,8 @@ Button:
 	'button(' id=(StringValue|Variable) ')' action=ButtonAction
 ;
 
-Image:
-	'image(' id=(StringValue|Variable) ')' action=ImageAction
+Picture:
+	'picture(' id=(StringValue|Variable) ')' action=PictureAction
 ;
 
 TextField:
@@ -106,7 +106,7 @@ ButtonAction:
 	Click
 ;
 
-ImageAction:
+PictureAction:
 	Click
 ;
 

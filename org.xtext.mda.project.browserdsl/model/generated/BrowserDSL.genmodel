@@ -77,9 +77,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Button/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Button/action"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Image">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Image/id"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Image/action"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Picture">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Picture/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Picture/action"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//TextField">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//TextField/id"/>
@@ -88,7 +88,7 @@
     <genClasses ecoreClass="BrowserDSL.ecore#//CheckboxAction"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//LinkAction"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//ButtonAction"/>
-    <genClasses ecoreClass="BrowserDSL.ecore#//ImageAction"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//PictureAction"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//TextAction"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Click">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Click/action"/>

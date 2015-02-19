@@ -1,39 +1,25 @@
 package org.xtext.mda.project.browserdsl.interpreteur.utils;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import org.eclipse.emf.common.util.EList;
-import org.xtext.mda.project.browserDSL.Program;
 import org.xtext.mda.project.browserDSL.Subroutine;
 
 public class SubroutineUtils {
 
-	private static SubroutineUtils utils = null;
-	private HashMap<String, Subroutine> subroutines;
+	private static Map<String, Subroutine> subroutines;
 	
-	private SubroutineUtils(Program program) {
-		computeSubroutines(program.getSubroutines());
-	}
+	private SubroutineUtils() { }
 	
-	private void computeSubroutines(EList<Subroutine> list) {
+	public static void setSubroutineList(EList<Subroutine> list) {
+		subroutines = new HashMap<String, Subroutine>();
 		for (Subroutine subroutine : list) {
 			subroutines.put(subroutine.getHead().getName().getName(), subroutine);
 		}
-		
-	}
-
-	public static SubroutineUtils getSubroutineList() {
-		return utils;
 	}
 	
-	public static SubroutineUtils getSubroutineList(Program program) {
-		if (utils == null) {
-			utils = new SubroutineUtils(program);
-		}
-		return utils;
-	}
-	
-	public HashMap<String, Subroutine> getSubroutines() {
+	public Map<String, Subroutine> getSubroutines() {
 		return subroutines;
 	}
 	
