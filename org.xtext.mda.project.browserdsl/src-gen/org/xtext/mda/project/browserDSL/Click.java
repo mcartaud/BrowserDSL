@@ -2,7 +2,6 @@
  */
 package org.xtext.mda.project.browserDSL;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,7 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.mda.project.browserDSL.Click#getVal <em>Val</em>}</li>
+ *   <li>{@link org.xtext.mda.project.browserDSL.Click#getAction <em>Action</em>}</li>
  * </ul>
  * </p>
  *
@@ -20,32 +19,32 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Click extends EObject
+public interface Click extends CheckboxAction, LinkAction, ButtonAction, ImageAction
 {
   /**
-   * Returns the value of the '<em><b>Val</b></em>' attribute.
+   * Returns the value of the '<em><b>Action</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Val</em>' attribute isn't clear,
+   * If the meaning of the '<em>Action</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Val</em>' attribute.
-   * @see #setVal(String)
-   * @see org.xtext.mda.project.browserDSL.BrowserDSLPackage#getClick_Val()
+   * @return the value of the '<em>Action</em>' attribute.
+   * @see #setAction(String)
+   * @see org.xtext.mda.project.browserDSL.BrowserDSLPackage#getClick_Action()
    * @model
    * @generated
    */
-  String getVal();
+  String getAction();
 
   /**
-   * Sets the value of the '{@link org.xtext.mda.project.browserDSL.Click#getVal <em>Val</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.mda.project.browserDSL.Click#getAction <em>Action</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Val</em>' attribute.
-   * @see #getVal()
+   * @param value the new value of the '<em>Action</em>' attribute.
+   * @see #getAction()
    * @generated
    */
-  void setVal(String value);
+  void setAction(String value);
 
 } // Click

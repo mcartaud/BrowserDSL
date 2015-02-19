@@ -512,16 +512,16 @@ ruleBody returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getBodyAccess().getGoGoToParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getBodyAccess().getUrlGoToParserRuleCall_1_0()); 
 	    }
-		lv_go_1_0=ruleGoTo		{
+		lv_url_1_0=ruleGoTo		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getBodyRule());
 	        }
        		set(
        			$current, 
-       			"go",
-        		lv_go_1_0, 
+       			"url",
+        		lv_url_1_0, 
         		"GoTo");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -1093,7 +1093,7 @@ ruleCheckbox returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='checkbox( ' 
+(	otherlv_0='checkbox(' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getCheckboxAccess().getCheckboxKeyword_0());
     }
@@ -1101,9 +1101,9 @@ ruleCheckbox returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getCheckboxAccess().getIdValuesParserRuleCall_1_0_0()); 
+	        newCompositeNode(grammarAccess.getCheckboxAccess().getIdStringValueParserRuleCall_1_0_0()); 
 	    }
-		lv_id_1_1=ruleValues		{
+		lv_id_1_1=ruleStringValue		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getCheckboxRule());
 	        }
@@ -1111,7 +1111,7 @@ ruleCheckbox returns [EObject current=null]
        			$current, 
        			"id",
         		lv_id_1_1, 
-        		"Values");
+        		"StringValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1133,9 +1133,9 @@ ruleCheckbox returns [EObject current=null]
 )
 
 )
-)	otherlv_2=' )' 
+)	otherlv_2=')' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getCheckboxAccess().getSpaceRightParenthesisKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getCheckboxAccess().getRightParenthesisKeyword_2());
     }
 (
 (
@@ -1176,7 +1176,7 @@ ruleLink returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='link( ' 
+(	otherlv_0='link(' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getLinkAccess().getLinkKeyword_0());
     }
@@ -1184,9 +1184,9 @@ ruleLink returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLinkAccess().getIdValuesParserRuleCall_1_0_0()); 
+	        newCompositeNode(grammarAccess.getLinkAccess().getIdStringValueParserRuleCall_1_0_0()); 
 	    }
-		lv_id_1_1=ruleValues		{
+		lv_id_1_1=ruleStringValue		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLinkRule());
 	        }
@@ -1194,7 +1194,7 @@ ruleLink returns [EObject current=null]
        			$current, 
        			"id",
         		lv_id_1_1, 
-        		"Values");
+        		"StringValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1216,9 +1216,9 @@ ruleLink returns [EObject current=null]
 )
 
 )
-)	otherlv_2=' )' 
+)	otherlv_2=')' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getLinkAccess().getSpaceRightParenthesisKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getLinkAccess().getRightParenthesisKeyword_2());
     }
 (
 (
@@ -1259,7 +1259,7 @@ ruleButton returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='button( ' 
+(	otherlv_0='button(' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getButtonAccess().getButtonKeyword_0());
     }
@@ -1267,9 +1267,9 @@ ruleButton returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getButtonAccess().getIdValuesParserRuleCall_1_0_0()); 
+	        newCompositeNode(grammarAccess.getButtonAccess().getIdStringValueParserRuleCall_1_0_0()); 
 	    }
-		lv_id_1_1=ruleValues		{
+		lv_id_1_1=ruleStringValue		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getButtonRule());
 	        }
@@ -1277,7 +1277,7 @@ ruleButton returns [EObject current=null]
        			$current, 
        			"id",
         		lv_id_1_1, 
-        		"Values");
+        		"StringValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1299,9 +1299,9 @@ ruleButton returns [EObject current=null]
 )
 
 )
-)	otherlv_2=' )' 
+)	otherlv_2=')' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getButtonAccess().getSpaceRightParenthesisKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getButtonAccess().getRightParenthesisKeyword_2());
     }
 (
 (
@@ -1342,7 +1342,7 @@ ruleImage returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='image( ' 
+(	otherlv_0='image(' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getImageAccess().getImageKeyword_0());
     }
@@ -1350,9 +1350,9 @@ ruleImage returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getImageAccess().getIdValuesParserRuleCall_1_0_0()); 
+	        newCompositeNode(grammarAccess.getImageAccess().getIdStringValueParserRuleCall_1_0_0()); 
 	    }
-		lv_id_1_1=ruleValues		{
+		lv_id_1_1=ruleStringValue		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getImageRule());
 	        }
@@ -1360,7 +1360,7 @@ ruleImage returns [EObject current=null]
        			$current, 
        			"id",
         		lv_id_1_1, 
-        		"Values");
+        		"StringValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1382,9 +1382,9 @@ ruleImage returns [EObject current=null]
 )
 
 )
-)	otherlv_2=' )' 
+)	otherlv_2=')' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getImageAccess().getSpaceRightParenthesisKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getImageAccess().getRightParenthesisKeyword_2());
     }
 (
 (
@@ -1425,7 +1425,7 @@ ruleTextField returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='textField( ' 
+(	otherlv_0='textField(' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getTextFieldAccess().getTextFieldKeyword_0());
     }
@@ -1433,9 +1433,9 @@ ruleTextField returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTextFieldAccess().getIdValuesParserRuleCall_1_0_0()); 
+	        newCompositeNode(grammarAccess.getTextFieldAccess().getIdStringValueParserRuleCall_1_0_0()); 
 	    }
-		lv_id_1_1=ruleValues		{
+		lv_id_1_1=ruleStringValue		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTextFieldRule());
 	        }
@@ -1443,7 +1443,7 @@ ruleTextField returns [EObject current=null]
        			$current, 
        			"id",
         		lv_id_1_1, 
-        		"Values");
+        		"StringValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1465,9 +1465,9 @@ ruleTextField returns [EObject current=null]
 )
 
 )
-)	otherlv_2=' )' 
+)	otherlv_2=')' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getTextFieldAccess().getSpaceRightParenthesisKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getTextFieldAccess().getRightParenthesisKeyword_2());
     }
 (
 (
@@ -1508,25 +1508,16 @@ ruleCheckboxAction returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
 (
-		{ 
-	        newCompositeNode(grammarAccess.getCheckboxActionAccess().getCheckActionClickParserRuleCall_0_0()); 
-	    }
-		lv_checkAction_0_0=ruleClick		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getCheckboxActionRule());
-	        }
-       		set(
-       			$current, 
-       			"checkAction",
-        		lv_checkAction_0_0, 
-        		"Click");
-	        afterParserOrEnumRuleCall();
-	    }
+    { 
+        newCompositeNode(grammarAccess.getCheckboxActionAccess().getClickParserRuleCall_0()); 
+    }
+    this_Click_0=ruleClick
+    { 
+        $current = $this_Click_0.current; 
+        afterParserOrEnumRuleCall();
+    }
 
-)
-)
     |
     { 
         newCompositeNode(grammarAccess.getCheckboxActionAccess().getIsCheckParserRuleCall_1()); 
@@ -1567,25 +1558,16 @@ ruleLinkAction returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getLinkActionAccess().getLinkActionClickParserRuleCall_0()); 
-	    }
-		lv_linkAction_0_0=ruleClick		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLinkActionRule());
-	        }
-       		set(
-       			$current, 
-       			"linkAction",
-        		lv_linkAction_0_0, 
-        		"Click");
-	        afterParserOrEnumRuleCall();
-	    }
 
-)
-)
+    { 
+        newCompositeNode(grammarAccess.getLinkActionAccess().getClickParserRuleCall()); 
+    }
+    this_Click_0=ruleClick
+    { 
+        $current = $this_Click_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
 ;
 
 
@@ -1606,25 +1588,16 @@ ruleButtonAction returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getButtonActionAccess().getButtonActionClickParserRuleCall_0()); 
-	    }
-		lv_ButtonAction_0_0=ruleClick		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getButtonActionRule());
-	        }
-       		set(
-       			$current, 
-       			"ButtonAction",
-        		lv_ButtonAction_0_0, 
-        		"Click");
-	        afterParserOrEnumRuleCall();
-	    }
 
-)
-)
+    { 
+        newCompositeNode(grammarAccess.getButtonActionAccess().getClickParserRuleCall()); 
+    }
+    this_Click_0=ruleClick
+    { 
+        $current = $this_Click_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
 ;
 
 
@@ -1645,25 +1618,16 @@ ruleImageAction returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getImageActionAccess().getImageActionClickParserRuleCall_0()); 
-	    }
-		lv_ImageAction_0_0=ruleClick		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getImageActionRule());
-	        }
-       		set(
-       			$current, 
-       			"ImageAction",
-        		lv_ImageAction_0_0, 
-        		"Click");
-	        afterParserOrEnumRuleCall();
-	    }
 
-)
-)
+    { 
+        newCompositeNode(grammarAccess.getImageActionAccess().getClickParserRuleCall()); 
+    }
+    this_Click_0=ruleClick
+    { 
+        $current = $this_Click_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
 ;
 
 
@@ -1684,25 +1648,16 @@ ruleTextAction returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
 (
-		{ 
-	        newCompositeNode(grammarAccess.getTextActionAccess().getTaxtActionCheckValueParserRuleCall_0_0()); 
-	    }
-		lv_taxtAction_0_0=ruleCheckValue		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getTextActionRule());
-	        }
-       		set(
-       			$current, 
-       			"taxtAction",
-        		lv_taxtAction_0_0, 
-        		"CheckValue");
-	        afterParserOrEnumRuleCall();
-	    }
+    { 
+        newCompositeNode(grammarAccess.getTextActionAccess().getCheckValueParserRuleCall_0()); 
+    }
+    this_CheckValue_0=ruleCheckValue
+    { 
+        $current = $this_CheckValue_0.current; 
+        afterParserOrEnumRuleCall();
+    }
 
-)
-)
     |
     { 
         newCompositeNode(grammarAccess.getTextActionAccess().getFillParserRuleCall_1()); 
@@ -1745,16 +1700,16 @@ ruleClick returns [EObject current=null]
     @after { leaveRule(); }:
 (
 (
-		lv_val_0_0=	'.click()' 
+		lv_action_0_0=	'.click()' 
     {
-        newLeafNode(lv_val_0_0, grammarAccess.getClickAccess().getValClickKeyword_0());
+        newLeafNode(lv_action_0_0, grammarAccess.getClickAccess().getActionClickKeyword_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getClickRule());
 	        }
-       		setWithLastConsumed($current, "val", lv_val_0_0, ".click()");
+       		setWithLastConsumed($current, "action", lv_action_0_0, ".click()");
 	    }
 
 )
@@ -1828,16 +1783,16 @@ ruleClear returns [EObject current=null]
     @after { leaveRule(); }:
 (
 (
-		lv_val_0_0=	'.clear()' 
+		lv_action_0_0=	'.clear()' 
     {
-        newLeafNode(lv_val_0_0, grammarAccess.getClearAccess().getValClearKeyword_0());
+        newLeafNode(lv_action_0_0, grammarAccess.getClearAccess().getActionClearKeyword_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getClearRule());
 	        }
-       		setWithLastConsumed($current, "val", lv_val_0_0, ".clear()");
+       		setWithLastConsumed($current, "action", lv_action_0_0, ".clear()");
 	    }
 
 )
@@ -1870,9 +1825,9 @@ ruleCheckValue returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getCheckValueAccess().getValueVariableParserRuleCall_1_0_0()); 
+	        newCompositeNode(grammarAccess.getCheckValueAccess().getValueStringValueParserRuleCall_1_0_0()); 
 	    }
-		lv_value_1_1=ruleVariable		{
+		lv_value_1_1=ruleStringValue		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getCheckValueRule());
 	        }
@@ -1880,14 +1835,14 @@ ruleCheckValue returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_1, 
-        		"Variable");
+        		"StringValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
     |		{ 
-	        newCompositeNode(grammarAccess.getCheckValueAccess().getValueValuesParserRuleCall_1_0_1()); 
+	        newCompositeNode(grammarAccess.getCheckValueAccess().getValueVariableParserRuleCall_1_0_1()); 
 	    }
-		lv_value_1_2=ruleValues		{
+		lv_value_1_2=ruleVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getCheckValueRule());
 	        }
@@ -1895,7 +1850,7 @@ ruleCheckValue returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_2, 
-        		"Values");
+        		"Variable");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1935,9 +1890,9 @@ ruleFill returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getFillAccess().getValueVariableParserRuleCall_1_0_0()); 
+	        newCompositeNode(grammarAccess.getFillAccess().getValueStringValueParserRuleCall_1_0_0()); 
 	    }
-		lv_value_1_1=ruleVariable		{
+		lv_value_1_1=ruleStringValue		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getFillRule());
 	        }
@@ -1945,14 +1900,14 @@ ruleFill returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_1, 
-        		"Variable");
+        		"StringValue");
 	        afterParserOrEnumRuleCall();
 	    }
 
     |		{ 
-	        newCompositeNode(grammarAccess.getFillAccess().getValueValuesParserRuleCall_1_0_1()); 
+	        newCompositeNode(grammarAccess.getFillAccess().getValueVariableParserRuleCall_1_0_1()); 
 	    }
-		lv_value_1_2=ruleValues		{
+		lv_value_1_2=ruleVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getFillRule());
 	        }
@@ -1960,7 +1915,7 @@ ruleFill returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_1_2, 
-        		"Values");
+        		"Variable");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2178,12 +2133,6 @@ ruleOpenBrowser returns [Enumerator current=null]
 	{
         $current = grammarAccess.getOpenBrowserAccess().getFirefoxEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_1, grammarAccess.getOpenBrowserAccess().getFirefoxEnumLiteralDeclaration_1()); 
-    }
-)
-    |(	enumLiteral_2='HtmlUnitDriver' 
-	{
-        $current = grammarAccess.getOpenBrowserAccess().getHtmlUnitDriverEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_2, grammarAccess.getOpenBrowserAccess().getHtmlUnitDriverEnumLiteralDeclaration_2()); 
     }
 ));
 

@@ -32,7 +32,7 @@ Main:
 
 Body:
 	'{'
-	go=GoTo ';'
+	url=GoTo ';'
 	instructions+=Instruction';' ( instructions+=Instruction ';')* 
 	'}'
 ;
@@ -51,7 +51,7 @@ FunctionCall:
 ;
 
 CallType:
-	Values | Variable
+	Values|Variable
 ;
 
 Variable:
@@ -67,7 +67,7 @@ Declaration:
 ;
 
 Instruction:
-	Link | Button | Image | TextField | Checkbox | GoTo | FunctionCall
+	Link|Button|Image|TextField|Checkbox|GoTo|FunctionCall
 ;
 
 GoTo:
@@ -75,47 +75,47 @@ GoTo:
 ;
 
 Checkbox:
-	'checkbox(' id=(Values | Variable) ')' action=CheckboxAction
+	'checkbox(' id=(StringValue|Variable) ')' action=CheckboxAction
 ;
 
 Link:
-	'link(' id=(Values | Variable) ')' action=LinkAction
+	'link(' id=(StringValue|Variable) ')' action=LinkAction
 ;
 
 Button:
-	'button(' id=(Values | Variable) ')' action=ButtonAction
+	'button(' id=(StringValue|Variable) ')' action=ButtonAction
 ;
 
 Image:
-	'image(' id=(Values | Variable) ')' action=ImageAction
+	'image(' id=(StringValue|Variable) ')' action=ImageAction
 ;
 
 TextField:
-	'textField(' id=(Values | Variable) ')' action=TextAction
+	'textField(' id=(StringValue|Variable) ')' action=TextAction
 ;
 
 CheckboxAction:
-	checkAction = Click | IsCheck | Clear
+	Click|IsCheck|Clear
 ;
 
 LinkAction:
-	linkAction = Click
+	Click
 ;
 
 ButtonAction:
-	ButtonAction = Click
+	Click
 ;
 
 ImageAction:
-	ImageAction = Click
+	Click
 ;
 
 TextAction:
-	taxtAction = CheckValue | Fill | Clear
+	CheckValue|Fill|Clear
 ;
 
 Click:
-	val='.click()'
+	action='.click()'
 ;
 
 IsCheck:
@@ -123,19 +123,19 @@ IsCheck:
 ;
 
 Clear:
-	val='.clear()'
+	action='.clear()'
 ;
 
 CheckValue:
-	'.verify(' value=(Variable | Values) ')'
+	'.verify(' value=(StringValue|Variable) ')'
 ;
 
 Fill:
-	'.fill(' value=(Variable | Values) ')'
+	'.fill(' value=(StringValue|Variable) ')'
 ;
 
 Values:
-	IntValue | StringValue | BooleanValue
+	IntValue|StringValue|BooleanValue
 ;
 
 IntValue:
@@ -151,11 +151,11 @@ BooleanValue:
 ;
 
 enum Boolean:
-	true | false
+	true|false
 ;
 
 enum OpenBrowser:
-	Chrome|Firefox|HtmlUnitDriver
+	Chrome|Firefox
 ;
 
 terminal URL:

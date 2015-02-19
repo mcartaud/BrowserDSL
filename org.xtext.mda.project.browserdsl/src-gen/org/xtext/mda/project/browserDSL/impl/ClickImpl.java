@@ -7,7 +7,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.mda.project.browserDSL.BrowserDSLPackage;
 import org.xtext.mda.project.browserDSL.Click;
@@ -19,33 +18,33 @@ import org.xtext.mda.project.browserDSL.Click;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.mda.project.browserDSL.impl.ClickImpl#getVal <em>Val</em>}</li>
+ *   <li>{@link org.xtext.mda.project.browserDSL.impl.ClickImpl#getAction <em>Action</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ClickImpl extends MinimalEObjectImpl.Container implements Click
+public class ClickImpl extends CheckboxActionImpl implements Click
 {
   /**
-   * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
+   * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVal()
+   * @see #getAction()
    * @generated
    * @ordered
    */
-  protected static final String VAL_EDEFAULT = null;
+  protected static final String ACTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getVal() <em>Val</em>}' attribute.
+   * The cached value of the '{@link #getAction() <em>Action</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVal()
+   * @see #getAction()
    * @generated
    * @ordered
    */
-  protected String val = VAL_EDEFAULT;
+  protected String action = ACTION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +72,9 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getVal()
+  public String getAction()
   {
-    return val;
+    return action;
   }
 
   /**
@@ -83,12 +82,12 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVal(String newVal)
+  public void setAction(String newAction)
   {
-    String oldVal = val;
-    val = newVal;
+    String oldAction = action;
+    action = newAction;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CLICK__VAL, oldVal, val));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserDSLPackage.CLICK__ACTION, oldAction, action));
   }
 
   /**
@@ -101,8 +100,8 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__VAL:
-        return getVal();
+      case BrowserDSLPackage.CLICK__ACTION:
+        return getAction();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +116,8 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__VAL:
-        setVal((String)newValue);
+      case BrowserDSLPackage.CLICK__ACTION:
+        setAction((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +133,8 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__VAL:
-        setVal(VAL_EDEFAULT);
+      case BrowserDSLPackage.CLICK__ACTION:
+        setAction(ACTION_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +150,8 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserDSLPackage.CLICK__VAL:
-        return VAL_EDEFAULT == null ? val != null : !VAL_EDEFAULT.equals(val);
+      case BrowserDSLPackage.CLICK__ACTION:
+        return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
     }
     return super.eIsSet(featureID);
   }
@@ -168,8 +167,8 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (val: ");
-    result.append(val);
+    result.append(" (action: ");
+    result.append(action);
     result.append(')');
     return result.toString();
   }

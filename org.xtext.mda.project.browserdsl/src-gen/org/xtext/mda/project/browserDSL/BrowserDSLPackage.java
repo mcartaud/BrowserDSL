@@ -281,13 +281,13 @@ public interface BrowserDSLPackage extends EPackage
   int BODY = 6;
 
   /**
-   * The feature id for the '<em><b>Go</b></em>' containment reference.
+   * The feature id for the '<em><b>Url</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BODY__GO = 0;
+  int BODY__URL = 0;
 
   /**
    * The feature id for the '<em><b>Instructions</b></em>' containment reference list.
@@ -746,22 +746,13 @@ public interface BrowserDSLPackage extends EPackage
   int CHECKBOX_ACTION = 21;
 
   /**
-   * The feature id for the '<em><b>Check Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHECKBOX_ACTION__CHECK_ACTION = 0;
-
-  /**
    * The number of structural features of the '<em>Checkbox Action</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHECKBOX_ACTION_FEATURE_COUNT = 1;
+  int CHECKBOX_ACTION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.LinkActionImpl <em>Link Action</em>}' class.
@@ -774,22 +765,13 @@ public interface BrowserDSLPackage extends EPackage
   int LINK_ACTION = 22;
 
   /**
-   * The feature id for the '<em><b>Link Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LINK_ACTION__LINK_ACTION = 0;
-
-  /**
    * The number of structural features of the '<em>Link Action</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LINK_ACTION_FEATURE_COUNT = 1;
+  int LINK_ACTION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ButtonActionImpl <em>Button Action</em>}' class.
@@ -802,22 +784,13 @@ public interface BrowserDSLPackage extends EPackage
   int BUTTON_ACTION = 23;
 
   /**
-   * The feature id for the '<em><b>Button Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BUTTON_ACTION__BUTTON_ACTION = 0;
-
-  /**
    * The number of structural features of the '<em>Button Action</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BUTTON_ACTION_FEATURE_COUNT = 1;
+  int BUTTON_ACTION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ImageActionImpl <em>Image Action</em>}' class.
@@ -830,22 +803,13 @@ public interface BrowserDSLPackage extends EPackage
   int IMAGE_ACTION = 24;
 
   /**
-   * The feature id for the '<em><b>Image Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IMAGE_ACTION__IMAGE_ACTION = 0;
-
-  /**
    * The number of structural features of the '<em>Image Action</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IMAGE_ACTION_FEATURE_COUNT = 1;
+  int IMAGE_ACTION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.TextActionImpl <em>Text Action</em>}' class.
@@ -858,22 +822,13 @@ public interface BrowserDSLPackage extends EPackage
   int TEXT_ACTION = 25;
 
   /**
-   * The feature id for the '<em><b>Taxt Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEXT_ACTION__TAXT_ACTION = 0;
-
-  /**
    * The number of structural features of the '<em>Text Action</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEXT_ACTION_FEATURE_COUNT = 1;
+  int TEXT_ACTION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.ClickImpl <em>Click</em>}' class.
@@ -886,13 +841,13 @@ public interface BrowserDSLPackage extends EPackage
   int CLICK = 26;
 
   /**
-   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * The feature id for the '<em><b>Action</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLICK__VAL = 0;
+  int CLICK__ACTION = CHECKBOX_ACTION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Click</em>' class.
@@ -901,7 +856,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLICK_FEATURE_COUNT = 1;
+  int CLICK_FEATURE_COUNT = CHECKBOX_ACTION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.IsCheckImpl <em>Is Check</em>}' class.
@@ -912,15 +867,6 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    */
   int IS_CHECK = 27;
-
-  /**
-   * The feature id for the '<em><b>Check Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int IS_CHECK__CHECK_ACTION = CHECKBOX_ACTION__CHECK_ACTION;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -951,31 +897,13 @@ public interface BrowserDSLPackage extends EPackage
   int CLEAR = 28;
 
   /**
-   * The feature id for the '<em><b>Check Action</b></em>' containment reference.
+   * The feature id for the '<em><b>Action</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLEAR__CHECK_ACTION = CHECKBOX_ACTION__CHECK_ACTION;
-
-  /**
-   * The feature id for the '<em><b>Taxt Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CLEAR__TAXT_ACTION = CHECKBOX_ACTION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Val</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CLEAR__VAL = CHECKBOX_ACTION_FEATURE_COUNT + 1;
+  int CLEAR__ACTION = CHECKBOX_ACTION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Clear</em>' class.
@@ -984,7 +912,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLEAR_FEATURE_COUNT = CHECKBOX_ACTION_FEATURE_COUNT + 2;
+  int CLEAR_FEATURE_COUNT = CHECKBOX_ACTION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.CheckValueImpl <em>Check Value</em>}' class.
@@ -1003,7 +931,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHECK_VALUE__VALUE = 0;
+  int CHECK_VALUE__VALUE = TEXT_ACTION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Check Value</em>' class.
@@ -1012,7 +940,7 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHECK_VALUE_FEATURE_COUNT = 1;
+  int CHECK_VALUE_FEATURE_COUNT = TEXT_ACTION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.mda.project.browserDSL.impl.FillImpl <em>Fill</em>}' class.
@@ -1023,15 +951,6 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    */
   int FILL = 30;
-
-  /**
-   * The feature id for the '<em><b>Taxt Action</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FILL__TAXT_ACTION = TEXT_ACTION__TAXT_ACTION;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1367,15 +1286,15 @@ public interface BrowserDSLPackage extends EPackage
   EClass getBody();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Body#getGo <em>Go</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.Body#getUrl <em>Url</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Go</em>'.
-   * @see org.xtext.mda.project.browserDSL.Body#getGo()
+   * @return the meta object for the containment reference '<em>Url</em>'.
+   * @see org.xtext.mda.project.browserDSL.Body#getUrl()
    * @see #getBody()
    * @generated
    */
-  EReference getBody_Go();
+  EReference getBody_Url();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.mda.project.browserDSL.Body#getInstructions <em>Instructions</em>}'.
@@ -1737,17 +1656,6 @@ public interface BrowserDSLPackage extends EPackage
   EClass getCheckboxAction();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.CheckboxAction#getCheckAction <em>Check Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Check Action</em>'.
-   * @see org.xtext.mda.project.browserDSL.CheckboxAction#getCheckAction()
-   * @see #getCheckboxAction()
-   * @generated
-   */
-  EReference getCheckboxAction_CheckAction();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.LinkAction <em>Link Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1756,17 +1664,6 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    */
   EClass getLinkAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.LinkAction#getLinkAction <em>Link Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Link Action</em>'.
-   * @see org.xtext.mda.project.browserDSL.LinkAction#getLinkAction()
-   * @see #getLinkAction()
-   * @generated
-   */
-  EReference getLinkAction_LinkAction();
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.ButtonAction <em>Button Action</em>}'.
@@ -1779,17 +1676,6 @@ public interface BrowserDSLPackage extends EPackage
   EClass getButtonAction();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.ButtonAction#getButtonAction <em>Button Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Button Action</em>'.
-   * @see org.xtext.mda.project.browserDSL.ButtonAction#getButtonAction()
-   * @see #getButtonAction()
-   * @generated
-   */
-  EReference getButtonAction_ButtonAction();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.ImageAction <em>Image Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1798,17 +1684,6 @@ public interface BrowserDSLPackage extends EPackage
    * @generated
    */
   EClass getImageAction();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.ImageAction#getImageAction <em>Image Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Image Action</em>'.
-   * @see org.xtext.mda.project.browserDSL.ImageAction#getImageAction()
-   * @see #getImageAction()
-   * @generated
-   */
-  EReference getImageAction_ImageAction();
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.TextAction <em>Text Action</em>}'.
@@ -1821,17 +1696,6 @@ public interface BrowserDSLPackage extends EPackage
   EClass getTextAction();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.mda.project.browserDSL.TextAction#getTaxtAction <em>Taxt Action</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Taxt Action</em>'.
-   * @see org.xtext.mda.project.browserDSL.TextAction#getTaxtAction()
-   * @see #getTextAction()
-   * @generated
-   */
-  EReference getTextAction_TaxtAction();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.Click <em>Click</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1842,15 +1706,15 @@ public interface BrowserDSLPackage extends EPackage
   EClass getClick();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Click#getVal <em>Val</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Click#getAction <em>Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Val</em>'.
-   * @see org.xtext.mda.project.browserDSL.Click#getVal()
+   * @return the meta object for the attribute '<em>Action</em>'.
+   * @see org.xtext.mda.project.browserDSL.Click#getAction()
    * @see #getClick()
    * @generated
    */
-  EAttribute getClick_Val();
+  EAttribute getClick_Action();
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.IsCheck <em>Is Check</em>}'.
@@ -1884,15 +1748,15 @@ public interface BrowserDSLPackage extends EPackage
   EClass getClear();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Clear#getVal <em>Val</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.mda.project.browserDSL.Clear#getAction <em>Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Val</em>'.
-   * @see org.xtext.mda.project.browserDSL.Clear#getVal()
+   * @return the meta object for the attribute '<em>Action</em>'.
+   * @see org.xtext.mda.project.browserDSL.Clear#getAction()
    * @see #getClear()
    * @generated
    */
-  EAttribute getClear_Val();
+  EAttribute getClear_Action();
 
   /**
    * Returns the meta object for class '{@link org.xtext.mda.project.browserDSL.CheckValue <em>Check Value</em>}'.
@@ -2211,12 +2075,12 @@ public interface BrowserDSLPackage extends EPackage
     EClass BODY = eINSTANCE.getBody();
 
     /**
-     * The meta object literal for the '<em><b>Go</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Url</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference BODY__GO = eINSTANCE.getBody_Go();
+    EReference BODY__URL = eINSTANCE.getBody_Url();
 
     /**
      * The meta object literal for the '<em><b>Instructions</b></em>' containment reference list feature.
@@ -2521,14 +2385,6 @@ public interface BrowserDSLPackage extends EPackage
     EClass CHECKBOX_ACTION = eINSTANCE.getCheckboxAction();
 
     /**
-     * The meta object literal for the '<em><b>Check Action</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CHECKBOX_ACTION__CHECK_ACTION = eINSTANCE.getCheckboxAction_CheckAction();
-
-    /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.LinkActionImpl <em>Link Action</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2537,14 +2393,6 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EClass LINK_ACTION = eINSTANCE.getLinkAction();
-
-    /**
-     * The meta object literal for the '<em><b>Link Action</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference LINK_ACTION__LINK_ACTION = eINSTANCE.getLinkAction_LinkAction();
 
     /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ButtonActionImpl <em>Button Action</em>}' class.
@@ -2557,14 +2405,6 @@ public interface BrowserDSLPackage extends EPackage
     EClass BUTTON_ACTION = eINSTANCE.getButtonAction();
 
     /**
-     * The meta object literal for the '<em><b>Button Action</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BUTTON_ACTION__BUTTON_ACTION = eINSTANCE.getButtonAction_ButtonAction();
-
-    /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ImageActionImpl <em>Image Action</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2573,14 +2413,6 @@ public interface BrowserDSLPackage extends EPackage
      * @generated
      */
     EClass IMAGE_ACTION = eINSTANCE.getImageAction();
-
-    /**
-     * The meta object literal for the '<em><b>Image Action</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference IMAGE_ACTION__IMAGE_ACTION = eINSTANCE.getImageAction_ImageAction();
 
     /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.TextActionImpl <em>Text Action</em>}' class.
@@ -2593,14 +2425,6 @@ public interface BrowserDSLPackage extends EPackage
     EClass TEXT_ACTION = eINSTANCE.getTextAction();
 
     /**
-     * The meta object literal for the '<em><b>Taxt Action</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference TEXT_ACTION__TAXT_ACTION = eINSTANCE.getTextAction_TaxtAction();
-
-    /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.ClickImpl <em>Click</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2611,12 +2435,12 @@ public interface BrowserDSLPackage extends EPackage
     EClass CLICK = eINSTANCE.getClick();
 
     /**
-     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CLICK__VAL = eINSTANCE.getClick_Val();
+    EAttribute CLICK__ACTION = eINSTANCE.getClick_Action();
 
     /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.IsCheckImpl <em>Is Check</em>}' class.
@@ -2647,12 +2471,12 @@ public interface BrowserDSLPackage extends EPackage
     EClass CLEAR = eINSTANCE.getClear();
 
     /**
-     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CLEAR__VAL = eINSTANCE.getClear_Val();
+    EAttribute CLEAR__ACTION = eINSTANCE.getClear_Action();
 
     /**
      * The meta object literal for the '{@link org.xtext.mda.project.browserDSL.impl.CheckValueImpl <em>Check Value</em>}' class.

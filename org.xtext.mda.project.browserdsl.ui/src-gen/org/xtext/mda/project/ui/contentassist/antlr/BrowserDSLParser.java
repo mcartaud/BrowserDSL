@@ -90,7 +90,7 @@ public class BrowserDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHeadAccess().getNameParametersAssignment_1_3_1(), "rule__Head__NameParametersAssignment_1_3_1");
 					put(grammarAccess.getFunctionNameAccess().getNameAssignment(), "rule__FunctionName__NameAssignment");
 					put(grammarAccess.getMainAccess().getBodyAssignment_1(), "rule__Main__BodyAssignment_1");
-					put(grammarAccess.getBodyAccess().getGoAssignment_1(), "rule__Body__GoAssignment_1");
+					put(grammarAccess.getBodyAccess().getUrlAssignment_1(), "rule__Body__UrlAssignment_1");
 					put(grammarAccess.getBodyAccess().getInstructionsAssignment_3(), "rule__Body__InstructionsAssignment_3");
 					put(grammarAccess.getBodyAccess().getInstructionsAssignment_5_0(), "rule__Body__InstructionsAssignment_5_0");
 					put(grammarAccess.getVariableReferenceAccess().getVarIDAssignment(), "rule__VariableReference__VarIDAssignment");
@@ -113,14 +113,9 @@ public class BrowserDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getImageAccess().getActionAssignment_3(), "rule__Image__ActionAssignment_3");
 					put(grammarAccess.getTextFieldAccess().getIdAssignment_1(), "rule__TextField__IdAssignment_1");
 					put(grammarAccess.getTextFieldAccess().getActionAssignment_3(), "rule__TextField__ActionAssignment_3");
-					put(grammarAccess.getCheckboxActionAccess().getCheckActionAssignment_0(), "rule__CheckboxAction__CheckActionAssignment_0");
-					put(grammarAccess.getLinkActionAccess().getLinkActionAssignment(), "rule__LinkAction__LinkActionAssignment");
-					put(grammarAccess.getButtonActionAccess().getButtonActionAssignment(), "rule__ButtonAction__ButtonActionAssignment");
-					put(grammarAccess.getImageActionAccess().getImageActionAssignment(), "rule__ImageAction__ImageActionAssignment");
-					put(grammarAccess.getTextActionAccess().getTaxtActionAssignment_0(), "rule__TextAction__TaxtActionAssignment_0");
-					put(grammarAccess.getClickAccess().getValAssignment(), "rule__Click__ValAssignment");
+					put(grammarAccess.getClickAccess().getActionAssignment(), "rule__Click__ActionAssignment");
 					put(grammarAccess.getIsCheckAccess().getValAssignment_1(), "rule__IsCheck__ValAssignment_1");
-					put(grammarAccess.getClearAccess().getValAssignment(), "rule__Clear__ValAssignment");
+					put(grammarAccess.getClearAccess().getActionAssignment(), "rule__Clear__ActionAssignment");
 					put(grammarAccess.getCheckValueAccess().getValueAssignment_1(), "rule__CheckValue__ValueAssignment_1");
 					put(grammarAccess.getFillAccess().getValueAssignment_1(), "rule__Fill__ValueAssignment_1");
 					put(grammarAccess.getIntValueAccess().getValueAssignment(), "rule__IntValue__ValueAssignment");

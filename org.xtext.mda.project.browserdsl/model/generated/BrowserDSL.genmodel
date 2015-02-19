@@ -14,7 +14,6 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="BrowserDSL.ecore#//OpenBrowser">
       <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//OpenBrowser/Chrome"/>
       <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//OpenBrowser/Firefox"/>
-      <genEnumLiterals ecoreEnumLiteral="BrowserDSL.ecore#//OpenBrowser/HtmlUnitDriver"/>
     </genEnums>
     <genClasses ecoreClass="BrowserDSL.ecore#//Program">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Program/browser"/>
@@ -40,7 +39,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Main/body"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Body">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Body/go"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Body/url"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Body/instructions"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//VariableReference">
@@ -86,29 +85,19 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//TextField/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//TextField/action"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//CheckboxAction">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//CheckboxAction/checkAction"/>
-    </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//LinkAction">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//LinkAction/linkAction"/>
-    </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//ButtonAction">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//ButtonAction/ButtonAction"/>
-    </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//ImageAction">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//ImageAction/ImageAction"/>
-    </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//TextAction">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//TextAction/taxtAction"/>
-    </genClasses>
+    <genClasses ecoreClass="BrowserDSL.ecore#//CheckboxAction"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//LinkAction"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//ButtonAction"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//ImageAction"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//TextAction"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//Click">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Click/val"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Click/action"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//IsCheck">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//IsCheck/val"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//Clear">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Clear/val"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//Clear/action"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//CheckValue">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//CheckValue/value"/>

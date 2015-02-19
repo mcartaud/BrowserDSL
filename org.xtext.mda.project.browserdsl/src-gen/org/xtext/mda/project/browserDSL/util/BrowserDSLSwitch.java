@@ -303,6 +303,10 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         Click click = (Click)theEObject;
         T result = caseClick(click);
+        if (result == null) result = caseCheckboxAction(click);
+        if (result == null) result = caseLinkAction(click);
+        if (result == null) result = caseButtonAction(click);
+        if (result == null) result = caseImageAction(click);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -327,6 +331,7 @@ public class BrowserDSLSwitch<T> extends Switch<T>
       {
         CheckValue checkValue = (CheckValue)theEObject;
         T result = caseCheckValue(checkValue);
+        if (result == null) result = caseTextAction(checkValue);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

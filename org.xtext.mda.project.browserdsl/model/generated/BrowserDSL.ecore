@@ -32,7 +32,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="#//Body" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Body">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="go" eType="#//GoTo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="url" eType="#//GoTo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
         eType="#//Instruction" containment="true"/>
   </eClassifiers>
@@ -93,36 +93,21 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//TextAction"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CheckboxAction">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="checkAction" eType="#//Click"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LinkAction">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linkAction" eType="#//Click"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ButtonAction">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ButtonAction" eType="#//Click"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ImageAction">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ImageAction" eType="#//Click"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TextAction">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="taxtAction" eType="#//CheckValue"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Click">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CheckboxAction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkAction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonAction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ImageAction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextAction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Click" eSuperTypes="#//CheckboxAction #//LinkAction #//ButtonAction #//ImageAction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IsCheck" eSuperTypes="#//CheckboxAction">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="#//Boolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Clear" eSuperTypes="#//CheckboxAction #//TextAction">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CheckValue">
+  <eClassifiers xsi:type="ecore:EClass" name="CheckValue" eSuperTypes="#//TextAction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//CallType"
         containment="true"/>
   </eClassifiers>
@@ -147,6 +132,5 @@
   <eClassifiers xsi:type="ecore:EEnum" name="OpenBrowser">
     <eLiterals name="Chrome" literal="Chrome"/>
     <eLiterals name="Firefox" value="1" literal="Firefox"/>
-    <eLiterals name="HtmlUnitDriver" value="2" literal="HtmlUnitDriver"/>
   </eClassifiers>
 </ecore:EPackage>
