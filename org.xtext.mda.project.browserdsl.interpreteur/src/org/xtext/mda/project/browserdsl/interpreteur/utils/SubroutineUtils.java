@@ -19,11 +19,11 @@ public class SubroutineUtils {
 		}
 	}
 	
-	public Map<String, Subroutine> getSubroutines() {
+	public static Map<String, Subroutine> getSubroutines() {
 		return subroutines;
 	}
 	
-	public Subroutine getSubroutines(String name) {
+	public static Subroutine getSubroutines(String name) {
 		return subroutines.get(name);
 	}
 	
