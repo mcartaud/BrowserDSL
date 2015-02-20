@@ -18,25 +18,24 @@ public class ComputePicture {
 	
 	public void executePictureAction() throws Exception{
 		String id = Utils.getElementId(picture.getId());
-		findGoodElement(id).click();
+		List<WebElement> elements = findGoodElements(id);
+		for (WebElement element : elements) {
+			element.click();
+		}
 	}
 	
-	private WebElement findGoodElement(String id) throws Exception {
-		List<WebElement> elements = BrowserDSL.getBrowser().findElements(By.tagName("img"));
-		for (WebElement element : elements) {
-			if(element.getAttribute("src").toLowerCase().trim().contains(id.toLowerCase())){
-				return element;
-			}
+	private List<WebElement> findGoodElements(String id) throws Exception {
+		
+		List<WebElement> elements = BrowserDSL.getBrowser().findElements(By.xpath("//img[contains(@src, \""+id+"\")]"));
+		if(elements.size()==0){
+			elements = BrowserDSL.getBrowser().findElements(By.xpath("//area[contains(@title, '"+id+"','i')]"));
 		}
 		
-		elements = BrowserDSL.getBrowser().findElements(By.xpath("//*[@shape='poly']"));
-		for (WebElement element : elements) {
-			if(element.getAttribute("title").toLowerCase().trim().contains(id.toLowerCase())){
-				return element;
-			}
+		if(elements.size()!=0){
+			return elements;
+		}else{
+			//TODO exception element not found
+			throw new Exception();
 		}
-		
-		//TODO image non trouvée
-		throw new Exception();
 	}
 }

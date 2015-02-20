@@ -25,7 +25,12 @@ public class BrowserDSL {
 		VariableUtils.setVariableList(program.getVariables());
 		
 		ComputeBody body = new ComputeBody(program.getMain().getBody());
-		body.executeMain();		
+		
+		body.executeMain();
+		
+		driver.close();
+		driver=null;
+
 	}
 
 	public static WebDriver getBrowser() {
