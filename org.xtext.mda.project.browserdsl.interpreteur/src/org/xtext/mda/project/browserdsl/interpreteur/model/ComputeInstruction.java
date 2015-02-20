@@ -26,7 +26,7 @@ public class ComputeInstruction {
 			} else if (instruction instanceof Button) {
 				new ComputeButton((Button) instruction).executeButtonAction();
 			} else if (instruction instanceof GoTo) {
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 				BrowserDSL.getBrowser().get(((GoTo) instruction).getUrl());
 			} else if (instruction instanceof FunctionCall) {
 				executeFunction((FunctionCall) instruction);

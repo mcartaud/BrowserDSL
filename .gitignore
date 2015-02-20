@@ -14,9 +14,6 @@ hs_err_pid*
 lib/
 
 org.xtext.mda.project.browserdsl/src-gen/
-org.xtext.mda.project.browserdsl/xtend-gen/
 org.xtext.mda.project.browserdsl.tests/src-gen/
-org.xtext.mda.project.browserdsl.tests/xtend-gen/
 org.xtext.mda.project.browserdsl.ui/src-gen/
-org.xtext.mda.project.browserdsl.ui/xtend-gen/
 
