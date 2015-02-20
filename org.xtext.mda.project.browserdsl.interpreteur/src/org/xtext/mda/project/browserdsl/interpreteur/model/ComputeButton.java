@@ -16,10 +16,11 @@ public class ComputeButton {
 		this.button = instruction;
 	}
 	
-	public void executeButtonAction() throws Exception {
+	public boolean executeButtonAction() throws Exception {
 		String id = Utils.getElementId(button.getId());
 		WebElement element = findGoodElement(id);
 		element.click();
+		return false;
 	}
 	
 	private WebElement findGoodElement(String id) {

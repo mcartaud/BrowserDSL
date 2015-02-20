@@ -16,12 +16,13 @@ public class ComputePicture {
 		this.picture = instruction;
 	}
 	
-	public void executePictureAction() throws Exception{
+	public boolean executePictureAction() throws Exception{
 		String id = Utils.getElementId(picture.getId());
 		List<WebElement> elements = findGoodElements(id);
 		for (WebElement element : elements) {
 			element.click();
 		}
+		return false;
 	}
 	
 	private List<WebElement> findGoodElements(String id) throws Exception {

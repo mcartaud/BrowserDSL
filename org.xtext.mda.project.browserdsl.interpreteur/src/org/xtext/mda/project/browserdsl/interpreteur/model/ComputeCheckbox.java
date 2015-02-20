@@ -20,10 +20,10 @@ public class ComputeCheckbox {
 		this.checkbox = instruction;
 	}
 	
-	public void executeCheckboxAction() throws Exception {
+	public boolean executeCheckboxAction() throws Exception {
 		String id = Utils.getElementId(checkbox.getId());
 		WebElement element = findGoodElement(id);
-		executeAction(element);
+		return executeAction(element);
 	}
 	
 	private WebElement findGoodElement(String id) {
@@ -36,7 +36,7 @@ public class ComputeCheckbox {
 		return null;
 	}
 	
-	private void executeAction(WebElement element) throws Exception {
+	private boolean executeAction(WebElement element) throws Exception {
 		CheckboxAction action = checkbox.getAction();
 		if (action instanceof Click) {
 			element.click();
@@ -45,6 +45,7 @@ public class ComputeCheckbox {
 		} else if (action instanceof Clear) {
 			element.clear();
 		}
+		return false;
 	}
 	
 }

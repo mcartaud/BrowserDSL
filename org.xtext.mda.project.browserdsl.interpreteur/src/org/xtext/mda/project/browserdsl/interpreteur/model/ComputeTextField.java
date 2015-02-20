@@ -20,10 +20,10 @@ public class ComputeTextField {
 		this.textField = instruction;	
 	}
 	
-	public void executeTextFieldAction() throws Exception {
+	public boolean executeTextFieldAction() throws Exception {
 		String id = Utils.getElementId(textField.getId());
 		WebElement element = findGoodElement(id);
-		executeAction(element);
+		return executeAction(element);
 	}
 
 	private WebElement findGoodElement(String id) {
@@ -36,7 +36,7 @@ public class ComputeTextField {
 		return null;
 	}
 	
-	private void executeAction(WebElement element) throws Exception {
+	private boolean executeAction(WebElement element) throws Exception {
 		TextAction action = textField.getAction();
 		if (action instanceof Fill) {
 			String value = Utils.getElementId(((Fill) action).getValue());
@@ -46,6 +46,7 @@ public class ComputeTextField {
 		} else if (action instanceof CheckValue) {
 			// TODO
 		}
+		return false;
 	}
 	
 }
