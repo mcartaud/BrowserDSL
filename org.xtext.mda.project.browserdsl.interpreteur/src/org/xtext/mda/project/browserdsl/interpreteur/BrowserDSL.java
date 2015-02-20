@@ -25,6 +25,8 @@ public class BrowserDSL {
 		
 		body.executeMain();
 		
+		driver.close();
+		driver=null;
 	}
 
 	public static WebDriver getBrowser() {

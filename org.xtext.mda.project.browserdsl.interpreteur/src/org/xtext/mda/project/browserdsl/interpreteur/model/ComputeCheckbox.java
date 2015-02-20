@@ -27,12 +27,12 @@ public class ComputeCheckbox {
 	}
 	
 	private WebElement findGoodElement(String id) {
-//		List<WebElement> elements = BrowserDSL.getBrowser().findElements(By.name(id));
-//		for (WebElement element : elements) {
-//			if (element.getAttribute("name").toLowerCase().trim().contains(id.toLowerCase())) {
-//				return element;
-//			}
-//		}	
+		List<WebElement> elements = BrowserDSL.getBrowser().findElements(By.name(id));
+		for (WebElement element : elements) {
+			if (element.getAttribute("name").toLowerCase().trim().contains(id.toLowerCase())) {
+				return element;
+			}
+		}	
 		return null;
 	}
 	
