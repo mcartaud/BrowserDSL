@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.xtext.mda.project.browserDSL.Checkbox;
 import org.xtext.mda.project.browserDSL.CheckboxAction;
+import org.xtext.mda.project.browserDSL.Checkboxs;
 import org.xtext.mda.project.browserDSL.Clear;
 import org.xtext.mda.project.browserDSL.Click;
 import org.xtext.mda.project.browserDSL.IsCheck;
@@ -14,9 +14,9 @@ import org.xtext.mda.project.browserdsl.interpreteur.utils.Utils;
 
 public class ComputeCheckbox {
 
-	private Checkbox checkbox;
+	private Checkboxs checkbox;
 	
-	public ComputeCheckbox(Checkbox instruction) {
+	public ComputeCheckbox(Checkboxs instruction) {
 		this.checkbox = instruction;
 	}
 	

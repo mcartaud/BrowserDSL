@@ -4,15 +4,15 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.xtext.mda.project.browserDSL.Picture;
+import org.xtext.mda.project.browserDSL.Pictures;
 import org.xtext.mda.project.browserdsl.interpreteur.BrowserDSL;
 import org.xtext.mda.project.browserdsl.interpreteur.utils.Utils;
 
 public class ComputePicture {
 	
-	private Picture picture;
+	private Pictures picture;
 	
-	public ComputePicture(Picture instruction) {
+	public ComputePicture(Pictures instruction) {
 		this.picture = instruction;
 	}
 	
