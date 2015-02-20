@@ -42,8 +42,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Body/url"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Body/instructions"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//VariableReference">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//VariableReference/varID"/>
+    <genClasses ecoreClass="BrowserDSL.ecore#//Variable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//Variable/varID"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//FunctionReference">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//FunctionReference/functionName"/>
@@ -53,7 +53,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserDSL.ecore#//FunctionCall/parameters"/>
     </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//CallType"/>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Variable"/>
     <genClasses ecoreClass="BrowserDSL.ecore#//VariableName">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//VariableName/name"/>
     </genClasses>

@@ -23,7 +23,7 @@ public class SubroutineUtils {
 		return subroutines;
 	}
 	
-	public static Subroutine getSubroutines(String name) {
+	public static Subroutine getSubroutine(String name) {
 		return subroutines.get(name);
 	}
 	

@@ -1,6 +1,7 @@
 package org.xtext.mda.project.browserdsl.interpreteur.utils;
 
 import org.xtext.mda.project.browserDSL.CallType;
+import org.xtext.mda.project.browserDSL.Declaration;
 import org.xtext.mda.project.browserDSL.StringValue;
 import org.xtext.mda.project.browserDSL.Variable;
 
@@ -10,12 +11,23 @@ public class Utils {
 		if (callType instanceof StringValue) {
 			return ((StringValue) callType).getValue();
 		} else if (callType instanceof Variable) {
-			// TODO récupérer la valeur d'une variable et renvoyer une exception si c'est pas du bon type
+			String varName = ((Variable) callType).getVarID().getName();
+			String variableName = ParameterUtils.getVariable(varName);
+			if (variableName != null) {
+				return variableName;
+			}
+			Declaration variable = VariableUtils.getVariable(varName);
+			if (variable.getValue() instanceof StringValue) {
+				Declaration declaration = (Declaration) variable;
+				return ((StringValue) declaration.getValue()).getValue();
+			} else {
+				// TODO throw exception car pas le bon type
+				throw new Exception();
+			}
 		} else {
 			// TODO throw exception car pas le bon type
 			throw new Exception();
 		}
-		return "";
 	}
 	
 }

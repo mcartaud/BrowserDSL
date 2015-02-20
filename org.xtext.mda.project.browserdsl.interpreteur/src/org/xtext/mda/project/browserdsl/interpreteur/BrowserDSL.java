@@ -8,6 +8,7 @@ import org.xtext.mda.project.browserDSL.OpenBrowser;
 import org.xtext.mda.project.browserDSL.Program;
 import org.xtext.mda.project.browserdsl.interpreteur.model.ComputeBody;
 import org.xtext.mda.project.browserdsl.interpreteur.utils.SubroutineUtils;
+import org.xtext.mda.project.browserdsl.interpreteur.utils.VariableUtils;
 
 public class BrowserDSL {
 
@@ -20,11 +21,10 @@ public class BrowserDSL {
 	public static void start(Program pProgram) {
 		program = pProgram;
 		SubroutineUtils.setSubroutineList(program.getSubroutines());
+		VariableUtils.setVariableList(program.getVariables());
 		
 		ComputeBody body = new ComputeBody(program.getMain().getBody());
-		
-		body.executeMain();
-		
+		body.executeMain();		
 	}
 
 	public static WebDriver getBrowser() {
