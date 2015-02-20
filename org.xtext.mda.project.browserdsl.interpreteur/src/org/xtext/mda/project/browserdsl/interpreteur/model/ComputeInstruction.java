@@ -11,6 +11,7 @@ import org.xtext.mda.project.browserDSL.Picture;
 import org.xtext.mda.project.browserDSL.Subroutine;
 import org.xtext.mda.project.browserDSL.TextField;
 import org.xtext.mda.project.browserdsl.interpreteur.BrowserDSL;
+import org.xtext.mda.project.browserdsl.interpreteur.utils.ParameterUtils;
 import org.xtext.mda.project.browserdsl.interpreteur.utils.SubroutineUtils;
 
 public class ComputeInstruction {
@@ -36,14 +37,20 @@ public class ComputeInstruction {
 		}
 	}
 	
-	private void executeFunction(FunctionCall instruction) {
+	private void executeFunction(FunctionCall instruction) throws Exception {
 		FunctionCall call = (FunctionCall) instruction;
+		
 		String functionName = call.getFunction().getFunctionName().getName();
-		Subroutine subroutine = SubroutineUtils.getSubroutines(functionName);
+		Subroutine subroutine = SubroutineUtils.getSubroutine(functionName);
+		
+		ParameterUtils.setParameters(subroutine.getHead().getNameParameters(), call.getParameters());
+		
 		List<Instruction> instructions = subroutine.getBody().getInstructions();
 		for (Instruction instruction2 : instructions) {
 			executeInstruction(instruction2);
 		}
+		
+		ParameterUtils.removeParameters(subroutine.getHead().getNameParameters());
 	}
 	
 }

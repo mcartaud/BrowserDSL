@@ -13,10 +13,6 @@ Subroutine:
 	'sub ' head=Head body=SubBody
 ;
 
-SubBody:
-	'{' instructions+=Instruction ';' (instructions+=Instruction ';')* '}'
-;
-
 Head:
 	(name=FunctionName '()')
 	| (name=FunctionName '(var ' nameParameters+=VariableName (', var ' nameParameters+=VariableName)* ')')
@@ -24,6 +20,10 @@ Head:
 
 FunctionName:
 	name=STRING
+;
+
+SubBody:
+	'{' instructions+=Instruction ';' (instructions+=Instruction ';')* '}'
 ;
 
 Main:
@@ -37,7 +37,7 @@ Body:
 	'}'
 ;
 
-VariableReference:
+Variable:
 	varID=[VariableName]
 ;
 
@@ -52,10 +52,6 @@ FunctionCall:
 
 CallType:
 	Values|Variable
-;
-
-Variable:
-	VariableReference
 ;
 
 VariableName:
