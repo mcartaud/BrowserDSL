@@ -63,31 +63,41 @@ Declaration:
 ;
 
 Instruction:
-	Link|Button|Picture|TextField|Checkbox|GoTo|FunctionCall
+	Links|Buttons|Pictures|TextFields|Checkboxs|GoTo|FunctionCall|If
+;
+
+Condition:
+	Links|Buttons|Pictures|TextFields|Checkboxs|GoTo|FunctionCall
+;
+
+If:
+	'if( ' condition=Condition ' ) {'
+		instructions+=Instruction';' ( instructions+=Instruction ';')*
+	'}'
 ;
 
 GoTo:
 	'goTo(' url=URL ')'
 ;
 
-Checkbox:
-	'checkbox(' id=(StringValue|Variable) ')' action=CheckboxAction
+Checkboxs:
+	'checkboxs(' id=(StringValue|Variable) ')' action=CheckboxAction
 ;
 
-Link:
-	'link(' id=(StringValue|Variable) ')' action=LinkAction
+Links:
+	'links(' id=(StringValue|Variable) ')' action=LinkAction
 ;
 
-Button:
-	'button(' id=(StringValue|Variable) ')' action=ButtonAction
+Buttons:
+	'buttons(' id=(StringValue|Variable) ')' action=ButtonAction
 ;
 
-Picture:
-	'picture(' id=(StringValue|Variable) ')' action=PictureAction
+Pictures:
+	'pictures(' id=(StringValue|Variable) ')' action=PictureAction
 ;
 
-TextField:
-	'textField(' id=(StringValue|Variable) ')' action=TextAction
+TextFields:
+	'textFields(' id=(StringValue|Variable) ')' action=TextAction
 ;
 
 CheckboxAction:

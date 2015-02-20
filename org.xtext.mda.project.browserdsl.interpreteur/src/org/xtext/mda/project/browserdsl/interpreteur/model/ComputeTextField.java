@@ -8,15 +8,15 @@ import org.xtext.mda.project.browserDSL.CheckValue;
 import org.xtext.mda.project.browserDSL.Clear;
 import org.xtext.mda.project.browserDSL.Fill;
 import org.xtext.mda.project.browserDSL.TextAction;
-import org.xtext.mda.project.browserDSL.TextField;
+import org.xtext.mda.project.browserDSL.TextFields;
 import org.xtext.mda.project.browserdsl.interpreteur.BrowserDSL;
 import org.xtext.mda.project.browserdsl.interpreteur.utils.Utils;
 
 public class ComputeTextField {
 
-	private TextField textField;
+	private TextFields textField;
 	
-	public ComputeTextField(TextField instruction) {
+	public ComputeTextField(TextFields instruction) {
 		this.textField = instruction;	
 	}
 	

@@ -15,10 +15,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="#//SubBody"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SubBody">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
-        eType="#//Instruction" containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Head">
     <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//FunctionName"
         containment="true"/>
@@ -27,6 +23,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FunctionName">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubBody">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
+        eType="#//Instruction" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Main">
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="#//Body" containment="true"/>
@@ -42,7 +42,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="FunctionReference">
     <eStructuralFeatures xsi:type="ecore:EReference" name="functionName" eType="#//FunctionName"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//Instruction">
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//Instruction #//Condition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="function" eType="#//FunctionReference"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
@@ -59,34 +59,41 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Instruction"/>
-  <eClassifiers xsi:type="ecore:EClass" name="GoTo" eSuperTypes="#//Instruction">
+  <eClassifiers xsi:type="ecore:EClass" name="Condition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="If" eSuperTypes="#//Instruction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//Condition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
+        eType="#//Instruction" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GoTo" eSuperTypes="#//Instruction #//Condition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Checkbox" eSuperTypes="#//Instruction">
+  <eClassifiers xsi:type="ecore:EClass" name="Checkboxs" eSuperTypes="#//Instruction #//Condition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="id" eType="#//CallType"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//CheckboxAction"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//Instruction">
+  <eClassifiers xsi:type="ecore:EClass" name="Links" eSuperTypes="#//Instruction #//Condition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="id" eType="#//CallType"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//LinkAction"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//Instruction">
+  <eClassifiers xsi:type="ecore:EClass" name="Buttons" eSuperTypes="#//Instruction #//Condition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="id" eType="#//CallType"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//ButtonAction"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Picture" eSuperTypes="#//Instruction">
+  <eClassifiers xsi:type="ecore:EClass" name="Pictures" eSuperTypes="#//Instruction #//Condition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="id" eType="#//CallType"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//PictureAction"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TextField" eSuperTypes="#//Instruction">
+  <eClassifiers xsi:type="ecore:EClass" name="TextFields" eSuperTypes="#//Instruction #//Condition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="id" eType="#//CallType"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//TextAction"

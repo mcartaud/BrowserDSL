@@ -4,15 +4,15 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.xtext.mda.project.browserDSL.Button;
+import org.xtext.mda.project.browserDSL.Buttons;
 import org.xtext.mda.project.browserdsl.interpreteur.BrowserDSL;
 import org.xtext.mda.project.browserdsl.interpreteur.utils.Utils;
 
 public class ComputeButton {
 
-	private Button button;
+	private Buttons button;
 	
-	public ComputeButton(Button instruction) {
+	public ComputeButton(Buttons instruction) {
 		this.button = instruction;
 	}
 	
