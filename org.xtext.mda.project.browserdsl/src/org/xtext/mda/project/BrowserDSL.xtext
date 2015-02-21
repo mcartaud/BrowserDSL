@@ -63,11 +63,11 @@ Declaration:
 ;
 
 Instruction:
-	Links|Buttons|Pictures|TextFields|Checkboxs|GoTo|FunctionCall|If
+	Condition|If|FunctionCall|GoTo
 ;
 
 Condition:
-	Links|Buttons|Pictures|TextFields|Checkboxs|GoTo|FunctionCall
+	Links|Buttons|Pictures|TextFields|Checkboxs
 ;
 
 If:

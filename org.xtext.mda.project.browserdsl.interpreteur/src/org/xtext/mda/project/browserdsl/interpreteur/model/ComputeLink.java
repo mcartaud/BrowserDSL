@@ -14,11 +14,12 @@ public class ComputeLink {
 		this.link = instruction;
 	}
 	
-	public void executeLinkAction() throws Exception{
+	public boolean executeLinkAction() throws Exception{
 		String id = Utils.getElementId(link.getId());
 		WebElement element = BrowserDSL.getBrowser()
 				.findElement(ByLinkText.linkText(id));
 		element.click();
+		return false;
 	}
 	
 }

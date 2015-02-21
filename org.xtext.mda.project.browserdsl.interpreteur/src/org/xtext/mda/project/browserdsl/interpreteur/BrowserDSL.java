@@ -21,7 +21,6 @@ public class BrowserDSL {
 	public static void start(Program pProgram) {
 		program = pProgram;
 		SubroutineUtils.setSubroutineList(program.getSubroutines());
-		System.out.println(System.getenv("xsl:version"));
 		VariableUtils.setVariableList(program.getVariables());
 		
 		ComputeBody body = new ComputeBody(program.getMain().getBody());

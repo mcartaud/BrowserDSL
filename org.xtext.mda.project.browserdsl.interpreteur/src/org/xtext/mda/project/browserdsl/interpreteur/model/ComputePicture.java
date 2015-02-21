@@ -19,10 +19,11 @@ public class ComputePicture {
 		this.pictures = instruction;
 	}
 
-	public void executePictureAction() throws Exception {
+	public boolean executePictureAction() throws Exception{
 		String id = Utils.getElementId(pictures.getId());
 		List<WebElement> elements = findGoodElements(id);
 		executeAction(elements);
+		return false;
 	}
 
 	private List<WebElement> findGoodElements(String id) throws Exception {
