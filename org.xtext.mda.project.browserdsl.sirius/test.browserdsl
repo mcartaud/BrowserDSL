@@ -1,0 +1,20 @@
+browser Firefox;
+var "username" = "mcarta12";
+sub "selectSchool"(){
+	pictures("nantes").click();
+	buttons("select").click();
+	buttons("save and continue to your home organization").click();
+}
+sub "connect"(var "user", var "pass"){
+	textFields("username").fill(user);
+	textFields("password").fill(pass);
+}
+main{
+	goTo(http://campus.mines-nantes.fr);
+	links("Login").click();
+	pictures("CZAM").click();
+	selectSchool();
+	connect(username, "pass01");
+	buttons("connexion").click();
+	goTo(https://nte.gemtech.fr/campus/course/view.php?id=1415);
+}
