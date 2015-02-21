@@ -8,18 +8,7 @@
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_ADLhULnTEeSQHqAuDrr0zw" name="new scenario">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_ADzzcLnTEeSQHqAuDrr0zw" source="GMF_DIAGRAMS">
         <data xmi:type="notation:Diagram" xmi:id="_ADzzcbnTEeSQHqAuDrr0zw" type="Sirius" element="_ADLhULnTEeSQHqAuDrr0zw" measurementUnit="Pixel">
-          <children xmi:type="notation:Node" xmi:id="_AEGHULnTEeSQHqAuDrr0zw" type="2001" element="_ADLhUbnTEeSQHqAuDrr0zw">
-            <children xmi:type="notation:Node" xmi:id="_AEcsoLnTEeSQHqAuDrr0zw" type="5002">
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_AEcsobnTEeSQHqAuDrr0zw" y="5"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_D1ac0LnTEeSQHqAuDrr0zw" type="3016" element="_D1YnoLnTEeSQHqAuDrr0zw">
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_D1ac0bnTEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_D1ac0rnTEeSQHqAuDrr0zw"/>
-            </children>
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_AEGuYLnTEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AEGuYbnTEeSQHqAuDrr0zw" width="20" height="20"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_XvnhcLnTEeSQHqAuDrr0zw" type="2001" element="_XvlsQLnTEeSQHqAuDrr0zw">
+          <children xmi:type="notation:Node" xmi:id="_XvnhcLnTEeSQHqAuDrr0zw" visible="false" type="2001" element="_XvlsQLnTEeSQHqAuDrr0zw">
             <children xmi:type="notation:Node" xmi:id="_XvovkLnTEeSQHqAuDrr0zw" type="5002">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_XvovkbnTEeSQHqAuDrr0zw" y="5"/>
             </children>
@@ -28,9 +17,9 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_asIV4rnTEeSQHqAuDrr0zw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_XvnhcbnTEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XvnhcrnTEeSQHqAuDrr0zw" x="126" y="63" width="20" height="20"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XvnhcrnTEeSQHqAuDrr0zw" x="224" y="63" width="20" height="20"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_XvovkrnTEeSQHqAuDrr0zw" type="2001" element="_XvmTULnTEeSQHqAuDrr0zw">
+          <children xmi:type="notation:Node" xmi:id="_XvovkrnTEeSQHqAuDrr0zw" visible="false" type="2001" element="_XvmTULnTEeSQHqAuDrr0zw">
             <children xmi:type="notation:Node" xmi:id="_XvpWoLnTEeSQHqAuDrr0zw" type="5002">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_XvpWobnTEeSQHqAuDrr0zw" y="5"/>
             </children>
@@ -54,27 +43,203 @@
               <children xmi:type="notation:Node" xmi:id="_BYBicLnVEeSQHqAuDrr0zw" type="3010" element="_BX9RALnVEeSQHqAuDrr0zw">
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_BYBicbnVEeSQHqAuDrr0zw"/>
               </children>
+              <children xmi:type="notation:Node" xmi:id="_E_DeELnWEeSQHqAuDrr0zw" type="3010" element="_E-9XcLnWEeSQHqAuDrr0zw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_E_DeEbnWEeSQHqAuDrr0zw"/>
+              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_F1XF4bnUEeSQHqAuDrr0zw"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_F1XF4rnUEeSQHqAuDrr0zw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_F1UpobnUEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F1UpornUEeSQHqAuDrr0zw" x="27" y="144" width="339" height="174"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F1UpornUEeSQHqAuDrr0zw" x="-103" y="324" width="339" height="174"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_uujToLnZEeSQHqAuDrr0zw" visible="false" type="2003" element="_uuebILnZEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_uuj6sLnZEeSQHqAuDrr0zw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_uuj6sbnZEeSQHqAuDrr0zw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_sWjFALnaEeSQHqAuDrr0zw" visible="false" type="3010" element="_sWdlcLnaEeSQHqAuDrr0zw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_sWjFAbnaEeSQHqAuDrr0zw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_4mGyILnaEeSQHqAuDrr0zw" visible="false" type="3010" element="_4mFkALnaEeSQHqAuDrr0zw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_4mGyIbnaEeSQHqAuDrr0zw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_CD5iQLnbEeSQHqAuDrr0zw" visible="false" type="3010" element="_CD4UILnbEeSQHqAuDrr0zw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_CD5iQbnbEeSQHqAuDrr0zw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_uuj6srnZEeSQHqAuDrr0zw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_uuj6s7nZEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_uujTobnZEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uujTornZEeSQHqAuDrr0zw"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_R_SWALndEeSQHqAuDrr0zw" visible="false" type="2003" element="_Xc1R4LnfEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_R_S9ELndEeSQHqAuDrr0zw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_R_S9EbndEeSQHqAuDrr0zw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_Xc90wLnfEeSQHqAuDrr0zw" visible="false" type="3010" element="_Xc3uILnfEeSQHqAuDrr0zw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_Xc90wbnfEeSQHqAuDrr0zw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_R_S9ErndEeSQHqAuDrr0zw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_R_S9E7ndEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_R_SWAbndEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_SWArndEeSQHqAuDrr0zw" x="99" y="50"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_R_S9FLndEeSQHqAuDrr0zw" visible="false" type="2003" element="_Xc3HFbnfEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_R_S9F7ndEeSQHqAuDrr0zw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_R_S9GLndEeSQHqAuDrr0zw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_Xc90wrnfEeSQHqAuDrr0zw" visible="false" type="3010" element="_Xc48RLnfEeSQHqAuDrr0zw">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_Xc90w7nfEeSQHqAuDrr0zw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_R_S9GbndEeSQHqAuDrr0zw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_R_S9GrndEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_R_S9FbndEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_S9FrndEeSQHqAuDrr0zw" x="56" y="324"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_eY5FELnfEeSQHqAuDrr0zw" visible="false" type="2001" element="_eY1asLnfEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_eY5sILnfEeSQHqAuDrr0zw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_eY5sIbnfEeSQHqAuDrr0zw" x="-19" y="65"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_jvNCcLnfEeSQHqAuDrr0zw" type="3003" element="_jvJ_ILnfEeSQHqAuDrr0zw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_jvNCcbnfEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jvNCcrnfEeSQHqAuDrr0zw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_p9ctYLnfEeSQHqAuDrr0zw" visible="false" type="3001" element="_p9ZDALnfEeSQHqAuDrr0zw">
+              <children xmi:type="notation:Node" xmi:id="_p9dUcLnfEeSQHqAuDrr0zw" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_p9dUcbnfEeSQHqAuDrr0zw" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_zurW4LnfEeSQHqAuDrr0zw" type="3002" element="_zuoTkLnfEeSQHqAuDrr0zw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_zurW4bnfEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zurW4rnfEeSQHqAuDrr0zw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_p9ctYbnfEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p9ctYrnfEeSQHqAuDrr0zw" x="47" width="20" height="20"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_eY5FEbnfEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eY5FErnfEeSQHqAuDrr0zw" x="38" y="90" width="55" height="64"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_lfzA4LngEeSQHqAuDrr0zw" visible="false" type="2001" element="_lfuIYLngEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_lf2EMLngEeSQHqAuDrr0zw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_lf2EMbngEeSQHqAuDrr0zw" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_lf2EMrngEeSQHqAuDrr0zw" visible="false" type="3001" element="_lfvWgLngEeSQHqAuDrr0zw">
+              <children xmi:type="notation:Node" xmi:id="_lf2ENbngEeSQHqAuDrr0zw" visible="false" type="5001">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_lf2ENrngEeSQHqAuDrr0zw" x="-1"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_lf2rQ7ngEeSQHqAuDrr0zw" type="3002" element="_lfvWgbngEeSQHqAuDrr0zw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_lf2rRLngEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lf2rRbngEeSQHqAuDrr0zw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_lf2EM7ngEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lf2ENLngEeSQHqAuDrr0zw" x="22" width="30" height="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_lf2rQLngEeSQHqAuDrr0zw" type="3003" element="_lfuvcLngEeSQHqAuDrr0zw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_lf2rQbngEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lf2rQrngEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_lfzA4bngEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lfzA4rngEeSQHqAuDrr0zw" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_1PSYkLngEeSQHqAuDrr0zw" visible="false" type="2002" element="_1PPVQLngEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_1PSYk7ngEeSQHqAuDrr0zw" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_1PSYlLngEeSQHqAuDrr0zw" type="7001">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_1PSYlbngEeSQHqAuDrr0zw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_1PSYlrngEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_1PSYkbngEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1PSYkrngEeSQHqAuDrr0zw" x="-171" y="-72"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_1PS_oLngEeSQHqAuDrr0zw" visible="false" type="2002" element="_1PP8ULngEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_1PS_o7ngEeSQHqAuDrr0zw" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_1PS_pLngEeSQHqAuDrr0zw" type="7001">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_1PS_pbngEeSQHqAuDrr0zw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_1PS_prngEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_1PS_obngEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1PS_orngEeSQHqAuDrr0zw" x="-72" y="-72"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_2ODG4LngEeSQHqAuDrr0zw" visible="false" type="2002" element="_2OBRsLngEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_2ODG47ngEeSQHqAuDrr0zw" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_2ODG5LngEeSQHqAuDrr0zw" type="7001">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_2ODG5bngEeSQHqAuDrr0zw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_2ODG5rngEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_2ODG4bngEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2ODG4rngEeSQHqAuDrr0zw" x="-171" y="-72"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_2ODt8LngEeSQHqAuDrr0zw" visible="false" type="2002" element="_2OB4wLngEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_2ODt87ngEeSQHqAuDrr0zw" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_2ODt9LngEeSQHqAuDrr0zw" type="7001">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_2ODt9bngEeSQHqAuDrr0zw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_2ODt9rngEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_2ODt8bngEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2ODt8rngEeSQHqAuDrr0zw" x="-149" y="54"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_GrslELnhEeSQHqAuDrr0zw" visible="false" type="2001" element="_Grqv4LnhEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_GrslE7nhEeSQHqAuDrr0zw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_GrslFLnhEeSQHqAuDrr0zw" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_K-_mQLnhEeSQHqAuDrr0zw" type="3003" element="_K-9KALnhEeSQHqAuDrr0zw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_K-_mQbnhEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_K-_mQrnhEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_GrslEbnhEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GrslErnhEeSQHqAuDrr0zw" x="56" y="-72" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_GrslFbnhEeSQHqAuDrr0zw" visible="false" type="2001" element="_Grqv4bnhEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_GrslGLnhEeSQHqAuDrr0zw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_GrslGbnhEeSQHqAuDrr0zw" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_K_ANULnhEeSQHqAuDrr0zw" type="3003" element="_K-9KBLnhEeSQHqAuDrr0zw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_K_ANUbnhEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_K_ANUrnhEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_GrslFrnhEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GrslF7nhEeSQHqAuDrr0zw" x="144" y="-72" width="20" height="20"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_VMmCsLnhEeSQHqAuDrr0zw" visible="false" type="2001" element="_VMf8ELnhEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_VMmCs7nhEeSQHqAuDrr0zw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_VMmCtLnhEeSQHqAuDrr0zw" x="31"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_VMn34LnhEeSQHqAuDrr0zw" type="3003" element="_VMf8EbnhEeSQHqAuDrr0zw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_VMn34bnhEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VMn34rnhEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_VMmCsbnhEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VMmCsrnhEeSQHqAuDrr0zw" x="-45" y="54" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_VMmpwLnhEeSQHqAuDrr0zw" visible="false" type="2001" element="_VMf8FbnhEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_VMnQ0LnhEeSQHqAuDrr0zw" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_VMnQ0bnhEeSQHqAuDrr0zw" x="31"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_VMn347nhEeSQHqAuDrr0zw" type="3003" element="_VMf8FrnhEeSQHqAuDrr0zw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_VMn35LnhEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VMn35bnhEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_VMmpwbnhEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VMmpwrnhEeSQHqAuDrr0zw" x="90" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_WHHKMLnhEeSQHqAuDrr0zw" type="2002" element="_WHDf0LnhEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_WHKNgLnhEeSQHqAuDrr0zw" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_WHKNgbnhEeSQHqAuDrr0zw" type="7001">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_WHKNgrnhEeSQHqAuDrr0zw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_WHKNg7nhEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_WHHKMbnhEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WHHKMrnhEeSQHqAuDrr0zw" x="63" y="153"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_WHKNhLnhEeSQHqAuDrr0zw" type="2002" element="_WHEt8LnhEeSQHqAuDrr0zw">
+            <children xmi:type="notation:Node" xmi:id="_WHKNh7nhEeSQHqAuDrr0zw" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_WHKNiLnhEeSQHqAuDrr0zw" type="7001">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_WHKNibnhEeSQHqAuDrr0zw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_WHKNirnhEeSQHqAuDrr0zw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_WHKNhbnhEeSQHqAuDrr0zw" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WHKNhrnhEeSQHqAuDrr0zw" x="351" y="108"/>
           </children>
           <styles xmi:type="notation:DiagramStyle" xmi:id="_ADzzcrnTEeSQHqAuDrr0zw"/>
         </data>
       </ownedAnnotationEntries>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_ADLhUbnTEeSQHqAuDrr0zw" name="username" width="3" height="3" resizeKind="NSEW">
-        <target xmi:type="browserDSL:Declaration" href="test.browserdsl#//@variables.0"/>
-        <semanticElements xmi:type="browserDSL:Declaration" href="test.browserdsl#//@variables.0"/>
-        <ownedStyle xmi:type="diagram:Ellipse" xmi:id="_D1YnoLnTEeSQHqAuDrr0zw">
-          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_D1YnobnTEeSQHqAuDrr0zw"/>
-          <description xmi:type="style:EllipseNodeDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@nodeMappings[name='Variables']/@style"/>
-          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_D1YnornTEeSQHqAuDrr0zw"/>
-          <color xmi:type="viewpoint:RGBValues" xmi:id="_D1Yno7nTEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@nodeMappings[name='Variables']"/>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_XvlsQLnTEeSQHqAuDrr0zw" name="selectSchool" width="3" height="3" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_XvlsQLnTEeSQHqAuDrr0zw" name="selectSchool" visible="false" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.0"/>
         <semanticElements xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -88,7 +253,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@nodeMappings[name='SubFunctions']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_XvmTULnTEeSQHqAuDrr0zw" name="connect" width="3" height="3" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_XvmTULnTEeSQHqAuDrr0zw" name="connect" visible="false" width="3" height="3" resizeKind="NSEW">
         <target xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.1"/>
         <semanticElements xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.1"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -132,10 +297,281 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Main']/@subNodeMappings[name='MandatoryGoto']"/>
         </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_E-9XcLnWEeSQHqAuDrr0zw" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@19fddda6 (value: Login)">
+          <target xmi:type="browserDSL:Links" href="test.browserdsl#//@main/@body/@instructions.0"/>
+          <semanticElements xmi:type="browserDSL:Links" href="test.browserdsl#//@main/@body/@instructions.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_E_CP8LnWEeSQHqAuDrr0zw">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_E_CP8bnWEeSQHqAuDrr0zw"/>
+            <description xmi:type="style:SquareDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Main']/@subNodeMappings[name='Links']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_E_CP8rnWEeSQHqAuDrr0zw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_E_CP87nWEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Main']/@subNodeMappings[name='Links']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_uuebILnZEeSQHqAuDrr0zw" name="Variables" visible="false">
+        <target xmi:type="browserDSL:Declaration" href="test.browserdsl#//@variables.0"/>
+        <semanticElements xmi:type="browserDSL:Declaration" href="test.browserdsl#//@variables.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_uufCMLnZEeSQHqAuDrr0zw">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_uufCMbnZEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Variables']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_uufCMrnZEeSQHqAuDrr0zw"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_uufCM7nZEeSQHqAuDrr0zw" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_uufCNLnZEeSQHqAuDrr0zw" red="255" green="245" blue="181"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Variables']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_sWdlcLnaEeSQHqAuDrr0zw" name="username" visible="false">
+          <target xmi:type="browserDSL:VariableName" href="test.browserdsl#//@variables.0/@variable"/>
+          <semanticElements xmi:type="browserDSL:VariableName" href="test.browserdsl#//@variables.0/@variable"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_sWh24LnaEeSQHqAuDrr0zw">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_sWh24bnaEeSQHqAuDrr0zw"/>
+            <description xmi:type="style:SquareDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Variables']/@subNodeMappings[name='VariableName']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_sWh24rnaEeSQHqAuDrr0zw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_sWh247naEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Variables']/@subNodeMappings[name='VariableName']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_4mFkALnaEeSQHqAuDrr0zw" visible="false">
+          <target xmi:type="browserDSL:StringValue" href="test.browserdsl#//@variables.0/@value"/>
+          <semanticElements xmi:type="browserDSL:StringValue" href="test.browserdsl#//@variables.0/@value"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_6CxkcLnaEeSQHqAuDrr0zw">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_6CxkcbnaEeSQHqAuDrr0zw"/>
+            <description xmi:type="style:SquareDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Variables']/@subNodeMappings[name='']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_6CxkcrnaEeSQHqAuDrr0zw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_6Cxkc7naEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Variables']/@subNodeMappings[name='']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_CD4UILnbEeSQHqAuDrr0zw" visible="false">
+          <target xmi:type="browserDSL:StringValue" href="test.browserdsl#//@variables.0/@value"/>
+          <semanticElements xmi:type="browserDSL:StringValue" href="test.browserdsl#//@variables.0/@value"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_CD47MLnbEeSQHqAuDrr0zw">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_CD47MbnbEeSQHqAuDrr0zw"/>
+            <description xmi:type="style:SquareDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Variables']/@subNodeMappings[name='Values']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_CD47MrnbEeSQHqAuDrr0zw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_CD47M7nbEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Variables']/@subNodeMappings[name='Values']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Xc1R4LnfEeSQHqAuDrr0zw" name="username" visible="false">
+        <target xmi:type="browserDSL:VariableName" href="test.browserdsl#//@variables.0/@variable"/>
+        <semanticElements xmi:type="browserDSL:VariableName" href="test.browserdsl#//@variables.0/@variable"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_Xc3HELnfEeSQHqAuDrr0zw">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Xc3HEbnfEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='var']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_Xc3HErnfEeSQHqAuDrr0zw"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Xc3HE7nfEeSQHqAuDrr0zw" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Xc3HFLnfEeSQHqAuDrr0zw" red="255" green="245" blue="181"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='var']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Xc3uILnfEeSQHqAuDrr0zw" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@745033ba (value: mcarta12)" visible="false">
+          <target xmi:type="browserDSL:StringValue" href="test.browserdsl#//@variables.0/@value"/>
+          <semanticElements xmi:type="browserDSL:StringValue" href="test.browserdsl#//@variables.0/@value"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_Xc48QLnfEeSQHqAuDrr0zw">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Xc48QbnfEeSQHqAuDrr0zw"/>
+            <description xmi:type="style:SquareDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='var']/@subNodeMappings[name='VariableName']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_Xc48QrnfEeSQHqAuDrr0zw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_Xc48Q7nfEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='var']/@subNodeMappings[name='VariableName']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Xc3HFbnfEeSQHqAuDrr0zw" name="titi" visible="false">
+        <target xmi:type="browserDSL:VariableName" href="test.browserdsl#//@variables.1/@variable"/>
+        <semanticElements xmi:type="browserDSL:VariableName" href="test.browserdsl#//@variables.1/@variable"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_Xc3HFrnfEeSQHqAuDrr0zw">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Xc3HF7nfEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='var']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_Xc3HGLnfEeSQHqAuDrr0zw"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Xc3HGbnfEeSQHqAuDrr0zw" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Xc3HGrnfEeSQHqAuDrr0zw" red="255" green="245" blue="181"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='var']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Xc48RLnfEeSQHqAuDrr0zw" name="org.xtext.mda.project.browserDSL.impl.IntValueImpl@652b84a0 (value: 8)" visible="false">
+          <target xmi:type="browserDSL:IntValue" href="test.browserdsl#//@variables.1/@value"/>
+          <semanticElements xmi:type="browserDSL:IntValue" href="test.browserdsl#//@variables.1/@value"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_Xc6xcLnfEeSQHqAuDrr0zw">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_Xc6xcbnfEeSQHqAuDrr0zw"/>
+            <description xmi:type="style:SquareDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='var']/@subNodeMappings[name='VariableName']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_Xc6xcrnfEeSQHqAuDrr0zw"/>
+            <color xmi:type="viewpoint:RGBValues" xmi:id="_Xc6xc7nfEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='var']/@subNodeMappings[name='VariableName']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_eY1asLnfEeSQHqAuDrr0zw" name="username" visible="false" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="browserDSL:VariableName" href="test.browserdsl#//@variables.0/@variable"/>
+        <semanticElements xmi:type="browserDSL:VariableName" href="test.browserdsl#//@variables.0/@variable"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_p9ZDALnfEeSQHqAuDrr0zw" name="Value" visible="false" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="browserDSL:StringValue" href="test.browserdsl#//@variables.0/@value"/>
+          <semanticElements xmi:type="browserDSL:StringValue" href="test.browserdsl#//@variables.0/@value"/>
+          <ownedStyle xmi:type="diagram:Dot" xmi:id="_zuoTkLnfEeSQHqAuDrr0zw" showIcon="false" hideLabelByDefault="true">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_zuoTkbnfEeSQHqAuDrr0zw"/>
+            <description xmi:type="style:DotDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@nodeMappings[name='Variables']/@borderedNodeMappings[name='Value']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_zuoTkrnfEeSQHqAuDrr0zw"/>
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_zuoTk7nfEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@nodeMappings[name='Variables']/@borderedNodeMappings[name='Value']"/>
+        </ownedBorderedNodes>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_jvJ_ILnfEeSQHqAuDrr0zw" showIcon="false" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_jvJ_IbnfEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:SquareDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@nodeMappings[name='Variables']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_jvJ_IrnfEeSQHqAuDrr0zw"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_6LIc8LnfEeSQHqAuDrr0zw" red="252" green="233" blue="79"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@nodeMappings[name='Variables']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_lfuIYLngEeSQHqAuDrr0zw" name="username" visible="false" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="browserDSL:VariableName" href="test.browserdsl#//@variables.0/@variable"/>
+        <semanticElements xmi:type="browserDSL:VariableName" href="test.browserdsl#//@variables.0/@variable"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" xmi:id="_lfvWgLngEeSQHqAuDrr0zw" visible="false" width="3" height="3" resizeKind="NSEW">
+          <target xmi:type="browserDSL:StringValue" href="test.browserdsl#//@variables.0/@value"/>
+          <semanticElements xmi:type="browserDSL:StringValue" href="test.browserdsl#//@variables.0/@value"/>
+          <graphicalFilters xmi:type="diagram:HideLabelFilter" xmi:id="_lfwkoLngEeSQHqAuDrr0zw"/>
+          <ownedStyle xmi:type="diagram:Dot" xmi:id="_lfvWgbngEeSQHqAuDrr0zw" showIcon="false" hideLabelByDefault="true">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_lfvWgrngEeSQHqAuDrr0zw"/>
+            <description xmi:type="style:DotDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Variables']/@nodeMappings[name='Variables']/@borderedNodeMappings[name='Value']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_lfvWg7ngEeSQHqAuDrr0zw"/>
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_lfvWhLngEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Variables']/@nodeMappings[name='Variables']/@borderedNodeMappings[name='Value']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_lfuvcLngEeSQHqAuDrr0zw" showIcon="false" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_lfuvcbngEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:SquareDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Variables']/@nodeMappings[name='Variables']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_lfuvcrngEeSQHqAuDrr0zw"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_lfuvc7ngEeSQHqAuDrr0zw" red="252" green="233" blue="79"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Variables']/@nodeMappings[name='Variables']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_1PPVQLngEeSQHqAuDrr0zw" visible="false">
+        <target xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.0"/>
+        <semanticElements xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.0"/>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_1PP8ULngEeSQHqAuDrr0zw" visible="false">
+        <target xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.1"/>
+        <semanticElements xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.1"/>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_2OBRsLngEeSQHqAuDrr0zw" name="selectSchool" visible="false">
+        <target xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.0"/>
+        <semanticElements xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_5HMeQLngEeSQHqAuDrr0zw">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_5HMeQbngEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='subroutine']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_5HMeQrngEeSQHqAuDrr0zw"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_5HMeQ7ngEeSQHqAuDrr0zw" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_5HMeRLngEeSQHqAuDrr0zw" red="209" green="209" blue="209"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='subroutine']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_2OB4wLngEeSQHqAuDrr0zw" name="connect" visible="false">
+        <target xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.1"/>
+        <semanticElements xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_5HMeRbngEeSQHqAuDrr0zw">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_5HMeRrngEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='subroutine']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_5HMeR7ngEeSQHqAuDrr0zw"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_5HMeSLngEeSQHqAuDrr0zw" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_5HMeSbngEeSQHqAuDrr0zw" red="209" green="209" blue="209"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='subroutine']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_Grqv4LnhEeSQHqAuDrr0zw" name="user" visible="false" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="browserDSL:VariableName" href="test.browserdsl#//@subroutines.1/@head/@nameParameters.0"/>
+        <semanticElements xmi:type="browserDSL:VariableName" href="test.browserdsl#//@subroutines.1/@head/@nameParameters.0"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_K-9KALnhEeSQHqAuDrr0zw">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_K-9KAbnhEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:SquareDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@nodeMappings[name='']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_K-9KArnhEeSQHqAuDrr0zw"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_K-9KA7nhEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@nodeMappings[name='']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_Grqv4bnhEeSQHqAuDrr0zw" name="pass" visible="false" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="browserDSL:VariableName" href="test.browserdsl#//@subroutines.1/@head/@nameParameters.1"/>
+        <semanticElements xmi:type="browserDSL:VariableName" href="test.browserdsl#//@subroutines.1/@head/@nameParameters.1"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_K-9KBLnhEeSQHqAuDrr0zw">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_K-9KBbnhEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:SquareDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@nodeMappings[name='']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_K-9KBrnhEeSQHqAuDrr0zw"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_K-9KB7nhEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@nodeMappings[name='']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_VMf8ELnhEeSQHqAuDrr0zw" name="user" visible="false" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="browserDSL:VariableName" href="test.browserdsl#//@subroutines.1/@head/@nameParameters.0"/>
+        <semanticElements xmi:type="browserDSL:VariableName" href="test.browserdsl#//@subroutines.1/@head/@nameParameters.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_VMf8EbnhEeSQHqAuDrr0zw">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_VMf8ErnhEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:SquareDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@nodeMappings[name='Parameter']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_VMf8E7nhEeSQHqAuDrr0zw"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_VMf8FLnhEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@nodeMappings[name='Parameter']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_VMf8FbnhEeSQHqAuDrr0zw" name="pass" visible="false" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="browserDSL:VariableName" href="test.browserdsl#//@subroutines.1/@head/@nameParameters.1"/>
+        <semanticElements xmi:type="browserDSL:VariableName" href="test.browserdsl#//@subroutines.1/@head/@nameParameters.1"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_VMf8FrnhEeSQHqAuDrr0zw">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_VMf8F7nhEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:SquareDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@nodeMappings[name='Parameter']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_VMf8GLnhEeSQHqAuDrr0zw"/>
+          <color xmi:type="viewpoint:RGBValues" xmi:id="_VMf8GbnhEeSQHqAuDrr0zw" red="136" green="136" blue="136"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@nodeMappings[name='Parameter']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_WHDf0LnhEeSQHqAuDrr0zw" name="selectSchool">
+        <target xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.0"/>
+        <semanticElements xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_WHEG4LnhEeSQHqAuDrr0zw">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_WHEG4bnhEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='Subroutine']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_WHEG4rnhEeSQHqAuDrr0zw"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_WHEG47nhEeSQHqAuDrr0zw" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_WHEG5LnhEeSQHqAuDrr0zw" red="209" green="209" blue="209"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='Subroutine']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_WHEt8LnhEeSQHqAuDrr0zw" name="connect">
+        <target xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.1"/>
+        <semanticElements xmi:type="browserDSL:Subroutine" href="test.browserdsl#//@subroutines.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_WHEt8bnhEeSQHqAuDrr0zw">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_WHEt8rnhEeSQHqAuDrr0zw"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='Subroutine']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_WHEt87nhEeSQHqAuDrr0zw"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_WHEt9LnhEeSQHqAuDrr0zw" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_WHEt9bnhEeSQHqAuDrr0zw" red="209" green="209" blue="209"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='Subroutine']"/>
       </ownedDiagramElements>
       <description xmi:type="description_1:DiagramDescription" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']"/>
       <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_ADLhUrnTEeSQHqAuDrr0zw"/>
       <activatedLayers xmi:type="description_1:Layer" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']"/>
       <target xmi:type="browserDSL:Program" href="test.browserdsl#/"/>
     </ownedRepresentations>
     <viewpoint xmi:type="description:Viewpoint" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']"/>

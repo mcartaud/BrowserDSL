@@ -3,20 +3,6 @@
   <ownedViewpoints name="graphicalModel" modelFileExtension="*.browserdsl">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="scenario" domainClass="Program">
       <defaultLayer name="Default">
-        <nodeMappings name="Variables" semanticCandidatesExpression="[variables/]" domainClass="Declaration">
-          <style xsi:type="style:EllipseNodeDescription" labelExpression="[variable.name/]" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-          </style>
-        </nodeMappings>
-        <nodeMappings name="SubFunctions" semanticCandidatesExpression="[subroutines/]" domainClass="Subroutine">
-          <style xsi:type="style:EllipseNodeDescription" labelExpression="[head.name.name/]" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
-          </style>
-        </nodeMappings>
         <nodeMappings name="Browser" semanticCandidatesExpression="[browser/]" domainClass="OpenBrowser">
           <style xsi:type="style:EllipseNodeDescription" labelExpression="[thisEObject.toString()/]" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -54,6 +40,39 @@
           </style>
         </containerMappings>
       </defaultLayer>
+      <additionalLayers name="Variables">
+        <nodeMappings name="Variables" semanticCandidatesExpression="[variables.variable/]" domainClass="VariableName">
+          <borderedNodeMappings name="Value" semanticCandidatesExpression="[eContainer(Declaration).value/]" domainClass="Values">
+            <style xsi:type="style:DotDescription" showIcon="false" labelExpression="" hideLabelByDefault="true" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="[name/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+      </additionalLayers>
+      <additionalLayers name="Subroutines">
+        <containerMappings name="Subroutine" semanticCandidatesExpression="[subroutines/]" domainClass="Subroutine">
+          <borderedNodeMappings name="Parameters" semanticCandidatesExpression="[head.nameParameters/]" domainClass="VariableName">
+            <style xsi:type="style:DotDescription" showIcon="false" labelExpression="[name/]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" labelExpression="[head.name.name/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+      </additionalLayers>
     </ownedRepresentations>
   </ownedViewpoints>
 </description:Group>
