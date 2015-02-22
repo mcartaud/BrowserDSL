@@ -63,7 +63,7 @@ Declaration:
 ;
 
 Instruction:
-	Condition|If|FunctionCall|GoTo
+	Condition|If|FunctionCall|GoTo|While
 ;
 
 Condition:
@@ -76,48 +76,58 @@ If:
 	'}'
 ;
 
+While:
+	'while( ' condition=Condition ' ) {'
+		instructions+=Instruction';' ( instructions+=Instruction ';')*
+	'}'
+;
+
 GoTo:
 	'goTo(' url=URL ')'
 ;
 
 Checkboxs:
-	'checkboxs(' id=(StringValue|Variable) ')' action=CheckboxAction
+	(('checkboxs(' id=(StringValue|Variable) ')')|'allCheckboxs()') action=CheckboxAction
 ;
 
 Links:
-	'links(' id=(StringValue|Variable) ')' action=LinkAction
+	(('links(' id=(StringValue|Variable) ')')|'allLinks()') action=LinkAction
 ;
 
 Buttons:
-	'buttons(' id=(StringValue|Variable) ')' action=ButtonAction
+	(('buttons(' id=(StringValue|Variable) ')')|'allButtons()') action=ButtonAction
 ;
 
 Pictures:
-	'pictures(' id=(StringValue|Variable) ')' action=PictureAction
+	(('pictures(' id=(StringValue|Variable) ')')|'allPictures()') action=PictureAction
 ;
 
 TextFields:
-	'textFields(' id=(StringValue|Variable) ')' action=TextAction
+	(('textFields(' id=(StringValue|Variable) ')')|'allTextFields()') action=TextAction
 ;
 
 CheckboxAction:
-	Click|IsCheck|Clear
+	Click|IsCheck|Exist|NotExist
 ;
 
 LinkAction:
-	Click
+	Click|Exist|NotExist
 ;
 
 ButtonAction:
-	Click
+	Click|Exist|NotExist
 ;
 
 PictureAction:
-	Click
+	Click|Exist|NotExist
 ;
 
 TextAction:
-	CheckValue|Fill|Clear
+	CheckValue|Fill|Clear|Exist|NotExist
+;
+
+BooleanAction:
+	IsCheck|Exist|CheckValue|NotExist
 ;
 
 Click:
@@ -125,7 +135,7 @@ Click:
 ;
 
 IsCheck:
-	'.isCheck(' val=Boolean ')'
+	'.isCheck(' value=Boolean ')'
 ;
 
 Clear:
@@ -138,6 +148,14 @@ CheckValue:
 
 Fill:
 	'.fill(' value=(StringValue|Variable) ')'
+;
+
+Exist:
+	action='.exist()'
+;
+
+NotExist:
+	action='.notExist()'
 ;
 
 Values:

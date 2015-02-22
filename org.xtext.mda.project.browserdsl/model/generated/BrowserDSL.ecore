@@ -69,6 +69,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
         eType="#//Instruction" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="While" eSuperTypes="#//Instruction">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//Condition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
+        eType="#//Instruction" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GoTo" eSuperTypes="#//Instruction">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -97,22 +103,29 @@
   <eClassifiers xsi:type="ecore:EClass" name="ButtonAction"/>
   <eClassifiers xsi:type="ecore:EClass" name="PictureAction"/>
   <eClassifiers xsi:type="ecore:EClass" name="TextAction"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanAction"/>
   <eClassifiers xsi:type="ecore:EClass" name="Click" eSuperTypes="#//CheckboxAction #//LinkAction #//ButtonAction #//PictureAction">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IsCheck" eSuperTypes="#//CheckboxAction">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="#//Boolean"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IsCheck" eSuperTypes="#//CheckboxAction #//BooleanAction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//Boolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Clear" eSuperTypes="#//CheckboxAction #//TextAction">
+  <eClassifiers xsi:type="ecore:EClass" name="Clear" eSuperTypes="#//TextAction">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CheckValue" eSuperTypes="#//TextAction">
+  <eClassifiers xsi:type="ecore:EClass" name="CheckValue" eSuperTypes="#//TextAction #//BooleanAction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//CallType"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Fill" eSuperTypes="#//TextAction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//CallType"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exist" eSuperTypes="#//CheckboxAction #//LinkAction #//ButtonAction #//PictureAction #//TextAction #//BooleanAction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NotExist" eSuperTypes="#//CheckboxAction #//LinkAction #//ButtonAction #//PictureAction #//TextAction #//BooleanAction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Values" eSuperTypes="#//CallType"/>
   <eClassifiers xsi:type="ecore:EClass" name="IntValue" eSuperTypes="#//Values">
