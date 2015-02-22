@@ -3,7 +3,9 @@ var "username" = "mcarta12";
 sub "selectSchool"(){
 	pictures("nantes").click();
 	buttons("select").click();
+	links(username).click();
 	buttons("save and continue to your home organization").click();
+	connect("toto", "tti");
 }
 sub "connect"(var "user", var "pass"){
 	textFields("username").fill(user);
