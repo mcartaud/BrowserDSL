@@ -42,11 +42,11 @@
       </defaultLayer>
       <additionalLayers name="Variables">
         <nodeMappings name="Variables" semanticCandidatesExpression="[variables.variable/]" domainClass="VariableName">
-          <borderedNodeMappings name="Value" semanticCandidatesExpression="[eContainer(Declaration).value/]" domainClass="Values">
-            <style xsi:type="style:DotDescription" showIcon="false" labelExpression="" hideLabelByDefault="true" resizeKind="NSEW">
+          <borderedNodeMappings name="Value" semanticCandidatesExpression="[eContainer(Declaration).value/]" domainClass="StringValue">
+            <style xsi:type="style:DotDescription" labelExpression="[value/]" hideLabelByDefault="true" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
             </style>
           </borderedNodeMappings>
           <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="[name/]" labelPosition="node" resizeKind="NSEW">
@@ -57,7 +57,7 @@
         </nodeMappings>
       </additionalLayers>
       <additionalLayers name="Subroutines">
-        <containerMappings name="Subroutine" semanticCandidatesExpression="[subroutines/]" domainClass="Subroutine">
+        <containerMappings name="Subroutine" semanticCandidatesExpression="[subroutines/]" domainClass="Subroutine" childrenPresentation="List">
           <borderedNodeMappings name="Parameters" semanticCandidatesExpression="[head.nameParameters/]" domainClass="VariableName">
             <style xsi:type="style:DotDescription" showIcon="false" labelExpression="[name/]" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -65,50 +65,34 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </borderedNodeMappings>
-          <subContainerMappings name="Links" semanticCandidatesExpression="[_body.instructions/]" domainClass="Links" childrenPresentation="List">
-            <subNodeMappings name="Name" semanticCandidatesExpression="[id/]" domainClass="CallType">
-              <style xsi:type="style:SquareDescription" labelExpression="[toString()/]" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              </style>
-            </subNodeMappings>
-            <subNodeMappings name="Action" semanticCandidatesExpression="[action/]" domainClass="LinkAction">
-              <style xsi:type="style:SquareDescription" labelExpression="[oclAsType(Click).action/]" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              </style>
-            </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" labelExpression="Link">
+          <subNodeMappings name="method" semanticCandidatesExpression="[_body.instructions/]" domainClass="Subroutine">
+            <style xsi:type="style:SquareDescription" labelExpression="[head.name.name/]" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
-          </subContainerMappings>
-          <subContainerMappings name="Function" semanticCandidatesExpression="[_body.instructions/]" domainClass="FunctionCall" childrenPresentation="List">
-            <subNodeMappings name="Name" semanticCandidatesExpression="[function/]" domainClass="FunctionReference">
-              <style xsi:type="style:SquareDescription" labelExpression="[functionName.name/]" resizeKind="NSEW">
+          </subNodeMappings>
+          <subNodeMappings xsi:type="description_1:NodeMappingImport" name="Links" semanticCandidatesExpression="[_body.instructions/]" domainClass="Links">
+            <borderedNodeMappings name="LinkAction" semanticCandidatesExpression="[action/]" domainClass="Click">
+              <style xsi:type="style:DotDescription" labelExpression="[toString()/]" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </style>
-            </subNodeMappings>
-            <subNodeMappings name="Parameter" semanticCandidatesExpression="[parameters/]" domainClass="CallType">
-              <style xsi:type="style:SquareDescription" labelExpression="[toString()/]" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              </style>
-            </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" labelExpression="Function">
+            </borderedNodeMappings>
+            <style xsi:type="style:SquareDescription" labelExpression="[action/]" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
-          </subContainerMappings>
+          </subNodeMappings>
+          <subNodeMappings name="Button" semanticCandidatesExpression="[_body.instructions/]" domainClass="Buttons">
+            <style xsi:type="style:SquareDescription" labelExpression="[id/]" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
           <style xsi:type="style:FlatContainerStyleDescription" labelExpression="[head.name.name/]">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>

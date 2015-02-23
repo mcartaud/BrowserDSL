@@ -51,7 +51,7 @@ FunctionCall:
 ;
 
 CallType:
-	Values|Variable
+	StringValue|Variable
 ;
 
 VariableName:
@@ -59,7 +59,7 @@ VariableName:
 ;
 
 Declaration:
-	'var ' variable=VariableName ' = ' value=Values ';'
+	'var ' variable=VariableName ' = ' value=StringValue ';'
 ;
 
 Instruction:
@@ -158,20 +158,8 @@ NotExist:
 	action='.notExist()'
 ;
 
-Values:
-	IntValue|StringValue|BooleanValue
-;
-
-IntValue:
-	value=INT
-;
-
 StringValue : 
 	value=STRING
-;
-
-BooleanValue:
-	value=Boolean
 ;
 
 enum Boolean:

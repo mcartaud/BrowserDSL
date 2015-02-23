@@ -117,15 +117,8 @@
     <genClasses ecoreClass="BrowserDSL.ecore#//NotExist">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//NotExist/action"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//Values"/>
-    <genClasses ecoreClass="BrowserDSL.ecore#//IntValue">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//IntValue/value"/>
-    </genClasses>
     <genClasses ecoreClass="BrowserDSL.ecore#//StringValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//StringValue/value"/>
-    </genClasses>
-    <genClasses ecoreClass="BrowserDSL.ecore#//BooleanValue">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserDSL.ecore#//BooleanValue/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -1,6 +1,5 @@
 package org.xtext.mda.project.browserdsl.interpreteur.utils;
 
-import org.xtext.mda.project.browserDSL.BooleanValue;
 import org.xtext.mda.project.browserDSL.CallType;
 import org.xtext.mda.project.browserDSL.Declaration;
 import org.xtext.mda.project.browserDSL.StringValue;
@@ -41,11 +40,11 @@ public class Utils {
 		}
 	}
 	
-	public static Boolean getBooleanValue(CallType callType) throws Exception {
+//	public static Boolean getBooleanValue(CallType callType) throws Exception {
 //		if(callType==null){
 //			return null;
 //		}else if (callType instanceof BooleanValue) {
-			return  (((BooleanValue) callType).getValue().equals(org.xtext.mda.project.browserDSL.Boolean.TRUE))? true : false ;
+//			return  (((BooleanValue) callType).getValue().equals(org.xtext.mda.project.browserDSL.Boolean.TRUE))? true : false ;
 //		} 
 //		else if (callType instanceof Variable) {
 //			String varName = ((Variable) callType).getVarID().getName();
@@ -65,6 +64,6 @@ public class Utils {
 //			// TODO throw exception car pas le bon type
 //			throw new Exception();
 //		}
-	}
+//	}
 	
 }
