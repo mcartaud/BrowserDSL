@@ -12,6 +12,7 @@ import org.xtext.mda.project.browserDSL.Fill;
 import org.xtext.mda.project.browserDSL.TextAction;
 import org.xtext.mda.project.browserDSL.TextFields;
 import org.xtext.mda.project.browserdsl.interpreteur.BrowserDSL;
+import org.xtext.mda.project.browserdsl.interpreteur.exceptions.ElementNotFoundException;
 import org.xtext.mda.project.browserdsl.interpreteur.utils.Utils;
 
 public class ComputeTextFields {
@@ -44,8 +45,7 @@ public class ComputeTextFields {
 		if (elements.size() != 0 || textFields.getAction() instanceof Exist) {
 			return elements;
 		} else {
-			// TODO exception element not found
-			throw new Exception();
+			throw new ElementNotFoundException(id);
 		}
 	}
 
@@ -79,10 +79,6 @@ public class ComputeTextFields {
 				element.clear();
 			}
 		}
-		// }
-		// else{
-		// executeBooleanAction(elements);
-		// }
 	}
 
 	private boolean executeBooleanAction(List<WebElement> elements) throws Exception {
@@ -102,7 +98,6 @@ public class ComputeTextFields {
 			}
 			return true;
 		} else {
-			// if (action instanceof NotExist) {
 			if (elements.size() == 0) {
 				return true;
 			} else {

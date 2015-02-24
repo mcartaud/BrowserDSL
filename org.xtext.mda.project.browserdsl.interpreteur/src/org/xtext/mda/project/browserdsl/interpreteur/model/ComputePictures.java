@@ -9,6 +9,7 @@ import org.xtext.mda.project.browserDSL.Exist;
 import org.xtext.mda.project.browserDSL.PictureAction;
 import org.xtext.mda.project.browserDSL.Pictures;
 import org.xtext.mda.project.browserdsl.interpreteur.BrowserDSL;
+import org.xtext.mda.project.browserdsl.interpreteur.exceptions.ElementNotFoundException;
 import org.xtext.mda.project.browserdsl.interpreteur.utils.Utils;
 
 public class ComputePictures {
@@ -41,8 +42,7 @@ public class ComputePictures {
 		if (elements.size() != 0 || pictures.getAction() instanceof Exist) {
 			return elements;
 		} else {
-			// TODO exception element not found
-			throw new Exception();
+			throw new ElementNotFoundException(id);
 		}
 	}
 
@@ -78,15 +78,9 @@ public class ComputePictures {
 	}
 
 	private void executeAction(List<WebElement> elements) {
-		// PictureAction action = pictures.getAction();
-		// if (action instanceof Click) {
 		for (WebElement element : elements) {
 			element.click();
 		}
-		// }
-		// else{
-		// executeBooleanAction(elements);
-		// }
 	}
 
 	private boolean executeBooleanAction(List<WebElement> elements) {
@@ -98,7 +92,6 @@ public class ComputePictures {
 				return false;
 			}
 		} else {
-			// if (action instanceof NotExist) {
 			if (elements.size() == 0) {
 				return true;
 			} else {

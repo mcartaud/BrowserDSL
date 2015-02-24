@@ -9,13 +9,14 @@ sub "selectSchool"(){
 sub "connect"(var "user", var "pass"){
 	textFields("username").fill(user);
 	textFields("password").fill(pass);
+	checkboxs(pass).isCheck(false);
 }
 main{
 	goTo(http://campus.mines-nantes.fr);
 	links("Login").click();
 	pictures("CZAM").click();
 	selectSchool();
-	connect(username, "pass01");
+	connect(username, "*****");
 	buttons("connexion").click();
 	goTo(https://nte.gemtech.fr/campus/course/view.php?id=1415);
 }

@@ -8,6 +8,7 @@ import org.xtext.mda.project.browserDSL.Exist;
 import org.xtext.mda.project.browserDSL.LinkAction;
 import org.xtext.mda.project.browserDSL.Links;
 import org.xtext.mda.project.browserdsl.interpreteur.BrowserDSL;
+import org.xtext.mda.project.browserdsl.interpreteur.exceptions.ElementNotFoundException;
 import org.xtext.mda.project.browserdsl.interpreteur.utils.Utils;
 
 public class ComputeLinks {
@@ -40,8 +41,7 @@ public class ComputeLinks {
 		if (elements.size() != 0 || links.getAction() instanceof Exist) {
 			return elements;
 		} else {
-			// TODO exception element not found
-			throw new Exception();
+			throw new ElementNotFoundException(id);
 		}
 	}
 
@@ -59,14 +59,8 @@ public class ComputeLinks {
 	}
 
 	private void executeAction(List<WebElement> elements) {
-		// CheckboxAction action = checkboxs.getAction();
-		// if (action instanceof Click) {
-		for (WebElement element : elements) {
-			element.click();
-		}
-		// }
-		// else{
-		// executeBooleanAction(elements);
+		// for (WebElement element : elements) {
+		elements.get(0).click();
 		// }
 	}
 
@@ -79,7 +73,6 @@ public class ComputeLinks {
 				return false;
 			}
 		} else {
-			// if (action instanceof NotExist) {
 			if (elements.size() == 0) {
 				return true;
 			} else {

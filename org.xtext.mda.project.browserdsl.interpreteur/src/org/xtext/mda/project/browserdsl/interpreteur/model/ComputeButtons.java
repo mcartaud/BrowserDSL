@@ -9,6 +9,7 @@ import org.xtext.mda.project.browserDSL.ButtonAction;
 import org.xtext.mda.project.browserDSL.Buttons;
 import org.xtext.mda.project.browserDSL.Exist;
 import org.xtext.mda.project.browserdsl.interpreteur.BrowserDSL;
+import org.xtext.mda.project.browserdsl.interpreteur.exceptions.ElementNotFoundException;
 import org.xtext.mda.project.browserdsl.interpreteur.utils.Utils;
 
 public class ComputeButtons {
@@ -41,8 +42,7 @@ public class ComputeButtons {
 		if (elements.size() != 0 || buttons.getAction() instanceof Exist) {
 			return elements;
 		} else {
-			// TODO exception element(s) not found
-			throw new Exception();
+			throw new ElementNotFoundException(id);
 		}
 	}
 
@@ -63,15 +63,9 @@ public class ComputeButtons {
 	}
 
 	private void executeAction(List<WebElement> elements) {
-		// ButtonAction action = buttons.getAction();
-		// if (action instanceof Click) {
 		for (WebElement element : elements) {
 			element.click();
 		}
-		// }
-		// else{
-		// executeBooleanAction(elements);
-		// }
 	}
 
 	private boolean executeBooleanAction(List<WebElement> elements) {
@@ -83,16 +77,12 @@ public class ComputeButtons {
 				return false;
 			}
 		} else {
-			// if (action instanceof NotExist) {
 			if (elements.size() == 0) {
 				return true;
 			} else {
 				return false;
 			}
 		}
-		// //TODO Action inconnue
-		// throw new Exception();
-		// }
 	}
 
 }
