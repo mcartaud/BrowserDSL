@@ -116,10 +116,10 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lXIt0ruFEeSoZ-PftV-lkg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_lXFDcbuFEeSoZ-PftV-lkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lXFDcruFEeSoZ-PftV-lkg" x="-20" y="22" width="70" height="33"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lXFDcruFEeSoZ-PftV-lkg" x="34" y="55" width="70" height="33"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_jmUQcbuFEeSoZ-PftV-lkg" fontName=".Helvetica Neue DeskInterface" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jmUQcruFEeSoZ-PftV-lkg" x="513" y="78" width="30" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jmUQcruFEeSoZ-PftV-lkg" x="459" y="45" width="84" height="63"/>
           </children>
           <styles xmi:type="notation:DiagramStyle" xmi:id="_ADzzcrnTEeSQHqAuDrr0zw"/>
         </data>
@@ -149,7 +149,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Main']/@subNodeMappings[name='MandatoryGoto']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_E-9XcLnWEeSQHqAuDrr0zw" name="org.xtext.mda.project.browserDSL.impl.ClickImpl@5467df0d (action: .click())">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_E-9XcLnWEeSQHqAuDrr0zw" name="org.xtext.mda.project.browserDSL.impl.ClickImpl@745b8053 (action: .click())">
           <target xmi:type="browserDSL:Links" href="test.browserdsl#//@main/@body/@instructions.0"/>
           <semanticElements xmi:type="browserDSL:Links" href="test.browserdsl#//@main/@body/@instructions.0"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_E_CP8LnWEeSQHqAuDrr0zw">
@@ -160,7 +160,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMappingImport" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Main']/@subNodeMappings[name='Links']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_BIabULxVEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@5e539bf (value: connexion)">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_BIabULxVEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@404765c5 (value: connexion)">
           <target xmi:type="browserDSL:Buttons" href="test.browserdsl#//@main/@body/@instructions.4"/>
           <semanticElements xmi:type="browserDSL:Buttons" href="test.browserdsl#//@main/@body/@instructions.4"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_BIbCYLxVEeS6jPc7alYQyg">
@@ -171,7 +171,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Main']/@subNodeMappings[name='Button']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_BIbpcLxVEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@14103354 (value: CZAM)">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_BIbpcLxVEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@143b32f4 (value: CZAM)">
           <target xmi:type="browserDSL:Pictures" href="test.browserdsl#//@main/@body/@instructions.1"/>
           <semanticElements xmi:type="browserDSL:Pictures" href="test.browserdsl#//@main/@body/@instructions.1"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_BIbpcbxVEeS6jPc7alYQyg">
@@ -193,7 +193,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Main']/@subNodeMappings[name='Goto']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_JZCUELxdEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.FunctionNameImpl@5130b1ee (name: selectSchool)">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_JZCUELxdEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.FunctionNameImpl@5c457873 (name: selectSchool)">
           <target xmi:type="browserDSL:FunctionCall" href="test.browserdsl#//@main/@body/@instructions.2"/>
           <semanticElements xmi:type="browserDSL:FunctionCall" href="test.browserdsl#//@main/@body/@instructions.2"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_PDf8gLxdEeS6jPc7alYQyg">
@@ -204,7 +204,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMappingImport" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@defaultLayer/@containerMappings[name='Main']/@subNodeMappings[name='Method']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_JZCUEbxdEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.FunctionNameImpl@581ff893 (name: connect)">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_JZCUEbxdEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.FunctionNameImpl@48cfefdb (name: connect)">
           <target xmi:type="browserDSL:FunctionCall" href="test.browserdsl#//@main/@body/@instructions.3"/>
           <semanticElements xmi:type="browserDSL:FunctionCall" href="test.browserdsl#//@main/@body/@instructions.3"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_PDf8hLxdEeS6jPc7alYQyg">
@@ -256,7 +256,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Q1KCFLuGEeSoZ-PftV-lkg" red="253" green="206" blue="137"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='Subroutine']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_JO8pMLuHEeSoZ-PftV-lkg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@27734616 (value: select)">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_JO8pMLuHEeSoZ-PftV-lkg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@48dd5eed (value: select)">
           <target xmi:type="browserDSL:Buttons" href="test.browserdsl#//@subroutines.0/@body/@instructions.1"/>
           <semanticElements xmi:type="browserDSL:Buttons" href="test.browserdsl#//@subroutines.0/@body/@instructions.1"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_L7nDwLuHEeSoZ-PftV-lkg">
@@ -267,7 +267,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='Subroutine']/@subNodeMappings[name='Button']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_37MaoLxQEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@432bda48 (value: save and continue to your home organization)">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_37MaoLxQEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@21de5790 (value: save and continue to your home organization)">
           <target xmi:type="browserDSL:Buttons" href="test.browserdsl#//@subroutines.0/@body/@instructions.3"/>
           <semanticElements xmi:type="browserDSL:Buttons" href="test.browserdsl#//@subroutines.0/@body/@instructions.3"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_37MaobxQEeS6jPc7alYQyg">
@@ -278,7 +278,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='Subroutine']/@subNodeMappings[name='Button']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_37LMgLxQEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.ClickImpl@6ff07d34 (action: .click())">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_37LMgLxQEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.ClickImpl@3d65b31 (action: .click())">
           <target xmi:type="browserDSL:Links" href="test.browserdsl#//@subroutines.0/@body/@instructions.2"/>
           <semanticElements xmi:type="browserDSL:Links" href="test.browserdsl#//@subroutines.0/@body/@instructions.2"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_37LzkLxQEeS6jPc7alYQyg">
@@ -289,7 +289,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMappingImport" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='Subroutine']/@subNodeMappings[name='Links']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_pKamkLxTEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@5885f735 (value: nantes)">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_pKamkLxTEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@1a8f0b1b (value: nantes)">
           <target xmi:type="browserDSL:Pictures" href="test.browserdsl#//@subroutines.0/@body/@instructions.0"/>
           <semanticElements xmi:type="browserDSL:Pictures" href="test.browserdsl#//@subroutines.0/@body/@instructions.0"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_q5U_cLxTEeS6jPc7alYQyg">
@@ -337,7 +337,7 @@
           <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_Q1LQNbuGEeSoZ-PftV-lkg" red="253" green="206" blue="137"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='Subroutine']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_pKdp4LxTEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@7c876af0 (value: username)">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_pKdp4LxTEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@23f7d9fe (value: username)">
           <target xmi:type="browserDSL:TextFields" href="test.browserdsl#//@subroutines.1/@body/@instructions.0"/>
           <semanticElements xmi:type="browserDSL:TextFields" href="test.browserdsl#//@subroutines.1/@body/@instructions.0"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_q5bGELxTEeS6jPc7alYQyg">
@@ -348,7 +348,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='Subroutine']/@subNodeMappings[name='TextField']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_pKdp4bxTEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@9a8fe7e (value: password)">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_pKdp4bxTEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.StringValueImpl@7debfa04 (value: password)">
           <target xmi:type="browserDSL:TextFields" href="test.browserdsl#//@subroutines.1/@body/@instructions.1"/>
           <semanticElements xmi:type="browserDSL:TextFields" href="test.browserdsl#//@subroutines.1/@body/@instructions.1"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_q5eJYLxTEeS6jPc7alYQyg">
@@ -359,7 +359,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="description/browserdsl.odesign#//@ownedViewpoints[name='graphicalModel']/@ownedRepresentations[name='scenario']/@additionalLayers[name='Subroutines']/@containerMappings[name='Subroutine']/@subNodeMappings[name='TextField']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_iF7asLxUEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.VariableImpl@46e31cc8">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_iF7asLxUEeS6jPc7alYQyg" name="org.xtext.mda.project.browserDSL.impl.VariableImpl@56eb76d7">
           <target xmi:type="browserDSL:Checkboxs" href="test.browserdsl#//@subroutines.1/@body/@instructions.2"/>
           <semanticElements xmi:type="browserDSL:Checkboxs" href="test.browserdsl#//@subroutines.1/@body/@instructions.2"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_iF928LxUEeS6jPc7alYQyg">
